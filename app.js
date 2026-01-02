@@ -1,67 +1,84 @@
-async function renderDashboard() {
+async function initDashboard() {
     try {
         const response = await fetch('data/summary.json');
         const data = await response.json();
 
-        // 1. Extraction des labels (Dates) et des données (PDC)
-        const labels = data.map(entry => entry.Date);
-        const weights = data.map(entry => entry.PDC);
-        
-        // 2. Logique de couleur dynamique selon la PHASE
-        // Si PHASE contient "DÉFICIT" -> Rouge/Rose, sinon -> Violet
-        const pointColors = data.map(entry => 
-            entry.PHASE && entry.PHASE.includes('DÉFICIT') ? '#ff4d4d' : '#8a2be2'
-        );
+        if (!data || data.length === 0) return;
 
+        // 1. CALCUL DES KPI (Indicateurs clés)
+        const lastEntry = data[data.length - 1];
+        const firstEntry = data[0];
+        
+        // Poids actuel
+        document.getElementById('current-weight').innerText = lastEntry.PDC.toFixed(2);
+        
+        // Variation Totale
+        const totalDiff = lastEntry.PDC - firstEntry.PDC;
+        const diffElement = document.getElementById('total-diff');
+        diffElement.innerText = (totalDiff > 0 ? '+' : '') + totalDiff.toFixed(2);
+        diffElement.style.color = totalDiff <= 0 ? '#3fb950' : '#f85149'; // Vert si perte, rouge si prise
+
+        // Moyenne Calories (7 derniers points)
+        const last7 = data.slice(-7);
+        const avgKcal = last7.reduce((acc, curr) => acc + (curr.KCALS || 0), 0) / last7.length;
+        document.getElementById('avg-kcal').innerText = Math.round(avgKcal);
+
+        // 2. CONFIGURATION DU GRAPHIQUE
         const ctx = document.getElementById('mainChart').getContext('2d');
         
+        // Création d'un dégradé violet pour le fond de la courbe
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, 'rgba(162, 119, 255, 0.4)');
+        gradient.addColorStop(1, 'rgba(162, 119, 255, 0)');
+
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: labels,
+                labels: data.map(d => d.Date.split(' ').slice(1, 3).join(' ')), // Simplifie la date (ex: "17 juillet")
                 datasets: [{
-                    label: 'Poids de Corps (kg)',
-                    data: weights,
-                    borderColor: '#8a2be2',
-                    backgroundColor: 'rgba(138, 43, 226, 0.1)',
+                    label: 'Poids de corps (kg)',
+                    data: data.map(d => d.PDC),
+                    borderColor: '#a277ff',
+                    backgroundColor: gradient,
+                    fill: true,
                     borderWidth: 3,
-                    pointBackgroundColor: pointColors,
-                    pointRadius: 5,
-                    tension: 0.3, // Courbe lisse
-                    fill: true
+                    tension: 0.4,
+                    pointRadius: 4,
+                    pointBackgroundColor: '#a277ff',
+                    pointBorderColor: '#010409',
+                    pointHoverRadius: 7
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { labels: { color: '#c9d1d9' } },
+                    legend: { display: false },
                     tooltip: {
+                        backgroundColor: '#161b22',
+                        titleColor: '#a277ff',
+                        bodyColor: '#c9d1d9',
+                        borderColor: '#30363d',
+                        borderWidth: 1,
+                        displayColors: false,
                         callbacks: {
-                            afterLabel: function(context) {
-                                let entry = data[context.dataIndex];
-                                return `Phase: ${entry.PHASE}\nTraining: ${entry.TRAINING}`;
+                            afterLabel: (context) => {
+                                const entry = data[context.dataIndex];
+                                return [`Phase: ${entry.PHASE}`, `Calories: ${entry.KCALS} kcal`];
                             }
                         }
                     }
                 },
                 scales: {
-                    y: {
-                        grid: { color: '#30363d' },
-                        ticks: { color: '#8b949e' },
-                        beginAtZero: false
-                    },
-                    x: {
-                        grid: { display: false },
-                        ticks: { color: '#8b949e' }
-                    }
+                    x: { ticks: { color: '#8b949e', maxRotation: 45 }, grid: { display: false } },
+                    y: { ticks: { color: '#8b949e' }, grid: { color: 'rgba(48, 54, 61, 0.5)' } }
                 }
             }
         });
 
-    } catch (error) {
-        console.error("Erreur d'initialisation du dashboard :", error);
+    } catch (err) {
+        console.error("Dashboard Error:", err);
     }
 }
 
-renderDashboard();
+document.addEventListener('DOMContentLoaded', initDashboard);
