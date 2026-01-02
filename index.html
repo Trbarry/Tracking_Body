@@ -1,28 +1,43 @@
-<div class="container">
-    <header>
-        <h1>Performance Mirror</h1>
-        <p>trtnxbook.com / Technical Training Tracker</p>
-    </header>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Mirror | Tristan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Performance Mirror</h1>
+            <p>trtnxbook.com / Technical Training Tracker</p>
+        </header>
 
-    <div class="kpi-row">
-        <div class="card">
-            <h3>Poids Actuel</h3>
-            <div class="value"><span id="current-weight">--</span><span class="unit">kg</span></div>
+        <div class="kpi-row">
+            <div class="card">
+                <h3>Poids Actuel</h3>
+                <div class="value"><span id="current-weight">--</span><span class="unit">kg</span></div>
+            </div>
+            <div class="card">
+                <h3>Variation Totale</h3>
+                <div class="value"><span id="total-diff">--</span><span class="unit">kg</span></div>
+            </div>
+            <div class="card">
+                <h3>Moyenne Calories (7j)</h3>
+                <div class="value"><span id="avg-kcal">--</span><span class="unit">kcal</span></div>
+            </div>
         </div>
-        <div class="card">
-            <h3>Variation Totale</h3>
-            <div class="value"><span id="total-diff">--</span><span class="unit">kg</span></div>
+
+        <div class="grid">
+            <div class="card chart-container">
+                <h3>Évolution du Poids</h3>
+                <canvas id="mainChart"></canvas>
+            </div>
         </div>
-        <div class="card">
-            <h3>Moyenne Calories (7j)</h3>
-            <div class="value"><span id="avg-kcal">--</span><span class="unit">kcal</span></div>
-        </div>
+        <p id="status" style="text-align:center; color: var(--text-dim); font-size: 0.8rem; margin-top: 20px;"></p>
     </div>
 
-    <div class="grid">
-        <div class="card chart-container">
-            <h3>Évolution du Poids</h3>
-            <canvas id="mainChart"></canvas>
-        </div>
-    </div>
-</div>
+    <script src="app.js"></script>
+</body>
+</html>
