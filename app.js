@@ -1,83 +1,69 @@
 async function initDashboard() {
     try {
-        const response = await fetch('data/summary.json');
+        console.log("[*] Tentative de récupération des données...");
+        const response = await fetch('./data/summary.json'); // Note le ./
+        
+        if (!response.ok) throw new Error(`Erreur HTTP: ${response.status}`);
+        
         const data = await response.json();
+        console.log("[+] Données reçues :", data);
 
-        if (!data || data.length === 0) return;
+        if (!data || data.length === 0) {
+            console.error("[-] Le fichier JSON est vide.");
+            return;
+        }
 
-        // 1. CALCUL DES KPI (Indicateurs clés)
+        // --- NETTOYAGE DES KPI ---
         const lastEntry = data[data.length - 1];
-        const firstEntry = data[0];
         
-        // Poids actuel
-        document.getElementById('current-weight').innerText = lastEntry.PDC.toFixed(2);
+        // On vérifie si les clés existent bien (exactement comme dans ton JSON)
+        const currentWeight = lastEntry["PDC"] || 0;
+        const kcals = lastEntry["KCALS"] || 0;
         
-        // Variation Totale
-        const totalDiff = lastEntry.PDC - firstEntry.PDC;
-        const diffElement = document.getElementById('total-diff');
-        diffElement.innerText = (totalDiff > 0 ? '+' : '') + totalDiff.toFixed(2);
-        diffElement.style.color = totalDiff <= 0 ? '#3fb950' : '#f85149'; // Vert si perte, rouge si prise
+        document.getElementById('current-weight').innerText = currentWeight.toFixed(1);
+        document.getElementById('avg-kcal').innerText = Math.round(kcals);
 
-        // Moyenne Calories (7 derniers points)
-        const last7 = data.slice(-7);
-        const avgKcal = last7.reduce((acc, curr) => acc + (curr.KCALS || 0), 0) / last7.length;
-        document.getElementById('avg-kcal').innerText = Math.round(avgKcal);
-
-        // 2. CONFIGURATION DU GRAPHIQUE
+        // --- CONFIGURATION CHART ---
         const ctx = document.getElementById('mainChart').getContext('2d');
         
-        // Création d'un dégradé violet pour le fond de la courbe
-        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient.addColorStop(0, 'rgba(162, 119, 255, 0.4)');
-        gradient.addColorStop(1, 'rgba(162, 119, 255, 0)');
-
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: data.map(d => d.Date.split(' ').slice(1, 3).join(' ')), // Simplifie la date (ex: "17 juillet")
+                // On simplifie la date : "jeudi 17 juillet 2025" -> "17 juillet"
+                labels: data.map(d => d.Date.split(' ').slice(1, 3).join(' ')),
                 datasets: [{
-                    label: 'Poids de corps (kg)',
+                    label: 'Poids (kg)',
                     data: data.map(d => d.PDC),
                     borderColor: '#a277ff',
-                    backgroundColor: gradient,
-                    fill: true,
+                    backgroundColor: 'rgba(162, 119, 255, 0.1)',
                     borderWidth: 3,
                     tension: 0.4,
-                    pointRadius: 4,
-                    pointBackgroundColor: '#a277ff',
-                    pointBorderColor: '#010409',
-                    pointHoverRadius: 7
+                    fill: true
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        backgroundColor: '#161b22',
-                        titleColor: '#a277ff',
-                        bodyColor: '#c9d1d9',
-                        borderColor: '#30363d',
-                        borderWidth: 1,
-                        displayColors: false,
-                        callbacks: {
-                            afterLabel: (context) => {
-                                const entry = data[context.dataIndex];
-                                return [`Phase: ${entry.PHASE}`, `Calories: ${entry.KCALS} kcal`];
-                            }
-                        }
+                scales: {
+                    y: { 
+                        beginAtZero: false,
+                        grid: { color: '#30363d' },
+                        ticks: { color: '#8b949e' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#8b949e' }
                     }
                 },
-                scales: {
-                    x: { ticks: { color: '#8b949e', maxRotation: 45 }, grid: { display: false } },
-                    y: { ticks: { color: '#8b949e' }, grid: { color: 'rgba(48, 54, 61, 0.5)' } }
+                plugins: {
+                    legend: { display: false }
                 }
             }
         });
 
     } catch (err) {
-        console.error("Dashboard Error:", err);
+        console.error("[!] Erreur lors de l'initialisation :", err);
+        document.getElementById('status').innerText = "Erreur de chargement des données.";
     }
 }
 
