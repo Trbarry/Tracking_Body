@@ -3,41 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Performance Mirror | Tristan</title>
+    <title>Performance Mirror | trtnxbook.com</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Performance Mirror</h1>
-            <p>trtnxbook.com / Technical Training Tracker</p>
+            <h1>PERFORMANCE_MIRROR_V2.0</h1>
+            <p>System Status: <span id="sync-status">STABLE</span> | User: Tristan Barry</p>
         </header>
 
         <div class="kpi-row">
             <div class="card">
-                <h3>Poids Actuel</h3>
+                <h3>Current_Weight</h3>
                 <div class="value"><span id="current-weight">--</span><span class="unit">kg</span></div>
             </div>
             <div class="card">
-                <h3>Variation Totale</h3>
+                <h3>Total_Delta</h3>
                 <div class="value"><span id="total-diff">--</span><span class="unit">kg</span></div>
             </div>
             <div class="card">
-                <h3>Moyenne Calories (7j)</h3>
+                <h3>Avg_Fuel_7D</h3>
                 <div class="value"><span id="avg-kcal">--</span><span class="unit">kcal</span></div>
             </div>
         </div>
 
         <div class="grid">
             <div class="card chart-container">
-                <h3>Évolution du Poids</h3>
+                <h3>Biometric_Trend (PDC)</h3>
                 <canvas id="mainChart"></canvas>
             </div>
-        </div>
-        <p id="status" style="text-align:center; color: var(--text-dim); font-size: 0.8rem; margin-top: 20px;"></p>
-    </div>
 
+            <div class="card terminal-container">
+                <h3>System_Logs</h3>
+                <div id="terminal" class="terminal-body">
+                    <div class="log-line">[SYSTEM] Initialize secure connection...</div>
+                    <div class="log-line">[SYSTEM] Fetching data from Google_Cloud...</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>

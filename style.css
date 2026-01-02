@@ -2,84 +2,56 @@
     --bg: #010409;
     --card-bg: #0d1117;
     --border: #30363d;
-    --accent: #a277ff; /* Violet */
-    --accent-glow: rgba(162, 119, 255, 0.3);
+    --accent: #a277ff;
+    --accent-glow: rgba(162, 119, 255, 0.15);
     --text-main: #c9d1d9;
     --text-dim: #8b949e;
-    --danger: #ff7b72;
+    --terminal-green: #3fb950;
 }
 
 body {
     background-color: var(--bg);
     color: var(--text-main);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    margin: 0;
-    padding: 20px;
-    line-height: 1.5;
+    font-family: 'JetBrains Mono', 'Segoe UI', monospace;
+    margin: 0; padding: 20px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+.container { max-width: 1200px; margin: 0 auto; }
 
-header {
-    margin-bottom: 30px;
-    border-left: 4px solid var(--accent);
-    padding-left: 20px;
-}
+header { border-bottom: 1px solid var(--border); margin-bottom: 30px; padding-bottom: 10px; }
+header h1 { color: var(--accent); font-size: 1.2rem; margin: 0; }
 
-header h1 { margin: 0; letter-spacing: -1px; }
-header p { color: var(--text-dim); margin: 5px 0 0 0; }
+.kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 20px; }
 
-/* Bento Grid */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
+.grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
 
-/* KPI Cards (Petites cartes du haut) */
-.kpi-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-bottom: 20px;
-}
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
 
 .card {
     background: var(--card-bg);
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 20px;
-    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.card:hover {
-    border-color: var(--accent);
-    box-shadow: 0 0 15px var(--accent-glow);
+.card h3 { font-size: 0.75rem; color: var(--text-dim); margin: 0 0 15px 0; border-left: 2px solid var(--accent); padding-left: 10px; }
+
+/* FIX DU BUG D'ÉTIREMENT */
+.chart-container { height: 450px; min-height: 450px; }
+
+.value { font-size: 2.2rem; font-weight: bold; color: var(--accent); }
+.unit { font-size: 0.9rem; color: var(--text-dim); margin-left: 5px; }
+
+/* STYLE TERMINAL */
+.terminal-container { height: 450px; background: #000; border-color: var(--accent); }
+.terminal-body {
+    height: 380px;
+    overflow-y: auto;
+    font-size: 0.8rem;
+    color: var(--terminal-green);
+    line-height: 1.4;
 }
-
-.card h3 {
-    margin: 0 0 10px 0;
-    font-size: 0.85rem;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.card .value {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--accent);
-}
-
-.card .unit { font-size: 1rem; color: var(--text-dim); margin-left: 5px; }
-
-/* Grande carte pour le graphique */
-.chart-container {
-    grid-column: 1 / -1; /* Prend toute la largeur */
-    min-height: 400px;
-}
-
-canvas { width: 100% !important; height: 100% !important; }
+.log-line { margin-bottom: 4px; }
+.log-line::before { content: "> "; }
