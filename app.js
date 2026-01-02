@@ -2,43 +2,44 @@ async function initDashboard() {
     try {
         const response = await fetch('./data/summary.json');
         const data = await response.json();
-        if (!data) return;
+        if (!data || data.length === 0) return;
 
         const lastEntry = data[data.length - 1];
         const firstEntry = data[0];
 
-        // 1. KPI - Poids & Variation
+        // 1. Mise à jour des KPIs
         document.getElementById('current-weight').innerText = lastEntry.PDC.toFixed(1);
         const diff = lastEntry.PDC - firstEntry.PDC;
-        document.getElementById('total-diff').innerText = (diff > 0 ? '+' : '') + diff.toFixed(2);
+        const diffEl = document.getElementById('total-diff');
+        diffEl.innerText = (diff > 0 ? '+' : '') + diff.toFixed(2);
+        diffEl.style.color = diff <= 0 ? '#3fb950' : '#f85149';
 
-        // 2. VRAIE MOYENNE CALORIES (on filtre les 0 et les vides)
-        const validKcals = data.filter(d => d.KCALS > 0).slice(-7);
+        // 2. Calcul Moyenne Calories (7 derniers jours réels)
+        const validKcals = data.filter(d => d.KCALS && d.KCALS > 0).slice(-7);
         const avg = validKcals.reduce((sum, d) => sum + d.KCALS, 0) / (validKcals.length || 1);
         document.getElementById('avg-kcal').innerText = Math.round(avg);
 
-        // 3. TERMINAL LOG ENGINE
+        // 3. Moteur de Logs Terminal
         const terminal = document.getElementById('terminal');
         const logs = [
-            `[AUTH] Access granted for UID: Tristan_Barry`,
-            `[DATA] Analysis of ${data.length} biometric points completed.`,
+            `[AUTH] Identity confirmed: Tristan Barry`,
+            `[DATA] Analysis of ${data.length} biometric nodes completed.`,
             `[STATUS] Current phase: ${lastEntry.PHASE}`,
-            `[TRACKER] Last training detected: ${lastEntry.TRAINING || 'REST'}`,
-            `[INFO] Target detected: 70.0kg. Remaining: ${(lastEntry.PDC - 70).toFixed(2)}kg`
+            `[ALGO] Weight trend: ${diff.toFixed(2)}kg since start.`,
+            `[INFO] System stable. Listening for next data push...`
         ];
         
-        // Ajout des logs avec un petit délai pour l'effet "hacker"
         logs.forEach((msg, i) => {
             setTimeout(() => {
                 const line = document.createElement('div');
                 line.className = 'log-line';
-                line.innerText = msg;
+                line.innerText = `> ${msg}`;
                 terminal.appendChild(line);
                 terminal.scrollTop = terminal.scrollHeight;
-            }, i * 600);
+            }, i * 500);
         });
 
-        // 4. CHART FIX
+        // 4. Initialisation Chart.js
         const ctx = document.getElementById('mainChart').getContext('2d');
         new Chart(ctx, {
             type: 'line',
@@ -51,20 +52,20 @@ async function initDashboard() {
                     fill: true,
                     tension: 0.4,
                     borderWidth: 2,
-                    pointRadius: 3
+                    pointRadius: 2
                 }]
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false, // Important avec la hauteur fixe du CSS
+                maintainAspectRatio: false, // Sécurisé par le wrapper CSS
                 plugins: { legend: { display: false } },
                 scales: {
-                    y: { grid: { color: '#161b22' }, ticks: { color: '#8b949e' } },
+                    y: { beginAtZero: false, grid: { color: '#161b22' }, ticks: { color: '#8b949e' } },
                     x: { grid: { display: false }, ticks: { color: '#8b949e' } }
                 }
             }
         });
 
-    } catch (e) { console.error("SysError:", e); }
+    } catch (e) { console.error("Critical System Failure:", e); }
 }
 document.addEventListener('DOMContentLoaded', initDashboard);

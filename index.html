@@ -11,7 +11,7 @@
     <div class="container">
         <header>
             <h1>PERFORMANCE_MIRROR_V2.0</h1>
-            <p>System Status: <span id="sync-status">STABLE</span> | User: Tristan Barry</p>
+            <p>System_Status: <span id="sync-status" style="color: #3fb950;">ONLINE</span> | User: Tristan Barry</p>
         </header>
 
         <div class="kpi-row">
@@ -30,16 +30,17 @@
         </div>
 
         <div class="grid">
-            <div class="card chart-container">
+            <div class="card">
                 <h3>Biometric_Trend (PDC)</h3>
-                <canvas id="mainChart"></canvas>
+                <div class="chart-wrapper">
+                    <canvas id="mainChart"></canvas>
+                </div>
             </div>
 
             <div class="card terminal-container">
                 <h3>System_Logs</h3>
                 <div id="terminal" class="terminal-body">
-                    <div class="log-line">[SYSTEM] Initialize secure connection...</div>
-                    <div class="log-line">[SYSTEM] Fetching data from Google_Cloud...</div>
+                    <div class="log-line">[SYSTEM] Initializing secure connection...</div>
                 </div>
             </div>
         </div>

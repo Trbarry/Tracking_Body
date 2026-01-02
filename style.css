@@ -3,7 +3,6 @@
     --card-bg: #0d1117;
     --border: #30363d;
     --accent: #a277ff;
-    --accent-glow: rgba(162, 119, 255, 0.15);
     --text-main: #c9d1d9;
     --text-dim: #8b949e;
     --terminal-green: #3fb950;
@@ -12,14 +11,15 @@
 body {
     background-color: var(--bg);
     color: var(--text-main);
-    font-family: 'JetBrains Mono', 'Segoe UI', monospace;
-    margin: 0; padding: 20px;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
 }
 
 .container { max-width: 1200px; margin: 0 auto; }
 
 header { border-bottom: 1px solid var(--border); margin-bottom: 30px; padding-bottom: 10px; }
-header h1 { color: var(--accent); font-size: 1.2rem; margin: 0; }
+header h1 { color: var(--accent); font-size: 1.2rem; margin: 0; font-weight: 800; }
 
 .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 20px; }
 
@@ -32,26 +32,29 @@ header h1 { color: var(--accent); font-size: 1.2rem; margin: 0; }
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 20px;
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-.card h3 { font-size: 0.75rem; color: var(--text-dim); margin: 0 0 15px 0; border-left: 2px solid var(--accent); padding-left: 10px; }
+.card h3 { font-size: 0.75rem; color: var(--text-dim); margin: 0 0 15px 0; border-left: 2px solid var(--accent); padding-left: 10px; text-transform: uppercase; }
 
-/* FIX DU BUG D'ÉTIREMENT */
-.chart-container { height: 450px; min-height: 450px; }
+/* LE FIX : On verrouille la hauteur ici pour empêcher l'étirement infini */
+.chart-wrapper {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
 
 .value { font-size: 2.2rem; font-weight: bold; color: var(--accent); }
-.unit { font-size: 0.9rem; color: var(--text-dim); margin-left: 5px; }
+.unit { font-size: 0.9rem; color: var(--text-dim); }
 
-/* STYLE TERMINAL */
-.terminal-container { height: 450px; background: #000; border-color: var(--accent); }
+/* Style du Terminal */
+.terminal-container { background: #000; height: 440px; }
 .terminal-body {
-    height: 380px;
+    height: 100%;
     overflow-y: auto;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;
     color: var(--terminal-green);
-    line-height: 1.4;
 }
-.log-line { margin-bottom: 4px; }
-.log-line::before { content: "> "; }
+.log-line { margin-bottom: 5px; }
