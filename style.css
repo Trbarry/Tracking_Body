@@ -16,16 +16,27 @@ body {
     padding: 20px;
 }
 
-.container { max-width: 1200px; margin: 0 auto; }
+.container { max-width: 1300px; margin: 0 auto; }
 
 header { border-bottom: 1px solid var(--border); margin-bottom: 30px; padding-bottom: 10px; }
 header h1 { color: var(--accent); font-size: 1.2rem; margin: 0; font-weight: 800; }
 
-.kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 20px; }
+/* Adaptation pour 4 KPIs */
+.kpi-row { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+    margin-bottom: 20px; 
+}
 
-.grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+/* Grille pour les deux graphiques */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); 
+    gap: 20px; 
+}
 
-@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+@media (max-width: 1000px) { .grid { grid-template-columns: 1fr; } }
 
 .card {
     background: var(--card-bg);
@@ -38,23 +49,22 @@ header h1 { color: var(--accent); font-size: 1.2rem; margin: 0; font-weight: 800
 
 .card h3 { font-size: 0.75rem; color: var(--text-dim); margin: 0 0 15px 0; border-left: 2px solid var(--accent); padding-left: 10px; text-transform: uppercase; }
 
-/* LE FIX : On verrouille la hauteur ici pour empêcher l'étirement infini */
 .chart-wrapper {
     position: relative;
-    height: 400px;
+    height: 300px; /* Hauteur ajustée pour en mettre deux */
     width: 100%;
 }
 
-.value { font-size: 2.2rem; font-weight: bold; color: var(--accent); }
+.value { font-size: 2rem; font-weight: bold; color: var(--accent); }
 .unit { font-size: 0.9rem; color: var(--text-dim); }
 
-/* Style du Terminal */
-.terminal-container { background: #000; height: 440px; }
+.terminal-container { background: #000; height: 250px; margin-top: 10px; }
 .terminal-body {
     height: 100%;
     overflow-y: auto;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;
     color: var(--terminal-green);
+    padding: 10px;
 }
 .log-line { margin-bottom: 5px; }
