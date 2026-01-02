@@ -10,8 +10,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>PERFORMANCE_MIRROR_V2.1</h1>
-            <p>System_Status: <span id="sync-status" style="color: #3fb950;">ONLINE</span> | User: Tristan Barry</p>
+            <h1>PERFORMANCE_MIRROR_V2.2</h1>
+            <p>Predictive_Analysis: <span id="sync-status" style="color: #a277ff;">ACTIVE</span> | User: Tristan Barry</p>
         </header>
 
         <div class="kpi-row">
@@ -24,32 +24,37 @@
                 <div class="value"><span id="total-diff">--</span><span class="unit">kg</span></div>
             </div>
             <div class="card">
-                <h3>Avg_Fuel_7D</h3>
-                <div class="value"><span id="avg-kcal">--</span><span class="unit">kcal</span></div>
+                <h3>Days_Tracked</h3>
+                <div class="value"><span id="days-count">--</span><span class="unit">jours</span></div>
+            </div>
+        </div>
+
+        <div class="kpi-row">
+            <div class="card">
+                <h3>Total_Steps_Archived</h3>
+                <div class="value"><span id="total-steps">--</span><span class="unit">pas</span></div>
             </div>
             <div class="card">
-                <h3>Avg_Steps_7D</h3>
-                <div class="value"><span id="avg-steps">--</span><span class="unit">pas</span></div>
+                <h3>Year_Projection_Steps</h3>
+                <div class="value"><span id="year-steps">--</span><span class="unit">M</span></div>
+            </div>
+            <div class="card alert-card">
+                <h3>Est_Maintenance_Kcal</h3>
+                <div class="value"><span id="est-maintenance">--</span><span class="unit">kcal</span></div>
             </div>
         </div>
 
         <div class="grid">
             <div class="card">
                 <h3>Biometric_Trend (Poids)</h3>
-                <div class="chart-wrapper">
-                    <canvas id="weightChart"></canvas>
-                </div>
+                <div class="chart-wrapper"><canvas id="weightChart"></canvas></div>
             </div>
-
             <div class="card">
                 <h3>Activity_Flow (Pas)</h3>
-                <div class="chart-wrapper">
-                    <canvas id="stepsChart"></canvas>
-                </div>
+                <div class="chart-wrapper"><canvas id="stepsChart"></canvas></div>
             </div>
-
             <div class="card terminal-container" style="grid-column: 1 / -1;">
-                <h3>System_Logs</h3>
+                <h3>Predictive_System_Logs</h3>
                 <div id="terminal" class="terminal-body"></div>
             </div>
         </div>
