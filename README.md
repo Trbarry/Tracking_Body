@@ -1,82 +1,79 @@
-# 📊 Performance Mirror - Fitness Tracker
+# PERFORMANCE_MIRROR_V2.2
 
-> **Dashboard statique de suivi de performance, synchronisé en temps réel avec Google Sheets.**
+Dashboard de monitoring biométrique et prédictif automatisé. Ce projet permet de visualiser l'évolution de la composition corporelle et de l'activité physique à partir de données extraites dynamiquement d'un tableur distant.
 
-Ce projet permet de transformer un tableur complexe (données de training, diète et mensurations) en une interface web épurée, visuelle et en **lecture seule**. Il repose sur une architecture **Serverless** utilisant des outils de **Data Engineering** simples.
+## 🚀 Vue d'ensemble du Système
 
-## 🏗️ Architecture Technique
+Le projet repose sur une architecture **Data-Driven** où le frontend est totalement découplé de la saisie des données. L'objectif est de transformer des données brutes de suivi (Log) en indicateurs de performance exploitables (KPIs).
 
-Le projet utilise une pipeline **CI/CD** automatisée :
+### Architecture du Flux de Données (Data Pipeline)
 
-1. **Source** : Google Sheets (Saisie mobile/PC).
-2. **ETL (Extract, Transform, Load)** : Un script **Python** utilisant **Pandas** s'exécute via **GitHub Actions**.
-3. **Storage** : Les données nettoyées sont stockées sous forme de fichier `summary.json` dans le dépôt.
-4. **Frontend** : Une Single Page Application (SPA) en **HTML/JS** utilise **Chart.js** pour la visualisation.
-5. **Hosting** : Déploiement automatique sur **GitHub Pages**.
+1. **Source (Saisie)** : Les données sont saisies manuellement dans un Google Sheets (Excel-like).
+2. **Extraction (Extraction)** : Un script Python récupère les données via une URL d'export CSV.
+3. **Traitement (Cleaning)** : Le script utilise la bibliothèque **Pandas** pour nettoyer les données (conversion des virgules françaises en points, typage numérique, suppression des entrées vides).
+4. **Stockage (Artifact)** : Un fichier `data/summary.json` est généré, servant de base de données statique pour le frontend.
+5. **Automatisation (CI/CD)** : Une **GitHub Action** exécute ce script périodiquement ou à chaque push, assurant la synchronisation automatique.
+6. **Visualisation (Frontend)** : Le dashboard (Vanilla JS / Chart.js) parse le JSON et affiche les KPIs et graphiques interactifs.
+
+---
+
+## 🛠 Stack Technique
+
+* **Langage** : Python 3.x (Backend), JavaScript ES6 (Frontend).
+* **Data Analysis** : Pandas (Python).
+* **Visualisation** : Chart.js (Graphiques dynamiques).
+* **Style** : CSS3 Premium (Glassmorphism, Cyber-Neon theme).
+* **Automation** : GitHub Actions.
+
+---
 
 ## 📂 Structure du Projet
 
 ```text
-.
 ├── .github/workflows/
-│   └── sync.yml            # Automatisation de la synchronisation (Cron)
+│   └── sync.yml           # Workflow d'automatisation de la synchronisation
 ├── data/
-│   └── summary.json        # Données nettoyées (généré par le script)
+│   └── summary.json       # Données traitées prêtes pour le frontend
 ├── scripts/
-│   └── process_data.py      # Script de parsing et nettoyage (Python/Pandas)
-├── index.html              # Structure du Dashboard
-├── style.css               # Design (Thème sombre & violet)
-├── app.js                  # Logique de visualisation (Chart.js)
-├── requirements.txt        # Dépendances Python
-└── README.md               # Documentation
+│   └── process_data.py    # Script d'extraction et de nettoyage (Pandas)
+├── index.html             # Interface utilisateur
+├── app.js                 # Logique frontend et calculs de maintenance
+└── style.css              # Design Cyber-Premium
 
 ```
 
-## 🚀 Setup & Déploiement
+---
 
-### Prérequis
+## 📈 Fonctionnalités Prédictives
 
-* Un environnement **GitHub Codespaces** ou une machine sous **Arch Linux**.
-* Python 3.10+ installé.
+Le dashboard n'affiche pas seulement des données passées, il intègre une couche d'analyse métabolique :
 
-### Installation
+* **Maintenance Théorique (TDEE)** : Calculée dynamiquement en corrélant la variation de poids réelle et l'apport calorique moyen sur la période de suivi.
+* **Extrapolation de l'Activité** : Projection annuelle du nombre de pas basée sur la moyenne glissante hebdomadaire.
+* **Predictive System Logs** : Simulation d'un terminal SOC affichant l'état de l'analyse des données en temps réel.
 
-1. Cloner le repository.
-2. Installer les dépendances :
+---
+
+## 🛠 Installation et Usage
+
+1. **Prérequis** : Python 3.x installé.
+2. **Installation des dépendances** :
 ```bash
-pip install -r requirements.txt
+pip install pandas
 
 ```
 
 
-3. Lancer une synchronisation manuelle :
+3. **Lancement manuel de la synchronisation** :
 ```bash
 python scripts/process_data.py
 
 ```
 
 
-
-### Configuration GitHub Actions
-
-Pour que la synchronisation automatique fonctionne, assurez-vous d'activer les droits d'écriture pour le workflow :
-
-* `Settings` > `Actions` > `General` > `Workflow permissions` > **Read and write permissions**.
-
-## 🎨 Visualisations Actuelles
-
-* **Weight Evolution** : Suivi du Poids de Corps (PDC) avec lissage de courbe.
-* **Phase Detection** : Coloration dynamique du graphique selon la période (Déficit, Maintenance, Reverse).
-* **Last Update Status** : Indicateur de fraîcheur des données.
+4. **Visualisation** : Ouvrir `index.html` dans un navigateur ou via un serveur local (Live Server).
 
 ---
 
-**Développé par [Tristan Barry**](https://www.google.com/search?q=https://trtnxbook.com) *Objectif : Allier passion pour le bodybuilding et expertise en automatisation IT.*
+> **Note du développeur** : Ce projet est une démonstration de maîtrise du cycle de vie de la donnée, de son extraction brute à sa mise en valeur graphique, en respectant les standards de l'automatisation logicielle.
 
----
-
-### Le conseil du "Prof"
-
-Tristan, ce README est propre, mais n'oublie pas de mettre à jour ton lien `trtnxbook.com` à l'intérieur une fois que tout est lié. Un dépôt sans README est une boîte noire ; ici, tu montres que tu maîtrises ta **Stack technique**.
-
-**Souhaites-tu que je t'aide à rédiger une section "Cybersecurity Note" pour expliquer comment tu as sécurisé l'accès à tes données sans exposer d'API Key ?**
