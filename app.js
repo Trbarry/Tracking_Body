@@ -1,47 +1,67 @@
+// Fonction utilitaire pour parser les dates "jeudi 17 juillet 2025"
+function parseFrenchDate(dateStr) {
+    const months = {
+        "janvier": 0, "février": 1, "mars": 2, "avril": 3, "mai": 4, "juin": 5,
+        "juillet": 6, "août": 7, "septembre": 8, "octobre": 9, "novembre": 10, "décembre": 11
+    };
+    const p = dateStr.toLowerCase().split(' ');
+    // p[1] = jour, p[2] = mois, p[3] = année
+    return new Date(parseInt(p[3]), months[p[2]], parseInt(p[1]));
+}
+
 async function initDashboard() {
     try {
         const response = await fetch('./data/summary.json');
         const data = await response.json();
         if (!data || data.length === 0) return;
 
-        const lastEntry = data[data.length - 1];
         const firstEntry = data[0];
-        const dayCount = data.length;
+        const lastEntry = data[data.length - 1];
 
-        // --- 1. CALCULS KPI ---
+        // --- 1. CALCUL DU TEMPS RÉEL ---
+        const startDate = parseFrenchDate(firstEntry.Date);
+        const endDate = parseFrenchDate(lastEntry.Date);
+        const diffTime = Math.abs(endDate - startDate);
+        const realDayCount = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+        
+        document.getElementById('days-count').innerText = realDayCount;
+
+        // --- 2. CALCULS KPI STANDARDS ---
         document.getElementById('current-weight').innerText = lastEntry.PDC.toFixed(1);
-        document.getElementById('days-count').innerText = dayCount;
+        const totalDelta = lastEntry.PDC - firstEntry.PDC;
+        const diffEl = document.getElementById('total-diff');
+        diffEl.innerText = (totalDelta > 0 ? '+' : '') + totalDelta.toFixed(2);
+        diffEl.style.color = totalDelta <= 0 ? '#3fb950' : '#f85149';
 
-        // Total Pas
+        // Pas totaux et projection
         const totalSteps = data.reduce((sum, d) => sum + (parseFloat(d.PAS) || 0), 0);
         document.getElementById('total-steps').innerText = Math.round(totalSteps).toLocaleString();
+        const avgSteps = totalSteps / data.length; // Moyenne par semaine relevée
+        document.getElementById('year-steps').innerText = ((avgSteps * 52) / 1000000).toFixed(2);
 
-        // Extrapolation Annuelle (Moyenne * 365)
-        const avgSteps = totalSteps / dayCount;
-        const yearProjection = (avgSteps * 365) / 1000000; // En Millions
-        document.getElementById('year-steps').innerText = yearProjection.toFixed(2);
-
-        // Variation Poids
-        const totalDelta = lastEntry.PDC - firstEntry.PDC;
-        document.getElementById('total-diff').innerText = (totalDelta > 0 ? '+' : '') + totalDelta.toFixed(2);
-
-        // --- 2. EXTRAPOLATION MAINTENANCE (Maths) ---
-        // 1kg de gras ~= 7700 kcal. On calcule le déficit moyen par jour.
+        // --- 3. FIX MAINTENANCE THÉORIQUE ---
+        // 1kg de gras = 7700 kcal. 
+        // Déficit total = perte de poids * 7700
         const totalKcalDeficit = Math.abs(totalDelta) * 7700;
-        const dailyDeficit = totalKcalDeficit / dayCount;
-        const avgConsummed = data.filter(d => d.KCALS > 0).reduce((sum, d) => sum + d.KCALS, 0) / dayCount;
-        const estMaintenance = avgConsummed + dailyDeficit;
+        const dailyDeficit = totalKcalDeficit / realDayCount;
+
+        // Moyenne des calories consommées (on ne prend que les jours avec data)
+        const kcalEntries = data.filter(d => d.KCALS && d.KCALS > 0);
+        const avgConsumed = kcalEntries.reduce((sum, d) => sum + d.KCALS, 0) / kcalEntries.length;
+
+        // Maintenance = Calories mangées + Déficit compensé par le corps
+        const estMaintenance = avgConsumed + dailyDeficit;
         document.getElementById('est-maintenance').innerText = Math.round(estMaintenance);
 
-        // --- 3. TERMINAL LOGS (Predictive) ---
+        // --- 4. TERMINAL & CHARTS (Inchangés mais utilisent les nouvelles vars) ---
         const terminal = document.getElementById('terminal');
         const logs = [
-            `[SYSTEM] Analysing biometric drift over ${dayCount} days...`,
-            `[CALC] Average daily activity: ${Math.round(avgSteps)} steps.`,
-            `[PREDICT] 2026 Objective: ${Math.round(avgSteps * 365).toLocaleString()} cumulative steps.`,
-            `[CYBER] Body-fat-entropy decreasing: ${((Math.abs(totalDelta)/firstEntry.PDC)*100).toFixed(1)}% mass reduction.`,
-            `[ADVICE] To maintain ${lastEntry.PDC}kg, aim for ${Math.round(estMaintenance)} kcal.`
+            `[SYSTEM] Temporal drift detected: ${realDayCount} days of tracking.`,
+            `[MATH] Correcting metabolic baseline...`,
+            `[INFO] Calculated daily deficit: ${Math.round(dailyDeficit)} kcal/day.`,
+            `[PREDICT] Theoretical TDEE: ${Math.round(estMaintenance)} kcal.`
         ];
+        
         logs.forEach((msg, i) => {
             setTimeout(() => {
                 const line = document.createElement('div');
@@ -52,18 +72,34 @@ async function initDashboard() {
             }, i * 600);
         });
 
-        // --- 4. CHARTS ---
-        const commonOptions = { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, 
-                                scales: { y: { grid: { color: '#161b22' }, ticks: { color: '#8b949e' } }, x: { ticks: { color: '#8b949e' }, grid: { display: false } } } };
-
+        // Config Chart.js (Poids)
         new Chart(document.getElementById('weightChart'), {
-            type: 'line', data: { labels: data.map(d => d.Date.split(' ').slice(1, 3).join(' ')), 
-            datasets: [{ data: data.map(d => d.PDC), borderColor: '#a277ff', tension: 0.4, fill: false }] }, options: commonOptions });
+            type: 'line',
+            data: {
+                labels: data.map(d => d.Date.split(' ').slice(1, 3).join(' ')),
+                datasets: [{
+                    data: data.map(d => d.PDC),
+                    borderColor: '#a277ff',
+                    fill: false,
+                    tension: 0.4
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+        });
 
+        // Config Chart.js (Pas)
         new Chart(document.getElementById('stepsChart'), {
-            type: 'bar', data: { labels: data.map(d => d.Date.split(' ').slice(1, 3).join(' ')), 
-            datasets: [{ data: data.map(d => d.PAS), backgroundColor: 'rgba(162, 119, 255, 0.4)' }] }, options: commonOptions });
+            type: 'bar',
+            data: {
+                labels: data.map(d => d.Date.split(' ').slice(1, 3).join(' ')),
+                datasets: [{
+                    data: data.map(d => d.PAS),
+                    backgroundColor: 'rgba(162, 119, 255, 0.4)'
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+        });
 
-    } catch (e) { console.error("Extrapolation_Error:", e); }
+    } catch (e) { console.error("Sync_Error:", e); }
 }
 document.addEventListener('DOMContentLoaded', initDashboard);
