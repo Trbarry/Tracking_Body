@@ -5,55 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volume Control | Performance Mirror</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>VOLUME_CONTROL_CENTER_V1.0</h1>
-            <p>Status: <span id="sync-indicator" style="color: #3fb950;">● SYNC_READY</span> | Admin_Mode</p>
+            <h1>VOLUME_CONTROL_CENTER_V1.2</h1>
+            <p>Status: <span id="sync-indicator" style="color: #3fb950;">● SYNC_READY</span> | Planning_Mode</p>
             
             <nav class="cyber-nav">
                 <a href="index.html" class="nav-link">MAIN_DASHBOARD</a>
-                <a href="volume.html" class="nav-link active">VOLUME_CONTROL_CENTER</a>
+                <a href="volume.html" class="nav-link active">VOLUME_PLANNER</a>
                 <span id="admin-unlock" onclick="unlockAdmin()" style="cursor:pointer; color:var(--text-dim); margin-left:15px; font-size:0.7rem;">[ LOCKED ]</span>
             </nav>
         </header>
 
         <div class="kpi-row">
             <div class="card">
-                <h3>Total_Weekly_Sets</h3>
+                <h3>Weekly_Total_Sets</h3>
                 <div class="value" id="total-weekly-sets">0</div>
             </div>
             <div class="card">
-                <h3>System_Recovery_State</h3>
+                <h3>Recovery_State</h3>
                 <div class="value" id="recovery-status">OPTIMAL</div>
             </div>
         </div>
 
-        <section class="volume-lab">
-            <div class="card" style="grid-column: 1 / -1; margin-bottom: 25px;">
-                <h3>Exercise_Bank (Draggable)</h3>
-                <div id="exercise-bank" class="bank-container">
-                    </div>
-            </div>
+        <div class="card" style="margin-bottom: 25px;">
+            <h3>Exercise_Bank (Available)</h3>
+            <div id="exercise-bank" class="bank-container" ondrop="drop(event)" ondragover="allowDrop(event)" data-session="null">
+                </div>
+        </div>
 
-            <div class="grid">
-                <div class="card" style="grid-column: 1 / -1;">
-                    <h3>Muscle_Volume_Matrix</h3>
-                    <div class="muscle-grid">
-                        </div>
-                </div>
-                
-                <div class="card chart-container" style="grid-column: 1 / -1;">
-                    <h3>Muscle_Group_Distribution (Weekly)</h3>
-                    <div class="chart-wrapper">
-                        <canvas id="volumeRadarChart"></canvas>
-                    </div>
-                </div>
+        <div class="session-grid">
+            <div class="session-column" ondrop="drop(event)" ondragover="allowDrop(event)" data-session="Upper A">
+                <div class="session-header">UPPER_A</div>
+                <div class="drop-zone"></div>
             </div>
-        </section>
+            <div class="session-column" ondrop="drop(event)" ondragover="allowDrop(event)" data-session="Upper B">
+                <div class="session-header">UPPER_B</div>
+                <div class="drop-zone"></div>
+            </div>
+            <div class="session-column" ondrop="drop(event)" ondragover="allowDrop(event)" data-session="Legs">
+                <div class="session-header">LEGS</div>
+                <div class="drop-zone"></div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 40px;">
+            <h3>Weekly_Muscle_Volume_Matrix (Weighted_Analysis)</h3>
+            <div class="muscle-matrix-summary" id="global-muscle-matrix">
+                </div>
+        </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="volume.js"></script>
 </body>

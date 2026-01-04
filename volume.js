@@ -1,6 +1,6 @@
 /**
- * VOLUME_CONTROL_CENTER - CLOUD_SYNC_EDITION (v1.4)
- * Logic: Weighted Volume (100%/50%/25%) + Full Drag & Drop
+ * VOLUME_CONTROL_CENTER - SESSION_PLANNER_EDITION
+ * Logic: Weighted Volume (1.0 / 0.5 / 0.25) + Session Management
  */
 
 const SUPABASE_URL = 'https://pvcvpqhcyezcmlsgrnhl.supabase.co';
@@ -15,17 +15,17 @@ const MUSCLE_GROUPS = [
     "Abdominaux", "Mollets"
 ];
 
+const SESSIONS = ['Upper A', 'Upper B', 'Legs'];
 let isAdmin = sessionStorage.getItem('isAdmin') === 'true';
 let cachedExercises = [];
 
 async function initVolumeLab() {
     await fetchFromCloud();
-    renderMuscleColumns();
     renderExercises();
     updateTotals();
-    setupBankDrop(); // Nouvelle fonction pour le drop dans la banque
 }
 
+// --- CLOUD OPS ---
 async function fetchFromCloud() {
     const { data, error } = await supabaseClient.from('exercise_volume').select('*').order('id', { ascending: true });
     if (!error) {
@@ -34,101 +34,88 @@ async function fetchFromCloud() {
     }
 }
 
-function renderMuscleColumns() {
-    const grid = document.querySelector('.muscle-grid');
-    if (!grid) return;
-    grid.innerHTML = MUSCLE_GROUPS.map(muscle => `
-        <div class="muscle-column" ondrop="drop(event)" ondragover="allowDrop(event)" data-muscle="${muscle}">
-            <div class="muscle-header">
-                <span>${muscle.toUpperCase()}</span>
-                <span class="total-badge" id="total-${muscle}">0</span>
+async function updateCloud(id, payload) {
+    if (!isAdmin) return;
+    showSyncing(true);
+    await supabaseClient.from('exercise_volume').update(payload).eq('id', id);
+    showSyncing(false);
+}
+
+// --- UI RENDERING ---
+function createExoCard(exo) {
+    const card = document.createElement('div');
+    card.className = `exo-card ${!isAdmin ? 'locked' : 'draggable'}`;
+    card.id = `exo-${exo.id}`;
+    card.draggable = isAdmin;
+    card.ondragstart = (e) => e.dataTransfer.setData("text", e.target.id);
+
+    card.innerHTML = `
+        <div class="exo-info">
+            <div style="display:flex; flex-direction:column;">
+                <span class="exo-name">${exo.exercise_name}</span>
+                <div class="target-indicators">
+                    <span class="dot p" title="P: ${exo.muscle_group}"></span>
+                    ${exo.muscle_medium ? `<span class="dot m" title="M: ${exo.muscle_medium}"></span>` : ''}
+                    ${exo.muscle_secondary ? `<span class="dot s" title="S: ${exo.muscle_secondary}"></span>` : ''}
+                </div>
             </div>
-            <div class="drop-zone"></div>
+            <input type="number" class="sets-input" value="${exo.sets || 0}" 
+                   ${!isAdmin ? 'disabled' : ''} 
+                   onchange="updateSets(${exo.id}, this.value)">
         </div>
-    `).join('');
+    `;
+    return card;
 }
 
 function renderExercises() {
-    const bank = document.getElementById('exercise-bank');
-    if (!bank) return;
-    bank.innerHTML = ''; 
+    document.querySelectorAll('.drop-zone').forEach(dz => dz.innerHTML = '');
+    document.getElementById('exercise-bank').innerHTML = '';
 
     cachedExercises.forEach(exo => {
-        const card = document.createElement('div');
-        card.className = `exo-card ${!isAdmin ? 'locked' : 'draggable'}`;
-        card.id = `exo-${exo.id}`;
-        card.draggable = isAdmin; // Verrou si pas admin
-        card.ondragstart = (e) => e.dataTransfer.setData("text", e.target.id);
-
-        card.innerHTML = `
-            <div class="exo-info">
-                <div style="display:flex; flex-direction:column;">
-                    <span class="exo-name">${exo.exercise_name}</span>
-                    <div class="target-indicators">
-                        <span class="dot p" title="P: ${exo.muscle_group}"></span>
-                        ${exo.muscle_medium ? `<span class="dot m" title="M: ${exo.muscle_medium}"></span>` : ''}
-                        ${exo.muscle_secondary ? `<span class="dot s" title="S: ${exo.muscle_secondary}"></span>` : ''}
-                    </div>
-                </div>
-                <input type="number" class="sets-input" value="${exo.sets || 0}" 
-                       ${!isAdmin ? 'disabled' : ''} 
-                       onchange="updateSets(${exo.id}, this.value)">
-            </div>
-        `;
-
-        const targetColumn = document.querySelector(`[data-muscle="${exo.muscle_group}"] .drop-zone`);
-        if (targetColumn && exo.muscle_group) targetColumn.appendChild(card);
-        else bank.appendChild(card);
-    });
-}
-
-function setupBankDrop() {
-    const bank = document.getElementById('exercise-bank');
-    bank.ondragover = (e) => e.preventDefault();
-    bank.ondrop = async (e) => {
-        e.preventDefault();
-        const dataId = e.dataTransfer.getData("text");
-        const id = parseInt(dataId.replace('exo-', ''));
-        const exo = cachedExercises.find(ex => ex.id === id);
-        if (exo && isAdmin) {
-            exo.muscle_group = null;
-            bank.appendChild(document.getElementById(dataId));
-            updateTotals();
-            await updateCloud(id, { muscle_group: null });
+        const card = createExoCard(exo);
+        if (exo.workout_session && SESSIONS.includes(exo.workout_session)) {
+            const target = document.querySelector(`[data-session="${exo.workout_session}"] .drop-zone`);
+            if (target) target.appendChild(card);
+        } else {
+            document.getElementById('exercise-bank').appendChild(card);
         }
-    };
-}
-
-async function drop(ev) {
-    ev.preventDefault();
-    if (!isAdmin) return;
-    const dataId = ev.dataTransfer.getData("text");
-    const muscle = ev.currentTarget.getAttribute('data-muscle');
-    const id = parseInt(dataId.replace('exo-', ''));
-    
-    const exo = cachedExercises.find(e => e.id === id);
-    if (exo) {
-        exo.muscle_group = muscle;
-        ev.currentTarget.querySelector('.drop-zone').appendChild(document.getElementById(dataId));
-        updateTotals();
-        await updateCloud(id, { muscle_group: muscle });
-    }
-}
-
-function updateTotals() {
-    let globalTotal = 0;
-    MUSCLE_GROUPS.forEach(muscle => {
-        let weighted = 0;
-        cachedExercises.forEach(exo => {
-            const sets = parseInt(exo.sets) || 0;
-            if (exo.muscle_group === muscle) { weighted += sets; globalTotal += sets; }
-            else if (exo.muscle_medium === muscle) weighted += (sets * 0.5);
-            else if (exo.muscle_secondary === muscle) weighted += (sets * 0.25);
-        });
-        const badge = document.getElementById(`total-${muscle}`);
-        if (badge) badge.innerText = weighted % 1 === 0 ? weighted : weighted.toFixed(1);
     });
-    document.getElementById('total-weekly-sets').innerText = globalTotal;
+}
+
+// --- CALCULS ---
+function updateTotals() {
+    let globalTotalSets = 0;
+    const matrixContainer = document.getElementById('global-muscle-matrix');
+    matrixContainer.innerHTML = '';
+
+    MUSCLE_GROUPS.forEach(muscle => {
+        let weightedVol = 0;
+
+        cachedExercises.forEach(exo => {
+            const s = parseInt(exo.sets) || 0;
+            if (exo.muscle_group === muscle) { 
+                weightedVol += s; 
+                globalTotalSets += s;
+            }
+            else if (exo.muscle_medium === muscle) weightedVol += (s * 0.5);
+            else if (exo.muscle_secondary === muscle) weightedVol += (s * 0.25);
+        });
+
+        if (weightedVol > 0) {
+            const item = document.createElement('div');
+            item.className = 'muscle-total-item';
+            item.innerHTML = `
+                <span class="m-name">${muscle}</span>
+                <span class="m-val">${weightedVol % 1 === 0 ? weightedVol : weightedVol.toFixed(1)}</span>
+            `;
+            matrixContainer.appendChild(item);
+        }
+    });
+
+    document.getElementById('total-weekly-sets').innerText = globalTotalSets;
+    const statusEl = document.getElementById('recovery-status');
+    statusEl.innerText = globalTotalSets > 85 ? "OVERLOAD_RISK" : "OPTIMAL";
+    statusEl.style.color = globalTotalSets > 85 ? "#f85149" : "#3fb950";
 }
 
 async function updateSets(id, newValue) {
@@ -137,6 +124,23 @@ async function updateSets(id, newValue) {
     if (exo) exo.sets = val;
     updateTotals();
     await updateCloud(id, { sets: val });
+}
+
+async function drop(ev) {
+    ev.preventDefault();
+    if (!isAdmin) return;
+    const dataId = ev.dataTransfer.getData("text");
+    const sessionName = ev.currentTarget.getAttribute('data-session');
+    const id = parseInt(dataId.replace('exo-', ''));
+    
+    const exo = cachedExercises.find(e => e.id === id);
+    if (exo) {
+        exo.workout_session = (sessionName === "null") ? null : sessionName;
+        const targetZone = (sessionName === "null") ? ev.currentTarget : ev.currentTarget.querySelector('.drop-zone');
+        targetZone.appendChild(document.getElementById(dataId));
+        updateTotals();
+        await updateCloud(id, { workout_session: exo.workout_session });
+    }
 }
 
 function unlockAdmin() {
