@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Volume Control Center | trtnxbook.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Control | Performance Mirror</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -10,8 +11,11 @@
     <div class="container">
         <header>
             <h1>VOLUME_CONTROL_CENTER_V1.0</h1>
+            <p>Status: <span style="color: #3fb950;">SYNC_READY</span> | Admin_Mode</p>
+            
             <nav class="cyber-nav">
-                <a href="index.html" class="nav-link">← BIOMETRICS</a>
+                <a href="index.html" class="nav-link">MAIN_DASHBOARD</a>
+                <a href="volume.html" class="nav-link active">VOLUME_CONTROL_CENTER</a>
                 <span id="admin-unlock" onclick="unlockAdmin()" style="cursor:pointer; color:var(--text-dim); margin-left:15px; font-size:0.7rem;">[ LOCKED ]</span>
             </nav>
         </header>

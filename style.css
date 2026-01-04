@@ -1,13 +1,9 @@
-/* PERFORMANCE_MIRROR_V2.2 - PREMIUM_CYBER_THEME
-    Author: Tristan Barry
-    Stack: Vanilla CSS / Glassmorphism / Cyber-Neon
-*/
-
+/* PERFORMANCE_MIRROR - PREMIUM_CYBER_THEME */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
 
 :root {
     --bg: #010409;
-    --card-bg: rgba(13, 17, 23, 0.7); /* Semi-transparent pour le Glass */
+    --card-bg: rgba(13, 17, 23, 0.7);
     --border: rgba(48, 54, 61, 0.8);
     --accent: #a277ff;
     --accent-glow: rgba(162, 119, 255, 0.3);
@@ -16,18 +12,6 @@
     --terminal-green: #3fb950;
     --warning: #dbab09;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Effet de Scanlines (Lignes de balayage CRT) pour le côté Cyber */
-body::before {
-    content: " ";
-    position: fixed;
-    top: 0; left: 0; bottom: 0; right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
-                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-    background-size: 100% 3px, 3px 100%;
-    pointer-events: none;
-    z-index: 9999;
 }
 
 body {
@@ -41,10 +25,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-}
+.container { max-width: 1400px; margin: 0 auto; }
 
 header {
     margin-bottom: 40px;
@@ -57,16 +38,36 @@ header h1 {
     font-size: 1.5rem;
     color: var(--accent);
     margin: 0;
-    text-shadow: 0 0 10px var(--accent-glow);
 }
 
-header p {
+/* --- CYBER_NAV_SYSTEM --- */
+.cyber-nav {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
     color: var(--text-dim);
-    font-size: 0.9rem;
-    margin: 5px 0 0 0;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: var(--transition);
+    letter-spacing: 1px;
 }
 
-/* GRILLE ET CARTES */
+.nav-link:hover, .nav-link.active {
+    color: var(--accent);
+    background: rgba(162, 119, 255, 0.1);
+    border-color: var(--accent);
+}
+
+/* --- GRID & CARDS --- */
 .kpi-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -80,127 +81,85 @@ header p {
     gap: 25px;
 }
 
-/* Glassmorphism & Glow Effect */
 .card {
     background: var(--card-bg);
-    backdrop-filter: blur(12px); /* Effet de flou arrière-plan */
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 24px;
-    position: relative;
     transition: var(--transition);
-    overflow: hidden;
 }
 
-/* Animation au survol */
 .card:hover {
-    transform: translateY(-5px);
     border-color: var(--accent);
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-glow);
+    box-shadow: 0 0 20px var(--accent-glow);
 }
 
-.card h3 {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--text-dim);
-    margin: 0 0 20px 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    display: flex;
-    align-items: center;
-}
-
-.card h3::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    background: var(--accent);
-    display: inline-block;
-    margin-right: 10px;
-    border-radius: 2px;
-    box-shadow: 0 0 8px var(--accent);
-}
-
-/* TYPOGRAPHIE DES VALEURS */
 .value {
     font-family: 'JetBrains Mono', monospace;
     font-size: 2.5rem;
     font-weight: 700;
     color: #ffffff;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
-.unit {
-    font-size: 1rem;
-    color: var(--text-dim);
-    margin-left: 8px;
-    font-weight: 400;
+/* --- BADGES DE PHASE (Style Image) --- */
+.phase-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
 }
 
-.alert-card {
-    border-color: rgba(219, 171, 9, 0.3);
+.phase-reverse { background-color: #e9d8fd; color: #6b46c1; }
+.phase-deficit { background-color: #bee3f8; color: #2b6cb0; }
+.phase-diet-break { background-color: #edf2f7; color: #2d3748; }
+.phase-maintenance { background-color: #e2e8f0; color: #4a5568; }
+.phase-surplus { background-color: #c6f6d5; color: #276749; }
+.phase-priming { background-color: #feebc8; color: #9c4221; }
+
+/* --- VOLUME MODULATION UI --- */
+.volume-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
 }
 
-.alert-card:hover {
-    border-color: var(--warning);
-    box-shadow: 0 0 20px rgba(219, 171, 9, 0.2);
+.locked-row { opacity: 0.4; pointer-events: none; filter: grayscale(1); }
+
+input[type=range] {
+    flex: 2;
+    -webkit-appearance: none;
+    background: transparent;
 }
 
-/* FIX DU GRAPHBUG */
-.chart-wrapper {
-    position: relative;
-    height: 350px;
-    width: 100%;
+input[type=range]::-webkit-slider-runnable-track {
+    height: 4px;
+    background: var(--border);
 }
 
-/* TERMINAL LOGS */
-.terminal-container {
-    background: #000;
-    border: 1px solid var(--accent);
-    height: 250px;
-    margin-top: 10px;
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px; width: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: -6px;
+    box-shadow: 0 0 10px var(--accent);
 }
 
+/* --- TERMINAL & CHARTS --- */
+.chart-wrapper { position: relative; height: 350px; }
 .terminal-body {
-    height: 100%;
+    height: 200px;
     overflow-y: auto;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;
     color: var(--terminal-green);
     padding: 15px;
-    background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
-}
-/* Couleurs spécifiques aux PHASES */
-.phase-tag {
-    font-size: 0.8rem;
-    padding: 4px 12px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    font-weight: 800;
-}
-
-/* Mapping des couleurs basé sur ton visuel */
-.phase-reverse { color: var(--accent); border: 1px solid var(--accent); }
-.phase-deficit { color: #70b1ff; border: 1px solid #70b1ff; } /* Bleu clair */
-.phase-maintenance { color: var(--text-dim); border: 1px solid var(--border); }
-.phase-diet-break { color: #ffffff; border: 1px solid var(--text-dim); }
-.phase-surplus { color: #3fb950; border: 1px solid #3fb950; }
-.phase-priming { color: #dbab09; border: 1px solid #dbab09; }
-.log-line {
-    margin-bottom: 6px;
-    opacity: 0.9;
-}
-
-/* Scrollbar Style Cyber */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: var(--accent); }
-
-/* Mobile Optimizations */
-@media (max-width: 600px) {
-    .grid { grid-template-columns: 1fr; }
-    .value { font-size: 2rem; }
-    body { padding: 10px; }
+    background: #000;
 }

@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Performance Mirror | trtnxbook.com</title>
+    <title>Performance Mirror | Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <nav class="cyber-nav">
-    <a href="index.html" class="nav-link active">BIOMETRICS</a>
-    <a href="volume.html" class="nav-link">WEEKLY_VOLUME</a>
-    </nav>
     <div class="container">
         <header>
             <h1>PERFORMANCE_MIRROR_V2.2</h1>
             <p>Predictive_Analysis: <span id="sync-status" style="color: #a277ff;">ACTIVE</span> | Tristan Barry</p>
+            
+            <nav class="cyber-nav">
+                <a href="index.html" class="nav-link active">MAIN_DASHBOARD</a>
+                <a href="volume.html" class="nav-link">VOLUME_CONTROL_CENTER</a>
+            </nav>
         </header>
 
         <div class="kpi-row">
@@ -40,7 +41,9 @@
             </div>
             <div class="card">
                 <h3>Current_Phase</h3>
-                <div class="value"><span id="current-phase">--</span></div>
+                <div id="phase-container" style="margin-top: 10px;">
+                    <span id="current-phase">--</span>
+                </div>
             </div>
             <div class="card">
                 <h3>Year_Projection_Steps</h3>
