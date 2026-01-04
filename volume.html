@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Volume Control Center | trtnxbook.com</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>VOLUME_CONTROL_CENTER_V1.0</h1>
+            <nav class="cyber-nav">
+                <a href="index.html" class="nav-link">← BIOMETRICS</a>
+                <span id="admin-unlock" onclick="unlockAdmin()" style="cursor:pointer; color:var(--text-dim); margin-left:15px; font-size:0.7rem;">[ LOCKED ]</span>
+            </nav>
+        </header>
+
+        <div class="kpi-row">
+            <div class="card">
+                <h3>Total_Weekly_Sets</h3>
+                <div class="value" id="total-weekly-sets">0</div>
+            </div>
+            <div class="card">
+                <h3>System_Recovery_State</h3>
+                <div class="value" id="recovery-status">OPTIMAL</div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Daily_Modulation_Matrix</h3>
+                <div id="matrix-container">
+                    </div>
+            </div>
+            <div class="card chart-container">
+                <h3>Muscle_Group_Distribution (Weekly)</h3>
+                <div class="chart-wrapper">
+                    <canvas id="volumeRadarChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="volume.js"></script>
+</body>
+</html>
