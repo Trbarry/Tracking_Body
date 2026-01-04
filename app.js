@@ -2,7 +2,7 @@
  * PERFORMANCE_MIRROR - CORE_LOGIC_V2.6
  * Author: Tristan Barry
  * Purpose: Data Parsing, Biometric KPIs, and Predictive Analytics
- * Features: Refactored Helper Functions & Integrated Analytics
+ * Features: Master Metrics Integration, Refactored Helpers & Cyber-UI
  */
 
 // Configuration des objectifs (Pragmatic Tuning)
@@ -23,7 +23,7 @@ function parseFrenchDate(dateStr) {
 }
 
 /**
- * Calcule l'uptime total (nombre de jours de coaching)
+ * Calcule l'uptime total (nombre de jours depuis le début du coaching)
  */
 function calculateUptime(firstDateStr, lastDateStr) {
     const startDate = parseFrenchDate(firstDateStr);
@@ -32,7 +32,7 @@ function calculateUptime(firstDateStr, lastDateStr) {
 }
 
 /**
- * Calcule le cumul total des pas (Agrégation hebdomadaire -> Réel)
+ * Calcule le cumul total des pas (Conversion Moyenne Hebdo -> Réel)
  */
 function calculateTotalSteps(data) {
     // On multiplie par 7 car chaque entrée PAS du JSON est une moyenne hebdomadaire
@@ -43,6 +43,7 @@ function calculateTotalSteps(data) {
 
 async function initDashboard() {
     try {
+        // Fetch des données traitées par le script Python
         const response = await fetch('./data/summary.json');
         const data = await response.json();
         
@@ -54,12 +55,18 @@ async function initDashboard() {
         const firstEntry = data[0];
         const lastEntry = data[data.length - 1];
 
-        // --- 1. ANALYSE TEMPORELLE (Uptime) ---
+        // --- 1. CALCULS DES MASTER METRICS ---
         const realDayCount = calculateUptime(firstEntry.Date, lastEntry.Date);
-        const uptimeEl = document.getElementById('days-count');
-        if (uptimeEl) uptimeEl.innerText = realDayCount;
+        const totalStepsArchived = calculateTotalSteps(data);
+        const avgStepsPerDay = totalStepsArchived / realDayCount;
 
-        // --- 2. BIOMÉTRIE & TENDANCES (Poids) ---
+        // --- 2. AFFICHAGE DES MASTER METRICS (Haut de page) ---
+        const masterUptimeEl = document.getElementById('master-uptime');
+        const masterStepsEl = document.getElementById('master-total-steps');
+        if (masterUptimeEl) masterUptimeEl.innerText = realDayCount;
+        if (masterStepsEl) masterStepsEl.innerText = Math.round(totalStepsArchived).toLocaleString();
+
+        // --- 3. BIOMÉTRIE & TENDANCES (Poids) ---
         const currentPDC = parseFloat(lastEntry.PDC);
         const startPDC = parseFloat(firstEntry.PDC);
         const weightEl = document.getElementById('current-weight');
@@ -86,10 +93,7 @@ async function initDashboard() {
             }
         }
 
-        // --- 3. ANALYSE DE L'ACTIVITÉ (Steps) ---
-        const totalStepsArchived = calculateTotalSteps(data);
-        const avgStepsPerDay = totalStepsArchived / realDayCount;
-        
+        // --- 4. ANALYSE DE L'ACTIVITÉ DÉTAILLÉE ---
         const totalStepsEl = document.getElementById('total-steps');
         if (totalStepsEl) totalStepsEl.innerText = Math.round(totalStepsArchived).toLocaleString();
         
@@ -105,7 +109,10 @@ async function initDashboard() {
             stepBar.style.width = stepPercent + "%";
         }
 
-        // --- 4. MÉTABOLISME & PHASES ---
+        const uptimeEl = document.getElementById('days-count');
+        if (uptimeEl) uptimeEl.innerText = realDayCount;
+
+        // --- 5. MÉTABOLISME & PHASES ---
         const phaseName = lastEntry.PHASE.toUpperCase();
         const phaseEl = document.getElementById('current-phase');
         if (phaseEl) {
@@ -113,7 +120,7 @@ async function initDashboard() {
             phaseEl.className = `phase-tag phase-${lastEntry.PHASE.toLowerCase().replace(' ', '-')}`;
         }
 
-        // Calcul du TDEE Prédictif
+        // Calcul du TDEE Prédictif (Basé sur Delta Poids vs Apport)
         const totalKcalDeficit = Math.abs(totalDelta) * 7700; 
         const dailyDeficitFromWeight = totalKcalDeficit / realDayCount;
         const kcalEntries = data.filter(d => d.KCALS && d.KCALS > 0);
@@ -123,7 +130,7 @@ async function initDashboard() {
         const maintEl = document.getElementById('est-maintenance');
         if (maintEl) maintEl.innerText = Math.round(estMaintenance);
 
-        // --- 5. LOGS SYSTÈME ---
+        // --- 6. LOGS SYSTÈME (Terminal Simulation) ---
         const terminal = document.getElementById('terminal');
         if (terminal) {
             terminal.innerHTML = ''; 
@@ -145,6 +152,7 @@ async function initDashboard() {
             });
         }
 
+        // --- 7. DATA_VISUALIZATION (Chart.js) ---
         renderCharts(data);
 
     } catch (error) {
@@ -168,6 +176,7 @@ function renderCharts(data) {
         return p[1] + ' ' + p[2].substring(0, 3) + '.'; 
     });
 
+    // Chart Poids
     const weightCanvas = document.getElementById('weightChart');
     if (weightCanvas) {
         const ctxWeight = weightCanvas.getContext('2d');
@@ -193,6 +202,7 @@ function renderCharts(data) {
         });
     }
 
+    // Chart Activité
     const stepsCanvas = document.getElementById('stepsChart');
     if (stepsCanvas) {
         new Chart(stepsCanvas, {

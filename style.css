@@ -250,6 +250,10 @@ header h1 {
 .dot.m { background: var(--vol-high); }
 .dot.s { background: var(--text-dim); }
 
+.highlight-card {
+    border-color: var(--accent-glow) !important;
+    background: rgba(162, 119, 255, 0.08) !important;
+}
 /* --- SCROLLBAR --- */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
