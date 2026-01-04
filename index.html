@@ -15,45 +15,47 @@
             
             <nav class="cyber-nav">
                 <a href="index.html" class="nav-link active">MAIN_DASHBOARD</a>
-                <a href="volume.html" class="nav-link">VOLUME_PLANNER</a>
+                <a href="volume.html" class="nav-link">VOLUME_CONTROL_CENTER</a>
             </nav>
         </header>
 
         <div class="kpi-row">
-            <div class="card biometry">
+            <div class="card">
                 <h3>Current_Weight</h3>
                 <div class="value"><span id="current-weight">--</span><span class="unit">kg</span></div>
-                <div id="weight-trend" class="trend-indicator">Trend_Analyzing...</div>
+                <div id="weight-trend" style="font-size: 0.7rem; margin-top: 5px; font-weight: bold;">Analyzing...</div>
             </div>
-            <div class="card biometry">
+            <div class="card">
                 <h3>Total_Delta</h3>
                 <div class="value"><span id="total-diff">--</span><span class="unit">kg</span></div>
-                <div class="volume-bar-bg"><div id="delta-bar" class="volume-bar-fill" style="width:0%"></div></div>
+                <div style="font-size: 0.7rem; color: var(--text-dim); margin-top: 5px;">Since first log</div>
             </div>
-            <div class="card metabolism">
+            <div class="card alert-card">
                 <h3>Est_Maintenance_Kcal</h3>
                 <div class="value"><span id="est-maintenance">--</span><span class="unit">kcal</span></div>
-                <div class="m-name" style="font-size:0.6rem; margin-top:5px;">PREDICTIVE_TDEE_ACCURACY: HIGH</div>
+                <div style="font-size: 0.6rem; margin-top: 5px; color: var(--accent);">TDEE_PREDICTIVE_ENGINE_V1</div>
             </div>
         </div>
 
         <div class="kpi-row">
-            <div class="card activity">
-                <h3>Step_Goal_Progress (Daily_Avg)</h3>
+            <div class="card">
+                <h3>Step_Daily_Avg</h3>
                 <div class="value"><span id="avg-steps">--</span><span class="unit">pas</span></div>
-                <div class="volume-bar-bg"><div id="step-goal-bar" class="volume-bar-fill vol-opti" style="width:0%"></div></div>
+                <div class="volume-bar-bg" style="margin-top: 10px;">
+                    <div id="step-goal-bar" class="volume-bar-fill vol-opti" style="width: 0%"></div>
+                </div>
             </div>
-            <div class="card activity">
+            <div class="card">
                 <h3>Year_Projection</h3>
                 <div class="value"><span id="year-steps">--</span><span class="unit">M pas</span></div>
-                <div class="m-name" style="font-size:0.6rem; margin-top:5px;">ANNUAL_TARGET_REACH_EST: 85%</div>
+                <div style="font-size: 0.7rem; color: var(--text-dim); margin-top: 5px;">Total_Steps: <span id="total-steps">--</span></div>
             </div>
-            <div class="card phase-card">
-                <h3>Current_Metabolic_Phase</h3>
-                <div id="phase-container">
+            <div class="card">
+                <h3>Current_Phase</h3>
+                <div id="phase-container" style="margin-top: 5px;">
                     <span id="current-phase" class="phase-tag">--</span>
                 </div>
-                <div id="days-count-container" style="margin-top:10px; font-size:0.7rem; color:var(--text-dim);">
+                <div style="font-size: 0.7rem; color: var(--text-dim); margin-top: 10px;">
                     Uptime: <span id="days-count">--</span> days
                 </div>
             </div>
