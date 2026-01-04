@@ -21,24 +21,38 @@ async function initDashboard() {
         const startDate = parseFrenchDate(firstEntry.Date);
         const endDate = parseFrenchDate(lastEntry.Date);
         const diffTime = Math.abs(endDate - startDate);
-        const realDayCount = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        const realDayCount = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
         document.getElementById('days-count').innerText = realDayCount;
 
-        // --- 2. CALCULS KPI ---
+        // --- 2. GESTION DE LA PHASE ACTUELLE ---
+        const phaseEl = document.getElementById('current-phase');
+        const phaseName = lastEntry.PHASE.toUpperCase();
+        phaseEl.innerText = phaseName;
+        
+        // On applique une classe CSS selon la phase
+        let phaseClass = 'phase-maintenance'; // Défaut
+        if (phaseName.includes('DÉFICIT')) phaseClass = 'phase-deficit';
+        else if (phaseName.includes('REVERSE')) phaseClass = 'phase-reverse';
+        else if (phaseName.includes('DIET BREAK')) phaseClass = 'phase-diet-break';
+        else if (phaseName.includes('SURPLUS')) phaseClass = 'phase-surplus';
+        else if (phaseName.includes('PRIMING')) phaseClass = 'phase-priming';
+        
+        phaseEl.className = `phase-tag ${phaseClass}`;
+
+        // --- 3. CALCULS KPI ---
         document.getElementById('current-weight').innerText = lastEntry.PDC.toFixed(1);
         const totalDelta = lastEntry.PDC - firstEntry.PDC;
         const diffEl = document.getElementById('total-diff');
         diffEl.innerText = (totalDelta > 0 ? '+' : '') + totalDelta.toFixed(2);
         diffEl.style.color = totalDelta <= 0 ? '#3fb950' : '#f85149';
 
-        // Pas & Projection (FIX: Multiplication par 7 pour passer de la moyenne journalière au total hebdomadaire)
+        // Pas & Projection (FIX multiplication par 7)
         const totalSteps = data.reduce((sum, d) => sum + (parseFloat(d.PAS) || 0), 0) * 7;
         document.getElementById('total-steps').innerText = Math.round(totalSteps).toLocaleString();
-        
         const avgStepsPerDay = totalSteps / realDayCount;
         document.getElementById('year-steps').innerText = ((avgStepsPerDay * 365) / 1000000).toFixed(2);
 
-        // --- 3. MAINTENANCE THÉORIQUE ---
+        // --- 4. MAINTENANCE THÉORIQUE ---
         const totalKcalDeficit = Math.abs(totalDelta) * 7700;
         const dailyDeficitFromWeight = totalKcalDeficit / realDayCount;
         const kcalEntries = data.filter(d => d.KCALS && d.KCALS > 0);
@@ -46,12 +60,12 @@ async function initDashboard() {
         const estMaintenance = avgConsumed + dailyDeficitFromWeight;
         document.getElementById('est-maintenance').innerText = Math.round(estMaintenance);
 
-        // --- 4. TERMINAL LOGS ---
+        // --- 5. TERMINAL LOGS ---
         const terminal = document.getElementById('terminal');
         const logs = [
-            `[SYSTEM] Temporal drift detected: ${realDayCount} days of tracking.`,
-            `[MATH] Correcting metabolic baseline: Deficit found at ${Math.round(dailyDeficitFromWeight)}kcal/day.`,
-            `[PREDICT] Theoretical TDEE: ${Math.round(estMaintenance)} kcal.`
+            `[SYSTEM] Current Phase detected: ${phaseName}`,
+            `[SYSTEM] Temporal drift: ${realDayCount} days of tracking.`,
+            `[MATH] Predictive TDEE: ${Math.round(estMaintenance)} kcal.`
         ];
         logs.forEach((msg, i) => {
             setTimeout(() => {
@@ -63,7 +77,7 @@ async function initDashboard() {
             }, i * 500);
         });
 
-        // --- 5. GRAPHIQUES ---
+        // --- 6. GRAPHIQUES ---
         const chartOptions = { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: '#161b22' }, ticks: { color: '#8b949e' } }, x: { grid: { display: false }, ticks: { color: '#8b949e' } } } };
         new Chart(document.getElementById('weightChart'), { type: 'line', data: { labels: data.map(d => d.Date.split(' ').slice(1, 3).join(' ')), datasets: [{ data: data.map(d => d.PDC), borderColor: '#a277ff', tension: 0.4 }] }, options: chartOptions });
         new Chart(document.getElementById('stepsChart'), { type: 'bar', data: { labels: data.map(d => d.Date.split(' ').slice(1, 3).join(' ')), datasets: [{ data: data.map(d => d.PAS), backgroundColor: 'rgba(162, 119, 255, 0.4)' }] }, options: chartOptions });

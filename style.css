@@ -171,7 +171,22 @@ header p {
     padding: 15px;
     background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
 }
+/* Couleurs spécifiques aux PHASES */
+.phase-tag {
+    font-size: 0.8rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
 
+/* Mapping des couleurs basé sur ton visuel */
+.phase-reverse { color: var(--accent); border: 1px solid var(--accent); }
+.phase-deficit { color: #70b1ff; border: 1px solid #70b1ff; } /* Bleu clair */
+.phase-maintenance { color: var(--text-dim); border: 1px solid var(--border); }
+.phase-diet-break { color: #ffffff; border: 1px solid var(--text-dim); }
+.phase-surplus { color: #3fb950; border: 1px solid #3fb950; }
+.phase-priming { color: #dbab09; border: 1px solid #dbab09; }
 .log-line {
     margin-bottom: 6px;
     opacity: 0.9;
