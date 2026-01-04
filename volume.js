@@ -1,21 +1,13 @@
 /**
- * VOLUME_CONTROL_CENTER - CLOUD_SYNC_EDITION
- * Logic: Supabase REST API + Session-based Admin Lock
- */
-
-const SUPABASE_URL = 'https://pvcvpqhcyezcmlsgrnhl.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB2Y3ZwcWhjeWV6Y21sc2dybmhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc1Mzc4MDMsImV4cCI6MjA4MzExMzgwM30.8MkCQ_2uoW5CbjdOhidpomaDna47sZbzYzbPn_xVBzQ';
-
-/**
- * VOLUME_CONTROL_CENTER - CLOUD_SYNC_EDITION (v1.2)
+ * VOLUME_CONTROL_CENTER - CLOUD_SYNC_EDITION (v1.3)
  * Logic: Weighted Volume (100% / 50% / 25%) + Bi-directional Sync
  */
 
 const SUPABASE_URL = 'https://pvcvpqhcyezcmlsgrnhl.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB2Y3ZwcWhjeWV6Y21sc2dybmhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc1Mzc4MDMsImV4cCI6MjA4MzExMzgwM30.8MkCQ_2uoW5CbjdOhidpomaDna47sZbzYzbPn_xVBzQ';
 
-// Initialisation du client Supabase
-const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+// Utilisation du client global Supabase
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const MUSCLE_GROUPS = [
     "Pectoraux", "Trapèzes", "Grands dorsaux", "Deltoïdes antérieurs", 
@@ -29,7 +21,7 @@ let cachedExercises = [];
 
 async function initVolumeLab() {
     await fetchFromCloud();
-    renderMuscleColumns();
+    renderMuscleColumns(); // Remplace renderMatrix
     renderExercises();
     updateTotals();
 }
@@ -37,20 +29,20 @@ async function initVolumeLab() {
 // --- DATA_MANAGEMENT ---
 
 async function fetchFromCloud() {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseClient
         .from('exercise_volume')
         .select('*')
         .order('id', { ascending: true });
 
     if (error) return console.error("[ERROR] Fetch failed:", error);
     cachedExercises = data;
-    console.log("[CLOUD] Data synchronized.");
+    console.log("[CLOUD] Sync successful.");
 }
 
 async function updateCloud(id, payload) {
     if (!isAdmin) return;
     showSyncing(true);
-    const { error } = await supabase
+    const { error } = await supabaseClient
         .from('exercise_volume')
         .update(payload)
         .eq('id', id);
@@ -63,6 +55,8 @@ async function updateCloud(id, payload) {
 
 function renderMuscleColumns() {
     const grid = document.querySelector('.muscle-grid');
+    if (!grid) return console.error("[ERROR] .muscle-grid non trouvée dans le HTML");
+
     grid.innerHTML = MUSCLE_GROUPS.map(muscle => `
         <div class="muscle-column" ondrop="drop(event)" ondragover="allowDrop(event)" data-muscle="${muscle}">
             <div class="muscle-header">
@@ -76,7 +70,8 @@ function renderMuscleColumns() {
 
 function renderExercises() {
     const bank = document.getElementById('exercise-bank');
-    bank.innerHTML = ''; // Reset bank
+    if (!bank) return;
+    bank.innerHTML = ''; 
 
     cachedExercises.forEach(exo => {
         const card = document.createElement('div');
@@ -122,12 +117,12 @@ function updateTotals() {
         cachedExercises.forEach(exo => {
             const sets = parseInt(exo.sets) || 0;
             if (exo.muscle_group === muscle) {
-                weightedVolume += sets; // 100%
+                weightedVolume += sets;
                 globalWeeklySets += sets;
             } else if (exo.muscle_medium === muscle) {
-                weightedVolume += (sets * 0.5); // 50%
+                weightedVolume += (sets * 0.5);
             } else if (exo.muscle_secondary === muscle) {
-                weightedVolume += (sets * 0.25); // 25%
+                weightedVolume += (sets * 0.25);
             }
         });
 
@@ -138,12 +133,12 @@ function updateTotals() {
         }
     });
 
-    document.getElementById('total-weekly-sets').innerText = globalWeeklySets;
+    const totalEl = document.getElementById('total-weekly-sets');
+    if (totalEl) totalEl.innerText = globalWeeklySets;
 }
 
 async function updateSets(id, newValue) {
     const val = parseInt(newValue) || 0;
-    // Update cache local pour réactivité immédiate
     const exo = cachedExercises.find(e => e.id === id);
     if (exo) exo.sets = val;
     
@@ -152,4 +147,36 @@ async function updateSets(id, newValue) {
 }
 
 async function drop(ev) {
-    ev.
+    ev.preventDefault();
+    const dataId = ev.dataTransfer.getData("text");
+    const muscle = ev.currentTarget.getAttribute('data-muscle');
+    const id = parseInt(dataId.replace('exo-', ''));
+    
+    const exo = cachedExercises.find(e => e.id === id);
+    if (exo) {
+        exo.muscle_group = muscle;
+        const targetDropZone = ev.currentTarget.querySelector('.drop-zone');
+        targetDropZone.appendChild(document.getElementById(dataId));
+        updateTotals();
+        await updateCloud(id, { muscle_group: muscle });
+    }
+}
+
+function unlockAdmin() {
+    const pass = prompt("Enter ACCESS_KEY :");
+    if (pass === "MODE PROF") { 
+        isAdmin = true;
+        sessionStorage.setItem('isAdmin', 'true');
+        location.reload();
+    } else { alert("ACCESS_DENIED"); }
+}
+
+function showSyncing(isSyncing) {
+    const indicator = document.getElementById('sync-indicator');
+    if (!indicator) return;
+    indicator.innerText = isSyncing ? "● SYNCING..." : "● SYNC_READY";
+    indicator.style.color = isSyncing ? "var(--warning)" : "var(--terminal-green)";
+}
+
+function allowDrop(ev) { ev.preventDefault(); }
+document.addEventListener('DOMContentLoaded', initVolumeLab);
