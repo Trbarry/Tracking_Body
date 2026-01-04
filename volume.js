@@ -1,11 +1,13 @@
 /**
- * VOLUME_CONTROL_CENTER - SESSION_PLANNER_EDITION
- * Logic: Weighted Volume (1.0 / 0.5 / 0.25) + Session Management
+ * VOLUME_CONTROL_CENTER - SESSION_PLANNER_EDITION (v1.6)
+ * Logic: Weighted Volume (1.0 / 0.5 / 0.25) + Heatmap Gauges
+ * Admin Key: MODE PROF
  */
 
 const SUPABASE_URL = 'https://pvcvpqhcyezcmlsgrnhl.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB2Y3ZwcWhjeWV6Y21sc2dybmhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc1Mzc4MDMsImV4cCI6MjA4MzExMzgwM30.8MkCQ_2uoW5CbjdOhidpomaDna47sZbzYzbPn_xVBzQ';
 
+// Initialize Supabase Client
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const MUSCLE_GROUPS = [
@@ -25,12 +27,14 @@ async function initVolumeLab() {
     updateTotals();
 }
 
-// --- CLOUD OPS ---
+// --- CLOUD OPERATIONS ---
 async function fetchFromCloud() {
     const { data, error } = await supabaseClient.from('exercise_volume').select('*').order('id', { ascending: true });
     if (!error) {
         cachedExercises = data;
         console.log("[CLOUD] Sync successful.");
+    } else {
+        console.error("[CLOUD] Error:", error.message);
     }
 }
 
@@ -54,9 +58,9 @@ function createExoCard(exo) {
             <div style="display:flex; flex-direction:column;">
                 <span class="exo-name">${exo.exercise_name}</span>
                 <div class="target-indicators">
-                    <span class="dot p" title="P: ${exo.muscle_group}"></span>
-                    ${exo.muscle_medium ? `<span class="dot m" title="M: ${exo.muscle_medium}"></span>` : ''}
-                    ${exo.muscle_secondary ? `<span class="dot s" title="S: ${exo.muscle_secondary}"></span>` : ''}
+                    <span class="dot p" title="Principal: ${exo.muscle_group}"></span>
+                    ${exo.muscle_medium ? `<span class="dot m" title="Medium: ${exo.muscle_medium}"></span>` : ''}
+                    ${exo.muscle_secondary ? `<span class="dot s" title="Secondary: ${exo.muscle_secondary}"></span>` : ''}
                 </div>
             </div>
             <input type="number" class="sets-input" value="${exo.sets || 0}" 
@@ -69,23 +73,25 @@ function createExoCard(exo) {
 
 function renderExercises() {
     document.querySelectorAll('.drop-zone').forEach(dz => dz.innerHTML = '');
-    document.getElementById('exercise-bank').innerHTML = '';
+    const bank = document.getElementById('exercise-bank');
+    if (bank) bank.innerHTML = '';
 
     cachedExercises.forEach(exo => {
         const card = createExoCard(exo);
         if (exo.workout_session && SESSIONS.includes(exo.workout_session)) {
             const target = document.querySelector(`[data-session="${exo.workout_session}"] .drop-zone`);
             if (target) target.appendChild(card);
-        } else {
-            document.getElementById('exercise-bank').appendChild(card);
+        } else if (bank) {
+            bank.appendChild(card);
         }
     });
 }
 
-// --- CALCULS ---
+// --- CORE CALCULATIONS & HEATMAP LOGIC ---
 function updateTotals() {
     let globalTotalSets = 0;
     const matrixContainer = document.getElementById('global-muscle-matrix');
+    if (!matrixContainer) return;
     matrixContainer.innerHTML = '';
 
     MUSCLE_GROUPS.forEach(muscle => {
@@ -102,20 +108,38 @@ function updateTotals() {
         });
 
         if (weightedVol > 0) {
+            // 1. Determine Heatmap Color Class
+            let colorClass = "vol-low";
+            if (weightedVol >= 6 && weightedVol <= 15) colorClass = "vol-opti";
+            else if (weightedVol > 15 && weightedVol <= 22) colorClass = "vol-high";
+            else if (weightedVol > 22) colorClass = "vol-danger";
+
+            // 2. Calculate Progress Bar Width (Max 22 sets for 100%)
+            const barWidth = Math.min((weightedVol / 22) * 100, 100);
+
             const item = document.createElement('div');
             item.className = 'muscle-total-item';
             item.innerHTML = `
-                <span class="m-name">${muscle}</span>
-                <span class="m-val">${weightedVol % 1 === 0 ? weightedVol : weightedVol.toFixed(1)}</span>
+                <div class="m-label-row">
+                    <span class="m-name">${muscle}</span>
+                    <span class="m-val">${weightedVol % 1 === 0 ? weightedVol : weightedVol.toFixed(1)}</span>
+                </div>
+                <div class="volume-bar-bg">
+                    <div class="volume-bar-fill ${colorClass}" style="width: ${barWidth}%"></div>
+                </div>
             `;
             matrixContainer.appendChild(item);
         }
     });
 
-    document.getElementById('total-weekly-sets').innerText = globalTotalSets;
+    const totalSetsEl = document.getElementById('total-weekly-sets');
+    if (totalSetsEl) totalSetsEl.innerText = globalTotalSets;
+
     const statusEl = document.getElementById('recovery-status');
-    statusEl.innerText = globalTotalSets > 85 ? "OVERLOAD_RISK" : "OPTIMAL";
-    statusEl.style.color = globalTotalSets > 85 ? "#f85149" : "#3fb950";
+    if (statusEl) {
+        statusEl.innerText = globalTotalSets > 85 ? "OVERLOAD_RISK" : "OPTIMAL";
+        statusEl.style.color = globalTotalSets > 85 ? "#f85149" : "#3fb950";
+    }
 }
 
 async function updateSets(id, newValue) {
@@ -137,7 +161,7 @@ async function drop(ev) {
     if (exo) {
         exo.workout_session = (sessionName === "null") ? null : sessionName;
         const targetZone = (sessionName === "null") ? ev.currentTarget : ev.currentTarget.querySelector('.drop-zone');
-        targetZone.appendChild(document.getElementById(dataId));
+        if (targetZone) targetZone.appendChild(document.getElementById(dataId));
         updateTotals();
         await updateCloud(id, { workout_session: exo.workout_session });
     }

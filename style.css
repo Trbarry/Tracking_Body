@@ -1,5 +1,5 @@
-/* PERFORMANCE_MIRROR - ULTIMATE_CYBER_EDITION
-   Logic: High-Contrast Glassmorphism for OLED
+/* PERFORMANCE_MIRROR - ULTIMATE_CYBER_EDITION (v1.5)
+   Logic: High-Contrast Glassmorphism + Heatmap Gauges
    Author: Tristan Barry | trtnxbook.com
 */
 
@@ -10,17 +10,20 @@
     --bg: #010409;
     --bg-darker: #000000;
     --card-bg: rgba(13, 17, 23, 0.75);
-    --border: rgba(162, 119, 255, 0.2);
+    --border: rgba(162, 119, 255, 0.15);
     --border-bright: rgba(162, 119, 255, 0.5);
     
-    /* Couleurs de Status */
+    /* Couleurs de Status (Heatmap Logic) */
     --accent: #a277ff;
     --accent-glow: rgba(162, 119, 255, 0.4);
     --text-main: #e6edf3;
     --text-dim: #8b949e;
-    --terminal-green: #3fb950;
-    --warning: #dbab09;
-    --danger: #f85149;
+    
+    /* Threshold Colors */
+    --vol-low: #8b949e;       /* Maintenance */
+    --vol-opti: #3fb950;      /* Hypertrophy Zone */
+    --vol-high: #dbab09;      /* High Fatigue */
+    --vol-danger: #f85149;    /* Overload */
     
     /* Animations & Effets */
     --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -79,6 +82,7 @@ header h1 {
     border-radius: 4px;
     transition: var(--transition);
     background: rgba(162, 119, 255, 0.03);
+    letter-spacing: 1px;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -105,11 +109,6 @@ header h1 {
     transition: var(--transition);
 }
 
-.card:hover {
-    border-color: var(--border-bright);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-}
-
 .card h3 {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.7rem;
@@ -127,7 +126,7 @@ header h1 {
     line-height: 1;
 }
 
-/* --- SESSION_PLANNER --- */
+/* --- SESSION_PLANNER (Drag & Drop) --- */
 .session-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -139,7 +138,7 @@ header h1 {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border);
     border-radius: 8px;
-    min-height: 400px;
+    min-height: 450px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -153,6 +152,7 @@ header h1 {
     font-size: 0.8rem;
     text-align: center;
     padding: 12px;
+    letter-spacing: 1px;
 }
 
 .drop-zone {
@@ -172,7 +172,7 @@ header h1 {
 }
 
 .exo-card.draggable { cursor: grab; }
-.exo-card.draggable:hover { border-color: var(--accent); transform: translateY(-2px); }
+.exo-card.draggable:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
 .exo-card.locked { opacity: 0.5; filter: grayscale(0.8); cursor: not-allowed; }
 
 .exo-info { display: flex; justify-content: space-between; align-items: center; }
@@ -190,38 +190,67 @@ header h1 {
     font-weight: 800;
 }
 
-.sets-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 8px var(--accent-glow); }
-
-/* --- GLOBAL_MATRIX --- */
+/* --- GLOBAL_MATRIX (Progress Gauges & Heatmap) --- */
 .muscle-matrix-summary {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
 }
 
 .muscle-total-item {
-    background: rgba(162, 119, 255, 0.05);
+    background: rgba(13, 17, 23, 0.8);
     border: 1px solid var(--border);
-    padding: 15px;
-    border-radius: 8px;
+    padding: 16px;
+    border-radius: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 10px;
     transition: var(--transition);
 }
 
-.muscle-total-item:hover { background: rgba(162, 119, 255, 0.1); }
-.m-name { font-size: 0.8rem; font-weight: 600; color: var(--text-dim); }
+.muscle-total-item:hover {
+    border-color: var(--accent);
+    background: rgba(162, 119, 255, 0.05);
+}
+
+.m-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.m-name { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
 .m-val { font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; font-weight: 800; color: var(--accent); }
 
-/* --- INDICATORS --- */
+/* Progress Gauge Bar */
+.volume-bar-bg {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.volume-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+/* Heatmap States */
+.vol-low { background: var(--vol-low); }
+.vol-opti { background: var(--vol-opti); box-shadow: 0 0 10px rgba(63, 185, 80, 0.4); }
+.vol-high { background: var(--vol-high); box-shadow: 0 0 10px rgba(219, 171, 9, 0.4); }
+.vol-danger { background: var(--vol-danger); box-shadow: 0 0 10px rgba(248, 81, 73, 0.4); }
+
+/* --- INDICATORS (Dots) --- */
 .target-indicators { display: flex; gap: 5px; margin-top: 6px; }
 .dot { width: 7px; height: 7px; border-radius: 50%; }
 .dot.p { background: var(--accent); box-shadow: 0 0 5px var(--accent); }
-.dot.m { background: var(--warning); }
+.dot.m { background: var(--vol-high); }
 .dot.s { background: var(--text-dim); }
 
-/* --- SCROLLBAR_CUSTOM --- */
+/* --- SCROLLBAR --- */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
@@ -231,4 +260,5 @@ header h1 {
 @media (max-width: 1000px) {
     .session-grid { grid-template-columns: 1fr; }
     .kpi-row { grid-template-columns: 1fr; }
+    .muscle-matrix-summary { grid-template-columns: 1fr 1fr; }
 }
