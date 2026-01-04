@@ -10,62 +10,66 @@
 <body>
     <div class="container">
         <header>
-            <h1>PERFORMANCE_MIRROR_V2.2</h1>
-            <p>Predictive_Analysis: <span id="sync-status" style="color: #a277ff;">ACTIVE</span> | Tristan Barry</p>
+            <h1>PERFORMANCE_MIRROR_V2.5</h1>
+            <p>Predictive_Analysis: <span id="sync-status" style="color: var(--terminal-green);">ACTIVE</span> | Tristan Barry</p>
             
             <nav class="cyber-nav">
                 <a href="index.html" class="nav-link active">MAIN_DASHBOARD</a>
-                <a href="volume.html" class="nav-link">VOLUME_CONTROL_CENTER</a>
+                <a href="volume.html" class="nav-link">VOLUME_PLANNER</a>
             </nav>
         </header>
 
         <div class="kpi-row">
-            <div class="card">
+            <div class="card biometry">
                 <h3>Current_Weight</h3>
                 <div class="value"><span id="current-weight">--</span><span class="unit">kg</span></div>
+                <div id="weight-trend" class="trend-indicator">Trend_Analyzing...</div>
             </div>
-            <div class="card">
+            <div class="card biometry">
                 <h3>Total_Delta</h3>
                 <div class="value"><span id="total-diff">--</span><span class="unit">kg</span></div>
+                <div class="volume-bar-bg"><div id="delta-bar" class="volume-bar-fill" style="width:0%"></div></div>
             </div>
-            <div class="card">
-                <h3>Days_Tracked</h3>
-                <div class="value"><span id="days-count">--</span><span class="unit">jours</span></div>
+            <div class="card metabolism">
+                <h3>Est_Maintenance_Kcal</h3>
+                <div class="value"><span id="est-maintenance">--</span><span class="unit">kcal</span></div>
+                <div class="m-name" style="font-size:0.6rem; margin-top:5px;">PREDICTIVE_TDEE_ACCURACY: HIGH</div>
             </div>
         </div>
 
         <div class="kpi-row">
-            <div class="card">
-                <h3>Total_Steps_Archived</h3>
-                <div class="value"><span id="total-steps">--</span><span class="unit">pas</span></div>
+            <div class="card activity">
+                <h3>Step_Goal_Progress (Daily_Avg)</h3>
+                <div class="value"><span id="avg-steps">--</span><span class="unit">pas</span></div>
+                <div class="volume-bar-bg"><div id="step-goal-bar" class="volume-bar-fill vol-opti" style="width:0%"></div></div>
             </div>
-            <div class="card">
-                <h3>Current_Phase</h3>
-                <div id="phase-container" style="margin-top: 10px;">
-                    <span id="current-phase">--</span>
+            <div class="card activity">
+                <h3>Year_Projection</h3>
+                <div class="value"><span id="year-steps">--</span><span class="unit">M pas</span></div>
+                <div class="m-name" style="font-size:0.6rem; margin-top:5px;">ANNUAL_TARGET_REACH_EST: 85%</div>
+            </div>
+            <div class="card phase-card">
+                <h3>Current_Metabolic_Phase</h3>
+                <div id="phase-container">
+                    <span id="current-phase" class="phase-tag">--</span>
                 </div>
-            </div>
-            <div class="card">
-                <h3>Year_Projection_Steps</h3>
-                <div class="value"><span id="year-steps">--</span><span class="unit">M</span></div>
-            </div>
-            <div class="card alert-card">
-                <h3>Est_Maintenance_Kcal</h3>
-                <div class="value"><span id="est-maintenance">--</span><span class="unit">kcal</span></div>
+                <div id="days-count-container" style="margin-top:10px; font-size:0.7rem; color:var(--text-dim);">
+                    Uptime: <span id="days-count">--</span> days
+                </div>
             </div>
         </div>
 
         <div class="grid">
             <div class="card chart-container">
-                <h3>Biometric_Trend (Poids)</h3>
+                <h3>Weight_Evolution_Log</h3>
                 <div class="chart-wrapper"><canvas id="weightChart"></canvas></div>
             </div>
             <div class="card chart-container">
-                <h3>Activity_Flow (Pas)</h3>
+                <h3>Daily_Activity_Flow</h3>
                 <div class="chart-wrapper"><canvas id="stepsChart"></canvas></div>
             </div>
             <div class="card terminal-container" style="grid-column: 1 / -1;">
-                <h3>Predictive_System_Logs</h3>
+                <h3>System_Core_Logs</h3>
                 <div id="terminal" class="terminal-body"></div>
             </div>
         </div>
