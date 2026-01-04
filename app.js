@@ -17,11 +17,11 @@ async function initDashboard() {
         const firstEntry = data[0];
         const lastEntry = data[data.length - 1];
 
-        // --- 1. CALCUL DU TEMPS RÉEL (FIX) ---
+        // --- 1. CALCUL DU TEMPS RÉEL ---
         const startDate = parseFrenchDate(firstEntry.Date);
         const endDate = parseFrenchDate(lastEntry.Date);
         const diffTime = Math.abs(endDate - startDate);
-        const realDayCount = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+        const realDayCount = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
         document.getElementById('days-count').innerText = realDayCount;
 
         // --- 2. CALCULS KPI ---
@@ -31,13 +31,14 @@ async function initDashboard() {
         diffEl.innerText = (totalDelta > 0 ? '+' : '') + totalDelta.toFixed(2);
         diffEl.style.color = totalDelta <= 0 ? '#3fb950' : '#f85149';
 
-        // Pas & Projection
-        const totalSteps = data.reduce((sum, d) => sum + (parseFloat(d.PAS) || 0), 0);
+        // Pas & Projection (FIX: Multiplication par 7 pour passer de la moyenne journalière au total hebdomadaire)
+        const totalSteps = data.reduce((sum, d) => sum + (parseFloat(d.PAS) || 0), 0) * 7;
         document.getElementById('total-steps').innerText = Math.round(totalSteps).toLocaleString();
+        
         const avgStepsPerDay = totalSteps / realDayCount;
         document.getElementById('year-steps').innerText = ((avgStepsPerDay * 365) / 1000000).toFixed(2);
 
-        // --- 3. MAINTENANCE THÉORIQUE (FIX) ---
+        // --- 3. MAINTENANCE THÉORIQUE ---
         const totalKcalDeficit = Math.abs(totalDelta) * 7700;
         const dailyDeficitFromWeight = totalKcalDeficit / realDayCount;
         const kcalEntries = data.filter(d => d.KCALS && d.KCALS > 0);
