@@ -1,14 +1,14 @@
 /**
- * PERFORMANCE_MIRROR - CORE_LOGIC_V2.5
+ * PERFORMANCE_MIRROR - CORE_LOGIC_V2.6
  * Author: Tristan Barry
  * Purpose: Data Parsing, Biometric KPIs, and Predictive Analytics
- * Features: Multi-device safety guards & Cyber-Neon UI
+ * Features: Refactored Helper Functions & Integrated Analytics
  */
 
 // Configuration des objectifs (Pragmatic Tuning)
-const STEP_GOAL_DAILY = 12000; 
+const STEP_GOAL_DAILY = 13000; 
 
-// --- HELPER_FUNCTIONS ---
+// --- HELPER_FUNCTIONS (Logic Layers) ---
 
 /**
  * Transforme "jeudi 17 juillet 2025" en objet Date JS
@@ -22,11 +22,27 @@ function parseFrenchDate(dateStr) {
     return new Date(parseInt(parts[3]), months[parts[2]], parseInt(parts[1]));
 }
 
+/**
+ * Calcule l'uptime total (nombre de jours de coaching)
+ */
+function calculateUptime(firstDateStr, lastDateStr) {
+    const startDate = parseFrenchDate(firstDateStr);
+    const endDate = parseFrenchDate(lastDateStr);
+    return Math.ceil(Math.abs(endDate - startDate) / (1000 * 60 * 60 * 24));
+}
+
+/**
+ * Calcule le cumul total des pas (Agrégation hebdomadaire -> Réel)
+ */
+function calculateTotalSteps(data) {
+    // On multiplie par 7 car chaque entrée PAS du JSON est une moyenne hebdomadaire
+    return data.reduce((sum, d) => sum + (parseFloat(d.PAS) || 0), 0) * 7;
+}
+
 // --- CORE_DASHBOARD_ENGINE ---
 
 async function initDashboard() {
     try {
-        // Fetch des données traitées par le script Python
         const response = await fetch('./data/summary.json');
         const data = await response.json();
         
@@ -39,9 +55,7 @@ async function initDashboard() {
         const lastEntry = data[data.length - 1];
 
         // --- 1. ANALYSE TEMPORELLE (Uptime) ---
-        const startDate = parseFrenchDate(firstEntry.Date);
-        const endDate = parseFrenchDate(lastEntry.Date);
-        const realDayCount = Math.ceil(Math.abs(endDate - startDate) / (1000 * 60 * 60 * 24)); 
+        const realDayCount = calculateUptime(firstEntry.Date, lastEntry.Date);
         const uptimeEl = document.getElementById('days-count');
         if (uptimeEl) uptimeEl.innerText = realDayCount;
 
@@ -58,7 +72,6 @@ async function initDashboard() {
             diffEl.style.color = totalDelta <= 0 ? 'var(--terminal-green)' : 'var(--danger)';
         }
         
-        // Logique de Trend Detection (Analyse de dérive)
         const trendEl = document.getElementById('weight-trend');
         if (trendEl) {
             if (totalDelta < -0.5) {
@@ -74,8 +87,7 @@ async function initDashboard() {
         }
 
         // --- 3. ANALYSE DE L'ACTIVITÉ (Steps) ---
-        // Multiplication par 7 car summary.json agrège par semaine
-        const totalStepsArchived = data.reduce((sum, d) => sum + (parseFloat(d.PAS) || 0), 0) * 7;
+        const totalStepsArchived = calculateTotalSteps(data);
         const avgStepsPerDay = totalStepsArchived / realDayCount;
         
         const totalStepsEl = document.getElementById('total-steps');
@@ -87,7 +99,6 @@ async function initDashboard() {
         const yearStepsEl = document.getElementById('year-steps');
         if (yearStepsEl) yearStepsEl.innerText = ((avgStepsPerDay * 365) / 1000000).toFixed(2);
         
-        // Mise à jour de la barre de progression des pas
         const stepBar = document.getElementById('step-goal-bar');
         if (stepBar) {
             const stepPercent = Math.min((avgStepsPerDay / STEP_GOAL_DAILY) * 100, 100);
@@ -102,23 +113,24 @@ async function initDashboard() {
             phaseEl.className = `phase-tag phase-${lastEntry.PHASE.toLowerCase().replace(' ', '-')}`;
         }
 
-        // Calcul du TDEE Prédictif (Basé sur Delta Poids vs Apport)
+        // Calcul du TDEE Prédictif
         const totalKcalDeficit = Math.abs(totalDelta) * 7700; 
         const dailyDeficitFromWeight = totalKcalDeficit / realDayCount;
         const kcalEntries = data.filter(d => d.KCALS && d.KCALS > 0);
         const avgConsumed = kcalEntries.reduce((sum, d) => sum + d.KCALS, 0) / kcalEntries.length;
-        const estMaintenance = avgConsumed + (totalDelta < 0 ? dailyDeficitFromWeight : -dailyDeficitFromWeight);
+        const estMaintenance = avgConsumed + (totalDelta < -0.2 ? dailyDeficitFromWeight : (totalDelta > 0.2 ? -dailyDeficitFromWeight : 0));
         
         const maintEl = document.getElementById('est-maintenance');
         if (maintEl) maintEl.innerText = Math.round(estMaintenance);
 
-        // --- 5. LOGS SYSTÈME (Terminal Simulation) ---
+        // --- 5. LOGS SYSTÈME ---
         const terminal = document.getElementById('terminal');
         if (terminal) {
-            terminal.innerHTML = ''; // Reset prevent double logs
+            terminal.innerHTML = ''; 
             const logs = [
                 `[SYSTEM] Current Phase: ${phaseName}`,
                 `[SYSTEM] Temporal drift: ${realDayCount} days tracked.`,
+                `[MATH] Total activity: ${Math.round(totalStepsArchived).toLocaleString()} steps recorded.`,
                 `[MATH] Est. TDEE: ${Math.round(estMaintenance)} kcal.`,
                 `[ACTIVITY] Daily Avg: ${Math.round(avgStepsPerDay)} steps.`
             ];
@@ -133,7 +145,6 @@ async function initDashboard() {
             });
         }
 
-        // --- 6. DATA_VISUALIZATION (Chart.js) ---
         renderCharts(data);
 
     } catch (error) {
@@ -157,7 +168,6 @@ function renderCharts(data) {
         return p[1] + ' ' + p[2].substring(0, 3) + '.'; 
     });
 
-    // Chart Poids
     const weightCanvas = document.getElementById('weightChart');
     if (weightCanvas) {
         const ctxWeight = weightCanvas.getContext('2d');
@@ -183,7 +193,6 @@ function renderCharts(data) {
         });
     }
 
-    // Chart Activité
     const stepsCanvas = document.getElementById('stepsChart');
     if (stepsCanvas) {
         new Chart(stepsCanvas, {
