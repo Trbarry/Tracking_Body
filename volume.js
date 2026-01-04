@@ -6,95 +6,150 @@
 const SUPABASE_URL = 'https://pvcvpqhcyezcmlsgrnhl.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB2Y3ZwcWhjeWV6Y21sc2dybmhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc1Mzc4MDMsImV4cCI6MjA4MzExMzgwM30.8MkCQ_2uoW5CbjdOhidpomaDna47sZbzYzbPn_xVBzQ';
 
+/**
+ * VOLUME_CONTROL_CENTER - CLOUD_SYNC_EDITION (v1.2)
+ * Logic: Weighted Volume (100% / 50% / 25%) + Bi-directional Sync
+ */
+
+const SUPABASE_URL = 'https://pvcvpqhcyezcmlsgrnhl.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB2Y3ZwcWhjeWV6Y21sc2dybmhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc1Mzc4MDMsImV4cCI6MjA4MzExMzgwM30.8MkCQ_2uoW5CbjdOhidpomaDna47sZbzYzbPn_xVBzQ';
+
+// Initialisation du client Supabase
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+const MUSCLE_GROUPS = [
+    "Pectoraux", "Trapèzes", "Grands dorsaux", "Deltoïdes antérieurs", 
+    "Deltoïdes latéraux", "Deltoïdes postérieurs", "Triceps", "Biceps", 
+    "Quadriceps", "Ischios", "Adducteurs", "Fessiers", "Lombaires", 
+    "Abdominaux", "Mollets"
+];
+
 let isAdmin = sessionStorage.getItem('isAdmin') === 'true';
-let currentProgram = {};
+let cachedExercises = [];
 
-// --- INITIALISATION ---
-async function initVolumeManager() {
+async function initVolumeLab() {
     await fetchFromCloud();
-    renderMatrix();
-    updateStats();
+    renderMuscleColumns();
+    renderExercises();
+    updateTotals();
 }
 
-// --- CLOUD_OPERATIONS (CRUD) ---
+// --- DATA_MANAGEMENT ---
+
 async function fetchFromCloud() {
-    try {
-        const response = await fetch(`${SUPABASE_URL}/rest/v1/volume_progression?select=*&order=id.asc`, {
-            headers: { "apikey": SUPABASE_KEY, "Authorization": `Bearer ${SUPABASE_KEY}` }
-        });
-        const data = await response.json();
-        
-        // Transformation du format tableau en objet pour le JS
-        data.forEach(row => {
-            currentProgram[row.day_name] = { sets: row.sets_count };
-        });
-        console.log("[CLOUD] Sync successful.");
-    } catch (e) {
-        console.error("[CLOUD] Sync failed, check API keys.");
-    }
+    const { data, error } = await supabase
+        .from('exercise_volume')
+        .select('*')
+        .order('id', { ascending: true });
+
+    if (error) return console.error("[ERROR] Fetch failed:", error);
+    cachedExercises = data;
+    console.log("[CLOUD] Data synchronized.");
 }
 
-async function updateCloud(day, newValue) {
+async function updateCloud(id, payload) {
     if (!isAdmin) return;
-
-    await fetch(`${SUPABASE_URL}/rest/v1/volume_progression?day_name=eq.${day}`, {
-        method: 'PATCH',
-        headers: { 
-            "apikey": SUPABASE_KEY, 
-            "Authorization": `Bearer ${SUPABASE_KEY}`,
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ sets_count: parseInt(newValue), updated_at: new Date() })
-    });
-}
-
-// --- UI_MANAGEMENT ---
-function unlockAdmin() {
-    const pass = prompt("Enter ACCESS_KEY :");
-    if (pass === "MODE PROF") { 
-        isAdmin = true;
-        sessionStorage.setItem('isAdmin', 'true');
-        location.reload(); // Refresh pour activer les sliders
-    } else {
-        alert("ACCESS_DENIED");
-    }
-}
-
-function renderMatrix() {
-    const container = document.getElementById('matrix-container');
-    container.innerHTML = '';
-
-    Object.keys(currentProgram).forEach(day => {
-        const dayData = currentProgram[day];
-        const dayRow = document.createElement('div');
-        dayRow.className = `volume-row ${!isAdmin ? 'locked-row' : ''}`;
-        
-        dayRow.innerHTML = `
-            <span class="day-label">${day}</span>
-            <input type="range" min="0" max="30" value="${dayData.sets}" 
-                   ${!isAdmin ? 'disabled' : ''} 
-                   oninput="this.nextElementSibling.innerText = this.value + ' sets'"
-                   onchange="updateVolume('${day}', this.value)">
-            <span class="sets-count">${dayData.sets} sets</span>
-        `;
-        container.appendChild(dayRow);
-    });
-}
-
-async function updateVolume(day, newValue) {
-    currentProgram[day].sets = parseInt(newValue);
-    updateStats();
-    await updateCloud(day, newValue);
-}
-
-function updateStats() {
-    const total = Object.values(currentProgram).reduce((sum, d) => sum + d.sets, 0);
-    document.getElementById('total-weekly-sets').innerText = total;
+    showSyncing(true);
+    const { error } = await supabase
+        .from('exercise_volume')
+        .update(payload)
+        .eq('id', id);
     
-    // Recovery Logic
-    const statusEl = document.getElementById('recovery-status');
-    if (total > 85) { statusEl.innerText = "OVERLOAD_RISK"; statusEl.style.color = "#f85149"; }
-    else { statusEl.innerText = "OPTIMAL"; statusEl.style.color = "#3fb950"; }
+    if (error) console.error("[ERROR] Sync failed:", error);
+    showSyncing(false);
 }
 
-document.addEventListener('DOMContentLoaded', initVolumeManager);
+// --- UI_RENDERING ---
+
+function renderMuscleColumns() {
+    const grid = document.querySelector('.muscle-grid');
+    grid.innerHTML = MUSCLE_GROUPS.map(muscle => `
+        <div class="muscle-column" ondrop="drop(event)" ondragover="allowDrop(event)" data-muscle="${muscle}">
+            <div class="muscle-header">
+                <span>${muscle.toUpperCase()}</span>
+                <span class="total-badge" id="total-${muscle}">0</span>
+            </div>
+            <div class="drop-zone"></div>
+        </div>
+    `).join('');
+}
+
+function renderExercises() {
+    const bank = document.getElementById('exercise-bank');
+    bank.innerHTML = ''; // Reset bank
+
+    cachedExercises.forEach(exo => {
+        const card = document.createElement('div');
+        card.className = `exo-card ${!isAdmin ? 'locked' : ''}`;
+        card.id = `exo-${exo.id}`;
+        card.draggable = isAdmin;
+        card.ondragstart = (e) => e.dataTransfer.setData("text", e.target.id);
+
+        const indicators = `
+            <div class="target-indicators">
+                <span class="dot p" title="Principal: ${exo.muscle_group}"></span>
+                ${exo.muscle_medium ? `<span class="dot m" title="Moyen: ${exo.muscle_medium}"></span>` : ''}
+                ${exo.muscle_secondary ? `<span class="dot s" title="Secondaire: ${exo.muscle_secondary}"></span>` : ''}
+            </div>
+        `;
+
+        card.innerHTML = `
+            <div class="exo-info">
+                <div style="display:flex; flex-direction:column;">
+                    <span class="exo-name">${exo.exercise_name}</span>
+                    ${indicators}
+                </div>
+                <input type="number" class="sets-input" value="${exo.sets || 0}" 
+                       ${!isAdmin ? 'disabled' : ''} 
+                       onchange="updateSets(${exo.id}, this.value)">
+            </div>
+        `;
+
+        const targetColumn = document.querySelector(`[data-muscle="${exo.muscle_group}"] .drop-zone`);
+        if (targetColumn) targetColumn.appendChild(card);
+        else bank.appendChild(card);
+    });
+}
+
+// --- LOGIC_CORE ---
+
+function updateTotals() {
+    let globalWeeklySets = 0;
+
+    MUSCLE_GROUPS.forEach(muscle => {
+        let weightedVolume = 0;
+
+        cachedExercises.forEach(exo => {
+            const sets = parseInt(exo.sets) || 0;
+            if (exo.muscle_group === muscle) {
+                weightedVolume += sets; // 100%
+                globalWeeklySets += sets;
+            } else if (exo.muscle_medium === muscle) {
+                weightedVolume += (sets * 0.5); // 50%
+            } else if (exo.muscle_secondary === muscle) {
+                weightedVolume += (sets * 0.25); // 25%
+            }
+        });
+
+        const badge = document.getElementById(`total-${muscle}`);
+        if (badge) {
+            badge.innerText = weightedVolume % 1 === 0 ? weightedVolume : weightedVolume.toFixed(1);
+            badge.style.opacity = weightedVolume > 0 ? "1" : "0.3";
+        }
+    });
+
+    document.getElementById('total-weekly-sets').innerText = globalWeeklySets;
+}
+
+async function updateSets(id, newValue) {
+    const val = parseInt(newValue) || 0;
+    // Update cache local pour réactivité immédiate
+    const exo = cachedExercises.find(e => e.id === id);
+    if (exo) exo.sets = val;
+    
+    updateTotals();
+    await updateCloud(id, { sets: val });
+}
+
+async function drop(ev) {
+    ev.

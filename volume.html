@@ -11,7 +11,7 @@
     <div class="container">
         <header>
             <h1>VOLUME_CONTROL_CENTER_V1.0</h1>
-            <p>Status: <span style="color: #3fb950;">SYNC_READY</span> | Admin_Mode</p>
+            <p>Status: <span id="sync-indicator" style="color: #3fb950;">● SYNC_READY</span> | Admin_Mode</p>
             
             <nav class="cyber-nav">
                 <a href="index.html" class="nav-link">MAIN_DASHBOARD</a>
@@ -31,20 +31,30 @@
             </div>
         </div>
 
-        <div class="grid">
-            <div class="card">
-                <h3>Daily_Modulation_Matrix</h3>
-                <div id="matrix-container">
+        <section class="volume-lab">
+            <div class="card" style="grid-column: 1 / -1; margin-bottom: 25px;">
+                <h3>Exercise_Bank (Draggable)</h3>
+                <div id="exercise-bank" class="bank-container">
                     </div>
             </div>
-            <div class="card chart-container">
-                <h3>Muscle_Group_Distribution (Weekly)</h3>
-                <div class="chart-wrapper">
-                    <canvas id="volumeRadarChart"></canvas>
+
+            <div class="grid">
+                <div class="card" style="grid-column: 1 / -1;">
+                    <h3>Muscle_Volume_Matrix</h3>
+                    <div class="muscle-grid">
+                        </div>
+                </div>
+                
+                <div class="card chart-container" style="grid-column: 1 / -1;">
+                    <h3>Muscle_Group_Distribution (Weekly)</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="volumeRadarChart"></canvas>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="volume.js"></script>
 </body>
 </html>
