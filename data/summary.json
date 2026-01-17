@@ -362,5 +362,19 @@
         "EVENTS":null,
         "MODIFS.":"2150",
         "Paiement":null
+    },
+    {
+        "N°":27.0,
+        "Date":"jeudi 15 janvier 2026",
+        "PHASE":"REVERSE",
+        "TRAINING":"UPPER - LOWER - UPPER",
+        "PDC":69.1,
+        "DIFFERENCE":0.4,
+        "PAS":11234.0,
+        "KCALS":0.0,
+        "CARDIO":null,
+        "EVENTS":null,
+        "MODIFS.":null,
+        "Paiement":null
     }
 ]
