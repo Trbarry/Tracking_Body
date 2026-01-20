@@ -347,7 +347,7 @@
         "CARDIO":null,
         "EVENTS":null,
         "MODIFS.":"2000",
-        "Paiement":false
+        "Paiement":true
     },
     {
         "N°":26.0,
@@ -368,8 +368,8 @@
         "Date":"jeudi 15 janvier 2026",
         "PHASE":"REVERSE",
         "TRAINING":"UPPER - LOWER - UPPER",
-        "PDC":68.98,
-        "DIFFERENCE":0.27,
+        "PDC":68.78,
+        "DIFFERENCE":0.08,
         "PAS":11234.0,
         "KCALS":0.0,
         "CARDIO":null,
