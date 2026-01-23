@@ -376,5 +376,19 @@
         "EVENTS":null,
         "MODIFS.":null,
         "Paiement":null
+    },
+    {
+        "N°":28.0,
+        "Date":"jeudi 22 janvier 2026",
+        "PHASE":"REVERSE",
+        "TRAINING":"UPPER - LOWER - UPPER",
+        "PDC":68.7,
+        "DIFFERENCE":0.01,
+        "PAS":null,
+        "KCALS":0.0,
+        "CARDIO":null,
+        "EVENTS":null,
+        "MODIFS.":"2200 -> 2400",
+        "Paiement":null
     }
 ]
