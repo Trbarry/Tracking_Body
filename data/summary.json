@@ -382,12 +382,12 @@
         "Date":"jeudi 22 janvier 2026",
         "PHASE":"REVERSE",
         "TRAINING":"UPPER - LOWER - UPPER",
-        "PDC":68.82,
-        "DIFFERENCE":0.13,
-        "PAS":8498.67,
-        "KCALS":1050.14,
+        "PDC":68.97,
+        "DIFFERENCE":0.28,
+        "PAS":8120.75,
+        "KCALS":2450.33,
         "CARDIO":null,
-        "EVENTS":null,
+        "EVENTS":"MALADED",
         "MODIFS.":"2200 -> 2400",
         "Paiement":null
     }
