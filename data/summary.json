@@ -384,11 +384,25 @@
         "TRAINING":"UPPER - LOWER - UPPER",
         "PDC":68.97,
         "DIFFERENCE":0.29,
-        "PAS":8120.75,
-        "KCALS":2450.33,
+        "PAS":8936.29,
+        "KCALS":2562.14,
         "CARDIO":null,
         "EVENTS":"MALADED",
         "MODIFS.":"2200 -> 2400",
         "Paiement":null
+    },
+    {
+        "N°":29.0,
+        "Date":"jeudi 29 janvier 2026",
+        "PHASE":"REVERSE",
+        "TRAINING":"UPPER - LOWER - UPPER",
+        "PDC":69.86,
+        "DIFFERENCE":0.89,
+        "PAS":15284.5,
+        "KCALS":2787.14,
+        "CARDIO":null,
+        "EVENTS":null,
+        "MODIFS.":"2400 -> 2500",
+        "Paiement":false
     }
 ]
