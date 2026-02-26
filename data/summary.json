@@ -403,7 +403,7 @@
         "CARDIO":null,
         "EVENTS":null,
         "MODIFS.":"2400 -> 2500",
-        "Paiement":false
+        "Paiement":true
     },
     {
         "N°":30.0,
@@ -427,7 +427,7 @@
         "PDC":69.86,
         "DIFFERENCE":0.16,
         "PAS":9490.14,
-        "KCALS":2569.4,
+        "KCALS":2577.71,
         "CARDIO":null,
         "EVENTS":null,
         "MODIFS.":"2500 -> 2600",
@@ -438,8 +438,8 @@
         "Date":"jeudi 19 février 2026",
         "PHASE":"REVERSE",
         "TRAINING":"UPPER - LOWER - UPPER",
-        "PDC":70.2,
-        "DIFFERENCE":0.34,
+        "PDC":70.31,
+        "DIFFERENCE":0.46,
         "PAS":10932.0,
         "KCALS":0.0,
         "CARDIO":null,
