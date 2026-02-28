@@ -446,5 +446,19 @@
         "EVENTS":null,
         "MODIFS.":"2600 -> 2700 \/ 12k->10k",
         "Paiement":null
+    },
+    {
+        "N°":33.0,
+        "Date":"jeudi 26 février 2026",
+        "PHASE":"DÉFICIT",
+        "TRAINING":"UPPER - LOWER - UPPER",
+        "PDC":71.2,
+        "DIFFERENCE":0.89,
+        "PAS":null,
+        "KCALS":0.0,
+        "CARDIO":null,
+        "EVENTS":null,
+        "MODIFS.":"2600 -> 2300",
+        "Paiement":false
     }
 ]
