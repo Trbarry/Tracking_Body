@@ -466,12 +466,12 @@
         "Date":"jeudi 5 mars 2026",
         "PHASE":"DÉFICIT",
         "TRAINING":"UPPER - LOWER - UPPER",
-        "PDC":70.35,
-        "DIFFERENCE":-0.21,
-        "PAS":12541.2,
-        "KCALS":1086.71,
+        "PDC":70.33,
+        "DIFFERENCE":-0.23,
+        "PAS":11986.5,
+        "KCALS":2234.67,
         "CARDIO":null,
-        "EVENTS":null,
+        "EVENTS":"CAMBRIOLED",
         "MODIFS.":null,
         "Paiement":null
     }
