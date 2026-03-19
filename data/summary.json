@@ -459,7 +459,7 @@
         "CARDIO":null,
         "EVENTS":null,
         "MODIFS.":"2600 -> 2300",
-        "Paiement":false
+        "Paiement":true
     },
     {
         "N°":34.0,
@@ -480,10 +480,10 @@
         "Date":"jeudi 12 mars 2026",
         "PHASE":"DÉFICIT",
         "TRAINING":"UPPER - LOWER - UPPER",
-        "PDC":69.42,
-        "DIFFERENCE":-0.91,
-        "PAS":13376.75,
-        "KCALS":955.57,
+        "PDC":69.5,
+        "DIFFERENCE":-0.83,
+        "PAS":12102.67,
+        "KCALS":2268.33,
         "CARDIO":null,
         "EVENTS":null,
         "MODIFS.":"2300 -> 2200",
