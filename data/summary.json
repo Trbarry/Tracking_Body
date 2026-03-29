@@ -496,11 +496,25 @@
         "TRAINING":"UPPER - LOWER - UPPER",
         "PDC":69.71,
         "DIFFERENCE":0.21,
-        "PAS":10954.33,
+        "PAS":10623.0,
         "KCALS":2276.25,
         "CARDIO":null,
         "EVENTS":null,
         "MODIFS.":null,
         "Paiement":null
+    },
+    {
+        "N°":37.0,
+        "Date":"jeudi 26 mars 2026",
+        "PHASE":"DÉFICIT",
+        "TRAINING":"UPPER - LOWER - UPPER",
+        "PDC":69.6,
+        "DIFFERENCE":-0.11,
+        "PAS":8797.5,
+        "KCALS":0.0,
+        "CARDIO":null,
+        "EVENTS":null,
+        "MODIFS.":"REFEED",
+        "Paiement":true
     }
 ]
