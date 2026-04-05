@@ -516,5 +516,19 @@
         "EVENTS":null,
         "MODIFS.":"REFEED",
         "Paiement":true
+    },
+    {
+        "N°":38.0,
+        "Date":"jeudi 2 avril 2026",
+        "PHASE":"DÉFICIT",
+        "TRAINING":"UPPER - LOWER - UPPER",
+        "PDC":69.15,
+        "DIFFERENCE":-0.41,
+        "PAS":null,
+        "KCALS":0.0,
+        "CARDIO":null,
+        "EVENTS":null,
+        "MODIFS.":null,
+        "Paiement":null
     }
 ]
