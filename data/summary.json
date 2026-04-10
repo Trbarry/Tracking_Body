@@ -530,5 +530,19 @@
         "EVENTS":null,
         "MODIFS.":null,
         "Paiement":null
+    },
+    {
+        "N°":39.0,
+        "Date":"jeudi 9 avril 2026",
+        "PHASE":"DÉFICIT",
+        "TRAINING":"UPPER - LOWER - UPPER",
+        "PDC":69.1,
+        "DIFFERENCE":-0.13,
+        "PAS":null,
+        "KCALS":0.0,
+        "CARDIO":null,
+        "EVENTS":null,
+        "MODIFS.":"2200 -> 2000",
+        "Paiement":null
     }
 ]
