@@ -562,8 +562,8 @@
     {
         "N°":41.0,
         "Date":"jeudi 23 avril 2026",
-        "PHASE":null,
-        "TRAINING":null,
+        "PHASE":"DÉFICIT",
+        "TRAINING":"UPPER - LOWER - UPPER",
         "PDC":68.43,
         "DIFFERENCE":-0.06,
         "PAS":null,
