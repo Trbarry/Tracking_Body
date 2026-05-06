@@ -564,13 +564,27 @@
         "Date":"jeudi 23 avril 2026",
         "PHASE":"DÉFICIT",
         "TRAINING":"UPPER - LOWER - UPPER",
-        "PDC":68.43,
-        "DIFFERENCE":-0.06,
+        "PDC":68.37,
+        "DIFFERENCE":-0.11,
         "PAS":null,
         "KCALS":0.0,
         "CARDIO":null,
         "EVENTS":null,
         "MODIFS.":null,
         "Paiement":true
+    },
+    {
+        "N°":42.0,
+        "Date":"jeudi 30 avril 2026",
+        "PHASE":"DÉFICIT",
+        "TRAINING":"UPPER - LOWER - UPPER",
+        "PDC":68.23,
+        "DIFFERENCE":-0.14,
+        "PAS":null,
+        "KCALS":0.0,
+        "CARDIO":null,
+        "EVENTS":null,
+        "MODIFS.":null,
+        "Paiement":null
     }
 ]
