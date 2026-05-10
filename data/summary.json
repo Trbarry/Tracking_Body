@@ -586,5 +586,19 @@
         "EVENTS":null,
         "MODIFS.":null,
         "Paiement":null
+    },
+    {
+        "N°":43.0,
+        "Date":"jeudi 7 mai 2026",
+        "PHASE":"DÉFICIT",
+        "TRAINING":"UPPER - LOWER - UPPER",
+        "PDC":67.53,
+        "DIFFERENCE":-0.7,
+        "PAS":null,
+        "KCALS":0.0,
+        "CARDIO":null,
+        "EVENTS":null,
+        "MODIFS.":"2000 -> 1800",
+        "Paiement":null
     }
 ]
