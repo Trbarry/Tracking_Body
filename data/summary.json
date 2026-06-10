@@ -628,5 +628,33 @@
         "EVENTS":null,
         "MODIFS.":null,
         "Paiement":false
+    },
+    {
+        "N°":46.0,
+        "Date":"jeudi 28 mai 2026",
+        "PHASE":"DÉFICIT",
+        "TRAINING":" ",
+        "PDC":0.0,
+        "DIFFERENCE":-67.03,
+        "PAS":null,
+        "KCALS":0.0,
+        "CARDIO":null,
+        "EVENTS":null,
+        "MODIFS.":null,
+        "Paiement":null
+    },
+    {
+        "N°":47.0,
+        "Date":"jeudi 4 juin 2026",
+        "PHASE":null,
+        "TRAINING":null,
+        "PDC":44.6,
+        "DIFFERENCE":44.6,
+        "PAS":null,
+        "KCALS":0.0,
+        "CARDIO":null,
+        "EVENTS":null,
+        "MODIFS.":null,
+        "Paiement":null
     }
 ]
