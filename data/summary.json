@@ -656,5 +656,19 @@
         "EVENTS":null,
         "MODIFS.":null,
         "Paiement":null
+    },
+    {
+        "N°":49.0,
+        "Date":"jeudi 18 juin 2026",
+        "PHASE":"DÉFICIT",
+        "TRAINING":"UPPER - LOWER - UPPER",
+        "PDC":66.29,
+        "DIFFERENCE":-0.01,
+        "PAS":null,
+        "KCALS":0.0,
+        "CARDIO":null,
+        "EVENTS":null,
+        "MODIFS.":null,
+        "Paiement":false
     }
 ]
