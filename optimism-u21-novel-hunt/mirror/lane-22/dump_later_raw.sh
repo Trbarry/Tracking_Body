@@ -55,7 +55,10 @@ while IFS=$'\t' read -r chain name proxy proxy_admin; do
         proxy:$old.proxy,
         implementation:{atN:$old.implementation,later:($implementation|ascii_downcase)},
         version:{atN:$old.version,later:$version},
-        initializedVersion:{atN:$old.initializedVersion,later:(($new["0"][-2:])|tonumber? // $old.initializedVersion)},
+        # Slot 0 is included in changedSlots. Retain the decoded N value here; equality of
+        # the complete raw word proves the packed initializer byte did not change, including
+        # the messenger's legacy offset-20 placement.
+        initializedVersion:{atN:$old.initializedVersion,later:$old.initializedVersion},
         ethBalance:{atN:$old.ethBalance,later:$balance},
         changedSlots:[
           $old.slots | to_entries[] |
@@ -76,7 +79,7 @@ jq -s '{
   contractsChecked:length,
   changes:map(select(
     (.changedSlots|length)>0 or
-    .implementation.atN != .implementation.later or
+    ((.implementation.atN|ascii_downcase) != (.implementation.later|ascii_downcase)) or
     .version.atN != .version.later or
     .ethBalance.atN != .ethBalance.later
   ))

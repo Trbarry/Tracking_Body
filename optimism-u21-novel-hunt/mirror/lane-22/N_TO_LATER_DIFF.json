@@ -75,7 +75,7 @@
       },
       "initializedVersion": {
         "atN": 3,
-        "later": 0
+        "later": 3
       },
       "ethBalance": {
         "atN": "0",
@@ -213,7 +213,7 @@
       },
       "initializedVersion": {
         "atN": 3,
-        "later": 0
+        "later": 3
       },
       "ethBalance": {
         "atN": "0",
@@ -380,7 +380,7 @@
       },
       "initializedVersion": {
         "atN": 3,
-        "later": 0
+        "later": 3
       },
       "ethBalance": {
         "atN": "0",
@@ -518,7 +518,7 @@
       },
       "initializedVersion": {
         "atN": 3,
-        "later": 0
+        "later": 3
       },
       "ethBalance": {
         "atN": "0",

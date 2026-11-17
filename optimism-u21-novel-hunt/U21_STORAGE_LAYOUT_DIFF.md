@@ -379,7 +379,7 @@ DisputeGameFactory proxies emitted the same four `Upgraded` events as everything
 their v9 implementation address equals the v8 one (see §4). L1CDM (ResolvedDelegateProxy) has no implementation slot of its
 own; its change is the AddressManager entry.
 
-Writes that happened inside the tx but netted to zero (from the call trace, 571 state-changing calls):
+Writes that happened inside the tx but netted to zero (from the call trace; `u21-tx-calltrace-summary.txt`, 571 lines):
 
 * `_initialized` byte of every proxy: zeroed through `StorageSetter.setBytes32(slot 0, current & mask)` and set back to
   the same `initVersion` by `initialize` (Portal/SystemConfig/L1CDM/L1SB/L1ERC721: 3; SuperchainConfig: 2; others: 1).
