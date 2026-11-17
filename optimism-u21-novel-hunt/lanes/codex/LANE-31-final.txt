@@ -1,0 +1,33 @@
+Lane 31 is complete. No bounty candidate survived falsification, and no public transaction was broadcast.
+
+Main deliverables:
+
+- [Full lane report](/home/user/Tracking_Body/optimism-u21-novel-hunt/lanes/LANE-31-report.md)
+- [Fixtures and provenance](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-31/WITHDRAWAL_FIXTURES.md)
+- [Differential results](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-31/DIFFERENTIAL_RESULTS.md)
+- [Gas-boundary results](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-31/GAS_BOUNDARY_RESULTS.md)
+- [Proxy/state map](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-31/U21_PROXY_IMPLEMENTATION_MAP.md)
+- Six primitive files, eight rejection files, eight complete withdrawal fixtures, copied suites/scripts, raw logs, state reads, and traces.
+
+Primitives:
+
+- PRIM-3101 — Real messenger finalization is atomic at the observed gas boundary.
+- PRIM-3102 — Pause blocks outflows but intentionally permits inflows.
+- PRIM-3103 — Proofs are submitter-isolated, but the submitter list admits duplicates.
+- PRIM-3104 — Empty value targets receive the new 183,600-gas reserve.
+- PRIM-3105 — Exact N introduced calldata-proportional deposit gas regression.
+- PRIM-3106 — Portal trusts successful L1CDM return without reading outcome mappings.
+
+Candidate: none. The closest mocked messenger trust-boundary shape scores **-3** and is not production-reachable.
+
+Strongest negatives:
+
+- Real post-U21 withdrawal finalized end-to-end through a permissionlessly resolved type-9 game.
+- 192 sampled gas values plus binary probes found zero finalized-with-neither states; exact success/relay boundary was 708,920.
+- Reprove, external-proof replay, deletion, pause, reentrancy, reverting and gas-burning targets did not break custody or uniqueness.
+- The 90,000 ETH fixture’s game was `CHALLENGER_WINS`.
+- Large-calldata gas changed, but events, limits, selectors, and custody matched.
+
+Further attention: future L1CDM upgrades versus PRIM-3106; Amsterdam/codehash transitions versus PRIM-3104; future interop migration code that might iterate duplicate proof history.
+
+Verification: **27 passed, 0 failed across nine suites**.
