@@ -32,13 +32,14 @@ ENDPOINTS = {
 }
 
 
-def call(address: str, signature: str, endpoint: str, block: int) -> str:
+def call(address: str, signature: str, endpoint: str, block: int, *args: str) -> str:
     proc = subprocess.run(
         [
             "cast",
             "call",
             address,
             signature,
+            *args,
             "--rpc-url",
             endpoint,
             "--block",
@@ -193,11 +194,19 @@ def main() -> None:
             }
             want = expected[getter]
             n_lower = values["N"].lower()
-            status = "semantic-check" if want is None else ("ok" if n_lower == want else "mismatch")
+            if contract == "L1CrossDomainMessenger" and getter == "xDomainMessageSender":
+                want = "reverts while sender is unset"
+                status = (
+                    "ok"
+                    if n_lower.startswith("error:") and "xdomainmessagesender is not set" in n_lower
+                    else "mismatch"
+                )
+            else:
+                status = "semantic-check" if want is None else ("ok" if n_lower == want else "mismatch")
             stable = values["N"].lower() == values["later"].lower()
             if status == "mismatch":
                 failures.append(f"{chain}/{contract}.{getter}")
-            if not stable:
+            if not stable and getter != "anchorGame":
                 changed.append(f"{chain}/{contract}.{getter}")
             out["getters"][getter] = {
                 "expected": want,
@@ -214,9 +223,10 @@ def main() -> None:
             else:
                 registered = call(
                     row["target"],
-                    f"isGameRegistered(address)(bool) {anchor}",
+                    "isGameRegistered(address)(bool)",
                     ENDPOINTS["N"][0],
                     ENDPOINTS["N"][1],
+                    anchor,
                 )
                 anchor_semantic = f"nonzero; isGameRegistered={registered}"
             out["anchor_game_semantic"] = anchor_semantic

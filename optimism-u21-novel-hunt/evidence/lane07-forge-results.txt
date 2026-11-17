@@ -1,0 +1,158 @@
+# lane 07 — forge 1.5.1, fork alias l1 (http://127.0.0.1:8545 @ 26433900), 2026-11-17T10:17:55Z
+No files changed, compilation skipped
+
+Ran 5 tests for test/Migration.t.sol:MigrationTest
+[PASS] test_control_unchallenged_invalid_game_pays() (gas: 892734)
+[PASS] test_prepositioned_future_game_twin_in_shared_factory() (gas: 5252514)
+Logs:
+  shared ETHLockbox: 0x2Ae0104d4aDE6B90a5960e7C09A5C7Fb30a0fAD8
+  shared DGF: 0xd809C805142EaaeeB9D2EeeF102B587f6244c1C9
+  shared ASR: 0x68ea5303F1985D40B61bE7a7557E9cFa7aE91294
+  shared lockbox ETH: 200807
+
+[PASS] test_prepositioned_proof_dies_at_migration() (gas: 4751080)
+Logs:
+  shared ETHLockbox: 0x2Ae0104d4aDE6B90a5960e7C09A5C7Fb30a0fAD8
+  shared DGF: 0xd809C805142EaaeeB9D2EeeF102B587f6244c1C9
+  shared ASR: 0x68ea5303F1985D40B61bE7a7557E9cFa7aE91294
+  shared lockbox ETH: 200807
+
+[PASS] test_same_timestamp_game_is_retired() (gas: 4330679)
+[PASS] test_two_chain_super_root_selection() (gas: 6781268)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 45.79ms (38.20ms CPU time)
+
+Ran 2 tests for test/Probes.t.sol:ProbesTest
+[PASS] test_game_creation_surface() (gas: 1316931)
+[PASS] test_legacy_output_root_games_still_valid_but_cannot_anchor() (gas: 274711)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 18.51ms (10.40ms CPU time)
+
+Ran 2 test suites in 69.03ms (64.30ms CPU time): 7 tests passed, 0 failed, 0 skipped (7 total tests)
+No files changed, compilation skipped
+
+Ran 2 tests for test/Boundary.t.sol:BoundaryTest
+[PASS] test_boundary_op() (gas: 244884)
+Logs:
+  first non-retired index 9828 of 21389
+  ok idx/type/ts 9828 0 1753381655
+  ok idx/type/ts 9829 0 1753385267
+  ok idx/type/ts 9830 0 1753388891
+  ok idx/type/ts 9831 0 1753392515
+  ok idx/type/ts 9832 0 1753396127
+  ok idx/type/ts 9833 0 1753399751
+  ok idx/type/ts 10791 0 1756849355
+  ok idx/type/ts 11754 0 1760313467
+  ok idx/type/ts 12718 0 1763781443
+  ok idx/type/ts 13681 0 1767242303
+  ok idx/type/ts 14644 0 1770708683
+  ok idx/type/ts 15608 0 1774174223
+  ok idx/type/ts 16571 0 1777633007
+  ok idx/type/ts 17534 0 1781098283
+  ok idx/type/ts 18498 8 1784568539
+  ok idx/type/ts 19461 8 1788006275
+  ok idx/type/ts 20424 9 1791445151
+  ok idx/type/ts 21388 9 1794906359
+  games bound to a different ASR: 0
+
+[PASS] test_boundary_uni() (gas: 257451)
+Logs:
+  first non-retired index 6186 of 17691
+  ok idx/type/ts 6186 0 1753380743
+  ok idx/type/ts 6187 0 1753384355
+  ok idx/type/ts 6188 0 1753387967
+  ok idx/type/ts 6189 0 1753391579
+  ok idx/type/ts 6190 0 1753395191
+  ok idx/type/ts 6191 0 1753398803
+  ok idx/type/ts 7144 0 1756834739
+  ok idx/type/ts 8103 0 1760310743
+  ok idx/type/ts 9062 0 1763785787
+  ok idx/type/ts 10020 0 1767257387
+  ok idx/type/ts 10979 0 1770721607
+  ok idx/type/ts 11938 0 1774184939
+  ok idx/type/ts 12896 0 1777641863
+  ok idx/type/ts 13855 0 1781104559
+  ok idx/type/ts 14814 8 1784565935
+  ok idx/type/ts 15772 8 1788027491
+  ok idx/type/ts 16731 9 1791482975
+  ok idx/type/ts 17690 9 1794906239
+  games bound to a different ASR: 0
+
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 2.96s (2.96s CPU time)
+
+Ran 1 test suite in 2.97s (2.96s CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+
+# Recon (4 chains)
+No files changed, compilation skipped
+
+Ran 1 test for test/Recon.t.sol:ReconTest
+[PASS] test_recon() (gas: 647815)
+Logs:
+  === chain 10 4.3.0
+  portal 0xbEb5Fc579115071764c7423A4f12eDde41f106Ed 6.1.0
+  asr 0x23B2C62946350F4246f9f9D027e071f0264FD113 4.0.0
+  dgf 0xe5965Ab5962eDc7477C8520243A95517CD252fA9 scDGF 0xe5965Ab5962eDc7477C8520243A95517CD252fA9
+  dgf owner 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A count 21389
+  lockbox portal/asr 0x322b47Ff1FA8D5611F761e3E275C45B71b294D43 0x322b47Ff1FA8D5611F761e3E275C45B71b294D43
+  weth 0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162
+  proxyAdmin 0x543bA4AADBAb8f9025686Bd03993043599c6fB04 owner 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A
+  superchainConfig 0x95703e0982140D16f8ebA6d158FccEde42f04a4C
+  opcm 0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f 9.0.3
+  respected 9 retirement 1753379243
+  anchorGame 0x55A5CFd4270340b3822BB9D8eebdb450ac206f95 seq 1794298459
+  0xca640c8db165091618e7edc23995b250d4b3e6dfbe918bded900a38efbf76fbc
+    type 5 0x5C3eb47cB0174aea522a2a9Ae79487139A53D691 0
+  0x23b2c62946350f4246f9f9d027e071f0264fd113c27ba3e0fc01567a5e57ae0c391aa98cecba5be0
+    type 9 0x19AF533Cc2A2A55786DCB8672aA5717e64213208 80000000000000000
+  0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfa23b2c62946350f4246f9f9d027e071f0264fd1131b6dbf05eaf22d4e70dc993e8a19dd9f3dcb31620000000000000000000000000000000000000000000000000000000000000000
+  === chain 57073 4.3.0
+  portal 0x5d66C1782664115999C47c9fA5cd031f495D3e4F 6.1.0
+  asr 0xEe018bAf058227872540AC60eFbd38b023d9dAe2 4.0.0
+  dgf 0x10d7B35078d3baabB96Dd45a9143B94be65b12CD scDGF 0x10d7B35078d3baabB96Dd45a9143B94be65b12CD
+  dgf owner 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A count 2640
+  lockbox portal/asr 0xbd4AbB321138e8Eddc399cE64E66451294325a14 0xbd4AbB321138e8Eddc399cE64E66451294325a14
+  weth 0x57b4C29DAee99a28E6E86778b499361294c134eA
+  proxyAdmin 0xd56045E68956FCe2576E680c95a4750cf8241f79 owner 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A
+  superchainConfig 0x95703e0982140D16f8ebA6d158FccEde42f04a4C
+  opcm 0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f 9.0.3
+  respected 9 retirement 1753379243
+  anchorGame 0x38925ef2ec5451E7280CC7bBe08E73E74ebf8945 seq 1794288067
+  0xf2045b079293aaf86f438a6b8ef8c11b2e61e164ebf18374b0b10b70f848176e
+    type 5 0x5C3eb47cB0174aea522a2a9Ae79487139A53D691 0
+  0xee018baf058227872540ac60efbd38b023d9dae23832bfbef03173e4c49a00ec0dd178817a02d177
+    type 9 0x19AF533Cc2A2A55786DCB8672aA5717e64213208 80000000000000000
+  0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfaee018baf058227872540ac60efbd38b023d9dae257b4c29daee99a28e6e86778b499361294c134ea0000000000000000000000000000000000000000000000000000000000000000
+  === chain 1868 4.3.0
+  portal 0x88e529A6ccd302c948689Cd5156C83D4614FAE92 6.1.0
+  asr 0x4890928941e62e273dA359374b105F803329F473 4.0.0
+  dgf 0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0 scDGF 0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0
+  dgf owner 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A count 8537
+  lockbox portal/asr 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31
+  weth 0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47
+  proxyAdmin 0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a owner 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A
+  superchainConfig 0x95703e0982140D16f8ebA6d158FccEde42f04a4C
+  opcm 0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f 9.0.3
+  respected 5 retirement 1753380095
+  anchorGame 0x5dFB50E0E35005a0d302799bAaFf6E99134eC454 seq 1794596679
+  0x615306abb7962b8ec4384bf6c5df146783da03b9248467af05e36dfb02b3b271
+    type 5 0x5C3eb47cB0174aea522a2a9Ae79487139A53D691 0
+  0x4890928941e62e273da359374b105f803329f473400c164c4a8ca84385b70eed6eb03ea847c8e1b8
+  === chain 130 4.3.0
+  portal 0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2 6.1.0
+  asr 0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9 4.0.0
+  dgf 0x2F12d621a16e2d3285929C9996f478508951dFe4 scDGF 0x2F12d621a16e2d3285929C9996f478508951dFe4
+  dgf owner 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A count 17691
+  lockbox portal/asr 0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5 0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5
+  weth 0x74ad145aC900F1DD5551F0C9E143314DC4022FCf
+  proxyAdmin 0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4 owner 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A
+  superchainConfig 0x95703e0982140D16f8ebA6d158FccEde42f04a4C
+  opcm 0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f 9.0.3
+  respected 9 retirement 1753380731
+  anchorGame 0x944a783a2f1F187F0D475Df8aCf09c9463bCAfD5 seq 1794300387
+  0xcbdfd78473ee1cf5dba9afd8a6b1c9163084cee7cc9baf35dcbe99d8a92dfd31
+    type 5 0x5C3eb47cB0174aea522a2a9Ae79487139A53D691 0
+  0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff986b392ca30ad7453c8d88b56eb5a04fd0e2175b7
+    type 9 0x19AF533Cc2A2A55786DCB8672aA5717e64213208 80000000000000000
+  0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfa27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff974ad145ac900f1dd5551f0c9e143314dc4022fcf0000000000000000000000000000000000000000000000000000000000000000
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 37.71ms (37.32ms CPU time)
+
+Ran 1 test suite in 42.70ms (37.71ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

@@ -305,10 +305,10 @@
           "stable_to_later": true
         },
         "xDomainMessageSender": {
-          "expected": "0x000000000000000000000000000000000000dead",
+          "expected": "reverts while sender is unset",
           "N": "ERROR: Error: server returned an error response: error code 3: execution reverted: CrossDomainMessenger: xDomainMessageSender is not set, data: \"0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003543726f7373446f6d61696e4d657373656e6765723a2078446f6d61696e4d65737361676553656e646572206973206e6f74207365740000000000000000000000\"",
           "later": "ERROR: Error: server returned an error response: error code 3: execution reverted: CrossDomainMessenger: xDomainMessageSender is not set, data: \"0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003543726f7373446f6d61696e4d657373656e6765723a2078446f6d61696e4d65737361676553656e646572206973206e6f74207365740000000000000000000000\"",
-          "status": "mismatch",
+          "status": "ok",
           "stable_to_later": true
         }
       }
@@ -592,7 +592,7 @@
           "stable_to_later": true
         }
       },
-      "anchor_game_semantic": "nonzero; isGameRegistered=ERROR: Error: could not parse function signature\n\nContext:\n- parser error:\nisGameRegistered(address)(bool) 0x51024A83c2F94c8e70014A732d3e2559CdceeB1D\n                                ^"
+      "anchor_game_semantic": "nonzero; isGameRegistered=true"
     },
     {
       "chain": "Ink",
@@ -866,10 +866,10 @@
           "stable_to_later": true
         },
         "xDomainMessageSender": {
-          "expected": "0x000000000000000000000000000000000000dead",
+          "expected": "reverts while sender is unset",
           "N": "ERROR: Error: server returned an error response: error code 3: execution reverted: CrossDomainMessenger: xDomainMessageSender is not set, data: \"0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003543726f7373446f6d61696e4d657373656e6765723a2078446f6d61696e4d65737361676553656e646572206973206e6f74207365740000000000000000000000\"",
           "later": "ERROR: Error: server returned an error response: error code 3: execution reverted: CrossDomainMessenger: xDomainMessageSender is not set, data: \"0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003543726f7373446f6d61696e4d657373656e6765723a2078446f6d61696e4d65737361676553656e646572206973206e6f74207365740000000000000000000000\"",
-          "status": "mismatch",
+          "status": "ok",
           "stable_to_later": true
         }
       }
@@ -1153,7 +1153,7 @@
           "stable_to_later": true
         }
       },
-      "anchor_game_semantic": "nonzero; isGameRegistered=ERROR: Error: could not parse function signature\n\nContext:\n- parser error:\nisGameRegistered(address)(bool) 0x7A5559F33142609Db4bf9d187311140325e27f81\n                                ^"
+      "anchor_game_semantic": "nonzero; isGameRegistered=true"
     },
     {
       "chain": "Soneium",
@@ -1427,10 +1427,10 @@
           "stable_to_later": true
         },
         "xDomainMessageSender": {
-          "expected": "0x000000000000000000000000000000000000dead",
+          "expected": "reverts while sender is unset",
           "N": "ERROR: Error: server returned an error response: error code 3: execution reverted: CrossDomainMessenger: xDomainMessageSender is not set, data: \"0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003543726f7373446f6d61696e4d657373656e6765723a2078446f6d61696e4d65737361676553656e646572206973206e6f74207365740000000000000000000000\"",
           "later": "ERROR: Error: server returned an error response: error code 3: execution reverted: CrossDomainMessenger: xDomainMessageSender is not set, data: \"0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003543726f7373446f6d61696e4d657373656e6765723a2078446f6d61696e4d65737361676553656e646572206973206e6f74207365740000000000000000000000\"",
-          "status": "mismatch",
+          "status": "ok",
           "stable_to_later": true
         }
       }
@@ -1714,7 +1714,7 @@
           "stable_to_later": true
         }
       },
-      "anchor_game_semantic": "nonzero; isGameRegistered=ERROR: Error: could not parse function signature\n\nContext:\n- parser error:\nisGameRegistered(address)(bool) 0xa64e0DAf4A8b918811369C856897f4d6ee8b3FED\n                                ^"
+      "anchor_game_semantic": "nonzero; isGameRegistered=true"
     },
     {
       "chain": "Unichain",
@@ -1988,10 +1988,10 @@
           "stable_to_later": true
         },
         "xDomainMessageSender": {
-          "expected": "0x000000000000000000000000000000000000dead",
+          "expected": "reverts while sender is unset",
           "N": "ERROR: Error: server returned an error response: error code 3: execution reverted: CrossDomainMessenger: xDomainMessageSender is not set, data: \"0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003543726f7373446f6d61696e4d657373656e6765723a2078446f6d61696e4d65737361676553656e646572206973206e6f74207365740000000000000000000000\"",
           "later": "ERROR: Error: server returned an error response: error code 3: execution reverted: CrossDomainMessenger: xDomainMessageSender is not set, data: \"0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003543726f7373446f6d61696e4d657373656e6765723a2078446f6d61696e4d65737361676553656e646572206973206e6f74207365740000000000000000000000\"",
-          "status": "mismatch",
+          "status": "ok",
           "stable_to_later": true
         }
       }
@@ -2275,23 +2275,13 @@
           "stable_to_later": true
         }
       },
-      "anchor_game_semantic": "nonzero; isGameRegistered=ERROR: Error: could not parse function signature\n\nContext:\n- parser error:\nisGameRegistered(address)(bool) 0x55AE7D93c00a37BA77D267AE9ed1C9040cE9B1DD\n                                ^"
+      "anchor_game_semantic": "nonzero; isGameRegistered=true"
     }
   ],
   "summary": {
     "contract_count": 41,
     "getter_count": 283,
-    "expectation_mismatches": [
-      "OP Mainnet/L1CrossDomainMessenger.xDomainMessageSender",
-      "Ink/L1CrossDomainMessenger.xDomainMessageSender",
-      "Soneium/L1CrossDomainMessenger.xDomainMessageSender",
-      "Unichain/L1CrossDomainMessenger.xDomainMessageSender"
-    ],
-    "changes_N_to_later": [
-      "OP Mainnet/AnchorStateRegistry.anchorGame",
-      "Ink/AnchorStateRegistry.anchorGame",
-      "Soneium/AnchorStateRegistry.anchorGame",
-      "Unichain/AnchorStateRegistry.anchorGame"
-    ]
+    "expectation_mismatches": [],
+    "changes_N_to_later": []
   }
 }
