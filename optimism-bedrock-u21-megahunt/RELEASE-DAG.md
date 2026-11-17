@@ -9,34 +9,34 @@ Audit titles/commits: Titles, audited commits and 'Subsequent Release' are the D
 
 | # | Node | Proposal | Class | op-contracts tag @ commit | OP Mainnet L1 execution | Ink | Soneium | Unichain |
 |---|---|---|---|---|---|---|---|---|
-| 0 | **OVM** Legacy OVM residue (OVM 1.0 mainnet beta 2021-06, OVM 2.0 re | — | residue (no governance upgrade number) | —  | 12686687 (2021-06-22) 0x8803c67a00… | n/a | n/a | n/a |
-| 1 | **U1** Upgrade #1 — Bedrock | 1 | hardfork (re-genesis-less migration) + f | op-contracts/v1.0.0 @ `a12a09f7000f` | 17365801-17365804 (2023-05-29) 0x615bd360..., 0x8da60c6c..., 0x4c2e6326..., 0x17a29cb8... | genesis-inherited | genesis-inherited | genesis-inherited |
+| 0 | **OVM** Legacy OVM residue (OVM 1.0 mainnet beta 2021-06, OVM 2.0 re | — | residue (no governance upgrade number) | —  | 12686687 (2021-06-22) 0x8803c67a00… (+7 more) | n/a | n/a | n/a |
+| 1 | **U1** Upgrade #1 — Bedrock | 1 | hardfork (re-genesis-less migration) + f | op-contracts/v1.0.0 @ `a12a09f7000f` | 17365801-17365804 (2023-05-29) 0x615bd360..., 0x8da60c6c..., 0x4c2e6326..., 0x17a29cb8... (+3 more) | genesis-inherited | genesis-inherited | genesis-inherited |
 | 2 | **V1.1.0** op-contracts/v1.1.0 — tag without an OP Mainnet upgrade (Pro | — | tag only / new signalling contract (not  | op-contracts/v1.1.0 @ `c383eb880f30` | 18367300 / 18367320 (2023-10-17) 0x4ab7f052... / 0xa97289b1... | n/a | n/a | n/a |
-| 3 | **SC-PHASE-0** Security Council Phase 0 — L1 ProxyAdmin owner becomes the 2 | — | authorization change (no code release) | —  | 19193284 (2024-02-09) 0xd2a7e63eb7… | genesis-inherited | genesis-inherited | executed (different path) |
-| 4 | **PAUSE-2024-02** Mainnet pause rehearsal on the Bedrock portal (local `paused | — | operational event (state toggled and res | —  | 19233786 (2024-02-15) 0x374dc0d5ad… | n/a | n/a | n/a |
+| 3 | **SC-PHASE-0** Security Council Phase 0 — L1 ProxyAdmin owner becomes the 2 | — | authorization change (no code release) | —  | 19193284 (2024-02-09) 0xd2a7e63eb7… | genesis-inherited | genesis-inherited | n/a (own 3-of-3 authority until MAINT-UNI-PAO) |
+| 4 | **PAUSE-2024-02** Mainnet pause rehearsal on the Bedrock portal (local `paused | — | operational event (state toggled and res | —  | 19233786 (2024-02-15) 0x374dc0d5ad… (+1 more) | n/a | n/a | n/a |
 | 5 | **U2** Upgrade #2 — Canyon | 2 | hardfork (L2 only) | — (`6cce3728... `) | None (2024-01-11) - | genesis-inherited | genesis-inherited | genesis-inherited |
-| 6 | **U3** Upgrade #3 — Delta | 3 | hardfork (consensus-layer only: span bat | —  | 19320684 (2024-02-27) 0x2c616fc821… | genesis-inherited | genesis-inherited | genesis-inherited |
-| 7 | **U4** Upgrade #4 — SuperchainConfig and extended pause | 4 | contracts-only | op-contracts/v1.2.0 @ `856c08bf84d9` | 19064589 (2024-01-22) 0x3c23aae4..., 0x8ba0e42b..., 0xcde51cae... | genesis-inherited | genesis-inherited | genesis-inherited |
-| 8 | **U5** Upgrade #5 — Ecotone | 5 | hardfork | — (`f707883038d5`) | 19420232 (2024-03-12) 0x29bb617fac… | genesis-inherited | genesis-inherited | genesis-inherited |
+| 6 | **U3** Upgrade #3 — Delta | 3 | hardfork (consensus-layer only: span bat | —  | 19320684 (2024-02-27) 0x2c616fc821… (+1 more) | genesis-inherited | genesis-inherited | genesis-inherited |
+| 7 | **U4** Upgrade #4 — SuperchainConfig and extended pause | 4 | contracts-only | op-contracts/v1.2.0 @ `856c08bf84d9` | 19314493 (2024-02-26) 0x3f7c36a1d6… (+1 more) | genesis-inherited | genesis-inherited | genesis-inherited |
+| 8 | **U5** Upgrade #5 — Ecotone | 5 | hardfork | — (`f707883038d5`) | 19429571 (2024-03-14) 0xac827d7a12… (+2 more) | genesis-inherited | genesis-inherited | genesis-inherited |
 | 9 | **U6** Upgrade #6 — Multi-Chain Prep (MCP) L1 | 6 | contracts-only | op-contracts/v1.3.0 @ `e6ef3a900c42` | 19634866 (2024-04-11) 0x4758bd6235… | genesis-inherited | genesis-inherited | genesis-inherited |
-| 10 | **U7** Upgrade #7 — Fault Proofs | 7 | contracts-only | op-contracts/v1.4.0 @ `547ea72d9849` | 19884569-19884592 (2024-05-16) 0x8104cc6e..., 0x2c16c813..., 0x49303e95..., 0x864c1af8... | genesis-inherited | genesis-inherited | genesis-inherited |
-| 11 | **U8** Upgrade #8 — Guardian, Security Council threshold, L2 ProxyA | 8 | authorization change + Safe modules | op-contracts/v1.5.0 @ `9047beb54c66` | 20063224 (2024-06-10) 0xe361c0d4ae… | genesis-inherited | genesis-inherited | genesis-inherited |
-| 12 | **U9** Upgrade #9 — Fjord | 9 | hardfork + absolute-prestate rotation on | — (`f8143c8cbc4c`) | 20186225 / 20269315 (2024-06-27) 0xa324ca80... / 0xea0bb21a... | genesis-inherited | genesis-inherited | genesis-inherited |
+| 10 | **U7** Upgrade #7 — Fault Proofs | 7 | contracts-only | op-contracts/v1.4.0 @ `547ea72d9849` | 20062696 (2024-06-10) 0xbe810ed6e1… (+1 more) | genesis-inherited | genesis-inherited | genesis-inherited |
+| 11 | **U8** Upgrade #8 — Guardian, Security Council threshold, L2 ProxyA | 8 | authorization change + Safe modules | op-contracts/v1.5.0 @ `9047beb54c66` | 20063224 (2024-06-10) 0xe361c0d4ae…<br>20063319 (2024-06-10) 0x50db9c1b9f… (+2 more) | genesis-inherited | genesis-inherited | genesis-inherited |
+| 12 | **U9** Upgrade #9 — Fjord | 9 | hardfork + absolute-prestate rotation on | — (`f8143c8cbc4c`) | 20270847 (2024-07-09) 0x7abecacd8b… (+3 more) | genesis-inherited | genesis-inherited | genesis-inherited |
 | 13 | **INC-2024-08** Permissioned fallback (respected game type 0 -> 1) | — | guardian action / incident response | —  | 20543021 (2024-08-16) 0x493e2f3354… | n/a | n/a | n/a |
-| 14 | **U10** Upgrade #10 — Granite (hardfork + fault-proof contract fixes | 10 | hardfork + contracts (dispute system onl | op-contracts/v1.6.0 @ `33f06d2d5e40` | 20637593-20637604 (2024-08-29) 0xd9f9b3f7..., 0xb1757756..., 0xb5cf8f61..., 0x25ff1420... | genesis-inherited | genesis-inherited | genesis-inherited |
-| 15 | **U11** Upgrade #11 — Holocene | 11 | hardfork + contracts (SystemConfig, MIPS | op-contracts/v1.8.0 @ `2073f4059bd8` | 21379267-21379272 (2024-12-11) 0x70859ae1..., 0x6b9ad25c..., 0xdf99e2d8..., 0x01fcf030... | executed (different path) | executed (different path) | see text |
+| 14 | **U10** Upgrade #10 — Granite (hardfork + fault-proof contract fixes | 10 | hardfork + contracts (dispute system onl | op-contracts/v1.6.0 @ `33f06d2d5e40` | 20723924 (2024-09-11) 0x3bd2d811d0…<br>20728464 (2024-09-11) 0x592e73fdf5… (+4 more) | genesis-inherited | genesis-inherited | genesis-inherited |
+| 15 | **U11** Upgrade #11 — Holocene | 11 | hardfork + contracts (SystemConfig, MIPS | op-contracts/v1.8.0 @ `2073f4059bd8` | 21580854 (2025-01-08) 0x22ab07b0bb…<br>21695024 (2025-01-24) 0x86da7386a2… (+3 more) | partial: hardfork 2025-03-19, SystemConfig 2.3.0 step SKIPPED | executed (hardfork 2025-02-03; SystemConfig task 030, 2025-02-28) | executed (SystemConfig unichain-001, 2025-03-19) |
 | 16 | **U12** Upgrade #12 — L1 Pectra readiness | 12 | maintenance (node software + absolute pr | —  | NO dedicated L1 transaction: task 031-op-mainnet-pectra-defense is … | executed | folded into later node | folded into later node |
-| 17 | **U13** Upgrade 13 — OPCM and incident response improvements | 13 | contracts-only (first OPCM upgrade) | op-contracts/v2.0.0 @ `8d0dd96e494b` | 22182531 (2025-04-02) 0x5f3530e593… | executed (shared tx/timestamp) | executed (shared tx/timestamp) | executed |
+| 17 | **U13** Upgrade 13 — OPCM and incident response improvements | 13 | contracts-only (first OPCM upgrade) | op-contracts/v2.0.0 @ `8d0dd96e494b` | 22182531 (2025-04-02) 0x5f3530e593… (+3 more) | executed (shared tx/timestamp) | executed (shared tx/timestamp) | executed |
 | 18 | **U14** Upgrade 14 — Isthmus L1 contracts + MT-Cannon | 14 | contracts-only | op-contracts/v3.0.0 @ `ef7a933ca7f3` | 22339996 (2025-04-24) 0xbe44244e35… | executed (shared tx/timestamp) | executed (shared tx/timestamp) | executed |
 | 19 | **U15** Upgrade 15 — Isthmus hardfork | 15 | hardfork | —  | None (2025-05-09) - | executed (shared tx/timestamp) | executed (shared tx/timestamp) | executed (shared tx/timestamp) |
 | 20 | **U15a** Upgrade 15a — absolute prestate for Isthmus activation + blo | 15a | maintenance (prestate rotation through O | —  | 22432368 (2025-05-07) 0xc4a7089a92… | executed (shared tx/timestamp) | skipped | executed |
-| 21 | **U16** Upgrade 16 — Interop contracts, Stage 1, Go 1.23 in Cannon | 16 | contracts-only | op-contracts/v4.0.0 @ `54c19f6acb7a` | 22990599 (2025-07-24) 0x46acdce174… | executed (shared tx/timestamp) | executed | executed |
+| 21 | **U16** Upgrade 16 — Interop contracts, Stage 1, Go 1.23 in Cannon | 16 | contracts-only | op-contracts/v4.0.0 @ `54c19f6acb7a` | 22990599 (2025-07-24) 0x46acdce174… (+2 more) | executed (shared tx/timestamp) | executed | executed |
 | 22 | **U16a** Upgrade 16a — maintenance release superseding U16 | 16a | maintenance (contracts-only) | op-contracts/v4.1.0 @ `594bc933a384` | 23491328 (2025-10-02) 0x744cf7d283… | executed (shared tx/timestamp) | executed (shared tx/timestamp) | executed |
-| 23 | **U17** Upgrade 17 — Jovian hardfork and Fusaka readiness | 17 | hardfork + contracts | op-contracts/v5.0.0 @ `d09c836f818c` | 23877377 (2025-11-25) 0xf556934cb4… | executed (shared tx/timestamp) | executed (shared tx/timestamp) | executed |
+| 23 | **U17** Upgrade 17 — Jovian hardfork and Fusaka readiness | 17 | hardfork + contracts | op-contracts/v5.0.0 @ `d09c836f818c` | 23877377 (2025-11-25) 0xf556934cb4… (+1 more) | executed (shared tx/timestamp) | executed (shared tx/timestamp) | executed |
 | 24 | **U18** Upgrade 18 — Custom Gas Token v2, Cannon+Kona, creator-patte | 18 | contracts-only | op-contracts/v6.0.0 @ `018f5ae926ec` | 24421512 (2026-02-09) 0x8808cd5311… | executed (shared tx/timestamp) | executed | executed |
 | 25 | **U18a** 'Upgrade 18a' — Arena-Z chain servicer migration | 18a | maintenance (single-chain configuration, | —  | not affected | n/a | n/a | n/a |
-| 26 | **U19** Upgrade 19 ('19b') — Karst hardfork, contracts v7, OPCMv2, L | 19b | hardfork + contracts | op-contracts/v7.0.0 @ `a7c88c8d636c` | 25397811 (2026-06-25) 0xbfdac60c96… | executed (shared tx/timestamp) | executed (shared tx/timestamp) | executed |
-| 27 | **MAINT-UNI-PAO** Unichain ProxyAdmin owner transition (and other 2026 single- | — | authorization change (single chain) | —  | not affected (see the 'other maintenance' list in RELEASE-DAG.md se… | executed | n/a | executed |
+| 26 | **U19** Upgrade 19 ('19b') — Karst hardfork, contracts v7, OPCMv2, L | 19b | hardfork + contracts | op-contracts/v7.0.0 @ `a7c88c8d636c` | 25397811 (2026-06-25) 0xbfdac60c96… (+2 more) | executed (shared tx/timestamp) | executed (shared tx/timestamp) | executed |
+| 27 | **MAINT-UNI-PAO** Unichain ProxyAdmin owner transition (and other 2026 single- | — | authorization change (single chain) | —  | not affected (see the 'other maintenance' list in RELEASE-DAG.md se… | executed (SystemConfig owner only) | n/a | executed |
 | 28 | **U20** Upgrade 20 — Super Root dispute games, OPCM v8 | 20 | contracts-only | op-contracts/v8.0.0 @ `f45a5ccfebcd` | 26048619 (2026-09-24) 0x0a0fe86f7b… | executed (shared tx/timestamp) | executed (shared tx/timestamp) | executed (shared tx/timestamp) |
 | 29 | **U21** Upgrade 21 — interop readiness, OPCM v9 | 21 | contracts-only | op-contracts/v9.0.0 @ `ba6fcadbc57e` | 26430859 (2026-11-16) 0x024770b5fb… | executed (shared tx/timestamp) | executed (shared tx/timestamp) | executed (shared tx/timestamp) |
 
@@ -100,11 +100,11 @@ Edges other than the OP Mainnet chronological sequence:
 
 **op-mainnet**: OVM -> U1 -> V1.1.0 -> SC-PHASE-0 -> PAUSE-2024-02 -> U2 -> U3 -> U4 -> U5 -> U6 -> U7 -> U8 -> U9 -> INC-2024-08 -> U10 -> U11 -> U12 [no L1 transaction] -> U13 -> U14 -> U15 -> U15a -> U16 -> U16a -> U17 -> U18 -> U19 -> U20 -> U21
 
-**ink**: U1 [genesis-inherited] -> SC-PHASE-0 [genesis-inherited] -> U2 [genesis-inherited] -> U3 [genesis-inherited] -> U4 [genesis-inherited] -> U5 [genesis-inherited] -> U6 [genesis-inherited] -> U7 [genesis-inherited] -> GENESIS -> U8 [genesis-inherited] -> U9 [genesis-inherited] -> U10 [genesis-inherited] -> U11 -> CHAIN-FP-ENABLE -> U12 -> U13 -> U14 -> U15 -> U15a -> U16 -> U16a -> U17 -> U18 -> U19 -> MAINT-UNI-PAO -> U20 -> U21
+**ink**: [inherited at genesis: U1, SC-PHASE-0, U2, U3, U4, U5, U6, U7, U8, U9, U10] => GENESIS -> U11 [partial: hardfork 2025-03-19, SystemConfig 2.3.0 step SKIPPED] -> CHAIN-FP-ENABLE -> U12 -> U13 -> U14 -> U15 -> U15a -> U16 -> U16a -> U17 -> U18 -> U19 -> MAINT-UNI-PAO -> U20 -> U21
 
-**soneium**: U1 [genesis-inherited] -> SC-PHASE-0 [genesis-inherited] -> U2 [genesis-inherited] -> U3 [genesis-inherited] -> U4 [genesis-inherited] -> U5 [genesis-inherited] -> U6 [genesis-inherited] -> U7 [genesis-inherited] -> GENESIS -> U8 [genesis-inherited] -> U9 [genesis-inherited] -> U10 [genesis-inherited] -> U11 -> CHAIN-FP-ENABLE [skipped] -> U12 [folded into later node] -> U13 -> U14 -> U15 -> U15a [skipped] -> U16 -> U16a -> U17 -> U18 -> U19 -> U20 -> U21
+**soneium**: [inherited at genesis: U1, SC-PHASE-0, U2, U3, U4, U5, U6, U7, U8, U9, U10] => GENESIS -> U11 -> CHAIN-FP-ENABLE [skipped] -> U12 [folded into later node] -> U13 -> U14 -> U15 -> U15a [skipped] -> U16 -> U16a -> U17 -> U18 -> U19 -> U20 -> U21
 
-**unichain**: U1 [genesis-inherited] -> SC-PHASE-0 -> U2 [genesis-inherited] -> U3 [genesis-inherited] -> U4 [genesis-inherited] -> U5 [genesis-inherited] -> U6 [genesis-inherited] -> U7 [genesis-inherited] -> GENESIS -> U8 [genesis-inherited] -> U9 [genesis-inherited] -> U10 [genesis-inherited] -> U11 [see text] -> CHAIN-FP-ENABLE -> U12 [folded into later node] -> U13 -> U14 -> U15 -> U15a -> U16 -> U16a -> U17 -> U18 -> U19 -> MAINT-UNI-PAO -> U20 -> U21
+**unichain**: [inherited at genesis: U1, U2, U3, U4, U5, U6, U7, U8, U9, U10] => SC-PHASE-0 [n/a (own 3-of-3 authority until MAINT-UNI-PAO)] -> GENESIS -> U11 -> CHAIN-FP-ENABLE -> U12 [folded into later node] -> U13 -> U14 -> U15 -> U15a -> U16 -> U16a -> U17 -> U18 -> U19 -> MAINT-UNI-PAO -> U20 -> U21
 
 ## 4. Nodes in detail
 
@@ -241,7 +241,7 @@ Edges other than the OP Mainnet chronological sequence:
   - op-mainnet [executed]: ProxyAdmin.owner(): 0x9BA6e03D... -> 0x5a0Aae59... (2-of-2: Foundation Upgrade Safe 0x847B5c17... + Security Council Safe 0xc2819DC7...) — L1 block 19193284, 2024-02-09 21:35:47, tx 0xd2a7e63eb76199234e4876c1c99dcdf73f0ed04eb8b8767e94809cc2de2629ca
   - ink [genesis-inherited]: inherits (PAO 0x5a0Aae59... from genesis)
   - soneium [genesis-inherited]: inherits (PAO 0x5a0Aae59... from genesis)
-  - unichain [executed (different path)]: DIFFERENT: own 3-of-3 PAO 0x6d5B183F... (chain governor + Foundation + Security Council) until 2026-09-14 (MAINT-UNI-PAO)
+  - unichain [n/a (own 3-of-3 authority until MAINT-UNI-PAO)]: DIFFERENT: own 3-of-3 PAO 0x6d5B183F... (chain governor + Foundation + Security Council) until 2026-09-14 (MAINT-UNI-PAO)
 - **Chain set**:
   - op-mainnet
 - **Changed L1 contracts**:
@@ -667,9 +667,9 @@ Edges other than the OP Mainnet chronological sequence:
 - **Release**: tag `op-contracts/v1.8.0`, commit `2073f4059bd806af3e8b76b820aa3fa0b42016d0`. Annotated tag created 2025-01-10 (after activation) on the rc.4 commit of 2024-12-16. There is no v1.7.0 release (only 'v.1.7.0-beta.1+l2-contracts', a typo-named L2-genesis tag) and v1.9.0 exists only as rc.1..rc.3. Released contracts: MIPS 1.2.1, FaultDisputeGame/PermissionedDisputeGame 1.3.1, SystemConfig 2.3.0; everything else in the tree is beta and was not deployed.
 - **Execution**:
   - op-mainnet [executed]: DelayedWETH gen3 proxies created (0x323dFC63... permissionless, 0x21429aF6... permissioned; implementation 1.1.0) — L1 block 21379267-21379272, 2024-12-11 12:29..12:30, tx 0x70859ae1..., 0x6b9ad25c..., 0xdf99e2d8..., 0x01fcf030...<br>021: ProtocolVersions 9.0.0 — L1 block 21573148, 2025-01-07 14:20:11, tx 0x0c3cf835020aabd0d584a4f64f3f463edb9953c39504a1bf2f108024c327eb14<br>022: gameImpls(0) -> 0x27B81db4..., gameImpls(1) -> 0x91a66189... (1.3.1, prestate 0x03f89406..., MIPS 1.2.1 0x5fE03a12...) — L1 block 21580854, 2025-01-08 16:08:47, tx 0x22ab07b0bb1bc8504256835d555307ff522b78651dca33c9cd5b05591ca5b4f7<br>Holocene activation, L2 timestamp 1736445601 (OP Mainnet L2 block 130423412) — L1 block None, 2025-01-09 18:00:01, tx None<br>028: SystemConfig 2.2.0 -> 2.3.0 on op/metal/mode/zora/arena-z, FIFTEEN DAYS AFTER activation: ProxyAdmin.upgrade(StorageSetter) -> setBytes32(0,0) -> upgradeAndCall(initialize) — L1 block 21695024, 2025-01-24 14:41:35, tx 0x86da7386a26978c3db89e97c1f4feee613a8a0c07bbe4640624b05276f49c350
-  - ink [executed (different path)]: DIFFERENT: Holocene activated 2025-03-19 15:00:00 (holocene_time 1742396400). The SystemConfig 2.3.0 step was NEVER executed (2.2.0 -> 2.4.0 at U13). The Holocene game implementations came with the Pectra prestate in one task (ink-003, 2025-03-17, L1 block 22069032).
-  - soneium [executed (different path)]: DIFFERENT: Holocene activated 2025-02-03 09:00:00 (1738573200); SystemConfig 2.3.0 on 2025-02-28 (L1 block 21945575, task 030); permissioned game kept its genesis implementation until U13
-  - unichain [see text]: Holocene at the superchain time; SystemConfig 2.3.0 only on 2025-03-19 (L1 block 22081789, task unichain-001), ten weeks after activation
+  - ink [partial: hardfork 2025-03-19, SystemConfig 2.3.0 step SKIPPED]: DIFFERENT: Holocene activated 2025-03-19 15:00:00 (holocene_time 1742396400). The SystemConfig 2.3.0 step was NEVER executed (2.2.0 -> 2.4.0 at U13). The Holocene game implementations came with the Pectra prestate in one task (ink-003, 2025-03-17, L1 block 22069032).
+  - soneium [executed (hardfork 2025-02-03; SystemConfig task 030, 2025-02-28)]: DIFFERENT: Holocene activated 2025-02-03 09:00:00 (1738573200); SystemConfig 2.3.0 on 2025-02-28 (L1 block 21945575, task 030); permissioned game kept its genesis implementation until U13
+  - unichain [executed (SystemConfig unichain-001, 2025-03-19)]: Holocene at the superchain time; SystemConfig 2.3.0 only on 2025-03-19 (L1 block 22081789, task unichain-001), ten weeks after activation
 - **Chain set**:
   - op-mainnet, metal, mode, zora, arena-z (task 028); base (029); soneium (030); unichain (unichain-001)
 - **Changed L1 contracts**:
@@ -691,6 +691,7 @@ Edges other than the OP Mainnet chronological sequence:
   - none
 - **Skipped / alternate paths**:
   - Per-chain divergence: Ink skipped the SystemConfig re-initialization entirely; Soneium, Unichain and OP Mainnet ran it 15 to 70 days after their Holocene activation.
+  - [resume] Ink SystemConfig storage scalars were 0/0 from U13 (2025-04-02) until 2025-07-15 (block 22924007, owner setGasConfig), because the Holocene re-initialisation that populates them never ran on Ink (cast calls in workers/F2-report.md)
 - **Implementation changes (on-chain, EIP-1967 / AddressManager)**:
   - op-mainnet: SystemConfig 2.2.0 -> 2.3.0 (`0xab9d6cb7`, blk 21695024); DelayedWETH gen3 permissionless (Holocene..U15a) ∅ -> ∅ (`0x00000000`, blk 21379271); DelayedWETH gen3 permissionless (Holocene..U15a) ∅ -> 1.1.0 (`0x71e966ae`, blk 21379272); DelayedWETH gen3 permissioned (Holocene..U15a) ∅ -> ∅ (`0x00000000`, blk 21379267); DelayedWETH gen3 permissioned (Holocene..U15a) ∅ -> 1.1.0 (`0x71e966ae`, blk 21379268)
   - soneium: SystemConfig 2.2.0 -> 2.3.0 (`0xab9d6cb7`, blk 21945575)
@@ -791,6 +792,7 @@ Edges other than the OP Mainnet chronological sequence:
   - soneium: type 1 `0x1661af71` v1.4.1 prestate `0x039facea` blk 22182531
   - unichain: type 0 `0xd2c3c6f4` v1.4.1 prestate `0x039facea` blk 22254924; type 1 `0x5fe2becc` v1.4.1 prestate `0x039facea` blk 22254924
 - **Audit index rows (title / audited commit / tags at that commit / 'Subsequent Release')**:
+  - 2024-12 MiloTruck (independent) — DeputyPauseModule / `2f17e6b67c61de5d8073d556272796d201bc740b` / no op-contracts tag / —
   - 2024-12 Radiant Labs — DeputyPauseModule / `2f17e6b67c61de5d8073d556272796d201bc740b` / no op-contracts tag / —
   - 2025-01 Offbeat Labs — Incident Response Improvements / `984bae9146398a2997ec13757bfe2438ca8f92eb` / no op-contracts tag / —
   - 2025-02 Spearbit — Upgrade 13 / `7d6d15437b7580b022f4c8c1ea9c0cd8d2e587e1` / no op-contracts tag / op-contracts/v2.0.0
@@ -908,7 +910,8 @@ Edges other than the OP Mainnet chronological sequence:
   - op-mainnet: type 0 `0x89d68b1d` v1.4.1 prestate `0x03682932` blk 22432368; type 1 `0xa1e0bacd` v1.4.1 prestate `0x03682932` blk 22432368
   - ink: type 0 `0x3ccf7c31` v1.4.1 prestate `0x03682932` blk 22432368; type 1 `0x40641a40` v1.4.1 prestate `0x03682932` blk 22432368
   - unichain: type 0 `0x57a3b426` v1.4.1 prestate `0x03682932` blk 22432925; type 1 `0x485272c0` v1.4.1 prestate `0x03682932` blk 22432925
-- **Audits**: 2025-04 Aleph_v (independent) — op-program and op-challenger blob preimage handling
+- **Audit index rows (title / audited commit / tags at that commit / 'Subsequent Release')**:
+  - 2025-04 Aleph_v (independent) — op-program and op-challenger blob preimage handling / `08d81d98237a3077fbc13fcd4b70f2e8d2e14115` / no op-contracts tag / op-program/v1.6.0
 - **Evidence**: CALL(op|ink|soneium|unichain) dgf.gameImpls; GAMES(*); OPS 009, 010; GOV 9869
 
 ### U16 — Upgrade 16 — Interop contracts, Stage 1, Go 1.23 in Cannon
@@ -972,6 +975,7 @@ Edges other than the OP Mainnet chronological sequence:
 - **Audit index rows (title / audited commit / tags at that commit / 'Subsequent Release')**:
   - 2025-03 Spearbit — Interop Contracts / `6c80f23ab3074b5c66ff06e390ae2448bd4d2240` / no op-contracts tag / —
   - 2025-03 Wonderland — Interop Portal Contracts (u16) / `9df1fc15d0bf0dc9464db249ce06424607d5f399` / no op-contracts tag / op-contracts/v4.0.0
+  - 2025-04 Cantina (contest) — Interop Portal Contracts (u16) / `e4b921c9dbf8cd3a8db20ef4f15e0e2aa495fcc3` / no op-contracts tag / op-contracts/v4.0.0
   - 2025-05 Spearbit — Interop Portal Contracts (u16) / `7cd84fed9554193c2dcd683e1ff2d0e2605448f6` / op-contracts/v4.0.0-rc.2 / op-contracts/v4.0.0
   - 2025-05 Spearbit — Upgrade 16 / `54c19f6acb7a6d3505f884bae601733d3d54a3a6` / op-contracts/v4.0.0, op-contracts/v4.0.0-rc.8 / op-contracts/v4.0.0
   - 2025-05 Coinbase Protocol Security — Cannon updates to support Go 1.23 and Kona / `4c68444bc9b130e892b52cacf67b31f0424fb6d0` / no op-contracts tag / —
@@ -1237,7 +1241,7 @@ Edges other than the OP Mainnet chronological sequence:
 - **Release**: tag `None`, commit `None`. No release.
 - **Execution**:
   - op-mainnet [n/a]: not affected (see the 'other maintenance' list in RELEASE-DAG.md section 9 for OP Mainnet gas-limit and proposer changes)
-  - ink [executed]: 065: Ink SystemConfig owner -> Foundation Upgrade Safe — L1 block 25834840, 2026-08-25 21:15:59, tx 0xbf75cc41981ecb8481f3b114697310490b72f96c74fcc34e33b57433b6d9e756
+  - ink [executed (SystemConfig owner only)]: 065: Ink SystemConfig owner -> Foundation Upgrade Safe — L1 block 25834840, 2026-08-25 21:15:59, tx 0xbf75cc41981ecb8481f3b114697310490b72f96c74fcc34e33b57433b6d9e756
   - soneium [n/a]: not affected (SystemConfig owner is still 0x509182eC... at block 26433900)
   - unichain [executed]: 069: ProxyAdmin 0x3B73Fa8d... and DisputeGameFactory owner 0x6d5B183F... (3-of-3) -> 0x5a0Aae59... — L1 block 25976344, 2026-09-14 14:37:59, tx 0xfca98b14ae7163d444cd17285c7f97e1fb76db00cd971bae847a8af5f8ecb77f<br>070: L2 ProxyAdmin owner -> 0x6B1BAE59... (alias of 0x5a0Aae59...) by a deposit through Unichain's portal — L1 block 25976818, 2026-09-14 16:13:35, tx 0x53c072f1be2e42d2089aa76b6f769a378a3d12200a4d7b7c11606df2c7e0a8e2
 - **Chain set**:
@@ -1480,6 +1484,8 @@ Edges other than the OP Mainnet chronological sequence:
 | OptimismMintableERC721Factory | 1.2.0 (105235063/U1) → 1.5.1 (153963812/U19) |
 | ProxyAdmin | ∅ (105235063/U1) → 1.0.0 (153963812/U19) |
 | SchemaRegistry | ∅ (105235063/U1) → 1.0.1 (107448378) → 1.3.1-beta.2 (153963812/U19) |
+| EAS | ∅ (105235063/U1) → 1.0.1 (107448378) → 1.4.1-beta.3 (153963812/U19) |
+| CrossL2Inbox | ∅ (105235063/U1) |
 
 ## 6. Dispute-game implementations and absolute prestates
 
@@ -1608,7 +1614,7 @@ No invalidation after U16 (U16a, U17-U21 state none; U19/U20 respected-type swit
 - **L06 ETH custody** — create: U1 (portal holds ETH) / genesis for the other chains; transform: U16 (100% moved portal -> ETHLockbox in the upgrade tx; balances verified); consume: U16a (SystemConfig ETH_LOCKBOX feature flag set because a lockbox already exists) and U21 (ETHLockbox 2.0.0; OPContractsManagerV2.migrate prepared but not executed). Chains: all four (chains that skipped U16 get no lockbox until later). Evidence: U16, U16a, U21 nodes; cast balance reads
 - **L07 DelayedWETH generations (bond custody per game)** — create: U7 gen1 0xE497B094... (1.0.0, shared, owned); transform: U10 gen2, U11 gen3 (new proxies; gen1/gen2 left at old implementations, still hold credit for their games); U13 gen3 upgraded in place to 1.3.0 and owner -> PAO; consume: U16 gen4 (ownerless), U16a gen5, U19 one shared proxy 0x1b6dbf05... for all types, U21 DelayedWETH 2.0.0 — old generations are residue that old games still withdraw from. Chains: op-mainnet (Ink/Unichain have their own generations from CHAIN-FP-ENABLE). Evidence: evidence/F2-impl-history-op-mainnet-legacy-dispute-proxies.json; GAMES(*) weth column
 - **L08 SystemConfig address slots incl. batchInbox** — create: U6 (immutables moved to storage); transform: U19 (batchInbox recomputed for pre-OPCM chains); consume: U20 (legacy batchInbox slot cleared, batchInbox() removed; overhead zeroed). Chains: op-mainnet (pre-OPCM chain). Evidence: U6, U19, U20 nodes
-- **L09 SystemConfig fee scalars (basefeeScalar/blobbasefeeScalar)** — create: U5 (Ecotone versioned `scalar` encoding); transform: U11 (2.3.0 re-initialize populates the packed scalars; OP Mainnet 5227/1014213) — SKIPPED on Ink (2.2.0 -> 2.4.0 at U13); consume: U14 (operator fee), U17 (minBaseFee/daFootprintGasScalar packed), consumed by op-node/L1Block derivation. Chains: all; Ink path differs. Evidence: U11 node; IMPL(ink) SystemConfig. Whether Ink's packed scalars were ever initialised is NOT established here (F4 storage read)
+- **L09 SystemConfig fee scalars (basefeeScalar/blobbasefeeScalar)** — create: U5 (Ecotone versioned `scalar` encoding); transform: U11 (2.3.0 re-initialize populates the packed scalars; OP Mainnet 5227/1014213) — SKIPPED on Ink (2.2.0 -> 2.4.0 at U13); consume: U14 (operator fee), U17 (minBaseFee/daFootprintGasScalar packed), consumed by op-node/L1Block derivation. Chains: all; Ink path differs. Evidence: U11 node; IMPL(ink) SystemConfig. RESOLVED on resume (cast call, Ink SystemConfig 0x62C0a111...): 2.2.0 has no basefeeScalar() (reverts) @22182530; at U13 (22182531, 2.4.0) basefeeScalar = blobbasefeeScalar = 0 while scalar() = 801949 (version-0 encoding); first non-zero values 4424 / 810831 at block 22924007 (2025-07-15 10:32:47, tx 0x2ee77024..., ConfigUpdate GAS_CONFIG by Ink's SystemConfig owner) — 104 days at zero, healed 9 days before U16
 - **L10 DGF gameArgs (creator-pattern per-chain parameters: prestate | vm | asr | weth | l2ChainId [| proposer | challenger])** — create: U18; transform: U19 (type 1 re-registered with placeholder prestate 0xdead0000...; type 8 prestate rotated) and single-chain proposer rotations (Arena-Z 048, Ink 061, Unichain 078); consume: U20 (types 1/8 cleared; type 5 gameArgs = asr | proposer) and U21 (OP Mainnet gameArgs(5) proposer rotated, type 9 prestate rotated). Chains: all four. Evidence: ARGS(*), GAMES(*)
 - **L11 SuperchainConfig pause / guardian authority** — create: U4 (global pause, guardian 0x9BA6e03D...); transform: U8 (guardian -> Guardian Safe 0x09f7150D..., DeputyGuardianModule), U13 (DeputyPauseModule; mainnet pause test 2025-05-14); consume: U16 (per-identifier pause with expiry, read via SystemConfig; DGM removed) and U21 (lockbox is the only chain-scoped pause identifier). Chains: shared object 0x95703e09... for all four. Evidence: evidence/F2-superchainconfig-logs.json; U4, U8, U13, U16, U21
 - **L12 OP Mainnet L2 bridge predeploys (L2ToL1MessagePasser, L2CrossDomainMessenger, L2StandardBridge) storage** — create: U1 (Bedrock genesis implementations 1.0.0 / 1.4.0 / 1.1.0 incl. migrated legacy storage); transform: U15 (Isthmus: header withdrawalsRoot = message-passer storage root, read by output roots; no code change); consume: U19 (Karst L2CM: first implementation change in three years, 1.0.0 -> 1.2.0 / 1.4.0 -> 2.2.1 / 1.1.0 -> 1.13.2) and U20 super roots built from those output roots. Chains: op-mainnet (Ink/Soneium/Unichain L2 histories not read: no local L2 proxy). Evidence: evidence/F2-impl-history-op-mainnet-L2-predeploys.json
@@ -1649,6 +1655,6 @@ Superchain-ops executions that change configuration of the four chains but are n
 - Diffs between audited commits and released commits were not computed (shallow clone; would need one fetch per commit).
 - L2 predeploy histories were read for OP Mainnet only; Ink/Soneium/Unichain L2 state has no local archive proxy and was not read.
 - Canyon/Delta/Ecotone/Fjord/Granite/Holocene/Isthmus/Jovian/Karst activation L2 block numbers are computed from timestamps (2 s blocks) except where the L2 predeploy history shows the activation block.
-- Slot-level layouts (exact slots of legacy mappings, `_initialized` offsets, Ink's scalar slots after skipping Holocene's SystemConfig re-init) are F4's job and are not asserted here beyond the cited Validation.md values.
+- Slot-level layouts (exact slots of legacy mappings, `_initialized` offsets) are F4's job and are not asserted here beyond the cited Validation.md values.
 - Governance forum text and notices were read by the previous F2 instance (fetched 2026-11-17) and not re-fetched on resume; proposal numbers/titles are as it recorded them.
 - Base and the non-hunt chains are mentioned only where they create alternate paths; their histories were not read.

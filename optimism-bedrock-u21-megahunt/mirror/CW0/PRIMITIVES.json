@@ -1162,7 +1162,7 @@
     "title": "DGF configuration updates bifurcate old and new game prestates",
     "family": "dispute-game",
     "EARLIEST_SEMANTIC_ANCESTOR": "implementation mapping first: v1.0.0:contracts/dispute/DisputeGameFactory.sol:30-37,78-162; dynamic gameArgs first: v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292; current dual layout: v9.0.0:src/dispute/DisputeGameFactory.sol:147-225,312-318",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/dispute/DisputeGameFactory.sol:147-245,302-329 and v9.0.0:src/dispute/AnchorStateRegistry.sol:227-352",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/dispute/DisputeGameFactory.sol:147-245,302-328 and v9.0.0:src/dispute/AnchorStateRegistry.sol:227-352",
     "PERSISTENT_STATE_OR_OBJECT": "old and new immutable game clones sharing a UUID schema but embedding different implementation arguments/prestates",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 factory clone \u2014 v1.0.0:contracts/dispute/DisputeGameFactory.sol:78-162",
@@ -1276,7 +1276,7 @@
     "title": "dynamic gameArgs payload mutation behind a stable mapping head",
     "family": "dispute-game",
     "EARLIEST_SEMANTIC_ANCESTOR": "implementation mapping first: v1.0.0:contracts/dispute/DisputeGameFactory.sol:30-37,78-162; dynamic gameArgs first: v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292; current dual layout: v9.0.0:src/dispute/DisputeGameFactory.sol:147-225,312-318",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/dispute/DisputeGameFactory.sol:147-245,302-329 and v9.0.0:src/dispute/AnchorStateRegistry.sol:227-352",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/dispute/DisputeGameFactory.sol:147-245,302-328 and v9.0.0:src/dispute/AnchorStateRegistry.sol:227-352",
     "PERSISTENT_STATE_OR_OBJECT": "old and new immutable game clones sharing a UUID schema but embedding different implementation arguments/prestates",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 factory clone \u2014 v1.0.0:contracts/dispute/DisputeGameFactory.sol:78-162",

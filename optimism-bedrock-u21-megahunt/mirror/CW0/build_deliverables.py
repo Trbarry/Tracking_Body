@@ -399,7 +399,7 @@ override(
 override(
     "2103 2204",
     "implementation mapping first: v1.0.0:contracts/dispute/DisputeGameFactory.sol:30-37,78-162; dynamic gameArgs first: v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292; current dual layout: v9.0.0:src/dispute/DisputeGameFactory.sol:147-225,312-318",
-    "v9.0.0:src/dispute/DisputeGameFactory.sol:147-245,302-329 and src/dispute/AnchorStateRegistry.sol:227-352",
+    "v9.0.0:src/dispute/DisputeGameFactory.sol:147-245,302-328 and src/dispute/AnchorStateRegistry.sol:227-352",
     "old and new immutable game clones sharing a UUID schema but embedding different implementation arguments/prestates",
 )
 override(
@@ -976,7 +976,7 @@ def build_lineage() -> list[dict]:
           ["L8 sticky retired lockbox authorization; L9 per-chain liability before pooling; later PA ownership divergence after authorization."]),
 
         R("ProxyAdmin", "proxy type/name mappings; upgrade; upgradeAndCall",
-          "v1.0.0:contracts/universal/ProxyAdmin.sol:40-70,211-260",
+          "v1.0.0:contracts/universal/ProxyAdmin.sol:40-70,211-254",
           "Owner chooses proxy adapter (ERC1967/chugsplash/resolved) and performs implementation upgrades or upgrade+call.",
           "Only current owner can mutate implementation; adapter-specific routing reaches the intended proxy.",
           ["v4.0.0:src/universal/ProxyAdmin.sol:120-194 — proxy adapter support refactored without changing owner gate.",

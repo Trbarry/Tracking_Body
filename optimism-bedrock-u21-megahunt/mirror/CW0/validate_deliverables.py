@@ -76,6 +76,7 @@ for required in ["OptimismPortal", "CrossDomainMessenger", "SafeCall", "Standard
 
 # Resolve every explicitly tag-qualified Solidity citation and verify that its line exists.
 texts = [(OUT / name).read_text() for name in ["PRIMITIVES.json", "SEMANTIC-LINEAGE.json", "SEMANTIC-LINEAGE.md"]]
+texts.append(Path("/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CW0-report.md").read_text())
 refs = set()
 for text in texts:
     bare = re.findall(r"(?<![:\w/])(?:contracts|src)/[^` ;|]+?\.sol:\d+", text)

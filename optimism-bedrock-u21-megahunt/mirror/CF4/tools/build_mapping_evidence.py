@@ -180,7 +180,14 @@ def main() -> None:
 
     relayed = buckets["L1CrossDomainMessenger:RelayedMessage"]
     failed = buckets["L1CrossDomainMessenger:FailedRelayedMessage"]
-    messenger_logs = [relayed["first"][0], relayed["pre_bedrock_last"][-1], relayed["post_bedrock_first"][0], failed["first"][0]]
+    messenger_logs = [
+        relayed["first"][0],
+        relayed["pre_bedrock_last"][-1],
+        relayed["post_bedrock_first"][0],
+        failed["first"][0],
+        failed["post_bedrock_first"][0],
+        failed["last"][-1],
+    ]
 
     old_deposits = buckets["L1StandardBridge:ERC20DepositInitiated"]["pre_bedrock_last"]
     new_deposits = buckets["L1StandardBridge:ERC20BridgeInitiated"]["post_bedrock_first"]

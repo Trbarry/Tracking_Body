@@ -586,7 +586,7 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 
 ### ProxyAdmin — `proxy type/name mappings; upgrade; upgradeAndCall`
 
-- **FIRST_INTRODUCED:** v1.0.0:contracts/universal/ProxyAdmin.sol:40-70,211-260
+- **FIRST_INTRODUCED:** v1.0.0:contracts/universal/ProxyAdmin.sol:40-70,211-254
 - **ORIGINAL_MEANING:** Owner chooses proxy adapter (ERC1967/chugsplash/resolved) and performs implementation upgrades or upgrade+call.
 - **ORIGINAL_INVARIANT:** Only current owner can mutate implementation; adapter-specific routing reaches the intended proxy.
 - **ALL_SEMANTIC_CHANGES:**

@@ -51,3 +51,11 @@ W0 status update (appended 2026-11-17, rows above are not edited):
 - BW0-01 -> DONE for OP / Ink / Unichain / Soneium: complete `ImplementationSet`/`ImplementationArgsSet` history of the four factories (250 logs, L1 blocks 19,800,000..26,433,900, `evidence/W0/dgf-implementation-registry-binding.json`) shows 0 implementations bound to a superseded registry active at or after the current registry's retirement; mechanism reproduced in `test/W0/W0Lineage.t.sol`. Reopen after any future registry replacement.
 - BW0-05 -> DONE for the four chains: the first `ImplementationArgsSet` on each factory is the FaultDisputeGame 2.2.0 registration (L1 blocks 24421512 / 24421512 / 24427874 / 24478557), already the v6.0.0 clone layout; types 2, 3, 6, 7, 254, 255, 1337 never had an implementation.
 - Input for B04 / B13 (not a new row): every chain has three registry generations behind one factory, and the per-chain implementation-set transactions are listed with block and timestamp in the same evidence file (Ink has an extra type-1 re-registration at block 25674914, Unichain an extra type-5 one at 26299517, Soneium never registered types 0/8/9).
+
+F4 status update (appended 2026-11-17, rows above are not edited; Opus 5.5 run, see `workers/F4-report.md`):
+- B01 -> DONE (storage): 12,338 legacy slot-52 entries live on OP Mainnet (3,281 never finalized), unreachable by v9 (fork test `test/poc/F4/F4_LegacyStorage.t.sol`, `rejected/REJ-F4-01.md`, `REJ-F4-02.md`); Ink / Soneium / Unichain born on OptimismPortal2 3.10.0.
+- B08 -> DONE for OP Mainnet + portal birth on the three others: `STORAGE-ARCHAEOLOGY.md` §7, `REJ-F4-05.md`.
+- B07 -> DONE (storage): §3.0 rows c, d, o, s, v, w; §4.
+- B06 -> storage facts only (§4.1, §4.6, `REJ-F4-06.md`); pause-identifier semantics stay with the pause owner.
+- B02 / B10 -> storage side done (slots unchanged at every tag, 88/88 sampled hashes); entry-level full scan still open.
+- New: PRIM-F4-01 (U20 ASR anchor unit change; Unichain / Soneium census open), PRIM-F4-02, PRIM-F4-03.

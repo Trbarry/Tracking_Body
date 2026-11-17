@@ -53,6 +53,15 @@ CHAIN_LOCAL = [
          note="Both chains used chain-specific absolute prestates (registry names '1.3.1-ink', '1.4.0-unichain-mainnet', validation/standard/standard-prestates.toml lines 292-294 and 264-266 at superchain-registry edd89bd1) until U12/U13 brought them onto the shared prestate 0x039facea..."),
 ]
 
+STATUS_OVERRIDE = {
+    ("SC-PHASE-0", "unichain"): "n/a (own 3-of-3 authority until MAINT-UNI-PAO)",
+    ("U11", "ink"): "partial: hardfork 2025-03-19, SystemConfig 2.3.0 step SKIPPED",
+    ("U11", "soneium"): "executed (hardfork 2025-02-03; SystemConfig task 030, 2025-02-28)",
+    ("U11", "unichain"): "executed (SystemConfig unichain-001, 2025-03-19)",
+    ("MAINT-UNI-PAO", "ink"): "executed (SystemConfig owner only)",
+}
+KEY_EXEC = {"U3": [1], "U4": [1], "U5": [2], "U7": [1], "U8": [1, 2], "U9": [1], "U10": [2, 4], "U11": [2, 4]}
+
 # ------------------------------------------------------------------ facts added on resume (each read on chain this session)
 SUPPLEMENT = {
     "U16": dict(storage_headline=[
@@ -68,6 +77,7 @@ SUPPLEMENT = {
         "superchain-ops 083-op-mainnet-proposer-rotation, 082-op-mainnet-set-batcher and 089-op-mainnet-set-unsafe-signer are CANCELLED; the OP Mainnet proposer rotation was folded into the U21 transaction (gameArgs(5))"]),
     "U8": dict(skipped_alternate=[
         "The SuperchainConfig implementation swap (impl -> StorageSetter -> same impl) happened inside one transaction, so the EIP-1967 sampled history shows no change at 20063224; it is visible only in evidence/F2-superchainconfig-logs.json (Upgraded + Initialized events)"]),
+    "U11": dict(skipped_alternate=["Ink SystemConfig storage scalars were 0/0 from U13 (2025-04-02) until 2025-07-15 (block 22924007, owner setGasConfig), because the Holocene re-initialisation that populates them never ran on Ink (cast calls in workers/F2-report.md)"]),
     "U12": dict(dispute=["Ink reached 0x039facea... from its chain-specific '1.3.1-ink' prestate 0x03c50b9f... in one task (ink-003), skipping the Holocene prestate 0x03f89406... that OP Mainnet used"]),
     "U13": dict(dispute=["Unichain moves from its chain-specific prestate 0x0336751a... ('1.4.0-unichain-mainnet') to 0x039facea... at its own task 002 (block 22254924)"]),
 }
@@ -76,7 +86,7 @@ SUPPLEMENT = {
 def resolve_audits(node, index, tagmap):
     out = []
     for s in node.get("audits") or []:
-        for m in re.finditer(r"(\d{4}-\d{2}) ([^—;()]+?) — ", s):
+        for m in re.finditer(r"(\d{4}-\d{2}) ([^—;]+?) — ", s):
             date, rev = m.group(1), m.group(2).strip()
             cand = [r for r in index if r["date"] == date and r["reviewer"].split()[0].lower() == rev.split()[0].lower()]
             if not cand:
@@ -144,7 +154,7 @@ def main():
         n["audits_index"] = resolve_audits(n, index, tagmap)
         n["impl_changes"] = {c: [] for c in CHAINS}
         n["game_impls"] = {c: [] for c in CHAINS}
-        n["exec_status"] = {c: exec_status((n.get("execution") or {}).get(c)) for c in CHAINS}
+        n["exec_status"] = {c: STATUS_OVERRIDE.get((n["id"], c)) or exec_status((n.get("execution") or {}).get(c)) for c in CHAINS}
 
     # implementation histories
     files = {"op-mainnet": ["F2-impl-history-op-mainnet.json", "F2-impl-history-op-mainnet-legacy-dispute-proxies.json"],
@@ -219,7 +229,7 @@ def main():
             if x["node"] == "CHAIN-FP-ENABLE":
                 return (21618223, 0)
             return (x["first_l1_block"] or 0, order[x["node"]]) if x["first_l1_block"] else (0, order[x["node"]])
-        paths[c] = sorted(seq, key=lambda x: (order[x["node"]] if x["node"] not in ("GENESIS", "CHAIN-FP-ENABLE") else (10.5 if x["node"] == "GENESIS" else 15.5)))
+        paths[c] = sorted(seq, key=lambda x: (order[x["node"]] if x["node"] not in ("GENESIS", "CHAIN-FP-ENABLE") else (14.5 if x["node"] == "GENESIS" else 15.5)))
 
     edges = []
     main_ids = [n["id"] for n in sorted(D.NODES, key=lambda n: n["order"])]
@@ -286,7 +296,7 @@ LINEAGE = [
     dict(id="L09", object="SystemConfig fee scalars (basefeeScalar/blobbasefeeScalar)",
          create="U5 (Ecotone versioned `scalar` encoding)", transform="U11 (2.3.0 re-initialize populates the packed scalars; OP Mainnet 5227/1014213) — SKIPPED on Ink (2.2.0 -> 2.4.0 at U13)",
          consume="U14 (operator fee), U17 (minBaseFee/daFootprintGasScalar packed), consumed by op-node/L1Block derivation",
-         chains="all; Ink path differs", evidence="U11 node; IMPL(ink) SystemConfig. Whether Ink's packed scalars were ever initialised is NOT established here (F4 storage read)"),
+         chains="all; Ink path differs", evidence="U11 node; IMPL(ink) SystemConfig. RESOLVED on resume (cast call, Ink SystemConfig 0x62C0a111...): 2.2.0 has no basefeeScalar() (reverts) @22182530; at U13 (22182531, 2.4.0) basefeeScalar = blobbasefeeScalar = 0 while scalar() = 801949 (version-0 encoding); first non-zero values 4424 / 810831 at block 22924007 (2025-07-15 10:32:47, tx 0x2ee77024..., ConfigUpdate GAS_CONFIG by Ink's SystemConfig owner) — 104 days at zero, healed 9 days before U16"),
     dict(id="L10", object="DGF gameArgs (creator-pattern per-chain parameters: prestate | vm | asr | weth | l2ChainId [| proposer | challenger])",
          create="U18", transform="U19 (type 1 re-registered with placeholder prestate 0xdead0000...; type 8 prestate rotated) and single-chain proposer rotations (Arena-Z 048, Ink 061, Unichain 078)",
          consume="U20 (types 1/8 cleared; type 5 gameArgs = asr | proposer) and U21 (OP Mainnet gameArgs(5) proposer rotated, type 9 prestate rotated)",
@@ -309,13 +319,16 @@ def fmt_exec(x):
     return str(x)
 
 
-def short_exec(x):
+def short_exec(x, nid=None):
     if isinstance(x, list):
-        e = first_exec(x) or x[0]
-        t = e.get("tx") or "-"
-        if isinstance(t, str) and len(t) > 14 and " " not in t:
-            t = t[:12] + "…"
-        return f"{e.get('block')} ({(e.get('utc') or '')[:10]}) {t}"
+        parts = []
+        for i in KEY_EXEC.get(nid, [0]):
+            e = x[i]
+            t = e.get("tx") or "-"
+            if isinstance(t, str) and len(t) > 14 and " " not in t:
+                t = t[:12] + "…"
+            parts.append(f"{e.get('block')} ({(e.get('utc') or '')[:10]}) {t}")
+        return "<br>".join(parts) + (f" (+{len(x) - len(parts)} more)" if len(x) > len(parts) else "")
     s = str(x)
     return s if len(s) < 70 else s[:67] + "…"
 
@@ -335,7 +348,7 @@ def render_md(o, byid):
         r = n.get("release") or {}
         tag = f"{r.get('tag') or '—'} @ `{(r.get('commit') or '—')[:12]}`" if r.get("tag") else ("— " + (f"(`{r.get('commit')[:12]}`)" if r.get("commit") else ""))
         ex = n.get("execution") or {}
-        w(f"| {n['order']} | **{n['id']}** {n['title'][:60]} | {(n.get('proposal') or {}).get('number') or '—'} | {n.get('classification','')[:40]} | {tag} | {short_exec(ex.get('op-mainnet'))} | "
+        w(f"| {n['order']} | **{n['id']}** {n['title'][:60]} | {(n.get('proposal') or {}).get('number') or '—'} | {n.get('classification','')[:40]} | {tag} | {short_exec(ex.get('op-mainnet'), n['id'])} | "
           f"{n['exec_status']['ink']} | {n['exec_status']['soneium']} | {n['exec_status']['unichain']} |")
     w("\nChain-local nodes (not on OP Mainnet): **GENESIS** (Ink 2024-12-06, Soneium 2024-12-02, Unichain 2024-11-04) and **CHAIN-FP-ENABLE** (Ink 2025-01-13/22, Unichain 2025-01-17/23). Details in section 4.\n")
 
@@ -352,7 +365,11 @@ def render_md(o, byid):
 
     w("## 3. Per-chain path\n")
     for c in CHAINS:
-        w(f"**{c}**: " + " -> ".join(f"{p['node']}" + ("" if p["status"].startswith("executed") else f" [{p['status']}]") for p in o["per_chain_paths"][c]) + "\n")
+        ps = o["per_chain_paths"][c]
+        inh = [p["node"] for p in ps if p["status"] == "genesis-inherited"]
+        rest = [p for p in ps if p["status"] != "genesis-inherited"]
+        head = (f"[inherited at genesis: {', '.join(inh)}] => ") if inh else ""
+        w(f"**{c}**: " + head + " -> ".join(f"{p['node']}" + ("" if p["status"].startswith("executed") else f" [{p['status']}]") for p in rest) + "\n")
 
     w("## 4. Nodes in detail\n")
     allnodes = sorted([n for n in o["nodes"] if n.get("order") is not None], key=lambda n: n["order"]) + [n for n in o["nodes"] if n.get("order") is None]
@@ -489,7 +506,7 @@ LIMITS = [
     "Diffs between audited commits and released commits were not computed (shallow clone; would need one fetch per commit).",
     "L2 predeploy histories were read for OP Mainnet only; Ink/Soneium/Unichain L2 state has no local archive proxy and was not read.",
     "Canyon/Delta/Ecotone/Fjord/Granite/Holocene/Isthmus/Jovian/Karst activation L2 block numbers are computed from timestamps (2 s blocks) except where the L2 predeploy history shows the activation block.",
-    "Slot-level layouts (exact slots of legacy mappings, `_initialized` offsets, Ink's scalar slots after skipping Holocene's SystemConfig re-init) are F4's job and are not asserted here beyond the cited Validation.md values.",
+    "Slot-level layouts (exact slots of legacy mappings, `_initialized` offsets) are F4's job and are not asserted here beyond the cited Validation.md values.",
     "Governance forum text and notices were read by the previous F2 instance (fetched 2026-11-17) and not re-fetched on resume; proposal numbers/titles are as it recorded them.",
     "Base and the non-hunt chains are mentioned only where they create alternate paths; their histories were not read.",
 ]
