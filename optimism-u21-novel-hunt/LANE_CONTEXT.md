@@ -276,3 +276,21 @@ LATER POST BLOCK   = 26433900               -> rpc alias `l1`     http://127.0.0
   permissionless action available today that becomes harmful when that documented migration runs
   is a legitimate, production-plausible composition (state the dependency on the planned action
   explicitly; it is not "operator misconfiguration").
+
+## 10. Addendum 3 (orchestrator) — scope facts from SCOPE_SNAPSHOT.md (Immunefi page read live, last updated 2026-10-13)
+
+- Smart Contract and Blockchain/DLT are Primacy of Impact (Critical/High/Medium). PoC required.
+- Listed OP Mainnet assets: OptimismPortal, SystemConfig, L1CrossDomainMessenger, DisputeGameFactory,
+  L1StandardBridge, L1ERC721Bridge, OptimismMintableERC20Factory, ProxyAdmin, AddressManager; a listed
+  proxy's implementation is in scope. Separately, the code and calldata of the latest Protocol
+  Upgrade Proposal are in scope (U21 qualifies, though the clause is worded for "in-flight" proposals).
+- NOT listed: ETHLockbox (any chain), the live AnchorStateRegistry and DelayedWETH (the listed
+  addresses are stale), SuperchainConfig, OPCM, game implementations, MIPS64, PreimageOracle.
+  Ink / Soneium / Unichain have no asset rows (named for impact assessment only). Base: no basis.
+- Dispute-game BONDS and fee vaults are carved out of every Critical/High funds impact: a
+  bond-only theft/freeze is at best Medium. Prioritise bridge-custody (lockbox/portal) ETH and
+  ERC20, withdrawal finalization, and protocol-wide withdrawal blocking.
+- A feature that is not in use (interop, `migrate`) drops the severity by one level; say so honestly.
+- Per the scope lane, DisputeGameFactory, L1StandardBridge, L1ERC721Bridge, OptimismMintableERC20Factory
+  and both registered game implementations are the SAME deployed implementation contracts as before
+  U21: a v8 -> v9 source diff in those files may not be live. Always confirm against deployed bytecode.
