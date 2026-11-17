@@ -19,3 +19,4 @@ ink-57073 DelayedWETH ok 6
 ink-57073 L1CrossDomainMessenger ok 20
 ink-57073 L1StandardBridge ok 9
 ink-57073 L1ERC721Bridge ok 7
+ink-57073 OptimismMintableERC20Factory ok 4

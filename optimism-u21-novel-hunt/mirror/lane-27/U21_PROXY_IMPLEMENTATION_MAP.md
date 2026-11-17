@@ -1,6 +1,6 @@
 # Lane 27 U21 proxy / game implementation map
 
-Independent reads at Ethereum blocks 26430858 (`l1pre`), 26430859 (`l1n`) and 26433900 (`l1`). Source pin: op-contracts v9.0.0, commit `ba6f...` from `LANE_CONTEXT.md`.
+Independent reads at Ethereum blocks 26430858 (`l1pre`), 26430859 (`l1n`) and 26433900 (`l1`). Source pin: op-contracts v9.0.0, commit `ba6fcadbc57eb99918c5b0f14f57c72527f531e3` from `LANE_CONTEXT.md`.
 
 ## OP Mainnet core
 
