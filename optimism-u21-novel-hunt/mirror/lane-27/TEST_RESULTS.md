@@ -8,8 +8,8 @@ Final complete run: `forge test -vv` — 4 suites, 8 tests passed, 0 failed, 0 s
 
 ```text
 $ forge test --match-path test/SuperRootPrimitives.t.sol -vvv
-[PASS] test_rootClaimBindsWholeSuperRootPreimage() (gas: 179862)
-[PASS] test_type5CreationIsNotPermissionless() (gas: 130013)
+[PASS] test_rootClaimBindsWholeSuperRootPreimage() (gas: 179865)
+[PASS] test_type5CreationIsNotPermissionless() (gas: 130016)
 [PASS] test_type9PermissionlessAndDuplicateChainIdsFirstWins() (gas: 613262)
 3 passed; 0 failed
 ```

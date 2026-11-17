@@ -233,6 +233,58 @@ def main() -> None:
         result["contracts"].append(out)
 
     getter_count = sum(len(c["getters"]) for c in result["contracts"])
+    chain_names = ["OP Mainnet", "Ink", "Soneium", "Unichain"]
+    authorization_matrices = {"authorizedPortals": [], "authorizedLockboxes": []}
+    for lock_chain in chain_names:
+        lockbox = by_chain[lock_chain]["ETHLockbox"]
+        for subject_chain in chain_names:
+            portal = by_chain[subject_chain]["OptimismPortal2"]
+            values = {
+                name: call(
+                    lockbox,
+                    "authorizedPortals(address)(bool)",
+                    endpoint,
+                    block,
+                    portal,
+                )
+                for name, (endpoint, block) in ENDPOINTS.items()
+            }
+            expected_value = "true" if lock_chain == subject_chain else "false"
+            status = "ok" if all(value == expected_value for value in values.values()) else "mismatch"
+            if status == "mismatch":
+                failures.append(f"{lock_chain}/ETHLockbox.authorizedPortals({subject_chain})")
+            authorization_matrices["authorizedPortals"].append({
+                "lockboxChain": lock_chain,
+                "portalChain": subject_chain,
+                "expected": expected_value,
+                **values,
+                "status": status,
+            })
+
+            subject_lockbox = by_chain[subject_chain]["ETHLockbox"]
+            lockbox_values = {
+                name: call(
+                    lockbox,
+                    "authorizedLockboxes(address)(bool)",
+                    endpoint,
+                    block,
+                    subject_lockbox,
+                )
+                for name, (endpoint, block) in ENDPOINTS.items()
+            }
+            lockbox_status = (
+                "ok" if all(value == "false" for value in lockbox_values.values()) else "mismatch"
+            )
+            if lockbox_status == "mismatch":
+                failures.append(f"{lock_chain}/ETHLockbox.authorizedLockboxes({subject_chain})")
+            authorization_matrices["authorizedLockboxes"].append({
+                "lockboxChain": lock_chain,
+                "subjectLockboxChain": subject_chain,
+                "expected": "false",
+                **lockbox_values,
+                "status": lockbox_status,
+            })
+    result["authorizationMatrices"] = authorization_matrices
     result["summary"] = {
         "contract_count": len(result["contracts"]),
         "getter_count": getter_count,

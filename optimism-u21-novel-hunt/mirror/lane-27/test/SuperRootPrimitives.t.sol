@@ -104,7 +104,7 @@ contract SuperRootPrimitivesTest is Test {
         uint256 bond = FACTORY.initBonds(9);
         _cacheEmptyFactoryUUID(9, keccak256(committed), supplied);
 
-        vm.expectRevert();
+        vm.expectRevert(bytes4(keccak256("BadExtraData()")));
         FACTORY.create{value: bond}(9, keccak256(committed), supplied);
     }
 
@@ -115,7 +115,7 @@ contract SuperRootPrimitivesTest is Test {
         );
         _cacheEmptyFactoryUUID(5, keccak256(extraData), extraData);
 
-        vm.expectRevert();
+        vm.expectRevert(bytes4(keccak256("BadAuth()")));
         FACTORY.create(5, keccak256(extraData), extraData);
 
         assertTrue(tx.origin != TYPE5_PROPOSER);

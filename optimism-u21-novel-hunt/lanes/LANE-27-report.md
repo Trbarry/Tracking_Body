@@ -10,6 +10,8 @@ The strongest reusable primitive is real but currently contained: a permissionle
 
 Five primitives and six precise rejections are recorded separately.
 
+Selected raw call/storage results are preserved in `mirror/lane-27/ONCHAIN_READS.md`.
+
 ## 1. Deployed game identities and configuration
 
 `GameTypes` names type 5 `SUPER_PERMISSIONED` and type 9 `SUPER_CANNON_KONA` (`packages/contracts-bedrock/src/dispute/lib/Types.sol:68-82`). At Ethereum block 26430859, OP's DGF `0xe5965Ab5962eDc7477C8520243A95517CD252fA9` had only these implementations:

@@ -102,9 +102,29 @@ contract MessengerGasBoundaryTest is RealWithdrawalBase {
     }
 
     function test_deterministic128PointSweep_noFinalizedNeither() public {
+        uint256 reverted;
+        uint256 finalizedRelayed;
+        uint256 finalizedFailed;
+        uint256 finalizedNeither;
         for (uint256 i; i < 128; ++i) {
             uint256 suppliedGas = 100_000 + uint256(keccak256(abi.encode(i))) % 1_900_001;
-            runWithGas(suppliedGas);
+            Outcome memory outcome = runWithGas(suppliedGas);
+            if (!outcome.callSucceeded) {
+                ++reverted;
+            } else if (outcome.relayed) {
+                ++finalizedRelayed;
+            } else if (outcome.failedMessage) {
+                ++finalizedFailed;
+            } else {
+                ++finalizedNeither;
+            }
         }
+
+        emit log_named_uint("classification: reverted", reverted);
+        emit log_named_uint("classification: finalized + relayed", finalizedRelayed);
+        emit log_named_uint("classification: finalized + failedMessages", finalizedFailed);
+        emit log_named_uint("classification: finalized + neither", finalizedNeither);
+        assertEq(reverted + finalizedRelayed + finalizedFailed + finalizedNeither, 128);
+        assertEq(finalizedNeither, 0, "SERIOUS: deterministic sweep found neither outcome");
     }
 }
