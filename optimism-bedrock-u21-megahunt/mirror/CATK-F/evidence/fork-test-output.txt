@@ -1,0 +1,16 @@
+Command:
+  cd /home/user/u21-work/codex-CATK-F/h
+  forge test -j 1 --match-path test/CATK_F_UnsafeTargets.t.sol -vv
+
+Pins:
+  L1 block 26433900 (local read-only fork endpoint configured as `l1`)
+  OP L2 block 159654093 (local read-only fork endpoint configured as `l2`)
+
+Result (2026-11-17 UTC):
+  CATKFL2ReachabilityTest: 2 passed, 0 failed, 0 skipped
+  CATKFUnsafeTargetsTest: 13 passed, 0 failed, 0 skipped
+  Total: 15 passed, 0 failed, 0 skipped
+
+The proven-withdrawal mapping writes are test-only `vm.store` vehicles on the ephemeral
+Forge fork. The suite never mutates a shared fork or public network.
+

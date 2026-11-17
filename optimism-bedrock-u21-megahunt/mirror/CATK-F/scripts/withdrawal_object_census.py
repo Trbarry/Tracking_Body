@@ -48,6 +48,32 @@ class RPC:
             raise RuntimeError(f"{method}: {obj['error']}")
         return obj["result"]
 
+    def batch(self, method, params_list):
+        if not params_list:
+            return []
+        payload = []
+        ids = []
+        for params in params_list:
+            self.ident += 1
+            self.calls += 1
+            ids.append(self.ident)
+            payload.append({"jsonrpc": "2.0", "id": self.ident, "method": method, "params": params})
+        req = urllib.request.Request(
+            self.url,
+            json.dumps(payload).encode(),
+            {"Content-Type": "application/json"},
+        )
+        with urllib.request.urlopen(req, timeout=120) as response:
+            objects = json.load(response)
+        by_id = {obj["id"]: obj for obj in objects}
+        results = []
+        for ident in ids:
+            obj = by_id[ident]
+            if "error" in obj:
+                raise RuntimeError(f"{method}: {obj['error']}")
+            results.append(obj["result"])
+        return results
+
     def block(self, number):
         if number not in self.block_cache:
             self.block_cache[number] = self.call("eth_getBlockByNumber", [hex(number), False])
@@ -229,26 +255,58 @@ def code_chronology(l1, l2, direct):
         first_by_target.setdefault(item["target"], item)
         if item["block"] < first_by_target[item["target"]]["block"]:
             first_by_target[item["target"]] = item
+    ordered = sorted(first_by_target.items())
+    l2_blocks = l2.batch("eth_getBlockByNumber", [[hex(item["block"]), False] for _, item in ordered])
+    states = []
+    for (target, item), l2_block in zip(ordered, l2_blocks):
+        states.append(
+            {
+                "target": target,
+                "item": item,
+                "timestamp": int(l2_block["timestamp"], 16),
+                "low": 0,
+                "high": L1_PIN,
+            }
+        )
+    rounds = 0
+    while any(state["low"] < state["high"] for state in states):
+        rounds += 1
+        mids = sorted({(state["low"] + state["high"]) // 2 for state in states if state["low"] < state["high"]})
+        blocks = l1.batch("eth_getBlockByNumber", [[hex(mid), False] for mid in mids])
+        timestamps = {mid: (None if block is None else int(block["timestamp"], 16)) for mid, block in zip(mids, blocks)}
+        for state in states:
+            if state["low"] >= state["high"]:
+                continue
+            middle = (state["low"] + state["high"]) // 2
+            block_timestamp = timestamps[middle]
+            if block_timestamp is None or block_timestamp < state["timestamp"]:
+                state["low"] = middle + 1
+            else:
+                state["high"] = middle
+    then_codes = l1.batch(
+        "eth_getCode", [[state["target"], hex(state["low"])] for state in states]
+    )
+    now_codes = l1.batch("eth_getCode", [[state["target"], hex(L1_PIN)] for state in states])
     rows = []
-    for index, (target, item) in enumerate(sorted(first_by_target.items()), 1):
-        l2_block = l2.block(item["block"])
-        timestamp = int(l2_block["timestamp"], 16)
-        l1_block = l1_block_at_or_after(l1, timestamp)
-        then_code = l1.call("eth_getCode", [target, hex(l1_block)])
-        now_code = l1.call("eth_getCode", [target, hex(L1_PIN)])
+    for state, then_code, now_code in zip(states, then_codes, now_codes):
+        target = state["target"]
+        item = state["item"]
+        timestamp = state["timestamp"]
+        l1_block = state["low"]
         rows.append(
             {
                 "target": target,
                 "first_l2_message_block": item["block"],
                 "first_l2_message_timestamp": timestamp,
                 "corresponding_l1_block": l1_block,
+                "surface": item.get("surface", "direct"),
                 "code_bytes_then": (len(then_code) - 2) // 2,
                 "code_bytes_at_pin": (len(now_code) - 2) // 2,
                 "became_code_later": then_code == "0x" and now_code != "0x",
+                "code_changed": then_code != now_code,
             }
         )
-        if index % 20 == 0:
-            print(f"code chronology {index}/{len(first_by_target)}", flush=True)
+    print(f"code chronology targets={len(states)} binary_search_rounds={rounds}", flush=True)
     return rows
 
 
@@ -294,6 +352,10 @@ def main():
     live_inner_system = []
     canonical_inner_system_total = 0
     canonical_inner_broad_total = 0
+    canonical_inner_records = []
+    effective_targets = [
+        {"target": item["target"], "block": item["block"], "surface": "direct"} for item in direct
+    ]
     for item in canonical:
         item["proven_on_l1"] = item["withdrawal_hash"] in proven
         item["finalized_on_l1"] = item["withdrawal_hash"] in finalized
@@ -307,6 +369,20 @@ def main():
             )
             continue
         inner_target_counts[relay["target"]] += 1
+        canonical_inner_records.append(
+            {
+                "withdrawal_hash": item["withdrawal_hash"],
+                "l2_block": item["block"],
+                "l2_transaction_hash": item["transaction_hash"],
+                "outer_sender": item["sender"],
+                "proven_on_l1": item["proven_on_l1"],
+                "finalized_on_l1": item["finalized_on_l1"],
+                "inner": relay,
+            }
+        )
+        effective_targets.append(
+            {"target": relay["target"], "block": item["block"], "surface": "messenger_inner"}
+        )
         curated_match = relay["target"] in curated
         broad_match = relay["target"] in broad
         canonical_inner_system_total += int(curated_match)
@@ -331,14 +407,19 @@ def main():
     if OUT.exists():
         try:
             cached = json.loads(OUT.read_text())["target_code_chronology"]["rows"]
-            if {item["target"] for item in cached} == {item["target"] for item in direct}:
+            if {item["target"] for item in cached} == {item["target"] for item in effective_targets}:
                 chronology = cached
                 print(f"reused {len(cached)} pinned target-code chronology rows", flush=True)
         except (KeyError, TypeError, json.JSONDecodeError):
             pass
     if chronology is None:
-        chronology = code_chronology(l1, l2, direct)
+        chronology = code_chronology(l1, l2, effective_targets)
     code_later = [item for item in chronology if item["became_code_later"]]
+    code_changed = [item for item in chronology if item["code_changed"]]
+    code_later_targets = {item["target"] for item in code_later}
+    code_later_messages = [
+        item for item in canonical_inner_records if item["inner"]["target"] in code_later_targets
+    ]
     result = {
         "method": {
             "safety": "read-only JSON-RPC only; explicit pinned blocks",
@@ -389,6 +470,9 @@ def main():
             "rows": chronology,
             "became_code_later_count": len(code_later),
             "became_code_later": code_later,
+            "messages_to_became_code_later_targets": code_later_messages,
+            "code_changed_count": len(code_changed),
+            "code_changed": code_changed,
         },
     }
     OUT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")

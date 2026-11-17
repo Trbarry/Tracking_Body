@@ -169,7 +169,7 @@ def measure(label, w, hi=None, do_replay=True, step=128):
     m = w.relay[4] if w.mh else 0
     base = (64 * w.g) // 63
     res = {"label": label, "gasLimit": w.g, "dataLen": L, "minGasLimit": m, "value": w.v, "target": w.t if not w.mh else w.relay[2]}
-    lo, hi1 = base, base + 60 * L + 600_000 + (183_600 if w.v else 0)
+    lo, hi1 = max(base, 60_000), base + 60 * L + 600_000 + (183_600 if w.v else 0)
     assert try_finalize(w, lo)[0] == 0, "lower bracket unexpectedly passes"
     g_nr = bsearch(lambda g: try_finalize(w, g)[0] != 0, lo, hi1, step)
     res["finalize_min_nonrevert"] = g_nr

@@ -69,7 +69,7 @@ for gl in [0, 16_200_000]:
         run(f"E4_plain_gl{gl}_{'pf' if pf else 'new'}", lambda gl=gl, pf=pf: plain(gl, pf))
 
 # E5: large calldata, m = 0, nonzero bytes (worst case for L1 calldata), live budget
-for L in [100_000, 250_000, 300_000, 350_000]:
+for L in [250_000, 320_000]:
     run(f"E5_L{L}", lambda L=L: measure(f"live budget, {L} B nonzero message, m=0", messenger_w(nxt(), EMPTY_TARGET, 0, 0, b"\xff" * L), hi=60_000_000))
 for L in [400_000]:
     run(f"E5z_L{L}", lambda L=L: measure(f"live budget, {L} B zero message, m=0", messenger_w(nxt(), EMPTY_TARGET, 0, 0, b"\x00" * L), hi=60_000_000))

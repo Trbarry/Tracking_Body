@@ -1,0 +1,8 @@
+    Finished `test` profile [optimized + debuginfo] target(s) in 0.68s
+     Running unittests src/lib.rs (/tmp/catk-a-kona-target/debug/deps/kona_derive-5b675b7acdc93c1f)
+
+running 1 test
+test stages::batch::batch_validator::test::test_batch_validator_next_batch_parent_hash_mismatch ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 208 filtered out; finished in 0.00s
+

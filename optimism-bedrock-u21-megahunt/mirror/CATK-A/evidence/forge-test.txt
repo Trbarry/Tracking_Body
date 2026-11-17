@@ -1,0 +1,8 @@
+No files changed, compilation skipped
+
+Ran 2 tests for test/CATKA_OldPrestate.t.sol:CATKAOldPrestateForkTest
+[PASS] test_postUpgradeRotationPreservesLiveOldGames() (gas: 170974)
+[PASS] test_preUpgradeFactoriesUseOldPrestate() (gas: 66832)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 44.16ms (43.61ms CPU time)
+
+Ran 1 test suite in 81.67ms (44.16ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

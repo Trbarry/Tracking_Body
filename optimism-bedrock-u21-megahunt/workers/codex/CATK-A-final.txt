@@ -1,0 +1,22 @@
+No reportable vulnerability was found. I executed 9 experiments without broadcasting transactions or mutating any shared/public fork.
+
+- Candidates: none. Zero passing exploit tests; effective confidence score **0/12**.
+- Validation: 2/2 Foundry fork tests and 1/1 Kona regression test passed.
+- Live census at block `26435245`: 147 respected, old-prestate type-9 games remained in progress across OP Mainnet, Ink, and Unichain.
+
+Top kills:
+
+- Kona parent-hash validation defect: real regression, but already known/blacklisted and only reachable through the authorized batcher path.
+- Broad execution-error deposit fallback: semantic divergence confirmed, but no permissionless way to induce the required canonical oracle/provider failure.
+- Third-party Ink `2638` and Unichain `17586`: live and old-prestate, but already countered with wrong roots; no claim-valid arbitrary-withdrawal path.
+- Interop/Lagoon and post-execution changes: inactive for the target games.
+- EIP-7825 deposit-gas hypothesis: disproved by source semantics and live deposit scans.
+
+Primary artifacts:
+
+- [Final CATK-A report](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CATK-A-report.md)
+- [Live-object ledger](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-A/LIVE-OBJECTS-CATK-A.md)
+- [Source differential](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-A/evidence/source-differential.md)
+- [Fork-test output](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-A/evidence/forge-test.txt)
+
+Highest-value next experiment: perform an exact Kona v1.7 FPVM replay of official OP game `21377` (`0x675e956b1912df79108408ca524fb37810500d10`) and compare its terminal root/error trace against the L2 header and v1.9 execution. It is the strongest claim-valid old-prestate witness with substantial clock remaining.

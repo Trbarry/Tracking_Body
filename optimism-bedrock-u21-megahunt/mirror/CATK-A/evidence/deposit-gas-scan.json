@@ -1,0 +1,169 @@
+{
+  "cases": {
+    "ink-game-2638": {
+      "anchor_timestamp": 1794244697,
+      "claim_timestamp": 1794857590,
+      "deposit_count": 379,
+      "game": "0x40bec00713a38ee5fd697764d50f0055ba4942cc",
+      "l1_head_block": 26429706,
+      "maximum_gas_limit": 516470,
+      "over_cap_count": 0,
+      "over_cap_deposits": [],
+      "portal": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+      "scan_end_block": 26429706,
+      "scan_start_block": 26371602,
+      "scan_start_timestamp": 1794158297,
+      "top_five_gas_limits": [
+        {
+          "calldata_bytes": 452,
+          "from": "0x7ae4cf86b2bf1a9e99875b7e2d9b6a84426c2830",
+          "gas_limit": 516470,
+          "is_creation": false,
+          "l1_block": 26375304,
+          "l1_block_timestamp": 1794202883,
+          "log_index": 1487,
+          "mint": 600000000000000,
+          "to": "0x4200000000000000000000000000000000000007",
+          "transaction_hash": "0x4085bc16f66d28283e7a3b3f65992ec29e97dff315e7fc9f5ae3a11816ae5b64",
+          "value": 600000000000000
+        },
+        {
+          "calldata_bytes": 452,
+          "from": "0x7ae4cf86b2bf1a9e99875b7e2d9b6a84426c2830",
+          "gas_limit": 516470,
+          "is_creation": false,
+          "l1_block": 26379714,
+          "l1_block_timestamp": 1794255959,
+          "log_index": 895,
+          "mint": 105000000000000000,
+          "to": "0x4200000000000000000000000000000000000007",
+          "transaction_hash": "0xcfa8c9a4e6489d7f3287016af75fcec028fe8cef2ce129c83d88a06ae66d04b4",
+          "value": 105000000000000000
+        },
+        {
+          "calldata_bytes": 452,
+          "from": "0x7ae4cf86b2bf1a9e99875b7e2d9b6a84426c2830",
+          "gas_limit": 516470,
+          "is_creation": false,
+          "l1_block": 26388301,
+          "l1_block_timestamp": 1794359339,
+          "log_index": 1239,
+          "mint": 120000000000000,
+          "to": "0x4200000000000000000000000000000000000007",
+          "transaction_hash": "0x79e6f75d6110fc83ddb5bb960b455cb5dbef77e611d213476470e9e8f5963e93",
+          "value": 120000000000000
+        },
+        {
+          "calldata_bytes": 452,
+          "from": "0x7ae4cf86b2bf1a9e99875b7e2d9b6a84426c2830",
+          "gas_limit": 516470,
+          "is_creation": false,
+          "l1_block": 26390460,
+          "l1_block_timestamp": 1794385415,
+          "log_index": 547,
+          "mint": 78000000000000,
+          "to": "0x4200000000000000000000000000000000000007",
+          "transaction_hash": "0x7e42d1637e4491571a66f30e85de4d83d44bb4b6ed7e95b36440d975c6f82950",
+          "value": 78000000000000
+        },
+        {
+          "calldata_bytes": 452,
+          "from": "0x7ae4cf86b2bf1a9e99875b7e2d9b6a84426c2830",
+          "gas_limit": 516470,
+          "is_creation": false,
+          "l1_block": 26402907,
+          "l1_block_timestamp": 1794535187,
+          "log_index": 782,
+          "mint": 200000000000000000,
+          "to": "0x4200000000000000000000000000000000000007",
+          "transaction_hash": "0x53d8959707e1866858ddb1036eab13e1639464134c05a4dddf46a21184e3791e",
+          "value": 200000000000000000
+        }
+      ]
+    },
+    "unichain-game-17586": {
+      "anchor_timestamp": 1793923307,
+      "claim_timestamp": 1794531731,
+      "deposit_count": 403,
+      "game": "0xa41214c2851f0d538b7c6b37fa66e35472ff6f0e",
+      "l1_head_block": 26402621,
+      "maximum_gas_limit": 3395155,
+      "over_cap_count": 0,
+      "over_cap_deposits": [],
+      "portal": "0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2",
+      "scan_end_block": 26402621,
+      "scan_start_block": 26344907,
+      "scan_start_timestamp": 1793836907,
+      "top_five_gas_limits": [
+        {
+          "calldata_bytes": 2564,
+          "from": "0xab4e64e386c18cb1d6d5179a9596a4b5736ea9b7",
+          "gas_limit": 3395155,
+          "is_creation": false,
+          "l1_block": 26351662,
+          "l1_block_timestamp": 1793918183,
+          "log_index": 424,
+          "mint": 0,
+          "to": "0x4200000000000000000000000000000000000007",
+          "transaction_hash": "0x0c3a2644e0febccc2cfddb142aa3da6275a59218502cd13b7011806a471173a7",
+          "value": 0
+        },
+        {
+          "calldata_bytes": 484,
+          "from": "0xab4e64e386c18cb1d6d5179a9596a4b5736ea9b7",
+          "gas_limit": 618569,
+          "is_creation": false,
+          "l1_block": 26399900,
+          "l1_block_timestamp": 1794498983,
+          "log_index": 502,
+          "mint": 0,
+          "to": "0x4200000000000000000000000000000000000007",
+          "transaction_hash": "0x2c827908d0f0d2d6a39126ee938a744a69c86fb731711f417a556577e794f4ae",
+          "value": 0
+        },
+        {
+          "calldata_bytes": 324,
+          "from": "0xab4e64e386c18cb1d6d5179a9596a4b5736ea9b7",
+          "gas_limit": 616009,
+          "is_creation": false,
+          "l1_block": 26357443,
+          "l1_block_timestamp": 1793987783,
+          "log_index": 505,
+          "mint": 0,
+          "to": "0x4200000000000000000000000000000000000007",
+          "transaction_hash": "0xf954c3c6c5bcb0ec9019666aa3f3c20f81eb1934efb4732a7c11b852c6f3899a",
+          "value": 0
+        },
+        {
+          "calldata_bytes": 324,
+          "from": "0xab4e64e386c18cb1d6d5179a9596a4b5736ea9b7",
+          "gas_limit": 616009,
+          "is_creation": false,
+          "l1_block": 26371635,
+          "l1_block_timestamp": 1794158699,
+          "log_index": 2406,
+          "mint": 0,
+          "to": "0x4200000000000000000000000000000000000007",
+          "transaction_hash": "0x4d9e0a1847aa64f77bf29b9cfa7197bd11fe3dc721d89eaaffc095546ba9064b",
+          "value": 0
+        },
+        {
+          "calldata_bytes": 324,
+          "from": "0xab4e64e386c18cb1d6d5179a9596a4b5736ea9b7",
+          "gas_limit": 616009,
+          "is_creation": false,
+          "l1_block": 26378455,
+          "l1_block_timestamp": 1794240791,
+          "log_index": 666,
+          "mint": 0,
+          "to": "0x4200000000000000000000000000000000000007",
+          "transaction_hash": "0xaef33ba3fe24b45242172089546a0344762267c7bf210737a9f92a5c8977851f",
+          "value": 0
+        }
+      ]
+    }
+  },
+  "eip_7825_transaction_gas_limit_cap": 16777216,
+  "rpc_mode": "passive eth_getLogs/eth_getBlockByNumber only",
+  "start_slack_seconds": 86400
+}

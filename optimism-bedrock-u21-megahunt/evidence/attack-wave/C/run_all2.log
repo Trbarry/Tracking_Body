@@ -1,0 +1,35 @@
+{"m": 15370000, "gasLimit": 15924128, "finalize_at_cap": "RELAYED", "gasUsed": 222285}
+{"m": 15390000, "gasLimit": 15944445, "finalize_at_cap": "FINALIZED+failedMessages", "gasUsed": 216756, "replay_at_cap_after_failed": "RELAYED", "replay_gasUsed": 117205}
+{"m": 15500000, "gasLimit": 16056191, "finalize_at_cap": "FINALIZED+failedMessages", "gasUsed": 216756, "replay_at_cap_after_failed": "RELAYED", "replay_gasUsed": 117205}
+{"m": 15510000, "gasLimit": 16066350, "finalize_at_cap": "REVERT (unfinalized, retry)", "gasUsed": 156262}
+{"m": 15520000, "gasLimit": 16076509, "finalize_at_cap": "REVERT (unfinalized, retry)", "gasUsed": 156250}
+Traceback (most recent call last):
+  File "/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/test/poc/attack-wave/C/scripts/run_all.py", line 69, in <module>
+    run(f"E4_plain_gl{gl}_{'pf' if pf else 'new'}", lambda gl=gl, pf=pf: plain(gl, pf))
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/test/poc/attack-wave/C/scripts/run_all.py", line 21, in run
+    r = fn()
+  File "/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/test/poc/attack-wave/C/scripts/run_all.py", line 69, in <lambda>
+    run(f"E4_plain_gl{gl}_{'pf' if pf else 'new'}", lambda gl=gl, pf=pf: plain(gl, pf))
+                                                                         ~~~~~^^^^^^^^
+  File "/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/test/poc/attack-wave/C/scripts/run_all.py", line 63, in plain
+    r = measure(f"plain 1 ETH to {'pre-funded' if prefund else 'new'} account, gasLimit={gl}", w, hi=40_000_000)
+  File "/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/test/poc/attack-wave/C/scripts/gascap.py", line 173, in measure
+    assert try_finalize(w, lo)[0] == 0, "lower bracket unexpectedly passes"
+           ~~~~~~~~~~~~^^^^^^^
+  File "/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/test/poc/attack-wave/C/scripts/gascap.py", line 129, in try_finalize
+    st, used = send(PORTAL, w.finalize_cd(), gas)
+               ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/test/poc/attack-wave/C/scripts/gascap.py", line 106, in send
+    txh = rpc(L1, "eth_sendTransaction", [{"from": ATTACKER, "to": to, "data": "0x" + cd.hex(), "gas": hex(gas), "value": "0x0", "nonce": nonce, "gasPrice": hex(10**10)}])
+  File "/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/test/poc/attack-wave/C/scripts/gascap.py", line 32, in rpc
+    raise RuntimeError(j["error"])
+RuntimeError: {'code': -32000, 'message': 'intrinsic gas too low'}
+{"label": "messenger 1 ETH to new account, m=0", "gasLimit": 310160, "dataLen": 228, "minGasLimit": 0, "value": 1000000000000000000, "target": "0x0c00000000000000000000000000000000000007", "finalize_min_nonrevert": 537760, "outcome_at_min": 1, "gasUsed_at_min": 276758, "finalize_min_relayed": 537760, "finalize_min_nonrevert_fits_cap": true, "finalize_min_relayed_fits_cap": true, "precision_gas": 128}
+{"label": "messenger 1 ETH to new account, m=15800000", "gasLimit": 16360953, "dataLen": 228, "minGasLimit": 15800000, "value": 1000000000000000000, "target": "0x0c00000000000000000000000000000000f116c7", "finalize_min_nonrevert": 17102209, "outcome_at_min": 2, "gasUsed_at_min": 239589, "finalize_min_relayed": 17247621, "replay_min_after_forced_fail": 16589680, "finalize_min_nonrevert_fits_cap": false, "finalize_min_relayed_fits_cap": false, "replay_min_after_forced_fail_fits_cap": true, "precision_gas": 128}
+{"label": "live budget, 250000 B nonzero message, m=0", "gasLimit": 10031400, "dataLen": 250244, "minGasLimit": 0, "value": 0, "target": "0x00000000000000000000000000000000000b0b01", "finalize_min_nonrevert": 15855984, "outcome_at_min": 1, "gasUsed_at_min": 10028980, "finalize_min_relayed": 15855984, "finalize_min_nonrevert_fits_cap": true, "finalize_min_relayed_fits_cap": true, "precision_gas": 128}
+{"label": "live budget, 320000 B nonzero message, m=0", "gasLimit": 12831400, "dataLen": 320228, "minGasLimit": 0, "value": 0, "target": "0x00000000000000000000000000000000000b0b01", "finalize_min_nonrevert": 20446910, "outcome_at_min": 1, "gasUsed_at_min": 12828790, "finalize_min_relayed": 20446910, "finalize_min_nonrevert_fits_cap": false, "finalize_min_relayed_fits_cap": false, "precision_gas": 128}
+{"label": "live budget, 400000 B zero message, m=0", "gasLimit": 16031400, "dataLen": 400228, "minGasLimit": 0, "value": 0, "target": "0x00000000000000000000000000000000000b0b01", "finalize_min_nonrevert": 21009847, "outcome_at_min": 1, "gasUsed_at_min": 7231392, "finalize_min_relayed": 21009847, "finalize_min_nonrevert_fits_cap": false, "finalize_min_relayed_fits_cap": false, "precision_gas": 128}
+{"label": "gas-burning target, m=8000000", "gasLimit": 8437144, "dataLen": 228, "minGasLimit": 8000000, "value": 0, "target": "0x00000000000000000000000000000000000a7c02", "finalize_min_nonrevert": 8905922, "outcome_at_min": 2, "gasUsed_at_min": 216744, "finalize_min_relayed": null, "finalize_min_nonrevert_fits_cap": true, "precision_gas": 128}
+{"label": "gas-burning target, m=15800000", "gasLimit": 16360953, "dataLen": 228, "minGasLimit": 15800000, "value": 0, "target": "0x00000000000000000000000000000000000a7c02", "finalize_min_nonrevert": 17083307, "outcome_at_min": 2, "gasUsed_at_min": 216756, "finalize_min_relayed": null, "finalize_min_nonrevert_fits_cap": false, "precision_gas": 128}
+BATTERY_DONE

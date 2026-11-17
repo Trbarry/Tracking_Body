@@ -1,0 +1,716 @@
+diff --git a/rust/kona/crates/proof/driver/src/core.rs b/rust/kona/crates/proof/driver/src/core.rs
+index 5806268..dcd63da 100644
+--- a/rust/kona/crates/proof/driver/src/core.rs
++++ b/rust/kona/crates/proof/driver/src/core.rs
+@@ -142,45 +142,46 @@ where
+     /// * `cfg` - The rollup configuration containing chain parameters and activation heights
+     /// * `target` - Optional target block number. If `None`, derives indefinitely until data source
+     ///   is exhausted or an error occurs
+     ///
+     /// # Returns
+     /// * `Ok((l2_safe_head, output_root))` - Tuple containing the final [`L2BlockInfo`] and output
+     ///   root hash when target is reached or derivation completes
+     /// * `Err(DriverError)` - Various error conditions that prevent further derivation
+     ///
+     /// # Errors
+     /// This method can fail with several error types:
+     ///
+     /// ## Pipeline Errors
+     /// - **`EndOfSource` (Critical)**: L1 data source exhausted
+     ///   - In interop mode: Returns error immediately for caller handling
+     ///   - In normal mode: Adjusts target to current safe head and halts gracefully
+     /// - **Temporary**: Insufficient data, automatically retried
+     /// - **Reset**: Reorg detected, pipeline reset and derivation continues
+     /// - **Other Critical**: Fatal pipeline errors that stop derivation
+     ///
+-    /// ## Execution Errors  
+-    /// - **Pre-Holocene**: Block execution failures cause block to be discarded
+-    /// - **Holocene+**: Failed blocks are retried as deposit-only blocks
++    /// ## Execution Errors
++    /// - Errors that establish an invalid payload are discarded before Holocene
++    /// - After Holocene, invalid payloads are retried as deposit-only blocks
+     ///   - Strips non-deposit transactions and flushes invalidated channel
+     ///   - If deposit-only block also fails, returns critical error
++    /// - Provider, database, and internal errors return without invalidating the channel
+     ///
+     /// ## Other Errors
+     /// - **`MissingOrigin`**: Pipeline origin not available when expected
+     /// - **`FromBlock`**: Failed to derive the L2 block info from the executed header and L1 info
+     ///   deposit
+     ///
+     /// # Behavior Details
+     ///
+     /// ## Main Loop
+     /// The method operates in a continuous loop:
+     /// 1. Check if target block number reached (if specified)
+     /// 2. Produce payload attributes from pipeline
+     /// 3. Execute payload with executor
+     /// 4. Handle execution failures with retry logic
+     /// 5. Compute the L2 block info and update cursor
+     /// 6. Cache artifacts and continue
+     ///
+     /// ## Target Handling
+     /// - If `target` is `Some(n)`: Stops when safe head reaches block `n`
+     /// - If `target` is `None`: Continues until data exhausted or critical error
+@@ -270,40 +271,44 @@ where
+                     {
+                         return Err(PipelineError::EndOfSource.crit().into());
+                     }
+                     continue;
+                 }
+                 Err(e) => {
+                     error!(target: "client", "Failed to produce payload: {:?}", e);
+                     return Err(DriverError::Pipeline(e));
+                 }
+             };
+             metrics.phase_end(DriverPhase::PayloadDerivation);
+ 
+             self.executor.update_safe_head(tip_cursor.l2_safe_head_header.clone());
+ 
+             metrics.phase_start(DriverPhase::BlockExecution);
+             let outcome = match self.executor.execute_payload(attributes.clone()).await {
+                 Ok(outcome) => outcome,
+                 Err(e) => {
+                     error!(target: "client", "Failed to execute L2 block: {}", e);
+ 
++                    if !E::is_invalid_payload_error(&e) {
++                        return Err(DriverError::Executor(e));
++                    }
++
+                     if cfg.is_holocene_active(attributes.payload_attributes.timestamp) {
+                         // Retry with a deposit-only block.
+                         warn!(target: "client", "Flushing current channel and retrying deposit only block");
+ 
+                         // Flush the current batch and channel - if a block was replaced with a
+                         // deposit-only block due to execution failure, the
+                         // batch and channel it is contained in is forwards
+                         // invalidated.
+                         self.pipeline.signal(Signal::FlushChannel).await?;
+ 
+                         // Strip out all transactions that are not deposits.
+                         attributes.transactions = attributes.transactions.map(|txs| {
+                             txs.into_iter()
+                                 .filter(|tx| !tx.is_empty() && tx[0] == OpTxType::Deposit as u8)
+                                 .collect::<Vec<_>>()
+                         });
+ 
+                         // Retry the execution.
+                         self.executor.update_safe_head(tip_cursor.l2_safe_head_header.clone());
+                         match self.executor.execute_payload(attributes.clone()).await {
+diff --git a/rust/kona/crates/proof/driver/src/executor.rs b/rust/kona/crates/proof/driver/src/executor.rs
+index dff75b7..f2ed3ff 100644
+--- a/rust/kona/crates/proof/driver/src/executor.rs
++++ b/rust/kona/crates/proof/driver/src/executor.rs
+@@ -76,40 +76,46 @@ pub trait Executor {
+     /// # Contract
+     /// The seal on the returned outcome's header must be the header's true hash: the driver
+     /// takes it as-is (for the safe-head cursor and the derived
+     /// [`L2BlockInfo`](kona_protocol::L2BlockInfo)) without recomputing it.
+     ///
+     /// # Errors
+     /// This method can fail due to:
+     /// - Invalid transactions in the payload
+     /// - Execution errors (e.g., out of gas, revert)
+     /// - State inconsistencies
+     /// - Block validation failures
+     ///
+     /// # Usage
+     /// Must be called after setting the safe head with [`Self::update_safe_head`].
+     /// The execution builds on the current safe head state.
+     async fn execute_payload(
+         &mut self,
+         attributes: OpPayloadAttributes,
+     ) -> Result<BlockBuildingOutcome<Self::Receipt>, Self::Error>;
+ 
++    /// Whether an execution error proves the derived payload invalid.
++    ///
++    /// Only such errors permit the driver to replace the payload with a deposit-only block.
++    /// Missing state, provider failures, and internal errors must not invalidate a channel.
++    fn is_invalid_payload_error(error: &Self::Error) -> bool;
++
+     /// Computes the output root for the most recently executed block.
+     ///
+     /// Calculates the Merkle root of the execution outputs which is used
+     /// for verification and state commitment purposes.
+     ///
+     /// # Returns
+     /// * `Ok(B256)` - The computed output root hash
+     /// * `Err(Self::Error)` - Computation failure
+     ///
+     /// # Errors
+     /// This method can fail if:
+     /// - No block has been executed yet
+     /// - State is inconsistent or corrupted
+     /// - Output computation encounters an internal error
+     ///
+     /// # Usage
+     /// Expected to be called immediately after successful payload execution
+     /// via [`Self::execute_payload`]. The computed root corresponds to the state
+     /// after the most recent block execution.
+     fn compute_output_root(&mut self) -> Result<B256, Self::Error>;
+diff --git a/rust/kona/crates/proof/executor/src/errors.rs b/rust/kona/crates/proof/executor/src/errors.rs
+index 90ac2e9..967212a 100644
+--- a/rust/kona/crates/proof/executor/src/errors.rs
++++ b/rust/kona/crates/proof/executor/src/errors.rs
+@@ -1,28 +1,29 @@
+ //! Error types for the `kona-executor` crate.
+ //!
+ //! This module provides comprehensive error handling for the stateless L2 block
+ //! execution engine, covering validation errors, execution failures, and
+ //! database operation errors.
+ 
+ use alloc::string::String;
+ use alloy_evm::block::BlockExecutionError;
++use alloy_op_evm::block::is_invalid_payload_error;
+ use kona_mpt::TrieNodeError;
+ use op_alloy_consensus::EIP1559ParamError;
+ use revm::context::DBErrorMarker;
+ use thiserror::Error;
+ 
+ /// Errors that can occur when validating EIP-1559 parameters from block header extra data.
+ ///
+ /// This error type is used for validation errors during decoding of EIP-1559 parameters.
+ #[derive(Error, Debug, PartialEq, Eq)]
+ pub enum Eip1559ValidationError {
+     /// Error from EIP-1559 parameter decoding.
+     ///
+     /// This variant wraps errors from the underlying EIP-1559 parameter decoding, such as invalid
+     /// version bytes, incorrect data lengths, missing parameters, or a zero denominator/elasticity
+     /// encoded in the block header extra data.
+     #[error(transparent)]
+     Decode(#[from] EIP1559ParamError),
+ }
+ 
+ /// Error type for the [`StatelessL2Builder`] block execution engine.
+@@ -181,40 +182,160 @@ pub enum ExecutorError {
+     /// # Common Causes
+     /// - Corrupted transaction or block data
+     /// - Invalid RLP formatting
+     /// - Unsupported data types in RLP stream
+     #[error("RLP error: {0}")]
+     RLPError(alloy_eips::eip2718::Eip2718Error),
+     /// Executor instance not available when required.
+     ///
+     /// This error occurs when attempting to perform an operation that requires
+     /// an active executor instance, but none is available. This typically
+     /// indicates a lifecycle or initialization issue.
+     ///
+     /// # Common Causes
+     /// - Executor not properly initialized
+     /// - Executor already consumed or dropped
+     /// - Incorrect executor lifecycle management
+     #[error("Missing the executor")]
+     MissingExecutor,
+ }
+ 
++impl ExecutorError {
++    /// Returns whether the error establishes that the derived payload is invalid.
++    ///
++    /// Only these errors may trigger the Holocene deposit-only replacement. Errors caused by
++    /// missing witnesses, database access, or executor state must propagate instead.
++    pub fn is_invalid_payload(&self) -> bool {
++        match self {
++            Self::BlockGasLimitExceeded |
++            Self::InvalidPostExecPayload(_) |
++            Self::Recovery(_) |
++            Self::UnsupportedTransactionType(_) |
++            Self::RLPError(_) => true,
++            Self::ExecutionError(error) => is_invalid_payload_error(error),
++            Self::MissingGasLimit |
++            Self::MissingTransactions |
++            Self::MissingEIP1559Params |
++            Self::MissingParentBeaconBlockRoot |
++            Self::InvalidExtraData(_) |
++            Self::TrieDBError(_) |
++            Self::MissingExecutor => false,
++        }
++    }
++}
++
++#[cfg(test)]
++mod classification_tests {
++    use super::*;
++    use alloc::boxed::Box;
++    use alloy_evm::block::{BlockValidationError, InternalBlockExecutionError};
++    use alloy_op_evm::block::OpBlockExecutionError;
++
++    #[test]
++    fn only_invalid_payload_errors_allow_deposit_only_replacement() {
++        let cases = [
++            ("block gas", ExecutorError::BlockGasLimitExceeded, true),
++            ("unsupported transaction type", ExecutorError::UnsupportedTransactionType(0xff), true),
++            (
++                "malformed transaction RLP",
++                ExecutorError::RLPError(alloy_rlp::Error::InputTooShort.into()),
++                true,
++            ),
++            (
++                "transaction gas",
++                ExecutorError::ExecutionError(BlockExecutionError::Validation(
++                    BlockValidationError::TransactionGasLimitMoreThanAvailableBlockGas {
++                        transaction_gas_limit: 2,
++                        block_available_gas: 1,
++                    },
++                )),
++                true,
++            ),
++            (
++                "post-exec payload",
++                ExecutorError::ExecutionError(BlockExecutionError::Validation(
++                    BlockValidationError::Other(Box::new(
++                        OpBlockExecutionError::InvalidPostExecPayload("invalid".into()),
++                    )),
++                )),
++                true,
++            ),
++            (
++                "provider",
++                ExecutorError::TrieDBError(TrieDBError::Provider("missing witness".into())),
++                false,
++            ),
++            (
++                "database validation",
++                ExecutorError::ExecutionError(BlockExecutionError::Validation(
++                    BlockValidationError::IncrementBalanceFailed,
++                )),
++                false,
++            ),
++            (
++                "internal execution",
++                ExecutorError::ExecutionError(BlockExecutionError::msg("database failure")),
++                false,
++            ),
++            (
++                "internal EVM",
++                ExecutorError::ExecutionError(BlockExecutionError::Internal(
++                    InternalBlockExecutionError::EVM {
++                        hash: Default::default(),
++                        error: "internal EVM failure".into(),
++                    },
++                )),
++                false,
++            ),
++            (
++                "builder deposit requests",
++                ExecutorError::ExecutionError(BlockExecutionError::Validation(
++                    BlockValidationError::BuilderDepositRequestsContractCall {
++                        message: "system call failure".into(),
++                    },
++                )),
++                false,
++            ),
++            (
++                "builder exit requests",
++                ExecutorError::ExecutionError(BlockExecutionError::Validation(
++                    BlockValidationError::BuilderExitRequestsContractCall {
++                        message: "system call failure".into(),
++                    },
++                )),
++                false,
++            ),
++            (
++                "unclassified validation",
++                ExecutorError::ExecutionError(BlockExecutionError::Validation(
++                    BlockValidationError::msg("unclassified failure"),
++                )),
++                false,
++            ),
++        ];
++
++        for (name, error, expected) in cases {
++            assert_eq!(error.is_invalid_payload(), expected, "{name}");
++        }
++    }
++}
++
+ /// Result type alias for operations that may fail with [`ExecutorError`].
+ ///
+ /// This type alias provides a convenient way to handle executor operations
+ /// that can fail, encapsulating the success value type `T` and the standard
+ /// [`ExecutorError`] for failures.
+ ///
+ /// # Usage
+ /// ```rust,ignore
+ /// fn build_block(attrs: PayloadAttributes) -> ExecutorResult<BlockBuildingOutcome> {
+ ///     // ... block building logic
+ /// }
+ /// ```
+ pub type ExecutorResult<T> = Result<T, ExecutorError>;
+ 
+ /// Result type alias for trie database operations that may fail with [`TrieDBError`].
+ ///
+ /// This type alias provides a convenient way to handle trie database operations
+ /// that can fail, specifically for operations involving state tree access,
+ /// proof verification, and account data retrieval.
+ ///
+diff --git a/rust/kona/crates/proof/proof/src/executor.rs b/rust/kona/crates/proof/proof/src/executor.rs
+index 217286e..a3d301e 100644
+--- a/rust/kona/crates/proof/proof/src/executor.rs
++++ b/rust/kona/crates/proof/proof/src/executor.rs
+@@ -102,28 +102,32 @@ where
+             self.rollup_config,
+             self.evm_factory.clone(),
+             self.receipt_builder.clone(),
+             self.trie_provider.clone(),
+             self.trie_hinter.clone(),
+             header,
+         ));
+     }
+ 
+     /// Execute the given payload attributes.
+     async fn execute_payload(
+         &mut self,
+         attributes: OpPayloadAttributes,
+     ) -> Result<BlockBuildingOutcome<R::Receipt>, Self::Error> {
+         self.inner.as_mut().map_or_else(
+             || Err(kona_executor::ExecutorError::MissingExecutor),
+             |e| e.build_block(attributes),
+         )
+     }
+ 
++    fn is_invalid_payload_error(error: &Self::Error) -> bool {
++        error.is_invalid_payload()
++    }
++
+     /// Computes the output root.
+     fn compute_output_root(&mut self) -> Result<B256, Self::Error> {
+         self.inner.as_mut().map_or_else(
+             || Err(kona_executor::ExecutorError::MissingExecutor),
+             |e| e.compute_output_root(),
+         )
+     }
+ }
+diff --git a/rust/kona/crates/protocol/derive/src/stages/batch/batch_stream.rs b/rust/kona/crates/protocol/derive/src/stages/batch/batch_stream.rs
+index 54a2f9f..1c18c93 100644
+--- a/rust/kona/crates/protocol/derive/src/stages/batch/batch_stream.rs
++++ b/rust/kona/crates/protocol/derive/src/stages/batch/batch_stream.rs
+@@ -52,50 +52,55 @@ where
+     pub fetcher: BF,
+ }
+ 
+ impl<P, BF> BatchStream<P, BF>
+ where
+     P: BatchStreamProvider + OriginAdvancer + OriginProvider + Stage + Debug,
+     BF: L2ChainProvider + Debug,
+ {
+     /// Create a new [`BatchStream`] stage.
+     pub const fn new(prev: P, config: Arc<RollupConfig>, fetcher: BF) -> Self {
+         Self { prev, span: None, buffer: VecDeque::new(), config, fetcher }
+     }
+ 
+     /// Returns if the [`BatchStream`] stage is active based on the
+     /// origin timestamp and holocene activation timestamp.
+     pub fn is_active(&self) -> PipelineResult<bool> {
+         let origin = self.prev.origin().ok_or(PipelineError::MissingOrigin.crit())?;
+         Ok(self.config.is_holocene_active(origin.timestamp))
+     }
+ 
+-    /// Gets a [`SingleBatch`] from the in-memory buffer.
++    /// Gets a [`SingleBatch`] from the in-memory buffer, with its parent hash set from `parent`.
+     pub fn get_single_batch(
+         &mut self,
+         parent: L2BlockInfo,
+         l1_origins: &[BlockInfo],
+     ) -> Result<Option<SingleBatch>, SpanBatchError> {
+         trace!(target: "batch_span", "Attempting to get a SingleBatch from buffer len: {}", self.buffer.len());
+ 
+         self.try_hydrate_buffer(parent, l1_origins)?;
+-        Ok(self.buffer.pop_front())
++        Ok(self.buffer.pop_front().map(|mut batch| {
++            // Span batches carry no parent hash for each block. `check_batch_holocene` checked
++            // `parent_check` for the first block.
++            batch.parent_hash = parent.block_info.hash;
++            batch
++        }))
+     }
+ 
+     /// Hydrates the buffer with single batches derived from the span batch, if there is one
+     /// queued up.
+     pub fn try_hydrate_buffer(
+         &mut self,
+         parent: L2BlockInfo,
+         l1_origins: &[BlockInfo],
+     ) -> Result<(), SpanBatchError> {
+         if let Some(span) = self.span.take() {
+             self.buffer.extend(span.get_singular_batches(l1_origins, parent)?);
+         }
+         #[cfg(feature = "metrics")]
+         {
+             let batch_count = self.buffer.len() as f64;
+             kona_macros::set!(gauge, crate::metrics::Metrics::PIPELINE_BATCH_BUFFER, batch_count);
+             let batch_size = std::mem::size_of_val(&self.buffer) as f64;
+             kona_macros::set!(gauge, crate::metrics::Metrics::PIPELINE_BATCH_MEM, batch_size);
+         }
+         Ok(())
+@@ -312,40 +317,61 @@ mod test {
+         assert!(stream.span.is_none());
+     }
+ 
+     #[tokio::test]
+     async fn test_batch_stream_flush_channel() {
+         let config = Arc::new(RollupConfig {
+             hardforks: HardForkConfig { holocene_time: Some(0), ..Default::default() },
+             ..Default::default()
+         });
+         let prev = TestBatchStreamProvider::new(vec![]);
+         let mut stream = BatchStream::new(prev, config.clone(), TestL2ChainProvider::default());
+         stream.buffer.push_back(SingleBatch::default());
+         stream.span = Some(SpanBatch::default());
+         assert!(!stream.prev.flushed);
+         stream.flush_channel().await.unwrap();
+         assert!(stream.prev.flushed);
+         assert!(stream.buffer.is_empty());
+         assert!(stream.span.is_none());
+     }
+ 
++    #[tokio::test]
++    async fn test_span_derived_batch_parent_hash_set_from_parent() {
++        let config = Arc::new(RollupConfig {
++            hardforks: HardForkConfig { holocene_time: Some(0), ..Default::default() },
++            ..Default::default()
++        });
++        let prev = TestBatchStreamProvider::new(vec![]);
++        let mut stream = BatchStream::new(prev, config, TestL2ChainProvider::default());
++        stream.buffer.push_back(SingleBatch::default());
++
++        let parent_hash = b256!("1111111111111111111111111111111111111111000000000000000000000000");
++        let parent = L2BlockInfo {
++            block_info: BlockInfo { hash: parent_hash, ..Default::default() },
++            ..Default::default()
++        };
++        let Batch::Single(single) = stream.next_batch(parent, &[]).await.unwrap() else {
++            panic!("Wrong batch type");
++        };
++        assert_eq!(single.parent_hash, parent_hash);
++    }
++
+     #[tokio::test]
+     async fn test_batch_stream_inactive() {
+         let trace_store: TraceStorage = Default::default();
+         let layer = CollectingLayer::new(trace_store.clone());
+         let subscriber = tracing_subscriber::Registry::default().with(layer);
+         let _guard = tracing::subscriber::set_default(subscriber);
+ 
+         let data = vec![Ok(Batch::Single(SingleBatch::default()))];
+         let config = Arc::new(RollupConfig {
+             hardforks: HardForkConfig { holocene_time: Some(100), ..Default::default() },
+             ..Default::default()
+         });
+         let prev = TestBatchStreamProvider::new(data);
+         let mut stream = BatchStream::new(prev, config.clone(), TestL2ChainProvider::default());
+ 
+         // The stage should not be active.
+         assert!(!stream.is_active().unwrap());
+ 
+         // The next batch should be passed through to the [BatchQueue] stage.
+         let batch = stream.next_batch(Default::default(), &[]).await.unwrap();
+@@ -632,54 +658,65 @@ mod test {
+         provider.blocks.push(l2_parent);
+         provider.op_blocks.push(op_block_41);
+         provider.op_blocks.push(op_block_42);
+ 
+         let mut stream = BatchStream::new(prev, config, provider);
+         let err = stream.next_batch(l2_safe_head, &l1_blocks).await.unwrap_err();
+ 
+         assert_eq!(err, PipelineError::NotEnoughData.temp());
+         assert!(stream.span.is_none());
+         assert_eq!(stream.span_buffer_size(), 0);
+         // The flush must have discarded the unread sentinel along with the rest of the channel.
+         assert!(stream.prev.batches.is_empty());
+ 
+         let logs = trace_store.get_by_level(tracing::Level::WARN);
+         assert_eq!(logs.len(), 1);
+         assert!(logs[0].contains("overlapped block's tx count does not match"));
+     }
+ 
+     #[tokio::test]
+     async fn test_single_batch_pass_through() {
+-        let data = vec![Ok(Batch::Single(SingleBatch::default()))];
++        let single = SingleBatch {
++            parent_hash: alloy_primitives::B256::repeat_byte(0xaa),
++            ..Default::default()
++        };
++        let data = vec![Ok(Batch::Single(single.clone()))];
+         let config = Arc::new(RollupConfig {
+             hardforks: HardForkConfig { holocene_time: Some(0), ..Default::default() },
+             ..Default::default()
+         });
+         let prev = TestBatchStreamProvider::new(data);
+         let mut stream = BatchStream::new(prev, config.clone(), TestL2ChainProvider::default());
+ 
+         // The stage should be active.
+         assert!(stream.is_active().unwrap());
+ 
+         // The next batch should be passed through to the [BatchQueue] stage.
+-        let batch = stream.next_batch(Default::default(), &[]).await.unwrap();
+-        assert!(matches!(batch, Batch::Single(_)));
++        let parent = L2BlockInfo {
++            block_info: BlockInfo {
++                hash: alloy_primitives::B256::repeat_byte(0xbb),
++                ..Default::default()
++            },
++            ..Default::default()
++        };
++        let batch = stream.next_batch(parent, &[]).await.unwrap();
++        assert_eq!(batch, Batch::Single(single));
+         assert_eq!(stream.span_buffer_size(), 0);
+         assert!(stream.span.is_none());
+     }
+ 
+     #[tokio::test]
+     async fn test_past_span_batch() {
+         let mock_batch = SpanBatch {
+             batches: vec![
+                 SpanBatchElement { epoch_num: 1, timestamp: 2, ..Default::default() },
+                 SpanBatchElement { epoch_num: 1, timestamp: 4, ..Default::default() },
+             ],
+             ..Default::default()
+         };
+         let mock_origins = [BlockInfo { number: 1, timestamp: 12, ..Default::default() }];
+         let data = vec![Ok(Batch::Span(mock_batch))];
+ 
+         let config = Arc::new(RollupConfig {
+             hardforks: HardForkConfig { holocene_time: Some(0), ..Default::default() },
+             ..Default::default()
+         });
+diff --git a/rust/kona/crates/protocol/derive/src/stages/batch/batch_validator.rs b/rust/kona/crates/protocol/derive/src/stages/batch/batch_validator.rs
+index 49529d7..af08c94 100644
+--- a/rust/kona/crates/protocol/derive/src/stages/batch/batch_validator.rs
++++ b/rust/kona/crates/protocol/derive/src/stages/batch/batch_validator.rs
+@@ -222,48 +222,47 @@ where
+         let epoch = self.l1_blocks[0];
+         if parent.l1_origin != epoch.id() && parent.l1_origin.number != epoch.number - 1 {
+             return Err(PipelineErrorKind::Reset(ResetError::L1OriginMismatch(
+                 parent.l1_origin.number,
+                 epoch.number - 1,
+             )));
+         }
+ 
+         // Pull the next batch from the previous stage.
+         let next_batch = match self.prev.next_batch(parent, self.l1_blocks.as_ref()).await {
+             Ok(batch) => batch,
+             Err(PipelineErrorKind::Temporary(PipelineError::Eof)) => {
+                 return self.try_derive_empty_batch(&parent);
+             }
+             Err(e) => {
+                 return Err(e);
+             }
+         };
+ 
+         // The batch must be a single batch - this stage does not support span batches.
+-        let Batch::Single(mut next_batch) = next_batch else {
++        let Batch::Single(next_batch) = next_batch else {
+             error!(
+                 target: "batch_validator",
+                 "BatchValidator received a batch that is not a SingleBatch"
+             );
+             return Err(PipelineError::InvalidBatchType.crit());
+         };
+-        next_batch.parent_hash = parent.block_info.hash;
+ 
+         // Check the validity of the single batch before forwarding it.
+         match next_batch.check_batch(
+             self.cfg.as_ref(),
+             self.l1_blocks.as_ref(),
+             parent,
+             &stage_origin,
+         ) {
+             BatchValidity::Accept => {
+                 info!(target: "batch_validator", "Found next batch (epoch #{})", next_batch.epoch_num);
+                 Ok(next_batch)
+             }
+             BatchValidity::Past => {
+                 warn!(target: "batch_validator", "Dropping old batch");
+                 Err(PipelineError::NotEnoughData.temp())
+             }
+             BatchValidity::Drop(reason) => {
+                 warn!(target: "batch_validator", "Invalid singular batch ({}), flushing current channel.", reason);
+                 self.prev.flush();
+                 Err(PipelineError::NotEnoughData.temp())
+@@ -522,40 +521,86 @@ mod test {
+ 
+         // Setup batch validator deps
+         let batch_vec = vec![PipelineResult::Ok(Batch::Single(batch.clone()))];
+         let mut mock = TestNextBatchProvider::new(batch_vec);
+         mock.origin = Some(BlockInfo { number: 1, ..Default::default() });
+ 
+         // Configure batch validator
+         let mut bv = BatchValidator::new(cfg, mock);
+ 
+         // Reset the pipeline to add the L1 origin to the stage.
+         bv.reset(BlockNumHash { number: 1, ..Default::default() }, SystemConfig::default())
+             .await
+             .unwrap();
+         bv.l1_blocks.push(BlockInfo { number: 1, ..Default::default() });
+ 
+         // Grab the next batch.
+         let produced_batch = bv.next_batch(parent).await.unwrap();
+         assert_eq!(batch, produced_batch);
+     }
+ 
++    #[tokio::test]
++    async fn test_batch_validator_next_batch_parent_hash_mismatch() {
++        let trace_store: TraceStorage = Default::default();
++        let layer = CollectingLayer::new(trace_store.clone());
++        let subscriber = tracing_subscriber::Registry::default().with(layer);
++        let _guard = tracing::subscriber::set_default(subscriber);
++
++        let cfg = Arc::new(RollupConfig {
++            hardforks: HardForkConfig { holocene_time: Some(0), ..Default::default() },
++            block_time: 2,
++            max_sequencer_drift: 700,
++            ..Default::default()
++        });
++        let batch = SingleBatch {
++            parent_hash: B256::repeat_byte(0xaa),
++            epoch_num: 2,
++            epoch_hash: B256::default(),
++            timestamp: 4,
++            transactions: Vec::new(),
++        };
++        let parent = L2BlockInfo {
++            l1_origin: BlockNumHash { number: 0, ..Default::default() },
++            block_info: BlockInfo {
++                hash: B256::repeat_byte(0xbb),
++                timestamp: 2,
++                ..Default::default()
++            },
++            ..Default::default()
++        };
++
++        let batch_vec = vec![PipelineResult::Ok(Batch::Single(batch))];
++        let mut mock = TestNextBatchProvider::new(batch_vec);
++        mock.origin = Some(BlockInfo { number: 1, ..Default::default() });
++        let mut bv = BatchValidator::new(cfg, mock);
++        bv.reset(BlockNumHash { number: 1, ..Default::default() }, SystemConfig::default())
++            .await
++            .unwrap();
++        bv.l1_blocks.push(BlockInfo { number: 1, ..Default::default() });
++
++        assert_eq!(bv.next_batch(parent).await.unwrap_err(), PipelineError::NotEnoughData.temp());
++        assert!(bv.prev.flushed);
++        let logs = trace_store.get_by_level(Level::WARN);
++        assert_eq!(logs.len(), 1);
++        assert!(logs[0].contains("parent hash does not match L2 safe head"));
++    }
++
+     #[tokio::test]
+     async fn test_batch_validator_next_batch_sequence_window_expired() {
+         let trace_store: TraceStorage = Default::default();
+         let layer = CollectingLayer::new(trace_store.clone());
+         let subscriber = tracing_subscriber::Registry::default().with(layer);
+         let _guard = tracing::subscriber::set_default(subscriber);
+ 
+         let cfg = Arc::new(RollupConfig { seq_window_size: 5, ..Default::default() });
+         let mut mock = TestNextBatchProvider::new(vec![]);
+         mock.origin = Some(BlockInfo { number: 1, ..Default::default() });
+         let mut bv = BatchValidator::new(cfg, mock);
+ 
+         // Reset the pipeline to add the L1 origin to the stage.
+         bv.reset(BlockNumHash { number: 1, ..Default::default() }, SystemConfig::default())
+             .await
+             .unwrap();
+ 
+         // Advance the origin of the previous stage to block #6.
+         for _ in 0..6 {
+             bv.advance_origin().await.unwrap();

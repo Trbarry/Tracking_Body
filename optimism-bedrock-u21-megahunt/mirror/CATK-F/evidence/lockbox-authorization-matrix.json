@@ -1,0 +1,27 @@
+{
+  "method": {
+    "rpc": "http://127.0.0.1:7545",
+    "block": 26433900,
+    "call": "authorizedPortals(address)(bool)",
+    "safety": "16 read-only eth_call requests at an explicit L1 pin"
+  },
+  "portals": {
+    "OP": "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+    "INK": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+    "SONEIUM": "0x88e529A6ccd302c948689Cd5156C83D4614FAE92",
+    "UNICHAIN": "0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2"
+  },
+  "lockboxes": {
+    "OP": "0x322b47Ff1FA8D5611F761e3E275C45B71b294D43",
+    "INK": "0xbd4AbB321138e8Eddc399cE64E66451294325a14",
+    "SONEIUM": "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31",
+    "UNICHAIN": "0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5"
+  },
+  "rows_lockbox_columns_portal": {
+    "OP":       {"OP": true,  "INK": false, "SONEIUM": false, "UNICHAIN": false},
+    "INK":      {"OP": false, "INK": true,  "SONEIUM": false, "UNICHAIN": false},
+    "SONEIUM":  {"OP": false, "INK": false, "SONEIUM": true,  "UNICHAIN": false},
+    "UNICHAIN": {"OP": false, "INK": false, "SONEIUM": false, "UNICHAIN": true}
+  }
+}
+
