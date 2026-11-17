@@ -1,2 +1,108 @@
 scanned 0..19
 scanned 200..219
+scanned 400..419
+scanned 600..619
+scanned 800..819
+scanned 1000..1019
+scanned 1200..1219
+scanned 1400..1419
+scanned 1600..1619
+scanned 1800..1819
+scanned 2000..2019
+scanned 2200..2219
+scanned 2400..2419
+scanned 2600..2619
+scanned 2800..2819
+scanned 3000..3019
+scanned 3200..3219
+scanned 3400..3419
+scanned 3600..3619
+scanned 3800..3819
+scanned 4000..4019
+scanned 4200..4219
+scanned 4400..4419
+scanned 4600..4619
+scanned 4800..4819
+scanned 5000..5019
+scanned 5200..5219
+scanned 5400..5419
+scanned 5600..5619
+scanned 5800..5819
+scanned 6000..6019
+scanned 6200..6219
+scanned 6400..6419
+scanned 6600..6619
+scanned 6800..6819
+scanned 7000..7019
+scanned 7200..7219
+scanned 7400..7419
+scanned 7600..7619
+scanned 7800..7819
+scanned 8000..8019
+scanned 8200..8219
+scanned 8400..8419
+scanned 8600..8619
+scanned 8800..8819
+scanned 9000..9019
+scanned 9200..9219
+scanned 9400..9419
+scanned 9600..9619
+scanned 9800..9819
+scanned 10000..10019
+scanned 10200..10219
+scanned 10400..10419
+scanned 10600..10619
+scanned 10800..10819
+scanned 11000..11019
+scanned 11200..11219
+scanned 11400..11419
+scanned 11600..11619
+scanned 11800..11819
+scanned 12000..12019
+scanned 12200..12219
+scanned 12400..12419
+scanned 12600..12619
+scanned 12800..12819
+scanned 13000..13019
+scanned 13200..13219
+scanned 13400..13419
+scanned 13600..13619
+scanned 13800..13819
+scanned 14000..14019
+scanned 14200..14219
+scanned 14400..14419
+scanned 14600..14619
+scanned 14800..14819
+scanned 15000..15019
+scanned 15200..15219
+scanned 15400..15419
+scanned 15600..15619
+scanned 15800..15819
+scanned 16000..16019
+scanned 16200..16219
+scanned 16400..16419
+scanned 16600..16619
+scanned 16800..16819
+scanned 17000..17019
+scanned 17200..17219
+scanned 17400..17419
+scanned 17600..17619
+
+DGF 0x2F12d621a16e2d3285929C9996f478508951dFe4 ASR 0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9 block 26433900 games 0..17690 (17691)
+(type, creator, status, claimValid, blacklisted, retired) -> count
+(0, '0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a', 2, True, False, False) 8295
+(0, '0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a', 2, False, False, True) 4318
+(8, '0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a', 2, True, False, False) 1912
+(1, '0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a', 2, False, False, True) 1865
+(9, '0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a', 2, True, False, False) 836
+(9, '0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7', 2, True, False, False) 280
+(9, '0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7', 0, False, False, False) 84
+(9, '0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7', 2, False, False, False) 83
+(9, '0x8e68f16efd97b7fea23deb781483db965c8dd964', 1, False, False, False) 10
+(0, '0xfff2f7417be1a4e2ad1f26f538ad6f67d0fe11f2', 1, False, False, True) 2
+(8, '0x7bf86a1d37c2ac030b564becc42720c807c6c73e', 1, False, False, False) 2
+(0, '0xfff2f7417be1a4e2ad1f26f538ad6f67d0fe11f2', 2, False, False, True) 1
+(9, '0x299c7d6a43213f4f11bb7196b16f9ff81fc9d01b', 1, False, False, False) 1
+(9, '0x5b92f4f541a4ab686b174525063507c56de3fe68', 1, False, False, False) 1
+(9, '0x9995c45126e493a80af417eb3f3328a1e4511543', 0, False, False, False) 1
+EXIT 0

@@ -1,0 +1,13 @@
+No files changed, compilation skipped
+
+Ran 2 tests for test/W0Lineage.t.sol:W0LineageTest
+[PASS] test_W0_01_currentRegistryRegistersGameOfOldRegistry() (gas: 64577)
+[PASS] test_W0_02_oldRegistryAnchorMovableWithCurrentGame() (gas: 141395)
+Logs:
+  old anchorGame before: 0x9C9ac0A342D68040fe44d61de897E30Ad1c57bC3
+  old anchor l2BlockNumber before: 138585637
+  old anchor l2BlockNumber after: 157333888
+
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 12.21ms (2.19ms CPU time)
+
+Ran 1 test suite in 19.81ms (12.21ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

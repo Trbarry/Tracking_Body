@@ -1,0 +1,17 @@
+non-retired games: 1718
+headers 0/1718
+headers 800/1718
+headers 1600/1718
+
+(type, status, claimValid, headerMatch) -> count
+  (0, 'DEFENDER_WINS', True, True) 1344
+  (8, 'DEFENDER_WINS', True, True) 247
+  (9, 'DEFENDER_WINS', True, True) 94
+  (8, 'CHALLENGER_WINS', False, 'NO_SUCH_L2_BLOCK') 9
+  (9, 'CHALLENGER_WINS', False, False) 9
+  (9, 'DEFENDER_WINS', False, True) 7
+  (9, 'IN_PROGRESS', False, True) 7
+  (9, 'IN_PROGRESS', False, False) 1
+
+ANOMALIES (non-matching root that is claim-valid / not CHALLENGER_WINS, or matching root that lost): 1
+   2638 type 9 0x40bec00713a38ee5fd697764d50f0055ba4942cc creator 0x05f97bc048711287e912a72f4dbaa8faa7599eb5 IN_PROGRESS claimValid False l2Block 61359179 claimed 0x4bf7a459f2a916c09923fe3d8290e223d982d7d4a4c1f7839952b596ddb6f493 computed 0xaf30eecb2fb746b58c5ab9f302e25f16d7118aa05aec7454b869263b7a8aeadb superHashOk True entries 1 tsAligned True

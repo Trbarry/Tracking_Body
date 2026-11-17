@@ -1,0 +1,91 @@
+from h import *
+TR='2023_12-SuperchainConfigUpgrade-Trust'
+REPORT(TR,commit='d1651bb22645ebd41ac4bb2ab4786f9a56fc1003; mitigation review 81b56fee40f96c798174115c375f41c3d2ff9d40 (p5)',
+ scope='ALL CHANGES since the Sherlock contest commit in SuperchainConfig, L1CrossDomainMessenger, L1ERC721Bridge, L1StandardBridge, OptimismPortal, CrossDomainMessenger, ERC721Bridge, StandardBridge; special attention: gas-issue mitigations, storage slots across upgrades, reentrancy changes, SuperchainConfig pause, upgrade procedure side-effects (p5).',
+ oos='SystemConfig, L2OutputOracle, OptimismMintableERC20Factory, ProxyAdmin, AddressManager/ResolvedDelegateProxy, L2 predeploys, off-chain; only centralization risks introduced by the upgrade are listed (p23).')
+F(TR,'TRST-H-1','High','Critical','Anyone can execute a withdrawal twice by abusing the upgrade procedure (initializer resets xDomainMsgSender = reentrancy sentinel)','INITIALIZATION',['CrossDomainMessenger','L1CrossDomainMessenger'],['relayMessage','__CrossDomainMessenger_init','initialize'],
+ 'a signed upgrade tx is publicly executable (mempool) AND attacker owns a FAILED message with value pending replay','permissionless (front-runs/embeds the upgrade inside own message)','attacker replays own failed message, inside it executes the upgrade which resets xDomainMsgSender to DEFAULT, then re-enters relayMessage for the same message: drains ETH held by L1CDM for failed messages',
+ '(1) initializer no longer resets xDomainMsgSender when already set; (2) assert successfulMessages[hash]==false after the external call; plus an added reentrancy protection in OptimismPortal','fixed','p8-9',fix_commit='mitigation review 81b56fee40f96c798174115c375f41c3d2ff9d40',
+ residual='SAFETY CONDITION: no upgrade/reinitialize step may write a reentrancy sentinel (xDomainMsgSender, portal l2Sender) or be executable from inside a relayed message; upgrade txs executable by anyone are an attack surface',
+ siblings='OptimismPortal.l2Sender in initialize(); L2CrossDomainMessenger; StorageSetter-based re-init of every proxy',
+ later='v2.0.0 OPCM upgrade(): StorageSetter clears slot 0 then reinitialize (U13 review); v4.0.0 upgrade() functions on portal/messenger; v7 OPCMv2; v9 reinitializer(initVersion()) — each re-touches "initializer vs sentinel"')
+F(TR,'TRST-M-1','Medium','None','Anyone can make a victim\'s withdrawal TX revert/fail on first delivery (reentrant relay marks victim message failed)','REENTRANCY_STATE_CLOBBER',['CrossDomainMessenger','OptimismPortal'],['relayMessage','finalizeWithdrawalTransaction'],
+ 'attacker has own relayable message; victim withdrawal finalizable','permissionless','attacker message calls portal.finalize(victim) while xDomainMsgSender is set -> victim relay takes the reentrancy branch, is stored in failedMessages; portal marks finalized; victim must replay manually (griefing, extra gas, delay)',
+ 'none — acknowledged, "tracked for future upgrades"','acknowledged','p9-10',
+ residual='LIVE BY DESIGN: forced-fail of third-party messenger withdrawals; ETH of the failed message is then parked in L1CDM until replay',
+ later='v9 PASS A lead L3 (forced-fail composition) is this acknowledged issue; v9 NoReentrancy on portal finalize changes the outcome from "failed-and-replayable" to revert?')
+F(TR,'TRST-M-2','Medium','None','Insufficient calldata gas stipend could make initial delivery fail (baseGas counts calldata once, two calls happen)','GAS_ACCOUNTING',['CrossDomainMessenger'],['baseGas'],'large message with tight minGasLimit','n/a','first delivery fails and is stored failed; delay + replay cost','acknowledged','acknowledged','p10-11',later='v3+/v9 baseGas rework')
+F(TR,'TRST-M-3','Medium','Critical','Messages of over 50k bytes can be permanently lost due to unaccounted gas costs (memory expansion + hashing before failedMessages write)','GAS_ACCOUNTING',['CrossDomainMessenger','L1CrossDomainMessenger','OptimismPortal'],['relayMessage','baseGas','sendMessage'],
+ 'withdrawal via messenger with message >= ~50,000 bytes (v0) / larger for v1 and minGasLimit 0','permissionless finalizer chooses gas','relayMessage OOGs before recording failure while portal finalizes -> permanent loss of message value',
+ 'none at the time — acknowledged; recommendation: cap sendMessage payload size','acknowledged','p11-14',
+ residual='KNOWN since 2023-12 and unfixed through v8: "finalized-without-record" for large payloads. v9 fixes (PASS A C6).',
+ siblings='L2CrossDomainMessenger direction (deposit: tx reverts, ETH minted to aliased sender?)',
+ later='v9 L1CDM 2.13.0 (150k reserve, size-aware) — FIX ARRIVED 3 YEARS LATER; pre-existing in-flight large messages are consumed by new code')
+F(TR,'TRST-L-2','Low','None','The metering logic in OptimismPortal will be incorrect immediately after the upgrade (initializer resets ResourceParams/prevBoughtGas)','INITIALIZATION',['OptimismPortal','ResourceMetering'],['initialize','__ResourceMetering_init'],'upgrade re-runs initialize','upgrade operator','prevBoughtGas reset -> maxResourceLimit exceeded in that block; base fee reset',
+ '__ResourceMetering_init no longer resets params if already set','fixed','p15-16',residual='initializer idempotence for every stateful field',later='same pattern as TRST-H-1; every later initialize()/upgrade() must be idempotent on live state (v2 U13, v4 U16, v9)')
+F(TR,'TRST-L-3','Low','None','A storage slot is accidentally skipped (CrossDomainMessenger gap 44 instead of 43)','UPGRADE_STORAGE_LAYOUT',['CrossDomainMessenger'],['__gap'],'n/a','n/a','messenger uses one more slot than intended (total 251)','acknowledged','acknowledged','p16-17',later='layout frozen with this off-by-one; v1.3.0+ adds otherMessenger/superchainConfig/portal after gap; v4 adds systemConfig')
+F(TR,'TRST-L-4','Low','None','Upgrades are resetting the state of unused storage slots (StorageSetter 2-step upgrade writes removed variables)','UPGRADE_SEQUENCING',['op-chain-ops l1.go','StorageSetter','OptimismMintableERC20Factory','OptimismPortal','SystemConfig','L2OutputOracle','L1StandardBridge','L1CrossDomainMessenger'],['upgrade script'],'upgrade','upgrade operator','stale/corrupt data in slots of variables that no longer exist',
+ 'acknowledged','acknowledged','p17-18',residual='spacer slots may hold non-zero residue written by upgrade tooling on some chains and not others',
+ later='PASS A C2 tested junk in legacy slots for v9 on 4 chains; chain-specific histories (queue B08/B13)')
+F(TR,'TRST-L-5','Low','None','RELAY_GAS_CHECK_BUFFER (5000) insufficient by a few hundred gas','GAS_ACCOUNTING',['CrossDomainMessenger'],['relayMessage'],'tight gas','finalizer','target receives slightly less than minGasLimit','acknowledged','acknowledged','p18-19',later='v9 constants')
+F(TR,'TRST-L-6','Low','None','OptimismPortal consumes all forwarded gas even if the TX is undeliverable (Burn.gas)','GAS_ACCOUNTING',['OptimismPortal','ResourceMetering','Burn'],['depositTransaction','metered'],'insufficient gas forwarded','user','all gas burned then revert','acknowledged','acknowledged','p19-21')
+F(TR,'TRST-L-7','Low','None','Users can underpay gas for contract creations (minimumGasLimit ignores 32k create cost)','GAS_ACCOUNTING',['OptimismPortal'],['minimumGasLimit','depositTransaction'],'creation deposit','user','creation fails on L2','acknowledged','acknowledged','p21')
+F(TR,'TRST-L-1','Low','None','User forced to overpay for deposit gas (16 gas per byte irrespective of zero bytes)','GAS_ACCOUNTING',['OptimismPortal'],['minimumGasLimit'],'n/a','n/a','overpay','acknowledged','acknowledged','p14-15')
+F(TR,'TRST-L-8','Low','None','Different ERC20Factory addresses between chains','CONFIG_TRUST',['OptimismMintableERC20Factory'],['createOptimismMintableERC20'],'n/a','n/a','no same-address tokens across chains','acknowledged','acknowledged','p22')
+F(TR,'TRST-CR-1','Centralization','None','The SuperchainConfig guardian can pause all Superchains','PAUSE_COVERAGE',['SuperchainConfig'],['pause'],'guardian action','privileged','one pause button for all chains sharing the SuperchainConfig','by design','acknowledged','p23',
+ residual='pause scope = every chain pointing at the same SuperchainConfig proxy',later='v2.0.0 (U13) portal reads pause via SystemConfig->SuperchainConfig; v3/v4 (U15/16) per-identifier pause with expiry + DeputyPauseModule; v9 lockbox identifier')
+MC='2024_02-MCP_L1-Cantina'
+REPORT(MC,commit='e6ef3a900c42c8722e72c2e2314027f85d12ced5 (= op-contracts/v1.3.0) (p3, README)',
+ scope='MCP L1 upgrade (immutables -> storage so implementations are shared): OptimismPortal, L1CrossDomainMessenger, L1StandardBridge, L1ERC721Bridge, OptimismMintableERC20Factory, L2OutputOracle, SystemConfig + op-chain-ops/upgrades/l1.go (README; p4-10).',
+ oos='No finding status / fix review is printed in the report. L2 contracts only incidentally. SuperchainConfig not re-reviewed.')
+F(MC,'3.1.1','Low','None','Avoid using real values in the implementation (otherMessenger set to predeploy in impl)','INITIALIZATION',['L1CrossDomainMessenger'],['constructor','initialize'],'n/a','n/a','implementation not distinguishable from proxy','use non-real values','not stated','p4')
+F(MC,'3.1.2','Low','None','Different sources of values for checking and deployment (Go bindings vs Predeploys.sol)','UPGRADE_SEQUENCING',['op-chain-ops l1.go','L1CrossDomainMessenger'],['upgrade check'],'files out of sync','upgrade operator','wrong address initialised','add consistency checks','not stated','p4')
+F(MC,'3.1.4','Low','None','OP Chain deployment process not compatible with MCP L1 (new chains deploy own implementations)','UPGRADE_SEQUENCING',['Deploy.s.sol'],['setupOpChain'],'new chain deployment','deployer','new chains not covered by atomic upgrades','reuse implementations','not stated','p5-6',later='solved structurally by OPCM (v1.6.0 deploy, v2.0.0 upgrade); chains deployed between v1.3.0 and OPCM have bespoke implementations (queue B13)')
+F(MC,'3.1.7','Low','None','Resource config values can be modified during the MCP L1 upgrade (default ResourceConfig passed to SystemConfig.initialize)','UPGRADE_SEQUENCING',['SystemConfig','op-chain-ops l1.go'],['initialize','setResourceConfig'],'chain had a non-default resource config','upgrade operator','deposit gas market parameters silently reset',
+ 'carry over current values','not stated','p7',residual='every re-initialize must carry over ALL live values',later='v2+ SystemConfig.upgrade()/reinit paths; v9 U21 re-emits ConfigUpdate events (queue B12)')
+F(MC,'3.2.7','Informational','None','Upgrading poses the risk of unintentional modification of state variables (single initialize() used for deploy and upgrade)','UPGRADE_SEQUENCING',['SystemConfig','all upgradeable L1 contracts'],['initialize'],'upgrade','upgrade operator','existing storage (incl. now-mutable proxy addresses) overwritten by mistake',
+ 'separate initialize_upgrade + reinitializer versioning (recommendation)','not stated','p10',residual='addresses that used to be immutables (portal, messenger, otherBridge, l2Oracle, systemConfig, guardian) are now mutable storage written by initialize()',
+ later='v4.0.0 introduces upgrade() functions; v9 ReinitializableBase/initVersion (queue B07/B08)')
+MC_INFO='Low not recorded: 3.1.3 (FeeVault gaps, L2), 3.1.5 (version numbers), 3.1.6 (tests); Informational: 7 (3.2.7 recorded for relevance)'
+SF='2024_03-FaultProofs-Sherlock-contest'
+REPORT(SF,commit='5137f3b74c6ebcac4f0f5a118b0f4909df03aec6 (develop) (PDF p1; audits-txt/2024_05-FaultProofs-Sherlock.txt and ext/2024-02-optimism-2024-judging)',
+ scope='Fault-proof system safeguards: OptimismPortal2, DisputeGameFactory, AnchorStateRegistry, DelayedWETH, FaultDisputeGame, MIPS, PreimageOracle. Contest premise: ASSUME THE GAME IS BUGGY and look for ways to bypass the safety net (air-gap + DelayedWETH + guardian).',
+ oos='Per judging: any issue whose root cause is in FaultDisputeGame/MIPS/PreimageOracle is OUT OF SCOPE unless it bypasses the airgap and/or DelayedWETH safety net; re-org / network liveness issues invalid by default. Result: 11 "H" and 20 "M" submission families in the judging repo are NOT in the final report (4 Mediums only).')
+F(SF,'M-1','Medium','Critical','Incorrect game type can be proven and finalized due to unsafe cast (GameType.raw() returns uint8)','INPUT_VALIDATION_MISSING',['OptimismPortal2','LibGameType'],['proveWithdrawalTransaction','checkWithdrawal','raw'],
+ '>=256 game types exist (type 256+n aliases type n); aliased type exploitable/unwatched','permissionless','games of an unrespected/unwatched type accepted as respectedGameType in prove and finalize -> arbitrary withdrawals',
+ 'raw() returns uint32 (PR 10152)','fixed','PDF p3-27',fix_commit='optimism PR 10152 (hash not stated)',residual='GameType equality is the ONLY binding between a game and the portal trust decision at prove time',
+ siblings='DisputeGameFactory.gameImpls keys; ASR anchors[gameType]; later super-root game types 4/5/8/9',
+ later='v3.0.0 moves respectedGameType + checks to AnchorStateRegistry (isGameRespected snapshot "wasRespectedGameTypeWhenCreated"); v4 super roots; v8/v9 gameArgs keyed by type')
+F(SF,'M-2','Medium','Medium','Fault game factory can be manipulated to DoS game type using malicious l2BlockNumber (anchor poisoned with max block)','ANCHOR_STATE',['FaultDisputeGame','AnchorStateRegistry','DisputeGameFactory'],['initialize','tryUpdateAnchorState'],
+ 'a game whose root claim hash is right for block n but claims l2BlockNumber = huge resolves DEFENDER_WINS','permissionless (needs the game to resolve in its favour)','anchor state l2BlockNumber set to type(uint256).max -> no new game of that type can be created',
+ 'l2BlockNumber bound into the claim and challengeable: challengeRootL2Block (PRs 10431, 10434, 10438)','fixed','PDF p28-41',fix_commit='optimism PRs 10431/10434/10438',
+ residual='anchor only advances from a game that is finalized and valid per the registry',
+ later='v1.4.0 -> v1.6.0 FDG challengeRootL2Block; v3.0.0 ASR rewrite (setAnchorState gated on isGameClaimValid, anchor game stored); v4/v8 super-root games have l2SequenceNumber not block number')
+F(SF,'M-3','Medium','Medium','Theft of initial bonds from proposers using smart wallets (tx.origin credited as game creator)','CROSS_DOMAIN_IDENTITY',['DisputeGameFactory','FaultDisputeGame'],['create','initialize'],
+ 'proposer is a smart-contract wallet / relayed tx','front-runner','bond credited to tx.origin rather than msg.sender of create',
+ 'factory passes real creator: gameCreator in clone immutable args (PR 10149)','fixed','PDF p42-53',fix_commit='optimism PR 10149',
+ residual='creator identity comes from factory msg.sender',later='PermissionedDisputeGame keeps tx.origin == PROPOSER check (acknowledged; PASS A lead L7); v8/v9 type-5 super permissioned game')
+F(SF,'M-4','Medium','None','Loss of bond amounts on re-org attacks (move not bound to parent claim hash)','DISPUTE_GAME_LOGIC',['FaultDisputeGame'],['move','attack','defend'],'L1 re-org reorders claims','re-org beneficiary','honest challenger move lands on a different parent',
+ 'move takes _disputed claim hash (PR 10520)','fixed','PDF p54-60',fix_commit='optimism PR 10520',later='v1.4.0+ move(Claim _disputed, uint256 _challengeIndex, ...)')
+# submission families not in the final report (publicly known root causes; judged OOS/invalid under contest rules)
+for fid,title,rc,funcs in [
+ ('fam-002-H','Incorrect logic resolving claims/distributing bonds (defense counted as counter)','DISPUTE_GAME_LOGIC',['resolveClaim']),
+ ('fam-003-H','Loss of undistributed bond after status changes to DEFENDER_WINS/CHALLENGER_WINS','DISPUTE_GAME_LOGIC',['resolve','claimCredit']),
+ ('fam-004-H','Claims can be challenged after they have been resolved (clock of parent not expired check wrong)','DISPUTE_GAME_LOGIC',['resolveClaim','move']),
+ ('fam-006-H','Subgames can be won at the last second (no clock extension)','DISPUTE_GAME_LOGIC',['move','resolveClaim']),
+ ('fam-008-H','Wrong clock management leads to resolveClaim DoS','DISPUTE_GAME_LOGIC',['resolveClaim']),
+ ('fam-010-H','move can be called after resolveClaim making game unresolvable','DISPUTE_GAME_LOGIC',['move','resolveClaim']),
+ ('fam-001-M','respectedGameType uninitialized in OptimismPortal2 proxy','INITIALIZATION',['initialize']),
+ ('fam-002-M','respectedGameTypeUpdatedAt not set in OptimismPortal2.initialize()','INITIALIZATION',['initialize']),
+ ('fam-003-M','Withdrawal finalization can fail if prove is called in same block as game creation (createdAt > respectedGameTypeUpdatedAt strictness)','INVERTED_OR_WRONG_CONDITION',['checkWithdrawal']),
+ ('fam-007-M','createdAt/resolvedAt not validated against respectedGameTypeUpdatedAt when deciding re-prove','GAME_TYPE_LIFECYCLE',['proveWithdrawalTransaction','checkWithdrawal']),
+ ('fam-009-M','Blacklisted / incorrectly resolved game still feeds AnchorStateRegistry consumed by other games','ANCHOR_STATE',['tryUpdateAnchorState']),
+ ('fam-008-M','DelayedWETH: unlock once, withdraw repeatedly without new delay','ACCOUNTING_CONSERVATION',['unlock','withdraw']),
+ ('fam-013-M','Game with correct rootClaim cannot be re-created after failure (UUID collision in factory)','DISPUTE_GAME_LOGIC',['create']),
+ ('fam-024-M','Overflow in LibGameType (dup family of M-1)','INPUT_VALIDATION_MISSING',['raw']),
+ ('fam-012-M','Bricking resolution through creation of many subgames (gas)','DOS_RESOURCE',['resolveClaim']),
+ ('fam-021-M','Unlimited parallel games undermine dispute game properties','DOS_RESOURCE',['create']),
+ ]:
+    F(SF,fid,'submitted family; NOT in final report (judged invalid/OOS under contest rules)','None',title,rc,['FaultDisputeGame' if 'H' in fid or fid in('fam-012-M','fam-013-M','fam-021-M') else 'OptimismPortal2/ASR/DelayedWETH'],funcs,
+      'see ext/2024-02-optimism-2024-judging/'+fid[4:],'permissionless','as titled (not validated by judges)','several addressed later (see 2024_08 Spearbit No-MIPS: clock extension, resolution ordering, anchor rules)','disputed','judging repo folder '+fid[4:],
+      residual='publicly disclosed root cause: a triager will treat a re-submission as known',later='v1.6.0 FDG (clock extension, split-depth extension), v2.0.0 bond distribution modes, v3.0.0 ASR')

@@ -1,0 +1,439 @@
+{
+ "rpc": "http://127.0.0.1:7545",
+ "end_block": 26433900,
+ "sample_step": 20000,
+ "method": "sample slot every step blocks from first-code block, bisect differing intervals; version() via eth_call at the change block",
+ "targets": [
+  {
+   "name": "AnchorStateRegistry gen1 (U7..Holocene)",
+   "address": "0x18DAc71c228D1C32c99489B7323d441E1175e443",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x18DAc71c228D1C32c99489B7323d441E1175e443",
+   "first_code_block": 19884569,
+   "history": [
+    {
+     "block": 19884569,
+     "timestamp": 1715887043,
+     "utc": "2024-05-16 19:17:23",
+     "slot_value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "implementation": "0x0000000000000000000000000000000000000000",
+     "version": null,
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xbf969d2a0604645d477c39f125afe506b489281a41e302739b74436f909adb59",
+       "from": "0xf2fbae9b080ae2ac24a56cf456636804fa54db29",
+       "to": null,
+       "selector": "0x60806040"
+      }
+     ]
+    },
+    {
+     "block": 19884570,
+     "timestamp": 1715887055,
+     "utc": "2024-05-16 19:17:35",
+     "slot_value": "0x0000000000000000000000006b7da1647aa9684f54b2beeb699f91f31cd35fb9",
+     "implementation": "0x6b7da1647aa9684f54b2beeb699f91f31cd35fb9",
+     "version": "1.0.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xa3a31ec801f08783b49b1e45953090616e7cadd3b85950983823c49a428665ac",
+       "from": "0xf2fbae9b080ae2ac24a56cf456636804fa54db29",
+       "to": "0x18dac71c228d1c32c99489b7323d441e1175e443",
+       "selector": "0x4f1ef286"
+      }
+     ]
+    },
+    {
+     "block": 20723924,
+     "timestamp": 1726016099,
+     "utc": "2024-09-11 00:54:59",
+     "slot_value": "0x0000000000000000000000001b5cc028a4276597c607907f24e1ac05d3852cfc",
+     "implementation": "0x1b5cc028a4276597c607907f24e1ac05d3852cfc",
+     "version": "2.0.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x3bd2d811d0298313e6fb75f0e69fb54280c9b4f2e60f8f04472aaa166c285641",
+       "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnchorStateRegistry gen2 (U13..U15a)",
+   "address": "0x1c68ECfbf9C8B1E6C0677965b3B9Ecf9A104305b",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x1c68ECfbf9C8B1E6C0677965b3B9Ecf9A104305b",
+   "first_code_block": 22182531,
+   "history": [
+    {
+     "block": 22182531,
+     "timestamp": 1743612623,
+     "utc": "2025-04-02 16:50:23",
+     "slot_value": "0x0000000000000000000000007b465370bb7a333f99edd19599eb7fb1c2d3f8d2",
+     "implementation": "0x7b465370bb7a333f99edd19599eb7fb1c2d3f8d2",
+     "version": "2.2.2",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29",
+       "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "DelayedWETH gen1 shared (U7,Fjord)",
+   "address": "0xE497B094d6DbB3D5E4CaAc9a14696D7572588d14",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0xE497B094d6DbB3D5E4CaAc9a14696D7572588d14",
+   "first_code_block": 19884569,
+   "history": [
+    {
+     "block": 19884569,
+     "timestamp": 1715887043,
+     "utc": "2024-05-16 19:17:23",
+     "slot_value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "implementation": "0x0000000000000000000000000000000000000000",
+     "version": null,
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x00d68fc3a7a30d6436b97ef24a5fd2d56ec8fc4934b6bce94c3a624cfd48587f",
+       "from": "0xf2fbae9b080ae2ac24a56cf456636804fa54db29",
+       "to": null,
+       "selector": "0x60806040"
+      }
+     ]
+    },
+    {
+     "block": 19884570,
+     "timestamp": 1715887055,
+     "utc": "2024-05-16 19:17:35",
+     "slot_value": "0x00000000000000000000000097988d5624f1ba266e1da305117bcf20713bee08",
+     "implementation": "0x97988d5624f1ba266e1da305117bcf20713bee08",
+     "version": "1.0.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x1fb771bc636a50b087f71dc033e841c7c165f5459396e31c184a84c5a448e044",
+       "from": "0xf2fbae9b080ae2ac24a56cf456636804fa54db29",
+       "to": "0xe497b094d6dbb3d5e4caac9a14696d7572588d14",
+       "selector": "0x4f1ef286"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "DelayedWETH gen2 permissionless (Granite)",
+   "address": "0x82511d494B5C942BE57498a70Fdd7184Ee33B975",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x82511d494B5C942BE57498a70Fdd7184Ee33B975",
+   "first_code_block": 20637593,
+   "history": [
+    {
+     "block": 20637593,
+     "timestamp": 1724975003,
+     "utc": "2024-08-29 23:43:23",
+     "slot_value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "implementation": "0x0000000000000000000000000000000000000000",
+     "version": null,
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xd9f9b3f7fc2611bb75787400b20fb3596293a05071422d16ae86366ea64dff9d",
+       "from": "0x6f19ac9a502263d0e6b3f8b5d5c328d4fe4e35c6",
+       "to": null,
+       "selector": "0x60806040"
+      }
+     ]
+    },
+    {
+     "block": 20637603,
+     "timestamp": 1724975123,
+     "utc": "2024-08-29 23:45:23",
+     "slot_value": "0x00000000000000000000000071e966ae981d1ce531a7b6d23dc0f27b38409087",
+     "implementation": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+     "version": "1.1.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xb5cf8f61fadb175bde0f7df2b7fe5f6837534f5d76d46c22b4bd5d0873c0deaa",
+       "from": "0x6f19ac9a502263d0e6b3f8b5d5c328d4fe4e35c6",
+       "to": "0x82511d494b5c942be57498a70fdd7184ee33b975",
+       "selector": "0x4f1ef286"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "DelayedWETH gen2 permissioned (Granite)",
+   "address": "0x9F9b897e37de5052cD70Db6D08474550DDb07f39",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x9F9b897e37de5052cD70Db6D08474550DDb07f39",
+   "first_code_block": 20637594,
+   "history": [
+    {
+     "block": 20637594,
+     "timestamp": 1724975015,
+     "utc": "2024-08-29 23:43:35",
+     "slot_value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "implementation": "0x0000000000000000000000000000000000000000",
+     "version": null,
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xb1757756fde786dfe0c38df1f4e74f2d488124b791e7673130143cd48d56fd19",
+       "from": "0x6f19ac9a502263d0e6b3f8b5d5c328d4fe4e35c6",
+       "to": null,
+       "selector": "0x60806040"
+      }
+     ]
+    },
+    {
+     "block": 20637604,
+     "timestamp": 1724975135,
+     "utc": "2024-08-29 23:45:35",
+     "slot_value": "0x00000000000000000000000071e966ae981d1ce531a7b6d23dc0f27b38409087",
+     "implementation": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+     "version": "1.1.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x25ff142069370a51e79a6c20e066cb5f976667fcd0d31203afed8cccfb864c09",
+       "from": "0x6f19ac9a502263d0e6b3f8b5d5c328d4fe4e35c6",
+       "to": "0x9f9b897e37de5052cd70db6d08474550ddb07f39",
+       "selector": "0x4f1ef286"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "DelayedWETH gen3 permissionless (Holocene..U15a)",
+   "address": "0x323dFC63c9B83CB83f40325AaB74b245937cbdF0",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x323dFC63c9B83CB83f40325AaB74b245937cbdF0",
+   "first_code_block": 21379271,
+   "history": [
+    {
+     "block": 21379271,
+     "timestamp": 1733920199,
+     "utc": "2024-12-11 12:29:59",
+     "slot_value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "implementation": "0x0000000000000000000000000000000000000000",
+     "version": null,
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xdf99e2d8ccaace1eff51d901199de6dfdc9a069422a13b6a713bc129af27524c",
+       "from": "0x4cddf5108ee9392743b45307757a807d397c1eff",
+       "to": null,
+       "selector": "0x60806040"
+      }
+     ]
+    },
+    {
+     "block": 21379272,
+     "timestamp": 1733920211,
+     "utc": "2024-12-11 12:30:11",
+     "slot_value": "0x00000000000000000000000071e966ae981d1ce531a7b6d23dc0f27b38409087",
+     "implementation": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+     "version": "1.1.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x01fcf03047d62053c36632d455437fb4cee158324af1d57a50cb50b43a7f8499",
+       "from": "0x4cddf5108ee9392743b45307757a807d397c1eff",
+       "to": "0x323dfc63c9b83cb83f40325aab74b245937cbdf0",
+       "selector": "0x4f1ef286"
+      }
+     ]
+    },
+    {
+     "block": 22182531,
+     "timestamp": 1743612623,
+     "utc": "2025-04-02 16:50:23",
+     "slot_value": "0x0000000000000000000000005e40b9231b86984b5150507046e354dbfbed3d9e",
+     "implementation": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
+     "version": "1.3.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29",
+       "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "DelayedWETH gen3 permissioned (Holocene..U15a)",
+   "address": "0x21429aF66058BC3e4aE4a8f2EC4531AaC433ecbC",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x21429aF66058BC3e4aE4a8f2EC4531AaC433ecbC",
+   "first_code_block": 21379267,
+   "history": [
+    {
+     "block": 21379267,
+     "timestamp": 1733920151,
+     "utc": "2024-12-11 12:29:11",
+     "slot_value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "implementation": "0x0000000000000000000000000000000000000000",
+     "version": null,
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x70859ae1fd7a128ef969e65b861a9dfc0f2ac2086e2976e6b4b81c0c47a05a57",
+       "from": "0x4cddf5108ee9392743b45307757a807d397c1eff",
+       "to": null,
+       "selector": "0x60806040"
+      }
+     ]
+    },
+    {
+     "block": 21379268,
+     "timestamp": 1733920163,
+     "utc": "2024-12-11 12:29:23",
+     "slot_value": "0x00000000000000000000000071e966ae981d1ce531a7b6d23dc0f27b38409087",
+     "implementation": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+     "version": "1.1.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x6b9ad25cef01bd97f1be9642d96cbf75d533129608d5a62e4ae3d69ead47d3dc",
+       "from": "0x4cddf5108ee9392743b45307757a807d397c1eff",
+       "to": "0x21429af66058bc3e4ae4a8f2ec4531aac433ecbc",
+       "selector": "0x4f1ef286"
+      }
+     ]
+    },
+    {
+     "block": 22182531,
+     "timestamp": 1743612623,
+     "utc": "2025-04-02 16:50:23",
+     "slot_value": "0x0000000000000000000000005e40b9231b86984b5150507046e354dbfbed3d9e",
+     "implementation": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
+     "version": "1.3.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29",
+       "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "DelayedWETH gen4 permissionless (U16)",
+   "address": "0xe214879ad573693a4c49f7654449caa455cde34f",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0xe214879ad573693a4c49f7654449caa455cde34f",
+   "first_code_block": 22990599,
+   "history": [
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "slot_value": "0x00000000000000000000000033dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+     "implementation": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+     "version": "1.5.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "DelayedWETH gen4 permissioned (U16)",
+   "address": "0xc5f54f934075677fba99b5e43468439cbde88ca7",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0xc5f54f934075677fba99b5e43468439cbde88ca7",
+   "first_code_block": 22990599,
+   "history": [
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "slot_value": "0x00000000000000000000000033dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+     "implementation": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+     "version": "1.5.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "DelayedWETH gen5 permissionless (U16a,U17)",
+   "address": "0xd061ab95069987868768818cc1248705351e2d0e",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0xd061ab95069987868768818cc1248705351e2d0e",
+   "first_code_block": 23491328,
+   "history": [
+    {
+     "block": 23491328,
+     "timestamp": 1759422923,
+     "utc": "2025-10-02 16:35:23",
+     "slot_value": "0x00000000000000000000000033dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+     "implementation": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+     "version": "1.5.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "DelayedWETH gen5 permissioned (U16a,U17)",
+   "address": "0xe03f4d1d0e6b8b18b97198598b3f792e57ba17d4",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0xe03f4d1d0e6b8b18b97198598b3f792e57ba17d4",
+   "first_code_block": 23491328,
+   "history": [
+    {
+     "block": 23491328,
+     "timestamp": 1759422923,
+     "utc": "2025-10-02 16:35:23",
+     "slot_value": "0x00000000000000000000000033dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+     "implementation": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+     "version": "1.5.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "rpc_calls": 3077
+}

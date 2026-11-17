@@ -1,0 +1,101 @@
+OP: scanned through 399/21388
+OP: scanned through 799/21388
+OP: scanned through 1199/21388
+OP: scanned through 1599/21388
+OP: scanned through 1999/21388
+OP: scanned through 2399/21388
+retry: {'code': 429, 'message': 'Your app has exceeded its compute units per second capacity. If you have retries enabled, you can safely ignore this message. If not, check out https://docs.alchemy.com/reference/throughput'}
+OP: scanned through 2799/21388
+OP: scanned through 3199/21388
+OP: scanned through 3599/21388
+OP: scanned through 3999/21388
+OP: scanned through 4399/21388
+OP: scanned through 4799/21388
+OP: scanned through 5199/21388
+OP: scanned through 5599/21388
+OP: scanned through 5999/21388
+OP: scanned through 6399/21388
+OP: scanned through 6799/21388
+OP: scanned through 7199/21388
+OP: scanned through 7599/21388
+OP: scanned through 7999/21388
+OP: scanned through 8399/21388
+OP: scanned through 8799/21388
+OP: scanned through 9199/21388
+OP: scanned through 9599/21388
+OP: scanned through 9999/21388
+OP: scanned through 10399/21388
+OP: scanned through 10799/21388
+OP: scanned through 11199/21388
+OP: scanned through 11599/21388
+OP: scanned through 11999/21388
+OP: scanned through 12399/21388
+OP: scanned through 12799/21388
+OP: scanned through 13199/21388
+OP: scanned through 13599/21388
+OP: scanned through 13999/21388
+OP: scanned through 14399/21388
+OP: scanned through 14799/21388
+OP: scanned through 15199/21388
+OP: scanned through 15599/21388
+OP: scanned through 15999/21388
+OP: scanned through 16399/21388
+OP: scanned through 16799/21388
+OP: scanned through 17199/21388
+OP: scanned through 17599/21388
+OP: scanned through 17999/21388
+retry: {'code': 429, 'message': 'Your app has exceeded its compute units per second capacity. If you have retries enabled, you can safely ignore this message. If not, check out https://docs.alchemy.com/reference/throughput'}
+OP: scanned through 18399/21388
+OP: scanned through 18799/21388
+OP: scanned through 19199/21388
+OP: scanned through 19599/21388
+OP: scanned through 19999/21388
+OP: scanned through 20399/21388
+OP: scanned through 20799/21388
+OP: scanned through 21199/21388
+OP: scanned through 21388/21388
+(type, creator, status, claimValid, blacklisted, retired) -> count
+(0, '0x473300df21d047806a082244b417f96b32f13a33', 2, False, False, True) 9143
+(0, '0x473300df21d047806a082244b417f96b32f13a33', 2, True, False, False) 8029
+(8, '0x473300df21d047806a082244b417f96b32f13a33', 2, True, False, False) 2167
+(9, '0x473300df21d047806a082244b417f96b32f13a33', 2, True, False, False) 1115
+(1, '0x473300df21d047806a082244b417f96b32f13a33', 2, False, False, True) 617
+(9, '0x473300df21d047806a082244b417f96b32f13a33', 2, False, False, False) 84
+(9, '0x473300df21d047806a082244b417f96b32f13a33', 0, False, False, False) 74
+(0, '0xaa08d45476da6831e03b707dbd4d473e1a0f9288', 1, False, False, True) 61
+(0, '0xaa08d45476da6831e03b707dbd4d473e1a0f9288', 1, False, False, False) 48
+(8, '0xaa08d45476da6831e03b707dbd4d473e1a0f9288', 1, False, False, False) 13
+(9, '0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0', 0, False, False, False) 11
+(9, '0xaa08d45476da6831e03b707dbd4d473e1a0f9288', 1, False, False, False) 6
+(0, '0xf2fbae9b080ae2ac24a56cf456636804fa54db29', 2, False, False, True) 2
+(8, '0x4cea68bfa2fac3e11eb05680894d9f13ab99ecd0', 1, False, False, False) 2
+(0, '0xf2fbae9b080ae2ac24a56cf456636804fa54db29', 1, False, False, True) 1
+(0, '0x64d8b3da3ac1ada3e9dd1da29335a9e586fd6ae5', 2, False, False, True) 1
+(0, '0x394400571c825da37ca4d6780417dfb514141b1f', 1, False, False, True) 1
+(0, '0x7cfed2a2d4a98680dac6aa55120f5af2ec562ebd', 1, False, False, True) 1
+(0, '0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5', 1, False, False, True) 1
+(8, '0x9a2e021ddbe7c7223f481163da9fb03dbbdc200f', 1, False, False, False) 1
+(8, '0x34e0f440335e9aaed33bd1b7e1e1b254c4d3722e', 1, False, False, False) 1
+(8, '0x34e0f440335e9aaed33bd1b7e1e1b254c4d3722e', 2, True, False, False) 1
+(8, '0x86205ad7fb5d817bb581d8df28294b9fd1f0cc97', 1, False, False, False) 1
+(8, '0x1f618a6c69383c837c51f755dc5fa4c7454d5a96', 1, False, False, False) 1
+(8, '0x1bf71293bc683e5a6b2dff6fa80eb111be9efb3f', 1, False, False, False) 1
+(8, '0xfeede1e90742a80a4f74af742a1ed079752c9ba8', 1, False, False, False) 1
+(8, '0x76adf26d920204868ba9a4ea1944ea4ff9d0d255', 1, False, False, False) 1
+(9, '0x6842ec29e31d5c4269a4c3bda056c42ed86057f8', 1, False, False, False) 1
+(9, '0x0bce8d03b884fdf021f7935e5b1929f5d3aa6309', 1, False, False, False) 1
+(9, '0x1d0519eed308bcd49e4ebc149284f83ebc275284', 1, False, False, False) 1
+(9, '0x7813cc252d34c1f5275a930df0c308f4cd0b312d', 1, False, False, False) 1
+thirdPartyLive=12
+{"blacklisted": false, "claimValid": true, "createdAt": 1787107331, "creator": "0x34e0f440335e9aaed33bd1b7e1e1b254c4d3722e", "game": "0x4ffb1a59a7d81876377a74b59869670d8192abff", "index": 19206, "l2SequenceNumber": 155450031, "retired": false, "rootClaim": "0x51396457e477e2df197ae9f82473425b296b469e22e6849d217949067b3b971c", "status": 2, "thirdPartyLive": true, "type": 8, "weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162"}
+{"blacklisted": false, "claimValid": false, "createdAt": 1794870155, "creator": "0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0", "game": "0x675e956b1912df79108408ca524fb37810500d10", "index": 21377, "l2SequenceNumber": 1794868743, "retired": false, "rootClaim": "0x3c35e3118a9795065e6283c0b2efb02330e19e1c6ee96842a8d0088314affda7", "status": 0, "thirdPartyLive": true, "type": 9, "weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162"}
+{"blacklisted": false, "claimValid": false, "createdAt": 1794873779, "creator": "0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0", "game": "0x5881439bc8dc7cb264a6fbdc9cfbeabc9fe1f446", "index": 21379, "l2SequenceNumber": 1794872615, "retired": false, "rootClaim": "0xc16bd4dc50a969fced5d0c215178371507c3161acead1b73f6859e38a8c9cca2", "status": 0, "thirdPartyLive": true, "type": 9, "weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162"}
+{"blacklisted": false, "claimValid": false, "createdAt": 1794877403, "creator": "0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0", "game": "0x45f3f1b43ba47610f7761f321818f5d4d736397e", "index": 21380, "l2SequenceNumber": 1794875861, "retired": false, "rootClaim": "0xb4b8b9e4782a6f2c6ceaacce01882d33ee6b9944d0304d3dc73d4679a62ec37c", "status": 0, "thirdPartyLive": true, "type": 9, "weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162"}
+{"blacklisted": false, "claimValid": false, "createdAt": 1794881015, "creator": "0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0", "game": "0xf216d5f2b40a27383963f57940b9ee88bd9bfbd8", "index": 21381, "l2SequenceNumber": 1794879937, "retired": false, "rootClaim": "0x63445c58582b87967e4dbcb57751877b64b14bb6f044054c505e517cd2849681", "status": 0, "thirdPartyLive": true, "type": 9, "weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162"}
+{"blacklisted": false, "claimValid": false, "createdAt": 1794884639, "creator": "0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0", "game": "0x07b29a1489cd24c09e8727d166f6131558e2ed0c", "index": 21382, "l2SequenceNumber": 1794883743, "retired": false, "rootClaim": "0x87677a3af071a2e651f7e0e72222b9d10411fe95ca6314a34e9e6fce967616c9", "status": 0, "thirdPartyLive": true, "type": 9, "weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162"}
+{"blacklisted": false, "claimValid": false, "createdAt": 1794888263, "creator": "0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0", "game": "0x34bc4857431e91f104ea23296bac771302173b41", "index": 21383, "l2SequenceNumber": 1794887219, "retired": false, "rootClaim": "0x7aaf70fc040fd5bd09336a08fa65c5c54370b0c28a7edf78548074bca68a8178", "status": 0, "thirdPartyLive": true, "type": 9, "weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162"}
+{"blacklisted": false, "claimValid": false, "createdAt": 1794891875, "creator": "0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0", "game": "0xf56587a839dfdd3b1bc312f78dcd9d94fa492ccc", "index": 21384, "l2SequenceNumber": 1794890653, "retired": false, "rootClaim": "0x54ff5c7ab43c48f028af35dfdc2f281d442dc23650b9c0aa416ec17b0fe301fc", "status": 0, "thirdPartyLive": true, "type": 9, "weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162"}
+{"blacklisted": false, "claimValid": false, "createdAt": 1794895499, "creator": "0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0", "game": "0x76ad5602f0c66724ea12ce08dd02f9550f069ddd", "index": 21385, "l2SequenceNumber": 1794893907, "retired": false, "rootClaim": "0x4c71fbfc55850c1c4faeafd8f3d0d5784c72b427dd0cd550c962a62fc7ea5b8c", "status": 0, "thirdPartyLive": true, "type": 9, "weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162"}
+{"blacklisted": false, "claimValid": false, "createdAt": 1794899123, "creator": "0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0", "game": "0xab58fb2fa9b3e969b7077b9425c0e65125eef4f7", "index": 21386, "l2SequenceNumber": 1794897911, "retired": false, "rootClaim": "0x7b988b2e9a4c9f43e7e3c2a4860694a4a7cbfcadd441b21203f102a878334d4a", "status": 0, "thirdPartyLive": true, "type": 9, "weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162"}
+{"blacklisted": false, "claimValid": false, "createdAt": 1794902735, "creator": "0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0", "game": "0x0c3953c5173c923670dbfd295c8c76b795955444", "index": 21387, "l2SequenceNumber": 1794901399, "retired": false, "rootClaim": "0xc19dc070c4eeaaaa81472fbc8e6d99c3f823bc5d8feda5fb2456c3f3f0e9e4ad", "status": 0, "thirdPartyLive": true, "type": 9, "weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162"}
+{"blacklisted": false, "claimValid": false, "createdAt": 1794906359, "creator": "0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0", "game": "0x668513abb2b32a988f9f4aada89ca48a974f8b65", "index": 21388, "l2SequenceNumber": 1794905279, "retired": false, "rootClaim": "0x0323f5a857037b41cb1e3a98f186c68bbb01612b74840573663849a946f85ab9", "status": 0, "thirdPartyLive": true, "type": 9, "weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162"}

@@ -1,0 +1,1030 @@
+[
+ {
+  "block": 12686688,
+  "time": "2021-06-22 22:13:57",
+  "tx": "0x6e04936c9c8eb3846e41eb56ce3ce9b7b6d68dbda81a30def50d3aa171e98c7d",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x4200000000000000000000000000000000000007",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686691,
+  "time": "2021-06-22 22:14:16",
+  "tx": "0x9d981fac03305c041122f94f8331d87053717333b8ec75b508d93921144910d4",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x4200000000000000000000000000000000000005",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686694,
+  "time": "2021-06-22 22:15:00",
+  "tx": "0xcae114c0c2e08b575dabdbd6c355e2105943337bf6627f0e0cf77867e5d8fd70",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x6887246668a3b87f54deb3b94ba47a6f63f32985",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686696,
+  "time": "2021-06-22 22:15:10",
+  "tx": "0x6b8c081822cb5da0b9440f5961f3fccb7db2071d6437d7007f17a0bc7b3cb544",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x473300df21d047806a082244b417f96b32f13a33",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686720,
+  "time": "2021-06-22 22:22:35",
+  "tx": "0x1520528c118c84316412213c9e0d2a5d07154a8c7e13496427b773e9779f0c2c",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x3ea1a3839d8ca9a7ff3c567a9f36f4c4dbecc3ee",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686727,
+  "time": "2021-06-22 22:24:12",
+  "tx": "0x571fc10df9987eca6f44d969ed8bb00b1e6766b637c3e38db1cf66a99b42cdf5",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0xa0b912b3ea71a04065ff82d3936d518ed6e38039",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686736,
+  "time": "2021-06-22 22:26:00",
+  "tx": "0x449191eead2556acefa9e2b78ae3878bf665bb95c57cbe8bd8f832df41067039",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x77ebfdfcc906ddcda0c42b866f26a8d5a2bb0572",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686742,
+  "time": "2021-06-22 22:26:39",
+  "tx": "0xbac1c2f9aa756d75abf367f136654173a40259510e9d714566c1bcd7d6eea24e",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x4bf681894abec828b212c906082b444ceb2f6cf6",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686748,
+  "time": "2021-06-22 22:28:07",
+  "tx": "0xaa817bcb936ee2c1bdc9202228f2fafc841698a0d6563625737d79631a3a7bd6",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0xe969c2724d2448f1d1a6189d3e2aa1f37d5998c1",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686752,
+  "time": "2021-06-22 22:28:50",
+  "tx": "0xafed3dbf2268c650c772ea86ad1e5408a8f53ffa6e3e50c3188f509bd44b31a7",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0xcd76de5c57004d47d0216ec7dabd3c72d8c49057",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686756,
+  "time": "2021-06-22 22:29:27",
+  "tx": "0xd19d40f11c375feeea5fe47576ce98a3a08caac68b2a8a52fb95dd1a76dd205a",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x16393737d09d2722ad13dca3ca8c3db957699f1d",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686761,
+  "time": "2021-06-22 22:31:18",
+  "tx": "0x4dd36f01f8c5ca754ff64df5fdabed3338039235accc64c23b83a67d8fe8a55d",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+    "version": "2.13.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686764,
+  "time": "2021-06-22 22:32:15",
+  "tx": "0x2be1b5b621ce7ac6cbd752c30bce0b10840225774ad976690e334663e291d628",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x2745c24822f542bbffb41c6cb20edf766b5619f5",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686767,
+  "time": "2021-06-22 22:33:42",
+  "tx": "0xfe635e0c5da9292aaff57078f13d92f09f34b76fd826fddd131b517afe4d61d5",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x042065416c5c665dc196076745326af3cd840d15",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686771,
+  "time": "2021-06-22 22:34:30",
+  "tx": "0x6fd32b9130e8ce17491f704d8379893c5d3e386a52447d8f16fd99d23d71fd5f",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0xd0e3e318154716bd9d007e1e6b021eab246ff98d",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686774,
+  "time": "2021-06-22 22:35:15",
+  "tx": "0x03e1bf0e135b735480f0620d2a5507b2ceb19900db59d890424ed4affac330a1",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x38a6ed6fd76035684cadef38cf49a2fffa782b67",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686778,
+  "time": "2021-06-22 22:35:52",
+  "tx": "0xdb654114cef1a171bb6507d703e0cd4176eeb989c24bfcf866216e1c69ee29f1",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0xfe1f9cf28ecdb12110aa8086e6fd343ea06035cc",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686784,
+  "time": "2021-06-22 22:37:33",
+  "tx": "0x205fecd0172798e116bdf0206d7fef6f47f652af667a9d7f15c276f500783d17",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0xf26391fbb1f77481f80a7d646ac08ba3817ea891",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686787,
+  "time": "2021-06-22 22:37:53",
+  "tx": null,
+  "proxies": {
+   "L1StandardBridge(slot)": {
+    "impl": "0x9091dda480b232133a7d2e4cb23336b4f0293196",
+    "version": "<no version(); codeSize 5525>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12686793,
+  "time": "2021-06-22 22:39:15",
+  "tx": "0x5fe73adb2da599a4825f64427c9fa3839fafd318998ba04e5a8b20502b8bef2f",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+    "version": "2.8.2",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12706528,
+  "time": "2021-06-26 00:52:47",
+  "tx": "0x98a05fb521b3349dd92cff2e104d78c6c318add003bb501c0d416b2b4d75df8a",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0xbfba066b5ca610fe70adce45fcb622f945891bb0",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 12751539,
+  "time": "2021-07-03 00:51:53",
+  "tx": "0x26e7946fe64beead923dd5f695b26069d38e96bb49a290f45aad82c65019a67d",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x6b7c001f4af36a576baba2af3b5251fc326ab09a",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 13596224,
+  "time": "2021-11-11 17:22:15",
+  "tx": "0x49d584fb24f39d84b236a423f76669c5642ad984c79565a60fe70b069765b943",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x0000000000000000000000000000000000000000",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 13596294,
+  "time": "2021-11-11 17:37:56",
+  "tx": "0x2625aa2013fd1a650fb0264d2746be597e12f846baa48a68fe14539c200ed6dc",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x0000000000000000000000000000000000000000",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 13596781,
+  "time": "2021-11-11 19:29:14",
+  "tx": "0xbabb37235bd38ae5a29717590eedfd9b02f84a12b890b2126feac68f223d7448",
+  "proxies": {
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x4200000000000000000000000000000000000007",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 7
+   }
+  }
+ },
+ {
+  "block": 13596915,
+  "time": "2021-11-11 19:59:10",
+  "tx": null,
+  "proxies": {
+   "L1StandardBridge(slot)": {
+    "impl": "0x40e0c049f4671846e9cff93aaed88f2b48e527bb",
+    "version": "<no version(); codeSize 6558>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 15677648,
+  "time": "2022-10-04 22:08:59",
+  "tx": "0xe8f632050cdf538eebcc5ab4a0ecb426966acfd14118e4fb8b181948449ae70d",
+  "proxies": {
+   "L1ERC721Bridge": {
+    "impl": "0x3268ed09f76e619331528270b6267d4d2c5ab5c2",
+    "version": "1.0.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 17422444,
+  "time": "2023-06-06 15:58:47",
+  "tx": "0x76bceccd7d44656f5a129a600a6120091570b897c1d45c18cd7134cfe67c2537",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0x5efa852e92800d1c982711761e45c3fe39a2b6d8",
+    "version": "1.3.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x000000000000000000000000000000000109d86c",
+    "version": "<none>",
+    "storageSetterCycle": false,
+    "upgradedEvents": 2
+   }
+  }
+ },
+ {
+  "block": 17423158,
+  "time": "2023-06-06 18:24:11",
+  "tx": "0xe2ff41f9bdf03d5455f55539b8b9c350276a179ca7f79322e2077d7c1ffb1268",
+  "proxies": {
+   "OptimismPortal": {
+    "impl": "0x28a55488fef40005309e2da0040dbe9d300a64ab",
+    "version": "1.6.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1ERC721Bridge": {
+    "impl": "0x3268ed09f76e619331528270b6267d4d2c5ab5c2",
+    "version": "1.0.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "OptimismMintableERC20Factory": {
+    "impl": "0xae849efa4bcfc419593420e14707996936e365e2",
+    "version": "1.1.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x2150bc3c64cbfddbac9815ef615d6ab8671bfe43",
+    "version": "1.4.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 18
+   },
+   "L1StandardBridge(slot)": {
+    "impl": "0xbfb731cd36d26c2a7287716de857e4380c73a64a",
+    "version": "1.1.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 19314493,
+  "time": "2024-02-26 21:44:11",
+  "tx": "0x3f7c36a1d636cdb23bf4f9171c27ebe58b73f4c0e6a33dbaac2c2f3c142faf50",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0x33a032ec93ec0c492ec4bf0b30d5f51986e5a314",
+    "version": "1.11.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "OptimismPortal": {
+    "impl": "0xababe63514ddd6277356f8cc3d6518aa8bdeb4de",
+    "version": "2.4.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "L1ERC721Bridge": {
+    "impl": "0xc599fa757c2bcaa5ae3753ab129237f38c10da0b",
+    "version": "2.0.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "OptimismMintableERC20Factory": {
+    "impl": "0x74e273220fa1cb62fd756fe6cbda8bbb89404ded",
+    "version": "1.8.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0xa95b24af19f8907390ed15f8348a1a5e6ccbc5c6",
+    "version": "2.2.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "L1StandardBridge(slot)": {
+    "impl": "0x566511a1a09561e2896f8c0fd77e8544e59bfdb0",
+    "version": "2.0.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 19634866,
+  "time": "2024-04-11 20:49:59",
+  "tx": "0x4758bd62359bc69d7e8a0faaf5308d826379c23258d689a7430d5c0ad0361ad2",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0xba2492e52f45651b60b8b38d4ea5e2390c64ffb1",
+    "version": "1.12.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "OptimismPortal": {
+    "impl": "0x2d778797049fe9259d947d1ed8e5442226dfb589",
+    "version": "2.5.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "L1ERC721Bridge": {
+    "impl": "0xae2af01232a6c4a4d3012c5ec5b1b35059caf10d",
+    "version": "2.1.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "OptimismMintableERC20Factory": {
+    "impl": "0xe01efbeb1089d1d1db9c6c8b135c934c0734c846",
+    "version": "1.9.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0xd3494713a5cfad3f5359379dfa074e2ac8c6fd65",
+    "version": "2.3.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "L1StandardBridge(slot)": {
+    "impl": "0x64b5a5ed26dcb17370ff4d33a8d503f0fbd06cff",
+    "version": "2.1.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 19884570,
+  "time": "2024-05-16 19:17:35",
+  "tx": "0x2c16c813ff50e9e09a3c58508a9b90293c896f1f91534d09a5002f50bc8760ff",
+  "proxies": {
+   "DisputeGameFactory": {
+    "impl": "0xc641a33cab81c559f2bd4b21ea34c290e2440c2b",
+    "version": "1.0.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 20062696,
+  "time": "2024-06-10 16:42:59",
+  "tx": "0xbe810ed6e1e827930bd46cde42c4883662ddb6d244a26af2f0409cc2782bee61",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0xf56d96b2535b932656d3c04ebf51babff241d886",
+    "version": "2.2.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "OptimismPortal": {
+    "impl": "0xe2f826324b2faf99e513d16d266c3f80ae87832b",
+    "version": "3.10.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 21695024,
+  "time": "2025-01-24 14:41:35",
+  "tx": "0x86da7386a26978c3db89e97c1f4feee613a8a0c07bbe4640624b05276f49c350",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0xab9d6cb7a427c0765163a7f45bb91cafe5f2d375",
+    "version": "2.3.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 22182531,
+  "time": "2025-04-02 16:50:23",
+  "tx": "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0x760c48c62a85045a6b69f07f4a9f22868659cbcc",
+    "version": "2.4.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "OptimismPortal": {
+    "impl": "0x2d7e764a0d9919e16983a46595cfa81fc34fa7cd",
+    "version": "3.13.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "DisputeGameFactory": {
+    "impl": "0x4bba758f006ef09402ef31724203f316ab74e4a0",
+    "version": "1.0.1",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1ERC721Bridge": {
+    "impl": "0x276d3730f219f7ec22274f7263180b8452b46d47",
+    "version": "2.3.1",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "OptimismMintableERC20Factory": {
+    "impl": "0x5493f4677a186f64805fe7317d6993ba4863988f",
+    "version": "1.10.1",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x3ea6084748ed1b2a9b5d4426181f1ad8c93f6231",
+    "version": "2.5.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1StandardBridge(slot)": {
+    "impl": "0x78972e88ab8bbb517a36caea23b931bab58ad3c6",
+    "version": "2.2.2",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 22339996,
+  "time": "2025-04-24 16:16:23",
+  "tx": "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0x340f923e5c7cbb2171146f64169ec9d5a9ffe647",
+    "version": "2.5.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "OptimismPortal": {
+    "impl": "0xb443da3e07052204a02d630a8933dac05a0d6fb4",
+    "version": "3.14.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1ERC721Bridge": {
+    "impl": "0x7ae1d3bd877a4c5ca257404ce26be93a02c98013",
+    "version": "2.4.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x5d5a095665886119693f0b41d8dfee78da033e8b",
+    "version": "2.6.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1StandardBridge(slot)": {
+    "impl": "0x0b09ba359a106c9ea3b181cbc5f394570c7d2a7a",
+    "version": "2.3.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 22990599,
+  "time": "2025-07-24 17:47:23",
+  "tx": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0xfaa660bf783cbaa55e1b7f3475c20db74a53b9fa",
+    "version": "3.4.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "OptimismPortal": {
+    "impl": "0xefed7f38bb9be74bba583a1a5b7d0fe7c9d5787a",
+    "version": "4.6.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "ETHLockbox": {
+    "impl": "0x784d2f03593a42a6e4676a012762f18775ecbbe6",
+    "version": "1.2.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "AnchorStateRegistry": {
+    "impl": "0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e",
+    "version": "3.5.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "DisputeGameFactory": {
+    "impl": "0x33d1e8571a85a538ed3d5a4d88f46c112383439d",
+    "version": "1.2.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1ERC721Bridge": {
+    "impl": "0x25d6cedeb277ad7ebee71226ed7877768e0b7a2f",
+    "version": "2.7.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0xd26bb3aaaa4cb5638a8581a4c4b1d937d8e05c54",
+    "version": "2.9.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1StandardBridge(slot)": {
+    "impl": "0x44afb7722af276a601d524f429016a18b6923df0",
+    "version": "2.6.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 23491328,
+  "time": "2025-10-02 16:35:23",
+  "tx": "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0x2bfe4a5bd5a41e9d848d843ebcdfa15954e9a557",
+    "version": "3.7.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "OptimismPortal": {
+    "impl": "0x381e729ff983fa4bced820e7b922d79bf653b999",
+    "version": "5.0.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "AnchorStateRegistry": {
+    "impl": "0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e",
+    "version": "3.5.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "DisputeGameFactory": {
+    "impl": "0x33d1e8571a85a538ed3d5a4d88f46c112383439d",
+    "version": "1.2.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1ERC721Bridge": {
+    "impl": "0x7f1d12fb2911eb095278085f721e644c1f675696",
+    "version": "2.8.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x22d12e0faebd62d429514a65ebae32dd316c12d6",
+    "version": "2.10.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1StandardBridge(slot)": {
+    "impl": "0xe32b192fb1dca88fcb1c56b3acb429e32238adcb",
+    "version": "2.7.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 23877377,
+  "time": "2025-11-25 17:46:35",
+  "tx": "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0x2fa28989fc559836e9d66dff3010c7f7f41c65ed",
+    "version": "3.11.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "OptimismPortal": {
+    "impl": "0x7cf803296662e8c72a6c1d6450572209acf7f202",
+    "version": "5.1.1",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "DisputeGameFactory": {
+    "impl": "0x74fac1d45b98bae058f8f566201c9a81b85c7d50",
+    "version": "1.3.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1ERC721Bridge": {
+    "impl": "0x74f1ac50eb0be98853805d381c884f5f9abdecf9",
+    "version": "2.9.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "OptimismMintableERC20Factory": {
+    "impl": "0x8ee6fb13c6c9a7e401531168e196fbf8b05ceabb",
+    "version": "1.10.2",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+    "version": "2.11.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1StandardBridge(slot)": {
+    "impl": "0x61525eaacddb97d9184afc205827e6a4fd0bf62a",
+    "version": "2.8.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 24421512,
+  "time": "2026-02-09 20:10:59",
+  "tx": "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+    "version": "3.13.1",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "OptimismPortal": {
+    "impl": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+    "version": "5.2.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "AnchorStateRegistry": {
+    "impl": "0x36398155cd17cfe804f69b233edda800dd4d5aa5",
+    "version": "3.7.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "DisputeGameFactory": {
+    "impl": "0xc040f392e52cb6970ca8e110c280fe24e07c5e2c",
+    "version": "1.4.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1ERC721Bridge": {
+    "impl": "0x74f1ac50eb0be98853805d381c884f5f9abdecf9",
+    "version": "2.9.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "OptimismMintableERC20Factory": {
+    "impl": "0x8ee6fb13c6c9a7e401531168e196fbf8b05ceabb",
+    "version": "1.10.2",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   },
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+    "version": "2.11.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 25397811,
+  "time": "2026-06-25 23:05:47",
+  "tx": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0x42ad0173051225ac784100e9acd43349707f4db9",
+    "version": "3.14.2",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "OptimismPortal": {
+    "impl": "0xe89f13c5ee4033b2d3cd76c9d6958efbfe26d3c2",
+    "version": "5.6.1",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "ETHLockbox": {
+    "impl": "0xb3a24db07038b51962026329b62e7a965d56a6ad",
+    "version": "1.3.1",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "AnchorStateRegistry": {
+    "impl": "0x8f40cc98d694ab986f026c5383a181fcc9b6b281",
+    "version": "3.9.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "DisputeGameFactory": {
+    "impl": "0x72b971717e088b59f26d4236be222adb6acd393b",
+    "version": "1.6.1",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "DelayedWETH": {
+    "impl": "0xe440cc08a71694c8229323803f59024e3144630e",
+    "version": "1.5.1",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "L1ERC721Bridge": {
+    "impl": "0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e",
+    "version": "2.9.1",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "OptimismMintableERC20Factory": {
+    "impl": "0xaabea75da509fa518fd8a91eae4be5813b829b12",
+    "version": "1.11.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x59d497530b00062f40950ba8eab88868bf7f86f0",
+    "version": "2.11.1",
+    "storageSetterCycle": true,
+    "upgradedEvents": 1
+   },
+   "L1StandardBridge(slot)": {
+    "impl": "0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891",
+    "version": "2.8.2",
+    "storageSetterCycle": false,
+    "upgradedEvents": 1
+   }
+  }
+ },
+ {
+  "block": 26048619,
+  "time": "2026-09-24 16:51:23",
+  "tx": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0x670b850a235a6fa98cd7a195eb139d0277e471fa",
+    "version": "4.0.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "OptimismPortal": {
+    "impl": "0x1005217ad392dc64cef501fa1777a27d42166748",
+    "version": "5.8.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "ETHLockbox": {
+    "impl": "0xb3a24db07038b51962026329b62e7a965d56a6ad",
+    "version": "1.3.1",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "AnchorStateRegistry": {
+    "impl": "0x8f40cc98d694ab986f026c5383a181fcc9b6b281",
+    "version": "3.9.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "DisputeGameFactory": {
+    "impl": "0x72b971717e088b59f26d4236be222adb6acd393b",
+    "version": "1.6.1",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "DelayedWETH": {
+    "impl": "0xe440cc08a71694c8229323803f59024e3144630e",
+    "version": "1.5.1",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "L1ERC721Bridge": {
+    "impl": "0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e",
+    "version": "2.9.1",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "OptimismMintableERC20Factory": {
+    "impl": "0xaabea75da509fa518fd8a91eae4be5813b829b12",
+    "version": "1.11.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x59d497530b00062f40950ba8eab88868bf7f86f0",
+    "version": "2.11.1",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   }
+  }
+ },
+ {
+  "block": 26309074,
+  "time": "2026-10-31 00:10:59",
+  "tx": "0xd80476b3ec56283723804cf7bc2d96f800c81d3ebd0fea843555396ffe94f28f",
+  "proxies": {
+   "OptimismPortal": {
+    "impl": "0x1005217ad392dc64cef501fa1777a27d42166748",
+    "version": "5.8.0",
+    "storageSetterCycle": false,
+    "upgradedEvents": 2
+   }
+  }
+ },
+ {
+  "block": 26430859,
+  "time": "2026-11-16 23:23:59",
+  "tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+  "proxies": {
+   "SystemConfig": {
+    "impl": "0xade27248542c0f3e89b49e4eb76155e267f14377",
+    "version": "4.3.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "OptimismPortal": {
+    "impl": "0xb20b23af6071405c37ddda0c0640e8ebb7899645",
+    "version": "6.1.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "ETHLockbox": {
+    "impl": "0xdf75e6b07e98873e36ba5c05508f80c1454e0afe",
+    "version": "2.0.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "AnchorStateRegistry": {
+    "impl": "0x2b27299c577d4720100e2735b652444dcea652d0",
+    "version": "4.0.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "DisputeGameFactory": {
+    "impl": "0x72b971717e088b59f26d4236be222adb6acd393b",
+    "version": "1.6.1",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "DelayedWETH": {
+    "impl": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+    "version": "2.0.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "L1ERC721Bridge": {
+    "impl": "0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e",
+    "version": "2.9.1",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "OptimismMintableERC20Factory": {
+    "impl": "0xaabea75da509fa518fd8a91eae4be5813b829b12",
+    "version": "1.11.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   },
+   "L1CrossDomainMessenger(AddressManager)": {
+    "impl": "0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448",
+    "version": "2.13.0",
+    "storageSetterCycle": true,
+    "upgradedEvents": 2
+   }
+  }
+ }
+]

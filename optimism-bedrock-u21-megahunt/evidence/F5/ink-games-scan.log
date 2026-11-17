@@ -1,3 +1,33 @@
 scanned 0..19
 scanned 200..219
 scanned 400..419
+scanned 600..619
+scanned 800..819
+scanned 1000..1019
+scanned 1200..1219
+scanned 1400..1419
+scanned 1600..1619
+scanned 1800..1819
+scanned 2000..2019
+scanned 2200..2219
+scanned 2400..2419
+scanned 2600..2619
+
+DGF 0x10d7B35078d3baabB96Dd45a9143B94be65b12CD ASR 0xEe018bAf058227872540AC60eFbd38b023d9dAe2 block 26433900 games 0..2639 (2640)
+(type, creator, status, claimValid, blacklisted, retired) -> count
+(0, '0x65436ddcbc026f34118954f229f7f132b696b3b4', 2, True, False, False) 1344
+(0, '0x65436ddcbc026f34118954f229f7f132b696b3b4', 2, False, False, True) 730
+(1, '0x65436ddcbc026f34118954f229f7f132b696b3b4', 2, False, False, True) 190
+(8, '0x65436ddcbc026f34118954f229f7f132b696b3b4', 2, True, False, False) 130
+(8, '0x3832bfbef03173e4c49a00ec0dd178817a02d177', 2, True, False, False) 117
+(9, '0x3832bfbef03173e4c49a00ec0dd178817a02d177', 2, True, False, False) 94
+(8, '0x0976d8e6f4c6d7e4be101988c680ba7736b6e294', 1, False, False, False) 9
+(9, '0x0976d8e6f4c6d7e4be101988c680ba7736b6e294', 1, False, False, False) 7
+(9, '0x3832bfbef03173e4c49a00ec0dd178817a02d177', 2, False, False, False) 7
+(9, '0x3832bfbef03173e4c49a00ec0dd178817a02d177', 0, False, False, False) 7
+(0, '0x21d6658c6430021a6b5c2bdb245910fd633e6d08', 2, False, False, True) 1
+(0, '0x21d6658c6430021a6b5c2bdb245910fd633e6d08', 1, False, False, True) 1
+(9, '0x1d0519eed308bcd49e4ebc149284f83ebc275284', 1, False, False, False) 1
+(9, '0xe3b96e6847fa570690d89937ddc0ef4a71537e89', 1, False, False, False) 1
+(9, '0x05f97bc048711287e912a72f4dbaa8faa7599eb5', 0, False, False, False) 1
+EXIT 0

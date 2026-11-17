@@ -1,0 +1,17 @@
+{
+ "era": "BEDROCK_STEP1",
+ "tag": "op-contracts/v1.0.0 (Bedrock migration, SystemDictator early step: SystemConfig live, L1CDM entry cleared)",
+ "eraStart": 17422444,
+ "eraEnd": 17423157,
+ "nextPoint": "BEDROCK",
+ "proves": [],
+ "failedMessages": [],
+ "limits": [],
+ "scan": {
+  "from": 17422444,
+  "to": 17423157,
+  "withdrawalProvenLogs": 0,
+  "distinctHashes": 0,
+  "unfinalizedAtHead": 0
+ }
+}

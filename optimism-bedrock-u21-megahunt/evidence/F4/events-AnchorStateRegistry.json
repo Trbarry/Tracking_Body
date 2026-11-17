@@ -1,0 +1,118 @@
+{
+ "name": "AnchorStateRegistry",
+ "proxy": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+ "blocks": [
+  {
+   "block": 22990599,
+   "timestamp": 1753379243,
+   "txs": {
+    "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716": [
+     [
+      245,
+      "4fd113",
+      "AdminChanged",
+      "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000543ba4aadbab8f9025686bd03993043599c6fb04"
+     ],
+     [
+      246,
+      "4fd113",
+      "Upgraded",
+      "0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e"
+     ],
+     [
+      247,
+      "4fd113",
+      "Initialized(uint8)",
+      1
+     ]
+    ]
+   },
+   "init_before": "0x0000000000000000000000000000000000000000000000000000000000000000",
+   "init_after": "0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001"
+  },
+  {
+   "block": 24421512,
+   "timestamp": 1770667859,
+   "txs": {
+    "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37": [
+     [
+      504,
+      "4fd113",
+      "Upgraded",
+      "0x36398155cd17cfe804f69b233edda800dd4d5aa5"
+     ]
+    ]
+   },
+   "init_before": "0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001",
+   "init_after": "0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001"
+  },
+  {
+   "block": 25397811,
+   "timestamp": 1782428747,
+   "txs": {
+    "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15": [
+     [
+      110,
+      "4fd113",
+      "Upgraded",
+      "0x2476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     [
+      111,
+      "4fd113",
+      "Upgraded",
+      "0x8f40cc98d694ab986f026c5383a181fcc9b6b281"
+     ],
+     [
+      112,
+      "4fd113",
+      "Initialized(uint8)",
+      1
+     ]
+    ]
+   },
+   "init_before": "0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001",
+   "init_after": "0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001"
+  },
+  {
+   "block": 26430859,
+   "timestamp": 1794871439,
+   "txs": {
+    "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99": [
+     [
+      729,
+      "4fd113",
+      "Upgraded",
+      "0x2476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     [
+      730,
+      "4fd113",
+      "Upgraded",
+      "0x2b27299c577d4720100e2735b652444dcea652d0"
+     ],
+     [
+      731,
+      "4fd113",
+      "Initialized(uint8)",
+      1
+     ],
+     [
+      732,
+      "4fd113",
+      "Upgraded",
+      "0x2476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     [
+      733,
+      "4fd113",
+      "Upgraded",
+      "0x2b27299c577d4720100e2735b652444dcea652d0"
+     ]
+    ]
+   },
+   "init_before": "0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001",
+   "init_after": "0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001"
+  }
+ ]
+}

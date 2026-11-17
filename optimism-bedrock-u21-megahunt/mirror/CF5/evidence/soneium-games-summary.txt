@@ -1,0 +1,33 @@
+SONEIUM: scanned through 399/8536
+retry: {'code': 429, 'message': 'Your app has exceeded its compute units per second capacity. If you have retries enabled, you can safely ignore this message. If not, check out https://docs.alchemy.com/reference/throughput'}
+SONEIUM: scanned through 799/8536
+retry: {'code': 429, 'message': 'Your app has exceeded its compute units per second capacity. If you have retries enabled, you can safely ignore this message. If not, check out https://docs.alchemy.com/reference/throughput'}
+retry: {'code': 429, 'message': 'Your app has exceeded its compute units per second capacity. If you have retries enabled, you can safely ignore this message. If not, check out https://docs.alchemy.com/reference/throughput'}
+retry: {'code': 429, 'message': 'Your app has exceeded its compute units per second capacity. If you have retries enabled, you can safely ignore this message. If not, check out https://docs.alchemy.com/reference/throughput'}
+SONEIUM: scanned through 1199/8536
+SONEIUM: scanned through 1599/8536
+SONEIUM: scanned through 1999/8536
+SONEIUM: scanned through 2399/8536
+SONEIUM: scanned through 2799/8536
+SONEIUM: scanned through 3199/8536
+SONEIUM: scanned through 3599/8536
+retry: {'code': 429, 'message': 'Your app has exceeded its compute units per second capacity. If you have retries enabled, you can safely ignore this message. If not, check out https://docs.alchemy.com/reference/throughput'}
+SONEIUM: scanned through 3999/8536
+SONEIUM: scanned through 4399/8536
+SONEIUM: scanned through 4799/8536
+SONEIUM: scanned through 5199/8536
+SONEIUM: scanned through 5599/8536
+SONEIUM: scanned through 5999/8536
+SONEIUM: scanned through 6399/8536
+SONEIUM: scanned through 6799/8536
+SONEIUM: scanned through 7199/8536
+SONEIUM: scanned through 7599/8536
+SONEIUM: scanned through 7999/8536
+SONEIUM: scanned through 8399/8536
+SONEIUM: scanned through 8536/8536
+(type, creator, status, claimValid, blacklisted, retired) -> count
+(1, '0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8', 2, True, False, False) 5114
+(1, '0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8', 2, False, False, True) 2841
+(5, '0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8', 2, True, False, False) 554
+(5, '0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8', 2, False, False, False) 28
+thirdPartyLive=0

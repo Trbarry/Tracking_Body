@@ -1,0 +1,15 @@
+non-retired games: 5696
+headers 0/5696
+headers 1000/5696
+headers 2000/5696
+headers 3000/5696
+headers 4000/5696
+headers 5000/5696
+
+(type, status, claimValid, headerMatch) -> count
+  (1, 'DEFENDER_WINS', True, True) 5114
+  (5, 'DEFENDER_WINS', True, True) 554
+  (5, 'DEFENDER_WINS', False, True) 28
+
+ANOMALIES (non-matching root that is claim-valid / not CHALLENGER_WINS, or matching root that lost): 0
+EXIT 0

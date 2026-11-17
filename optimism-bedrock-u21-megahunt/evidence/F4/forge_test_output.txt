@@ -1,0 +1,9 @@
+No files changed, compilation skipped
+
+Ran 3 tests for test/F4_LegacyStorage.t.sol:F4LegacyStorageTest
+[PASS] test_fabricatedLegacyProofGivesNothing() (gas: 142126)
+[PASS] test_legacyProvenEntriesExistButAreUnreachable() (gas: 1729807)
+[PASS] test_poisonedPreV7Slots_realWithdrawalAndDepositAreUnchanged() (gas: 30719129)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 86.22ms (65.68ms CPU time)
+
+Ran 1 test suite in 93.22ms (86.22ms CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)

@@ -1,0 +1,64 @@
+games 2640  index 0..2639  created 2024-12-06 20:25 .. 2026-11-17 05:49
+
+-- lineage classes: (type, version, gameASR, weth, prestate) -> n, index range, date range, creators
+type 1 v1.3.1-beta.3 asr 0xde744491bcf6b2dd2f32146364ea1487d75e2509 weth 0x14773a8040ff22e3dcbb0c83ec8e33be7d920d38 prestate 0x038512e02c4c3f7bdaec27d00edf55b7155e0905301e1a88083e4e0a6764d54c
+     n=152 idx 0..151 2024-12-06 20:25..2025-01-13 15:41 creators {'0x65436ddcbc026f34118954f229f7f132b696b3b4': 152}
+type 1 v1.3.0 asr 0xde744491bcf6b2dd2f32146364ea1487d75e2509 weth 0x14773a8040ff22e3dcbb0c83ec8e33be7d920d38 prestate 0x03c50b9fd04bdadc228205f340767bbf2d01a030aec39903120d3559d94bb8cc
+     n=38 idx 152..191 2025-01-13 21:41..2025-01-23 03:56 creators {'0x65436ddcbc026f34118954f229f7f132b696b3b4': 38}
+type 0 v1.3.0 asr 0xde744491bcf6b2dd2f32146364ea1487d75e2509 weth 0x3beaca17eae5643fb1479aa5f4b1ff75cc4b9b50 prestate 0x03c50b9fd04bdadc228205f340767bbf2d01a030aec39903120d3559d94bb8cc
+     n=216 idx 155..405 2025-01-14 11:58..2025-03-17 14:59 creators {'0x65436ddcbc026f34118954f229f7f132b696b3b4': 214, '0x21d6658c6430021a6b5c2bdb245910fd633e6d08': 2}
+type 0 v1.3.1 asr 0xde744491bcf6b2dd2f32146364ea1487d75e2509 weth 0xf6b1554f483c391414d3830927e3600c105aae6e prestate 0x039facea52b20c605c05efb0a33560a92de7074218998f75bcdf61e8989cb5d9
+     n=64 idx 406..469 2025-03-17 20:59..2025-04-02 15:01 creators {'0x65436ddcbc026f34118954f229f7f132b696b3b4': 64}
+type 0 v1.4.1 asr 0x2fc99fd16d8d3f6f66d164aa84e244c567e58a3d weth 0xf6b1554f483c391414d3830927e3600c105aae6e prestate 0x039facea52b20c605c05efb0a33560a92de7074218998f75bcdf61e8989cb5d9
+     n=88 idx 470..557 2025-04-02 21:01..2025-04-24 15:06 creators {'0x65436ddcbc026f34118954f229f7f132b696b3b4': 88}
+type 0 v1.4.1 asr 0x2fc99fd16d8d3f6f66d164aa84e244c567e58a3d weth 0xf6b1554f483c391414d3830927e3600c105aae6e prestate 0x03ee2917da962ec266b091f4b62121dc9682bb0db534633707325339f99ee405
+     n=51 idx 558..608 2025-04-24 21:07..2025-05-07 09:09 creators {'0x65436ddcbc026f34118954f229f7f132b696b3b4': 51}
+type 0 v1.4.1 asr 0x2fc99fd16d8d3f6f66d164aa84e244c567e58a3d weth 0xf6b1554f483c391414d3830927e3600c105aae6e prestate 0x03682932cec7ce0a3874b19675a6bbc923054a7b321efc7d3835187b172494b6
+     n=313 idx 609..921 2025-05-07 15:09..2025-07-24 15:25 creators {'0x65436ddcbc026f34118954f229f7f132b696b3b4': 313}
+type 0 v1.7.0 asr 0xee018baf058227872540ac60efbd38b023d9dae2 weth 0x3f7b07a5d638024a37a776fa228fe90b317af6de prestate 0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8
+     n=280 idx 922..1201 2025-07-24 21:26..2025-10-02 16:13 creators {'0x65436ddcbc026f34118954f229f7f132b696b3b4': 280}
+type 0 v1.7.0 asr 0xee018baf058227872540ac60efbd38b023d9dae2 weth 0x6cbd14da021e39a7895ae151ac72ecc9023e87f6 prestate 0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8
+     n=216 idx 1202..1417 2025-10-02 22:13..2025-11-25 16:52 creators {'0x65436ddcbc026f34118954f229f7f132b696b3b4': 216}
+type 0 v1.8.0 asr 0xee018baf058227872540ac60efbd38b023d9dae2 weth 0x6cbd14da021e39a7895ae151ac72ecc9023e87f6 prestate 0x03caa1871bb9fe7f9b11217c245c16e4ded33367df5b3ccb2c6d0a847a217d1b
+     n=304 idx 1418..1721 2025-11-25 22:52..2026-02-09 17:53 creators {'0x65436ddcbc026f34118954f229f7f132b696b3b4': 304}
+type 0 v2.2.0 asr 0xee018baf058227872540ac60efbd38b023d9dae2 weth 0x6cbd14da021e39a7895ae151ac72ecc9023e87f6 prestate 0x033c000916b4a88cfffeceddd6cf0f4be3897a89195941e5a7c3f8209b4dbb6e
+     n=544 idx 1722..2265 2026-02-09 23:54..2026-06-25 19:50 creators {'0x65436ddcbc026f34118954f229f7f132b696b3b4': 544}
+type 8 v2.4.2 asr 0xee018baf058227872540ac60efbd38b023d9dae2 weth 0x57b4c29daee99a28e6e86778b499361294c134ea prestate 0x0337ecb3604c0b40c352e0c7711beb17a212d583f4fe956fd8d66e29ad5f9025
+     n=256 idx 2266..2521 2026-06-26 04:15..2026-09-24 15:01 creators {'0x65436ddcbc026f34118954f229f7f132b696b3b4': 130, '0x3832bfbef03173e4c49a00ec0dd178817a02d177': 117, '0x0976d8e6f4c6d7e4be101988c680ba7736b6e294': 9}
+type 9 v0.8.0 asr 0xee018baf058227872540ac60efbd38b023d9dae2 weth 0x57b4c29daee99a28e6e86778b499361294c134ea prestate 0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df
+     n=117 idx 2522..2638 2026-09-24 17:18..2026-11-16 19:33 creators {'0x3832bfbef03173e4c49a00ec0dd178817a02d177': 107, '0x0976d8e6f4c6d7e4be101988c680ba7736b6e294': 7, '0x1d0519eed308bcd49e4ebc149284f83ebc275284': 1, '0xe3b96e6847fa570690d89937ddc0ef4a71537e89': 1} +1 more
+type 9 v0.8.0 asr 0xee018baf058227872540ac60efbd38b023d9dae2 weth 0x57b4c29daee99a28e6e86778b499361294c134ea prestate 0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9
+     n=1 idx 2639..2639 2026-11-17 05:49..2026-11-17 05:49 creators {'0x3832bfbef03173e4c49a00ec0dd178817a02d177': 1}
+
+-- (type, creator, status, claimValid, blacklisted, retired, wasRespected) -> count
+  (0, '0x65436ddcbc026f34118954f229f7f132b696b3b4', 'DEFENDER_WINS', True, False, False, True) 1344
+  (0, '0x65436ddcbc026f34118954f229f7f132b696b3b4', 'DEFENDER_WINS', False, False, True, True) 452
+  (0, '0x65436ddcbc026f34118954f229f7f132b696b3b4', 'DEFENDER_WINS', False, False, True, None) 278
+  (1, '0x65436ddcbc026f34118954f229f7f132b696b3b4', 'DEFENDER_WINS', False, False, True, None) 190
+  (8, '0x65436ddcbc026f34118954f229f7f132b696b3b4', 'DEFENDER_WINS', True, False, False, True) 130
+  (8, '0x3832bfbef03173e4c49a00ec0dd178817a02d177', 'DEFENDER_WINS', True, False, False, True) 117
+  (9, '0x3832bfbef03173e4c49a00ec0dd178817a02d177', 'DEFENDER_WINS', True, False, False, True) 94
+  (8, '0x0976d8e6f4c6d7e4be101988c680ba7736b6e294', 'CHALLENGER_WINS', False, False, False, True) 9
+  (9, '0x0976d8e6f4c6d7e4be101988c680ba7736b6e294', 'CHALLENGER_WINS', False, False, False, True) 7
+  (9, '0x3832bfbef03173e4c49a00ec0dd178817a02d177', 'DEFENDER_WINS', False, False, False, True) 7
+  (9, '0x3832bfbef03173e4c49a00ec0dd178817a02d177', 'IN_PROGRESS', False, False, False, True) 7
+  (0, '0x21d6658c6430021a6b5c2bdb245910fd633e6d08', 'DEFENDER_WINS', False, False, True, None) 1
+  (0, '0x21d6658c6430021a6b5c2bdb245910fd633e6d08', 'CHALLENGER_WINS', False, False, True, None) 1
+  (9, '0x1d0519eed308bcd49e4ebc149284f83ebc275284', 'CHALLENGER_WINS', False, False, False, True) 1
+  (9, '0xe3b96e6847fa570690d89937ddc0ef4a71537e89', 'CHALLENGER_WINS', False, False, False, True) 1
+  (9, '0x05f97bc048711287e912a72f4dbaa8faa7599eb5', 'IN_PROGRESS', False, False, False, True) 1
+
+-- games whose own ASR != current ASR and NOT retired (createdAt > retirementTimestamp 1753379243):
+   count 0
+
+-- blacklisted games: []
+
+-- claimValid or IN_PROGRESS(non-retired) games by creator
+   ('0x65436ddcbc026f34118954f229f7f132b696b3b4', 0, 'DEFENDER_WINS', True) 1344
+   ('0x65436ddcbc026f34118954f229f7f132b696b3b4', 8, 'DEFENDER_WINS', True) 130
+   ('0x3832bfbef03173e4c49a00ec0dd178817a02d177', 8, 'DEFENDER_WINS', True) 117
+   ('0x3832bfbef03173e4c49a00ec0dd178817a02d177', 9, 'DEFENDER_WINS', True) 94
+   ('0x3832bfbef03173e4c49a00ec0dd178817a02d177', 9, 'IN_PROGRESS', False) 7
+   ('0x05f97bc048711287e912a72f4dbaa8faa7599eb5', 9, 'IN_PROGRESS', False) 1
+
+-- IN_PROGRESS but retired: Counter()

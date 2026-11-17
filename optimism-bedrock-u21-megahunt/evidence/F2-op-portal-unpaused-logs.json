@@ -1,0 +1,31 @@
+{
+ "rpc": "http://127.0.0.1:7545",
+ "address": "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+ "from": 17365802,
+ "to": 19320000,
+ "topic0": "0x5db9ee0a495bf2e6ff9c91a7834c1ba4fdd244a5e8aa4e537bd38aeae4b073aa",
+ "chunk": 10000,
+ "failed_ranges": [],
+ "logs": [
+  {
+   "block": 17423158,
+   "utc": "2023-06-06 18:24:11",
+   "tx": "0xe2ff41f9bdf03d5455f55539b8b9c350276a179ca7f79322e2077d7c1ffb1268",
+   "logIndex": 114,
+   "topics": [
+    "0x5db9ee0a495bf2e6ff9c91a7834c1ba4fdd244a5e8aa4e537bd38aeae4b073aa"
+   ],
+   "data": "0x0000000000000000000000009ba6e03d8b90de867373db8cf1a58d2f7f006b3a"
+  },
+  {
+   "block": 19234082,
+   "utc": "2024-02-15 14:59:47",
+   "tx": "0x7d6880954fd4df2a8da987b5d8500e07613e3549a3376bef94e951aab890fc54",
+   "logIndex": 116,
+   "topics": [
+    "0x5db9ee0a495bf2e6ff9c91a7834c1ba4fdd244a5e8aa4e537bd38aeae4b073aa"
+   ],
+   "data": "0x0000000000000000000000009ba6e03d8b90de867373db8cf1a58d2f7f006b3a"
+  }
+ ]
+}

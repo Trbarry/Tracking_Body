@@ -1,0 +1,338 @@
+{
+  "chains": {
+    "INK": {
+      "anchorStateRegistries": {
+        "0x2fc99fd16d8d3f6f66d164aa84e244c567e58a3d": {
+          "firstIndex": 470,
+          "gameCount": 452,
+          "lastIndex": 921,
+          "types": [
+            0
+          ]
+        },
+        "0xde744491bcf6b2dd2f32146364ea1487d75e2509": {
+          "firstIndex": 0,
+          "gameCount": 470,
+          "lastIndex": 469,
+          "types": [
+            0,
+            1
+          ]
+        },
+        "0xee018baf058227872540ac60efbd38b023d9dae2": {
+          "firstIndex": 922,
+          "gameCount": 1718,
+          "lastIndex": 2639,
+          "types": [
+            0,
+            8,
+            9
+          ]
+        }
+      },
+      "asrCallFailures": 0,
+      "delayedWETHs": {
+        "0x14773a8040ff22e3dcbb0c83ec8e33be7d920d38": {
+          "firstIndex": 0,
+          "gameCount": 190,
+          "lastIndex": 191,
+          "types": [
+            1
+          ]
+        },
+        "0x3beaca17eae5643fb1479aa5f4b1ff75cc4b9b50": {
+          "firstIndex": 155,
+          "gameCount": 216,
+          "lastIndex": 405,
+          "types": [
+            0
+          ]
+        },
+        "0x3f7b07a5d638024a37a776fa228fe90b317af6de": {
+          "firstIndex": 922,
+          "gameCount": 280,
+          "lastIndex": 1201,
+          "types": [
+            0
+          ]
+        },
+        "0x57b4c29daee99a28e6e86778b499361294c134ea": {
+          "firstIndex": 2266,
+          "gameCount": 374,
+          "lastIndex": 2639,
+          "types": [
+            8,
+            9
+          ]
+        },
+        "0x6cbd14da021e39a7895ae151ac72ecc9023e87f6": {
+          "firstIndex": 1202,
+          "gameCount": 1064,
+          "lastIndex": 2265,
+          "types": [
+            0
+          ]
+        },
+        "0xf6b1554f483c391414d3830927e3600c105aae6e": {
+          "firstIndex": 406,
+          "gameCount": 516,
+          "lastIndex": 921,
+          "types": [
+            0
+          ]
+        }
+      },
+      "gameCount": 2640,
+      "wethCallFailures": 0
+    },
+    "OP": {
+      "anchorStateRegistries": {
+        "0x18dac71c228d1c32c99489b7323d441e1175e443": {
+          "firstIndex": 0,
+          "gameCount": 7110,
+          "lastIndex": 7109,
+          "types": [
+            0,
+            1
+          ]
+        },
+        "0x1c68ecfbf9c8b1e6c0677965b3b9ecf9a104305b": {
+          "firstIndex": 7110,
+          "gameCount": 2718,
+          "lastIndex": 9827,
+          "types": [
+            0
+          ]
+        },
+        "0x23b2c62946350f4246f9f9d027e071f0264fd113": {
+          "firstIndex": 9828,
+          "gameCount": 11561,
+          "lastIndex": 21388,
+          "types": [
+            0,
+            8,
+            9
+          ]
+        }
+      },
+      "asrCallFailures": 0,
+      "delayedWETHs": {
+        "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162": {
+          "firstIndex": 17905,
+          "gameCount": 3484,
+          "lastIndex": 21388,
+          "types": [
+            8,
+            9
+          ]
+        },
+        "0x323dfc63c9b83cb83f40325aab74b245937cbdf0": {
+          "firstIndex": 5098,
+          "gameCount": 4730,
+          "lastIndex": 9827,
+          "types": [
+            0
+          ]
+        },
+        "0x82511d494b5c942be57498a70fdd7184ee33b975": {
+          "firstIndex": 2253,
+          "gameCount": 2845,
+          "lastIndex": 5097,
+          "types": [
+            0
+          ]
+        },
+        "0x9f9b897e37de5052cd70db6d08474550ddb07f39": {
+          "firstIndex": 2237,
+          "gameCount": 16,
+          "lastIndex": 2252,
+          "types": [
+            1
+          ]
+        },
+        "0xd061ab95069987868768818cc1248705351e2d0e": {
+          "firstIndex": 11507,
+          "gameCount": 6398,
+          "lastIndex": 17904,
+          "types": [
+            0
+          ]
+        },
+        "0xe214879ad573693a4c49f7654449caa455cde34f": {
+          "firstIndex": 9828,
+          "gameCount": 1679,
+          "lastIndex": 11506,
+          "types": [
+            0
+          ]
+        },
+        "0xe497b094d6dbb3d5e4caac9a14696d7572588d14": {
+          "firstIndex": 0,
+          "gameCount": 2237,
+          "lastIndex": 2236,
+          "types": [
+            0,
+            1
+          ]
+        }
+      },
+      "gameCount": 21389,
+      "wethCallFailures": 0
+    },
+    "SONEIUM": {
+      "anchorStateRegistries": {
+        "0x190b6ecee5a2ddf39669288b9b8daea4641ae8b1": {
+          "firstIndex": 1486,
+          "gameCount": 1355,
+          "lastIndex": 2840,
+          "types": [
+            1
+          ]
+        },
+        "0x4890928941e62e273da359374b105f803329f473": {
+          "firstIndex": 2841,
+          "gameCount": 5696,
+          "lastIndex": 8536,
+          "types": [
+            1,
+            5
+          ]
+        },
+        "0x61f89a381e0be13bd8ab356cf4b7301bc97d7522": {
+          "firstIndex": 0,
+          "gameCount": 1486,
+          "lastIndex": 1485,
+          "types": [
+            1
+          ]
+        }
+      },
+      "asrCallFailures": 0,
+      "delayedWETHs": {
+        "0x18fbb58c366e21f395ddec7cba0510a2d9116b47": {
+          "firstIndex": 6867,
+          "gameCount": 1088,
+          "lastIndex": 7954,
+          "types": [
+            1
+          ]
+        },
+        "0x372dc0b87b790d6e1308cf9e7f73f0f1fcbd3754": {
+          "firstIndex": 2841,
+          "gameCount": 838,
+          "lastIndex": 3678,
+          "types": [
+            1
+          ]
+        },
+        "0x70277624cde90492231eb23309e1251beb18dff5": {
+          "firstIndex": 3679,
+          "gameCount": 3188,
+          "lastIndex": 6866,
+          "types": [
+            1
+          ]
+        },
+        "0x9aea1fd851b63d57ba4fc556b0e0c170126c9eaf": {
+          "firstIndex": 0,
+          "gameCount": 2841,
+          "lastIndex": 2840,
+          "types": [
+            1
+          ]
+        }
+      },
+      "gameCount": 8537,
+      "wethCallFailures": 582
+    },
+    "UNICHAIN": {
+      "anchorStateRegistries": {
+        "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9": {
+          "firstIndex": 6186,
+          "gameCount": 11505,
+          "lastIndex": 17690,
+          "types": [
+            0,
+            8,
+            9
+          ]
+        },
+        "0x318a642db9e24a85318b8bf18efd5287ba38643b": {
+          "firstIndex": 0,
+          "gameCount": 3731,
+          "lastIndex": 3730,
+          "types": [
+            0,
+            1
+          ]
+        },
+        "0xd5d0e176be44e61eab3cf1fa8153758df603376f": {
+          "firstIndex": 3731,
+          "gameCount": 2455,
+          "lastIndex": 6185,
+          "types": [
+            0
+          ]
+        }
+      },
+      "asrCallFailures": 0,
+      "delayedWETHs": {
+        "0x0bdbec6bd35571f97f96f3ed21822a4f2e071a3c": {
+          "firstIndex": 7865,
+          "gameCount": 6616,
+          "lastIndex": 14480,
+          "types": [
+            0
+          ]
+        },
+        "0x74ad145ac900f1dd5551f0c9e143314dc4022fcf": {
+          "firstIndex": 14481,
+          "gameCount": 3210,
+          "lastIndex": 17690,
+          "types": [
+            8,
+            9
+          ]
+        },
+        "0x7d8ea656d7417229f420b0c87f6428baa8499d70": {
+          "firstIndex": 0,
+          "gameCount": 1740,
+          "lastIndex": 1739,
+          "types": [
+            1
+          ]
+        },
+        "0x84b268a4101a8c8e3ccb33004f81ed08202ba124": {
+          "firstIndex": 1740,
+          "gameCount": 125,
+          "lastIndex": 1867,
+          "types": [
+            1
+          ]
+        },
+        "0xa0157f0730dea8d1a5c358dc1d340a05d8796c23": {
+          "firstIndex": 6186,
+          "gameCount": 1679,
+          "lastIndex": 7864,
+          "types": [
+            0
+          ]
+        },
+        "0xc9edb4e340f4e9683b4557bd9db8f9d932177c86": {
+          "firstIndex": 1822,
+          "gameCount": 4321,
+          "lastIndex": 6185,
+          "types": [
+            0
+          ]
+        }
+      },
+      "gameCount": 17691,
+      "wethCallFailures": 0
+    }
+  },
+  "meta": {
+    "block": 26433900,
+    "rpc": "http://127.0.0.1:7545"
+  }
+}

@@ -1,0 +1,876 @@
+{
+ "chain": "INK",
+ "pin": 26433900,
+ "asr": [
+  {
+   "address": "0xde744491bcf6b2dd2f32146364ea1487d75e2509",
+   "bornBlock": 21344310,
+   "bornTime": "2024-12-06 15:20:11",
+   "version": "2.0.1-beta.3",
+   "games": 470,
+   "firstGame": 0,
+   "lastGame": 469,
+   "isCurrent": false,
+   "ethBalance": 0,
+   "respectedGameType": null,
+   "retirementTimestamp": null,
+   "anchorGame": null,
+   "paused": null,
+   "portal": null,
+   "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+   "disputeGameFactory": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+   "implSlot": "0x7a78aa7d5dec2f8b368ca13f00df2fa4e5de3c3f",
+   "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "events": [
+    {
+     "block": 21344310,
+     "tx": "0x45c2b63987a8c7ab97bdcdab5e04618d4ed74971aa4ac51b15ed8522ea6c0284",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000007a78aa7d5dec2f8b368ca13f00df2fa4e5de3c3f"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 21344310,
+     "tx": "0x45c2b63987a8c7ab97bdcdab5e04618d4ed74971aa4ac51b15ed8522ea6c0284",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+     "block": 21618223,
+     "tx": "0x71234ec9d3df32360383a0091277b0facbeb21456f1a29accb110fa43a6b5441",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x000000000000000000000000d81f43edbcacb4c29a9ba38a13ee5d79278270cc"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 21618223,
+     "tx": "0x71234ec9d3df32360383a0091277b0facbeb21456f1a29accb110fa43a6b5441",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000007a78aa7d5dec2f8b368ca13f00df2fa4e5de3c3f"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 21618223,
+     "tx": "0x71234ec9d3df32360383a0091277b0facbeb21456f1a29accb110fa43a6b5441",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    }
+   ]
+  },
+  {
+   "address": "0x2fc99fd16d8d3f6f66d164aa84e244c567e58a3d",
+   "bornBlock": 22182531,
+   "bornTime": "2025-04-02 16:50:23",
+   "version": "2.2.2",
+   "games": 452,
+   "firstGame": 470,
+   "lastGame": 921,
+   "isCurrent": false,
+   "ethBalance": 0,
+   "respectedGameType": 9,
+   "retirementTimestamp": null,
+   "anchorGame": "0x6009f05360bf8db7ed2c6b16ce4724bbcca2ee01",
+   "paused": null,
+   "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f",
+   "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+   "disputeGameFactory": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+   "implSlot": "0x7b465370bb7a333f99edd19599eb7fb1c2d3f8d2",
+   "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "events": [
+    {
+     "block": 22182531,
+     "tx": "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000007b465370bb7a333f99edd19599eb7fb1c2d3f8d2"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 22182531,
+     "tx": "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    }
+   ]
+  },
+  {
+   "address": "0xee018baf058227872540ac60efbd38b023d9dae2",
+   "bornBlock": 22990599,
+   "bornTime": "2025-07-24 17:47:23",
+   "version": "4.0.0",
+   "games": 1718,
+   "firstGame": 922,
+   "lastGame": 2639,
+   "isCurrent": true,
+   "ethBalance": 0,
+   "respectedGameType": 9,
+   "retirementTimestamp": 1753379243,
+   "anchorGame": "0x38925ef2ec5451e7280cc7bbe08e73e74ebf8945",
+   "paused": 0,
+   "portal": null,
+   "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+   "disputeGameFactory": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+   "implSlot": "0x2b27299c577d4720100e2735b652444dcea652d0",
+   "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "events": [
+    {
+     "block": 22990599,
+     "tx": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x000000000000000000000000eb69cc681e8d4a557b30dffbad85affd47a2cf2e"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 22990599,
+     "tx": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+     "block": 23491328,
+     "tx": "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x000000000000000000000000eb69cc681e8d4a557b30dffbad85affd47a2cf2e"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 24421512,
+     "tx": "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x00000000000000000000000036398155cd17cfe804f69b233edda800dd4d5aa5"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 25397811,
+     "tx": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000002476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 25397811,
+     "tx": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000008f40cc98d694ab986f026c5383a181fcc9b6b281"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 25397811,
+     "tx": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+     "block": 26048619,
+     "tx": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000002476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26048619,
+     "tx": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000008f40cc98d694ab986f026c5383a181fcc9b6b281"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26048619,
+     "tx": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+     "block": 26048619,
+     "tx": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000002476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26048619,
+     "tx": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000008f40cc98d694ab986f026c5383a181fcc9b6b281"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26430859,
+     "tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000002476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26430859,
+     "tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000002b27299c577d4720100e2735b652444dcea652d0"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26430859,
+     "tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+     "block": 26430859,
+     "tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000002476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26430859,
+     "tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000002b27299c577d4720100e2735b652444dcea652d0"
+     ],
+     "data": "0x"
+    }
+   ]
+  }
+ ],
+ "delayedWETH": [
+  {
+   "address": "0x14773a8040ff22e3dcbb0c83ec8e33be7d920d38",
+   "bornBlock": 21344310,
+   "bornTime": "2024-12-06 15:20:11",
+   "version": "1.1.0",
+   "games": 190,
+   "firstGame": 0,
+   "lastGame": 191,
+   "isSystemConfigWeth": false,
+   "ethBalanceWei": 0,
+   "ethBalance": 0.0,
+   "totalSupply": 0,
+   "delay": 604800,
+   "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+   "systemConfig": null,
+   "proxyAdminOwner": null,
+   "implSlot": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+   "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "events": [
+    {
+     "block": 21344310,
+     "tx": "0x45c2b63987a8c7ab97bdcdab5e04618d4ed74971aa4ac51b15ed8522ea6c0284",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x00000000000000000000000071e966ae981d1ce531a7b6d23dc0f27b38409087"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 21344310,
+     "tx": "0x45c2b63987a8c7ab97bdcdab5e04618d4ed74971aa4ac51b15ed8522ea6c0284",
+     "event": "OwnershipTransferred(address,address)",
+     "topics": [
+      "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "0x000000000000000000000000d56045e68956fce2576e680c95a4750cf8241f79"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 21344310,
+     "tx": "0x45c2b63987a8c7ab97bdcdab5e04618d4ed74971aa4ac51b15ed8522ea6c0284",
+     "event": "OwnershipTransferred(address,address)",
+     "topics": [
+      "0x000000000000000000000000d56045e68956fce2576e680c95a4750cf8241f79",
+      "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 21344310,
+     "tx": "0x45c2b63987a8c7ab97bdcdab5e04618d4ed74971aa4ac51b15ed8522ea6c0284",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    }
+   ],
+   "implVersionNow": "1.1.0"
+  },
+  {
+   "address": "0x3beaca17eae5643fb1479aa5f4b1ff75cc4b9b50",
+   "bornBlock": 21387926,
+   "bornTime": "2024-12-12 17:29:35",
+   "version": "1.1.0",
+   "games": 216,
+   "firstGame": 155,
+   "lastGame": 405,
+   "isSystemConfigWeth": false,
+   "ethBalanceWei": 80000000000000000,
+   "ethBalance": 0.08,
+   "totalSupply": 80000000000000000,
+   "delay": 604800,
+   "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+   "systemConfig": null,
+   "proxyAdminOwner": null,
+   "implSlot": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+   "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "events": [
+    {
+     "block": 21387926,
+     "tx": "0x11b1f0451aab00410096f7311b12e20a1d57b30d3ffec63beeece2dd9a31dd23",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x00000000000000000000000071e966ae981d1ce531a7b6d23dc0f27b38409087"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 21387926,
+     "tx": "0x11b1f0451aab00410096f7311b12e20a1d57b30d3ffec63beeece2dd9a31dd23",
+     "event": "OwnershipTransferred(address,address)",
+     "topics": [
+      "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "0x0000000000000000000000000125aeb5ff473de23ab72454b2bbc45613ff3bd7"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 21387926,
+     "tx": "0x11b1f0451aab00410096f7311b12e20a1d57b30d3ffec63beeece2dd9a31dd23",
+     "event": "OwnershipTransferred(address,address)",
+     "topics": [
+      "0x0000000000000000000000000125aeb5ff473de23ab72454b2bbc45613ff3bd7",
+      "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 21387926,
+     "tx": "0x11b1f0451aab00410096f7311b12e20a1d57b30d3ffec63beeece2dd9a31dd23",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    }
+   ],
+   "implVersionNow": "1.1.0"
+  },
+  {
+   "address": "0xf6b1554f483c391414d3830927e3600c105aae6e",
+   "bornBlock": 21995971,
+   "bornTime": "2025-03-07 15:43:35",
+   "version": "1.3.0",
+   "games": 516,
+   "firstGame": 406,
+   "lastGame": 921,
+   "isSystemConfigWeth": false,
+   "ethBalanceWei": 0,
+   "ethBalance": 0.0,
+   "totalSupply": 0,
+   "delay": 302400,
+   "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+   "systemConfig": null,
+   "proxyAdminOwner": null,
+   "implSlot": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
+   "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "events": [
+    {
+     "block": 21995972,
+     "tx": "0x26e2d3f783420527544e06425c87be61243305a971029cb12317a6831b279d71",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x00000000000000000000000071e966ae981d1ce531a7b6d23dc0f27b38409087"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 21995972,
+     "tx": "0x26e2d3f783420527544e06425c87be61243305a971029cb12317a6831b279d71",
+     "event": "OwnershipTransferred(address,address)",
+     "topics": [
+      "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "0x000000000000000000000000c117315c9ddd2f2de23944982ba34629527773c7"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 21995972,
+     "tx": "0x26e2d3f783420527544e06425c87be61243305a971029cb12317a6831b279d71",
+     "event": "OwnershipTransferred(address,address)",
+     "topics": [
+      "0x000000000000000000000000c117315c9ddd2f2de23944982ba34629527773c7",
+      "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 21995972,
+     "tx": "0x26e2d3f783420527544e06425c87be61243305a971029cb12317a6831b279d71",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+     "block": 22182531,
+     "tx": "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000005e40b9231b86984b5150507046e354dbfbed3d9e"
+     ],
+     "data": "0x"
+    }
+   ],
+   "implVersionNow": "1.3.0"
+  },
+  {
+   "address": "0x3f7b07a5d638024a37a776fa228fe90b317af6de",
+   "bornBlock": 22990599,
+   "bornTime": "2025-07-24 17:47:23",
+   "version": "1.5.0",
+   "games": 280,
+   "firstGame": 922,
+   "lastGame": 1201,
+   "isSystemConfigWeth": false,
+   "ethBalanceWei": 0,
+   "ethBalance": 0.0,
+   "totalSupply": 0,
+   "delay": 302400,
+   "owner": null,
+   "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+   "systemConfig": "0x62c0a111929fa32cec2f76adba54c16afb6e8364",
+   "proxyAdminOwner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "implSlot": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+   "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "events": [
+    {
+     "block": 22990599,
+     "tx": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x00000000000000000000000033dadc2d1aa9bb613a7ae6b28425ea00d44c6998"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 22990599,
+     "tx": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    }
+   ],
+   "implVersionNow": "1.5.0"
+  },
+  {
+   "address": "0x6cbd14da021e39a7895ae151ac72ecc9023e87f6",
+   "bornBlock": 23491328,
+   "bornTime": "2025-10-02 16:35:23",
+   "version": "1.5.0",
+   "games": 1064,
+   "firstGame": 1202,
+   "lastGame": 2265,
+   "isSystemConfigWeth": false,
+   "ethBalanceWei": 0,
+   "ethBalance": 0.0,
+   "totalSupply": 0,
+   "delay": 302400,
+   "owner": null,
+   "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+   "systemConfig": "0x62c0a111929fa32cec2f76adba54c16afb6e8364",
+   "proxyAdminOwner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "implSlot": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+   "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "events": [
+    {
+     "block": 23491328,
+     "tx": "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x00000000000000000000000033dadc2d1aa9bb613a7ae6b28425ea00d44c6998"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 23491328,
+     "tx": "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    }
+   ],
+   "implVersionNow": "1.5.0"
+  },
+  {
+   "address": "0x57b4c29daee99a28e6e86778b499361294c134ea",
+   "bornBlock": 25397811,
+   "bornTime": "2026-06-25 23:05:47",
+   "version": "2.0.0",
+   "games": 374,
+   "firstGame": 2266,
+   "lastGame": 2639,
+   "isSystemConfigWeth": true,
+   "ethBalanceWei": 5710376000000000000,
+   "ethBalance": 5.710376,
+   "totalSupply": 5710376000000000000,
+   "delay": 302400,
+   "owner": null,
+   "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+   "systemConfig": null,
+   "proxyAdminOwner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "implSlot": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+   "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "events": [
+    {
+     "block": 25397811,
+     "tx": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000002476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 25397811,
+     "tx": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x000000000000000000000000e440cc08a71694c8229323803f59024e3144630e"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 25397811,
+     "tx": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+     "block": 26048619,
+     "tx": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000002476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26048619,
+     "tx": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x000000000000000000000000e440cc08a71694c8229323803f59024e3144630e"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26048619,
+     "tx": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+     "block": 26048619,
+     "tx": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000002476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26048619,
+     "tx": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x000000000000000000000000e440cc08a71694c8229323803f59024e3144630e"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26430859,
+     "tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000002476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26430859,
+     "tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x000000000000000000000000f024e96317907c3b8d8cb346b9fd9034c8640e15"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26430859,
+     "tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+     "event": "Initialized(uint8)",
+     "topics": [],
+     "data": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+     "block": 26430859,
+     "tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x0000000000000000000000002476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     "data": "0x"
+    },
+    {
+     "block": 26430859,
+     "tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+     "event": "Upgraded(address)",
+     "topics": [
+      "0x000000000000000000000000f024e96317907c3b8d8cb346b9fd9034c8640e15"
+     ],
+     "data": "0x"
+    }
+   ],
+   "implVersionNow": "2.0.0"
+  }
+ ],
+ "asrSlot6History": [
+  {
+   "block": 22990599,
+   "time": "2025-07-24 17:47:23",
+   "raw": "0x000000000000000000000000000000000000000000000000688271ab00000000",
+   "respectedGameType": 0,
+   "retirementTimestamp": 1753379243
+  },
+  {
+   "block": 25397811,
+   "time": "2026-06-25 23:05:47",
+   "raw": "0x000000000000000000000000000000000000000000000000688271ab00000008",
+   "respectedGameType": 8,
+   "retirementTimestamp": 1753379243
+  },
+  {
+   "block": 26048619,
+   "time": "2026-09-24 16:51:23",
+   "raw": "0x000000000000000000000000000000000000000000000000688271ab00000009",
+   "respectedGameType": 9,
+   "retirementTimestamp": 1753379243
+  },
+  {
+   "block": 26430859,
+   "time": "2026-11-16 23:23:59",
+   "raw": "0xbd4abb321138e8eddc399ce64e66451294325a1400000000688271ab00000009",
+   "respectedGameType": 9,
+   "retirementTimestamp": 1753379243
+  }
+ ],
+ "lastUsedOPCM": [
+  {
+   "block": 23491328,
+   "time": "2025-10-02 16:35:23",
+   "lastUsedOPCM": null,
+   "lastUsedOPCMVersion": null
+  },
+  {
+   "block": 23877377,
+   "time": "2025-11-25 17:46:35",
+   "lastUsedOPCM": null,
+   "lastUsedOPCMVersion": null
+  },
+  {
+   "block": 24421512,
+   "time": "2026-02-09 20:10:59",
+   "lastUsedOPCM": null,
+   "lastUsedOPCMVersion": null
+  },
+  {
+   "block": 25397811,
+   "time": "2026-06-25 23:05:47",
+   "lastUsedOPCM": "0x9ce712ff84e02659846dc6450bb9b7642fe8be5d",
+   "lastUsedOPCMVersion": "7.1.17"
+  },
+  {
+   "block": 26048619,
+   "time": "2026-09-24 16:51:23",
+   "lastUsedOPCM": "0x1951828ce913dc4383a8a1695695d537a11d896a",
+   "lastUsedOPCMVersion": "8.0.1"
+  },
+  {
+   "block": 26430859,
+   "time": "2026-11-16 23:23:59",
+   "lastUsedOPCM": "0x2d91e6f2bcf6cd1df90e1faf9714e18705ea331f",
+   "lastUsedOPCMVersion": "9.0.3"
+  }
+ ],
+ "custody": [
+  {
+   "block": 21344310,
+   "time": "2024-12-06 15:20:11",
+   "OptimismPortal_before": 0.0,
+   "OptimismPortal_after": 0.0,
+   "L1CrossDomainMessenger_before": 0.0,
+   "L1CrossDomainMessenger_after": 0.0,
+   "L1StandardBridge_before": 0.0,
+   "L1StandardBridge_after": 0.0,
+   "ETHLockbox_before": null,
+   "ETHLockbox_after": null
+  },
+  {
+   "block": 22182531,
+   "time": "2025-04-02 16:50:23",
+   "OptimismPortal_before": 9443.049970572498,
+   "OptimismPortal_after": 9443.049970572498,
+   "L1CrossDomainMessenger_before": 0.0,
+   "L1CrossDomainMessenger_after": 0.0,
+   "L1StandardBridge_before": 0.0,
+   "L1StandardBridge_after": 0.0,
+   "ETHLockbox_before": null,
+   "ETHLockbox_after": null
+  },
+  {
+   "block": 22339996,
+   "time": "2025-04-24 16:16:23",
+   "OptimismPortal_before": 9609.734661147028,
+   "OptimismPortal_after": 9609.734661147028,
+   "L1CrossDomainMessenger_before": 0.0,
+   "L1CrossDomainMessenger_after": 0.0,
+   "L1StandardBridge_before": 0.0,
+   "L1StandardBridge_after": 0.0,
+   "ETHLockbox_before": null,
+   "ETHLockbox_after": null
+  },
+  {
+   "block": 22990599,
+   "time": "2025-07-24 17:47:23",
+   "OptimismPortal_before": 6020.610509607786,
+   "OptimismPortal_after": 0.0,
+   "L1CrossDomainMessenger_before": 0.0,
+   "L1CrossDomainMessenger_after": 0.0,
+   "L1StandardBridge_before": 0.0,
+   "L1StandardBridge_after": 0.0,
+   "ETHLockbox_before": null,
+   "ETHLockbox_after": 6020.610509607786
+  },
+  {
+   "block": 23491328,
+   "time": "2025-10-02 16:35:23",
+   "OptimismPortal_before": 0.0,
+   "OptimismPortal_after": 0.0,
+   "L1CrossDomainMessenger_before": 0.0,
+   "L1CrossDomainMessenger_after": 0.0,
+   "L1StandardBridge_before": 0.0,
+   "L1StandardBridge_after": 0.0,
+   "ETHLockbox_before": 6649.408111715494,
+   "ETHLockbox_after": 6649.408111715494
+  },
+  {
+   "block": 23877377,
+   "time": "2025-11-25 17:46:35",
+   "OptimismPortal_before": 0.0,
+   "OptimismPortal_after": 0.0,
+   "L1CrossDomainMessenger_before": 0.0,
+   "L1CrossDomainMessenger_after": 0.0,
+   "L1StandardBridge_before": 0.0,
+   "L1StandardBridge_after": 0.0,
+   "ETHLockbox_before": 41099.0142857718,
+   "ETHLockbox_after": 41099.0142857718
+  },
+  {
+   "block": 24421512,
+   "time": "2026-02-09 20:10:59",
+   "OptimismPortal_before": 0.0,
+   "OptimismPortal_after": 0.0,
+   "L1CrossDomainMessenger_before": 0.0,
+   "L1CrossDomainMessenger_after": 0.0,
+   "L1StandardBridge_before": 0.0,
+   "L1StandardBridge_after": 0.0,
+   "ETHLockbox_before": 28473.189152176656,
+   "ETHLockbox_after": 28473.189152176656
+  },
+  {
+   "block": 25397811,
+   "time": "2026-06-25 23:05:47",
+   "OptimismPortal_before": 0.0,
+   "OptimismPortal_after": 0.0,
+   "L1CrossDomainMessenger_before": 0.0,
+   "L1CrossDomainMessenger_after": 0.0,
+   "L1StandardBridge_before": 0.0,
+   "L1StandardBridge_after": 0.0,
+   "ETHLockbox_before": 26190.81803428378,
+   "ETHLockbox_after": 26190.81803428378
+  },
+  {
+   "block": 26048619,
+   "time": "2026-09-24 16:51:23",
+   "OptimismPortal_before": 0.0,
+   "OptimismPortal_after": 0.0,
+   "L1CrossDomainMessenger_before": 0.0,
+   "L1CrossDomainMessenger_after": 0.0,
+   "L1StandardBridge_before": 0.0,
+   "L1StandardBridge_after": 0.0,
+   "ETHLockbox_before": 22846.565041625232,
+   "ETHLockbox_after": 22846.565041625232
+  },
+  {
+   "block": 26430859,
+   "time": "2026-11-16 23:23:59",
+   "OptimismPortal_before": 0.0,
+   "OptimismPortal_after": 0.0,
+   "L1CrossDomainMessenger_before": 0.0,
+   "L1CrossDomainMessenger_after": 0.0,
+   "L1StandardBridge_before": 0.0,
+   "L1StandardBridge_after": 0.0,
+   "ETHLockbox_before": 23088.758336628212,
+   "ETHLockbox_after": 23088.758336628212
+  },
+  {
+   "block": 26433900,
+   "time": "2026-11-17 09:34:35",
+   "OptimismPortal_before": 0.0,
+   "OptimismPortal_after": 0.0,
+   "L1CrossDomainMessenger_before": 0.0,
+   "L1CrossDomainMessenger_after": 0.0,
+   "L1StandardBridge_before": 0.0,
+   "L1StandardBridge_after": 0.0,
+   "ETHLockbox_before": 23088.758336628212,
+   "ETHLockbox_after": 23088.758336628212
+  }
+ ]
+}

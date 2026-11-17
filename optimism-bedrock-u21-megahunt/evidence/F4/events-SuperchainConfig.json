@@ -1,0 +1,206 @@
+{
+ "name": "SuperchainConfig",
+ "proxy": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+ "blocks": [
+  {
+   "block": 19064589,
+   "timestamp": 1705954799,
+   "txs": {
+    "0x3c23aae4b875fa496c45d76db1e54159ff90bed14a33e67f5dceb0f088fe833d": [
+     [
+      41,
+      "f04a4c",
+      "AdminChanged",
+      "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000025bdf215ca623a02622843abe38363ffdb3e79a9"
+     ]
+    ],
+    "0x8ba0e42b89cde22310b644ed30fd44e4a348619a165a54c908e7dc341e9bbd0c": [
+     [
+      44,
+      "f04a4c",
+      "Upgraded",
+      "0x53c165169401764778f780a69701385eb0ff19b7"
+     ],
+     [
+      46,
+      "f04a4c",
+      "Initialized(uint8)",
+      1
+     ]
+    ],
+    "0xcde51cae42a9c77352064104cf01604c78fa771d64bce3f756bedc3c196a2c3a": [
+     [
+      47,
+      "f04a4c",
+      "AdminChanged",
+      "0x00000000000000000000000025bdf215ca623a02622843abe38363ffdb3e79a9000000000000000000000000543ba4aadbab8f9025686bd03993043599c6fb04"
+     ]
+    ]
+   },
+   "init_before": "0x0000000000000000000000000000000000000000000000000000000000000000",
+   "init_after": "0x0000000000000000000000000000000000000000000000000000000000000001"
+  },
+  {
+   "block": 22182531,
+   "timestamp": 1743612623,
+   "txs": {
+    "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29": [
+     [
+      155,
+      "f04a4c",
+      "Upgraded",
+      "0x4da82a327773965b8d4d85fa3db8249b387458e7"
+     ]
+    ]
+   },
+   "init_before": "0x0000000000000000000000000000000000000000000000000000000000000001",
+   "init_after": "0x0000000000000000000000000000000000000000000000000000000000000001"
+  },
+  {
+   "block": 22990599,
+   "timestamp": 1753379243,
+   "txs": {
+    "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716": [
+     [
+      239,
+      "f04a4c",
+      "Upgraded",
+      "0xce28685eb204186b557133766eca00334eb441e4"
+     ],
+     [
+      241,
+      "f04a4c",
+      "Initialized(uint8)",
+      2
+     ]
+    ]
+   },
+   "init_before": "0x0000000000000000000000000000000000000000000000000000000000000001",
+   "init_after": "0x0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20002"
+  },
+  {
+   "block": 23877377,
+   "timestamp": 1764092795,
+   "txs": {
+    "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5": [
+     [
+      219,
+      "f04a4c",
+      "Upgraded",
+      "0xb08cc720f511062537ca78bdb0ae691f04f5a957"
+     ]
+    ]
+   },
+   "init_before": "0x0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20002",
+   "init_after": "0x0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20002"
+  },
+  {
+   "block": 25397811,
+   "timestamp": 1782428747,
+   "txs": {
+    "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15": [
+     [
+      71,
+      "f04a4c",
+      "Upgraded",
+      "0x2476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     [
+      72,
+      "f04a4c",
+      "Upgraded",
+      "0xe4f9779ab53070a55db24dfaeff9af147c6ed550"
+     ],
+     [
+      74,
+      "f04a4c",
+      "Initialized(uint8)",
+      2
+     ]
+    ]
+   },
+   "init_before": "0x0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20002",
+   "init_after": "0x0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20002"
+  },
+  {
+   "block": 26048619,
+   "timestamp": 1790268683,
+   "txs": {
+    "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a": [
+     [
+      731,
+      "f04a4c",
+      "Upgraded",
+      "0x2476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     [
+      732,
+      "f04a4c",
+      "Upgraded",
+      "0x5570b1f2b97b1e35b5c6f9ee76f6cf02c9917504"
+     ],
+     [
+      734,
+      "f04a4c",
+      "Initialized(uint8)",
+      2
+     ],
+     [
+      735,
+      "f04a4c",
+      "Upgraded",
+      "0x2476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     [
+      736,
+      "f04a4c",
+      "Upgraded",
+      "0x5570b1f2b97b1e35b5c6f9ee76f6cf02c9917504"
+     ]
+    ]
+   },
+   "init_before": "0x0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20002",
+   "init_after": "0x0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20002"
+  },
+  {
+   "block": 26430859,
+   "timestamp": 1794871439,
+   "txs": {
+    "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99": [
+     [
+      674,
+      "f04a4c",
+      "Upgraded",
+      "0x2476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     [
+      675,
+      "f04a4c",
+      "Upgraded",
+      "0xa303a644cfbc0c34f6a9dbeafdeba4c967ea01e7"
+     ],
+     [
+      677,
+      "f04a4c",
+      "Initialized(uint8)",
+      2
+     ],
+     [
+      678,
+      "f04a4c",
+      "Upgraded",
+      "0x2476c911e6d4d9411e677d8faf15a64ac1fdeee8"
+     ],
+     [
+      679,
+      "f04a4c",
+      "Upgraded",
+      "0xa303a644cfbc0c34f6a9dbeafdeba4c967ea01e7"
+     ]
+    ]
+   },
+   "init_before": "0x0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20002",
+   "init_after": "0x0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20002"
+  }
+ ]
+}

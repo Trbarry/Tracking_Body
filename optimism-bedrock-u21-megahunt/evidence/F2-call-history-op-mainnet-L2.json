@@ -1,0 +1,30 @@
+{
+ "rpc": "http://127.0.0.1:7546",
+ "end_block": 159654093,
+ "sample_step": 200000,
+ "targets": [
+  {
+   "name": "L2ProxyAdmin.owner()",
+   "to": "0x4200000000000000000000000000000000000018",
+   "sig": "owner()",
+   "args": [],
+   "calldata": "0x8da5cb5b",
+   "start": 105235063,
+   "history": [
+    {
+     "block": 105235063,
+     "timestamp": 1686068903,
+     "utc": "2023-06-06 16:28:23",
+     "value": "0x0000000000000000000000007871d1187a97cbbe40710ac119aa3d412944e4fe"
+    },
+    {
+     "block": 121221987,
+     "timestamp": 1718042751,
+     "utc": "2024-06-10 18:05:51",
+     "value": "0x0000000000000000000000006b1bae59d09fccbddb6c6cceb07b7279367c4e3b"
+    }
+   ]
+  }
+ ],
+ "rpc_calls": 294
+}

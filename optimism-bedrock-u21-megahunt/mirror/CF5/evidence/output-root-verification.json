@@ -1,0 +1,67 @@
+{
+  "chains": {
+    "INK": {
+      "flagged": [
+        {
+          "blacklisted": false,
+          "calculatedOutputRoot": "0xaf30eecb2fb746b58c5ab9f302e25f16d7118aa05aec7454b869263b7a8aeadb",
+          "claimValid": false,
+          "createdAt": 1794857603,
+          "creator": "0x05f97bc048711287e912a72f4dbaa8faa7599eb5",
+          "embeddedOutputRoot": "0x4bf7a459f2a916c09923fe3d8290e223d982d7d4a4c1f7839952b596ddb6f493",
+          "game": "0x40bec00713a38ee5fd697764d50f0055ba4942cc",
+          "index": 2638,
+          "l2BlockHash": "0xae11b12d06b3e6afb95bc2b00ef96fe3ad3e3ab9ab33afb40d59eebf1404d597",
+          "l2BlockNumber": 61359179,
+          "l2SequenceNumber": 1794857590,
+          "matches": false,
+          "retired": false,
+          "rootClaim": "0xedf7295dc67ef81bfb2791da445ecf59f49a2d3cfb54e359fe5d628a30a5d0bb",
+          "stateRoot": "0x94ff6c38c3a80602949666258bdc7bf423a8cd46a2b078f17b601d1733d84061",
+          "status": 0,
+          "thirdPartyLive": true,
+          "type": 9,
+          "weth": "0x57b4c29daee99a28e6e86778b499361294c134ea",
+          "withdrawalsRoot": "0xcc7f047bce60c4693b4c3f454cf6c7bdcd56986a9d7375f1efc30cc8fd34ccef"
+        }
+      ],
+      "rpc": "https://rpc-gel.inkonchain.com"
+    },
+    "SONEIUM": {
+      "flagged": [],
+      "rpc": "https://rpc.soneium.org"
+    },
+    "UNICHAIN": {
+      "flagged": [
+        {
+          "blacklisted": false,
+          "calculatedOutputRoot": "0x6b26df0bc058f0f7d4946a54047d81100822ef6c7df817f8e047a2a367821e8e",
+          "claimValid": false,
+          "createdAt": 1794531755,
+          "creator": "0x9995c45126e493a80af417eb3f3328a1e4511543",
+          "embeddedOutputRoot": "0x0cf7603494e163125ec6c1c184b047219ce727ea2b5aa10a935f63294f752e52",
+          "game": "0xa41214c2851f0d538b7c6b37fa66e35472ff6f0e",
+          "index": 17586,
+          "l2BlockHash": "0x2652913dd32295aff64e54d3fe5209a00cd47d3e01c5b7f7c02e389761dc977d",
+          "l2BlockNumber": 63783372,
+          "l2SequenceNumber": 1794531731,
+          "matches": false,
+          "retired": false,
+          "rootClaim": "0x384e8ef313b6a23e2b1d474c162cbbed22337e8c6842bf5258fa9caea4a42dc2",
+          "stateRoot": "0xf360a54d40c02df72929f436edc9fb96885fb0e67809de741171ccb310312db5",
+          "status": 0,
+          "thirdPartyLive": true,
+          "type": 9,
+          "weth": "0x74ad145ac900f1dd5551f0c9e143314dc4022fcf",
+          "withdrawalsRoot": "0x1bd2fbf1c58ef106b2471b7828a6ef8720514d073c435454247ce6bc7ffdb4f6"
+        }
+      ],
+      "rpc": "https://mainnet.unichain.org"
+    }
+  },
+  "meta": {
+    "formula": "keccak(bytes32(0) ++ stateRoot ++ withdrawalsRoot ++ blockHash)",
+    "l1Block": 26433900,
+    "l1Rpc": "http://127.0.0.1:7545"
+  }
+}

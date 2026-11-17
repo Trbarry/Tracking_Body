@@ -1,0 +1,39 @@
+non-retired games: 11505
+headers 0/11504
+headers 500/11504
+headers 1000/11504
+headers 1500/11504
+headers 2000/11504
+headers 2500/11504
+headers 3000/11504
+headers 3500/11504
+headers 4000/11504
+headers 4500/11504
+headers 5000/11504
+headers 5500/11504
+headers 6000/11504
+headers 6500/11504
+headers 7000/11504
+headers 7500/11504
+headers 8000/11504
+headers 8500/11504
+headers 9000/11504
+headers 9500/11504
+headers 10000/11504
+headers 10500/11504
+headers 11000/11504
+headers 11500/11504
+
+(type, status, claimValid, headerMatch) -> count
+  (0, 'DEFENDER_WINS', True, True) 8295
+  (8, 'DEFENDER_WINS', True, True) 1912
+  (9, 'DEFENDER_WINS', True, True) 1116
+  (9, 'IN_PROGRESS', False, True) 84
+  (9, 'DEFENDER_WINS', False, True) 83
+  (9, 'CHALLENGER_WINS', False, False) 12
+  (8, 'CHALLENGER_WINS', False, False) 2
+  (9, 'IN_PROGRESS', False, False) 1
+
+ANOMALIES (non-matching root that is claim-valid / not CHALLENGER_WINS, or matching root that lost): 1
+   17586 type 9 0xa41214c2851f0d538b7c6b37fa66e35472ff6f0e creator 0x9995c45126e493a80af417eb3f3328a1e4511543 IN_PROGRESS claimValid False l2Block 63783372 claimed 0x0cf7603494e163125ec6c1c184b047219ce727ea2b5aa10a935f63294f752e52 computed 0x6b26df0bc058f0f7d4946a54047d81100822ef6c7df817f8e047a2a367821e8e superHashOk True entries 1 tsAligned True
+EXIT 0

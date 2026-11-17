@@ -1,0 +1,2664 @@
+{
+ "meta": {
+  "worker": "W0",
+  "generated": "2026-11-17",
+  "track": "A (blind)",
+  "source": "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives (115 files: 112 primitives + 3 scope routes PRIM-3301..3303, dropped)",
+  "records": 93,
+  "merged_lane_mirror_pairs": 19,
+  "path_conventions": "location_at_that_tag is relative to packages/contracts-bedrock at hist/<tag> (v1.0.0..v6.0.0) or op-v{7,8,9}.0.0; location_v9 is relative to op-v9.0.0/packages/contracts-bedrock",
+  "priority_rule": "P0 = the historical backtrace could change a PASS A closure (C3,C4,C5,C6,C9,C13) or feeds open lead L1/L3; P1 = a lineage with a concrete unexercised create-at-N/consume-at-M pair; P2 = context, or a duplicate mechanism whose canonical record carries the experiment (see same_mechanism_as)",
+  "dedupe_rule": "only exact lane-vs-Codex-mirror duplicates are merged into one record (two source_files); the same mechanism found by unrelated lanes is kept as separate records linked by same_mechanism_as",
+  "family_vocabulary": [
+   "custody",
+   "proof-lifecycle",
+   "messenger-replay",
+   "pause",
+   "storage-init",
+   "upgrade-engine",
+   "identity-binding",
+   "dispute-game",
+   "bond-credit",
+   "gas-budget",
+   "migration",
+   "tooling"
+  ]
+ },
+ "primitives": [
+  {
+   "id": "A-001",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0101.md"
+   ],
+   "title": "Output-root games created since the U16 retirement stay claim-valid next to super-root games; no type switch or re-initialisation retired them",
+   "family": "dispute-game",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:450-455 (setRespectedGameType stamps respectedGameTypeUpdatedAt = every type switch retires)",
+    "current_form_since": "v6.0.0 src/dispute/AnchorStateRegistry.sol:89-116 (initialize keeps a non-zero retirementTimestamp); decoupled at v2.0.0 :498-510; moved to the ASR at v4.0.0 src/dispute/AnchorStateRegistry.sol:137-144,222-226",
+    "note": "respect snapshot wasRespectedGameTypeWhenCreated: v2.0.0 src/dispute/FaultDisputeGame.sol:284-359"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "AnchorStateRegistry.isGameClaimValid / isGameRetired / initialize",
+    "location_v9": "src/dispute/AnchorStateRegistry.sol:331-353, 259-263, 94-133"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "AnchorStateRegistry slot 6 (retirementTimestamp 1753379243 on OP/Ink) + every DEFENDER_WINS clone created after it (OP: 8,029 type-0 and 2,167 type-8 official games, 1 third-party type-8)",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "create under FDG 1.7.0 / 1.8.0 / 2.2.0 / 2.4.2 (four prestate generations, U16..U19) -> prove under v9. PASS A recomputed 9 roots; the official proposer's ~10.2k roots and the Ink/Soneium/Unichain game sets were never checked.",
+   "NEXT_EXPERIMENT": "Census Ink/Soneium/Unichain factories with evidence/op-mainnet-games-scan.py (claim-valid, non-official creator, type != respected) and recompute every claim-valid root from L2 headers on all four chains.",
+   "priority": "P0",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-025",
+    "A-033"
+   ]
+  },
+  {
+   "id": "A-002",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0102.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2103.md"
+   ],
+   "title": "Games created on the previous absolute prestate stay in flight, respected and resolvable after a prestate switch",
+   "family": "dispute-game",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/dispute/DisputeGameFactory.sol:84-132 + game immutables (prestate/VM/registry/WETH fixed per implementation)",
+    "current_form_since": "v6.0.0 src/dispute/DisputeGameFactory.sol:147-216 (gameArgs copied into the clone, game type in clone data); gameArgs storage v5.0.0 :147-198; deterministic clones v7.0.0",
+    "note": "first gameArgs-based clones on OP Mainnet: game index 14633 (FDG 2.2.0)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "DisputeGameFactory.create / setImplementation",
+    "location_v9": "src/dispute/DisputeGameFactory.sol:147-226, 298-317"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "clone-with-immutable-args games (absolutePrestate fixed at creation) + gameArgs[9] in the factory",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "create at prestate N-1 -> resolve/anchor/prove at N for EVERY historical switch (cannon -> MT-cannon -> kona -> super kona), not only U20 -> U21; a game that resolved DEFENDER_WINS under a prestate later fixed for soundness is still claim-valid.",
+   "NEXT_EXPERIMENT": "List every absolutePrestate each chain used since U16 (ImplementationSet/ImplementationArgsSet logs + clone getters at the version boundaries 9828/12805/14633/17905/20095), map each to its op-program/kona release and diff the fault-proof program for accepted-invalid-transition fixes (queue B05).",
+   "priority": "P0",
+   "pass_a_status": "open-lead",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-003",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0103.md"
+   ],
+   "title": "DelayedWETH answers unknown selectors with success and empty returndata (payable fallback = deposit)",
+   "family": "bond-credit",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/dispute/weth/WETH98.sol (receive/fallback -> deposit, WETH9 clone)",
+    "current_form_since": "v1.8.0 (moved to src/universal/WETH98.sol)",
+    "note": "behaviour unchanged"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "DelayedWETH.withdraw / fallback",
+    "location_v9": "src/dispute/DelayedWETH.sol:101-109; src/universal/WETH98.sol:56-63"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "none",
+   "HISTORICAL_BRANCHES": "no behavioural branch found between tags for this item.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "none (stateless); only matters to a caller that probes a WETH proxy with a low-level call",
+   "NEXT_EXPERIMENT": "grep every historical OPCM (v2.0.0..v6.0.0 src/L1/OPContractsManager.sol getters) for low-level calls to a DelayedWETH that test only `success`.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-004",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0104.md"
+   ],
+   "title": "Permissioned super games are authorised by tx.origin, cost no bond and are DEFENDER_WINS at creation",
+   "family": "identity-binding",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/dispute/PermissionedDisputeGame.sol:110-116 (`tx.origin != PROPOSER`)",
+    "current_form_since": "v8.0.0 src/dispute/SuperPermissionedDisputeGame.sol:48-69 (born DEFENDER_WINS, no bond); super variant first v2.0.0 :89-95",
+    "note": "same selector initialize() changed from real game to instant game at v8.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "SuperPermissionedDisputeGame.initialize",
+    "location_v9": "src/dispute/SuperPermissionedDisputeGame.sol:52-73"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "gameArgs[5] proposer per chain; every type-5 clone (Soneium: respected type)",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "type-5 clones created under v7.0.0 (real bisection game) vs v8.0.0+ (instant DEFENDER_WINS, resolvedAt = createdAt) live in the same factory; the proposer EOA's transaction call graph (incl. EIP-7702 delegation) was not traced on Soneium where type 5 is respected.",
+   "NEXT_EXPERIMENT": "On Soneium: list type-5 games by implementation version, and for the proposer EOA check code (7702 designator) and every transaction `to` since type 5 became respected for calls into non-protocol contracts.",
+   "priority": "P1",
+   "pass_a_status": "open-lead",
+   "same_mechanism_as": [
+    "A-036"
+   ]
+  },
+  {
+   "id": "A-005",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0201.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2203.md"
+   ],
+   "title": "Pause / guardian / SuperchainConfig resolution is pinned in four storage pointers per chain, all ending at the ETHLockbox",
+   "family": "pause",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:83,137-139,174-186 (portal-local bool, GUARDIAN immutable)",
+    "current_form_since": "v9.0.0 src/L1/ETHLockbox.sol:112-114 (lockbox identifier); generations: v1.2.0 src/L1/SuperchainConfig.sol:62-85 global, v4.0.0 :110-175 per identifier + src/L1/SystemConfig.sol:490-493, v4.1.0 src/L1/SystemConfig.sol:526-534",
+    "note": "four generations of pause source"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "ETHLockbox.paused (resolved by portal, SystemConfig, ASR, DelayedWETH)",
+    "location_v9": "src/L1/ETHLockbox.sol:112-114"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "portal slot 63, ASR slot 6[12:32], DelayedWETH slot 5, ETHLockbox slot 3; SuperchainConfig.pauseTimestamps[identifier]",
+   "HISTORICAL_BRANCHES": "v1.0.0 portal bool; v1.2.0 global SuperchainConfig bool; v4.0.0 per-identifier (lockbox) with expiry; v4.1.0..v8.0.0 identifier = lockbox or portal depending on ETH_LOCKBOX; v9 lockbox only. Legacy DelayedWETH proxies and registry 0x1c68ECfb\u2026 still use generation-1/none.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "pauseTimestamps written under v4.0.0..v8.0.0 for identifiers that v9 no longer reads (portal addresses) or reads again (lockbox addresses, possibly expired-not-reset); consumers that never left generation 1 (legacy DelayedWETH) or have no pause (registry 0x1c68ECfb\u2026).",
+   "NEXT_EXPERIMENT": "Scan Paused/Unpaused logs of SuperchainConfig 0x95703e09\u2026 from L1 block 22,990,599 to N and read pauseTimestamps for every identifier ever used by any chain sharing it.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-026",
+    "A-055",
+    "A-076",
+    "A-082"
+   ]
+  },
+  {
+   "id": "A-006",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0202.md"
+   ],
+   "title": "Inventory of non-zero dead legacy slots (private spacers) left in place",
+   "family": "storage-init",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.2.0",
+    "location_at_that_tag": "snapshots/storageLayout/*.json (first tag with layout snapshots; e.g. OptimismPortal slot 52 provenWithdrawals, 53:0 spacer for the Bedrock `paused` bool)",
+    "current_form_since": "v9.0.0 snapshots (every removed field is a same-size spacer; verified tag by tag for portal, L1CDM, bridge, SystemConfig)",
+    "note": "registries and DelayedWETH broke layout and were re-proxied instead"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "none (no v9 code reads it)",
+    "location_v9": "n/a"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "portal slots 52,53,54,56,58,59,61,63[20]; L1CDM 251,253; bridge 50,51; registry/WETH/lockbox systemConfig spacers; SystemConfig stale named slots",
+   "HISTORICAL_BRANCHES": "manual/superchain-ops upgrades with StorageSetter (<= v1.8.0); OPCM.upgrade per release from v2.0.0 (new proxies at v2.0.0 and v4.0.0 for registry/WETH/lockbox); OPContractsManagerV2 + Utils from v7.0.0; open `initializer`s until v3.x, ProxyAdmin-gated reinitializers from v4.0.0.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "none found: tag-by-tag layout diff (v1.2.0..v9.0.0) shows every removed field became a same-size spacer; v1.0.0/v1.1.0 have no layout snapshot (F4).",
+   "NEXT_EXPERIMENT": "closed: C2",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-007",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0203.md"
+   ],
+   "title": "deleteProvenWithdrawal clears the proof cell but leaves the submitter in proofSubmitters",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:254-328 (provenWithdrawals[hash][msg.sender] slot 57, proofSubmitters push slot 60)",
+    "current_form_since": "v7.0.0 src/L1/OptimismPortal2.sol:368-470 (super-root branch); struct unchanged since v1.4.0",
+    "note": "ancestor one-proof-per-hash model: v1.0.0 contracts/L1/OptimismPortal.sol:242-318 (slot 52)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.deleteProvenWithdrawal",
+    "location_v9": "src/L1/OptimismPortal2.sol:711-728"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "proofSubmitters[hash] (slot 60, append-only since v1.4.0)",
+   "HISTORICAL_BRANCHES": "slot 52 one-proof-per-hash (v1.0.0..v1.3.0, L2OutputOracle); slot 57 per-submitter (v1.4.0+); validity on portal storage until v3.0.0, on the registry from v4.0.0; OP Mainnet registries: 0x18DAc71c\u2026 -> 0x1c68ECfb\u2026 (U13) -> 0x23B2C629\u2026 (U16).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "none on chain (no release ever iterates the array)",
+   "NEXT_EXPERIMENT": "closed: C4",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-020",
+    "A-022",
+    "A-088"
+   ]
+  },
+  {
+   "id": "A-008",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0204.md"
+   ],
+   "title": "U21 rotated the SUPER_PERMISSIONED proposer on OP Mainnet only",
+   "family": "identity-binding",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/dispute/DisputeGameFactory.sol:84-132 + game immutables (prestate/VM/registry/WETH fixed per implementation)",
+    "current_form_since": "v6.0.0 src/dispute/DisputeGameFactory.sol:147-216 (gameArgs copied into the clone, game type in clone data); gameArgs storage v5.0.0 :147-198; deterministic clones v7.0.0",
+    "note": "first gameArgs-based clones on OP Mainnet: game index 14633 (FDG 2.2.0)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "DisputeGameFactory.create / setImplementation",
+    "location_v9": "src/dispute/DisputeGameFactory.sol:147-226, 298-317"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "gameArgs[5] tail words in the factory",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "type-5 games of the previous proposer remain in the factory; harmless unless type 5 becomes respected with retirement unchanged.",
+   "NEXT_EXPERIMENT": "Read wasRespectedGameTypeWhenCreated for every type-5 game on OP Mainnet (expect false for all).",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-061"
+   ]
+  },
+  {
+   "id": "A-009",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0301.md"
+   ],
+   "title": "Third-party finalization with attacker-chosen gas and call context",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:339-387 (finalizeWithdrawalTransactionExternalProof; body descends from v1.0.0 contracts/L1/OptimismPortal.sol:325-420)",
+    "current_form_since": "v9.0.0 (L1CDMCallFailed revert; lockbox unlock/relock from v4.0.0)",
+    "note": "any caller may finalize with any submitter's proof since v1.4.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.finalizeWithdrawalTransactionExternalProof",
+    "location_v9": "src/L1/OptimismPortal2.sol:577-666"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "provenWithdrawals[hash][submitter] of any submitter; finalizedWithdrawals[hash]",
+   "HISTORICAL_BRANCHES": "v1.0.0..v1.3.0: caller-independent finalize, 7-day L2OO window; v1.4.0+: any submitter; v4.0.0: lockbox unlock (v4.1.0 optional per chain); v9: messenger failures revert. Chains without lockbox (pre-v9) paid from the portal balance.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "proofs written by one portal version and finalized by a third party under a later one; before v1.4.0 only the L2OO timing gated finalize, so no pre-v1.4.0 object is affected.",
+   "NEXT_EXPERIMENT": "On an L1 fork at a pre-U16 block (portal 3.x, ETH in portal) finalize a real third-party-proven withdrawal from inside a contract callback and compare state deltas with the v9 result for the same shape.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-016",
+    "A-064"
+   ]
+  },
+  {
+   "id": "A-010",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0302.md"
+   ],
+   "title": "What a callee can still do while a withdrawal is executing (re-entrancy matrix)",
+   "family": "custody",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:325-420 (l2Sender guard, slot 50)",
+    "current_form_since": "v4.0.0 (ETHLockbox.unlockETH also keys on portal.l2Sender, src/L1/ETHLockbox.sol:156-177)",
+    "note": "single re-entrancy guard since Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.finalizeWithdrawalTransactionExternalProof",
+    "location_v9": "src/L1/OptimismPortal2.sol:577-666"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "none (transient l2Sender); side effects land in portal balance and lockbox balance",
+   "HISTORICAL_BRANCHES": "v1.0.0..v1.3.0: caller-independent finalize, 7-day L2OO window; v1.4.0+: any submitter; v4.0.0: lockbox unlock (v4.1.0 optional per chain); v9: messenger failures revert. Chains without lockbox (pre-v9) paid from the portal balance.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "matrix was measured on v9 only; under v4.0.0..v8.0.0 a failed messenger call did not revert, so the same re-entrant shapes left different residue (finalized + relocked).",
+   "NEXT_EXPERIMENT": "Re-run test/poc lane03 re-entrancy matrix on a fork pinned to a v8 block (26,430,858) and a v4.1.0-era block and diff residues.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-011",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0303.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2304.md"
+   ],
+   "title": "Portal-held ETH is outside lockbox accounting and only the ProxyAdmin owner can move it",
+   "family": "custody",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:215-217 (empty payable donateETH)",
+    "current_form_since": "v4.0.0 (also the ETHLockbox.unlockETH callback, src/L1/ETHLockbox.sol:156-177; donations are no longer spendable by withdrawals)",
+    "note": "body never changed"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.donateETH / migrateLiquidity",
+    "location_v9": "src/L1/OptimismPortal2.sol:381-383, 502-513"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "address(portal).balance (0 on the four chains today); lockbox balance that already contains the U16 sweep of all pre-lockbox surplus",
+   "HISTORICAL_BRANCHES": "Bedrock..v3: portal holds all ETH; v4.0.0 (U16): OPCM calls portal.migrateLiquidity() into \"ETHLockbox-U16\"; v4.1.0 (U16a): chains without the v4.0.0 portal stay portal-custody; v9: lockbox mandatory. Base is still portal-custody (not on this path).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "Bedrock..v3 surplus (pre-Bedrock migration remainder, donations, forced ETH, value of failed withdrawals) was created as spendable portal balance and converted into lockbox balance by v4.0.0 OPCM.upgrade (src/L1/OPContractsManager.sol:736); per-chain surplus vs L2 liability was never reconciled.",
+   "NEXT_EXPERIMENT": "For each chain: lockbox balance at the U16 block vs portal balance one block earlier (must be equal), then sum deposits minus finalized withdrawals since Bedrock from logs and compare with the L2 total supply proxy (queue B03).",
+   "priority": "P0",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-067"
+   ]
+  },
+  {
+   "id": "A-012",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0304.md"
+   ],
+   "title": "Finalizing a victim's messenger withdrawal from inside an L1CDM replay parks its ETH in the L1CDM (forced failedMessages)",
+   "family": "messenger-replay",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:303-413 (`!hasMinGas || xDomainMsgSender != DEFAULT_L2_SENDER` -> failedMessages = true; return)",
+    "current_form_since": "v1.2.0 src/universal/CrossDomainMessenger.sol:211-309 (pause + post-call assert); reachable by third parties since v1.4.0 (ExternalProof)",
+    "note": "branch text unchanged v1.0.0..v9.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "CrossDomainMessenger.relayMessage (L1CrossDomainMessenger 2.13.0)",
+    "location_v9": "src/universal/CrossDomainMessenger.sol:209-307"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "failedMessages[hash] (slot 206) and the ETH balance of the L1CDM proxy",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "the branch exists since v1.0.0 and is third-party reachable since v1.4.0: failedMessages entries and L1CDM-held ETH created under any earlier release are replayed under v9 code (new reserves, memory copy, lockbox pause). Composition with replay-sensitive targets / pause / migrate was not run (L3).",
+   "NEXT_EXPERIMENT": "Enumerate FailedRelayedMessage logs on the L1CDM since Bedrock, keep hashes with successfulMessages == false, sum their values against the L1CDM balance on every chain, and replay each on a v9 fork.",
+   "priority": "P0",
+   "pass_a_status": "open-lead",
+   "same_mechanism_as": [
+    "A-015",
+    "A-039",
+    "A-050",
+    "A-053",
+    "A-066"
+   ]
+  },
+  {
+   "id": "A-013",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0305.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2307.md"
+   ],
+   "title": "The chain pause key is the lockbox address; deposits keep locking while paused",
+   "family": "pause",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:83,137-139,174-186 (portal-local bool, GUARDIAN immutable)",
+    "current_form_since": "v9.0.0 src/L1/ETHLockbox.sol:112-114 (lockbox identifier); generations: v1.2.0 src/L1/SuperchainConfig.sol:62-85 global, v4.0.0 :110-175 per identifier + src/L1/SystemConfig.sol:490-493, v4.1.0 src/L1/SystemConfig.sol:526-534",
+    "note": "four generations of pause source"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "ETHLockbox.paused (resolved by portal, SystemConfig, ASR, DelayedWETH)",
+    "location_v9": "src/L1/ETHLockbox.sol:112-114"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "pauseTimestamps[lockbox]; lockbox balance grows during a pause",
+   "HISTORICAL_BRANCHES": "v1.0.0 portal bool; v1.2.0 global SuperchainConfig bool; v4.0.0 per-identifier (lockbox) with expiry; v4.1.0..v8.0.0 identifier = lockbox or portal depending on ETH_LOCKBOX; v9 lockbox only. Legacy DelayedWETH proxies and registry 0x1c68ECfb\u2026 still use generation-1/none.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "deposits were never pausable in any release (v1.0.0 contracts/L1/OptimismPortal.sol:434-483); nothing historical to carry.",
+   "NEXT_EXPERIMENT": "closed: C8",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-075",
+    "A-087"
+   ]
+  },
+  {
+   "id": "A-014",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0306.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2305.md"
+   ],
+   "title": "Withdrawal targets not forbidden: previous lockboxes and sibling portals; authorisation on a retired lockbox is never revoked",
+   "family": "migration",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:242-318 (prove-time `_tx.target != address(this)` only)",
+    "current_form_since": "v4.0.0 src/L1/OptimismPortal2.sol:805-808 (_isUnsafeTarget = portal or current lockbox, checked at prove and finalize)",
+    "note": "list unchanged v4.0.0..v9.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2._isUnsafeTarget",
+    "location_v9": "src/L1/OptimismPortal2.sol:846-849"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "ETHLockbox.authorizedPortals / authorizedLockboxes (monotonic since v4.0.0); portal.ethLockbox pointer",
+   "HISTORICAL_BRANCHES": "Bedrock..v3: portal holds all ETH; v4.0.0 (U16): OPCM calls portal.migrateLiquidity() into \"ETHLockbox-U16\"; v4.1.0 (U16a): chains without the v4.0.0 portal stay portal-custody; v9: lockbox mandatory. Base is still portal-custody (not on this path).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "authorisations written under v4.0.0..v8.0.0 (incl. lockboxes deployed by other OPCM generations: \"ETHLockbox-U16\", \"-U16a\", \"-Interop\") are consumed by v9 lockETH/unlockETH. PASS A enumerated PortalAuthorized only through one public RPC and only for the four current lockboxes.",
+   "NEXT_EXPERIMENT": "Recompute the CREATE2 addresses of every lockbox name each historical OPCM could deploy per chain, check code at N, and re-scan PortalAuthorized/LockboxAuthorized from block 22,990,500 through a second archive source.",
+   "priority": "P0",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-042",
+    "A-065",
+    "A-080"
+   ]
+  },
+  {
+   "id": "A-015",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0401.md"
+   ],
+   "title": "Third party converts a mature messenger withdrawal into \"failed in messenger\" without delivery",
+   "family": "messenger-replay",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:303-413 (`!hasMinGas || xDomainMsgSender != DEFAULT_L2_SENDER` -> failedMessages = true; return)",
+    "current_form_since": "v1.2.0 src/universal/CrossDomainMessenger.sol:211-309 (pause + post-call assert); reachable by third parties since v1.4.0 (ExternalProof)",
+    "note": "branch text unchanged v1.0.0..v9.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "CrossDomainMessenger.relayMessage (L1CrossDomainMessenger 2.13.0)",
+    "location_v9": "src/universal/CrossDomainMessenger.sol:209-307"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "failedMessages[hash]; L1CDM ETH balance",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as the canonical record for this mechanism (PRIM-0304 (A-012)).",
+   "NEXT_EXPERIMENT": "same experiment as A-012: Enumerate FailedRelayedMessage logs on the L1CDM since Bedrock, keep hashes with successfulMessages == false, sum their values against the L1CDM balance on every chain, and replay each on a v9 fork.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-012",
+    "A-039",
+    "A-050",
+    "A-053"
+   ]
+  },
+  {
+   "id": "A-016",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0402.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2401.md"
+   ],
+   "title": "Forced finalized-and-undelivered for non-messenger withdrawals (failed target call consumes the withdrawal)",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:325-420 (finalizedWithdrawals set before SafeCall.callWithMinGas; a false return is only emitted)",
+    "current_form_since": "v4.0.0 src/L1/OptimismPortal2.sol:624-688 (exact relock into the lockbox); v9.0.0 exempts messenger withdrawals",
+    "note": "\"failed call still consumes the withdrawal\" is Bedrock behaviour"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.finalizeWithdrawalTransactionExternalProof",
+    "location_v9": "src/L1/OptimismPortal2.sol:577-666"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "finalizedWithdrawals[hash] = true with no delivery; the value stays in custody as unbacked surplus",
+   "HISTORICAL_BRANCHES": "v1.0.0..v1.3.0: caller-independent finalize, 7-day L2OO window; v1.4.0+: any submitter; v4.0.0: lockbox unlock (v4.1.0 optional per chain); v9: messenger failures revert. Chains without lockbox (pre-v9) paid from the portal balance.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "withdrawals consumed this way under v1.0.0..v3.x left their ETH in the portal, which v4.0.0 swept into the lockbox; under v4+ the value is relocked. The historical count/value of success=false finalizations was only scanned from block 25,900,000 (REJ-2409).",
+   "NEXT_EXPERIMENT": "Scan WithdrawalFinalized(success=false) on the four portals from Bedrock to block 25,900,000 and classify sender (L2CDM vs other) and value.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-009"
+   ]
+  },
+  {
+   "id": "A-017",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0403.md"
+   ],
+   "title": "The v9 revert is keyed on `_tx.sender == L2CrossDomainMessenger` only",
+   "family": "messenger-replay",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:303-413 (successfulMessages slot 203 / failedMessages slot 206) + contracts/L1/OptimismPortal.sol:325-420",
+    "current_form_since": "v9.0.0 src/L1/OptimismPortal2.sol:651-653 (portal reverts when the messenger call fails)",
+    "note": "two independent replay layers since Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.finalizeWithdrawalTransactionExternalProof",
+    "location_v9": "src/L1/OptimismPortal2.sol:577-666"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "L2ToL1MessagePasser.sentMessages entries whose sender is the L2CDM, including Bedrock-migrated legacy withdrawals",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "equivalence \"sender == L2CDM <=> target == L1CDM\" was shown for the LIVE L2CDM 2.2.1 only; legacy withdrawals re-encoded by the Bedrock migration and messages sent by earlier L2CDM versions were not checked for a different target.",
+   "NEXT_EXPERIMENT": "Decode all MessagePassed logs with sender 0x42\u202607 on OP Mainnet (L2 archive :7546) and assert target == 0x25ace71c\u2026; include the 17 in-flight version-0 withdrawals of PRIM-0805 (A-041).",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-068"
+   ]
+  },
+  {
+   "id": "A-018",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0404.md"
+   ],
+   "title": "Relay gas budgets: L1 uses the v9 reserves while L2 still budgets with the old constants",
+   "family": "gas-budget",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:128-159 (RELAY_* constants shared by both messengers), baseGas :453-471; contracts/libraries/SafeCall.sol:91-100",
+    "current_form_since": "v9.0.0 (LOCAL 135,000/15,000 vs REMOTE 40,000/5,000 split); sender-side formula changed at v3.0.0 src/universal/CrossDomainMessenger.sol:357-396",
+    "note": "symmetric budget assumption is Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "CrossDomainMessenger.relayMessage (L1CrossDomainMessenger 2.13.0)",
+    "location_v9": "src/universal/CrossDomainMessenger.sol:209-307"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "in-flight L2->L1 withdrawals whose gasLimit was computed by an older baseGas (pre-v3.0.0 formula, live 2.2.1 formula, version-0 migrated with minGasLimit 0)",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "three budget generations x the v9 relay (150k reserve, payload copied before the gas check) x the EIP-7825 per-transaction gas cap: the undeliverable band was not computed (L5).",
+   "NEXT_EXPERIMENT": "For each budget generation compute min tx gas to finalize as a function of payload size and find where it crosses 16,777,216; check real in-flight withdrawals against it.",
+   "priority": "P1",
+   "pass_a_status": "open-lead",
+   "same_mechanism_as": [
+    "A-037",
+    "A-040",
+    "A-046",
+    "A-047",
+    "A-052",
+    "A-070",
+    "A-089"
+   ]
+  },
+  {
+   "id": "A-019",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0405.md"
+   ],
+   "title": "The real U21 transaction can be re-executed in-process on the pre-upgrade fork",
+   "family": "tooling",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.1.0",
+    "location_at_that_tag": "src/universal/StorageSetter.sol:11 (generic slot writer used by upgrade scripts)",
+    "current_form_since": "v7.0.0 src/L1/opcm/OPContractsManagerUtils.sol (per-upgrade clear of the OZ `_initialized` byte + same-version initialize)",
+    "note": "ReinitializableBase/initVersion: v4.0.0 src/universal/ReinitializableBase.sol:6"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OPContractsManagerV2.upgrade / OPContractsManagerUtils.upgrade",
+    "location_v9": "src/L1/opcm/OPContractsManagerV2.sol:198-312; src/L1/opcm/OPContractsManagerUtils.sol:312-387"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "none",
+   "HISTORICAL_BRANCHES": "manual/superchain-ops upgrades with StorageSetter (<= v1.8.0); OPCM.upgrade per release from v2.0.0 (new proxies at v2.0.0 and v4.0.0 for registry/WETH/lockbox); OPContractsManagerV2 + Utils from v7.0.0; open `initializer`s until v3.x, ProxyAdmin-gated reinitializers from v4.0.0.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "none (method); the same technique is needed for older upgrade transactions.",
+   "NEXT_EXPERIMENT": "Replay the U16 upgrade transaction on a fork of block 22,990,598 to carry real pre-U16 objects (proofs, games, portal ETH) through.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-020",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0406.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2403.md"
+   ],
+   "title": "Per-submitter proofs converge on one hash-global finalized bit (bookkeeping asymmetries)",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:254-328 (provenWithdrawals[hash][msg.sender] slot 57, proofSubmitters push slot 60)",
+    "current_form_since": "v7.0.0 src/L1/OptimismPortal2.sol:368-470 (super-root branch); struct unchanged since v1.4.0",
+    "note": "ancestor one-proof-per-hash model: v1.0.0 contracts/L1/OptimismPortal.sol:242-318 (slot 52)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.checkWithdrawal",
+    "location_v9": "src/L1/OptimismPortal2.sol:671-705"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "provenWithdrawals (slot 57), proofSubmitters (slot 60), finalizedWithdrawals (slot 51)",
+   "HISTORICAL_BRANCHES": "slot 52 one-proof-per-hash (v1.0.0..v1.3.0, L2OutputOracle); slot 57 per-submitter (v1.4.0+); validity on portal storage until v3.0.0, on the registry from v4.0.0; OP Mainnet registries: 0x18DAc71c\u2026 -> 0x1c68ECfb\u2026 (U13) -> 0x23B2C629\u2026 (U16).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "finalizedWithdrawals has been hash-global at slot 51 since v1.0.0; no release changed the hash.",
+   "NEXT_EXPERIMENT": "closed: C5",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-007",
+    "A-022",
+    "A-072",
+    "A-088"
+   ]
+  },
+  {
+   "id": "A-021",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0501.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2501.md"
+   ],
+   "title": "Exact semantics of the permissionless proof deletion",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v9.0.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:711-728 (new); predicate ancestors: portal blacklist v1.4.0 src/L1/OptimismPortal2.sol:441-445, ASR.isGameBlacklisted v2.0.0 src/dispute/AnchorStateRegistry.sol:138-140 -> own storage v4.0.0 :215-217",
+    "current_form_since": "v9.0.0",
+    "note": "consumes proof cells written by any portal since v1.4.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.deleteProvenWithdrawal",
+    "location_v9": "src/L1/OptimismPortal2.sol:711-728"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "provenWithdrawals[hash][submitter] cells written by every portal version since v1.4.0 (stored game address + timestamp)",
+   "HISTORICAL_BRANCHES": "slot 52 one-proof-per-hash (v1.0.0..v1.3.0, L2OutputOracle); slot 57 per-submitter (v1.4.0+); validity on portal storage until v3.0.0, on the registry from v4.0.0; OP Mainnet registries: 0x18DAc71c\u2026 -> 0x1c68ECfb\u2026 (U13) -> 0x23B2C629\u2026 (U16).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "cells written under v1.4.0..v3.x point at games of previous registry generations (0x18DAc71c\u2026, 0x1c68ECfb\u2026) or at pre-U13 clones; v9 calls status() on that address and consults the CURRENT registry's blacklist. PASS A only exercised v8-era proofs.",
+   "NEXT_EXPERIMENT": "From WithdrawalProven logs before block 22,990,599 pick unfinalized hashes, read their slot-57 cells at N, and call checkWithdrawal / deleteProvenWithdrawal on a v9 fork (expect InvalidRootClaim; delete only for CHALLENGER_WINS games).",
+   "priority": "P0",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-007",
+    "A-024",
+    "A-074"
+   ]
+  },
+  {
+   "id": "A-022",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0502.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2502.md"
+   ],
+   "title": "proofSubmitters[h] is an append-only, never-pruned array",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:254-328 (provenWithdrawals[hash][msg.sender] slot 57, proofSubmitters push slot 60)",
+    "current_form_since": "v7.0.0 src/L1/OptimismPortal2.sol:368-470 (super-root branch); struct unchanged since v1.4.0",
+    "note": "ancestor one-proof-per-hash model: v1.0.0 contracts/L1/OptimismPortal.sol:242-318 (slot 52)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.proveWithdrawalTransaction",
+    "location_v9": "src/L1/OptimismPortal2.sol:390-492"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "proofSubmitters[hash] (slot 60)",
+   "HISTORICAL_BRANCHES": "slot 52 one-proof-per-hash (v1.0.0..v1.3.0, L2OutputOracle); slot 57 per-submitter (v1.4.0+); validity on portal storage until v3.0.0, on the registry from v4.0.0; OP Mainnet registries: 0x18DAc71c\u2026 -> 0x1c68ECfb\u2026 (U13) -> 0x23B2C629\u2026 (U16).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "none on chain",
+   "NEXT_EXPERIMENT": "closed: C4",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-007",
+    "A-020",
+    "A-088"
+   ]
+  },
+  {
+   "id": "A-023",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0503.md"
+   ],
+   "title": "\"Trojan\" super-root game: an invalid game that embeds the correct per-chain output root accepts honest proofs",
+   "family": "dispute-game",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v7.0.0",
+    "location_at_that_tag": "src/dispute/SuperFaultDisputeGame.sol:829 (rootClaimByChainId), src/libraries/Encoding.sol:308 (decodeSuperRootProof); portal branch src/L1/OptimismPortal2.sol:368-470",
+    "current_form_since": "v8.0.0 (SuperFaultDisputeGame 0.8.0, unchanged in v9)",
+    "note": "earlier super-root prove overload: v4.0.0 src/L1/OptimismPortal2.sol:506-613 (index-based, removed v4.1.0)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.proveWithdrawalTransaction",
+    "location_v9": "src/L1/OptimismPortal2.sol:390-492"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "type-9 clones in the factory; proofs bound to them",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "first-match rootClaimByChainId is v7.0.0 code; the v4.0.0 super-root overload bound the proof by explicit index + chainId check instead. Impact as a sustained delay engine was not priced (L4).",
+   "NEXT_EXPERIMENT": "Price the attack: bond 0.08 ETH per game vs 7-day re-prove delay per victim proof, using real proof-submission rates from WithdrawalProven logs.",
+   "priority": "P1",
+   "pass_a_status": "open-lead",
+   "same_mechanism_as": [
+    "A-032",
+    "A-078"
+   ]
+  },
+  {
+   "id": "A-024",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0504.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2505.md"
+   ],
+   "title": "Dead-but-undeletable proofs; validity and deletion are relative to the portal's current registry (migration invalidates, does not delete)",
+   "family": "migration",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:461-522 (all checks on portal storage)",
+    "current_form_since": "v4.0.0 src/L1/OptimismPortal2.sol:693-727 (delegates to AnchorStateRegistry.isGameClaimValid)",
+    "note": "proof stores only (game, timestamp); everything else is re-read"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.checkWithdrawal",
+    "location_v9": "src/L1/OptimismPortal2.sol:671-705"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "provenWithdrawals cells + portal.anchorStateRegistry pointer (slot 62)",
+   "HISTORICAL_BRANCHES": "slot 52 one-proof-per-hash (v1.0.0..v1.3.0, L2OutputOracle); slot 57 per-submitter (v1.4.0+); validity on portal storage until v3.0.0, on the registry from v4.0.0; OP Mainnet registries: 0x18DAc71c\u2026 -> 0x1c68ECfb\u2026 (U13) -> 0x23B2C629\u2026 (U16).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same mechanism as PRIM-2404 (A-069) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-069: Read retirementTimestamp and RetirementTimestampSet logs of every registry of the four chains since their U16 and compare with their upgrade blocks.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-069",
+    "A-093"
+   ]
+  },
+  {
+   "id": "A-025",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0505.md"
+   ],
+   "title": "Every game created since the U16 retirement is still a live proving target",
+   "family": "dispute-game",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:450-455 (setRespectedGameType stamps respectedGameTypeUpdatedAt = every type switch retires)",
+    "current_form_since": "v6.0.0 src/dispute/AnchorStateRegistry.sol:89-116 (initialize keeps a non-zero retirementTimestamp); decoupled at v2.0.0 :498-510; moved to the ASR at v4.0.0 src/dispute/AnchorStateRegistry.sol:137-144,222-226",
+    "note": "respect snapshot wasRespectedGameTypeWhenCreated: v2.0.0 src/dispute/FaultDisputeGame.sol:284-359"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "AnchorStateRegistry.isGameClaimValid / isGameRetired / initialize",
+    "location_v9": "src/dispute/AnchorStateRegistry.sol:331-353, 259-263, 94-133"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same objects as PRIM-0101 (A-001)",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0101 (A-001) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-001: Census Ink/Soneium/Unichain factories with evidence/op-mainnet-games-scan.py (claim-valid, non-official creator, type != respected) and recompute every claim-valid root from L2 headers on all four chains.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-001",
+    "A-033"
+   ]
+  },
+  {
+   "id": "A-026",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0601.md"
+   ],
+   "title": "Pause identifier is stored in four independent places",
+   "family": "pause",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:83,137-139,174-186 (portal-local bool, GUARDIAN immutable)",
+    "current_form_since": "v9.0.0 src/L1/ETHLockbox.sol:112-114 (lockbox identifier); generations: v1.2.0 src/L1/SuperchainConfig.sol:62-85 global, v4.0.0 :110-175 per identifier + src/L1/SystemConfig.sol:490-493, v4.1.0 src/L1/SystemConfig.sol:526-534",
+    "note": "four generations of pause source"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "ETHLockbox.paused (resolved by portal, SystemConfig, ASR, DelayedWETH)",
+    "location_v9": "src/L1/ETHLockbox.sol:112-114"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0201 (A-005)",
+   "HISTORICAL_BRANCHES": "v1.0.0 portal bool; v1.2.0 global SuperchainConfig bool; v4.0.0 per-identifier (lockbox) with expiry; v4.1.0..v8.0.0 identifier = lockbox or portal depending on ETH_LOCKBOX; v9 lockbox only. Legacy DelayedWETH proxies and registry 0x1c68ECfb\u2026 still use generation-1/none.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0201 (A-005) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-005: Scan Paused/Unpaused logs of SuperchainConfig 0x95703e09\u2026 from L1 block 22,990,599 to N and read pauseTimestamps for every identifier ever used by any chain sharing it.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-005",
+    "A-055",
+    "A-082"
+   ]
+  },
+  {
+   "id": "A-027",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0602.md"
+   ],
+   "title": "Legacy DelayedWETH proxies (<= v1.3.0 code) ignore the chain-specific pause",
+   "family": "bond-credit",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/dispute/weth/DelayedWETH.sol:74-82 (`require(!config.paused())`, global)",
+    "current_form_since": "v9.0.0 src/dispute/DelayedWETH.sol:101-109 (ethLockbox.paused); v4.0.0 :96-104 systemConfig; layout break at v4.0.0 forced new proxies",
+    "note": "legacy proxies were never upgraded"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "DelayedWETH.withdraw / fallback",
+    "location_v9": "src/dispute/DelayedWETH.sol:101-109; src/universal/WETH98.sol:56-63"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "un-upgraded DelayedWETH proxies holding bonds: OP 0xE497B094\u2026 (1.0.0), 0x82511d49\u2026 (1.1.0), 0x323dFC63\u2026 (1.3.0); Unichain 0xc9edb4E3\u2026 (1.3.0); credits of pre-U16 games",
+   "HISTORICAL_BRANCHES": "v1.0.0 portal bool; v1.2.0 global SuperchainConfig bool; v4.0.0 per-identifier (lockbox) with expiry; v4.1.0..v8.0.0 identifier = lockbox or portal depending on ETH_LOCKBOX; v9 lockbox only. Legacy DelayedWETH proxies and registry 0x1c68ECfb\u2026 still use generation-1/none.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "pre-U16 games close through registry 0x1c68ECfb\u2026, which mirrors today's retirement timestamp, so any pre-U16 game closed now lands in REFUND mode; legacy proxies keep OZ owner()/hold semantics of their own generation (hold without transferFrom before v2.0.0). Bond-only.",
+   "NEXT_EXPERIMENT": "Read owner(), config() and balances of each legacy WETH proxy; pick an unclaimed pre-U16 game and simulate closeGame + claimCredit on a v9 fork.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-055"
+   ]
+  },
+  {
+   "id": "A-028",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0603.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2603.md"
+   ],
+   "title": "An expired pause keeps a non-zero timestamp: pause() reverts until the Guardian unpauses or extends",
+   "family": "pause",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.0.0",
+    "location_at_that_tag": "src/L1/SuperchainConfig.sol:110-150,171-175 (pauseTimestamps, PAUSE_EXPIRY, AlreadyPaused, extend)",
+    "current_form_since": "v4.0.0 (unchanged; v9 adds isLocalOrGlobalPaused :152-154)",
+    "note": "no expiry before v4.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "SuperchainConfig.pause / paused / extend",
+    "location_v9": "src/L1/SuperchainConfig.sol:81-121, 143-147"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "SuperchainConfig.pauseTimestamps[identifier] (slot 1)",
+   "HISTORICAL_BRANCHES": "v1.0.0 portal bool; v1.2.0 global SuperchainConfig bool; v4.0.0 per-identifier (lockbox) with expiry; v4.1.0..v8.0.0 identifier = lockbox or portal depending on ETH_LOCKBOX; v9 lockbox only. Legacy DelayedWETH proxies and registry 0x1c68ECfb\u2026 still use generation-1/none.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "timestamps written under v4.0.0..v8.0.0 (when the live identifier could be the portal) that expired without unpause: after v9 a lockbox identifier with such a residue cannot be paused by the DeputyPauseModule.",
+   "NEXT_EXPERIMENT": "Same log scan as PRIM-0201 (A-005): every Paused without a later Unpaused for any identifier.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-029"
+   ]
+  },
+  {
+   "id": "A-029",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0604.md"
+   ],
+   "title": "SuperchainConfig accepts any identifier; non-lockbox identifiers are inert after v9",
+   "family": "pause",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.0.0",
+    "location_at_that_tag": "src/L1/SuperchainConfig.sol:110-150,171-175 (pauseTimestamps, PAUSE_EXPIRY, AlreadyPaused, extend)",
+    "current_form_since": "v4.0.0 (unchanged; v9 adds isLocalOrGlobalPaused :152-154)",
+    "note": "no expiry before v4.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "SuperchainConfig.pause / paused / extend",
+    "location_v9": "src/L1/SuperchainConfig.sol:81-121, 143-147"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "pauseTimestamps[portal], pauseTimestamps[systemConfig]",
+   "HISTORICAL_BRANCHES": "v1.0.0 portal bool; v1.2.0 global SuperchainConfig bool; v4.0.0 per-identifier (lockbox) with expiry; v4.1.0..v8.0.0 identifier = lockbox or portal depending on ETH_LOCKBOX; v9 lockbox only. Legacy DelayedWETH proxies and registry 0x1c68ECfb\u2026 still use generation-1/none.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same scan as PRIM-0603 (A-028).",
+   "NEXT_EXPERIMENT": "same experiment as A-028: Same log scan as PRIM-0201 (A-005): every Paused without a later Unpaused for any identifier.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-028"
+   ]
+  },
+  {
+   "id": "A-030",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0605.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2601.md"
+   ],
+   "title": "Feature flags are runtime-togglable by the ProxyAdmin owner (CGT in both directions, guards narrowed in v9)",
+   "family": "upgrade-engine",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.1.0",
+    "location_at_that_tag": "src/L1/SystemConfig.sol:503-518 (isFeatureEnabled slot 109, setFeature)",
+    "current_form_since": "v9.0.0 src/L1/SystemConfig.sol:532-568; guards from v5.0.0 :523-564",
+    "note": "CGT v1 (gasPayingToken) existed v1.5.0..v1.8.0 and was removed at v2.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "SystemConfig.setFeature / paused",
+    "location_v9": "src/L1/SystemConfig.sol:532-576"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "SystemConfig.isFeatureEnabled (slot 109)",
+   "HISTORICAL_BRANCHES": "custom gas token v1 (gasPayingToken, portal `_balance` slot 61) v1.5.0/v1.6.0..v1.8.0, removed v2.0.0; CGT v2 as SystemConfig feature from v6.0.0. Not enabled on the four U21 chains.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "CGT v1 chains (v1.5.0..v1.8.0 portal `_balance`, slot 61) vs CGT v2 feature bit: not relevant to the four U21 chains.",
+   "NEXT_EXPERIMENT": "closed: C1",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-031",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0606.md"
+   ],
+   "title": "For super games the only on-chain chain binding is SystemConfig.l2ChainId at prove time",
+   "family": "identity-binding",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.0.0",
+    "location_at_that_tag": "src/L1/SystemConfig.sol:172-214,219-235 (l2ChainId slot 107, written by upgrade() from the permissioned game's l2ChainId())",
+    "current_form_since": "v7.0.0 src/L1/OptimismPortal2.sol:368-470 (rootClaimByChainId(systemConfig.l2ChainId()))",
+    "note": "first use as proof binding: v4.0.0 _proveWithdrawalTransaction :506-613"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.proveWithdrawalTransaction",
+    "location_v9": "src/L1/OptimismPortal2.sol:390-492"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "SystemConfig slot 107 (l2ChainId, written once at v4.0.0 upgrade() from the permissioned game immutable) + super-root extraData of every type-5/9 clone",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "l2ChainId was copied at U16 from getL2ChainId(permissionedDisputeGame) (v4.1.0 src/L1/OPContractsManager.sol:686); a chain whose permissioned implementation carried a wrong immutable would bind super-root proofs to the wrong id. Only the four chains' current values were read.",
+   "NEXT_EXPERIMENT": "For every chain upgraded by an OPCM >= v4.0.0, compare SystemConfig.l2ChainId() with the id in the registry's latest super-root extraData and with the L2 eth_chainId.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-044"
+   ]
+  },
+  {
+   "id": "A-032",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0701.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2702.md"
+   ],
+   "title": "L1 checks only the hash/shape of a super-root claim; duplicate/unsorted entries are accepted and lookup is first-match",
+   "family": "dispute-game",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v7.0.0",
+    "location_at_that_tag": "src/dispute/SuperFaultDisputeGame.sol:829 (rootClaimByChainId), src/libraries/Encoding.sol:308 (decodeSuperRootProof); portal branch src/L1/OptimismPortal2.sol:368-470",
+    "current_form_since": "v8.0.0 (SuperFaultDisputeGame 0.8.0, unchanged in v9)",
+    "note": "earlier super-root prove overload: v4.0.0 src/L1/OptimismPortal2.sol:506-613 (index-based, removed v4.1.0)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "SuperFaultDisputeGame.initialize / rootClaimByChainId",
+    "location_v9": "src/dispute/SuperFaultDisputeGame.sol:251-341, 809-819"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "type-9/5 clones with arbitrary hash-consistent preimages",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "depends on the fault-proof program generation that judges the game (see PRIM-0102 (A-002)).",
+   "NEXT_EXPERIMENT": "same experiment as A-002: List every absolutePrestate each chain used since U16 (ImplementationSet/ImplementationArgsSet logs + clone getters at the version boundaries 9828/12805/14633/17905/20095), map each to its op-program/kona release and diff the fault-proof program for accepted-invalid-transition fixes (queue B05).",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-023",
+    "A-078"
+   ]
+  },
+  {
+   "id": "A-033",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0702.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2703.md"
+   ],
+   "title": "Respect is snapshotted at game creation and survives type switches / implementation removal; the anchor comparator is untyped",
+   "family": "dispute-game",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:450-455 (setRespectedGameType stamps respectedGameTypeUpdatedAt = every type switch retires)",
+    "current_form_since": "v6.0.0 src/dispute/AnchorStateRegistry.sol:89-116 (initialize keeps a non-zero retirementTimestamp); decoupled at v2.0.0 :498-510; moved to the ASR at v4.0.0 src/dispute/AnchorStateRegistry.sol:137-144,222-226",
+    "note": "respect snapshot wasRespectedGameTypeWhenCreated: v2.0.0 src/dispute/FaultDisputeGame.sol:284-359"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "AnchorStateRegistry.isGameClaimValid / isGameRetired / initialize",
+    "location_v9": "src/dispute/AnchorStateRegistry.sol:331-353, 259-263, 94-133"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0101 (A-001) plus anchorGame (ASR slot 2)",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0101 (A-001) (canonical); anchor units moved from L2 block number to L2 timestamp at the type-9 switch (monotone only in that direction).",
+   "NEXT_EXPERIMENT": "same experiment as A-001: Census Ink/Soneium/Unichain factories with evidence/op-mainnet-games-scan.py (claim-valid, non-official creator, type != respected) and recompute every claim-valid root from L2 headers on all four chains.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-001",
+    "A-025"
+   ]
+  },
+  {
+   "id": "A-034",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0703.md"
+   ],
+   "title": "One game per super root per factory; validity relative to creation-time l1Head; unbounded timestamp",
+   "family": "dispute-game",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/dispute/DisputeGameFactory.sol:78-107,128-162 (one game per keccak(type, claim, extraData))",
+    "current_form_since": "v1.2.0 src/dispute/DisputeGameFactory.sol:124-134 (abi.encode form); check-before-clone v7.0.0 :147-224",
+    "note": "permissionless create in every release"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "DisputeGameFactory.create / setImplementation",
+    "location_v9": "src/dispute/DisputeGameFactory.sol:147-226, 298-317"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "_disputeGames[uuid] (slot 103), permanent",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "UUID rule unchanged since v1.2.0; nothing historical to carry.",
+   "NEXT_EXPERIMENT": "closed: C12",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-078"
+   ]
+  },
+  {
+   "id": "A-035",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0704.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2705.md"
+   ],
+   "title": "Modelled OP Mainnet + Unichain migrate(): fresh shared proof domain, what survives",
+   "family": "migration",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.0.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:396-429 (migrateToSuperRoots) and src/L1/OPContractsManager.sol:1398 (migrate)",
+    "current_form_since": "v9.0.0 src/L1/opcm/OPContractsManagerMigrator.sol (Migrator first v7.0.0); portal migrateToSharedDisputeGame v7.0.0 :503-537, checks added v8.0.0",
+    "note": "never executed on the four U21 chains"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OPContractsManagerMigrator.migrate / _migratePortal; OptimismPortal2.migrateToSharedDisputeGame",
+    "location_v9": "src/L1/opcm/OPContractsManagerMigrator.sol:129-285, 475-556; src/L1/OptimismPortal2.sol:528-572"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "everything bound to the per-chain registry/factory/lockbox at migration time: proofs, games, bonds, authorisations, three registry generations, legacy WETH proxies",
+   "HISTORICAL_BRANCHES": "migrate existed in OPCM v4.0.0 (src/L1/OPContractsManager.sol:1398) with migrateToSuperRoots; rewritten as Migrator at v7.0.0; never executed on OP/Ink/Soneium/Unichain (INTEROP false).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "the model used post-U20 objects only; objects from before U16 (legacy registries that mirror portal getters, legacy WETH, pre-U16 proofs) also cross the migration and will then mirror the NEW shared registry through the same portal getters.",
+   "NEXT_EXPERIMENT": "Extend test/poc/lane09 Lane09Migrate to assert, after migrate, the predicates of registry 0x1c68ECfb\u2026 (isGameClaimValid / setAnchorState with shared-factory games) and closeGame of a pre-U16 game.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-045",
+    "A-076"
+   ]
+  },
+  {
+   "id": "A-036",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0705.md"
+   ],
+   "title": "SuperPermissionedDisputeGame (type 5): tx.origin-authorised, born resolved",
+   "family": "identity-binding",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/dispute/PermissionedDisputeGame.sol:110-116 (`tx.origin != PROPOSER`)",
+    "current_form_since": "v8.0.0 src/dispute/SuperPermissionedDisputeGame.sol:48-69 (born DEFENDER_WINS, no bond); super variant first v2.0.0 :89-95",
+    "note": "same selector initialize() changed from real game to instant game at v8.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "SuperPermissionedDisputeGame.initialize",
+    "location_v9": "src/dispute/SuperPermissionedDisputeGame.sol:52-73"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0104 (A-004)",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0104 (A-004) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-004: On Soneium: list type-5 games by implementation version, and for the proposer EOA check code (7702 designator) and every transaction `to` since type 5 became respected for calls into non-protocol contracts.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-004"
+   ]
+  },
+  {
+   "id": "A-037",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0801.md"
+   ],
+   "title": "L2 budget (old constants) vs L1 v9 relay requirement: forced finalized+failed band",
+   "family": "gas-budget",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:128-159 (RELAY_* constants shared by both messengers), baseGas :453-471; contracts/libraries/SafeCall.sol:91-100",
+    "current_form_since": "v9.0.0 (LOCAL 135,000/15,000 vs REMOTE 40,000/5,000 split); sender-side formula changed at v3.0.0 src/universal/CrossDomainMessenger.sol:357-396",
+    "note": "symmetric budget assumption is Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "CrossDomainMessenger.relayMessage (L1CrossDomainMessenger 2.13.0)",
+    "location_v9": "src/universal/CrossDomainMessenger.sol:209-307"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0404 (A-018)",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0404 (A-018) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-018: For each budget generation compute min tx gas to finalize as a function of payload size and find where it crosses 16,777,216; check real in-flight withdrawals against it.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-018"
+   ]
+  },
+  {
+   "id": "A-038",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0802.md"
+   ],
+   "title": "Classes of messenger withdrawals that are provable but never finalizable after v9",
+   "family": "messenger-replay",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:303-413 (version-0 branch: `successfulMessages[hashCrossDomainMessageV0]`), contracts/libraries/Hashing.sol:89-96; storage slot 203 predates Bedrock",
+    "current_form_since": "v1.0.0 (unchanged; v9 only changes what the portal does when it reverts)",
+    "note": "legacy double-relay protection"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.finalizeWithdrawalTransactionExternalProof",
+    "location_v9": "src/L1/OptimismPortal2.sol:577-666"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "sentMessages entries on L2 that can never finalize: unsafe-target messages, version-0 messages already relayed before Bedrock, oversize messages; their ETH stays in the lockbox",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "under v1.0.0..v8.0.0 these withdrawals finalized with success=false (consumed, ETH stayed/relocked); from v9 they stay proven forever. The population that was already consumed before v9 vs still pending was not split.",
+   "NEXT_EXPERIMENT": "From MessagePassed (L2) and WithdrawalFinalized (L1) logs list messenger withdrawals with success=false since Bedrock and the still-unfinalized ones whose V0 hash is set in slot 203.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-041"
+   ]
+  },
+  {
+   "id": "A-039",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0803.md"
+   ],
+   "title": "Third party can finalize a victim's messenger withdrawal undelivered via the xDomainMsgSender branch",
+   "family": "messenger-replay",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:303-413 (`!hasMinGas || xDomainMsgSender != DEFAULT_L2_SENDER` -> failedMessages = true; return)",
+    "current_form_since": "v1.2.0 src/universal/CrossDomainMessenger.sol:211-309 (pause + post-call assert); reachable by third parties since v1.4.0 (ExternalProof)",
+    "note": "branch text unchanged v1.0.0..v9.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "CrossDomainMessenger.relayMessage (L1CrossDomainMessenger 2.13.0)",
+    "location_v9": "src/universal/CrossDomainMessenger.sol:209-307"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0304 (A-012)",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0304 (A-012) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-012: Enumerate FailedRelayedMessage logs on the L1CDM since Bedrock, keep hashes with successfulMessages == false, sum their values against the L1CDM balance on every chain, and replay each on a v9 fork.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-012"
+   ]
+  },
+  {
+   "id": "A-040",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0804.md"
+   ],
+   "title": "Amsterdam gas reserves are enforced today (183,600 new-account, 135,000 relay reserve)",
+   "family": "gas-budget",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/libraries/SafeCall.sol:112-159 (callWithMinGas forwards gas(); hasMinGas :91-100 unchecked mul)",
+    "current_form_since": "v9.0.0 src/libraries/SafeCall.sol:121-172 (NEW_ACCOUNT_STATE_GAS)",
+    "note": "floor-not-cap since Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "SafeCall.callWithMinGas",
+    "location_v9": "src/libraries/SafeCall.sol:121-172"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "none",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0404 (A-018) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-018: For each budget generation compute min tx gas to finalize as a function of payload size and find where it crosses 16,777,216; check real in-flight withdrawals against it.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-018",
+    "A-047"
+   ]
+  },
+  {
+   "id": "A-041",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0805.md"
+   ],
+   "title": "Live cross-upgrade population: version-0 legacy and old-budget messenger withdrawals in flight",
+   "family": "messenger-replay",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:303-413 (version-0 branch: `successfulMessages[hashCrossDomainMessageV0]`), contracts/libraries/Hashing.sol:89-96; storage slot 203 predates Bedrock",
+    "current_form_since": "v1.0.0 (unchanged; v9 only changes what the portal does when it reverts)",
+    "note": "legacy double-relay protection"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "CrossDomainMessenger.relayMessage (L1CrossDomainMessenger 2.13.0)",
+    "location_v9": "src/universal/CrossDomainMessenger.sol:209-307"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "L1CDM successfulMessages (slot 203) entries keyed by the pre-Bedrock V0 hash; version-0 withdrawals in the L2ToL1MessagePasser; legacy spacers blockedMessages (slot 201) / relayedMessages (slot 202)",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "pre-Bedrock relay state -> Bedrock v0 branch -> v9 portal revert. Double release needs a legacy message whose pre-Bedrock success was recorded under a hash other than hashCrossDomainMessageV0, or one that was blocked instead of relayed (W0 scan: no MessageBlocked log ever, REJ-W0-01).",
+   "NEXT_EXPERIMENT": "For each in-flight version-0 withdrawal (evidence/lane08/proven_txs.json) compute the V0 hash and read successfulMessages at L1 block 17,422,000 and at N; then sample pre-Bedrock RelayedMessage logs and confirm topic == V0 hash of the decoded calldata (queue B02).",
+   "priority": "P0",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-038"
+   ]
+  },
+  {
+   "id": "A-042",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0901.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-2903.md"
+   ],
+   "title": "Retired per-chain ETHLockbox stays an authorised, non-blacklisted withdrawal target; owner equality is a snapshot",
+   "family": "migration",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.0.0",
+    "location_at_that_tag": "src/L1/ETHLockbox.sol:143-177 (lockETH/unlockETH), :219-231 (_authorizePortal, no revoke)",
+    "current_form_since": "v9.0.0 src/L1/ETHLockbox.sol:94-120,220-235 (own superchainConfig, pause on own address)",
+    "note": "custody ancestor: portal balance, v1.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "ETHLockbox.lockETH / unlockETH / _authorizePortal",
+    "location_v9": "src/L1/ETHLockbox.sol:144-178, 220-235"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0306 (A-014)",
+   "HISTORICAL_BRANCHES": "Bedrock..v3: portal holds all ETH; v4.0.0 (U16): OPCM calls portal.migrateLiquidity() into \"ETHLockbox-U16\"; v4.1.0 (U16a): chains without the v4.0.0 portal stay portal-custody; v9: lockbox mandatory. Base is still portal-custody (not on this path).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0306 (A-014) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-014: Recompute the CREATE2 addresses of every lockbox name each historical OPCM could deploy per chain, check code at N, and re-scan PortalAuthorized/LockboxAuthorized from block 22,990,500 through a second archive source.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-014"
+   ]
+  },
+  {
+   "id": "A-043",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0902.md"
+   ],
+   "title": "Permissionless falsification of the migration validator's zero-balance equalities",
+   "family": "tooling",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.1.0",
+    "location_at_that_tag": "src/L1/OPContractsManagerStandardValidator.sol:39",
+    "current_form_since": "v9.0.0 src/L1/opcm/OPContractsManagerMigrationValidator.sol:544 (assertRetiredContractsClean, new in v9)",
+    "note": "view-only"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OPContractsManagerMigrationValidator.assertRetiredContractsClean",
+    "location_v9": "src/L1/opcm/OPContractsManagerMigrationValidator.sol:544-579"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "portal / retired lockbox balances",
+   "HISTORICAL_BRANCHES": "migrate existed in OPCM v4.0.0 (src/L1/OPContractsManager.sol:1398) with migrateToSuperRoots; rewritten as Migrator at v7.0.0; never executed on OP/Ink/Soneium/Unichain (INTEROP false).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "none (view-only check introduced in v9).",
+   "NEXT_EXPERIMENT": "closed: C10",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-092"
+   ]
+  },
+  {
+   "id": "A-044",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0903.md"
+   ],
+   "title": "Chain / registry binding of games is carried only by factory<->registry wiring (isGameRegistered no longer checks the game's own registry)",
+   "family": "identity-binding",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v2.0.0",
+    "location_at_that_tag": "src/dispute/AnchorStateRegistry.sol:116-126 (isGameRegistered: factory UUID lookup only)",
+    "current_form_since": "v7.0.0 src/dispute/AnchorStateRegistry.sol:216-226 (the v4.0.0 `game.anchorStateRegistry() == address(this)` requirement, :182-200, was removed)",
+    "note": "single anchor for all types since v2.0.0 :103-111"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "AnchorStateRegistry.isGameRegistered / setAnchorState",
+    "location_v9": "src/dispute/AnchorStateRegistry.sol:227-237, 357-372"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "every clone in a factory that has served more than one registry: OP Mainnet factory 0xe5965Ab5\u2026 holds games bound to 0x18DAc71c\u2026, 0x1c68ECfb\u2026 and 0x23B2C629\u2026",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "the registry-binding check existed v4.0.0..v6.0.0 and was removed at v7.0.0: from then on only retirementTimestamp separates previous-registry games from the current registry (W0: current registry returns isGameRegistered = true for game 9827, which is bound to 0x1c68ECfb\u2026). A game created after the retirement but bound to an old registry would be accepted. See PRIM-W0-01.",
+   "NEXT_EXPERIMENT": "Exhaustive scan: for every non-retired game on OP/Ink/Soneium/Unichain read anchorStateRegistry() and compare with the chain registry (evidence/W0/games-registry-binding-*.json); plus ImplementationSet history for types that were not replaced at the registry switch.",
+   "priority": "P0",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-031",
+    "A-079"
+   ]
+  },
+  {
+   "id": "A-045",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-0904.md"
+   ],
+   "title": "migrate() topology side effects on legacy per-chain contracts (pause fan-in, orphaned escrow)",
+   "family": "migration",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.0.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:396-429 (migrateToSuperRoots) and src/L1/OPContractsManager.sol:1398 (migrate)",
+    "current_form_since": "v9.0.0 src/L1/opcm/OPContractsManagerMigrator.sol (Migrator first v7.0.0); portal migrateToSharedDisputeGame v7.0.0 :503-537, checks added v8.0.0",
+    "note": "never executed on the four U21 chains"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OPContractsManagerMigrator.migrate / _migratePortal; OptimismPortal2.migrateToSharedDisputeGame",
+    "location_v9": "src/L1/opcm/OPContractsManagerMigrator.sol:129-285, 475-556; src/L1/OptimismPortal2.sol:528-572"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "legacy registry / WETH / factory of each migrated chain",
+   "HISTORICAL_BRANCHES": "migrate existed in OPCM v4.0.0 (src/L1/OPContractsManager.sol:1398) with migrateToSuperRoots; rewritten as Migrator at v7.0.0; never executed on OP/Ink/Soneium/Unichain (INTEROP false).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0704 (A-035) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-035: Extend test/poc/lane09 Lane09Migrate to assert, after migrate, the predicates of registry 0x1c68ECfb\u2026 (isGameClaimValid / setAnchorState with shared-factory games) and closeGame of a pre-U16 game.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-035"
+   ]
+  },
+  {
+   "id": "A-046",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-1001.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-3006.md"
+   ],
+   "title": "Cross-version relay gas budget (L1 150k reserve vs L2 45k) and floors split across L1/L2 and future EVM rules",
+   "family": "gas-budget",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:128-159 (RELAY_* constants shared by both messengers), baseGas :453-471; contracts/libraries/SafeCall.sol:91-100",
+    "current_form_since": "v9.0.0 (LOCAL 135,000/15,000 vs REMOTE 40,000/5,000 split); sender-side formula changed at v3.0.0 src/universal/CrossDomainMessenger.sol:357-396",
+    "note": "symmetric budget assumption is Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "CrossDomainMessenger.relayMessage (L1CrossDomainMessenger 2.13.0)",
+    "location_v9": "src/universal/CrossDomainMessenger.sol:209-307"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0404 (A-018)",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0404 (A-018) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-018: For each budget generation compute min tx gas to finalize as a function of payload size and find where it crosses 16,777,216; check real in-flight withdrawals against it.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-018"
+   ]
+  },
+  {
+   "id": "A-047",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-1002.md"
+   ],
+   "title": "SafeCall.callWithMinGas floor is state-dependent and still multiplies a user uint256 gasLimit unchecked",
+   "family": "gas-budget",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/libraries/SafeCall.sol:112-159 (callWithMinGas forwards gas(); hasMinGas :91-100 unchecked mul)",
+    "current_form_since": "v9.0.0 src/libraries/SafeCall.sol:121-172 (NEW_ACCOUNT_STATE_GAS)",
+    "note": "floor-not-cap since Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "SafeCall.callWithMinGas",
+    "location_v9": "src/libraries/SafeCall.sol:121-172"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "withdrawals with extreme gasLimit values in sentMessages",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "the unchecked `mul(_minGas, 64)` is v1.0.0 code; self-harm only.",
+   "NEXT_EXPERIMENT": "closed: C6",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-018"
+   ]
+  },
+  {
+   "id": "A-048",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-1003.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-3001.md"
+   ],
+   "title": "Shared singleton proxies (registry, DelayedWETH) are upgraded and re-initialised underneath in-flight game clones",
+   "family": "dispute-game",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/dispute/DisputeGameFactory.sol:84-132 + game immutables (prestate/VM/registry/WETH fixed per implementation)",
+    "current_form_since": "v6.0.0 src/dispute/DisputeGameFactory.sol:147-216 (gameArgs copied into the clone, game type in clone data); gameArgs storage v5.0.0 :147-198; deterministic clones v7.0.0",
+    "note": "first gameArgs-based clones on OP Mainnet: game index 14633 (FDG 2.2.0)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "DisputeGameFactory.create / setImplementation",
+    "location_v9": "src/dispute/DisputeGameFactory.sol:147-226, 298-317"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "in-flight clones holding bonds in the shared DelayedWETH proxy; their immutable pointers to registry/WETH proxies",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "every earlier in-place singleton upgrade under live games (registry 3.5.0 -> 3.7.0 -> 3.9.0, WETH 1.5.0 -> 1.5.1) and the two re-proxy events (v2.0.0, v4.0.0) that left games on orphaned registries/WETH; only the U21 boundary was simulated.",
+   "NEXT_EXPERIMENT": "For games in progress at each historical upgrade block (9827/9828, 12805, 14633, 17905, 20095 neighbourhoods) check resolution + credit claim succeeded on chain (status, WETH balance == 0).",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-049",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-1101.md"
+   ],
+   "title": "Live precedent: forged 90,000 ETH proof against an attacker-created type-9 game is still stored in the portal",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:254-328 (provenWithdrawals[hash][msg.sender] slot 57, proofSubmitters push slot 60)",
+    "current_form_since": "v7.0.0 src/L1/OptimismPortal2.sol:368-470 (super-root branch); struct unchanged since v1.4.0",
+    "note": "ancestor one-proof-per-hash model: v1.0.0 contracts/L1/OptimismPortal.sol:242-318 (slot 52)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.deleteProvenWithdrawal",
+    "location_v9": "src/L1/OptimismPortal2.sol:711-728"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "one provenWithdrawals cell pointing at a CHALLENGER_WINS game",
+   "HISTORICAL_BRANCHES": "slot 52 one-proof-per-hash (v1.0.0..v1.3.0, L2OutputOracle); slot 57 per-submitter (v1.4.0+); validity on portal storage until v3.0.0, on the registry from v4.0.0; OP Mainnet registries: 0x18DAc71c\u2026 -> 0x1c68ECfb\u2026 (U13) -> 0x23B2C629\u2026 (U16).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "none",
+   "NEXT_EXPERIMENT": "closed: C4",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-050",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-1102.md"
+   ],
+   "title": "Forced failedMessages for any finalizable messenger withdrawal by finalizing it from inside an L1CDM replay",
+   "family": "messenger-replay",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:303-413 (`!hasMinGas || xDomainMsgSender != DEFAULT_L2_SENDER` -> failedMessages = true; return)",
+    "current_form_since": "v1.2.0 src/universal/CrossDomainMessenger.sol:211-309 (pause + post-call assert); reachable by third parties since v1.4.0 (ExternalProof)",
+    "note": "branch text unchanged v1.0.0..v9.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "CrossDomainMessenger.relayMessage (L1CrossDomainMessenger 2.13.0)",
+    "location_v9": "src/universal/CrossDomainMessenger.sol:209-307"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0304 (A-012)",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0304 (A-012) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-012: Enumerate FailedRelayedMessage logs on the L1CDM since Bedrock, keep hashes with successfulMessages == false, sum their values against the L1CDM balance on every chain, and replay each on a v9 fork.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-012"
+   ]
+  },
+  {
+   "id": "A-051",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-1103.md"
+   ],
+   "title": "The relay-reserve defect fixed on L1 by v9 is still live in the un-upgraded L2CrossDomainMessenger 2.2.1 (L1->L2 direction)",
+   "family": "gas-budget",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:128-159 (RELAY_* constants shared by both messengers), baseGas :453-471; contracts/libraries/SafeCall.sol:91-100",
+    "current_form_since": "v9.0.0 (LOCAL 135,000/15,000 vs REMOTE 40,000/5,000 split); sender-side formula changed at v3.0.0 src/universal/CrossDomainMessenger.sol:357-396",
+    "note": "symmetric budget assumption is Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "L2CrossDomainMessenger 2.2.1 relayMessage (live OP Mainnet predeploy, pre-v9 code)",
+    "location_v9": "v8 src/universal/CrossDomainMessenger.sol relayMessage"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "L1->L2 messages (deposits) relayed by L2CDM predeploy code of an older generation; ETH minted to the aliased L1CDM on L2 when a relay reverts",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "L2 predeploy generations (L2CDM 1.4.0 .. 2.2.1) each relayed deposits with their own reserve; deposits whose relay reverted un-recorded on L2 under any generation are permanent residue (aliased-sender stranded ETH is a suppressed class).",
+   "NEXT_EXPERIMENT": "On the OP Mainnet archive, read the ETH balance of the aliased L1CDM address and of the L2CDM, and list L2 deposit transactions from the L1CDM alias that reverted (queue B15).",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-052",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-1201.md",
+    "optimism-u21-novel-hunt/primitives/PRIM-3202.md"
+   ],
+   "title": "L1 relay reserve raised with no L2 counterpart; public getters report the remote side",
+   "family": "gas-budget",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:128-159 (RELAY_* constants shared by both messengers), baseGas :453-471; contracts/libraries/SafeCall.sol:91-100",
+    "current_form_since": "v9.0.0 (LOCAL 135,000/15,000 vs REMOTE 40,000/5,000 split); sender-side formula changed at v3.0.0 src/universal/CrossDomainMessenger.sol:357-396",
+    "note": "symmetric budget assumption is Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "CrossDomainMessenger.relayMessage (L1CrossDomainMessenger 2.13.0)",
+    "location_v9": "src/universal/CrossDomainMessenger.sol:209-307"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0404 (A-018)",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0404 (A-018) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-018: For each budget generation compute min tx gas to finalize as a function of payload size and find where it crosses 16,777,216; check real in-flight withdrawals against it.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-018"
+   ]
+  },
+  {
+   "id": "A-053",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-1202.md"
+   ],
+   "title": "A messenger withdrawal can still be finalized without being delivered: the path the new revert does not cover",
+   "family": "messenger-replay",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:303-413 (`!hasMinGas || xDomainMsgSender != DEFAULT_L2_SENDER` -> failedMessages = true; return)",
+    "current_form_since": "v1.2.0 src/universal/CrossDomainMessenger.sol:211-309 (pause + post-call assert); reachable by third parties since v1.4.0 (ExternalProof)",
+    "note": "branch text unchanged v1.0.0..v9.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "CrossDomainMessenger.relayMessage (L1CrossDomainMessenger 2.13.0)",
+    "location_v9": "src/universal/CrossDomainMessenger.sol:209-307"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0304 (A-012)",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0304 (A-012) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-012: Enumerate FailedRelayedMessage logs on the L1CDM since Bedrock, keep hashes with successfulMessages == false, sum their values against the L1CDM balance on every chain, and replay each on a v9 fork.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-012"
+   ]
+  },
+  {
+   "id": "A-054",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-1203.md"
+   ],
+   "title": "Omitted sibling checks on privileged paths after the lockbox re-wiring (catalogue)",
+   "family": "upgrade-engine",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.0.0",
+    "location_at_that_tag": "src/L1/ProxyAdminOwnedBase.sol:41-105 (proxyAdmin(), _assertSharedProxyAdminOwner)",
+    "current_form_since": "v4.0.0 (identical body in v9 src/universal/ProxyAdminOwnedBase.sol)",
+    "note": "ProxyAdmin itself: v1.0.0 contracts/universal/ProxyAdmin.sol"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "ETHLockbox.lockETH / unlockETH / _authorizePortal",
+    "location_v9": "src/L1/ETHLockbox.sol:144-178, 220-235"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "pointer slots written by privileged calls",
+   "HISTORICAL_BRANCHES": "manual/superchain-ops upgrades with StorageSetter (<= v1.8.0); OPCM.upgrade per release from v2.0.0 (new proxies at v2.0.0 and v4.0.0 for registry/WETH/lockbox); OPContractsManagerV2 + Utils from v7.0.0; open `initializer`s until v3.x, ProxyAdmin-gated reinitializers from v4.0.0.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "privileged-only; historical OPCMs performed the same writes with their own checks.",
+   "NEXT_EXPERIMENT": "closed: C1",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-055",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-1204.md"
+   ],
+   "title": "Pause coverage: one live identifier per chain, other addresses dead, legacy escrows outside it",
+   "family": "pause",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:83,137-139,174-186 (portal-local bool, GUARDIAN immutable)",
+    "current_form_since": "v9.0.0 src/L1/ETHLockbox.sol:112-114 (lockbox identifier); generations: v1.2.0 src/L1/SuperchainConfig.sol:62-85 global, v4.0.0 :110-175 per identifier + src/L1/SystemConfig.sol:490-493, v4.1.0 src/L1/SystemConfig.sol:526-534",
+    "note": "four generations of pause source"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "ETHLockbox.paused (resolved by portal, SystemConfig, ASR, DelayedWETH)",
+    "location_v9": "src/L1/ETHLockbox.sol:112-114"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0201 (A-005) and PRIM-0602 (A-027)",
+   "HISTORICAL_BRANCHES": "v1.0.0 portal bool; v1.2.0 global SuperchainConfig bool; v4.0.0 per-identifier (lockbox) with expiry; v4.1.0..v8.0.0 identifier = lockbox or portal depending on ETH_LOCKBOX; v9 lockbox only. Legacy DelayedWETH proxies and registry 0x1c68ECfb\u2026 still use generation-1/none.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0201 (A-005) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-005: Scan Paused/Unpaused logs of SuperchainConfig 0x95703e09\u2026 from L1 block 22,990,599 to N and read pauseTimestamps for every identifier ever used by any chain sharing it.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-005",
+    "A-027"
+   ]
+  },
+  {
+   "id": "A-056",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2101.md"
+   ],
+   "title": "Safe-context delegatecall is the upgrade authority",
+   "family": "upgrade-engine",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v2.0.0",
+    "location_at_that_tag": "src/L1/OPContractsManager.sol:463 (upgrade(), meant to be DELEGATECALLed by the ProxyAdmin owner)",
+    "current_form_since": "v7.0.0 src/L1/opcm/OPContractsManagerV2.sol + OPContractsManagerUtils.sol (StorageSetter reset-and-replay)",
+    "note": "OPCM first appears at v1.8.0 (deploy only)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OPContractsManagerV2.upgrade / OPContractsManagerUtils.upgrade",
+    "location_v9": "src/L1/opcm/OPContractsManagerV2.sol:198-312; src/L1/opcm/OPContractsManagerUtils.sol:312-387"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "ProxyAdmin.owner per chain; SystemConfig OPCM_SLOT (lastUsedOPCM, from v7.0.0)",
+   "HISTORICAL_BRANCHES": "manual/superchain-ops upgrades with StorageSetter (<= v1.8.0); OPCM.upgrade per release from v2.0.0 (new proxies at v2.0.0 and v4.0.0 for registry/WETH/lockbox); OPContractsManagerV2 + Utils from v7.0.0; open `initializer`s until v3.x, ProxyAdmin-gated reinitializers from v4.0.0.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "the delegatecall-from-owner pattern starts with OPCM.upgrade at v2.0.0; ProxyAdmin ownership moves and earlier OPCM generations are queue B14.",
+   "NEXT_EXPERIMENT": "closed: C1",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-057",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2102.md"
+   ],
+   "title": "Atomic two-pass StorageSetter reinitialisation (clear the OZ initialized byte, replay the same-version initializer)",
+   "family": "upgrade-engine",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.1.0",
+    "location_at_that_tag": "src/universal/StorageSetter.sol:11 (generic slot writer used by upgrade scripts)",
+    "current_form_since": "v7.0.0 src/L1/opcm/OPContractsManagerUtils.sol (per-upgrade clear of the OZ `_initialized` byte + same-version initialize)",
+    "note": "ReinitializableBase/initVersion: v4.0.0 src/universal/ReinitializableBase.sol:6"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OPContractsManagerV2.upgrade / OPContractsManagerUtils.upgrade",
+    "location_v9": "src/L1/opcm/OPContractsManagerV2.sol:198-312; src/L1/opcm/OPContractsManagerUtils.sol:312-387"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "OZ `_initialized` byte of every proxy (slot 0 offset 0; messenger offset 20) and every field an initializer rewrites",
+   "HISTORICAL_BRANCHES": "manual/superchain-ops upgrades with StorageSetter (<= v1.8.0); OPCM.upgrade per release from v2.0.0 (new proxies at v2.0.0 and v4.0.0 for registry/WETH/lockbox); OPContractsManagerV2 + Utils from v7.0.0; open `initializer`s until v3.x, ProxyAdmin-gated reinitializers from v4.0.0.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "initializer history per proxy: open `initializer` (<= v3.x), Constants.INITIALIZER reinitializer (v1.1.0 tag), ReinitializableBase 1/2/3 (v4.0.0/v4.1.0); chains that reached the same initVersion through different histories were not compared (only the U21 cycle was replayed).",
+   "NEXT_EXPERIMENT": "For each of the four chains read Initialized(version) events of portal/SystemConfig/messenger/bridges since deployment and compare sequences (queue B08).",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-059",
+    "A-062"
+   ]
+  },
+  {
+   "id": "A-058",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2104.md"
+   ],
+   "title": "Permissionless deterministic proxy-salt occupancy in OPCM Utils",
+   "family": "upgrade-engine",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v2.0.0",
+    "location_at_that_tag": "src/L1/OPContractsManager.sol:463 (upgrade(), meant to be DELEGATECALLed by the ProxyAdmin owner)",
+    "current_form_since": "v7.0.0 src/L1/opcm/OPContractsManagerV2.sol + OPContractsManagerUtils.sol (StorageSetter reset-and-replay)",
+    "note": "OPCM first appears at v1.8.0 (deploy only)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OPContractsManagerV2.upgrade / OPContractsManagerUtils.upgrade",
+    "location_v9": "src/L1/opcm/OPContractsManagerV2.sol:198-312; src/L1/opcm/OPContractsManagerUtils.sol:312-387"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "CREATE2 address space of the standalone Utils singleton",
+   "HISTORICAL_BRANCHES": "manual/superchain-ops upgrades with StorageSetter (<= v1.8.0); OPCM.upgrade per release from v2.0.0 (new proxies at v2.0.0 and v4.0.0 for registry/WETH/lockbox); OPContractsManagerV2 + Utils from v7.0.0; open `initializer`s until v3.x, ProxyAdmin-gated reinitializers from v4.0.0.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "none",
+   "NEXT_EXPERIMENT": "closed: C14",
+   "priority": "P2",
+   "pass_a_status": "rejected-by-lane",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-059",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2201.md"
+   ],
+   "title": "Privileged same-version reset-and-replay",
+   "family": "upgrade-engine",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.1.0",
+    "location_at_that_tag": "src/universal/StorageSetter.sol:11 (generic slot writer used by upgrade scripts)",
+    "current_form_since": "v7.0.0 src/L1/opcm/OPContractsManagerUtils.sol (per-upgrade clear of the OZ `_initialized` byte + same-version initialize)",
+    "note": "ReinitializableBase/initVersion: v4.0.0 src/universal/ReinitializableBase.sol:6"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OPContractsManagerV2.upgrade / OPContractsManagerUtils.upgrade",
+    "location_v9": "src/L1/opcm/OPContractsManagerV2.sol:198-312; src/L1/opcm/OPContractsManagerUtils.sol:312-387"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-2102 (A-057)",
+   "HISTORICAL_BRANCHES": "manual/superchain-ops upgrades with StorageSetter (<= v1.8.0); OPCM.upgrade per release from v2.0.0 (new proxies at v2.0.0 and v4.0.0 for registry/WETH/lockbox); OPContractsManagerV2 + Utils from v7.0.0; open `initializer`s until v3.x, ProxyAdmin-gated reinitializers from v4.0.0.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-2102 (A-057) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-057: For each of the four chains read Initialized(version) events of portal/SystemConfig/messenger/bridges since deployment and compare sequences (queue B08).",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-057"
+   ]
+  },
+  {
+   "id": "A-060",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2202.md"
+   ],
+   "title": "Packed registry slot 6 gains the lockbox pointer next to respectedGameType/retirementTimestamp",
+   "family": "storage-init",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.0.0",
+    "location_at_that_tag": "src/dispute/AnchorStateRegistry.sol:89-107 (slot 6 = respectedGameType | retirementTimestamp)",
+    "current_form_since": "v9.0.0 src/dispute/AnchorStateRegistry.sol:50-59 (ethLockbox packed at offset 12)",
+    "note": "\u2014"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "AnchorStateRegistry.initialize / paused",
+    "location_v9": "src/dispute/AnchorStateRegistry.sol:94-144"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "AnchorStateRegistry slot 6",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "slot 6 exists only on registries created at v4.0.0+; the upper 20 bytes were never used before v9.",
+   "NEXT_EXPERIMENT": "closed: C2",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-061",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2204.md"
+   ],
+   "title": "Dynamic gameArgs payload mutation behind a stable mapping head",
+   "family": "dispute-game",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/dispute/DisputeGameFactory.sol:84-132 + game immutables (prestate/VM/registry/WETH fixed per implementation)",
+    "current_form_since": "v6.0.0 src/dispute/DisputeGameFactory.sol:147-216 (gameArgs copied into the clone, game type in clone data); gameArgs storage v5.0.0 :147-198; deterministic clones v7.0.0",
+    "note": "first gameArgs-based clones on OP Mainnet: game index 14633 (FDG 2.2.0)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "DisputeGameFactory.create / setImplementation",
+    "location_v9": "src/dispute/DisputeGameFactory.sol:147-226, 298-317"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "DisputeGameFactory.gameArgs[type] (slot 105) and gameImpls[type] (slot 101)",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "clone-argument layout differs between v5.0.0 (no game type in clone data) and v6.0.0+ (uint32 game type inserted before extraData): an implementation + args registered under one factory version and used under the next is mis-parsed. OP Mainnet first used gameArgs at FDG 2.2.0 (v6 layout); other chains and non-OPCM game types unchecked.",
+   "NEXT_EXPERIMENT": "Read ImplementationArgsSet logs on the four factories and, for each (type, impl), confirm the implementation version reads the layout of the factory version live at that time.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-008"
+   ]
+  },
+  {
+   "id": "A-062",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2205.md"
+   ],
+   "title": "Heterogeneous initializer-byte offset across proxy variants (messenger at slot 0 offset 20)",
+   "family": "storage-init",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/L1CrossDomainMessenger.sol + legacy spacer (snapshot v1.2.0: `_initialized` at slot 0 offset 20 behind the 20-byte legacy address)",
+    "current_form_since": "v4.1.0 (initVersion 3)",
+    "note": "ResolvedDelegateProxy predates Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "L1CrossDomainMessenger.initialize (via OPContractsManagerUtils.upgrade)",
+    "location_v9": "src/L1/L1CrossDomainMessenger.sol; src/L1/opcm/OPContractsManagerUtils.sol:356-372"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "L1CDM slot 0 (legacy 20-byte spacer + `_initialized`)",
+   "HISTORICAL_BRANCHES": "manual/superchain-ops upgrades with StorageSetter (<= v1.8.0); OPCM.upgrade per release from v2.0.0 (new proxies at v2.0.0 and v4.0.0 for registry/WETH/lockbox); OPContractsManagerV2 + Utils from v7.0.0; open `initializer`s until v3.x, ProxyAdmin-gated reinitializers from v4.0.0.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same family as PRIM-2102 (A-057).",
+   "NEXT_EXPERIMENT": "same experiment as A-057: For each of the four chains read Initialized(version) events of portal/SystemConfig/messenger/bridges since deployment and compare sequences (queue B08).",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-057"
+   ]
+  },
+  {
+   "id": "A-063",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2301.md"
+   ],
+   "title": "Exact-value deposit lock and split mint / call-value encoding",
+   "family": "custody",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:434-483 (opaqueData = msg.value, _value, \u2026; metered)",
+    "current_form_since": "v6.0.0 src/L1/OptimismPortal2.sol:565-619 (CGT check; lock first since v4.0.0 :740-788; conditional v4.1.0)",
+    "note": "aliasing predicate changed at v2.0.0 (EOA.isSenderEOA)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.depositTransaction",
+    "location_v9": "src/L1/OptimismPortal2.sol:741-795"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "none (per-transaction); TransactionDeposited log format",
+   "HISTORICAL_BRANCHES": "Bedrock..v3: portal holds all ETH; v4.0.0 (U16): OPCM calls portal.migrateLiquidity() into \"ETHLockbox-U16\"; v4.1.0 (U16a): chains without the v4.0.0 portal stay portal-custody; v9: lockbox mandatory. Base is still portal-custody (not on this path).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "opaqueData encoding unchanged since v1.0.0; nothing historical to carry.",
+   "NEXT_EXPERIMENT": "closed: C3",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-064",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2302.md"
+   ],
+   "title": "Finalization is unlock-before-call with transactional rollback or exact relock",
+   "family": "custody",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:325-420 (finalizedWithdrawals set before SafeCall.callWithMinGas; a false return is only emitted)",
+    "current_form_since": "v4.0.0 src/L1/OptimismPortal2.sol:624-688 (exact relock into the lockbox); v9.0.0 exempts messenger withdrawals",
+    "note": "\"failed call still consumes the withdrawal\" is Bedrock behaviour"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.finalizeWithdrawalTransactionExternalProof",
+    "location_v9": "src/L1/OptimismPortal2.sol:577-666"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "finalizedWithdrawals; lockbox balance",
+   "HISTORICAL_BRANCHES": "v1.0.0..v1.3.0: caller-independent finalize, 7-day L2OO window; v1.4.0+: any submitter; v4.0.0: lockbox unlock (v4.1.0 optional per chain); v9: messenger failures revert. Chains without lockbox (pre-v9) paid from the portal balance.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0301 (A-009)/0402.",
+   "NEXT_EXPERIMENT": "closed: C3",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-009",
+    "A-016"
+   ]
+  },
+  {
+   "id": "A-065",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2303.md"
+   ],
+   "title": "Authorised portals share an aggregate lockbox with no per-portal quota",
+   "family": "custody",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.0.0",
+    "location_at_that_tag": "src/L1/ETHLockbox.sol:143-177 (lockETH/unlockETH), :219-231 (_authorizePortal, no revoke)",
+    "current_form_since": "v9.0.0 src/L1/ETHLockbox.sol:94-120,220-235 (own superchainConfig, pause on own address)",
+    "note": "custody ancestor: portal balance, v1.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "ETHLockbox.lockETH / unlockETH / _authorizePortal",
+    "location_v9": "src/L1/ETHLockbox.sol:144-178, 220-235"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0306 (A-014)",
+   "HISTORICAL_BRANCHES": "Bedrock..v3: portal holds all ETH; v4.0.0 (U16): OPCM calls portal.migrateLiquidity() into \"ETHLockbox-U16\"; v4.1.0 (U16a): chains without the v4.0.0 portal stay portal-custody; v9: lockbox mandatory. Base is still portal-custody (not on this path).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0306 (A-014) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-014: Recompute the CREATE2 addresses of every lockbox name each historical OPCM could deploy per chain, check code at N, and re-scan PortalAuthorized/LockboxAuthorized from block 22,990,500 through a second archive source.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-014",
+    "A-080"
+   ]
+  },
+  {
+   "id": "A-066",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2306.md"
+   ],
+   "title": "Messenger failure has two distinct custody states (ETH parked in L1CDM vs whole finalize reverted)",
+   "family": "messenger-replay",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:303-413 (successfulMessages slot 203 / failedMessages slot 206) + contracts/L1/OptimismPortal.sol:325-420",
+    "current_form_since": "v9.0.0 src/L1/OptimismPortal2.sol:651-653 (portal reverts when the messenger call fails)",
+    "note": "two independent replay layers since Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "CrossDomainMessenger.relayMessage (L1CrossDomainMessenger 2.13.0)",
+    "location_v9": "src/universal/CrossDomainMessenger.sol:209-307"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0304 (A-012) / PRIM-2402 (A-068)",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-2402 (A-068) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-068: Scan WithdrawalFinalized(success=false) from Bedrock on the four portals, decode sender == L2CDM, and for each read both messenger mappings and the withdrawal value (ETH that was left in the portal and swept at U16, or relocked).",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-012",
+    "A-068"
+   ]
+  },
+  {
+   "id": "A-067",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2308.md"
+   ],
+   "title": "CGT and zero-value branches sever ETH liability creation without rejecting surplus",
+   "family": "custody",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.1.0",
+    "location_at_that_tag": "src/L1/SystemConfig.sol:503-518 (isFeatureEnabled slot 109, setFeature)",
+    "current_form_since": "v9.0.0 src/L1/SystemConfig.sol:532-568; guards from v5.0.0 :523-564",
+    "note": "CGT v1 (gasPayingToken) existed v1.5.0..v1.8.0 and was removed at v2.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.depositTransaction",
+    "location_v9": "src/L1/OptimismPortal2.sol:741-795"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "isFeatureEnabled[CUSTOM_GAS_TOKEN]; portal surplus",
+   "HISTORICAL_BRANCHES": "custom gas token v1 (gasPayingToken, portal `_balance` slot 61) v1.5.0/v1.6.0..v1.8.0, removed v2.0.0; CGT v2 as SystemConfig feature from v6.0.0. Not enabled on the four U21 chains.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "CGT v1 history is queue B16; not on the four chains.",
+   "NEXT_EXPERIMENT": "closed: C3",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-011"
+   ]
+  },
+  {
+   "id": "A-068",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2402.md"
+   ],
+   "title": "Messenger/portal two-layer replay state; v9 makes the portal roll back when the messenger call fails",
+   "family": "messenger-replay",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:303-413 (successfulMessages slot 203 / failedMessages slot 206) + contracts/L1/OptimismPortal.sol:325-420",
+    "current_form_since": "v9.0.0 src/L1/OptimismPortal2.sol:651-653 (portal reverts when the messenger call fails)",
+    "note": "two independent replay layers since Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.finalizeWithdrawalTransactionExternalProof",
+    "location_v9": "src/L1/OptimismPortal2.sol:577-666"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "portal finalizedWithdrawals[withdrawalHash] vs messenger successfulMessages/failedMessages[messageHash] for the same economic withdrawal",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "under v1.0.0..v8.0.0 a messenger call that reverted before writing a mapping left \"finalized in portal, unknown to messenger\" objects; v9 cannot repair them. PASS A scanned only blocks 25,900,000..26,430,858 (one hit, no value). Bedrock..25.9M is unscanned on all chains.",
+   "NEXT_EXPERIMENT": "Scan WithdrawalFinalized(success=false) from Bedrock on the four portals, decode sender == L2CDM, and for each read both messenger mappings and the withdrawal value (ETH that was left in the portal and swept at U16, or relocked).",
+   "priority": "P0",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-017",
+    "A-066",
+    "A-086",
+    "A-091"
+   ]
+  },
+  {
+   "id": "A-069",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2404.md"
+   ],
+   "title": "Proof validity is re-evaluated against mutable current configuration (registry, blacklist, retirement, pause, lockbox, CGT)",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:461-522 (all checks on portal storage)",
+    "current_form_since": "v4.0.0 src/L1/OptimismPortal2.sol:693-727 (delegates to AnchorStateRegistry.isGameClaimValid)",
+    "note": "proof stores only (game, timestamp); everything else is re-read"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.checkWithdrawal",
+    "location_v9": "src/L1/OptimismPortal2.sol:671-705"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "provenWithdrawals cells (game, timestamp) + portal.anchorStateRegistry (slot 62) + registry state",
+   "HISTORICAL_BRANCHES": "slot 52 one-proof-per-hash (v1.0.0..v1.3.0, L2OutputOracle); slot 57 per-submitter (v1.4.0+); validity on portal storage until v3.0.0, on the registry from v4.0.0; OP Mainnet registries: 0x18DAc71c\u2026 -> 0x1c68ECfb\u2026 (U13) -> 0x23B2C629\u2026 (U16).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "a proof written under portal-owned validity (v1.4.0..v3.x) is judged by registry-owned validity (v4.0.0+); invalidation at U16 relied on the new registry's retirement. Any chain where a v4.0.0..v5.0.0 re-initialisation moved retirementTimestamp again, or never set it, was not checked.",
+   "NEXT_EXPERIMENT": "Read retirementTimestamp and RetirementTimestampSet logs of every registry of the four chains since their U16 and compare with their upgrade blocks.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-024",
+    "A-093"
+   ]
+  },
+  {
+   "id": "A-070",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2405.md"
+   ],
+   "title": "Conservative pre-Amsterdam new-account reserve",
+   "family": "gas-budget",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/libraries/SafeCall.sol:112-159 (callWithMinGas forwards gas(); hasMinGas :91-100 unchecked mul)",
+    "current_form_since": "v9.0.0 src/libraries/SafeCall.sol:121-172 (NEW_ACCOUNT_STATE_GAS)",
+    "note": "floor-not-cap since Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "SafeCall.callWithMinGas",
+    "location_v9": "src/libraries/SafeCall.sol:121-172"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "none",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0404 (A-018).",
+   "NEXT_EXPERIMENT": "same experiment as A-018: For each budget generation compute min tx gas to finalize as a function of payload size and find where it crosses 16,777,216; check real in-flight withdrawals against it.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-018"
+   ]
+  },
+  {
+   "id": "A-071",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2406.md"
+   ],
+   "title": "v8 proof and messenger replay state survive U21 unchanged",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:254-328 (provenWithdrawals[hash][msg.sender] slot 57, proofSubmitters push slot 60)",
+    "current_form_since": "v7.0.0 src/L1/OptimismPortal2.sol:368-470 (super-root branch); struct unchanged since v1.4.0",
+    "note": "ancestor one-proof-per-hash model: v1.0.0 contracts/L1/OptimismPortal.sol:242-318 (slot 52)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.checkWithdrawal",
+    "location_v9": "src/L1/OptimismPortal2.sol:671-705"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "slot 57 / slot 206 objects from v8",
+   "HISTORICAL_BRANCHES": "slot 52 one-proof-per-hash (v1.0.0..v1.3.0, L2OutputOracle); slot 57 per-submitter (v1.4.0+); validity on portal storage until v3.0.0, on the registry from v4.0.0; OP Mainnet registries: 0x18DAc71c\u2026 -> 0x1c68ECfb\u2026 (U13) -> 0x23B2C629\u2026 (U16).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "none: PASS A carried real v8 objects through the real U21 transaction.",
+   "NEXT_EXPERIMENT": "closed: C5",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-073"
+   ]
+  },
+  {
+   "id": "A-072",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2503.md"
+   ],
+   "title": "An attacker's proof cannot overwrite or block another submitter's proof",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:254-328 (provenWithdrawals[hash][msg.sender] slot 57, proofSubmitters push slot 60)",
+    "current_form_since": "v7.0.0 src/L1/OptimismPortal2.sol:368-470 (super-root branch); struct unchanged since v1.4.0",
+    "note": "ancestor one-proof-per-hash model: v1.0.0 contracts/L1/OptimismPortal.sol:242-318 (slot 52)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.proveWithdrawalTransaction",
+    "location_v9": "src/L1/OptimismPortal2.sol:390-492"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "provenWithdrawals[hash][submitter]",
+   "HISTORICAL_BRANCHES": "slot 52 one-proof-per-hash (v1.0.0..v1.3.0, L2OutputOracle); slot 57 per-submitter (v1.4.0+); validity on portal storage until v3.0.0, on the registry from v4.0.0; OP Mainnet registries: 0x18DAc71c\u2026 -> 0x1c68ECfb\u2026 (U13) -> 0x23B2C629\u2026 (U16).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "before v1.4.0 there was ONE proof cell per hash (slot 52) and re-proving was blocked unless the output changed; no surviving object.",
+   "NEXT_EXPERIMENT": "closed: C5",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-020"
+   ]
+  },
+  {
+   "id": "A-073",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2504.md"
+   ],
+   "title": "A v8 proof finalizes under v9 (cross-version continuity confirmed on chain)",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:254-328 (provenWithdrawals[hash][msg.sender] slot 57, proofSubmitters push slot 60)",
+    "current_form_since": "v7.0.0 src/L1/OptimismPortal2.sol:368-470 (super-root branch); struct unchanged since v1.4.0",
+    "note": "ancestor one-proof-per-hash model: v1.0.0 contracts/L1/OptimismPortal.sol:242-318 (slot 52)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.checkWithdrawal",
+    "location_v9": "src/L1/OptimismPortal2.sol:671-705"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "slot 57 objects from v8",
+   "HISTORICAL_BRANCHES": "slot 52 one-proof-per-hash (v1.0.0..v1.3.0, L2OutputOracle); slot 57 per-submitter (v1.4.0+); validity on portal storage until v3.0.0, on the registry from v4.0.0; OP Mainnet registries: 0x18DAc71c\u2026 -> 0x1c68ECfb\u2026 (U13) -> 0x23B2C629\u2026 (U16).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "none (real pre-upgrade object carried through).",
+   "NEXT_EXPERIMENT": "closed: C5",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-071"
+   ]
+  },
+  {
+   "id": "A-074",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2506.md"
+   ],
+   "title": "A stored proof whose game address has no code / a non-conforming status() cannot be cleaned up",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v9.0.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:711-728 (new); predicate ancestors: portal blacklist v1.4.0 src/L1/OptimismPortal2.sol:441-445, ASR.isGameBlacklisted v2.0.0 src/dispute/AnchorStateRegistry.sol:138-140 -> own storage v4.0.0 :215-217",
+    "current_form_since": "v9.0.0",
+    "note": "consumes proof cells written by any portal since v1.4.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.deleteProvenWithdrawal",
+    "location_v9": "src/L1/OptimismPortal2.sol:711-728"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "provenWithdrawals cells whose disputeGameProxy is not a current-ABI game",
+   "HISTORICAL_BRANCHES": "slot 52 one-proof-per-hash (v1.0.0..v1.3.0, L2OutputOracle); slot 57 per-submitter (v1.4.0+); validity on portal storage until v3.0.0, on the registry from v4.0.0; OP Mainnet registries: 0x18DAc71c\u2026 -> 0x1c68ECfb\u2026 (U13) -> 0x23B2C629\u2026 (U16).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "slot-57 cells exist since v1.4.0; games of every generation since FDG 1.2.0 expose status(), so the revert case needs a non-game address. Whether any slot-57 cell was written during a window when the factory held a non-standard implementation is unknown.",
+   "NEXT_EXPERIMENT": "For every distinct game address referenced by WithdrawalProven-era cells before U16 (sample via logs), staticcall status() at N and record reverts.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-021"
+   ]
+  },
+  {
+   "id": "A-075",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2602.md"
+   ],
+   "title": "The lockbox-identifier pause is an outbound value-release cut",
+   "family": "pause",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:83,137-139,174-186 (portal-local bool, GUARDIAN immutable)",
+    "current_form_since": "v9.0.0 src/L1/ETHLockbox.sol:112-114 (lockbox identifier); generations: v1.2.0 src/L1/SuperchainConfig.sol:62-85 global, v4.0.0 :110-175 per identifier + src/L1/SystemConfig.sol:490-493, v4.1.0 src/L1/SystemConfig.sol:526-534",
+    "note": "four generations of pause source"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "ETHLockbox.paused (resolved by portal, SystemConfig, ASR, DelayedWETH)",
+    "location_v9": "src/L1/ETHLockbox.sol:112-114"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "pauseTimestamps[lockbox]",
+   "HISTORICAL_BRANCHES": "v1.0.0 portal bool; v1.2.0 global SuperchainConfig bool; v4.0.0 per-identifier (lockbox) with expiry; v4.1.0..v8.0.0 identifier = lockbox or portal depending on ETH_LOCKBOX; v9 lockbox only. Legacy DelayedWETH proxies and registry 0x1c68ECfb\u2026 still use generation-1/none.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0305 (A-013).",
+   "NEXT_EXPERIMENT": "closed: C8",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-013"
+   ]
+  },
+  {
+   "id": "A-076",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2604.md"
+   ],
+   "title": "Interop migration swaps cached references atomically and collapses pause scope to one shared lockbox",
+   "family": "migration",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.0.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:396-429 (migrateToSuperRoots) and src/L1/OPContractsManager.sol:1398 (migrate)",
+    "current_form_since": "v9.0.0 src/L1/opcm/OPContractsManagerMigrator.sol (Migrator first v7.0.0); portal migrateToSharedDisputeGame v7.0.0 :503-537, checks added v8.0.0",
+    "note": "never executed on the four U21 chains"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OPContractsManagerMigrator.migrate / _migratePortal; OptimismPortal2.migrateToSharedDisputeGame",
+    "location_v9": "src/L1/opcm/OPContractsManagerMigrator.sol:129-285, 475-556; src/L1/OptimismPortal2.sol:528-572"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "pointer slots of portal/registry/WETH; shared pauseTimestamps key",
+   "HISTORICAL_BRANCHES": "migrate existed in OPCM v4.0.0 (src/L1/OPContractsManager.sol:1398) with migrateToSuperRoots; rewritten as Migrator at v7.0.0; never executed on OP/Ink/Soneium/Unichain (INTEROP false).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0704 (A-035).",
+   "NEXT_EXPERIMENT": "same experiment as A-035: Extend test/poc/lane09 Lane09Migrate to assert, after migrate, the predicates of registry 0x1c68ECfb\u2026 (isGameClaimValid / setAnchorState with shared-factory games) and closeGame of a pre-U16 game.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-005",
+    "A-035"
+   ]
+  },
+  {
+   "id": "A-077",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2605.md"
+   ],
+   "title": "L1 and L2 INTEROP/CGT feature maps are independent state machines",
+   "family": "upgrade-engine",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v7.0.0",
+    "location_at_that_tag": "src/L2/L2ContractsManager.sol:115; L1 side src/L1/SystemConfig.sol:503 (v4.1.0)",
+    "current_form_since": "v9.0.0",
+    "note": "L2 predeploy generations are B15"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "L2ContractsManager / L1Block.setFeature",
+    "location_v9": "src/L2/L2ContractsManager.sol:170-195; src/L2/L1Block.sol:230-258"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "L1 SystemConfig.isFeatureEnabled vs L2 L1Block feature state",
+   "HISTORICAL_BRANCHES": "manual/superchain-ops upgrades with StorageSetter (<= v1.8.0); OPCM.upgrade per release from v2.0.0 (new proxies at v2.0.0 and v4.0.0 for registry/WETH/lockbox); OPContractsManagerV2 + Utils from v7.0.0; open `initializer`s until v3.x, ProxyAdmin-gated reinitializers from v4.0.0.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "L2 predeploy generations and hardfork-injected upgrade transactions are queue B15.",
+   "NEXT_EXPERIMENT": "closed: C1",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-078",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2701.md"
+   ],
+   "title": "Permissionless type-9 registration of arbitrary hash-consistent super-root preimages",
+   "family": "dispute-game",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/dispute/DisputeGameFactory.sol:78-107,128-162 (one game per keccak(type, claim, extraData))",
+    "current_form_since": "v1.2.0 src/dispute/DisputeGameFactory.sol:124-134 (abi.encode form); check-before-clone v7.0.0 :147-224",
+    "note": "permissionless create in every release"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "DisputeGameFactory.create / setImplementation",
+    "location_v9": "src/dispute/DisputeGameFactory.sol:147-226, 298-317"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "_disputeGames entries",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0703 (A-034).",
+   "NEXT_EXPERIMENT": "closed: C12",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-032",
+    "A-034"
+   ]
+  },
+  {
+   "id": "A-079",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2704.md"
+   ],
+   "title": "Anchors are shared across types and registration does not re-check the game's embedded registry",
+   "family": "identity-binding",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v2.0.0",
+    "location_at_that_tag": "src/dispute/AnchorStateRegistry.sol:116-126 (isGameRegistered: factory UUID lookup only)",
+    "current_form_since": "v7.0.0 src/dispute/AnchorStateRegistry.sol:216-226 (the v4.0.0 `game.anchorStateRegistry() == address(this)` requirement, :182-200, was removed)",
+    "note": "single anchor for all types since v2.0.0 :103-111"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "AnchorStateRegistry.isGameRegistered / setAnchorState",
+    "location_v9": "src/dispute/AnchorStateRegistry.sol:227-237, 357-372"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0903 (A-044)",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0903 (A-044) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-044: Exhaustive scan: for every non-retired game on OP/Ink/Soneium/Unichain read anchorStateRegistry() and compare with the chain registry (evidence/W0/games-registry-binding-*.json); plus ImplementationSet history for types that were not replaced at the registry switch.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-044"
+   ]
+  },
+  {
+   "id": "A-080",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2901.md"
+   ],
+   "title": "An authorised portal has amount-unbounded debit authority on its lockbox",
+   "family": "custody",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.0.0",
+    "location_at_that_tag": "src/L1/ETHLockbox.sol:143-177 (lockETH/unlockETH), :219-231 (_authorizePortal, no revoke)",
+    "current_form_since": "v9.0.0 src/L1/ETHLockbox.sol:94-120,220-235 (own superchainConfig, pause on own address)",
+    "note": "custody ancestor: portal balance, v1.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "ETHLockbox.lockETH / unlockETH / _authorizePortal",
+    "location_v9": "src/L1/ETHLockbox.sol:144-178, 220-235"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0306 (A-014)",
+   "HISTORICAL_BRANCHES": "Bedrock..v3: portal holds all ETH; v4.0.0 (U16): OPCM calls portal.migrateLiquidity() into \"ETHLockbox-U16\"; v4.1.0 (U16a): chains without the v4.0.0 portal stay portal-custody; v9: lockbox mandatory. Base is still portal-custody (not on this path).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0306 (A-014) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-014: Recompute the CREATE2 addresses of every lockbox name each historical OPCM could deploy per chain, check code at N, and re-scan PortalAuthorized/LockboxAuthorized from block 22,990,500 through a second archive source.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-014",
+    "A-065"
+   ]
+  },
+  {
+   "id": "A-081",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-2902.md"
+   ],
+   "title": "A withdrawal can make one portal originate an L2 deposit through a sibling portal (portal alias as L2 sender)",
+   "family": "identity-binding",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:434-483 (opaqueData = msg.value, _value, \u2026; metered)",
+    "current_form_since": "v6.0.0 src/L1/OptimismPortal2.sol:565-619 (CGT check; lock first since v4.0.0 :740-788; conditional v4.1.0)",
+    "note": "aliasing predicate changed at v2.0.0 (EOA.isSenderEOA)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.depositTransaction",
+    "location_v9": "src/L1/OptimismPortal2.sol:741-795"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "L2 accounts at alias(portal_X) on every chain; any L2 authority ever granted to an aliased L1 system contract",
+   "HISTORICAL_BRANCHES": "Bedrock..v3: portal holds all ETH; v4.0.0 (U16): OPCM calls portal.migrateLiquidity() into \"ETHLockbox-U16\"; v4.1.0 (U16a): chains without the v4.0.0 portal stay portal-custody; v9: lockbox mandatory. Base is still portal-custody (not on this path).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "the aliasing rule changed at v2.0.0 (EOA.isSenderEOA); portal-as-depositor was possible since v1.0.0 for any contract target except the portal itself. Only the 16 current portal-alias accounts were read; historical grants on L2 (e.g. ownership given to an aliased L1 address during a past upgrade) were not searched.",
+   "NEXT_EXPERIMENT": "On each L2, list contracts whose owner/admin is alias(L1 address) and check whether that L1 address is reachable as msg.sender from a portal or messenger withdrawal call.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-082",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-3002.md"
+   ],
+   "title": "Pause identity of registry and DelayedWETH migrated from SystemConfig to the ETHLockbox",
+   "family": "pause",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:83,137-139,174-186 (portal-local bool, GUARDIAN immutable)",
+    "current_form_since": "v9.0.0 src/L1/ETHLockbox.sol:112-114 (lockbox identifier); generations: v1.2.0 src/L1/SuperchainConfig.sol:62-85 global, v4.0.0 :110-175 per identifier + src/L1/SystemConfig.sol:490-493, v4.1.0 src/L1/SystemConfig.sol:526-534",
+    "note": "four generations of pause source"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "ETHLockbox.paused (resolved by portal, SystemConfig, ASR, DelayedWETH)",
+    "location_v9": "src/L1/ETHLockbox.sol:112-114"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-0201 (A-005)",
+   "HISTORICAL_BRANCHES": "v1.0.0 portal bool; v1.2.0 global SuperchainConfig bool; v4.0.0 per-identifier (lockbox) with expiry; v4.1.0..v8.0.0 identifier = lockbox or portal depending on ETH_LOCKBOX; v9 lockbox only. Legacy DelayedWETH proxies and registry 0x1c68ECfb\u2026 still use generation-1/none.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0201 (A-005) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-005: Scan Paused/Unpaused logs of SuperchainConfig 0x95703e09\u2026 from L1 block 22,990,599 to N and read pauseTimestamps for every identifier ever used by any chain sharing it.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-005"
+   ]
+  },
+  {
+   "id": "A-083",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-3003.md"
+   ],
+   "title": "Portal body and lockbox call execute before ResourceMetering",
+   "family": "custody",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/ResourceMetering.sol:75-84 (`metered` runs the body first), :92-164",
+    "current_form_since": "v1.4.0 src/L1/ResourceMetering.sol:77-148 (custom error only)",
+    "note": "lockbox call inside the body since v4.0.0"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.depositTransaction",
+    "location_v9": "src/L1/OptimismPortal2.sol:741-795"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "ResourceParams (slot 1)",
+   "HISTORICAL_BRANCHES": "Bedrock..v3: portal holds all ETH; v4.0.0 (U16): OPCM calls portal.migrateLiquidity() into \"ETHLockbox-U16\"; v4.1.0 (U16a): chains without the v4.0.0 portal stay portal-custody; v9: lockbox mandatory. Base is still portal-custody (not on this path).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "ordering is v1.0.0 (`metered` runs the body first); lockbox call inside the body since v4.0.0.",
+   "NEXT_EXPERIMENT": "closed: C3",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-084",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-3004.md"
+   ],
+   "title": "Spoofable ProxyAdmin-owner sameness predicate",
+   "family": "identity-binding",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.0.0",
+    "location_at_that_tag": "src/L1/ProxyAdminOwnedBase.sol:41-105 (proxyAdmin(), _assertSharedProxyAdminOwner)",
+    "current_form_since": "v4.0.0 (identical body in v9 src/universal/ProxyAdminOwnedBase.sol)",
+    "note": "ProxyAdmin itself: v1.0.0 contracts/universal/ProxyAdmin.sol"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "ProxyAdminOwnedBase._assertSharedProxyAdminOwner (ETHLockbox.authorizeLockbox/migrateLiquidity/_authorizePortal)",
+    "location_v9": "src/universal/ProxyAdminOwnedBase.sol:79-83; src/L1/ETHLockbox.sol:184-235"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "authorizedPortals / authorizedLockboxes",
+   "HISTORICAL_BRANCHES": "manual/superchain-ops upgrades with StorageSetter (<= v1.8.0); OPCM.upgrade per release from v2.0.0 (new proxies at v2.0.0 and v4.0.0 for registry/WETH/lockbox); OPContractsManagerV2 + Utils from v7.0.0; open `initializer`s until v3.x, ProxyAdmin-gated reinitializers from v4.0.0.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "predicate unchanged since v4.0.0; all call sites owner-gated in every release.",
+   "NEXT_EXPERIMENT": "closed: C9",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-085",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-3005.md"
+   ],
+   "title": "Migrator and validator share one finite game-type list (clearedGameTypes) that omits defined types",
+   "family": "migration",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v9.0.0",
+    "location_at_that_tag": "src/dispute/lib/Types.sol:101 (clearedGameTypes)",
+    "current_form_since": "v9.0.0",
+    "note": "game type ids 2,3,6,7,254,255,1337 are defined in earlier releases"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "GameTypes.clearedGameTypes (Migrator._migratePortal, MigrationValidator.assertLegacyGamesCleared)",
+    "location_v9": "src/dispute/lib/Types.sol:97-110"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "legacy factory gameImpls[type] for types 2,3,6,7,254,255,1337",
+   "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "implementations registered under ANY earlier release for an omitted type stay creatable in the legacy factory after migrate; PASS A read gameImpls for types 0..10 only.",
+   "NEXT_EXPERIMENT": "Read gameImpls(t) for t in {2,3,6,7,254,255,1337} on the OP Mainnet and Unichain factories at N and ImplementationSet logs for those topics since deployment.",
+   "priority": "P1",
+   "pass_a_status": "benign",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-086",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-3101.md"
+   ],
+   "title": "Messenger finalization is atomic with the L1CDM low-level call",
+   "family": "messenger-replay",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:303-413 (successfulMessages slot 203 / failedMessages slot 206) + contracts/L1/OptimismPortal.sol:325-420",
+    "current_form_since": "v9.0.0 src/L1/OptimismPortal2.sol:651-653 (portal reverts when the messenger call fails)",
+    "note": "two independent replay layers since Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.finalizeWithdrawalTransactionExternalProof",
+    "location_v9": "src/L1/OptimismPortal2.sol:577-666"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-2402 (A-068)",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-2402 (A-068) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-068: Scan WithdrawalFinalized(success=false) from Bedrock on the four portals, decode sender == L2CDM, and for each read both messenger mappings and the withdrawal value (ETH that was left in the portal and swept at U16, or relocked).",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-068"
+   ]
+  },
+  {
+   "id": "A-087",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-3102.md"
+   ],
+   "title": "Lockbox pause blocks outflows but leaves bridge inflows open",
+   "family": "pause",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:83,137-139,174-186 (portal-local bool, GUARDIAN immutable)",
+    "current_form_since": "v9.0.0 src/L1/ETHLockbox.sol:112-114 (lockbox identifier); generations: v1.2.0 src/L1/SuperchainConfig.sol:62-85 global, v4.0.0 :110-175 per identifier + src/L1/SystemConfig.sol:490-493, v4.1.0 src/L1/SystemConfig.sol:526-534",
+    "note": "four generations of pause source"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "ETHLockbox.paused (resolved by portal, SystemConfig, ASR, DelayedWETH)",
+    "location_v9": "src/L1/ETHLockbox.sol:112-114"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "pauseTimestamps[lockbox]",
+   "HISTORICAL_BRANCHES": "v1.0.0 portal bool; v1.2.0 global SuperchainConfig bool; v4.0.0 per-identifier (lockbox) with expiry; v4.1.0..v8.0.0 identifier = lockbox or portal depending on ETH_LOCKBOX; v9 lockbox only. Legacy DelayedWETH proxies and registry 0x1c68ECfb\u2026 still use generation-1/none.",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0305 (A-013).",
+   "NEXT_EXPERIMENT": "closed: C8",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-013"
+   ]
+  },
+  {
+   "id": "A-088",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-3103.md"
+   ],
+   "title": "Withdrawal proofs are isolated per submitter; the enumerable list admits duplicates",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:254-328 (provenWithdrawals[hash][msg.sender] slot 57, proofSubmitters push slot 60)",
+    "current_form_since": "v7.0.0 src/L1/OptimismPortal2.sol:368-470 (super-root branch); struct unchanged since v1.4.0",
+    "note": "ancestor one-proof-per-hash model: v1.0.0 contracts/L1/OptimismPortal.sol:242-318 (slot 52)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.proveWithdrawalTransaction",
+    "location_v9": "src/L1/OptimismPortal2.sol:390-492"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "slot 57 / slot 60",
+   "HISTORICAL_BRANCHES": "slot 52 one-proof-per-hash (v1.0.0..v1.3.0, L2OutputOracle); slot 57 per-submitter (v1.4.0+); validity on portal storage until v3.0.0, on the registry from v4.0.0; OP Mainnet registries: 0x18DAc71c\u2026 -> 0x1c68ECfb\u2026 (U13) -> 0x23B2C629\u2026 (U16).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0406 (A-020).",
+   "NEXT_EXPERIMENT": "closed: C5",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-020"
+   ]
+  },
+  {
+   "id": "A-089",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-3104.md"
+   ],
+   "title": "v9 reserves 183,600 gas for value calls to codehash-zero targets before Amsterdam",
+   "family": "gas-budget",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/libraries/SafeCall.sol:112-159 (callWithMinGas forwards gas(); hasMinGas :91-100 unchecked mul)",
+    "current_form_since": "v9.0.0 src/libraries/SafeCall.sol:121-172 (NEW_ACCOUNT_STATE_GAS)",
+    "note": "floor-not-cap since Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "SafeCall.callWithMinGas",
+    "location_v9": "src/libraries/SafeCall.sol:121-172"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "none",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0404 (A-018).",
+   "NEXT_EXPERIMENT": "same experiment as A-018: For each budget generation compute min tx gas to finalize as a function of payload size and find where it crosses 16,777,216; check real in-flight withdrawals against it.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-018"
+   ]
+  },
+  {
+   "id": "A-090",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-3105.md"
+   ],
+   "title": "Exact upgrade boundary introduces a calldata-proportional deposit gas regression",
+   "family": "gas-budget",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/L1/OptimismPortal.sol:434-483 (opaqueData = msg.value, _value, \u2026; metered)",
+    "current_form_since": "v6.0.0 src/L1/OptimismPortal2.sol:565-619 (CGT check; lock first since v4.0.0 :740-788; conditional v4.1.0)",
+    "note": "aliasing predicate changed at v2.0.0 (EOA.isSenderEOA)"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.depositTransaction",
+    "location_v9": "src/L1/OptimismPortal2.sol:741-795"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "none",
+   "HISTORICAL_BRANCHES": "Bedrock..v3: portal holds all ETH; v4.0.0 (U16): OPCM calls portal.migrateLiquidity() into \"ETHLockbox-U16\"; v4.1.0 (U16a): chains without the v4.0.0 portal stay portal-custody; v9: lockbox mandatory. Base is still portal-custody (not on this path).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "root cause unknown (L6); earlier upgrade boundaries were never measured, so it is not known whether the cost moved at U21 or accumulates per release.",
+   "NEXT_EXPERIMENT": "Measure depositTransaction gas for 0/4k/32k/120k bytes on forks pinned one block before and after each historical portal upgrade (U16, U16a, U17..U20) and compare bytecode size / compiler settings.",
+   "priority": "P2",
+   "pass_a_status": "open-lead",
+   "same_mechanism_as": []
+  },
+  {
+   "id": "A-091",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-3106.md"
+   ],
+   "title": "Portal trusts a successful L1CDM return instead of checking messenger outcome mappings",
+   "family": "messenger-replay",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.0.0",
+    "location_at_that_tag": "contracts/universal/CrossDomainMessenger.sol:303-413 (successfulMessages slot 203 / failedMessages slot 206) + contracts/L1/OptimismPortal.sol:325-420",
+    "current_form_since": "v9.0.0 src/L1/OptimismPortal2.sol:651-653 (portal reverts when the messenger call fails)",
+    "note": "two independent replay layers since Bedrock"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.finalizeWithdrawalTransactionExternalProof",
+    "location_v9": "src/L1/OptimismPortal2.sol:577-666"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "AddressManager entry OVM_L1CrossDomainMessenger (implementation resolution)",
+   "HISTORICAL_BRANCHES": "Bedrock..v8: a messenger revert left the portal withdrawal finalized; v9 reverts. Reserve constants identical on both sides until v9. L2CDM budget formula changed at v3.0.0 (OP Mainnet L2CDM is 2.2.1; withdrawals with the pre-2.2.x budget and version-0 migrated withdrawals are still in flight per PASS A).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "mocked-only; the messenger implementation behind the ResolvedDelegateProxy changed at every release but always wrote a mapping on return.",
+   "NEXT_EXPERIMENT": "closed: C6",
+   "priority": "P2",
+   "pass_a_status": "rejected-by-lane",
+   "same_mechanism_as": [
+    "A-068"
+   ]
+  },
+  {
+   "id": "A-092",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-3201.md"
+   ],
+   "title": "Permissionlessly unstable validator-only zero-balance assertions",
+   "family": "tooling",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v4.1.0",
+    "location_at_that_tag": "src/L1/OPContractsManagerStandardValidator.sol:39",
+    "current_form_since": "v9.0.0 src/L1/opcm/OPContractsManagerMigrationValidator.sol:544 (assertRetiredContractsClean, new in v9)",
+    "note": "view-only"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OPContractsManagerMigrationValidator.assertRetiredContractsClean",
+    "location_v9": "src/L1/opcm/OPContractsManagerMigrationValidator.sol:544-579"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "portal / lockbox balances",
+   "HISTORICAL_BRANCHES": "migrate existed in OPCM v4.0.0 (src/L1/OPContractsManager.sol:1398) with migrateToSuperRoots; rewritten as Migrator at v7.0.0; never executed on OP/Ink/Soneium/Unichain (INTEROP false).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0902 (A-043).",
+   "NEXT_EXPERIMENT": "closed: C10",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-043"
+   ]
+  },
+  {
+   "id": "A-093",
+   "source_files": [
+    "optimism-u21-novel-hunt/primitives/PRIM-3203.md"
+   ],
+   "title": "Historical withdrawal proof judged through the mutable current registry",
+   "family": "proof-lifecycle",
+   "EARLIEST_SEMANTIC_ANCESTOR": {
+    "first_release": "v1.4.0",
+    "location_at_that_tag": "src/L1/OptimismPortal2.sol:461-522 (all checks on portal storage)",
+    "current_form_since": "v4.0.0 src/L1/OptimismPortal2.sol:693-727 (delegates to AnchorStateRegistry.isGameClaimValid)",
+    "note": "proof stores only (game, timestamp); everything else is re-read"
+   },
+   "CURRENT_U21_CONSUMER": {
+    "contract_function": "OptimismPortal2.checkWithdrawal",
+    "location_v9": "src/L1/OptimismPortal2.sol:671-705"
+   },
+   "PERSISTENT_STATE_OR_OBJECT": "same as PRIM-2404 (A-069)",
+   "HISTORICAL_BRANCHES": "slot 52 one-proof-per-hash (v1.0.0..v1.3.0, L2OutputOracle); slot 57 per-submitter (v1.4.0+); validity on portal storage until v3.0.0, on the registry from v4.0.0; OP Mainnet registries: 0x18DAc71c\u2026 -> 0x1c68ECfb\u2026 (U13) -> 0x23B2C629\u2026 (U16).",
+   "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-2404 (A-069) (canonical).",
+   "NEXT_EXPERIMENT": "same experiment as A-069: Read retirementTimestamp and RetirementTimestampSet logs of every registry of the four chains since their U16 and compare with their upgrade blocks.",
+   "priority": "P2",
+   "pass_a_status": "benign",
+   "same_mechanism_as": [
+    "A-069"
+   ]
+  }
+ ]
+}

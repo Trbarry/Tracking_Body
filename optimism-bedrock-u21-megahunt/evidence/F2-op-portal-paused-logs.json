@@ -1,0 +1,21 @@
+{
+ "rpc": "http://127.0.0.1:7545",
+ "address": "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+ "from": 17365802,
+ "to": 19320000,
+ "topic0": "0x62e78cea01bee320cd4e420270b5ea74000d11b0c9f74754ebdbfc544b05a258",
+ "chunk": 10000,
+ "failed_ranges": [],
+ "logs": [
+  {
+   "block": 19233786,
+   "utc": "2024-02-15 14:00:23",
+   "tx": "0x374dc0d5ad3dd0683d92762c84c7038804dd987e9fd9bac7418dca5ff489e6b0",
+   "logIndex": 94,
+   "topics": [
+    "0x62e78cea01bee320cd4e420270b5ea74000d11b0c9f74754ebdbfc544b05a258"
+   ],
+   "data": "0x0000000000000000000000009ba6e03d8b90de867373db8cf1a58d2f7f006b3a"
+  }
+ ]
+}

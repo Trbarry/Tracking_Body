@@ -1,0 +1,28 @@
+Completed the independent CF3 corpus mirror.
+
+Files:
+
+- [AUDIT-FINDINGS.json](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/audit/mirror-CF3/AUDIT-FINDINGS.json)
+- [AUDIT-COVERAGE-MATRIX.csv](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/audit/mirror-CF3/AUDIT-COVERAGE-MATRIX.csv)
+- [AUDIT-EDGE-GRAPH.md](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/audit/mirror-CF3/AUDIT-EDGE-GRAPH.md)
+- [KNOWN-FINDINGS-BLACKLIST.md](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/audit/mirror-CF3/KNOWN-FINDINGS-BLACKLIST.md)
+- [FIX-CLOSURE-MATRIX.md](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/audit/mirror-CF3/FIX-CLOSURE-MATRIX.md)
+- [SOURCE-RETRIEVAL.md](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/audit/mirror-CF3/SOURCE-RETRIEVAL.md)
+- [CF3-report.md](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/audit/mirror-CF3/CF3-report.md)
+- [worker report](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CF3-report.md)
+
+Facts locked: 342 observations across 41 reports—9 source-Critical, 45 High, 93 Medium, and 195 relevant Low. Low maps below the current Immunefi threshold. Coverage spans 16 component families and 20 releases; eight uncovered transitive paths and the top 15 uncertain fix closures are ranked. Every finding record has a physical PDF page and commit provenance.
+
+Primitives:
+
+- `PRIM-CF3-01` — historical object continuity across create/transform/consume releases.
+- `PRIM-CF3-02` — namespace or identity drift across pause, chain, registry, and game domains.
+- `PRIM-CF3-03` — gas guarantees composed across purchasing, wrapping, forwarding, and finalization layers.
+
+Candidate: none, `0/10` bounty readiness. No novel Medium+ exploit or fork reproduction emerged.
+
+Strongest negatives: latest-edge observations are already acknowledged/documented; no single audit spans the full historical-object paths; several formal/fix reviews produced no accepted new finding.
+
+Limits: two indexed Spearbit mirrors now return 404, so hash-pinned local PDFs were used. Older OCR is imperfect. Reports naming only PRs were not assigned invented merge commits. No RPC mutation, fork exploit, or transaction broadcast occurred.
+
+Next-wave edges: withdrawal-proof history, pause/authorization identity migration, and cross-release gas-envelope composition.

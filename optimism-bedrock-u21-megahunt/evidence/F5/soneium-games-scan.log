@@ -1,2 +1,51 @@
 scanned 0..19
 scanned 200..219
+scanned 400..419
+scanned 600..619
+scanned 800..819
+scanned 1000..1019
+scanned 1200..1219
+scanned 1400..1419
+scanned 1600..1619
+scanned 1800..1819
+scanned 2000..2019
+scanned 2200..2219
+scanned 2400..2419
+scanned 2600..2619
+scanned 2800..2819
+scanned 3000..3019
+scanned 3200..3219
+scanned 3400..3419
+scanned 3600..3619
+scanned 3800..3819
+scanned 4000..4019
+scanned 4200..4219
+scanned 4400..4419
+scanned 4600..4619
+scanned 4800..4819
+scanned 5000..5019
+scanned 5200..5219
+scanned 5400..5419
+scanned 5600..5619
+scanned 5800..5819
+scanned 6000..6019
+scanned 6200..6219
+scanned 6400..6419
+scanned 6600..6619
+scanned 6800..6819
+scanned 7000..7019
+scanned 7200..7219
+scanned 7400..7419
+scanned 7600..7619
+scanned 7800..7819
+scanned 8000..8019
+scanned 8200..8219
+scanned 8400..8419
+
+DGF 0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0 ASR 0x4890928941e62e273dA359374b105F803329F473 block 26433900 games 0..8536 (8537)
+(type, creator, status, claimValid, blacklisted, retired) -> count
+(1, '0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8', 2, True, False, False) 5114
+(1, '0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8', 2, False, False, True) 2841
+(5, '0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8', 2, True, False, False) 554
+(5, '0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8', 2, False, False, False) 28
+EXIT 0

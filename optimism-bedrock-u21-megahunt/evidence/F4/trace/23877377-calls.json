@@ -1,0 +1,587 @@
+{
+ "tx": "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5",
+ "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5",
+ "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+ "calls": [
+  {
+   "depth": 3,
+   "type": "DELEGATECALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0xfa1ef97fb02b0da2ee2346b8e310907ab5519449",
+   "sel": "0xb0b807eb",
+   "name": "upgradeSuperchainConfig(address,address)  [OPContractsManager/OPContractsManagerUpgrader]",
+   "input": "0xb0b807eb00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c000000000000000000000000543ba4aadbab8f9025686bd03993043599c6fb04",
+   "error": null
+  },
+  {
+   "depth": 4,
+   "type": "DELEGATECALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x922fd9ac3305492ebf73cd7e57ef35fd04074f9c",
+   "sel": "0xb0b807eb",
+   "name": "upgradeSuperchainConfig(address,address)  [OPContractsManager/OPContractsManagerUpgrader]",
+   "input": "0xb0b807eb00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c000000000000000000000000543ba4aadbab8f9025686bd03993043599c6fb04",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec400000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c000000000000000000000000b08cc720f511062537ca78bdb0ae691f04f5a957",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "to": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe6000000000000000000000000b08cc720f511062537ca78bdb0ae691f04f5a957",
+   "error": null
+  },
+  {
+   "depth": 3,
+   "type": "DELEGATECALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0xfa1ef97fb02b0da2ee2346b8e310907ab5519449",
+   "sel": "0xff2dd5a1",
+   "name": "upgrade((address,address,bytes32)[])  [OPContractsManager/OPContractsManagerUpgrader]",
+   "input": "0xff2dd5a100000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000003000000000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb290000000000000000000000000543ba4aadbab8f9025686bd03993043599c6fb0403caa1871bb9fe7f9b11217c245c16e4ded33367df5b3ccb2c6d0a847a217d1b00000000000000000000000062c0a111929fa32cec2f76adba54c16afb6e8364",
+   "error": null
+  },
+  {
+   "depth": 4,
+   "type": "DELEGATECALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x922fd9ac3305492ebf73cd7e57ef35fd04074f9c",
+   "sel": "0xff2dd5a1",
+   "name": "upgrade((address,address,bytes32)[])  [OPContractsManager/OPContractsManagerUpgrader]",
+   "input": "0xff2dd5a100000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000003000000000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb290000000000000000000000000543ba4aadbab8f9025686bd03993043599c6fb0403caa1871bb9fe7f9b11217c245c16e4ded33367df5b3ccb2c6d0a847a217d1b00000000000000000000000062c0a111929fa32cec2f76adba54c16afb6e8364",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec4000000000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900000000000000000000000002fa28989fc559836e9d66dff3010c7f7f41c65ed",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "to": "0x229047fed2591dbec1ef1118d64f7af3db9eb290",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe60000000000000000000000002fa28989fc559836e9d66dff3010c7f7f41c65ed",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec4000000000000000000000000beb5fc579115071764c7423a4f12edde41f106ed0000000000000000000000007cf803296662e8c72a6c1d6450572209acf7f202",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "to": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe60000000000000000000000007cf803296662e8c72a6c1d6450572209acf7f202",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec400000000000000000000000075505a97bd334e7bd3c476893285569c4136fa0f0000000000000000000000008ee6fb13c6c9a7e401531168e196fbf8b05ceabb",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "to": "0x75505a97bd334e7bd3c476893285569c4136fa0f",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe60000000000000000000000008ee6fb13c6c9a7e401531168e196fbf8b05ceabb",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec4000000000000000000000000e5965ab5962edc7477c8520243a95517cd252fa900000000000000000000000074fac1d45b98bae058f8f566201c9a81b85c7d50",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "to": "0xe5965ab5962edc7477c8520243a95517cd252fa9",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe600000000000000000000000074fac1d45b98bae058f8f566201c9a81b85c7d50",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec400000000000000000000000025ace71c97b33cc4729cf772ae268934f7ab5fa1000000000000000000000000b686f13aff1e427a1f993f29ab0f2e7383729fe0",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "to": "0xde1fcfb0851916ca5101820a69b13a4e276bd81f",
+   "sel": "0x9b2ea4bd",
+   "name": "AddressManager.setAddress(string,address)",
+   "input": "0x9b2ea4bd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000b686f13aff1e427a1f993f29ab0f2e7383729fe0000000000000000000000000000000000000000000000000000000000000001a4f564d5f4c3143726f7373446f6d61696e4d657373656e676572000000000000",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec400000000000000000000000099c9fc46f92e8a1c0dec1b1747d010903e884be100000000000000000000000061525eaacddb97d9184afc205827e6a4fd0bf62a",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "to": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+   "sel": "0x9b0b0fda",
+   "name": "L1ChugSplashProxy.setStorage(bytes32,bytes32)",
+   "input": "0x9b0b0fda360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc00000000000000000000000061525eaacddb97d9184afc205827e6a4fd0bf62a",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec40000000000000000000000005a7749f83b81b301cab5f48eb8516b986daef23d00000000000000000000000074f1ac50eb0be98853805d381c884f5f9abdecf9",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+   "to": "0x5a7749f83b81b301cab5f48eb8516b986daef23d",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe600000000000000000000000074f1ac50eb0be98853805d381c884f5f9abdecf9",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0xe5965ab5962edc7477c8520243a95517cd252fa9",
+   "sel": "0x14f6b1a3",
+   "name": "setImplementation(uint32,address)  [DisputeGameFactory]",
+   "input": "0x14f6b1a300000000000000000000000000000000000000000000000000000000000000010000000000000000000000008081fab7cc5d0e56122bb6651928e0bcf94b95bf",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "DELEGATECALL",
+   "from": "0xe5965ab5962edc7477c8520243a95517cd252fa9",
+   "to": "0x74fac1d45b98bae058f8f566201c9a81b85c7d50",
+   "sel": "0x14f6b1a3",
+   "name": "setImplementation(uint32,address)  [DisputeGameFactory]",
+   "input": "0x14f6b1a300000000000000000000000000000000000000000000000000000000000000010000000000000000000000008081fab7cc5d0e56122bb6651928e0bcf94b95bf",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0xe5965ab5962edc7477c8520243a95517cd252fa9",
+   "sel": "0x14f6b1a3",
+   "name": "setImplementation(uint32,address)  [DisputeGameFactory]",
+   "input": "0x14f6b1a30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000478c26109b169a840d61e95b19512ff0b5f19c87",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "DELEGATECALL",
+   "from": "0xe5965ab5962edc7477c8520243a95517cd252fa9",
+   "to": "0x74fac1d45b98bae058f8f566201c9a81b85c7d50",
+   "sel": "0x14f6b1a3",
+   "name": "setImplementation(uint32,address)  [DisputeGameFactory]",
+   "input": "0x14f6b1a30000000000000000000000000000000000000000000000000000000000000000000000000000000000000000478c26109b169a840d61e95b19512ff0b5f19c87",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec400000000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640000000000000000000000002fa28989fc559836e9d66dff3010c7f7f41c65ed",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "to": "0x62c0a111929fa32cec2f76adba54c16afb6e8364",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe60000000000000000000000002fa28989fc559836e9d66dff3010c7f7f41c65ed",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec40000000000000000000000005d66c1782664115999c47c9fa5cd031f495d3e4f0000000000000000000000007cf803296662e8c72a6c1d6450572209acf7f202",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "to": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe60000000000000000000000007cf803296662e8c72a6c1d6450572209acf7f202",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec4000000000000000000000000a8b389a82e088b164cd03230e900980cced34d290000000000000000000000008ee6fb13c6c9a7e401531168e196fbf8b05ceabb",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "to": "0xa8b389a82e088b164cd03230e900980cced34d29",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe60000000000000000000000008ee6fb13c6c9a7e401531168e196fbf8b05ceabb",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec400000000000000000000000010d7b35078d3baabb96dd45a9143b94be65b12cd00000000000000000000000074fac1d45b98bae058f8f566201c9a81b85c7d50",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "to": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe600000000000000000000000074fac1d45b98bae058f8f566201c9a81b85c7d50",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec400000000000000000000000069d3cf86b2bf1a9e99875b7e2d9b6a84426c171f000000000000000000000000b686f13aff1e427a1f993f29ab0f2e7383729fe0",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "to": "0x9b7c9bbd6d540a8a4dedd935819fc4408ba71153",
+   "sel": "0x9b2ea4bd",
+   "name": "AddressManager.setAddress(string,address)",
+   "input": "0x9b2ea4bd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000b686f13aff1e427a1f993f29ab0f2e7383729fe0000000000000000000000000000000000000000000000000000000000000001a4f564d5f4c3143726f7373446f6d61696e4d657373656e676572000000000000",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec400000000000000000000000088ff1e5b602916615391f55854588efcbb7663f000000000000000000000000061525eaacddb97d9184afc205827e6a4fd0bf62a",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "to": "0x88ff1e5b602916615391f55854588efcbb7663f0",
+   "sel": "0x9b0b0fda",
+   "name": "L1ChugSplashProxy.setStorage(bytes32,bytes32)",
+   "input": "0x9b0b0fda360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc00000000000000000000000061525eaacddb97d9184afc205827e6a4fd0bf62a",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec4000000000000000000000000661235a238b11191211fa95d4dd9e423d521e0be00000000000000000000000074f1ac50eb0be98853805d381c884f5f9abdecf9",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+   "to": "0x661235a238b11191211fa95d4dd9e423d521e0be",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe600000000000000000000000074f1ac50eb0be98853805d381c884f5f9abdecf9",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+   "sel": "0x14f6b1a3",
+   "name": "setImplementation(uint32,address)  [DisputeGameFactory]",
+   "input": "0x14f6b1a30000000000000000000000000000000000000000000000000000000000000001000000000000000000000000467e6a8d6916e7394f9715b4de9339ee36887382",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "DELEGATECALL",
+   "from": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+   "to": "0x74fac1d45b98bae058f8f566201c9a81b85c7d50",
+   "sel": "0x14f6b1a3",
+   "name": "setImplementation(uint32,address)  [DisputeGameFactory]",
+   "input": "0x14f6b1a30000000000000000000000000000000000000000000000000000000000000001000000000000000000000000467e6a8d6916e7394f9715b4de9339ee36887382",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+   "sel": "0x14f6b1a3",
+   "name": "setImplementation(uint32,address)  [DisputeGameFactory]",
+   "input": "0x14f6b1a300000000000000000000000000000000000000000000000000000000000000000000000000000000000000004cbfba0afeb3a36878eb52fae78335751076250c",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "DELEGATECALL",
+   "from": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+   "to": "0x74fac1d45b98bae058f8f566201c9a81b85c7d50",
+   "sel": "0x14f6b1a3",
+   "name": "setImplementation(uint32,address)  [DisputeGameFactory]",
+   "input": "0x14f6b1a300000000000000000000000000000000000000000000000000000000000000000000000000000000000000004cbfba0afeb3a36878eb52fae78335751076250c",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec40000000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30000000000000000000000002fa28989fc559836e9d66dff3010c7f7f41c65ed",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "to": "0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe60000000000000000000000002fa28989fc559836e9d66dff3010c7f7f41c65ed",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec400000000000000000000000088e529a6ccd302c948689cd5156c83d4614fae920000000000000000000000007cf803296662e8c72a6c1d6450572209acf7f202",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "to": "0x88e529a6ccd302c948689cd5156c83d4614fae92",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe60000000000000000000000007cf803296662e8c72a6c1d6450572209acf7f202",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec4000000000000000000000000c1047e30efc9e172cfe7aa0219895b6a43fc415f0000000000000000000000008ee6fb13c6c9a7e401531168e196fbf8b05ceabb",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "to": "0xc1047e30efc9e172cfe7aa0219895b6a43fc415f",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe60000000000000000000000008ee6fb13c6c9a7e401531168e196fbf8b05ceabb",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec4000000000000000000000000512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c000000000000000000000000074fac1d45b98bae058f8f566201c9a81b85c7d50",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "to": "0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe600000000000000000000000074fac1d45b98bae058f8f566201c9a81b85c7d50",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec40000000000000000000000009cf951e3f74b644e621b36ca9cea147a78d4c39f000000000000000000000000b686f13aff1e427a1f993f29ab0f2e7383729fe0",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "to": "0xb24bfeece1b3b7a44559f4cbc21bed312b130b70",
+   "sel": "0x9b2ea4bd",
+   "name": "AddressManager.setAddress(string,address)",
+   "input": "0x9b2ea4bd0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000b686f13aff1e427a1f993f29ab0f2e7383729fe0000000000000000000000000000000000000000000000000000000000000001a4f564d5f4c3143726f7373446f6d61696e4d657373656e676572000000000000",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec4000000000000000000000000eb9bf100225c214efc3e7c651ebbadcf8517760700000000000000000000000061525eaacddb97d9184afc205827e6a4fd0bf62a",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "to": "0xeb9bf100225c214efc3e7c651ebbadcf85177607",
+   "sel": "0x9b0b0fda",
+   "name": "L1ChugSplashProxy.setStorage(bytes32,bytes32)",
+   "input": "0x9b0b0fda360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc00000000000000000000000061525eaacddb97d9184afc205827e6a4fd0bf62a",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "sel": "0x99a88ec4",
+   "name": "ProxyAdmin.upgrade(address,address)",
+   "input": "0x99a88ec40000000000000000000000005933e323be8896dfacd1cd671442f27daa10a05300000000000000000000000074f1ac50eb0be98853805d381c884f5f9abdecf9",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "CALL",
+   "from": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+   "to": "0x5933e323be8896dfacd1cd671442f27daa10a053",
+   "sel": "0x3659cfe6",
+   "name": "Proxy.upgradeTo(address)",
+   "input": "0x3659cfe600000000000000000000000074f1ac50eb0be98853805d381c884f5f9abdecf9",
+   "error": null
+  },
+  {
+   "depth": 5,
+   "type": "CALL",
+   "from": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+   "to": "0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+   "sel": "0x14f6b1a3",
+   "name": "setImplementation(uint32,address)  [DisputeGameFactory]",
+   "input": "0x14f6b1a300000000000000000000000000000000000000000000000000000000000000010000000000000000000000000ddf929eeda8949cfe77b7e7e46e426e15a2d8f1",
+   "error": null
+  },
+  {
+   "depth": 6,
+   "type": "DELEGATECALL",
+   "from": "0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+   "to": "0x74fac1d45b98bae058f8f566201c9a81b85c7d50",
+   "sel": "0x14f6b1a3",
+   "name": "setImplementation(uint32,address)  [DisputeGameFactory]",
+   "input": "0x14f6b1a300000000000000000000000000000000000000000000000000000000000000010000000000000000000000000ddf929eeda8949cfe77b7e7e46e426e15a2d8f1",
+   "error": null
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+chain | create(9) | create(5) | create(0) | create(1) | create(8) | setAnchorState(legacy) | prove(legacy game) | prove(retired game) | legacySeq | anchorSeq | respected | retirementTs
+OP | OK(created) | BadAuth | NoImplementation | NoImplementation | NoImplementation | ASR_InvalidAnchorGame | Portal_InvalidOutputRootProof | Portal_ImproperDisputeGame | 157333888 | 1794298459 | 9 | 1753379243
+INK | OK(created) | BadAuth | NoImplementation | NoImplementation | NoImplementation | ASR_InvalidAnchorGame | Portal_InvalidOutputRootProof | Portal_ImproperDisputeGame | 56762732 | 1794288067 | 9 | 1753379243
+SONEIUM | NoImplementation | BadAuth | NoImplementation | NoImplementation | NoImplementation | ASR_InvalidAnchorGame | Portal_InvalidOutputRootProof | Portal_ImproperDisputeGame | 28564204 | 1794596679 | 5 | 1753380095
+UNICHAIN | OK(created) | BadAuth | NoImplementation | NoImplementation | NoImplementation | ASR_InvalidAnchorGame | Portal_InvalidOutputRootProof | Portal_ImproperDisputeGame | 59518563 | 1794300387 | 9 | 1753380731

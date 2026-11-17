@@ -1,0 +1,826 @@
+{
+ "rpc": "http://127.0.0.1:7545",
+ "end_block": 26433900,
+ "sample_step": 20000,
+ "method": "sample slot every step blocks from first-code block, bisect differing intervals; version() via eth_call at the change block",
+ "targets": [
+  {
+   "name": "OptimismPortal",
+   "address": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "first_code_block": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "slot_value": "0x000000000000000000000000e2f826324b2faf99e513d16d266c3f80ae87832b",
+     "implementation": "0xe2f826324b2faf99e513d16d266c3f80ae87832b",
+     "version": "3.10.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x45c2b63987a8c7ab97bdcdab5e04618d4ed74971aa4ac51b15ed8522ea6c0284",
+       "from": "0x0125aeb5ff473de23ab72454b2bbc45613ff3bd7",
+       "to": "0x9bc0a1ed534bfb31a6be69e5b767cba332f14347",
+       "selector": "0x613e827b"
+      }
+     ]
+    },
+    {
+     "block": 22182531,
+     "timestamp": 1743612623,
+     "utc": "2025-04-02 16:50:23",
+     "slot_value": "0x0000000000000000000000002d7e764a0d9919e16983a46595cfa81fc34fa7cd",
+     "implementation": "0x2d7e764a0d9919e16983a46595cfa81fc34fa7cd",
+     "version": "3.13.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29",
+       "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 22339996,
+     "timestamp": 1745511383,
+     "utc": "2025-04-24 16:16:23",
+     "slot_value": "0x000000000000000000000000b443da3e07052204a02d630a8933dac05a0d6fb4",
+     "implementation": "0xb443da3e07052204a02d630a8933dac05a0d6fb4",
+     "version": "3.14.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "slot_value": "0x000000000000000000000000efed7f38bb9be74bba583a1a5b7d0fe7c9d5787a",
+     "implementation": "0xefed7f38bb9be74bba583a1a5b7d0fe7c9d5787a",
+     "version": "4.6.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 23491328,
+     "timestamp": 1759422923,
+     "utc": "2025-10-02 16:35:23",
+     "slot_value": "0x000000000000000000000000381e729ff983fa4bced820e7b922d79bf653b999",
+     "implementation": "0x381e729ff983fa4bced820e7b922d79bf653b999",
+     "version": "5.0.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 23877377,
+     "timestamp": 1764092795,
+     "utc": "2025-11-25 17:46:35",
+     "slot_value": "0x0000000000000000000000007cf803296662e8c72a6c1d6450572209acf7f202",
+     "implementation": "0x7cf803296662e8c72a6c1d6450572209acf7f202",
+     "version": "5.1.1",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5",
+       "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 24421512,
+     "timestamp": 1770667859,
+     "utc": "2026-02-09 20:10:59",
+     "slot_value": "0x00000000000000000000000097cebbf8959e2a5476fbe9b98a21806ec234609b",
+     "implementation": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+     "version": "5.2.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 25397811,
+     "timestamp": 1782428747,
+     "utc": "2026-06-25 23:05:47",
+     "slot_value": "0x000000000000000000000000e89f13c5ee4033b2d3cd76c9d6958efbfe26d3c2",
+     "implementation": "0xe89f13c5ee4033b2d3cd76c9d6958efbfe26d3c2",
+     "version": "5.6.1",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 26048619,
+     "timestamp": 1790268683,
+     "utc": "2026-09-24 16:51:23",
+     "slot_value": "0x0000000000000000000000001005217ad392dc64cef501fa1777a27d42166748",
+     "implementation": "0x1005217ad392dc64cef501fa1777a27d42166748",
+     "version": "5.8.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+       "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 26430859,
+     "timestamp": 1794871439,
+     "utc": "2026-11-16 23:23:59",
+     "slot_value": "0x000000000000000000000000b20b23af6071405c37ddda0c0640e8ebb7899645",
+     "implementation": "0xb20b23af6071405c37ddda0c0640e8ebb7899645",
+     "version": "6.1.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+       "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "SystemConfig",
+   "address": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+   "first_code_block": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "slot_value": "0x000000000000000000000000f56d96b2535b932656d3c04ebf51babff241d886",
+     "implementation": "0xf56d96b2535b932656d3c04ebf51babff241d886",
+     "version": "2.2.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x45c2b63987a8c7ab97bdcdab5e04618d4ed74971aa4ac51b15ed8522ea6c0284",
+       "from": "0x0125aeb5ff473de23ab72454b2bbc45613ff3bd7",
+       "to": "0x9bc0a1ed534bfb31a6be69e5b767cba332f14347",
+       "selector": "0x613e827b"
+      }
+     ]
+    },
+    {
+     "block": 22182531,
+     "timestamp": 1743612623,
+     "utc": "2025-04-02 16:50:23",
+     "slot_value": "0x000000000000000000000000760c48c62a85045a6b69f07f4a9f22868659cbcc",
+     "implementation": "0x760c48c62a85045a6b69f07f4a9f22868659cbcc",
+     "version": "2.4.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29",
+       "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 22339996,
+     "timestamp": 1745511383,
+     "utc": "2025-04-24 16:16:23",
+     "slot_value": "0x000000000000000000000000340f923e5c7cbb2171146f64169ec9d5a9ffe647",
+     "implementation": "0x340f923e5c7cbb2171146f64169ec9d5a9ffe647",
+     "version": "2.5.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "slot_value": "0x000000000000000000000000faa660bf783cbaa55e1b7f3475c20db74a53b9fa",
+     "implementation": "0xfaa660bf783cbaa55e1b7f3475c20db74a53b9fa",
+     "version": "3.4.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 23491328,
+     "timestamp": 1759422923,
+     "utc": "2025-10-02 16:35:23",
+     "slot_value": "0x0000000000000000000000002bfe4a5bd5a41e9d848d843ebcdfa15954e9a557",
+     "implementation": "0x2bfe4a5bd5a41e9d848d843ebcdfa15954e9a557",
+     "version": "3.7.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 23877377,
+     "timestamp": 1764092795,
+     "utc": "2025-11-25 17:46:35",
+     "slot_value": "0x0000000000000000000000002fa28989fc559836e9d66dff3010c7f7f41c65ed",
+     "implementation": "0x2fa28989fc559836e9d66dff3010c7f7f41c65ed",
+     "version": "3.11.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5",
+       "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 24421512,
+     "timestamp": 1770667859,
+     "utc": "2026-02-09 20:10:59",
+     "slot_value": "0x000000000000000000000000d392c27b84b1ca776528f2704bc67b82a62132d2",
+     "implementation": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+     "version": "3.13.1",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 25397811,
+     "timestamp": 1782428747,
+     "utc": "2026-06-25 23:05:47",
+     "slot_value": "0x00000000000000000000000042ad0173051225ac784100e9acd43349707f4db9",
+     "implementation": "0x42ad0173051225ac784100e9acd43349707f4db9",
+     "version": "3.14.2",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 26048619,
+     "timestamp": 1790268683,
+     "utc": "2026-09-24 16:51:23",
+     "slot_value": "0x000000000000000000000000670b850a235a6fa98cd7a195eb139d0277e471fa",
+     "implementation": "0x670b850a235a6fa98cd7a195eb139d0277e471fa",
+     "version": "4.0.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+       "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 26430859,
+     "timestamp": 1794871439,
+     "utc": "2026-11-16 23:23:59",
+     "slot_value": "0x000000000000000000000000ade27248542c0f3e89b49e4eb76155e267f14377",
+     "implementation": "0xade27248542c0f3e89b49e4eb76155e267f14377",
+     "version": "4.3.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+       "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "L1CrossDomainMessenger(AddressManager OVM_L1CrossDomainMessenger)",
+   "address": "0x9b7c9bbd6d540a8a4dedd935819fc4408ba71153",
+   "slot": "0x515216935740e67dfdda5cf8e248ea32b3277787818ab59153061ac875c9385e",
+   "kind": "AddressManager.addresses[keccak(name)] (slot 1 mapping)",
+   "version_read_from": "0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f",
+   "first_code_block": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "slot_value": "0x000000000000000000000000d3494713a5cfad3f5359379dfa074e2ac8c6fd65",
+     "implementation": "0xd3494713a5cfad3f5359379dfa074e2ac8c6fd65",
+     "version": "2.3.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x45c2b63987a8c7ab97bdcdab5e04618d4ed74971aa4ac51b15ed8522ea6c0284",
+       "from": "0x0125aeb5ff473de23ab72454b2bbc45613ff3bd7",
+       "to": "0x9bc0a1ed534bfb31a6be69e5b767cba332f14347",
+       "selector": "0x613e827b"
+      }
+     ]
+    },
+    {
+     "block": 22182531,
+     "timestamp": 1743612623,
+     "utc": "2025-04-02 16:50:23",
+     "slot_value": "0x0000000000000000000000003ea6084748ed1b2a9b5d4426181f1ad8c93f6231",
+     "implementation": "0x3ea6084748ed1b2a9b5d4426181f1ad8c93f6231",
+     "version": "2.5.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29",
+       "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 22339996,
+     "timestamp": 1745511383,
+     "utc": "2025-04-24 16:16:23",
+     "slot_value": "0x0000000000000000000000005d5a095665886119693f0b41d8dfee78da033e8b",
+     "implementation": "0x5d5a095665886119693f0b41d8dfee78da033e8b",
+     "version": "2.6.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "slot_value": "0x000000000000000000000000d26bb3aaaa4cb5638a8581a4c4b1d937d8e05c54",
+     "implementation": "0xd26bb3aaaa4cb5638a8581a4c4b1d937d8e05c54",
+     "version": "2.9.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 23491328,
+     "timestamp": 1759422923,
+     "utc": "2025-10-02 16:35:23",
+     "slot_value": "0x00000000000000000000000022d12e0faebd62d429514a65ebae32dd316c12d6",
+     "implementation": "0x22d12e0faebd62d429514a65ebae32dd316c12d6",
+     "version": "2.10.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 23877377,
+     "timestamp": 1764092795,
+     "utc": "2025-11-25 17:46:35",
+     "slot_value": "0x000000000000000000000000b686f13aff1e427a1f993f29ab0f2e7383729fe0",
+     "implementation": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+     "version": "2.11.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5",
+       "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 25397811,
+     "timestamp": 1782428747,
+     "utc": "2026-06-25 23:05:47",
+     "slot_value": "0x00000000000000000000000059d497530b00062f40950ba8eab88868bf7f86f0",
+     "implementation": "0x59d497530b00062f40950ba8eab88868bf7f86f0",
+     "version": "2.11.1",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 26430859,
+     "timestamp": 1794871439,
+     "utc": "2026-11-16 23:23:59",
+     "slot_value": "0x0000000000000000000000007d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448",
+     "implementation": "0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448",
+     "version": "2.13.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+       "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "L1StandardBridge",
+   "address": "0x88FF1e5b602916615391F55854588EFcBB7663f0",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "L1ChugSplashProxy (EIP-1967 impl slot)",
+   "version_read_from": "0x88FF1e5b602916615391F55854588EFcBB7663f0",
+   "first_code_block": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "slot_value": "0x00000000000000000000000064b5a5ed26dcb17370ff4d33a8d503f0fbd06cff",
+     "implementation": "0x64b5a5ed26dcb17370ff4d33a8d503f0fbd06cff",
+     "version": "2.1.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x45c2b63987a8c7ab97bdcdab5e04618d4ed74971aa4ac51b15ed8522ea6c0284",
+       "from": "0x0125aeb5ff473de23ab72454b2bbc45613ff3bd7",
+       "to": "0x9bc0a1ed534bfb31a6be69e5b767cba332f14347",
+       "selector": "0x613e827b"
+      }
+     ]
+    },
+    {
+     "block": 22182531,
+     "timestamp": 1743612623,
+     "utc": "2025-04-02 16:50:23",
+     "slot_value": "0x00000000000000000000000078972e88ab8bbb517a36caea23b931bab58ad3c6",
+     "implementation": "0x78972e88ab8bbb517a36caea23b931bab58ad3c6",
+     "version": "2.2.2",
+     "txs_with_logs_from_target": []
+    },
+    {
+     "block": 22339996,
+     "timestamp": 1745511383,
+     "utc": "2025-04-24 16:16:23",
+     "slot_value": "0x0000000000000000000000000b09ba359a106c9ea3b181cbc5f394570c7d2a7a",
+     "implementation": "0x0b09ba359a106c9ea3b181cbc5f394570c7d2a7a",
+     "version": "2.3.0",
+     "txs_with_logs_from_target": []
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "slot_value": "0x00000000000000000000000044afb7722af276a601d524f429016a18b6923df0",
+     "implementation": "0x44afb7722af276a601d524f429016a18b6923df0",
+     "version": "2.6.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 23491328,
+     "timestamp": 1759422923,
+     "utc": "2025-10-02 16:35:23",
+     "slot_value": "0x000000000000000000000000e32b192fb1dca88fcb1c56b3acb429e32238adcb",
+     "implementation": "0xe32b192fb1dca88fcb1c56b3acb429e32238adcb",
+     "version": "2.7.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 23877377,
+     "timestamp": 1764092795,
+     "utc": "2025-11-25 17:46:35",
+     "slot_value": "0x00000000000000000000000061525eaacddb97d9184afc205827e6a4fd0bf62a",
+     "implementation": "0x61525eaacddb97d9184afc205827e6a4fd0bf62a",
+     "version": "2.8.0",
+     "txs_with_logs_from_target": []
+    },
+    {
+     "block": 25397811,
+     "timestamp": 1782428747,
+     "utc": "2026-06-25 23:05:47",
+     "slot_value": "0x000000000000000000000000b37a11aadf167b2f0b8dd85372de4bc66cd4a891",
+     "implementation": "0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891",
+     "version": "2.8.2",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "DisputeGameFactory",
+   "address": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "first_code_block": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "slot_value": "0x000000000000000000000000c641a33cab81c559f2bd4b21ea34c290e2440c2b",
+     "implementation": "0xc641a33cab81c559f2bd4b21ea34c290e2440c2b",
+     "version": "1.0.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x45c2b63987a8c7ab97bdcdab5e04618d4ed74971aa4ac51b15ed8522ea6c0284",
+       "from": "0x0125aeb5ff473de23ab72454b2bbc45613ff3bd7",
+       "to": "0x9bc0a1ed534bfb31a6be69e5b767cba332f14347",
+       "selector": "0x613e827b"
+      }
+     ]
+    },
+    {
+     "block": 22182531,
+     "timestamp": 1743612623,
+     "utc": "2025-04-02 16:50:23",
+     "slot_value": "0x0000000000000000000000004bba758f006ef09402ef31724203f316ab74e4a0",
+     "implementation": "0x4bba758f006ef09402ef31724203f316ab74e4a0",
+     "version": "1.0.1",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29",
+       "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "slot_value": "0x00000000000000000000000033d1e8571a85a538ed3d5a4d88f46c112383439d",
+     "implementation": "0x33d1e8571a85a538ed3d5a4d88f46c112383439d",
+     "version": "1.2.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 23877377,
+     "timestamp": 1764092795,
+     "utc": "2025-11-25 17:46:35",
+     "slot_value": "0x00000000000000000000000074fac1d45b98bae058f8f566201c9a81b85c7d50",
+     "implementation": "0x74fac1d45b98bae058f8f566201c9a81b85c7d50",
+     "version": "1.3.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5",
+       "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 24421512,
+     "timestamp": 1770667859,
+     "utc": "2026-02-09 20:10:59",
+     "slot_value": "0x000000000000000000000000c040f392e52cb6970ca8e110c280fe24e07c5e2c",
+     "implementation": "0xc040f392e52cb6970ca8e110c280fe24e07c5e2c",
+     "version": "1.4.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 25397811,
+     "timestamp": 1782428747,
+     "utc": "2026-06-25 23:05:47",
+     "slot_value": "0x00000000000000000000000072b971717e088b59f26d4236be222adb6acd393b",
+     "implementation": "0x72b971717e088b59f26d4236be222adb6acd393b",
+     "version": "1.6.1",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ETHLockbox",
+   "address": "0xbd4AbB321138e8Eddc399cE64E66451294325a14",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0xbd4AbB321138e8Eddc399cE64E66451294325a14",
+   "first_code_block": 22990599,
+   "history": [
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "slot_value": "0x000000000000000000000000784d2f03593a42a6e4676a012762f18775ecbbe6",
+     "implementation": "0x784d2f03593a42a6e4676a012762f18775ecbbe6",
+     "version": "1.2.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 25397811,
+     "timestamp": 1782428747,
+     "utc": "2026-06-25 23:05:47",
+     "slot_value": "0x000000000000000000000000b3a24db07038b51962026329b62e7a965d56a6ad",
+     "implementation": "0xb3a24db07038b51962026329b62e7a965d56a6ad",
+     "version": "1.3.1",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 26430859,
+     "timestamp": 1794871439,
+     "utc": "2026-11-16 23:23:59",
+     "slot_value": "0x000000000000000000000000df75e6b07e98873e36ba5c05508f80c1454e0afe",
+     "implementation": "0xdf75e6b07e98873e36ba5c05508f80c1454e0afe",
+     "version": "2.0.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+       "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "AnchorStateRegistry(current)",
+   "address": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+   "first_code_block": 22990599,
+   "history": [
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "slot_value": "0x000000000000000000000000eb69cc681e8d4a557b30dffbad85affd47a2cf2e",
+     "implementation": "0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e",
+     "version": "3.5.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 24421512,
+     "timestamp": 1770667859,
+     "utc": "2026-02-09 20:10:59",
+     "slot_value": "0x00000000000000000000000036398155cd17cfe804f69b233edda800dd4d5aa5",
+     "implementation": "0x36398155cd17cfe804f69b233edda800dd4d5aa5",
+     "version": "3.7.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 25397811,
+     "timestamp": 1782428747,
+     "utc": "2026-06-25 23:05:47",
+     "slot_value": "0x0000000000000000000000008f40cc98d694ab986f026c5383a181fcc9b6b281",
+     "implementation": "0x8f40cc98d694ab986f026c5383a181fcc9b6b281",
+     "version": "3.9.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+       "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    },
+    {
+     "block": 26430859,
+     "timestamp": 1794871439,
+     "utc": "2026-11-16 23:23:59",
+     "slot_value": "0x0000000000000000000000002b27299c577d4720100e2735b652444dcea652d0",
+     "implementation": "0x2b27299c577d4720100e2735b652444dcea652d0",
+     "version": "4.0.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+       "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2",
+       "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+       "selector": "0x6a761202"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "rpc_calls": 2562
+}

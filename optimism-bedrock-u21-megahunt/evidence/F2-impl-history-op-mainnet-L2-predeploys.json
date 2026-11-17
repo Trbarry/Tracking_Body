@@ -1,0 +1,296 @@
+{
+ "rpc": "http://127.0.0.1:7546",
+ "end_block": 159654093,
+ "sample_step": 200000,
+ "method": "sample slot every step blocks from first-code block, bisect differing intervals; version() via eth_call at the change block",
+ "targets": [
+  {
+   "name": "L2ToL1MessagePasser",
+   "address": "0x4200000000000000000000000000000000000016",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x4200000000000000000000000000000000000016",
+   "first_code_block": 105235063,
+   "history": [
+    {
+     "block": 105235063,
+     "timestamp": 1686068903,
+     "utc": "2023-06-06 16:28:23",
+     "slot_value": "0x000000000000000000000000c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d30016",
+     "implementation": "0xc0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d30016",
+     "version": "1.0.0",
+     "txs_with_logs_from_target": []
+    },
+    {
+     "block": 153963812,
+     "timestamp": 1783526401,
+     "utc": "2026-07-08 16:00:01",
+     "slot_value": "0x00000000000000000000000027e51b2254433a3284d9ba73ea551c397db2a124",
+     "implementation": "0x27e51b2254433a3284d9ba73ea551c397db2a124",
+     "version": "1.2.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xd2e9eb2ba77098610e7dda134e70f741f7456f4ec49912d667860c40988dfd8e",
+       "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+       "to": "0x4200000000000000000000000000000000000018",
+       "selector": "0x7c36f37e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "L2CrossDomainMessenger",
+   "address": "0x4200000000000000000000000000000000000007",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x4200000000000000000000000000000000000007",
+   "first_code_block": 105235063,
+   "history": [
+    {
+     "block": 105235063,
+     "timestamp": 1686068903,
+     "utc": "2023-06-06 16:28:23",
+     "slot_value": "0x000000000000000000000000c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d30007",
+     "implementation": "0xc0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d30007",
+     "version": "1.4.0",
+     "txs_with_logs_from_target": []
+    },
+    {
+     "block": 153963812,
+     "timestamp": 1783526401,
+     "utc": "2026-07-08 16:00:01",
+     "slot_value": "0x000000000000000000000000250af3f400cf8aac8d410c90f1ba3968dd87df96",
+     "implementation": "0x250af3f400cf8aac8d410c90f1ba3968dd87df96",
+     "version": "2.2.1",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xd2e9eb2ba77098610e7dda134e70f741f7456f4ec49912d667860c40988dfd8e",
+       "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+       "to": "0x4200000000000000000000000000000000000018",
+       "selector": "0x7c36f37e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "L2StandardBridge",
+   "address": "0x4200000000000000000000000000000000000010",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x4200000000000000000000000000000000000010",
+   "first_code_block": 105235063,
+   "history": [
+    {
+     "block": 105235063,
+     "timestamp": 1686068903,
+     "utc": "2023-06-06 16:28:23",
+     "slot_value": "0x000000000000000000000000c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d30010",
+     "implementation": "0xc0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d30010",
+     "version": "1.1.0",
+     "txs_with_logs_from_target": []
+    },
+    {
+     "block": 153963812,
+     "timestamp": 1783526401,
+     "utc": "2026-07-08 16:00:01",
+     "slot_value": "0x000000000000000000000000ae9ed42f43a3ee45c3a9def8ae6b48cbb58ed1a1",
+     "implementation": "0xae9ed42f43a3ee45c3a9def8ae6b48cbb58ed1a1",
+     "version": "1.13.2",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xd2e9eb2ba77098610e7dda134e70f741f7456f4ec49912d667860c40988dfd8e",
+       "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+       "to": "0x4200000000000000000000000000000000000018",
+       "selector": "0x7c36f37e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "L1Block",
+   "address": "0x4200000000000000000000000000000000000015",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x4200000000000000000000000000000000000015",
+   "first_code_block": 105235063,
+   "history": [
+    {
+     "block": 105235063,
+     "timestamp": 1686068903,
+     "utc": "2023-06-06 16:28:23",
+     "slot_value": "0x000000000000000000000000c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d30015",
+     "implementation": "0xc0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d30015",
+     "version": "1.0.0",
+     "txs_with_logs_from_target": []
+    },
+    {
+     "block": 117387812,
+     "timestamp": 1710374401,
+     "utc": "2024-03-14 00:00:01",
+     "slot_value": "0x00000000000000000000000007dbe8500fc591d1852b76fee44d5a05e13097ff",
+     "implementation": "0x07dbe8500fc591d1852b76fee44d5a05e13097ff",
+     "version": "1.2.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x9f2b2d34dfa2cb55cceb9860cade0cb03cfbd7ff1dd07d48b4708b29a46b4a24",
+       "from": "0x0000000000000000000000000000000000000000",
+       "to": "0x4200000000000000000000000000000000000015",
+       "selector": "0x3659cfe6"
+      }
+     ]
+    },
+    {
+     "block": 135603812,
+     "timestamp": 1746806401,
+     "utc": "2025-05-09 16:00:01",
+     "slot_value": "0x000000000000000000000000ff256497d61dcd71a9e9ff43967c13fde1f72d12",
+     "implementation": "0xff256497d61dcd71a9e9ff43967c13fde1f72d12",
+     "version": "1.6.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xe992e00998b34075506d2726a274db07a62af6cdd9d527bfda9128114603cfbd",
+       "from": "0x0000000000000000000000000000000000000000",
+       "to": "0x4200000000000000000000000000000000000015",
+       "selector": "0x3659cfe6"
+      }
+     ]
+    },
+    {
+     "block": 144546212,
+     "timestamp": 1764691201,
+     "utc": "2025-12-02 16:00:01",
+     "slot_value": "0x0000000000000000000000003ba4007f5c922fbb33c454b41ea7a1f11e83df2c",
+     "implementation": "0x3ba4007f5c922fbb33c454b41ea7a1f11e83df2c",
+     "version": "1.7.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xcd60191626fa3124e7031235c52f0adf6be545ebbd7cf55641bd9dabcbedaf6a",
+       "from": "0x0000000000000000000000000000000000000000",
+       "to": "0x4200000000000000000000000000000000000015",
+       "selector": "0x3659cfe6"
+      }
+     ]
+    },
+    {
+     "block": 153963812,
+     "timestamp": 1783526401,
+     "utc": "2026-07-08 16:00:01",
+     "slot_value": "0x0000000000000000000000006a97c5d55a21265326150efe12fc30fb21cbff56",
+     "implementation": "0x6a97c5d55a21265326150efe12fc30fb21cbff56",
+     "version": "1.9.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xd2e9eb2ba77098610e7dda134e70f741f7456f4ec49912d667860c40988dfd8e",
+       "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+       "to": "0x4200000000000000000000000000000000000018",
+       "selector": "0x7c36f37e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "GasPriceOracle",
+   "address": "0x420000000000000000000000000000000000000F",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x420000000000000000000000000000000000000F",
+   "first_code_block": 105235063,
+   "history": [
+    {
+     "block": 105235063,
+     "timestamp": 1686068903,
+     "utc": "2023-06-06 16:28:23",
+     "slot_value": "0x000000000000000000000000c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3000f",
+     "implementation": "0xc0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3000f",
+     "version": "1.0.0",
+     "txs_with_logs_from_target": []
+    },
+    {
+     "block": 117387812,
+     "timestamp": 1710374401,
+     "utc": "2024-03-14 00:00:01",
+     "slot_value": "0x000000000000000000000000b528d11cc114e026f138fe568744c6d45ce6da7a",
+     "implementation": "0xb528d11cc114e026f138fe568744c6d45ce6da7a",
+     "version": "1.2.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xedbfdad1f44ea830b863eac45eca4408398351b30511826012882059625963d2",
+       "from": "0x0000000000000000000000000000000000000000",
+       "to": "0x420000000000000000000000000000000000000f",
+       "selector": "0x3659cfe6"
+      }
+     ]
+    },
+    {
+     "block": 122514212,
+     "timestamp": 1720627201,
+     "utc": "2024-07-10 16:00:01",
+     "slot_value": "0x000000000000000000000000a919894851548179a0750865e7974da599c0fac7",
+     "implementation": "0xa919894851548179a0750865e7974da599c0fac7",
+     "version": "1.3.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0x2f63bbe08a66796dde569281a58a53e0b0f64b7aa067297e9c70455fb8e375bc",
+       "from": "0x0000000000000000000000000000000000000000",
+       "to": "0x420000000000000000000000000000000000000f",
+       "selector": "0x3659cfe6"
+      }
+     ]
+    },
+    {
+     "block": 135603812,
+     "timestamp": 1746806401,
+     "utc": "2025-05-09 16:00:01",
+     "slot_value": "0x00000000000000000000000093e57a196454cb919193fa9946f14943cf733845",
+     "implementation": "0x93e57a196454cb919193fa9946f14943cf733845",
+     "version": "1.4.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xb6560306ccb0e772b132a8a6dd78244c0d7ac270c80baba40f95006184926c30",
+       "from": "0x0000000000000000000000000000000000000000",
+       "to": "0x420000000000000000000000000000000000000f",
+       "selector": "0x3659cfe6"
+      }
+     ]
+    },
+    {
+     "block": 144546212,
+     "timestamp": 1764691201,
+     "utc": "2025-12-02 16:00:01",
+     "slot_value": "0x0000000000000000000000004f1db3c6abd250ba86e0928471a8f7db3afd88f1",
+     "implementation": "0x4f1db3c6abd250ba86e0928471a8f7db3afd88f1",
+     "version": "1.6.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xc7c01d75d0b6950fcd30b448cba848e9841ab9ebb6b46eed9ecde4ba05ad0fd9",
+       "from": "0x0000000000000000000000000000000000000000",
+       "to": "0x420000000000000000000000000000000000000f",
+       "selector": "0x3659cfe6"
+      }
+     ]
+    },
+    {
+     "block": 153963812,
+     "timestamp": 1783526401,
+     "utc": "2026-07-08 16:00:01",
+     "slot_value": "0x000000000000000000000000547d0fba434877d7237d511cf87fabe2ee26b152",
+     "implementation": "0x547d0fba434877d7237d511cf87fabe2ee26b152",
+     "version": "1.6.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xd2e9eb2ba77098610e7dda134e70f741f7456f4ec49912d667860c40988dfd8e",
+       "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+       "to": "0x4200000000000000000000000000000000000018",
+       "selector": "0x7c36f37e"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "rpc_calls": 1649
+}

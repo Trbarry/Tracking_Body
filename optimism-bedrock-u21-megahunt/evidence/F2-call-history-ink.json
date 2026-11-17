@@ -1,0 +1,1010 @@
+{
+ "rpc": "http://127.0.0.1:7545",
+ "end_block": 26433900,
+ "sample_step": 20000,
+ "targets": [
+  {
+   "name": "portal.respectedGameType()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "respectedGameType()",
+   "args": [],
+   "calldata": "0x3c9f397c",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+     "block": 21682329,
+     "timestamp": 1737576635,
+     "utc": "2025-01-22 20:10:35",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+     "block": 25397811,
+     "timestamp": 1782428747,
+     "utc": "2026-06-25 23:05:47",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000008"
+    },
+    {
+     "block": 26048619,
+     "timestamp": 1790268683,
+     "utc": "2026-09-24 16:51:23",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000009"
+    }
+   ]
+  },
+  {
+   "name": "portal.respectedGameTypeUpdatedAt()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "respectedGameTypeUpdatedAt()",
+   "args": [],
+   "calldata": "0x4fd0434c",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x000000000000000000000000000000000000000000000000000000006753162b"
+    },
+    {
+     "block": 21682329,
+     "timestamp": 1737576635,
+     "utc": "2025-01-22 20:10:35",
+     "value": "0x00000000000000000000000000000000000000000000000000000000679150bb"
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "value": "0x00000000000000000000000000000000000000000000000000000000688271ab"
+    }
+   ]
+  },
+  {
+   "name": "portal.guardian()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "guardian()",
+   "args": [],
+   "calldata": "0x452a9320",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x00000000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf2"
+    }
+   ]
+  },
+  {
+   "name": "portal.GUARDIAN()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "GUARDIAN()",
+   "args": [],
+   "calldata": "0x724c184c",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    }
+   ]
+  },
+  {
+   "name": "portal.paused()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "paused()",
+   "args": [],
+   "calldata": "0x5c975abb",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "portal.superchainConfig()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "superchainConfig()",
+   "args": [],
+   "calldata": "0x35e80ab3",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c"
+    }
+   ]
+  },
+  {
+   "name": "portal.disputeGameFactory()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "disputeGameFactory()",
+   "args": [],
+   "calldata": "0xf2b4e617",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x00000000000000000000000010d7b35078d3baabb96dd45a9143b94be65b12cd"
+    }
+   ]
+  },
+  {
+   "name": "portal.anchorStateRegistry()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "anchorStateRegistry()",
+   "args": [],
+   "calldata": "0x5c0cba33",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "value": "0x000000000000000000000000ee018baf058227872540ac60efbd38b023d9dae2"
+    }
+   ]
+  },
+  {
+   "name": "portal.ethLockbox()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "ethLockbox()",
+   "args": [],
+   "calldata": "0xb682c444",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "value": "0x000000000000000000000000bd4abb321138e8eddc399ce64e66451294325a14"
+    }
+   ]
+  },
+  {
+   "name": "portal.l2Oracle()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "l2Oracle()",
+   "args": [],
+   "calldata": "0x9b5f694a",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    }
+   ]
+  },
+  {
+   "name": "portal.L2_ORACLE()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "L2_ORACLE()",
+   "args": [],
+   "calldata": "0x001c2ff6",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    }
+   ]
+  },
+  {
+   "name": "portal.systemConfig()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "systemConfig()",
+   "args": [],
+   "calldata": "0x33d7e2bd",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x00000000000000000000000062c0a111929fa32cec2f76adba54c16afb6e8364"
+    }
+   ]
+  },
+  {
+   "name": "portal.proofMaturityDelaySeconds()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "proofMaturityDelaySeconds()",
+   "args": [],
+   "calldata": "0xbf653a5c",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000093a80"
+    }
+   ]
+  },
+  {
+   "name": "portal.disputeGameFinalityDelaySeconds()",
+   "to": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "sig": "disputeGameFinalityDelaySeconds()",
+   "args": [],
+   "calldata": "0x952b2797",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000049d40"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(0)",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    0
+   ],
+   "calldata": "0x1b685b9e0000000000000000000000000000000000000000000000000000000000000000",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+     "block": 21618223,
+     "timestamp": 1736803367,
+     "utc": "2025-01-13 21:22:47",
+     "value": "0x0000000000000000000000006a8efcba5642eb15d743cbb29545bdc44d5ad8cd"
+    },
+    {
+     "block": 22069032,
+     "timestamp": 1742243783,
+     "utc": "2025-03-17 20:36:23",
+     "value": "0x0000000000000000000000007e87b471e96b96955044328242456427a0d49694"
+    },
+    {
+     "block": 22182531,
+     "timestamp": 1743612623,
+     "utc": "2025-04-02 16:50:23",
+     "value": "0x00000000000000000000000069361c9134d620b704c2a72c58523a4373ece86f"
+    },
+    {
+     "block": 22339996,
+     "timestamp": 1745511383,
+     "utc": "2025-04-24 16:16:23",
+     "value": "0x000000000000000000000000499e30a3b1bdb03f554ffffae4c9c5edf31ca554"
+    },
+    {
+     "block": 22432368,
+     "timestamp": 1746628403,
+     "utc": "2025-05-07 14:33:23",
+     "value": "0x0000000000000000000000003ccf7c31a3a8c1b8aaa9a18fc2d010dde4262342"
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "value": "0x0000000000000000000000001a20c06a80260aa45ada0f9f59b334560ee3fef1"
+    },
+    {
+     "block": 23491328,
+     "timestamp": 1759422923,
+     "utc": "2025-10-02 16:35:23",
+     "value": "0x0000000000000000000000005f5bea598fdf8df30d56808e8b793da8fc7f3028"
+    },
+    {
+     "block": 23877377,
+     "timestamp": 1764092795,
+     "utc": "2025-11-25 17:46:35",
+     "value": "0x0000000000000000000000004cbfba0afeb3a36878eb52fae78335751076250c"
+    },
+    {
+     "block": 24421512,
+     "timestamp": 1770667859,
+     "utc": "2026-02-09 20:10:59",
+     "value": "0x0000000000000000000000006ddba09bc4ccb0d6ca9fc5350580f74165707499"
+    },
+    {
+     "block": 25397811,
+     "timestamp": 1782428747,
+     "utc": "2026-06-25 23:05:47",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(1)",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    1
+   ],
+   "calldata": "0x1b685b9e0000000000000000000000000000000000000000000000000000000000000001",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x000000000000000000000000a8e6a9bf1ba2df76c6787eaebe2273ae98498059"
+    },
+    {
+     "block": 21618223,
+     "timestamp": 1736803367,
+     "utc": "2025-01-13 21:22:47",
+     "value": "0x0000000000000000000000000a780be3eb21117b1bbcd74cf5d7624a3a482963"
+    },
+    {
+     "block": 22069032,
+     "timestamp": 1742243783,
+     "utc": "2025-03-17 20:36:23",
+     "value": "0x0000000000000000000000008d9faaeb46cbcf487baf2182e438ac3d0847f637"
+    },
+    {
+     "block": 22182531,
+     "timestamp": 1743612623,
+     "utc": "2025-04-02 16:50:23",
+     "value": "0x0000000000000000000000004699d20479dfd20e15cab4fcb6f2a7cc6fe35443"
+    },
+    {
+     "block": 22339996,
+     "timestamp": 1745511383,
+     "utc": "2025-04-24 16:16:23",
+     "value": "0x000000000000000000000000436bac2efe273e3f13eefeda2b3689c34591bca1"
+    },
+    {
+     "block": 22432368,
+     "timestamp": 1746628403,
+     "utc": "2025-05-07 14:33:23",
+     "value": "0x00000000000000000000000040641a4023f0f4c66d7f8ade16497f4c947a7163"
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "value": "0x00000000000000000000000046dde051eb4561694dc1f0286ebe940d9e90fbe9"
+    },
+    {
+     "block": 23491328,
+     "timestamp": 1759422923,
+     "utc": "2025-10-02 16:35:23",
+     "value": "0x0000000000000000000000005562d33b68fa20572fc58fa36ab19ccfedd6ee8f"
+    },
+    {
+     "block": 23877377,
+     "timestamp": 1764092795,
+     "utc": "2025-11-25 17:46:35",
+     "value": "0x000000000000000000000000467e6a8d6916e7394f9715b4de9339ee36887382"
+    },
+    {
+     "block": 24421512,
+     "timestamp": 1770667859,
+     "utc": "2026-02-09 20:10:59",
+     "value": "0x00000000000000000000000058bf355c5d4edfc723ef89d99582eccfd143266a"
+    },
+    {
+     "block": 25397811,
+     "timestamp": 1782428747,
+     "utc": "2026-06-25 23:05:47",
+     "value": "0x000000000000000000000000e1dffcbe4e22b813f26d2106d943c102e7cab87e"
+    },
+    {
+     "block": 26048619,
+     "timestamp": 1790268683,
+     "utc": "2026-09-24 16:51:23",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(2)",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    2
+   ],
+   "calldata": "0x1b685b9e0000000000000000000000000000000000000000000000000000000000000002",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(3)",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    3
+   ],
+   "calldata": "0x1b685b9e0000000000000000000000000000000000000000000000000000000000000003",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(4)",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    4
+   ],
+   "calldata": "0x1b685b9e0000000000000000000000000000000000000000000000000000000000000004",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(5)",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    5
+   ],
+   "calldata": "0x1b685b9e0000000000000000000000000000000000000000000000000000000000000005",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+     "block": 26048619,
+     "timestamp": 1790268683,
+     "utc": "2026-09-24 16:51:23",
+     "value": "0x0000000000000000000000005c3eb47cb0174aea522a2a9ae79487139a53d691"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(6)",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    6
+   ],
+   "calldata": "0x1b685b9e0000000000000000000000000000000000000000000000000000000000000006",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(7)",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    7
+   ],
+   "calldata": "0x1b685b9e0000000000000000000000000000000000000000000000000000000000000007",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(8)",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    8
+   ],
+   "calldata": "0x1b685b9e0000000000000000000000000000000000000000000000000000000000000008",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+     "block": 24421512,
+     "timestamp": 1770667859,
+     "utc": "2026-02-09 20:10:59",
+     "value": "0x0000000000000000000000006ddba09bc4ccb0d6ca9fc5350580f74165707499"
+    },
+    {
+     "block": 25397811,
+     "timestamp": 1782428747,
+     "utc": "2026-06-25 23:05:47",
+     "value": "0x0000000000000000000000002dda3584b51ef5236f7726dea5a0fb6b3ca94aec"
+    },
+    {
+     "block": 26048619,
+     "timestamp": 1790268683,
+     "utc": "2026-09-24 16:51:23",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(9)",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    9
+   ],
+   "calldata": "0x1b685b9e0000000000000000000000000000000000000000000000000000000000000009",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+     "block": 26048619,
+     "timestamp": 1790268683,
+     "utc": "2026-09-24 16:51:23",
+     "value": "0x00000000000000000000000019af533cc2a2a55786dcb8672aa5717e64213208"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(10)",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    10
+   ],
+   "calldata": "0x1b685b9e000000000000000000000000000000000000000000000000000000000000000a",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(254)",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    254
+   ],
+   "calldata": "0x1b685b9e00000000000000000000000000000000000000000000000000000000000000fe",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(255)",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    255
+   ],
+   "calldata": "0x1b685b9e00000000000000000000000000000000000000000000000000000000000000ff",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.owner()",
+   "to": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "sig": "owner()",
+   "args": [],
+   "calldata": "0x8da5cb5b",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a"
+    }
+   ]
+  },
+  {
+   "name": "proxyAdmin.owner()",
+   "to": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+   "sig": "owner()",
+   "args": [],
+   "calldata": "0x8da5cb5b",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.owner()",
+   "to": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+   "sig": "owner()",
+   "args": [],
+   "calldata": "0x8da5cb5b",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x000000000000000000000000bea2bc852a160b8547273660e22f4f08c2fa9bbb"
+    },
+    {
+     "block": 25573527,
+     "timestamp": 1784545691,
+     "utc": "2026-07-20 11:08:11",
+     "value": "0x0000000000000000000000009ba6e03d8b90de867373db8cf1a58d2f7f006b3a"
+    },
+    {
+     "block": 25834840,
+     "timestamp": 1787692559,
+     "utc": "2026-08-25 21:15:59",
+     "value": "0x000000000000000000000000847b5c174615b1b7fdf770882256e2d3e95b9d92"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.gasLimit()",
+   "to": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+   "sig": "gasLimit()",
+   "args": [],
+   "calldata": "0xf68016b7",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000003938700"
+    },
+    {
+     "block": 26083470,
+     "timestamp": 1790689079,
+     "utc": "2026-09-29 13:37:59",
+     "value": "0x0000000000000000000000000000000000000000000000000000000001c9c380"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.unsafeBlockSigner()",
+   "to": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+   "sig": "unsafeBlockSigner()",
+   "args": [],
+   "calldata": "0x1fd19ee1",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x0000000000000000000000007d056b99aa2021864c42e25b4f8ce3bdeac9463c"
+    },
+    {
+     "block": 25631821,
+     "timestamp": 1785247739,
+     "utc": "2026-07-28 14:08:59",
+     "value": "0x0000000000000000000000007b322282df45e537e5de76d60e1432db3cf3f8e1"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.batcherHash()",
+   "to": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+   "sig": "batcherHash()",
+   "args": [],
+   "calldata": "0xe81b2c6d",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x000000000000000000000000500d7ea63cf2e501dadaa5feec1fc19fe2aa72ac"
+    },
+    {
+     "block": 25631821,
+     "timestamp": 1785247739,
+     "utc": "2026-07-28 14:08:59",
+     "value": "0x0000000000000000000000006db6161fc5662450e801398bad62dd9921216b98"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.disputeGameFactory()",
+   "to": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+   "sig": "disputeGameFactory()",
+   "args": [],
+   "calldata": "0xf2b4e617",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": "0x00000000000000000000000010d7b35078d3baabb96dd45a9143b94be65b12cd"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.l2OutputOracle()",
+   "to": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+   "sig": "l2OutputOracle()",
+   "args": [],
+   "calldata": "0x4d9f1559",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.superchainConfig()",
+   "to": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+   "sig": "superchainConfig()",
+   "args": [],
+   "calldata": "0x35e80ab3",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "value": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.proxyAdmin()",
+   "to": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+   "sig": "proxyAdmin()",
+   "args": [],
+   "calldata": "0x3e47158c",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "value": "0x000000000000000000000000d56045e68956fce2576e680c95a4750cf8241f79"
+    }
+   ]
+  },
+  {
+   "name": "asrCurrent.respectedGameType()",
+   "to": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+   "sig": "respectedGameType()",
+   "args": [],
+   "calldata": "0x3c9f397c",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+     "block": 25397811,
+     "timestamp": 1782428747,
+     "utc": "2026-06-25 23:05:47",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000008"
+    },
+    {
+     "block": 26048619,
+     "timestamp": 1790268683,
+     "utc": "2026-09-24 16:51:23",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000009"
+    }
+   ]
+  },
+  {
+   "name": "asrCurrent.retirementTimestamp()",
+   "to": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+   "sig": "retirementTimestamp()",
+   "args": [],
+   "calldata": "0x4086d183",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "value": "0x00000000000000000000000000000000000000000000000000000000688271ab"
+    }
+   ]
+  },
+  {
+   "name": "asrCurrent.portal()",
+   "to": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+   "sig": "portal()",
+   "args": [],
+   "calldata": "0x6425666b",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    }
+   ]
+  },
+  {
+   "name": "asrCurrent.superchainConfig()",
+   "to": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+   "sig": "superchainConfig()",
+   "args": [],
+   "calldata": "0x35e80ab3",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "value": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c"
+    }
+   ]
+  },
+  {
+   "name": "asrCurrent.disputeGameFactory()",
+   "to": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+   "sig": "disputeGameFactory()",
+   "args": [],
+   "calldata": "0xf2b4e617",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "value": "0x00000000000000000000000010d7b35078d3baabb96dd45a9143b94be65b12cd"
+    }
+   ]
+  },
+  {
+   "name": "asrCurrent.systemConfig()",
+   "to": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+   "sig": "systemConfig()",
+   "args": [],
+   "calldata": "0x33d7e2bd",
+   "start": 21344310,
+   "history": [
+    {
+     "block": 21344310,
+     "timestamp": 1733498411,
+     "utc": "2024-12-06 15:20:11",
+     "value": null
+    },
+    {
+     "block": 22990599,
+     "timestamp": 1753379243,
+     "utc": "2025-07-24 17:47:23",
+     "value": "0x00000000000000000000000062c0a111929fa32cec2f76adba54c16afb6e8364"
+    },
+    {
+     "block": 26430859,
+     "timestamp": 1794871439,
+     "utc": "2026-11-16 23:23:59",
+     "value": null
+    }
+   ]
+  }
+ ],
+ "rpc_calls": 11720
+}

@@ -1,0 +1,2350 @@
+{
+ "note": "Executed superchain-ops mainnet tasks; tx hash from each task README 'Status' line, block/timestamp/to/from read from L1 archive (http://127.0.0.1:7545).",
+ "tasks": [
+  {
+   "task": "001-security-council-phase-0",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Security Council Phase 0 Multisig Ceremony.",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xd2a7e63eb76199234e4876c1c99dcdf73f0ed04eb8b8767e94809cc2de2629ca",
+     "block": 19193284,
+     "utc": "2024-02-09 21:35:47",
+     "timestamp": 1707514547,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0xad70ad7ac30cee75eb9638d377eacd8dfdfe0c3c"
+    }
+   ]
+  },
+  {
+   "task": "002-pause-mainnet",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "OP Mainnet Pause",
+   "status": "EXECUTED \u2014 [pause], [unpause]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x374dc0d5ad3dd0683d92762c84c7038804dd987e9fd9bac7418dca5ff489e6b0",
+     "block": 19233786,
+     "utc": "2024-02-15 14:00:23",
+     "timestamp": 1708005623,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    },
+    {
+     "tx": "0x7d6880954fd4df2a8da987b5d8500e07613e3549a3376bef94e951aab890fc54",
+     "block": 19234082,
+     "utc": "2024-02-15 14:59:47",
+     "timestamp": 1708009187,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x25bdf215ca623a02622843abe38363ffdb3e79a9"
+    }
+   ]
+  },
+  {
+   "task": "003-protocol-versions-delta",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet Protocol Versions Update - 5.0.0 (Delta)",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x2c616fc82192b85d245fe7bff1f4ed8015a6b3bfdbcbedf087fd7e6d25ffe814",
+     "block": 19320684,
+     "utc": "2024-02-27 18:29:59",
+     "timestamp": 1709058599,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97"
+    }
+   ]
+  },
+  {
+   "task": "004-add-superchainConfig",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Upgrade #4 Multisig Ceremony",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x3f7c36a1d636cdb23bf4f9171c27ebe58b73f4c0e6a33dbaac2c2f3c142faf50",
+     "block": 19314493,
+     "utc": "2024-02-26 21:44:11",
+     "timestamp": 1708983851,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97"
+    }
+   ]
+  },
+  {
+   "task": "005-2-ecotone-set-gas-config",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet - Ecotone Blobs Gas Configuration",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xac827d7a1238dfd6f3cc81dba09f0a3e1d9dc685bcc6b22466d76bb2335db38b",
+     "block": 19429571,
+     "utc": "2024-03-14 00:03:11",
+     "timestamp": 1710374591,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x63dce2cb0fea77f4e55d01569583a40e17448b4b"
+    }
+   ]
+  },
+  {
+   "task": "005-3-ecotone-calldata-gas-config",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet - Ecotone Calldata Gas Configuration - Contingency",
+   "status": "CANCELLED",
+   "template": null,
+   "chain_ids": [],
+   "executions": []
+  },
+  {
+   "task": "005-protocol-versions-ecotone",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet Protocol Versions Update - 6.0.0 (Ecotone)",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x29bb617fac8f49f5c934cc776b22d47e187ab482e86f21e4502a23ba1c9ad0da",
+     "block": 19420232,
+     "utc": "2024-03-12 16:36:35",
+     "timestamp": 1710261395,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x63dce2cb0fea77f4e55d01569583a40e17448b4b"
+    }
+   ]
+  },
+  {
+   "task": "006-MCP-L1",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet MCP L1 Upgrade",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x4758bd62359bc69d7e8a0faaf5308d826379c23258d689a7430d5c0ad0361ad2",
+     "block": 19634866,
+     "utc": "2024-04-11 20:49:59",
+     "timestamp": 1712868599,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "007-presigned-pause",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Superchain Presigned Pause",
+   "status": "SIGNED",
+   "template": null,
+   "chain_ids": [],
+   "executions": []
+  },
+  {
+   "task": "008-presigned-pause",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Superchain Presigned Pause",
+   "status": "SIGNED",
+   "template": null,
+   "chain_ids": [],
+   "executions": []
+  },
+  {
+   "task": "009-fp-upgrade",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet Fault Proofs Upgrade",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xbe810ed6e1e827930bd46cde42c4883662ddb6d244a26af2f0409cc2782bee61",
+     "block": 20062696,
+     "utc": "2024-06-10 16:42:59",
+     "timestamp": 1718037779,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97"
+    }
+   ]
+  },
+  {
+   "task": "010-1-guardian-upgrade",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Guardian Changes",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xe361c0d4ae3aebc94b3f281ee372fbb1cbdb0c33ca8b1b35e7f3b009b2fcbdb0",
+     "block": 20063224,
+     "utc": "2024-06-10 18:29:23",
+     "timestamp": 1718044163,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97"
+    }
+   ]
+  },
+  {
+   "task": "010-2-sc-changes",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Security Council Safe Changes",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x50db9c1b9f5a8616f982022429a1d75c35986bcfb67bd1e3358d97ddbe751144",
+     "block": 20063319,
+     "utc": "2024-06-10 18:48:23",
+     "timestamp": 1718045303,
+     "receipt_status": "0x1",
+     "to": "0xc2819dc788505aac350142a7a707bf9d03e3bd03",
+     "from": "0x3aa85a6c108a041d5bc1f81554af9c1c02c45fb6"
+    }
+   ]
+  },
+  {
+   "task": "011-proto-ver+ownership-transfers",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet Recommended Protocol Version Update (7.0.0 - Fjord) & Ownership Transfers",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xa324ca8056ff79064771df050d70df9d44deab56290916339d94fd11ea5ee3c0",
+     "block": 20186225,
+     "utc": "2024-06-27 23:11:47",
+     "timestamp": 1719529907,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97"
+    }
+   ]
+  },
+  {
+   "task": "012-proto-ver-required",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet Required Protocol Version Update (7.0.0 - Fjord)",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xea0bb21ac896ddc9fefe9ed2e7ebaf892a7bca3b56ba3d7c272d694e4c83e8e4",
+     "block": 20269315,
+     "utc": "2024-07-09 13:45:11",
+     "timestamp": 1720532711,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x63dce2cb0fea77f4e55d01569583a40e17448b4b"
+    }
+   ]
+  },
+  {
+   "task": "013-fp-upgrade-fjord",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet Fjord Fault Proofs Upgrade",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x7abecacd8b1a54db8f0835a5c82edfab96ff922a41d2faa914c339e3e9319b43",
+     "block": 20270847,
+     "utc": "2024-07-09 18:52:47",
+     "timestamp": 1720551167,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x63dce2cb0fea77f4e55d01569583a40e17448b4b"
+    }
+   ]
+  },
+  {
+   "task": "014-fjord-gas-config",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet Gas Config Update for Fjord",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x220c443aebcd9bb04d6eb79e975c6bbe710104feddf8c4fffa3f13eb3c338af9",
+     "block": 20277159,
+     "utc": "2024-07-10 16:01:35",
+     "timestamp": 1720627295,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x63dce2cb0fea77f4e55d01569583a40e17448b4b"
+    }
+   ]
+  },
+  {
+   "task": "015-fallback-permissioned-game",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Deputy Guardian - Fall back to `PermissionedDisputeGame`",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x493e2f3354e8c6c46fb37925a13c02364c1f3b38f88548b9bb4673e3fc762e69",
+     "block": 20543021,
+     "utc": "2024-08-16 18:35:59",
+     "timestamp": 1723833359,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0xad70ad7ac30cee75eb9638d377eacd8dfdfe0c3c"
+    }
+   ]
+  },
+  {
+   "task": "016-granite-protocol-versions",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet Required Protocol Version Update (8.0.0 - Granite)",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x804fd189aad5c2caccf274235649905f0dd18c8a4f34c58ce471176fec3e34b7",
+     "block": 20714426,
+     "utc": "2024-09-09 17:04:23",
+     "timestamp": 1725901463,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97"
+    }
+   ]
+  },
+  {
+   "task": "017-presigned-pause",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Superchain Presigned Pause",
+   "status": "SIGNED",
+   "template": null,
+   "chain_ids": [],
+   "executions": []
+  },
+  {
+   "task": "018-granite-upgrade",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet Granite Upgrade + Fault Proof Fixes",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x3bd2d811d0298313e6fb75f0e69fb54280c9b4f2e60f8f04472aaa166c285641",
+     "block": 20723924,
+     "utc": "2024-09-11 00:54:59",
+     "timestamp": 1726016099,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97"
+    }
+   ]
+  },
+  {
+   "task": "019-permissionless-games+upgrade-dgm",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Deputy Guardian - Reset back to permissionless Cannon `FaultDisputeGame`",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x592e73fdf57e7cc2c51cfaafa891fe91164d125b7943aa26a15285276de27509",
+     "block": 20728464,
+     "utc": "2024-09-11 16:08:35",
+     "timestamp": 1726070915,
+     "receipt_status": "0x1",
+     "to": "0xc2819dc788505aac350142a7a707bf9d03e3bd03",
+     "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97"
+    }
+   ]
+  },
+  {
+   "task": "020-set-gas-target",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet - Gas Target Increase",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x14ac2b3612fa27ac89f31d1d2174b4436c19b6721f1ecefce89b1f17c7be5e3c",
+     "block": 21023675,
+     "utc": "2024-10-22 21:02:23",
+     "timestamp": 1729630943,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "021-holocene-protocol-versions",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mainnet Required & Recommended Protocol Version Update (9.0.0 - Holocene)",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x0c3cf835020aabd0d584a4f64f3f463edb9953c39504a1bf2f108024c327eb14",
+     "block": 21573148,
+     "utc": "2025-01-07 14:20:11",
+     "timestamp": 1736259611,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x63dce2cb0fea77f4e55d01569583a40e17448b4b"
+    }
+   ]
+  },
+  {
+   "task": "022-holocene-fp-upgrade",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Holocene Hardfork Upgrade - OP Mainnet",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x22ab07b0bb1bc8504256835d555307ff522b78651dca33c9cd5b05591ca5b4f7",
+     "block": 21580854,
+     "utc": "2025-01-08 16:08:47",
+     "timestamp": 1736352527,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x63dce2cb0fea77f4e55d01569583a40e17448b4b"
+    }
+   ]
+  },
+  {
+   "task": "028-holocene-system-config-upgrade-and-init-multi-chain",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Holocene Hardfork Upgrade - `SystemConfig`",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x86da7386a26978c3db89e97c1f4feee613a8a0c07bbe4640624b05276f49c350",
+     "block": 21695024,
+     "utc": "2025-01-24 14:41:35",
+     "timestamp": 1737729695,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x2e2e33fedd27fdecfc851ae98e45a5ecb76904fe"
+    }
+   ]
+  },
+  {
+   "task": "029-holocene-system-config-upgrade-and-init-base",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Holocene Hardfork Upgrade - `SystemConfig`",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x765a2eb3c7eecea5722b120037123eaec9e6ef4b6a53ba2bcfb88ef08fae074b",
+     "block": 21775523,
+     "utc": "2025-02-04 20:28:47",
+     "timestamp": 1738700927,
+     "receipt_status": "0x1",
+     "to": "0x7bb41c3008b3f03fe483b28b8db90e19cf07595c",
+     "from": "0xbbc9b955be73ca4eeb28e988e9d21d2538978f03"
+    }
+   ]
+  },
+  {
+   "task": "030-soneium-holocene-system-config-upgrade",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Holocene Hardfork Upgrade - `SystemConfig`",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x9c6af2cb2b4fcde9e351662342f15b60f004108b575dddd05d0caa4f50220966",
+     "block": 21945575,
+     "utc": "2025-02-28 14:55:35",
+     "timestamp": 1740754535,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97"
+    }
+   ]
+  },
+  {
+   "task": "031-op-mainnet-pectra-defense",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "ProxyAdminOwner - Update Prestate Hash",
+   "status": "DRAFT, NOT READY TO SIGN",
+   "template": null,
+   "chain_ids": [],
+   "executions": []
+  },
+  {
+   "task": "base-001-MCP-L1",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Base Mainnet MCP L1 Upgrade",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xb690dad4829ca8b07b6944d7e937d7d36048ea29a9278cbae012ab4a66aac817",
+     "block": 20191400,
+     "utc": "2024-06-28 16:32:47",
+     "timestamp": 1719592367,
+     "receipt_status": "0x1",
+     "to": "0x7bb41c3008b3f03fe483b28b8db90e19cf07595c",
+     "from": "0xbbc9b955be73ca4eeb28e988e9d21d2538978f03"
+    }
+   ]
+  },
+  {
+   "task": "base-002-fp-upgrade",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Base Mainnet Fault Proofs Upgrade",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x2476bda1e2cc0f2a501876532cacf1d267fc9be8f07271b75e512e3b6c927639",
+     "block": 21079409,
+     "utc": "2024-10-30 15:41:23",
+     "timestamp": 1730302883,
+     "receipt_status": "0x1",
+     "to": "0x7bb41c3008b3f03fe483b28b8db90e19cf07595c",
+     "from": "0xbbc9b955be73ca4eeb28e988e9d21d2538978f03"
+    }
+   ]
+  },
+  {
+   "task": "base-003-holocene-fp-upgrade",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Holocene Hardfork Upgrade",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xb6fc07450001150de1d6edcda68e7b4de5725259bb55ca3e5c22d474c7127e9c",
+     "block": 21581139,
+     "utc": "2025-01-08 17:05:59",
+     "timestamp": 1736355959,
+     "receipt_status": "0x1",
+     "to": "0x7bb41c3008b3f03fe483b28b8db90e19cf07595c",
+     "from": "0x63dce2cb0fea77f4e55d01569583a40e17448b4b"
+    }
+   ]
+  },
+  {
+   "task": "ink-001-permissionless-proofs",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "ProxyAdminOwner - Set Dispute Game Implementation",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x71234ec9d3df32360383a0091277b0facbeb21456f1a29accb110fa43a6b5441",
+     "block": 21618223,
+     "utc": "2025-01-13 21:22:47",
+     "timestamp": 1736803367,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "ink-002-set-respected-game-type",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Deputy Guardian - Enable Permissioness Dispute Game",
+   "status": "READY TO SIGN",
+   "template": null,
+   "chain_ids": [],
+   "executions": []
+  },
+  {
+   "task": "ink-003-fp-holocene-pectra-upgrade",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Holocene Hardfork Upgrade",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xd80b96282ad4d71aeb29b25e0ceee2bdf0840b258fccffedc951ce0553b6800b",
+     "block": 22069032,
+     "utc": "2025-03-17 20:36:23",
+     "timestamp": 1742243783,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "metal-001-MCP-L1",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Metal Mainnet MCP L1 Upgrade",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x5cc6333ba2dbc12eba44db7e3f014195596d9e02ebbfc4cd718dfc0eee0d1156",
+     "block": 19691975,
+     "utc": "2024-04-19 20:51:23",
+     "timestamp": 1713559883,
+     "receipt_status": "0x1",
+     "to": "0x4a4962275df8c60a80d3a25faec5aa7de116a746",
+     "from": "0xa4000bdd2bb92ce6750b31f1eeda47bd1cb8e6e4"
+    }
+   ]
+  },
+  {
+   "task": "mmz-002-key-handover",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mode, Metal, and Zora Mainnet's Key Handover Upgrade",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xf4e7778523991cf6c4b305970c2c9e71ef27f652e475bb42302d582fa613f5a3",
+     "block": 20470546,
+     "utc": "2024-08-06 15:52:47",
+     "timestamp": 1722959567,
+     "receipt_status": "0x1",
+     "to": "0x4a4962275df8c60a80d3a25faec5aa7de116a746",
+     "from": "0xefcf0c8fafb425997870f845e26fc6ca6ee6dd5c"
+    }
+   ]
+  },
+  {
+   "task": "mode-001-MCP-L1",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Mode Mainnet MCP L1 Upgrade",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xfd62d0d284c8655e916a5cdd2472b461ed5686ab1414b834a1ffdb06a44f63b4",
+     "block": 19691235,
+     "utc": "2024-04-19 18:22:11",
+     "timestamp": 1713550931,
+     "receipt_status": "0x1",
+     "to": "0x4a4962275df8c60a80d3a25faec5aa7de116a746",
+     "from": "0xa4000bdd2bb92ce6750b31f1eeda47bd1cb8e6e4"
+    }
+   ]
+  },
+  {
+   "task": "unichain-001-holocene-systemconfig-update",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Holocene Hardfork Upgrade - `SystemConfig`",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x191505a1bff29cc42fe5a1eb1888170c5241d552d7028d26ec3e54980980cf16",
+     "block": 22081789,
+     "utc": "2025-03-19 15:24:11",
+     "timestamp": 1742397851,
+     "receipt_status": "0x1",
+     "to": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "zora-001-MCP-L1",
+   "source": "superchain-ops@cccb99f8 (branch 03-05-mainnet_opcm_v2.0.0_unichain, 2025-03-19) tasks/eth",
+   "title": "Zora Mainnet MCP L1 Upgrade",
+   "status": "[EXECUTED]",
+   "template": null,
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xfe942033eec0df235735ae8872759f690e4bee4c86ebb6dba7b9b9446410b5d1",
+     "block": 19692134,
+     "utc": "2024-04-19 21:23:23",
+     "timestamp": 1713561803,
+     "receipt_status": "0x1",
+     "to": "0xc72ae5c7cc9a332699305e29f68be66c73b60542",
+     "from": "0xa4000bdd2bb92ce6750b31f1eeda47bd1cb8e6e4"
+    }
+   ]
+  },
+  {
+   "task": "000-opcm-upgrade-v200",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "000-opcm-upgrade-v200: Mainnet OPCM v2.0.0: op, soneium, ink",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV200",
+   "chain_ids": [
+    10,
+    1868,
+    57073
+   ],
+   "executions": [
+    {
+     "tx": "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29",
+     "block": 22182531,
+     "utc": "2025-04-02 16:50:23",
+     "timestamp": 1743612623,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1084092ac2f04c866806cf3d4a385afa4f6a6c97"
+    }
+   ]
+  },
+  {
+   "task": "002-opcm-upgrade-v200",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "002-opcm-upgrade-v200: Mainnet OPCM v2.0.0: Unichain",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV200",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0x7e5e478cafbe30293645e6972a477f77dcfdc006c4cf1dd248a94e6386d04159",
+     "block": 22254924,
+     "utc": "2025-04-12 19:18:59",
+     "timestamp": 1744485539,
+     "receipt_status": "0x1",
+     "to": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+     "from": "0x34154426ab842aaaefda28f3f5d103dd0b0fe37a"
+    }
+   ]
+  },
+  {
+   "task": "003-opcm-upgrade-v300-op-ink-soneium",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "003-opcm-upgrade-v300-op-ink-soneium: U14 Mainnet OPCM v3.0.0: op, soneium, ink",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV300",
+   "chain_ids": [
+    10,
+    1868,
+    57073
+   ],
+   "executions": [
+    {
+     "tx": "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12",
+     "block": 22339996,
+     "utc": "2025-04-24 16:16:23",
+     "timestamp": 1745511383,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "005-opcm-upgrade-v300-uni",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "005-opcm-upgrade-v300-uni: Ethereum OPCM v3.0.0: Unichain",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV300",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0xc74c5e0dddfa9e2d0fd5d902fb7b1aa4cc28ba034ebed7bf3a0aa3a8b8d21b20",
+     "block": 22342667,
+     "utc": "2025-04-25 01:12:11",
+     "timestamp": 1745543531,
+     "receipt_status": "0x1",
+     "to": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "006-gas-params-op",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "006-gas-params-op: (Ethereum) Increase gas target : OP Mainnet",
+   "status": "[CANCELLED]()",
+   "template": "SystemConfigGasParams",
+   "chain_ids": [
+    10
+   ],
+   "executions": []
+  },
+  {
+   "task": "007-delayedweth-xfer",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "DelayedWETH Ownership Transfer - OP Mainnet",
+   "status": "[EXECUTED]",
+   "template": "DelayedWETHOwnershipTemplate",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x0fa256d2f49d9bf94abf6bfcd3defcbb29dcd2edeb1e3750a68c3fa7993aea95",
+     "block": 22349174,
+     "utc": "2025-04-25 22:58:35",
+     "timestamp": 1745621915,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0xdb203d7f00ff435da107543b33495f9ca2c484c6"
+    }
+   ]
+  },
+  {
+   "task": "008-gas-params-op",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "008-gas-params-op: (Ethereum) Increase gas target : OP Mainnet",
+   "status": "[EXECUTED]",
+   "template": "SystemConfigGasParams",
+   "chain_ids": [
+    10
+   ],
+   "executions": [
+    {
+     "tx": "0x19268ee4773853d9abd592e6d33e856dbdb3fe2cc0817a4a5323fa7432bdb92a",
+     "block": 22432131,
+     "utc": "2025-05-07 13:44:23",
+     "timestamp": 1746625463,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "009-opcm-update-prestate-v300-op+ink",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "009-opcm-update-prestate-v300-op+ink: Mainnet Update Isthmus Prestate: OP and Ink",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpdatePrestateV300",
+   "chain_ids": [
+    10,
+    57073
+   ],
+   "executions": [
+    {
+     "tx": "0xc4a7089a92c96b83475a7c20e40b4c888a277a90208d649c81df243ecdceb587",
+     "block": 22432368,
+     "utc": "2025-05-07 14:33:23",
+     "timestamp": 1746628403,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "010-opcm-update-prestate-v300-uni",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "010-opcm-update-prestate-v300-uni: Mainnet Update Isthmus Prestate: Unichain",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpdatePrestateV300",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0xd3247421f6f8039ab186878aa996984a67b3149dd543e688b1d30236516eba00",
+     "block": 22432925,
+     "utc": "2025-05-07 16:28:47",
+     "timestamp": 1746635327,
+     "receipt_status": "0x1",
+     "to": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "011-deputy-pause-module-activation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "011 - DeputyPauseModule Installation - OP Mainnet",
+   "status": "[EXECUTED]",
+   "template": "EnableDeputyPauseModuleTemplate",
+   "chain_ids": [
+    10
+   ],
+   "executions": [
+    {
+     "tx": "0x5580a50fd248f0d4034f5eb270636202e2d957b84a6975f7bd7b8c72ff541233",
+     "block": 22432200,
+     "utc": "2025-05-07 13:58:11",
+     "timestamp": 1746626291,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "012-unpause-superchainConfig",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "012 - Unpause the SuperchainConfig",
+   "status": "[EXECUTED]",
+   "template": "UnPauseSuperchainConfig",
+   "chain_ids": [
+    10
+   ],
+   "executions": [
+    {
+     "tx": "0x758b4196114928b4e43c2f3b6d65e0737dde9f1ed6f346eac16843f5fd3fac74",
+     "block": 22482160,
+     "utc": "2025-05-14 15:01:35",
+     "timestamp": 1747234895,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x41fb1d8c3262e88a056ee3099f5718405cc8cade"
+    }
+   ]
+  },
+  {
+   "task": "013-gas-params-op",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "013-gas-params-op: (Ethereum) Increase gas target : OP Mainnet",
+   "status": "[EXECUTED]",
+   "template": "SystemConfigGasParams",
+   "chain_ids": [
+    10
+   ],
+   "executions": [
+    {
+     "tx": "0x942508d969539505689fb2c1d8feea9473d3fae2aa619d4a470097b7e5c4d105",
+     "block": 22539537,
+     "utc": "2025-05-22 16:14:11",
+     "timestamp": 1747930451,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "014-worldchain-l1pao-transfers",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "014-worldchain-l1pao-transfers: Transfer L1 owners for Worldchain Mainnet (DisputeGameFactory, PermissionlessWETH, PermissionedWETH and L1PAO)",
+   "status": "[CANCELLED]()",
+   "template": "TransferOwners",
+   "chain_ids": [
+    480
+   ],
+   "executions": []
+  },
+  {
+   "task": "015-set-game-implementation-arena-z-swell",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "015-set-game-implementation-arena-z-swell",
+   "status": "[EXECUTED]",
+   "template": "SetDisputeGameImpl",
+   "chain_ids": [
+    1923,
+    7897
+   ],
+   "executions": [
+    {
+     "tx": "0x7d2a05b891c480b91a472a135e867e6a94ba196439e47e76cc08954401a9b224",
+     "block": 22782703,
+     "utc": "2025-06-25 16:39:47",
+     "timestamp": 1750869587,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5"
+    }
+   ]
+  },
+  {
+   "task": "016-U16-enable-dpm",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "016-U16-enable-dpm: Enable New Deputy Pause Module on Ethereum Mainnet",
+   "status": "[EXECUTED]",
+   "template": "EnableDeputyPauseModuleTemplate",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x7e5703b1ab5d09aa107aa1a5fb2c7808c32023bd76048c192139bdb9b5dda092",
+     "block": 22990706,
+     "utc": "2025-07-24 18:08:59",
+     "timestamp": 1753380539,
+     "receipt_status": "0x1",
+     "to": "0x09f7150d8c019bef34450d6920f6b3608cefdaf2",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "017-U16-opcm-upgrade-v400-op-ink",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "017-U16-opcm-upgrade-v400-op-ink: Upgrade 16: OP Mainnet and Ink",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV400",
+   "chain_ids": [
+    10,
+    57073
+   ],
+   "executions": [
+    {
+     "tx": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+     "block": 22990599,
+     "utc": "2025-07-24 17:47:23",
+     "timestamp": 1753379243,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "018-U16-opcm-upgrade-v400-soneium",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "018-U16-opcm-upgrade-v400-soneium: Upgrade 16: Soneium",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV400",
+   "chain_ids": [
+    1868
+   ],
+   "executions": [
+    {
+     "tx": "0xdd89a3933dea0f44e1a461441f3c78e341702e9a4148784780644cdac90148c2",
+     "block": 22990670,
+     "utc": "2025-07-24 18:01:35",
+     "timestamp": 1753380095,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "019-U16-opcm-upgrade-v400-uni",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "019-U16-opcm-upgrade-v400-uni: Upgrade 16: Unichain",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV400",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0x1f1f283ad793a901a94e11241d46b87cd264b2e276a690b9554148ba56c57959",
+     "block": 22990722,
+     "utc": "2025-07-24 18:12:11",
+     "timestamp": 1753380731,
+     "receipt_status": "0x1",
+     "to": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+     "from": "0x34154426ab842aaaefda28f3f5d103dd0b0fe37a"
+    }
+   ]
+  },
+  {
+   "task": "020-U16-remove-dgm",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "020-U16-remove-dgm: Remove Deputy Guardian Module on Ethereum Mainnet",
+   "status": "[EXECUTED]",
+   "template": "DisableModule",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x7e5703b1ab5d09aa107aa1a5fb2c7808c32023bd76048c192139bdb9b5dda092",
+     "block": 22990706,
+     "utc": "2025-07-24 18:08:59",
+     "timestamp": 1753380539,
+     "receipt_status": "0x1",
+     "to": "0x09f7150d8c019bef34450d6920f6b3608cefdaf2",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "021-U16-remove-dpm",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "021-U16-remove-dpm: Remove Old Deputy Pause Module on Ethereum Mainnet",
+   "status": "[EXECUTED]",
+   "template": "DisableModule",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xd770166ff63183dae868ca11852268115035d2f74574b55b8e1ecd552da80378",
+     "block": 22990723,
+     "utc": "2025-07-24 18:12:23",
+     "timestamp": 1753380743,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "023-U16a-opcm-upgrade-v410-op-soneium-ink",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "023-U16a-opcm-upgrade-v410-op-soneium-ink: Upgrade 16a: OP, Soneium, Ink on Mainnet",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV410",
+   "chain_ids": [
+    10,
+    1868,
+    57073
+   ],
+   "executions": [
+    {
+     "tx": "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329",
+     "block": 23491328,
+     "utc": "2025-10-02 16:35:23",
+     "timestamp": 1759422923,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "024-U16a-opcm-upgrade-v410-unichain",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "024-U16a-opcm-upgrade-v410-unichain: Upgrade 16a: Unichain",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV410",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0xc98240172fa3950ec9c62f32cc09d0eb0ed21684b02f1b2677357674cda64ca5",
+     "block": 23492571,
+     "utc": "2025-10-02 20:45:59",
+     "timestamp": 1759437959,
+     "receipt_status": "0x1",
+     "to": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+     "from": "0x34154426ab842aaaefda28f3f5d103dd0b0fe37a"
+    }
+   ]
+  },
+  {
+   "task": "025-zora-main-u13-to-u16a",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "025-zora-main-u13-to-u16a",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV220toV410",
+   "chain_ids": [
+    7777777
+   ],
+   "executions": [
+    {
+     "tx": "0x3c9df2c9f2502ed27df838f21bf474be0544246f8c0c3513a698d81e0c2890ae",
+     "block": 23542337,
+     "utc": "2025-10-09 19:42:23",
+     "timestamp": 1760038943,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5"
+    }
+   ]
+  },
+  {
+   "task": "026-metal-main-u13-to-u16a",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "026-metal-main-u13-to-u16a",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV220toV410",
+   "chain_ids": [
+    1750
+   ],
+   "executions": [
+    {
+     "tx": "0x9c091d94c0f98efb21730224c89e59e50d344b74e677ee6de2b91d2a16f565d2",
+     "block": 23542433,
+     "utc": "2025-10-09 20:01:35",
+     "timestamp": 1760040095,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5"
+    }
+   ]
+  },
+  {
+   "task": "027-mode-main-u13-to-u16a",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "027-mode-main-u13-to-u16a",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV220toV410",
+   "chain_ids": [
+    34443
+   ],
+   "executions": [
+    {
+     "tx": "0x3ac45d51da454abfba887b5ab1dae831a78e068615893fb62d8034437bb17063",
+     "block": 23542497,
+     "utc": "2025-10-09 20:14:23",
+     "timestamp": 1760040863,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5"
+    }
+   ]
+  },
+  {
+   "task": "028-arena-z-main-u13-to-u16a",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "028-arena-z-main-u13-to-u16a",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV220toV410",
+   "chain_ids": [
+    7897
+   ],
+   "executions": [
+    {
+     "tx": "0x38010d19d63d834b95936728d49e38dbf71ae7b3a44f555b235b890cd2f40eaf",
+     "block": 23577216,
+     "utc": "2025-10-14 16:45:47",
+     "timestamp": 1760460347,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5"
+    }
+   ]
+  },
+  {
+   "task": "029-swell-main-u13-to-u16a",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "029-swell-main-u13-to-u16a",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV220toV410",
+   "chain_ids": [
+    1923
+   ],
+   "executions": [
+    {
+     "tx": "0x6e9cfd7c22acaf263f9a5afaaa701934c77fa2015b9a65262fe29dee108b092c",
+     "block": 23577231,
+     "utc": "2025-10-14 16:48:47",
+     "timestamp": 1760460527,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5"
+    }
+   ]
+  },
+  {
+   "task": "030-fus-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "030-fus-rotation",
+   "status": "[EXECUTED]",
+   "template": "GnosisSafeRotateSigner",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xc77e3390fe7e322fa64ecc707690d18202e24d1611b1c6a748182f991eb75ea1",
+     "block": 23598809,
+     "utc": "2025-10-17 17:14:47",
+     "timestamp": 1760721287,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "031-fos-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "031-fos-rotation",
+   "status": "[EXECUTED]",
+   "template": "GnosisSafeRotateSigner",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xf77d17f21e1c3a3ace4b8c70e0185a041d287511d935d49cd18424c96e7689bb",
+     "block": 23598829,
+     "utc": "2025-10-17 17:18:47",
+     "timestamp": 1760721527,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "032-U17-main-op-sony-ink",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "032-U17-main-op-sony-ink",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV500",
+   "chain_ids": [
+    10,
+    1868,
+    57073
+   ],
+   "executions": [
+    {
+     "tx": "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5",
+     "block": 23877377,
+     "utc": "2025-11-25 17:46:35",
+     "timestamp": 1764092795,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5"
+    }
+   ]
+  },
+  {
+   "task": "033-U17-main-mmz",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "033-U17-main-mmz",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV500",
+   "chain_ids": [
+    1750,
+    34443,
+    7777777
+   ],
+   "executions": [
+    {
+     "tx": "0x2061f73a8062dbd181576eb95c13749cf82e3a401a013d152230766e9039cd0f",
+     "block": 23878010,
+     "utc": "2025-11-25 19:54:11",
+     "timestamp": 1764100451,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5"
+    }
+   ]
+  },
+  {
+   "task": "034-U17-main-arena-z-swell",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "034-U17-main-arena-z-swell",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV500",
+   "chain_ids": [
+    1923,
+    7897
+   ],
+   "executions": [
+    {
+     "tx": "0xc1c52a6b223c21ad02f12e115b3b872ca858298de141528c019401811fbb822a",
+     "block": 23878150,
+     "utc": "2025-11-25 20:22:23",
+     "timestamp": 1764102143,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5"
+    }
+   ]
+  },
+  {
+   "task": "035-U17-main-unichain",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "035-U17-main-unichain",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV500",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0x7c9e6b65258838fb38bc0bf584cb0c0802bc0dfbbe877a8639880e2ed88b3aa6",
+     "block": 23878509,
+     "utc": "2025-11-25 21:35:35",
+     "timestamp": 1764106535,
+     "receipt_status": "0x1",
+     "to": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+     "from": "0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5"
+    }
+   ]
+  },
+  {
+   "task": "037-rev-share-ink-soneium",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "037-rev-share-ink-soneium: RevShare Upgrade and Setup for Ink and Soneium Mainnets",
+   "status": "[CANCELLED]()",
+   "template": "RevShareUpgradeAndSetup",
+   "chain_ids": [
+    1868,
+    57073
+   ],
+   "executions": []
+  },
+  {
+   "task": "038-fos-safersafes-enable",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "038-fos-safersafes-enable",
+   "status": "[EXECUTED]",
+   "template": "MigrateToLiveness2",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xf1ae77bea001acd7f3355ce971fd992601f467ce0a2305a38b1a82da459b502c",
+     "block": 24292298,
+     "utc": "2026-01-22 19:04:59",
+     "timestamp": 1769108699,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "039-fus-safersafes-enable",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "039-fus-safersafes-enable",
+   "status": "[EXECUTED]",
+   "template": "MigrateToLiveness2",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x5f91ef9e90c0c7f3623cd6361b471f8d9643d67854af7c1906d23790948faf46",
+     "block": 24292330,
+     "utc": "2026-01-22 19:11:23",
+     "timestamp": 1769109083,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "040-U18-op-ink-mmz-arena-swell",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "040-U18-op-ink-mmz-arena-swell",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV600",
+   "chain_ids": [
+    10,
+    1750,
+    1923,
+    7897,
+    34443,
+    57073,
+    7777777
+   ],
+   "executions": [
+    {
+     "tx": "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37",
+     "block": 24421512,
+     "utc": "2026-02-09 20:10:59",
+     "timestamp": 1770667859,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "041-U18-uni",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "041-U18-uni",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV600",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0x5672a02ba8c40bd35c87787ceddff5181c588e697a1924be6ea061af71cbb4ca",
+     "block": 24427874,
+     "utc": "2026-02-10 17:30:23",
+     "timestamp": 1770744623,
+     "receipt_status": "0x1",
+     "to": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "042-U18-soneium",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "042-U18-soneium",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV600",
+   "chain_ids": [
+    1868
+   ],
+   "executions": [
+    {
+     "tx": "0xeba2fc77f814ea5de7fc0e3b1496926483d14cf8541633c04aec9d1fec8eaf9c",
+     "block": 24478557,
+     "utc": "2026-02-17 19:11:11",
+     "timestamp": 1771355471,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "043-fus-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "043-fus-rotation",
+   "status": "[EXECUTED]",
+   "template": "GnosisSafeRotateMultipleSigners",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x30ce04ba3d67b9f3a832df79c3a465a0876ccfe193ccf606cf00a4d8ae6d27a0",
+     "block": 24669856,
+     "utc": "2026-03-16 11:47:23",
+     "timestamp": 1773661643,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "044-fos-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "044-fos-rotation",
+   "status": "[EXECUTED]",
+   "template": "GnosisSafeRotateMultipleSigners",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xd9e4cc21adaf0bf19bdbf4abc65d02c740ac30f6548e2841208c43a08209b43f",
+     "block": 24669863,
+     "utc": "2026-03-16 11:48:47",
+     "timestamp": 1773661727,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "046-rev-share-ink",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "046-rev-share-ink: RevShare Upgrade and Setup for Ink Mainnet",
+   "status": "[CANCELLED]",
+   "template": "RevShareUpgradeAndSetup",
+   "chain_ids": [
+    57073
+   ],
+   "executions": []
+  },
+  {
+   "task": "047-rev-share-soneium",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "047-rev-share-soneium: RevShare Upgrade and Setup for Soneium Mainnet",
+   "status": "[CANCELLED]",
+   "template": "RevShareUpgradeAndSetup",
+   "chain_ids": [
+    1868
+   ],
+   "executions": []
+  },
+  {
+   "task": "048-arena-z-proposer-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "048-arena-z-proposer-rotation",
+   "status": "[EXECUTED]",
+   "template": "SetDisputeGameImpl",
+   "chain_ids": [
+    7897
+   ],
+   "executions": [
+    {
+     "tx": "0xfbcdd181c245cc3e628bb5ba45b5a3d3c07039b0f1a3a5a99b2e9925ff9d5efc",
+     "block": 24776353,
+     "utc": "2026-03-31 08:19:59",
+     "timestamp": 1774945199,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "049-arena-z-fee-vault-update",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "049-arena-z-fee-vault-update",
+   "status": "[EXECUTED]",
+   "template": "UpdateFeeVaultRecipient",
+   "chain_ids": [
+    7897
+   ],
+   "executions": [
+    {
+     "tx": "0x95b7d66aaee99219a8e90b9669d7067c6e69d58692c9efc93d4197c13af84126",
+     "block": 24776372,
+     "utc": "2026-03-31 08:23:47",
+     "timestamp": 1774945427,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "050-fus-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "050-fus-rotation",
+   "status": "[EXECUTED]",
+   "template": "GnosisSafeRotateSigner",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x9592d29403a878a9ad6041a8cac8f0789a160fe4ea7b5cf364aff4a08b5656ee",
+     "block": 25080323,
+     "utc": "2026-05-12 16:46:47",
+     "timestamp": 1778604407,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "051-fos-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "051-fos-rotation",
+   "status": "[EXECUTED]",
+   "template": "GnosisSafeRotateSigner",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xba1b6aecc8dea8cf0ff2ccebfb514033355e4654d1393fe43647abe68670dc5a",
+     "block": 25080342,
+     "utc": "2026-05-12 16:50:35",
+     "timestamp": 1778604635,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "052-deputy-pause-key-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "052-deputy-pause-key-rotation",
+   "status": "[EXECUTED]",
+   "template": "DeputyPauseKeyRotationTemplate",
+   "chain_ids": [
+    10
+   ],
+   "executions": [
+    {
+     "tx": "0x9be0d40037f1a556aafcf1b6fd700005d49552826e27b494c8ddc549685b8b8b",
+     "block": 25080490,
+     "utc": "2026-05-12 17:20:11",
+     "timestamp": 1778606411,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "053-U19-op-ink-mmz-soneium",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "053-U19-op-ink-mmz-soneium",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV700",
+   "chain_ids": [
+    10,
+    1750,
+    1868,
+    34443,
+    57073,
+    7777777
+   ],
+   "executions": [
+    {
+     "tx": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+     "block": 25397811,
+     "utc": "2026-06-25 23:05:47",
+     "timestamp": 1782428747,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "054-U19-unichain",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "054-U19-unichain",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV700",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0xb3c65cbf6285d4b32d576c866fffced1c77747c53163b604e20feb6aad121421",
+     "block": 25475307,
+     "utc": "2026-07-06 18:32:35",
+     "timestamp": 1783362755,
+     "receipt_status": "0x1",
+     "to": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+     "from": "0x34154426ab842aaaefda28f3f5d103dd0b0fe37a"
+    }
+   ]
+  },
+  {
+   "task": "055-gas-limit-op",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "055-gas-limit-op",
+   "status": "[EXECUTED]",
+   "template": "SystemConfigGasLimit",
+   "chain_ids": [
+    10
+   ],
+   "executions": [
+    {
+     "tx": "0x8738995c1d3c654b0c919e39456a215db650dd75eae2feb13e463725c8362af7",
+     "block": 25488918,
+     "utc": "2026-07-08 16:03:11",
+     "timestamp": 1783526591,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "056-fus-rotation-1",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "056-fus-rotation-1",
+   "status": "[EXECUTED]",
+   "template": "GnosisSafeRotateSigner",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xbb0cece7d5f45ce07894be038b83af893b894a3337a5dda22b79b46097c4ce96",
+     "block": 25546763,
+     "utc": "2026-07-16 17:36:23",
+     "timestamp": 1784223383,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "057-fus-rotation-2",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "057-fus-rotation-2",
+   "status": "[EXECUTED]",
+   "template": "GnosisSafeRotateSigner",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x087cbb21ebc9739c7afed878236a9cba9b1e129adc6a976fefe5571b88452ce8",
+     "block": 25546776,
+     "utc": "2026-07-16 17:38:59",
+     "timestamp": 1784223539,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "058-fos-rotation-1",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "058-fos-rotation-1",
+   "status": "[EXECUTED]",
+   "template": "GnosisSafeRotateSigner",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xd3a6afeef57d1e1b7fde86a4b0dd5de6fb6747cec75d6d9edecf54e7eacb19ea",
+     "block": 25546785,
+     "utc": "2026-07-16 17:40:47",
+     "timestamp": 1784223647,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "059-fos-rotation-2",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "059-fos-rotation-2",
+   "status": "[EXECUTED]",
+   "template": "GnosisSafeRotateSigner",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x86366bc8466b0b45ece66d277ec47f988cfad38a3147c6d71b623e104d9d2ab5",
+     "block": 25546795,
+     "utc": "2026-07-16 17:42:47",
+     "timestamp": 1784223767,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "060-ink-set-batcher-unsafe-signer",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "060-ink-set-batcher-unsafe-signer",
+   "status": "[EXECUTED]",
+   "template": "SetBatcherAndOrSigner",
+   "chain_ids": [
+    57073
+   ],
+   "executions": [
+    {
+     "tx": "0x482ce168eabf50144cb2377bfc9c3dd8570e4f04a96fc0c9d5e88f146745dc8d",
+     "block": 25631821,
+     "utc": "2026-07-28 14:08:59",
+     "timestamp": 1785247739,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "061-ink-proposer-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "061-ink-proposer-rotation",
+   "status": "[EXECUTED]",
+   "template": "SetDisputeGameArgs",
+   "chain_ids": [
+    57073
+   ],
+   "executions": [
+    {
+     "tx": "0x6065d3a2decf0b16953bc586a209c01b4336dc2ff59bcb050eaf436659ad61fe",
+     "block": 25674914,
+     "utc": "2026-08-03 14:17:35",
+     "timestamp": 1785766655,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "062-ink-fee-vault-recipient-update",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "062-ink-fee-vault-recipient-update",
+   "status": "[EXECUTED]",
+   "template": "SetFeeVaultConfig",
+   "chain_ids": [
+    57073
+   ],
+   "executions": [
+    {
+     "tx": "0xe3f20296d95ff92411cb62a242f84a1eb1bcc2e38af7a2f955bc4b44a25c5561",
+     "block": 25674961,
+     "utc": "2026-08-03 14:26:59",
+     "timestamp": 1785767219,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "063-swell-l1-ownership-transfers",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "063-swell-l1-ownership-transfers: Transfer L1 owners for Swell Mainnet (ProxyAdmin + DisputeGameFactory)",
+   "status": "[EXECUTED]",
+   "template": "TransferOwners",
+   "chain_ids": [
+    1923
+   ],
+   "executions": [
+    {
+     "tx": "0xc9051994cae6cd1aa668e73f4b768a6135da4f6504aca1d7740f460841ab6dcb",
+     "block": 25731698,
+     "utc": "2026-08-11 12:16:47",
+     "timestamp": 1786450607,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "064-swell-l2pao-transfer",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "064-swell-l2pao-transfer: Transfer L2 ProxyAdmin Owner for Swell Mainnet",
+   "status": "[EXECUTED]",
+   "template": "TransferL2PAOFromL1",
+   "chain_ids": [
+    1923
+   ],
+   "executions": [
+    {
+     "tx": "0x99ed59760859782943f3598836a35b100fe93acd24fe7370bce174eccb38f50d",
+     "block": 25731713,
+     "utc": "2026-08-11 12:19:47",
+     "timestamp": 1786450787,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0x1d0519eed308bcd49e4ebc149284f83ebc275284"
+    }
+   ]
+  },
+  {
+   "task": "065-ink-system-config-owner-to-fus",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "065-ink-system-config-owner-to-fus",
+   "status": "[EXECUTED]",
+   "template": "TransferSystemConfigOwnership",
+   "chain_ids": [
+    57073
+   ],
+   "executions": [
+    {
+     "tx": "0xbf75cc41981ecb8481f3b114697310490b72f96c74fcc34e33b57433b6d9e756",
+     "block": 25834840,
+     "utc": "2026-08-25 21:15:59",
+     "timestamp": 1787692559,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "066-soneium-fee-vault-recipient-update",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "066-soneium-fee-vault-recipient-update",
+   "status": "[CANCELLED]",
+   "template": "SetFeeVaultConfig",
+   "chain_ids": [
+    1868
+   ],
+   "executions": []
+  },
+  {
+   "task": "067-mmzd-l1-ownership-transfers",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "067-mmzd-l1-ownership-transfers",
+   "status": "[EXECUTED]",
+   "template": "TransferOwners",
+   "chain_ids": [
+    1750,
+    34443,
+    55378,
+    7777777
+   ],
+   "executions": [
+    {
+     "tx": "0xa5888be651d314fc0de435d6bef7f2c934c2c9f0328cb6af7b86210d966ac551",
+     "block": 25976232,
+     "utc": "2026-09-14 14:15:23",
+     "timestamp": 1789395323,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "068-mmzd-l2pao-transfer",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "068-mmzd-l2pao-transfer",
+   "status": "[EXECUTED]",
+   "template": "TransferL2PAOFromL1",
+   "chain_ids": [
+    1750,
+    34443,
+    55378,
+    7777777
+   ],
+   "executions": [
+    {
+     "tx": "0xf1609a0ce7f11e663dcbd2232b23471580ac344265e15ecd0ecab91549fbb71a",
+     "block": 25976279,
+     "utc": "2026-09-14 14:24:47",
+     "timestamp": 1789395887,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "069-unichain-l1-ownership-transfers",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "069-unichain-l1-ownership-transfers",
+   "status": "[EXECUTED]",
+   "template": "TransferOwners",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0xfca98b14ae7163d444cd17285c7f97e1fb76db00cd971bae847a8af5f8ecb77f",
+     "block": 25976344,
+     "utc": "2026-09-14 14:37:59",
+     "timestamp": 1789396679,
+     "receipt_status": "0x1",
+     "to": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "070-unichain-l2pao-transfer",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "070-unichain-l2pao-transfer",
+   "status": "[EXECUTED]",
+   "template": "TransferL2PAOFromL1",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0x53c072f1be2e42d2089aa76b6f769a378a3d12200a4d7b7c11606df2c7e0a8e2",
+     "block": 25976818,
+     "utc": "2026-09-14 16:13:35",
+     "timestamp": 1789402415,
+     "receipt_status": "0x1",
+     "to": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "071-U20-op-ink-soneium-uni",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "071-U20-op-ink-soneium-uni",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV800",
+   "chain_ids": [
+    10,
+    130,
+    1868,
+    57073
+   ],
+   "executions": [
+    {
+     "tx": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+     "block": 26048619,
+     "utc": "2026-09-24 16:51:23",
+     "timestamp": 1790268683,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "072-soneium-fee-vault-recipient-update",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "072-soneium-fee-vault-recipient-update",
+   "status": "[EXECUTED]",
+   "template": "SetFeeVaultConfig",
+   "chain_ids": [
+    1868
+   ],
+   "executions": [
+    {
+     "tx": "0x677b799289e2ea11d2b4f835533008f454b183301afcc6a0a1e0488c350a96b7",
+     "block": 26077684,
+     "utc": "2026-09-28 18:16:11",
+     "timestamp": 1790619371,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "073-gas-limit-ink",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "073-gas-limit-ink",
+   "status": "[EXECUTED]",
+   "template": "SystemConfigGasLimit",
+   "chain_ids": [
+    57073
+   ],
+   "executions": [
+    {
+     "tx": "0xd06981d54dc004fb96a406592896a2ae8cc286a9fe67423c9e050eab49542782",
+     "block": 26083470,
+     "utc": "2026-09-29 13:37:59",
+     "timestamp": 1790689079,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "074-fus-signer-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "074-fus-signer-rotation",
+   "status": "[EXECUTED]",
+   "template": "GnosisSafeRotateSigner",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0x2ff5d469ee07415929af357055995e88aeaa6d48b157c5b9d7434a4576c7b58f",
+     "block": 26235250,
+     "utc": "2026-10-20 17:20:35",
+     "timestamp": 1792516835,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "075-fos-signer-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "075-fos-signer-rotation",
+   "status": "[EXECUTED]",
+   "template": "GnosisSafeRotateSigner",
+   "chain_ids": [],
+   "executions": [
+    {
+     "tx": "0xeae40fcdb8a5bec493a2615bc80bfe92506ed6f61a6a17ef77347ee45e22d6a5",
+     "block": 26235275,
+     "utc": "2026-10-20 17:25:35",
+     "timestamp": 1792517135,
+     "receipt_status": "0x1",
+     "to": "0x9ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "076-unichain-l1splitter-transfer-ownership",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "076-unichain-l1splitter-transfer-ownership",
+   "status": "[EXECUTED]",
+   "template": "SetL1SplitterConfig",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0x0eb4257bde5d956556d575219770ceb19988936a55d237e57011b5a24f7fa993",
+     "block": 26299262,
+     "utc": "2026-10-29 15:21:47",
+     "timestamp": 1793287307,
+     "receipt_status": "0x1",
+     "to": "0x9245d5d10aa8a842b31530de71ea86c0760ca1b1",
+     "from": "0x34154426ab842aaaefda28f3f5d103dd0b0fe37a"
+    }
+   ]
+  },
+  {
+   "task": "077-unichain-set-batcher-unsafe-signer",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "077-unichain-set-batcher-unsafe-signer",
+   "status": "[EXECUTED]",
+   "template": "SetBatcherAndOrSigner",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0x33426280adce8bce41f1096487de3806d02d8b01347cb49b198ff12cc1960983",
+     "block": 26299498,
+     "utc": "2026-10-29 16:08:59",
+     "timestamp": 1793290139,
+     "receipt_status": "0x1",
+     "to": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "078-unichain-proposer-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "078-unichain-proposer-rotation",
+   "status": "[EXECUTED]",
+   "template": "SetDisputeGameArgs",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0x626a5b99524a4602fdb8e373f2148e88fb9e7bf48740a804c35542bfc532de2f",
+     "block": 26299517,
+     "utc": "2026-10-29 16:12:47",
+     "timestamp": 1793290367,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "079-unichain-l1splitter-accept-and-configure",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "079-unichain-l1splitter-accept-and-configure",
+   "status": "[EXECUTED]",
+   "template": "SetL1SplitterConfig",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0xafae3ba7862db7cfa3e74842cab6b35e67b30e0fcf3afff30916d3ca0d100372",
+     "block": 26299689,
+     "utc": "2026-10-29 16:47:11",
+     "timestamp": 1793292431,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "080-unichain-operator-fee-vault",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "080-unichain-operator-fee-vault",
+   "status": "[EXECUTED]",
+   "template": "SetFeeVaultConfig",
+   "chain_ids": [
+    130
+   ],
+   "executions": [
+    {
+     "tx": "0x2a2755b35a2cceb0f142a264c81df0e28de1608ab1f4ed90be3fbeddc0d7ff81",
+     "block": 26299707,
+     "utc": "2026-10-29 16:50:47",
+     "timestamp": 1793292647,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "082-op-mainnet-set-batcher",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "082-op-mainnet-set-batcher",
+   "status": "[CANCELLED]",
+   "template": "SetBatcherAndOrSigner",
+   "chain_ids": [
+    10
+   ],
+   "executions": []
+  },
+  {
+   "task": "083-op-mainnet-proposer-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "083-op-mainnet-proposer-rotation",
+   "status": "[CANCELLED]",
+   "template": "SetDisputeGameArgs",
+   "chain_ids": [
+    10
+   ],
+   "executions": []
+  },
+  {
+   "task": "084-U21-op-ink-soneium-uni",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "084-U21-op-ink-soneium-uni",
+   "status": "[EXECUTED]",
+   "template": "OPCMUpgradeV900",
+   "chain_ids": [
+    10,
+    130,
+    1868,
+    57073
+   ],
+   "executions": [
+    {
+     "tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+     "block": 26430859,
+     "utc": "2026-11-16 23:23:59",
+     "timestamp": 1794871439,
+     "receipt_status": "0x1",
+     "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+     "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2"
+    }
+   ]
+  },
+  {
+   "task": "085-soneium-proposer-rotation",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "085-soneium-proposer-rotation",
+   "status": "[READY TO SIGN]",
+   "template": "SetDisputeGameArgs",
+   "chain_ids": [
+    1868
+   ],
+   "executions": []
+  },
+  {
+   "task": "086-soneium-set-batcher-unsafe-signer",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "086-soneium-set-batcher-unsafe-signer",
+   "status": "[READY TO SIGN]",
+   "template": "SetBatcherAndOrSigner",
+   "chain_ids": [
+    1868
+   ],
+   "executions": []
+  },
+  {
+   "task": "087-soneium-fee-vault",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "087-soneium-fee-vault",
+   "status": "[READY TO SIGN]",
+   "template": "SetFeeVaultConfig",
+   "chain_ids": [
+    1868
+   ],
+   "executions": []
+  },
+  {
+   "task": "088-soneium-revert-batcher-unsafe-signer",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "088-soneium-revert-batcher-unsafe-signer",
+   "status": "[CONTINGENCY TASK, SIGN AS NEEDED]",
+   "template": "SetBatcherAndOrSigner",
+   "chain_ids": [
+    1868
+   ],
+   "executions": []
+  },
+  {
+   "task": "089-op-mainnet-set-unsafe-signer",
+   "source": "superchain-ops@903cefaa (main, 2026-11-16) src/tasks/eth",
+   "title": "089-op-mainnet-set-unsafe-signer",
+   "status": "[CANCELLED]",
+   "template": "SetBatcherAndOrSigner",
+   "chain_ids": [
+    10
+   ],
+   "executions": []
+  }
+ ]
+}

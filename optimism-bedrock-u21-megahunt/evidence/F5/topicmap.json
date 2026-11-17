@@ -1,0 +1,6156 @@
+{
+ "0x9465fa0c962cc76958e6373a993326400c1c94f8be2fe3a952adfa7f60b2ea26": {
+  "sig": "AddedOwner(address)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "owner"
+  ]
+ },
+ "0x9416a153a346f93d95f94b064ae3f148b6460473c6e82b3f9fc2521b873fcd6c": {
+  "sig": "AddressSet(string,address,address)",
+  "contracts": [
+   "AddressManager"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "name",
+   "newAddress",
+   "oldAddress"
+  ]
+ },
+ "0x7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f": {
+  "sig": "AdminChanged(address,address)",
+  "contracts": [
+   "Proxy"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "previousAdmin",
+   "newAdmin"
+  ]
+ },
+ "0x1f825eb70eaf5316250772976ede89ef6aedf430d2d459a72a5d9611fb00981c": {
+  "sig": "AnchorNotUpdated(address)",
+  "contracts": [
+   "AnchorStateRegistry"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "game"
+  ]
+ },
+ "0x474f180d74ea8751955ee261c93ff8270411b180408d1014c49f552c92a4d11e": {
+  "sig": "AnchorUpdated(address)",
+  "contracts": [
+   "AnchorStateRegistry"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "game"
+  ]
+ },
+ "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": {
+  "sig": "Approval(address,address,uint256)",
+  "contracts": [
+   "DelayedWETH",
+   "GovernanceToken",
+   "LegacyERC20ETH",
+   "LegacyMintableERC20",
+   "OptimismMintableERC20",
+   "OptimismMintableERC721",
+   "OptimismSuperchainERC20",
+   "Optimist",
+   "SuperchainWETH",
+   "WETH",
+   "WETH9",
+   "WETH98"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "owner",
+   "spender",
+   "value"
+  ]
+ },
+ "0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31": {
+  "sig": "ApprovalForAll(address,address,bool)",
+  "contracts": [
+   "OptimismMintableERC721",
+   "Optimist"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "owner",
+   "operator",
+   "approved"
+  ]
+ },
+ "0xf2a0eb156472d1440255b0d7c1e19cc07115d1051fe605b0dce69acfec884d9c": {
+  "sig": "ApproveHash(bytes32,address)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "approvedHash",
+   "owner"
+  ]
+ },
+ "0x28710dfecab43d1e29e02aa56b2e1e610c0bae19135c9cf7a83a1adb6df96d85": {
+  "sig": "AttestationCreated(address,address,bytes32,bytes)",
+  "contracts": [
+   "AttestationStation"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "creator",
+   "about",
+   "key",
+   "val"
+  ]
+ },
+ "0x8bf46bf4cfd674fa735a3d63ec1c9ad4153f033c290341f3a588b75685141b35": {
+  "sig": "Attested(address,address,bytes32,bytes32)",
+  "contracts": [
+   "EAS"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false,
+   true
+  ],
+  "names": [
+   "recipient",
+   "attester",
+   "uid",
+   "schemaUID"
+  ]
+ },
+ "0xa448afda7ea1e3a7a10fcab0c29fe9a9dd85791503bf0171f281521551c7ec05": {
+  "sig": "BalanceChanged(address,uint256)",
+  "contracts": [
+   "DataAvailabilityChallenge"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "account",
+   "balance"
+  ]
+ },
+ "0x8493e706a7e8e8fe92f1276d416d1bf108bf763aa6058953d8bd553b75aef8dc": {
+  "sig": "BeneficiaryAllowlistUpdated(address,address,bool)",
+  "contracts": [
+   "PolicyEngineStaking"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "beneficiary",
+   "staker",
+   "allowed"
+  ]
+ },
+ "0x1a6590bd0cabbfcc7c86bef99e1034054e179905cfcc294598fcd426c0922442": {
+  "sig": "BeneficiaryRemoved(address,address)",
+  "contracts": [
+   "PolicyEngineStaking"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "staker",
+   "previousBeneficiary"
+  ]
+ },
+ "0x2906d223dc4163733bb374af8641c7e9ae256e2bae53c90e0c9a2be2e611ae44": {
+  "sig": "BeneficiarySet(address,address)",
+  "contracts": [
+   "PolicyEngineStaking"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "staker",
+   "beneficiary"
+  ]
+ },
+ "0xcc16f5dbb4873280815c1ee09dbd06736cffcc184412cf7a71a0fdb75d397ca5": {
+  "sig": "Burn(address,uint256)",
+  "contracts": [
+   "LegacyERC20ETH",
+   "LegacyMintableERC20",
+   "OptimismMintableERC20",
+   "OptimismMintableERC721",
+   "OptimismSuperchainERC20"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "account",
+   "amount"
+  ]
+ },
+ "0x4eda179760b4e68650058376d4acef78e953221317450d29b4920e6d2836944c": {
+  "sig": "CancellationThresholdUpdated(address,uint256,uint256)",
+  "contracts": [
+   "SaferSafes"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "safe",
+   "oldThreshold",
+   "newThreshold"
+  ]
+ },
+ "0xadfa6511c5a9b5ac1adc5e4e0ca637c465f24ab56c1bd255a083e0023e3b7c42": {
+  "sig": "ChallengeCancelled(address)",
+  "contracts": [
+   "SaferSafes"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "safe"
+  ]
+ },
+ "0x3eb9241ca06793ab672590e858d0977206f824e7367806f94a90af391d275d33": {
+  "sig": "ChallengeStarted(address,uint256)",
+  "contracts": [
+   "SaferSafes"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "safe",
+   "challengeStartTime"
+  ]
+ },
+ "0xc5d8c630ba2fdacb1db24c4599df78c7fb8cf97b5aecde34939597f6697bb1ad": {
+  "sig": "ChallengeStatusChanged(uint256,bytes,uint8)",
+  "contracts": [
+   "DataAvailabilityChallenge"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "challengedBlockNumber",
+   "challengedCommitment",
+   "status"
+  ]
+ },
+ "0xdfdecb71eb0580c9263c867bc6de9dd6f859cc6a6ee33d47e505904f1d5601c9": {
+  "sig": "ChallengeSucceeded(address,address)",
+  "contracts": [
+   "SaferSafes"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "safe",
+   "fallbackOwner"
+  ]
+ },
+ "0x98027b38153f995c4b802a5c7e6365bee3addb25af6b29818c0c304684d8052c": {
+  "sig": "Challenged(address)",
+  "contracts": [
+   "OPSuccinctFaultDisputeGame",
+   "ZKDisputeGame"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "challenger"
+  ]
+ },
+ "0x5ac6c46c93c8d0e53714ba3b53db3e7c046da994313d7ed0d192028bc7c228b0": {
+  "sig": "ChangedFallbackHandler(address)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "handler"
+  ]
+ },
+ "0x1151116914515bc0891ff9047a6cb32cf902546f83066499bcf8ba33d2353fa2": {
+  "sig": "ChangedGuard(address)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "guard"
+  ]
+ },
+ "0x610f7ff2b304ae8903c3de74c60c6ab1f7d6226b3f52c5161905bb5ad4039c93": {
+  "sig": "ChangedThreshold(uint256)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "threshold"
+  ]
+ },
+ "0xb67ff58b33060fd371a35ae2d9f1c3cdaec9b8197969f6efe2594a1ff4ba68c6": {
+  "sig": "Checkpoint(uint256,bytes32,uint64)",
+  "contracts": [
+   "BlockOracle"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   true
+  ],
+  "names": [
+   "blockNumber",
+   "blockHash",
+   "childTimestamp"
+  ]
+ },
+ "0x1d2b0bda21d56b8bd12d4f94ebacffdfb35f5e226f84b461103bb8beab6353be": {
+  "sig": "ConfigUpdate(uint256,uint8,bytes)",
+  "contracts": [
+   "ProtocolVersions",
+   "SystemConfig",
+   "SystemConfigInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "version",
+   "updateType",
+   "data"
+  ]
+ },
+ "0x7b743789cff01dafdeae47739925425aab5dfd02d0c8229e4a508bcd2b9f42bb": {
+  "sig": "ConfigUpdate(uint8,bytes)",
+  "contracts": [
+   "SuperchainConfig"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "updateType",
+   "data"
+  ]
+ },
+ "0xf98522c4d7ccb9de6d7bb8395a567bd90003fe876d577e4d0fd4b53e1ddfedf8": {
+  "sig": "Converted(address,address,address,uint256)",
+  "contracts": [
+   "L2StandardBridgeInterop"
+  ],
+  "versions": [
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "from",
+   "to",
+   "caller",
+   "amount"
+  ]
+ },
+ "0x017c33ab728c93e2be949ec7e4a35b76d607957c5fac4253f5d623b4a3b13036": {
+  "sig": "CrosschainBurn(address,uint256)",
+  "contracts": [
+   "OptimismSuperchainERC20",
+   "SuperchainWETH"
+  ],
+  "versions": [
+   "v1.8.0"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "from",
+   "amount"
+  ]
+ },
+ "0xb90795a66650155983e242cac3e1ac1a4dc26f8ed2987f3ce416a34e00111fd4": {
+  "sig": "CrosschainBurn(address,uint256,address)",
+  "contracts": [
+   "OptimismSuperchainERC20",
+   "SuperchainWETH"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   false,
+   true
+  ],
+  "names": [
+   "from",
+   "amount",
+   "sender"
+  ]
+ },
+ "0x7ca16db12dad0e1c536f8062fd9e2e4fbb3d1a503b59df12a0cfa9f96abf1c59": {
+  "sig": "CrosschainMint(address,uint256)",
+  "contracts": [
+   "OptimismSuperchainERC20",
+   "SuperchainWETH"
+  ],
+  "versions": [
+   "v1.8.0"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "to",
+   "amount"
+  ]
+ },
+ "0xde22baff038e3a3e08407cbdf617deed74e869a7ba517df611e33131c6e6ea04": {
+  "sig": "CrosschainMint(address,uint256,address)",
+  "contracts": [
+   "OptimismSuperchainERC20",
+   "SuperchainWETH"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   false,
+   true
+  ],
+  "names": [
+   "to",
+   "amount",
+   "sender"
+  ]
+ },
+ "0xebf28bfb587e28dfffd9173cf71c32ba5d3f0544a0117b5539c9b274a5bba2a8": {
+  "sig": "DelayActivated(uint256)",
+  "contracts": [
+   "DelayedVetoable"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "delay"
+  ]
+ },
+ "0x3134e8a2e6d97e929a7e54011ea5485d7d196dd5f0ba4d4ef95803e8e3fc257f": {
+  "sig": "DelegateChanged(address,address,address)",
+  "contracts": [
+   "GovernanceToken"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true
+  ],
+  "names": [
+   "delegator",
+   "fromDelegate",
+   "toDelegate"
+  ]
+ },
+ "0xdec2bacdd2f05b59de34da9b523dff8be42e5e38e818c82fdb0bae774387a724": {
+  "sig": "DelegateVotesChanged(address,uint256,uint256)",
+  "contracts": [
+   "GovernanceToken"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "delegate",
+   "previousBalance",
+   "newBalance"
+  ]
+ },
+ "0x754553d16dd99693ae11c457214cb1baa77b15c7b02cea5515370dc637e050f0": {
+  "sig": "DependencyAdded(uint256)",
+  "contracts": [
+   "L1BlockInterop"
+  ],
+  "versions": [
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "chainId"
+  ]
+ },
+ "0xc96df06add4aa6dba310cd93d0b93d7b645252f40e11fa6089731c841315cd89": {
+  "sig": "DependencyRemoved(uint256)",
+  "contracts": [
+   "L1BlockInterop"
+  ],
+  "versions": [
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "chainId"
+  ]
+ },
+ "0x3305d4d3ab19e5db9b298d307fd2ed70aa0b3a8cc77814f50b75998296755595": {
+  "sig": "Deployed(uint256,address)",
+  "contracts": [
+   "OPStackManager"
+  ],
+  "versions": [
+   "v1.6.0"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "l2ChainId",
+   "systemConfig"
+  ]
+ },
+ "0xb40fb1137b92aa97efb20f29c17d36c5947aac681c3315ba854b0232f8349542": {
+  "sig": "Deployed(uint256,address,bytes)",
+  "contracts": [
+   "OPContractsManager",
+   "OPContractsManagerDeployer",
+   "OPContractsManagerDeployerInterop",
+   "OPContractsManagerInterop",
+   "OPPrestateUpdater"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "l2ChainId",
+   "deployer",
+   "deployOutput"
+  ]
+ },
+ "0x9fbdf97c6b496bf20189c3c23d0640336fce48e18810c9b84558ec31de0ab9b0": {
+  "sig": "Deployed(uint256,uint256,address,bytes)",
+  "contracts": [
+   "OPContractsManager",
+   "OPContractsManagerInterop"
+  ],
+  "versions": [
+   "v1.8.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "outputVersion",
+   "l2ChainId",
+   "deployer",
+   "deployOutput"
+  ]
+ },
+ "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c": {
+  "sig": "Deposit(address,uint256)",
+  "contracts": [
+   "DelayedWETH",
+   "SuperchainWETH",
+   "WETH",
+   "WETH9",
+   "WETH98"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "dst",
+   "wad"
+  ]
+ },
+ "0xb0444523268717a02698be47d0803aa7468c00acbed2f8bd93a0459cde61dd89": {
+  "sig": "DepositFinalized(address,address,address,address,uint256,bytes)",
+  "contracts": [
+   "L2StandardBridge",
+   "L2StandardBridgeInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "l1Token",
+   "l2Token",
+   "from",
+   "to",
+   "amount",
+   "extraData"
+  ]
+ },
+ "0x89e2d926664c1e84d5296726eccf4dba291671697e5b54313d96e989f9659691": {
+  "sig": "DeputyGuardianModuleSet(address)",
+  "contracts": [
+   "DeputyPauseModule"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "deputyGuardianModule"
+  ]
+ },
+ "0x6b5500f6cd2cd4a29ab2c706a6c65833d0633a568f7263460775cebcc8e9a99b": {
+  "sig": "DeputySet(address)",
+  "contracts": [
+   "DeputyPauseModule"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "deputy"
+  ]
+ },
+ "0xaab4fa2b463f581b2b32cb3b7e3b704b9ce37cc209b5fb4d77e593ace4054276": {
+  "sig": "DisabledModule(address)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "module"
+  ]
+ },
+ "0x192c289026d59a41a27f5aea08f3969b57931b0589202d14f4368cded95d3cda": {
+  "sig": "DisputeGameBlacklisted(address)",
+  "contracts": [
+   "AnchorStateRegistry",
+   "DeputyGuardianModule",
+   "OptimismPortal2",
+   "OptimismPortalInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "disputeGame"
+  ]
+ },
+ "0x5b565efe82411da98814f356d0e7bcb8f0219b8d970307c5afb4a6903a8b2e35": {
+  "sig": "DisputeGameCreated(address,uint32,bytes32)",
+  "contracts": [
+   "DisputeGameFactory"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true
+  ],
+  "names": [
+   "disputeProxy",
+   "gameType",
+   "rootClaim"
+  ]
+ },
+ "0xfad0599ff449d8d9685eadecca8cb9e00924c5fd8367c1c09469824939e1ffec": {
+  "sig": "DisputeGameCreated(address,uint8,bytes32)",
+  "contracts": [
+   "DisputeGameFactory"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   true
+  ],
+  "names": [
+   "disputeProxy",
+   "gameType",
+   "rootClaim"
+  ]
+ },
+ "0x2cebdf1cc706a50e1b28bf2fc5cfbd7204747a3b82439b85721a474df3a355a4": {
+  "sig": "Drip(string,bytes32,uint256,address)",
+  "contracts": [
+   "Faucet"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false,
+   true
+  ],
+  "names": [
+   "authModule",
+   "userId",
+   "amount",
+   "recipient"
+  ]
+ },
+ "0xe38d8d98e6cc66f6f520d483c6c5a89289681f897799c4c29d767cf57e76d9a6": {
+  "sig": "DripCreated(string,string,(bool,uint256,address,bytes,(address,bytes,uint256)[]))",
+  "contracts": [
+   "Drippie"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "nameref",
+   "name",
+   "config"
+  ]
+ },
+ "0xea21435419aad9c54a9d90e2522b6f60bd566401f36fcef661f5f5a28cc0d2c6": {
+  "sig": "DripExecuted(string,string,address,uint256)",
+  "contracts": [
+   "Drippie"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "nameref",
+   "name",
+   "executor",
+   "timestamp"
+  ]
+ },
+ "0x407cb3ad05e60ec498fb39417c7a4f6b82d5ba80f82fe512a37b02c93181a2a1": {
+  "sig": "DripStatusUpdated(string,string,uint8)",
+  "contracts": [
+   "Drippie"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "nameref",
+   "name",
+   "status"
+  ]
+ },
+ "0x0a6387c9ea3628b88a633bb4f3b151770f70085117a15f9bf3787cda53f13d31": {
+  "sig": "EIP712DomainChanged()",
+  "contracts": [
+   "DeputyPauseModule"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [],
+  "names": []
+ },
+ "0xd59c65b35445225835c83f50b6ede06a7be047d22e357073e250d9af537518cd": {
+  "sig": "ERC20BridgeFinalized(address,address,address,address,uint256,bytes)",
+  "contracts": [
+   "L1StandardBridge",
+   "L2StandardBridge",
+   "L2StandardBridgeInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "localToken",
+   "remoteToken",
+   "from",
+   "to",
+   "amount",
+   "extraData"
+  ]
+ },
+ "0x7ff126db8024424bbfd9826e8ab82ff59136289ea440b04b39a0df1b03b9cabf": {
+  "sig": "ERC20BridgeInitiated(address,address,address,address,uint256,bytes)",
+  "contracts": [
+   "L1StandardBridge",
+   "L2StandardBridge",
+   "L2StandardBridgeInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "localToken",
+   "remoteToken",
+   "from",
+   "to",
+   "amount",
+   "extraData"
+  ]
+ },
+ "0x718594027abd4eaed59f95162563e0cc6d0e8d5b86b1c7be8b1b0ac3343d0396": {
+  "sig": "ERC20DepositInitiated(address,address,address,address,uint256,bytes)",
+  "contracts": [
+   "L1StandardBridge"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "l1Token",
+   "l2Token",
+   "from",
+   "to",
+   "amount",
+   "extraData"
+  ]
+ },
+ "0x3ceee06c1e37648fcbb6ed52e17b3e1f275a1f8c7b22a84b2b84732431e046b3": {
+  "sig": "ERC20WithdrawalFinalized(address,address,address,address,uint256,bytes)",
+  "contracts": [
+   "L1StandardBridge"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "l1Token",
+   "l2Token",
+   "from",
+   "to",
+   "amount",
+   "extraData"
+  ]
+ },
+ "0x1f39bf6707b5d608453e0ae4c067b562bcc4c85c0f562ef5d2c774d2e7f131ac": {
+  "sig": "ERC721BridgeFinalized(address,address,address,address,uint256,bytes)",
+  "contracts": [
+   "L1ERC721Bridge",
+   "L2ERC721Bridge"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "localToken",
+   "remoteToken",
+   "from",
+   "to",
+   "tokenId",
+   "extraData"
+  ]
+ },
+ "0xb7460e2a880f256ebef3406116ff3eee0cee51ebccdc2a40698f87ebb2e9c1a5": {
+  "sig": "ERC721BridgeInitiated(address,address,address,address,uint256,bytes)",
+  "contracts": [
+   "L1ERC721Bridge",
+   "L2ERC721Bridge"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "localToken",
+   "remoteToken",
+   "from",
+   "to",
+   "tokenId",
+   "extraData"
+  ]
+ },
+ "0x31b2166ff604fc5672ea5df08a78081d2bc6d746cadce880747f3643d819e83d": {
+  "sig": "ETHBridgeFinalized(address,address,uint256,bytes)",
+  "contracts": [
+   "L1StandardBridge",
+   "L2StandardBridge",
+   "L2StandardBridgeInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "from",
+   "to",
+   "amount",
+   "extraData"
+  ]
+ },
+ "0x2849b43074093a05396b6f2a937dee8565b15a48a7b3d4bffb732a5017380af5": {
+  "sig": "ETHBridgeInitiated(address,address,uint256,bytes)",
+  "contracts": [
+   "L1StandardBridge",
+   "L2StandardBridge",
+   "L2StandardBridgeInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "from",
+   "to",
+   "amount",
+   "extraData"
+  ]
+ },
+ "0x35d79ab81f2b2017e19afb5c5571778877782d7a8786f5907f93b0f4702f4f23": {
+  "sig": "ETHDepositInitiated(address,address,uint256,bytes)",
+  "contracts": [
+   "L1StandardBridge"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "from",
+   "to",
+   "amount",
+   "extraData"
+  ]
+ },
+ "0x97efc519b9020a140ffe13878e03d340b976676090bc7fe3e33191192df7c72c": {
+  "sig": "ETHLocked(address,uint256)",
+  "contracts": [
+   "ETHLockbox"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "portal",
+   "amount"
+  ]
+ },
+ "0xd893f630c6867fa43689da9ae949ebf04cac24aad3b45c759d442ed3c32e3a37": {
+  "sig": "ETHMigrated(address,uint256)",
+  "contracts": [
+   "OptimismPortal2",
+   "OptimismPortalInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "lockbox",
+   "balance"
+  ]
+ },
+ "0xe9512d49448b580f3d29031e9243ee81bc8789a93d6f04ec8f03b694d623637b": {
+  "sig": "ETHUnlocked(address,uint256)",
+  "contracts": [
+   "ETHLockbox"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "portal",
+   "amount"
+  ]
+ },
+ "0x2ac69ee804d9a7a0984249f508dfab7cb2534b465b6ce1580f99a38ba9c5e631": {
+  "sig": "ETHWithdrawalFinalized(address,address,uint256,bytes)",
+  "contracts": [
+   "L1StandardBridge"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "from",
+   "to",
+   "amount",
+   "extraData"
+  ]
+ },
+ "0x09cb1cd0133a53d7a23c9cd8ad2d55c03ce5505c752d3dcc6ec6a6e085e2e03d": {
+  "sig": "EffectiveStakeChanged(address,uint256)",
+  "contracts": [
+   "PolicyEngineStaking"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "account",
+   "newEffectiveStake"
+  ]
+ },
+ "0xecdf3a3effea5783a3c4c2140e677577666428d44ed9d474a0b3a4c9943f8440": {
+  "sig": "EnabledModule(address)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "module"
+  ]
+ },
+ "0xde7f268730ad1932c0054d4f82d4f5c46b903140ed547d6b4baf382da0a500b8": {
+  "sig": "ExecutingMessage(bytes,bytes)",
+  "contracts": [
+   "CrossL2Inbox"
+  ],
+  "versions": [
+   "v1.4.0",
+   "v1.5.0"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "encodedId",
+   "message"
+  ]
+ },
+ "0x5c37832d2e8d10e346e55ad62071a6a2f9fa5130614ef2ec6617555c6f467ba7": {
+  "sig": "ExecutingMessage(bytes32,(address,uint256,uint256,uint256,uint256))",
+  "contracts": [
+   "CrossL2Inbox"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "msgHash",
+   "id"
+  ]
+ },
+ "0x23428b18acfb3ea64b08dc0c1d296ea9c09702c09083ca5272e64d115b687d23": {
+  "sig": "ExecutionFailure(bytes32,uint256)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "txHash",
+   "payment"
+  ]
+ },
+ "0xacd2c8702804128fdb0db2bb49f6d127dd0181c13fd45dbfe16de0930e2bd375": {
+  "sig": "ExecutionFromModuleFailure(address)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "module"
+  ]
+ },
+ "0x6895c13664aa4f67288b25d7a21d7aaa34916e355fb9b6fae0a139a9085becb8": {
+  "sig": "ExecutionFromModuleSuccess(address)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "module"
+  ]
+ },
+ "0x442e715f626346e8c54381002da614f62bee8d27386535b2521ec8540898556e": {
+  "sig": "ExecutionSuccess(bytes32,uint256)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "txHash",
+   "payment"
+  ]
+ },
+ "0x99d0e048484baa1b1540b1367cb128acd7ab2946d1ed91ec10e3c85e4bf51b8f": {
+  "sig": "FailedRelayedMessage(bytes32)",
+  "contracts": [
+   "L1CrossDomainMessenger",
+   "L2CrossDomainMessenger",
+   "L2ToL2CrossDomainMessenger"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "msgHash"
+  ]
+ },
+ "0xb876f6594132c89891d2fd198e925e999be741ec809abb58bfe9b966876cc06c": {
+  "sig": "FeatureSet(bytes32,bool)",
+  "contracts": [
+   "L1Block",
+   "L1BlockCGT",
+   "SystemConfig"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "feature",
+   "enabled"
+  ]
+ },
+ "0x4492086b630ed3846eec0979dd87a71c814ceb1c6dab80ab81e3450b21e4de28": {
+  "sig": "FeeDisbursementIntervalUpdated(uint128,uint128)",
+  "contracts": [
+   "FeeSplitter"
+  ],
+  "versions": [
+   "v6.0.0"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "oldFeeDisbursementInterval",
+   "newFeeDisbursementInterval"
+  ]
+ },
+ "0x2acaf92365a0b69fb3570802396f62d51aabccd684036b72c3ce78699425e7ee": {
+  "sig": "FeesDeposited(address,uint256)",
+  "contracts": [
+   "FeesDepositor"
+  ],
+  "versions": [
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "l2Recipient",
+   "amount"
+  ]
+ },
+ "0x73f9a13241a1848ec157967f3a85601709353e616f1f2605d818c0f2d21774df": {
+  "sig": "FeesDisbursed((address,uint256)[],uint256)",
+  "contracts": [
+   "FeeSplitter"
+  ],
+  "versions": [
+   "v6.0.0"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "shareInfo",
+   "grossRevenue"
+  ]
+ },
+ "0x213e72af0d3613bd643cff3059f872c1015e6541624e37872bf95eefbaf220a8": {
+  "sig": "FeesReceived(address,uint256,uint256)",
+  "contracts": [
+   "FeeSplitter"
+  ],
+  "versions": [
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "sender",
+   "amount",
+   "newBalance"
+  ]
+ },
+ "0x4c109d85bcd0bb5c735b4be850953d652afe4cd9aa2e0b1426a65a4dcb2e1229": {
+  "sig": "Forwarded(bytes32,bytes)",
+  "contracts": [
+   "DelayedVetoable"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "callHash",
+   "data"
+  ]
+ },
+ "0x363f315f930a17d1266b86a20d6dd34b1cfbc5a9db9f13a65d06a689c3a2af8a": {
+  "sig": "FundsReceived(address,uint256,uint256)",
+  "contracts": [
+   "FeesDepositor",
+   "L1Withdrawer"
+  ],
+  "versions": [
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "sender",
+   "amount",
+   "newBalance"
+  ]
+ },
+ "0x9908eaac0645df9d0704d06adc9e07337c951de2f06b5f2836151d48d5e4722f": {
+  "sig": "GameClosed(uint8)",
+  "contracts": [
+   "FaultDisputeGame",
+   "FaultDisputeGameV2",
+   "OPSuccinctFaultDisputeGame",
+   "PermissionedDisputeGame",
+   "PermissionedDisputeGameV2",
+   "SuperFaultDisputeGame",
+   "SuperPermissionedDisputeGame",
+   "ZKDisputeGame"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "bondDistributionMode"
+  ]
+ },
+ "0x4b8d2d3f00ea4ebab553d99606c8aea67fd4deb9ef0abee0e7c4b246c59a0e0f": {
+  "sig": "GameTypeAdded(uint256,uint32,address,address)",
+  "contracts": [
+   "OPContractsManager",
+   "OPContractsManagerGameTypeAdder",
+   "OPContractsManagerInterop",
+   "OPPrestateUpdater"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "l2ChainId",
+   "gameType",
+   "newDisputeGame",
+   "oldDisputeGame"
+  ]
+ },
+ "0x84858bb3fb3ecf87e268ebef250ef9ad9cd53ef7973ef7a0ec9d89470bb00a80": {
+  "sig": "GasLimitUpdated(uint32,uint32)",
+  "contracts": [
+   "FeesDepositor"
+  ],
+  "versions": [
+   "v6.0.0"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "oldGasLimit",
+   "newGasLimit"
+  ]
+ },
+ "0x10e43c4d58f3ef4edae7c1ca2e7f02d46b2cadbcc046737038527ed8486ffeb0": {
+  "sig": "GasPayingTokenSet(address,uint8,bytes32,bytes32)",
+  "contracts": [
+   "L1Block",
+   "L1BlockInterop"
+  ],
+  "versions": [
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "token",
+   "decimals",
+   "name",
+   "symbol"
+  ]
+ },
+ "0xa48d13ee8fad9974fa901cfb88a02d39c5361efbab13bb9b3aa7caa3f6d6b786": {
+  "sig": "GuardConfigured(address,uint256)",
+  "contracts": [
+   "SaferSafes"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "safe",
+   "timelockDelay"
+  ]
+ },
+ "0xa47fcdf075d680d3817bfca7973b373e1a5f6cfc3b444748299cc2b83d8348f9": {
+  "sig": "ImplementationArgsSet(uint32,bytes)",
+  "contracts": [
+   "DisputeGameFactory"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "gameType",
+   "args"
+  ]
+ },
+ "0x9b7318127ed899f286ea9ddd7925ed8ad24a682b6a825c3b5b3d88a3f00bc1d2": {
+  "sig": "ImplementationDeployed(address,bytes32)",
+  "contracts": [
+   "ConditionalDeployer"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "implementation",
+   "salt"
+  ]
+ },
+ "0xfbe57d889a7f75a4e0c7da304cd158fcaddc4b925cdd9f4cfb115c0f9e48009b": {
+  "sig": "ImplementationExists(address)",
+  "contracts": [
+   "ConditionalDeployer"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "implementation"
+  ]
+ },
+ "0xff513d80e2c7fa487608f70a618dfbc0cf415699dc69588c747e8c71566c88de": {
+  "sig": "ImplementationSet(address,uint32)",
+  "contracts": [
+   "DisputeGameFactory"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "impl",
+   "gameType"
+  ]
+ },
+ "0x623713f72f6e427a8044bb8b3bd6834357cf285decbaa21bcc73c1d0632c4d84": {
+  "sig": "ImplementationSet(address,uint8)",
+  "contracts": [
+   "DisputeGameFactory"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "impl",
+   "gameType"
+  ]
+ },
+ "0x74d6665c4b26d5596a5aa13d3014e0c06af4d322075a797f87b03cd4c5bc91ca": {
+  "sig": "InitBondUpdated(uint32,uint256)",
+  "contracts": [
+   "DisputeGameFactory"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "gameType",
+   "newBond"
+  ]
+ },
+ "0x3d3603f30a8e965cf76ec29fb1f0563457ec8a7114c12180c60e7be8384201f1": {
+  "sig": "InitBondUpdated(uint8,uint256)",
+  "contracts": [
+   "DisputeGameFactory"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "gameType",
+   "newBond"
+  ]
+ },
+ "0xc7f505b2f371ae2175ee4913f4499e1f2633a7b5936321eed1cdaeb6115181d2": {
+  "sig": "Initialized(uint64)",
+  "contracts": [
+   "BaseFeeVault",
+   "L1FeeVault",
+   "OperatorFeeVault",
+   "OptimismSuperchainERC20",
+   "SequencerFeeVault"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "version"
+  ]
+ },
+ "0x7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb3847402498": {
+  "sig": "Initialized(uint8)",
+  "contracts": [
+   "AnchorStateRegistry",
+   "DataAvailabilityChallenge",
+   "DelayedWETH",
+   "DisputeGameFactory",
+   "ETHLockbox",
+   "FeeSplitter",
+   "FeesDepositor",
+   "L1CrossDomainMessenger",
+   "L1ERC721Bridge",
+   "L1StandardBridge",
+   "L2CrossDomainMessenger",
+   "L2ERC721Bridge"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "version"
+  ]
+ },
+ "0x87a332a414acbc7da074543639ce7ae02ff1ea72e88379da9f261b080beb5a13": {
+  "sig": "Initiated(bytes32,bytes)",
+  "contracts": [
+   "DelayedVetoable"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "callHash",
+   "data"
+  ]
+ },
+ "0x745d3c5bc92ab40b418069bf8f8e2030807effceb88bbaa07ee01574f16be475": {
+  "sig": "InviteClaimed(address,address)",
+  "contracts": [
+   "OptimistInviter"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "issuer",
+   "claimer"
+  ]
+ },
+ "0x158f04d12e0403fdd63fbced694e8f70d3b87d04d8e2dfad526f5fcf6e49bbcf": {
+  "sig": "L2RecipientUpdated(address,address)",
+  "contracts": [
+   "FeesDepositor"
+  ],
+  "versions": [
+   "v6.0.0"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "oldL2Recipient",
+   "newL2Recipient"
+  ]
+ },
+ "0x875e07afd7ce17c6531b1a6b7b34829dcd8b7e6639448afbd6a8e29fa1422b82": {
+  "sig": "LiquidityBurned(address,uint256)",
+  "contracts": [
+   "ETHLiquidity",
+   "LiquidityController"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "minter",
+   "amount"
+  ]
+ },
+ "0x7ff07ce9a287649537e4b012e45cf012d90228b12e2b56bb03515a6b5436fcdf": {
+  "sig": "LiquidityDeposited(address,uint256)",
+  "contracts": [
+   "NativeAssetLiquidity"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "caller",
+   "value"
+  ]
+ },
+ "0xbb9e497a5b82d1a37f9496dd70c6efb97ba0d98c66c3422d05010105d0633598": {
+  "sig": "LiquidityFunded(address,uint256)",
+  "contracts": [
+   "ETHLiquidity"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "funder",
+   "amount"
+  ]
+ },
+ "0x87eb4064140fbec95a8de570e01b4c650c00ecd677560af9f298a975b636c22d": {
+  "sig": "LiquidityMigrated(address,uint256)",
+  "contracts": [
+   "ETHLockbox"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "lockbox",
+   "amount"
+  ]
+ },
+ "0xec89d80a36947288037745287dde87d62cd8c141d5323130b3d26d97d84004c7": {
+  "sig": "LiquidityMinted(address,address,uint256)",
+  "contracts": [
+   "LiquidityController"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "minter",
+   "to",
+   "amount"
+  ]
+ },
+ "0x85719716ac5bd2744ae7ed3d16702129383049b97123b506320e7a5826ebbbba": {
+  "sig": "LiquidityMinted(address,uint256)",
+  "contracts": [
+   "ETHLiquidity"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "caller",
+   "value"
+  ]
+ },
+ "0xb58278ed56aa79ad2e243963b44b165a8f76d629f61c01dd3649d658e0eacca4": {
+  "sig": "LiquidityReceived(address,uint256)",
+  "contracts": [
+   "ETHLockbox"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "lockbox",
+   "amount"
+  ]
+ },
+ "0xb1cce8684b4ffa8667b4577654e61ee3480d661ee9c27522ac80e211f6bd4d25": {
+  "sig": "LiquidityWithdrawn(address,uint256)",
+  "contracts": [
+   "NativeAssetLiquidity"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "caller",
+   "value"
+  ]
+ },
+ "0x5d2682e700a2146c8e2381e0b407003576a54e96dd08f40f3ea0d2b8706db106": {
+  "sig": "LockboxAuthorized(address)",
+  "contracts": [
+   "ETHLockbox"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "lockbox"
+  ]
+ },
+ "0x51a7f65c6325882f237d4aeb43228179cfad48b868511d508e24b4437a819137": {
+  "sig": "Message(string)",
+  "contracts": [
+   "SaferSafes"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "message"
+  ]
+ },
+ "0x02a52367d10742d8032712c1bb8e0144ff1ec5ffda1ed7d70bb05a2744955054": {
+  "sig": "MessagePassed(uint256,address,address,uint256,uint256,bytes,bytes32)",
+  "contracts": [
+   "L2ToL1MessagePasser",
+   "L2ToL1MessagePasserCGT"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "nonce",
+   "sender",
+   "target",
+   "value",
+   "gasLimit",
+   "data",
+   "withdrawalHash"
+  ]
+ },
+ "0x132832be4270c0d1573ca543c41517dd443fe9daf5f21a9c74940e6db282e229": {
+  "sig": "MinDepositAmountUpdated(uint96,uint96)",
+  "contracts": [
+   "FeesDepositor"
+  ],
+  "versions": [
+   "v6.0.0"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "oldMinDepositAmount",
+   "newMinDepositAmount"
+  ]
+ },
+ "0x895a067c78583e800418fabf3da26a9496aab2ff3429cebdf7fefa642b2e4203": {
+  "sig": "MinWithdrawalAmountUpdated(uint256,uint256)",
+  "contracts": [
+   "BaseFeeVault",
+   "L1FeeVault",
+   "L1Withdrawer",
+   "OperatorFeeVault",
+   "SequencerFeeVault"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "oldWithdrawalAmount",
+   "newWithdrawalAmount"
+  ]
+ },
+ "0x0f6798a560793a54c3bcfe86a93cde1e73087d944c0ea20544137d4121396885": {
+  "sig": "Mint(address,uint256)",
+  "contracts": [
+   "LegacyERC20ETH",
+   "LegacyMintableERC20",
+   "OptimismMintableERC20",
+   "OptimismMintableERC721",
+   "OptimismSuperchainERC20"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "account",
+   "amount"
+  ]
+ },
+ "0x83b05b6735acd4b85e3bded8e72c851d1a87718f81e3c8e6f0c9d9a2baa88e46": {
+  "sig": "MinterAuthorized(address)",
+  "contracts": [
+   "LiquidityController"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "minter"
+  ]
+ },
+ "0xdf6bf03dfab5b4ccec3ba95544b98d7ecc9d4b9293d8673e86cb6edb5ac0cb62": {
+  "sig": "MinterDeauthorized(address)",
+  "contracts": [
+   "LiquidityController"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "minter"
+  ]
+ },
+ "0x9c6ff02e684f8a81389ed942fea1147c16b8cc5fe79f2bfbc520d44e214aed4b": {
+  "sig": "ModuleCleared(address)",
+  "contracts": [
+   "SaferSafes"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "safe"
+  ]
+ },
+ "0x47e2ddae3ece2c77f60d8e9e5a89a50f1d1374a87fb11956d27a6b4986bba17e": {
+  "sig": "ModuleConfigured(address,uint256,address)",
+  "contracts": [
+   "SaferSafes"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "safe",
+   "livenessResponsePeriod",
+   "fallbackOwner"
+  ]
+ },
+ "0x9b3245740ec3b155098a55be84957a4da13eaf7f14a8bc6f53126c0b9350f2be": {
+  "sig": "Move(uint256,bytes32,address)",
+  "contracts": [
+   "FaultDisputeGame",
+   "FaultDisputeGameV2",
+   "LegacyFaultDisputeGame",
+   "PermissionedDisputeGame",
+   "PermissionedDisputeGameV2",
+   "SuperFaultDisputeGame",
+   "SuperPermissionedDisputeGame"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true
+  ],
+  "names": [
+   "parentIndex",
+   "claim",
+   "claimant"
+  ]
+ },
+ "0x57b09af877df9068fd60a69d7b21f5576b8b38955812d6ae4ac52942f1e38fb7": {
+  "sig": "NonceIncreased(uint256,uint256)",
+  "contracts": [
+   "EAS"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "oldNonce",
+   "newNonce"
+  ]
+ },
+ "0x52fe89dd5930f343d25650b62fd367bae47088bcddffd2a88350a6ecdd620cdb": {
+  "sig": "OptimismMintableERC20Created(address,address,address)",
+  "contracts": [
+   "OptimismMintableERC20Factory"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "localToken",
+   "remoteToken",
+   "deployer"
+  ]
+ },
+ "0xe72783bb8e0ca31286b85278da59684dd814df9762a52f0837f89edd1483b299": {
+  "sig": "OptimismMintableERC721Created(address,address,address)",
+  "contracts": [
+   "OptimismMintableERC721Factory"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "localToken",
+   "remoteToken",
+   "deployer"
+  ]
+ },
+ "0xc4dc49b8346732c19a032264daf2bebf08be752a393ea2a8519cd1953ef4d932": {
+  "sig": "OptimismSuperchainERC20Created(address,address,address)",
+  "contracts": [
+   "OptimismSuperchainERC20Factory"
+  ],
+  "versions": [
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "superchainToken",
+   "remoteToken",
+   "deployer"
+  ]
+ },
+ "0xa7aaf2512769da4e444e3de247be2564225c2e7a8f74cfe528e46e17d24868e2": {
+  "sig": "OutputProposed(bytes32,uint256,uint256,uint256)",
+  "contracts": [
+   "L2OutputOracle"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "outputRoot",
+   "l2OutputIndex",
+   "l2BlockNumber",
+   "l1Timestamp"
+  ]
+ },
+ "0x4ee37ac2c786ec85e87592d3c5c8a1dd66f8496dda3f125d9ea8ca5f657629b6": {
+  "sig": "OutputsDeleted(uint256,uint256)",
+  "contracts": [
+   "L2OutputOracle"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "prevNextOutputIndex",
+   "newNextOutputIndex"
+  ]
+ },
+ "0xb532073b38c83145e3e5135377a08bf9aab55bc0fd7c1179cd4fb995d2a5159c": {
+  "sig": "OwnerChanged(address,address)",
+  "contracts": [
+   "DeployerWhitelist"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "oldOwner",
+   "newOwner"
+  ]
+ },
+ "0x833bc129023866d52116d61e94b791eb8be46f05709362e0bcf1fe7c1a8c225c": {
+  "sig": "OwnerRecorded(address)",
+  "contracts": [
+   "LivenessGuard"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "owner"
+  ]
+ },
+ "0x8292fce18fa69edf4db7b94ea2e58241df0ae57f97e0a6c9b29067028bf92d76": {
+  "sig": "OwnerUpdated(address,address)",
+  "contracts": [
+   "AssetReceiver",
+   "Drippie",
+   "Transactor"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "user",
+   "newOwner"
+  ]
+ },
+ "0x38d16b8cac22d99fc7c124b9cd0de2d3fa1faef420bfe791d8c362d765e22700": {
+  "sig": "OwnershipTransferStarted(address,address)",
+  "contracts": [
+   "PolicyEngineStaking"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "previousOwner",
+   "newOwner"
+  ]
+ },
+ "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+  "sig": "OwnershipTransferred(address,address)",
+  "contracts": [
+   "AddressManager",
+   "DataAvailabilityChallenge",
+   "DelayedWETH",
+   "DisputeGameFactory",
+   "GovernanceToken",
+   "L2ProxyAdmin",
+   "LiquidityController",
+   "MintManager",
+   "PolicyEngineStaking",
+   "ProtocolVersions",
+   "ProxyAdmin",
+   "SystemConfig"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "previousOwner",
+   "newOwner"
+  ]
+ },
+ "0x903af33ae084e750e45a10a53f61a69a4c5444f13a59954f5b3cf96e2862b5f4": {
+  "sig": "OwnershipTransferredToFallback()",
+  "contracts": [
+   "LivenessModule"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [],
+  "names": []
+ },
+ "0x1d2ec1b05a6f9b6f38c1876af56d3a5b8e67a8b16fa2a12b7140aed0909affa1": {
+  "sig": "PauseTriggered(address,bytes32)",
+  "contracts": [
+   "DeputyPauseModule"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "deputy",
+   "nonce"
+  ]
+ },
+ "0xaa64a95e3acb9db4deaf865d9fcc62a5d47996b643e7fcc799e3b499c9bff2d9": {
+  "sig": "PauseTriggered(address,bytes32,address)",
+  "contracts": [
+   "DeputyPauseModule"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "deputy",
+   "nonce",
+   "identifier"
+  ]
+ },
+ "0x9e87fac88ff661f02d44f95383c817fece4bce600a3dab7a54406878b965e752": {
+  "sig": "Paused()",
+  "contracts": [
+   "PolicyEngineStaking"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [],
+  "names": []
+ },
+ "0x62e78cea01bee320cd4e420270b5ea74000d11b0c9f74754ebdbfc544b05a258": {
+  "sig": "Paused(address)",
+  "contracts": [
+   "SuperchainConfig"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "identifier"
+  ]
+ },
+ "0xc32e6d5d6d1de257f64eac19ddb1f700ba13527983849c9486b1ab007ea28381": {
+  "sig": "Paused(string)",
+  "contracts": [
+   "DeputyGuardianModule",
+   "SuperchainConfig"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "identifier"
+  ]
+ },
+ "0x90a7fac2e56aebe4889351fb04eda5efb28b19dedf288bdbfd3cfd817c79630f": {
+  "sig": "PortalAuthorized(address)",
+  "contracts": [
+   "ETHLockbox"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "portal"
+  ]
+ },
+ "0x9e5368471a58d81987e5dc7d6374dd5ed5e756cc95a79ff726903423bce0060d": {
+  "sig": "PortalMigrated(address,address,address,address)",
+  "contracts": [
+   "OptimismPortal2",
+   "OptimismPortalInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "oldLockbox",
+   "newLockbox",
+   "oldAnchorStateRegistry",
+   "newAnchorStateRegistry"
+  ]
+ },
+ "0x14e22d69ea30aab5b2220164345b33bdb5125e9c77a7d5fe12e23a1c691bd139": {
+  "sig": "PredeploysUpgraded(address)",
+  "contracts": [
+   "L2ProxyAdmin"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "l2ContractsManager"
+  ]
+ },
+ "0x5e6565d9ca2f5c8501d6418bf563322a7243ba7ace266d75eac99f4adbb30ba7": {
+  "sig": "Proved(address)",
+  "contracts": [
+   "OPSuccinctFaultDisputeGame",
+   "ZKDisputeGame"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "prover"
+  ]
+ },
+ "0x2b0807147ac5f5ad7b63c6e9cb89ca7845eb37da447c7f6ecf18ae41fcab8815": {
+  "sig": "ProxyCreation(string,address)",
+  "contracts": [
+   "OPContractsManagerUtils"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "name",
+   "proxy"
+  ]
+ },
+ "0x4103257eaac983ca79a70d28f90dfc4fa16b619bb0c17ee7cab0d4034c279624": {
+  "sig": "ReceivedETH(address,uint256)",
+  "contracts": [
+   "AssetReceiver",
+   "Drippie"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "from",
+   "amount"
+  ]
+ },
+ "0x62e69886a5df0ba8ffcacbfc1388754e7abd9bde24b036354c561f1acd4e4593": {
+  "sig": "RecipientUpdated(address,address)",
+  "contracts": [
+   "BaseFeeVault",
+   "L1FeeVault",
+   "L1Withdrawer",
+   "OperatorFeeVault",
+   "SequencerFeeVault"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "oldRecipient",
+   "newRecipient"
+  ]
+ },
+ "0xd0b86852e21f9e5fa4bc3b0cff9757ffe243d50c4b43968a42202153d651ea5e": {
+  "sig": "Registered(bytes32,address,(bytes32,address,bool,string))",
+  "contracts": [
+   "SchemaRegistry"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "uid",
+   "registerer",
+   "schema"
+  ]
+ },
+ "0x434965d7426acf45a548f00783c067e9ad789c8c66444f0a5ad8941d5005be93": {
+  "sig": "RelayERC20(address,address,address,uint256,uint256)",
+  "contracts": [
+   "SuperchainTokenBridge"
+  ],
+  "versions": [
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "token",
+   "from",
+   "to",
+   "amount",
+   "source"
+  ]
+ },
+ "0xc75e22a0b57fb7740dbfc0caa5c6b7a82a2139964e7f1b7be7ac4e8be0f719ba": {
+  "sig": "RelayERC20(address,address,uint256,uint256)",
+  "contracts": [
+   "OptimismSuperchainERC20",
+   "SuperchainWETH"
+  ],
+  "versions": [
+   "v1.6.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "from",
+   "to",
+   "amount",
+   "source"
+  ]
+ },
+ "0xe5479bb8ebad3b9ac81f55f424a6289cf0a54ff2641708f41dcb2b26f264d359": {
+  "sig": "RelayETH(address,address,uint256,uint256)",
+  "contracts": [
+   "SuperchainETHBridge",
+   "SuperchainWETH"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "from",
+   "to",
+   "amount",
+   "source"
+  ]
+ },
+ "0x4641df4a962071e12719d8c8c8e5ac7fc4d97b927346a3d7a335b1f7517e133c": {
+  "sig": "RelayedMessage(bytes32)",
+  "contracts": [
+   "L1CrossDomainMessenger",
+   "L2CrossDomainMessenger",
+   "L2ToL2CrossDomainMessenger"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "msgHash"
+  ]
+ },
+ "0x5948076590932b9d173029c7df03fe386e755a61c86c7fe2671011a2faa2a379": {
+  "sig": "RelayedMessage(uint256,uint256,bytes32)",
+  "contracts": [
+   "L2ToL2CrossDomainMessenger"
+  ],
+  "versions": [
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1"
+  ],
+  "indexed": [
+   true,
+   true,
+   true
+  ],
+  "names": [
+   "source",
+   "messageNonce",
+   "messageHash"
+  ]
+ },
+ "0xc270d73e26d2d39dee7ef92093555927e344e243415547ecc350b2b5385b68a2": {
+  "sig": "RelayedMessage(uint256,uint256,bytes32,bytes32)",
+  "contracts": [
+   "L2ToL2CrossDomainMessenger"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "source",
+   "messageNonce",
+   "messageHash",
+   "returnDataHash"
+  ]
+ },
+ "0x28c1e0a919cd3b91d6d516417dedc06a2bd7954ad8960315347250b1aee2a4f1": {
+  "sig": "RemainderRecipientUpdated(address,address)",
+  "contracts": [
+   "SuperchainRevSharesCalculator"
+  ],
+  "versions": [
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "oldRemainderRecipient",
+   "newRemainderRecipient"
+  ]
+ },
+ "0xf8d49fc529812e9a7c5c50e69c20f0dccc0db8fa95c98bc58cc9a4f1c1299eaf": {
+  "sig": "RemovedOwner(address)",
+  "contracts": [
+   "GnosisSafe",
+   "LivenessModule"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "owner"
+  ]
+ },
+ "0x4468d695a0389e5f9e8ef0c9aee6d84e74cc0d0e0a28c8413badb54697d1bbae": {
+  "sig": "RequiredBondSizeChanged(uint256)",
+  "contracts": [
+   "DataAvailabilityChallenge"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "challengeWindow"
+  ]
+ },
+ "0x5e186f09b9c93491f14e277eea7faa5de6a2d4bda75a79af7a3684fbfb42da60": {
+  "sig": "Resolved(uint8)",
+  "contracts": [
+   "FaultDisputeGame",
+   "FaultDisputeGameV2",
+   "LegacyFaultDisputeGame",
+   "OPSuccinctFaultDisputeGame",
+   "PermissionedDisputeGame",
+   "PermissionedDisputeGameV2",
+   "SuperFaultDisputeGame",
+   "SuperPermissionedDisputeGame",
+   "ZKDisputeGame"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "status"
+  ]
+ },
+ "0xbbd8605de8f773fedb355c2fecd4b6b2e16a10a44e6676a63b375ac8f693758d": {
+  "sig": "ResolverRefundPercentageChanged(uint256)",
+  "contracts": [
+   "DataAvailabilityChallenge"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "resolverRefundPercentage"
+  ]
+ },
+ "0xcee0703b5e4bad4efededab85c9fd1aec17dee7c5f6c584330e0509b677745a2": {
+  "sig": "RespectedGameTypeSet(uint32)",
+  "contracts": [
+   "AnchorStateRegistry"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "gameType"
+  ]
+ },
+ "0x049fe9dd413cdf037cce27011cc1790c753118272f3630e6e8bdfa5e82081760": {
+  "sig": "RespectedGameTypeSet(uint32,uint64)",
+  "contracts": [
+   "DeputyGuardianModule",
+   "OptimismPortal2",
+   "OptimismPortalInterop"
+  ],
+  "versions": [
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "newGameType",
+   "updatedAt"
+  ]
+ },
+ "0x6e5b1ba771e8e484f741ed085f039ff4e5c6e882eaf68f550fb390922d0ae4a7": {
+  "sig": "RetirementTimestampSet(uint256)",
+  "contracts": [
+   "AnchorStateRegistry"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "timestamp"
+  ]
+ },
+ "0xf930a6e2523c9cc298691873087a740550b8fc85a0680830414c148ed927f615": {
+  "sig": "Revoked(address,address,bytes32,bytes32)",
+  "contracts": [
+   "EAS"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false,
+   true
+  ],
+  "names": [
+   "recipient",
+   "attester",
+   "uid",
+   "schemaUID"
+  ]
+ },
+ "0x92a1f7a41a7c585a8b09e25b195e225b1d43248daca46b0faf9e0792777a2229": {
+  "sig": "RevokedOffchain(address,bytes32,uint64)",
+  "contracts": [
+   "EAS"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true
+  ],
+  "names": [
+   "revoker",
+   "data",
+   "timestamp"
+  ]
+ },
+ "0x3d0ce9bfc3ed7d6862dbb28b2dea94561fe714a1b4d019aa8af39730d1ad7c3d": {
+  "sig": "SafeReceived(address,uint256)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "sender",
+   "value"
+  ]
+ },
+ "0x141df868a6331af528e38c83b7aa03edc19be66e37ae67f9285bf4f8e3c6a1a8": {
+  "sig": "SafeSetup(address,address[],uint256,address,address)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   true,
+   false,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "initiator",
+   "owners",
+   "threshold",
+   "initializer",
+   "fallbackHandler"
+  ]
+ },
+ "0xbab2b812958b05e36be1f0553f496fa5d27441155d6be0469e1c3fe1e51ad858": {
+  "sig": "SecretRevealed(bytes32,bytes)",
+  "contracts": [
+   "CheckSecrets"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "secretHash",
+   "secret"
+  ]
+ },
+ "0x0247bfe63a1aaa59e073e20b172889babfda8d3273b5798e0e9ac4388e6dd11c": {
+  "sig": "SendERC20(address,address,address,uint256,uint256)",
+  "contracts": [
+   "SuperchainTokenBridge"
+  ],
+  "versions": [
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "token",
+   "from",
+   "to",
+   "amount",
+   "destination"
+  ]
+ },
+ "0xfcea3600a13c757f2758710b089cc9752781c35d2a9d6804370ed18cd82f0bb6": {
+  "sig": "SendERC20(address,address,uint256,uint256)",
+  "contracts": [
+   "OptimismSuperchainERC20",
+   "SuperchainWETH"
+  ],
+  "versions": [
+   "v1.6.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "from",
+   "to",
+   "amount",
+   "destination"
+  ]
+ },
+ "0xed98a2ff78833375c368471a747cdf0633024dde3f870feb08a934ac5be83402": {
+  "sig": "SendETH(address,address,uint256,uint256)",
+  "contracts": [
+   "SuperchainETHBridge",
+   "SuperchainWETH"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "from",
+   "to",
+   "amount",
+   "destination"
+  ]
+ },
+ "0xcb0f7ffd78f9aee47a248fae8db181db6eee833039123e026dcbff529522e52a": {
+  "sig": "SentMessage(address,address,bytes,uint256,uint256)",
+  "contracts": [
+   "L1CrossDomainMessenger",
+   "L2CrossDomainMessenger"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "target",
+   "sender",
+   "message",
+   "messageNonce",
+   "gasLimit"
+  ]
+ },
+ "0x0ee9ffdb2334d78de97ffb066b23a352a4d35180cefb36589d663fbb1eb6f326": {
+  "sig": "SentMessage(bytes)",
+  "contracts": [
+   "L2ToL2CrossDomainMessenger"
+  ],
+  "versions": [
+   "v1.4.0",
+   "v1.5.0"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "data"
+  ]
+ },
+ "0x382409ac69001e11931a28435afef442cbfd20d9891907e8fa373ba7d351f320": {
+  "sig": "SentMessage(uint256,address,uint256,address,bytes)",
+  "contracts": [
+   "L2ToL2CrossDomainMessenger"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false,
+   false
+  ],
+  "names": [
+   "destination",
+   "target",
+   "messageNonce",
+   "sender",
+   "message"
+  ]
+ },
+ "0x8ebb2ec2465bdb2a06a66fc37a0963af8a2a6a1479d81d56fdb8cbb98096d546": {
+  "sig": "SentMessageExtension1(address,uint256)",
+  "contracts": [
+   "L1CrossDomainMessenger",
+   "L2CrossDomainMessenger"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "sender",
+   "value"
+  ]
+ },
+ "0xc7b7459ad1ab31862524bf0c4a5e6a8518c60f27607a5c483a58ea27e30c214c": {
+  "sig": "ShareRecipientUpdated(address,address)",
+  "contracts": [
+   "SuperchainRevSharesCalculator"
+  ],
+  "versions": [
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "oldShareRecipient",
+   "newShareRecipient"
+  ]
+ },
+ "0x16417cc372deec0caee5f52e2ad77a5f07b4591fd56b4ff31b6e20f817d4daeb": {
+  "sig": "SharesCalculatorUpdated(address,address)",
+  "contracts": [
+   "FeeSplitter"
+  ],
+  "versions": [
+   "v6.0.0"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "oldSharesCalculator",
+   "newSharesCalculator"
+  ]
+ },
+ "0xe7f4675038f4f6034dfcbbb24c4dc08e4ebf10eb9d257d3d02c0f38d122ac6e4": {
+  "sig": "SignMsg(bytes32)",
+  "contracts": [
+   "GnosisSafe"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "msgHash"
+  ]
+ },
+ "0x2eefbcc6809174727cb788be082c392be6c822829c56ab5eb44d528e9d9f37f9": {
+  "sig": "Staked(address,uint128)",
+  "contracts": [
+   "PolicyEngineStaking"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "account",
+   "amount"
+  ]
+ },
+ "0xceeb8e7d520d7f3b65fc11a262b91066940193b05d4f93df07cfdced0eb551cf": {
+  "sig": "StandardL2TokenCreated(address,address)",
+  "contracts": [
+   "OptimismMintableERC20Factory"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "remoteToken",
+   "localToken"
+  ]
+ },
+ "0x5aafceeb1c7ad58e4a84898bdee37c02c0fc46e7d24e6b60e8209449f183459f": {
+  "sig": "Timestamped(bytes32,uint64)",
+  "contracts": [
+   "EAS"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "data",
+   "timestamp"
+  ]
+ },
+ "0xa42fd857b47d3d04f5b29f35cb05343f66b317633d2dc2910726bd4bca1a1625": {
+  "sig": "TransactionCancelled(address,bytes32)",
+  "contracts": [
+   "SaferSafes"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "safe",
+   "txHash"
+  ]
+ },
+ "0xb3813568d9991fc951961fcb4c784893574240a28925604d09fc577c55bb7c32": {
+  "sig": "TransactionDeposited(address,address,uint256,bytes)",
+  "contracts": [
+   "OptimismPortal",
+   "OptimismPortal2",
+   "OptimismPortalInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "from",
+   "to",
+   "version",
+   "opaqueData"
+  ]
+ },
+ "0xdd4b9b318b98162cb1e7b52752a3fd110d5b7966f3b50884c1cd3bd04058e5c7": {
+  "sig": "TransactionExecuted(address,bytes32)",
+  "contracts": [
+   "SaferSafes"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "safe",
+   "txHash"
+  ]
+ },
+ "0x653f8f6fce2a503b2dfca34e95b3e4902254a11765d2658c0e5af1d64ab276cf": {
+  "sig": "TransactionScheduled(address,bytes32,uint256)",
+  "contracts": [
+   "SaferSafes"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "safe",
+   "txHash",
+   "executionTime"
+  ]
+ },
+ "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+  "sig": "Transfer(address,address,uint256)",
+  "contracts": [
+   "DelayedWETH",
+   "GovernanceToken",
+   "LegacyERC20ETH",
+   "LegacyMintableERC20",
+   "OptimismMintableERC20",
+   "OptimismMintableERC721",
+   "OptimismSuperchainERC20",
+   "Optimist",
+   "SuperchainWETH",
+   "WETH",
+   "WETH9",
+   "WETH98"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "from",
+   "to",
+   "value"
+  ]
+ },
+ "0xa45f47fdea8a1efdd9029a5691c7f759c32b7c698632b563573e155625d16933": {
+  "sig": "Unpaused()",
+  "contracts": [
+   "DeputyGuardianModule",
+   "PolicyEngineStaking",
+   "SuperchainConfig"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [],
+  "names": []
+ },
+ "0x5db9ee0a495bf2e6ff9c91a7834c1ba4fdd244a5e8aa4e537bd38aeae4b073aa": {
+  "sig": "Unpaused(address)",
+  "contracts": [
+   "SuperchainConfig"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "identifier"
+  ]
+ },
+ "0x23eb338ed2df691870bc931bf6328c55b2708178ecf1f1b3e889afca4418adea": {
+  "sig": "Unstaked(address,uint128)",
+  "contracts": [
+   "PolicyEngineStaking"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "account",
+   "amount"
+  ]
+ },
+ "0x5dd085b6070b4cae004f84daafd199fd55b0bdfa11c3a802baffe89c2419d8c2": {
+  "sig": "Unwrap(address,uint256)",
+  "contracts": [
+   "DelayedWETH"
+  ],
+  "versions": [
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "src",
+   "wad"
+  ]
+ },
+ "0xbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b": {
+  "sig": "Upgraded(address)",
+  "contracts": [
+   "Proxy"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "implementation"
+  ]
+ },
+ "0x78bc67b9bf548ef6410becd31a3e10b9ea6c255974ef6b4530728b431df30030": {
+  "sig": "Upgraded(uint256,address,address)",
+  "contracts": [
+   "OPContractsManager",
+   "OPContractsManagerInterop",
+   "OPContractsManagerUpgrader",
+   "OPPrestateUpdater"
+  ],
+  "versions": [
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   true,
+   true
+  ],
+  "names": [
+   "l2ChainId",
+   "systemConfig",
+   "upgrader"
+  ]
+ },
+ "0xbede6852c1d97d93ff557f676de76670cd0dec861e7fe8beb13aa0ba2b0ab040": {
+  "sig": "Vetoed(bytes32,bytes)",
+  "contracts": [
+   "DelayedVetoable"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "callHash",
+   "data"
+  ]
+ },
+ "0xc0e106cf568e50698fdbde1eff56f5a5c966cc7958e37e276918e9e4ccdf8cd4": {
+  "sig": "WhitelistDisabled(address)",
+  "contracts": [
+   "DeployerWhitelist"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "oldOwner"
+  ]
+ },
+ "0x8daaf060c3306c38e068a75c054bf96ecd85a3db1252712c4d93632744c42e0d": {
+  "sig": "WhitelistStatusChanged(address,bool)",
+  "contracts": [
+   "DeployerWhitelist"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "deployer",
+   "whitelisted"
+  ]
+ },
+ "0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65": {
+  "sig": "Withdrawal(address,uint256)",
+  "contracts": [
+   "DelayedWETH",
+   "SuperchainWETH",
+   "WETH",
+   "WETH9",
+   "WETH98"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "src",
+   "wad"
+  ]
+ },
+ "0xc8a211cc64b6ed1b50595a9fcb1932b6d1e5a6e8ef15b60e5b1f988ea9086bba": {
+  "sig": "Withdrawal(uint256,address,address)",
+  "contracts": [
+   "BaseFeeVault",
+   "L1FeeVault",
+   "OperatorFeeVault",
+   "SequencerFeeVault"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "value",
+   "to",
+   "from"
+  ]
+ },
+ "0x38e04cbeb8c10f8f568618aa75be0f10b6729b8b4237743b4de20cbcde2839ee": {
+  "sig": "Withdrawal(uint256,address,address,uint8)",
+  "contracts": [
+   "BaseFeeVault",
+   "L1FeeVault",
+   "OperatorFeeVault",
+   "SequencerFeeVault"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "value",
+   "to",
+   "from",
+   "withdrawalNetwork"
+  ]
+ },
+ "0xdb5c7652857aa163daadd670e116628fb42e869d8ac4251ef8971d9e5727df1b": {
+  "sig": "WithdrawalFinalized(bytes32,bool)",
+  "contracts": [
+   "OptimismPortal",
+   "OptimismPortal2",
+   "OptimismPortalInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "withdrawalHash",
+   "success"
+  ]
+ },
+ "0xd00b9b2acb0059a20066ca19b541618141c03305a0a6644d43277758c539b5de": {
+  "sig": "WithdrawalGasLimitUpdated(uint32,uint32)",
+  "contracts": [
+   "L1Withdrawer"
+  ],
+  "versions": [
+   "v6.0.0"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "oldWithdrawalGasLimit",
+   "newWithdrawalGasLimit"
+  ]
+ },
+ "0x73d170910aba9e6d50b102db522b1dbcd796216f5128b445aa2135272886497e": {
+  "sig": "WithdrawalInitiated(address,address,address,address,uint256,bytes)",
+  "contracts": [
+   "L2StandardBridge",
+   "L2StandardBridgeInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false,
+   false,
+   false
+  ],
+  "names": [
+   "l1Token",
+   "l2Token",
+   "from",
+   "to",
+   "amount",
+   "extraData"
+  ]
+ },
+ "0x6d92f7d3303f995bf21956bb0c51b388bae348eaf45c23debd2cfa3fcd9ec646": {
+  "sig": "WithdrawalInitiated(address,uint256)",
+  "contracts": [
+   "L1Withdrawer"
+  ],
+  "versions": [
+   "v6.0.0"
+  ],
+  "indexed": [
+   true,
+   false
+  ],
+  "names": [
+   "recipient",
+   "amount"
+  ]
+ },
+ "0xf2ec44eb1c3b3acd547b76333eb2c4b27eee311860c57a9fdb04c95f62398fc8": {
+  "sig": "WithdrawalNetworkUpdated(uint8,uint8)",
+  "contracts": [
+   "BaseFeeVault",
+   "L1FeeVault",
+   "OperatorFeeVault",
+   "SequencerFeeVault"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false,
+   false
+  ],
+  "names": [
+   "oldWithdrawalNetwork",
+   "newWithdrawalNetwork"
+  ]
+ },
+ "0xc52e609801931c8dcad3132b8a92414d2199941e6e09c85b117df31b6bda682a": {
+  "sig": "WithdrawalProofDeleted(bytes32,address)",
+  "contracts": [
+   "OptimismPortal2"
+  ],
+  "versions": [
+   "op-v9.0.0",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "withdrawalHash",
+   "proofSubmitter"
+  ]
+ },
+ "0x67a6208cfcc0801d50f6cbe764733f4fddf66ac0b04442061a8a8c0cb6b63f62": {
+  "sig": "WithdrawalProven(bytes32,address,address)",
+  "contracts": [
+   "OptimismPortal",
+   "OptimismPortal2",
+   "OptimismPortalInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true
+  ],
+  "names": [
+   "withdrawalHash",
+   "from",
+   "to"
+  ]
+ },
+ "0x798f9f13695f8f045aa5f80ed8efebb695f3c7fe65da381969f2f28bf3c60b97": {
+  "sig": "WithdrawalProvenExtension1(bytes32,address)",
+  "contracts": [
+   "OptimismPortal2",
+   "OptimismPortalInterop"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true
+  ],
+  "names": [
+   "withdrawalHash",
+   "proofSubmitter"
+  ]
+ },
+ "0x7967de617a5ac1cc7eba2d6f37570a0135afa950d8bb77cdd35f0d0b4e85a16f": {
+  "sig": "WithdrawerBalanceBurnt(uint256)",
+  "contracts": [
+   "L2ToL1MessagePasser",
+   "L2ToL1MessagePasserCGT"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true
+  ],
+  "names": [
+   "amount"
+  ]
+ },
+ "0x6b00f1c7883f053ba83e907fd1965b22fffe3c4111383e725f04638a566cdbfa": {
+  "sig": "WithdrewERC20(address,address,address,uint256)",
+  "contracts": [
+   "AssetReceiver",
+   "Drippie"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "withdrawer",
+   "recipient",
+   "asset",
+   "amount"
+  ]
+ },
+ "0x30b478a5e196e55886228aa87ba74a7dfeba655e0a4d7ba275eabfc22aabb7a8": {
+  "sig": "WithdrewERC721(address,address,address,uint256)",
+  "contracts": [
+   "AssetReceiver",
+   "Drippie"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "withdrawer",
+   "recipient",
+   "asset",
+   "id"
+  ]
+ },
+ "0x1f12aa8b6d492dd9b98e2b00b0b20830c2a7ded65afac13b60d169a034ae90bc": {
+  "sig": "WithdrewETH(address,address,uint256)",
+  "contracts": [
+   "AssetReceiver",
+   "Drippie"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   true,
+   true,
+   false
+  ],
+  "names": [
+   "withdrawer",
+   "recipient",
+   "amount"
+  ]
+ },
+ "0xd675e8c1bf2f28f052b74c311412663dd60576c00ce3346b9a6d614df2b0b60b": {
+  "sig": "_EventToExposeStructInABI__Params((address,uint256))",
+  "contracts": [
+   "CheckBalanceLow"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "params"
+  ]
+ },
+ "0x70b37aa219c5dbaa4c32bf3eb790cd0139092a31a18b69cec0036f7d67c342bc": {
+  "sig": "_EventToExposeStructInABI__Params((address,uint256,address))",
+  "contracts": [
+   "CheckGelatoLow"
+  ],
+  "versions": [
+   "v1.2.0",
+   "v1.3.0",
+   "v1.4.0",
+   "v1.5.0",
+   "v1.6.0",
+   "v1.8.0"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "params"
+  ]
+ },
+ "0xe696aefa5d73185c96c67a87c9597f9ef8d746736183999616f1e6f5a839b282": {
+  "sig": "_EventToExposeStructInABI__Params((uint256,bytes32,bytes32))",
+  "contracts": [
+   "CheckSecrets"
+  ],
+  "versions": [
+   "op-v7.0.0",
+   "op-v8.0.0",
+   "op-v9.0.0",
+   "v1.6.0",
+   "v1.8.0",
+   "v2.0.0",
+   "v2.1.0",
+   "v2.2.0",
+   "v3.0.0",
+   "v3.0.1",
+   "v4.0.0",
+   "v4.1.0",
+   "v5.0.0",
+   "v6.0.0",
+   "v7.0.0-worktree",
+   "v8.0.0-worktree",
+   "v9.0.0-worktree"
+  ],
+  "indexed": [
+   false
+  ],
+  "names": [
+   "params"
+  ]
+ }
+}

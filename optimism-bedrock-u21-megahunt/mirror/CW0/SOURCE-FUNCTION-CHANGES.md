@@ -1,0 +1,707 @@
+# Semantic function change index
+
+- v1.0.0 `contracts/L1/L1CrossDomainMessenger.sol:38` `function initialize() public initializer` FIRST -> `60295c01761e5b4b`
+- v1.0.0 `contracts/L1/L1CrossDomainMessenger.sol:45` `function _sendMessage( address _to, uint64 _gasLimit, uint256 _value, bytes memory _data ) internal override` FIRST -> `cabe612ef89a15e3`
+- v1.0.0 `contracts/L1/L1CrossDomainMessenger.sol:57` `function _isOtherMessenger() internal view override returns (bool)` FIRST -> `c1e35cff49e6b5c9`
+- v1.0.0 `contracts/L1/L1CrossDomainMessenger.sol:64` `function _isUnsafeTarget(address _target) internal view override returns (bool)` FIRST -> `e34e791c3b9ddf10`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:106` `receive() external payable override onlyEOA` FIRST -> `63bbc65d422f4c45`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:119` `function depositETH(uint32 _minGasLimit, bytes calldata _extraData) external payable onlyEOA` FIRST -> `d99734fd76c8abb5`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:137` `function depositETHTo( address _to, uint32 _minGasLimit, bytes calldata _extraData ) external payable` FIRST -> `29177ff02bda5c21`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:157` `function depositERC20( address _l1Token, address _l2Token, uint256 _amount, uint32 _minGasLimit, bytes calldata _extraData ) external virtual onlyEOA` FIRST -> `ac83e5e2aca57260`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:188` `function depositERC20To( address _l1Token, address _l2Token, address _to, uint256 _amount, uint32 _minGasLimit, bytes calldata _extraData ) external virtual` FIRST -> `92449cda36f7612b`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:216` `function finalizeETHWithdrawal( address _from, address _to, uint256 _amount, bytes calldata _extraData ) external payable` FIRST -> `b769a757a008764d`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:236` `function finalizeERC20Withdrawal( address _l1Token, address _l2Token, address _from, address _to, uint256 _amount, bytes calldata _extraData ) external` FIRST -> `83b1f75aca85c4e7`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:253` `function l2TokenBridge() external view returns (address)` FIRST -> `c1c2a06be0c864b7`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:265` `function _initiateETHDeposit( address _from, address _to, uint32 _minGasLimit, bytes memory _extraData ) internal` FIRST -> `30d14b3dc402d1ea`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:285` `function _initiateERC20Deposit( address _l1Token, address _l2Token, address _from, address _to, uint256 _amount, uint32 _minGasLimit, bytes memory _extraData ) internal` FIRST -> `a6f9e0d2119955cc`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:303` `function _emitETHBridgeInitiated( address _from, address _to, uint256 _amount, bytes memory _extraData ) internal override` FIRST -> `efabc2a05012b275`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:319` `function _emitETHBridgeFinalized( address _from, address _to, uint256 _amount, bytes memory _extraData ) internal override` FIRST -> `7096f2a68fccbf1d`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:335` `function _emitERC20BridgeInitiated( address _localToken, address _remoteToken, address _from, address _to, uint256 _amount, bytes memory _extraData ) internal override` FIRST -> `66cb2d489198575c`
+- v1.0.0 `contracts/L1/L1StandardBridge.sol:353` `function _emitERC20BridgeFinalized( address _localToken, address _remoteToken, address _from, address _to, uint256 _amount, bytes memory _extraData ) internal override` FIRST -> `3ee5aa805f363215`
+- v1.0.0 `contracts/L1/OptimismPortal.sol:137` `modifier whenNotPaused()` FIRST -> `e0fe222383f4a1bd`
+- v1.0.0 `contracts/L1/OptimismPortal.sol:165` `function initialize(bool _paused) public initializer` FIRST -> `84400575476b449f`
+- v1.0.0 `contracts/L1/OptimismPortal.sol:174` `function pause() external` FIRST -> `5f87e16d6619e1b4`
+- v1.0.0 `contracts/L1/OptimismPortal.sol:183` `function unpause() external` FIRST -> `9e5876c1de59928b`
+- v1.0.0 `contracts/L1/OptimismPortal.sol:196` `function minimumGasLimit(uint64 _byteCount) public pure returns (uint64)` FIRST -> `7795c7549e071397`
+- v1.0.0 `contracts/L1/OptimismPortal.sol:207` `receive() external payable` FIRST -> `a68e8d141ad95fe7`
+- v1.0.0 `contracts/L1/OptimismPortal.sol:215` `function donateETH() external payable` FIRST -> `ed39be79b7a88196`
+- v1.0.0 `contracts/L1/OptimismPortal.sol:225` `function _resourceConfig() internal view override returns (ResourceMetering.ResourceConfig memory)` FIRST -> `54fb14d747326552`
+- v1.0.0 `contracts/L1/OptimismPortal.sol:242` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _l2OutputIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external whenNotPaused` FIRST -> `89a513107d7c604c`
+- v1.0.0 `contracts/L1/OptimismPortal.sol:325` `function finalizeWithdrawalTransaction(Types.WithdrawalTransaction memory _tx) external whenNotPaused` FIRST -> `59b8dec2ae039098`
+- v1.0.0 `contracts/L1/OptimismPortal.sol:434` `function depositTransaction( address _to, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) public payable metered(_gasLimit)` FIRST -> `6aa3c441d39fbe1c`
+- v1.0.0 `contracts/L1/OptimismPortal.sol:493` `function isOutputFinalized(uint256 _l2OutputIndex) external view returns (bool)` FIRST -> `1620b097e20b9cae`
+- v1.0.0 `contracts/L1/OptimismPortal.sol:504` `function _isFinalizationPeriodElapsed(uint256 _timestamp) internal view returns (bool)` FIRST -> `a0bf4c2f6dccb106`
+- v1.0.0 `contracts/L1/SystemConfig.sol:125` `function initialize( address _owner, uint256 _overhead, uint256 _scalar, bytes32 _batcherHash, uint64 _gasLimit, address _unsafeBlockSigner, ResourceMetering.ResourceConfig memory _config ) public initializer` FIRST -> `c2c5f744f09675c8`
+- v1.0.0 `contracts/L1/SystemConfig.sol:154` `function minimumGasLimit() public view returns (uint64)` FIRST -> `ecbdfeac93e6a091`
+- v1.0.0 `contracts/L1/SystemConfig.sol:166` `function unsafeBlockSigner() external view returns (address)` FIRST -> `900c1fad62517564`
+- v1.0.0 `contracts/L1/SystemConfig.sol:180` `function setUnsafeBlockSigner(address _unsafeBlockSigner) external onlyOwner` FIRST -> `73b39971956c5649`
+- v1.0.0 `contracts/L1/SystemConfig.sol:192` `function setBatcherHash(bytes32 _batcherHash) external onlyOwner` FIRST -> `62fb7d36f93dda6b`
+- v1.0.0 `contracts/L1/SystemConfig.sol:205` `function setGasConfig(uint256 _overhead, uint256 _scalar) external onlyOwner` FIRST -> `67b460de81fbe5f8`
+- v1.0.0 `contracts/L1/SystemConfig.sol:218` `function setGasLimit(uint64 _gasLimit) external onlyOwner` FIRST -> `e27c5c42bc2908aa`
+- v1.0.0 `contracts/L1/SystemConfig.sol:232` `function _setUnsafeBlockSigner(address _unsafeBlockSigner) internal` FIRST -> `2e35001b26b91509`
+- v1.0.0 `contracts/L1/SystemConfig.sol:245` `function resourceConfig() external view returns (ResourceMetering.ResourceConfig memory)` FIRST -> `4de40bce3aeb7893`
+- v1.0.0 `contracts/L1/SystemConfig.sol:256` `function setResourceConfig(ResourceMetering.ResourceConfig memory _config) external onlyOwner` FIRST -> `9382cc78d0c31a92`
+- v1.0.0 `contracts/L1/SystemConfig.sol:266` `function _setResourceConfig(ResourceMetering.ResourceConfig memory _config) internal` FIRST -> `bfc44f964913d9d2`
+- v1.0.0 `contracts/dispute/DisputeGameFactory.sol:59` `function games( GameType gameType, Claim rootClaim, bytes calldata extraData ) external view returns (IDisputeGame _proxy)` FIRST -> `c3af28c20f84864f`
+- v1.0.0 `contracts/dispute/DisputeGameFactory.sol:78` `function create( GameType gameType, Claim rootClaim, bytes calldata extraData ) external returns (IDisputeGame proxy)` FIRST -> `7f581e00ed365f33`
+- v1.0.0 `contracts/dispute/DisputeGameFactory.sol:114` `function setImplementation(GameType gameType, IDisputeGame impl) external onlyOwner` FIRST -> `a84548be10755731`
+- v1.0.0 `contracts/dispute/DisputeGameFactory.sol:128` `function getGameUUID( GameType gameType, Claim rootClaim, bytes memory extraData ) public pure returns (Hash _uuid)` FIRST -> `aa694487ed55e866`
+- v1.0.0 `contracts/libraries/SafeCall.sol:17` `function send( address _target, uint256 _gas, uint256 _value ) internal returns (bool)` FIRST -> `d59039527b0986a4`
+- v1.0.0 `contracts/libraries/SafeCall.sol:45` `function call( address _target, uint256 _gas, uint256 _value, bytes memory _calldata ) internal returns (bool)` FIRST -> `dd5d92bcf18afabc`
+- v1.0.0 `contracts/libraries/SafeCall.sol:91` `function hasMinGas(uint256 _minGas, uint256 _reservedGas) internal view returns (bool)` FIRST -> `0354aaa1b9cf27bf`
+- v1.0.0 `contracts/libraries/SafeCall.sol:112` `function callWithMinGas( address _target, uint256 _minGas, uint256 _value, bytes memory _calldata ) internal returns (bool)` FIRST -> `2ebed84eea002828`
+- v1.0.0 `contracts/universal/CrossDomainMessenger.sol:259` `function sendMessage( address _target, bytes calldata _message, uint32 _minGasLimit ) external payable` FIRST -> `69eeedf1ae27198b`
+- v1.0.0 `contracts/universal/CrossDomainMessenger.sol:303` `function relayMessage( uint256 _nonce, address _sender, address _target, uint256 _value, uint256 _minGasLimit, bytes calldata _message ) external payable` FIRST -> `501eb42ab34e3c91`
+- v1.0.0 `contracts/universal/CrossDomainMessenger.sol:422` `function xDomainMessageSender() external view returns (address)` FIRST -> `18b0ace929d1e174`
+- v1.0.0 `contracts/universal/CrossDomainMessenger.sol:438` `function messageNonce() public view returns (uint256)` FIRST -> `d9b134e57b87cbbb`
+- v1.0.0 `contracts/universal/CrossDomainMessenger.sol:453` `function baseGas(bytes calldata _message, uint32 _minGasLimit) public pure returns (uint64)` FIRST -> `1f89933eef7887f0`
+- v1.0.0 `contracts/universal/CrossDomainMessenger.sol:477` `function __CrossDomainMessenger_init() internal onlyInitializing` FIRST -> `af5300a61a7b4911`
+- v1.0.0 `contracts/universal/CrossDomainMessenger.sol:491` `function _sendMessage( address _to, uint64 _gasLimit, uint256 _value, bytes memory _data ) internal virtual` FIRST -> `d90e553795155d07`
+- v1.0.0 `contracts/universal/CrossDomainMessenger.sol:505` `function _isOtherMessenger() internal view virtual returns (bool)` FIRST -> `cf2777acc2d5ff8a`
+- v1.0.0 `contracts/universal/CrossDomainMessenger.sol:518` `function _isUnsafeTarget(address _target) internal view virtual returns (bool)` FIRST -> `ce2fa443ff64ba14`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:14` `function implementation() external view returns (address)` FIRST -> `2ec51c7e198afdae`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:16` `function admin() external view returns (address)` FIRST -> `56cfce2ffa4de6fb`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:24` `function getImplementation() external view returns (address)` FIRST -> `d09731fbb8a19b18`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:26` `function getOwner() external view returns (address)` FIRST -> `1069d9e89afc2015`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:86` `function setProxyType(address _address, ProxyType _type) external onlyOwner` FIRST -> `bc3def0dc06d8235`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:97` `function setImplementationName(address _address, string memory _name) external onlyOwner` FIRST -> `585f51e741f13229`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:107` `function setAddressManager(AddressManager _address) external onlyOwner` FIRST -> `241bf1b6d8992788`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:120` `function setAddress(string memory _name, address _address) external onlyOwner` FIRST -> `e13201b447bf9919`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:130` `function setUpgrading(bool _upgrading) external onlyOwner` FIRST -> `707dc60b67fb9e21`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:142` `function isUpgrading() external view returns (bool)` FIRST -> `20338d6fa317f404`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:153` `function getProxyImplementation(address _proxy) external view returns (address)` FIRST -> `1a60ac39e8f964f1`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:173` `function getProxyAdmin(address payable _proxy) external view returns (address)` FIRST -> `097614c0d4584f3b`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:192` `function changeProxyAdmin(address payable _proxy, address _newAdmin) external onlyOwner` FIRST -> `d37bbd0f843be14d`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:211` `function upgrade(address payable _proxy, address _implementation) public onlyOwner` FIRST -> `10e995f44d0bf0f5`
+- v1.0.0 `contracts/universal/ProxyAdmin.sol:239` `function upgradeAndCall( address payable _proxy, address _implementation, bytes memory _data ) external payable onlyOwner` FIRST -> `f3a942853b60ff2b`
+- v1.0.0 `contracts/universal/StandardBridge.sol:137` `modifier onlyEOA()` FIRST -> `67b7c2b7d25e3afa`
+- v1.0.0 `contracts/universal/StandardBridge.sol:148` `modifier onlyOtherBridge()` FIRST -> `801024214b1323ae`
+- v1.0.0 `contracts/universal/StandardBridge.sol:170` `receive() external payable virtual` FIRST -> `a24cbe505c7c095d`
+- v1.0.0 `contracts/universal/StandardBridge.sol:178` `function messenger() external view returns (CrossDomainMessenger)` FIRST -> `733ceb03ed653cdd`
+- v1.0.0 `contracts/universal/StandardBridge.sol:190` `function bridgeETH(uint32 _minGasLimit, bytes calldata _extraData) public payable onlyEOA` FIRST -> `e0000b087807da85`
+- v1.0.0 `contracts/universal/StandardBridge.sol:209` `function bridgeETHTo( address _to, uint32 _minGasLimit, bytes calldata _extraData ) public payable` FIRST -> `513d7b9b4edd759b`
+- v1.0.0 `contracts/universal/StandardBridge.sol:231` `function bridgeERC20( address _localToken, address _remoteToken, uint256 _amount, uint32 _minGasLimit, bytes calldata _extraData ) public virtual onlyEOA` FIRST -> `7e84f4570cc24df9`
+- v1.0.0 `contracts/universal/StandardBridge.sol:264` `function bridgeERC20To( address _localToken, address _remoteToken, address _to, uint256 _amount, uint32 _minGasLimit, bytes calldata _extraData ) public virtual` FIRST -> `3277fbebffa12f21`
+- v1.0.0 `contracts/universal/StandardBridge.sol:294` `function finalizeBridgeETH( address _from, address _to, uint256 _amount, bytes calldata _extraData ) public payable onlyOtherBridge` FIRST -> `ef25fdc78d13011a`
+- v1.0.0 `contracts/universal/StandardBridge.sol:325` `function finalizeBridgeERC20( address _localToken, address _remoteToken, address _from, address _to, uint256 _amount, bytes calldata _extraData ) public onlyOtherBridge` FIRST -> `8e757f7a152020d4`
+- v1.0.0 `contracts/universal/StandardBridge.sol:361` `function _initiateBridgeETH( address _from, address _to, uint256 _amount, uint32 _minGasLimit, bytes memory _extraData ) internal` FIRST -> `f677dea63e480bc2`
+- v1.0.0 `contracts/universal/StandardBridge.sol:402` `function _initiateBridgeERC20( address _localToken, address _remoteToken, address _from, address _to, uint256 _amount, uint32 _minGasLimit, bytes memory _extraData ) internal` FIRST -> `bab1c9c15b1eab5f`
+- v1.0.0 `contracts/universal/StandardBridge.sol:453` `function _isOptimismMintableERC20(address _token) internal view returns (bool)` FIRST -> `37bcca598b5ae40a`
+- v1.0.0 `contracts/universal/StandardBridge.sol:469` `function _isCorrectTokenPair(address _mintableToken, address _otherToken) internal view returns (bool)` FIRST -> `c12ce7bc8a0ce298`
+- v1.0.0 `contracts/universal/StandardBridge.sol:491` `function _emitETHBridgeInitiated( address _from, address _to, uint256 _amount, bytes memory _extraData ) internal virtual` FIRST -> `05b31309dbbe76ae`
+- v1.0.0 `contracts/universal/StandardBridge.sol:509` `function _emitETHBridgeFinalized( address _from, address _to, uint256 _amount, bytes memory _extraData ) internal virtual` FIRST -> `81dc19172d46dc62`
+- v1.0.0 `contracts/universal/StandardBridge.sol:529` `function _emitERC20BridgeInitiated( address _localToken, address _remoteToken, address _from, address _to, uint256 _amount, bytes memory _extraData ) internal virtual` FIRST -> `f157d1727baa16fa`
+- v1.0.0 `contracts/universal/StandardBridge.sol:551` `function _emitERC20BridgeFinalized( address _localToken, address _remoteToken, address _from, address _to, uint256 _amount, bytes memory _extraData ) internal virtual` FIRST -> `d3beb19c9a4e50f5`
+- v1.1.0 `src/L1/L1CrossDomainMessenger.sol:33` `function initialize(OptimismPortal _portal) public reinitializer(Constants.INITIALIZER)` FIRST -> `2dab03912eed068a`
+- v1.1.0 `src/L1/L1CrossDomainMessenger.sol:39` `function portal() external view returns (address)` FIRST -> `0a0a5fcaabab4f65`
+- v1.1.0 `src/L1/L1CrossDomainMessenger.sol:44` `function _sendMessage(address _to, uint64 _gasLimit, uint256 _value, bytes memory _data) internal override` FIRST -> `cabe612ef89a15e3`
+- v1.1.0 `src/L1/L1StandardBridge.sol:81` `function initialize(CrossDomainMessenger _messenger) public reinitializer(Constants.INITIALIZER)` FIRST -> `277eb8f3e832f4f3`
+- v1.1.0 `src/L1/L1StandardBridge.sol:111` `function depositETHTo(address _to, uint32 _minGasLimit, bytes calldata _extraData) external payable` FIRST -> `29177ff02bda5c21`
+- v1.1.0 `src/L1/L1StandardBridge.sol:213` `function _initiateETHDeposit(address _from, address _to, uint32 _minGasLimit, bytes memory _extraData) internal` FIRST -> `30d14b3dc402d1ea`
+- v1.1.0 `src/L1/OptimismPortal.sol:120` `function initialize( L2OutputOracle _l2Oracle, address _guardian, SystemConfig _systemConfig, bool _paused ) public reinitializer(Constants.INITIALIZER)` FIRST -> `b273b5c10b27fc57`
+- v1.1.0 `src/L1/OptimismPortal.sol:139` `function L2_ORACLE() external view returns (L2OutputOracle)` FIRST -> `983e9f247aead14a`
+- v1.1.0 `src/L1/OptimismPortal.sol:145` `function SYSTEM_CONFIG() external view returns (SystemConfig)` FIRST -> `5a99c90914afa2ec`
+- v1.1.0 `src/L1/OptimismPortal.sol:151` `function GUARDIAN() external view returns (address)` FIRST -> `fdb8173b65dcc131`
+- v1.1.0 `src/L1/OptimismPortal.sol:156` `function pause() external` CHANGED from 5f87e16d6619e1b4 -> `1693a30c6a0456cb`
+- v1.1.0 `src/L1/OptimismPortal.sol:163` `function unpause() external` CHANGED from 9e5876c1de59928b -> `ee055d8dab7dd76a`
+- v1.1.0 `src/L1/OptimismPortal.sol:200` `function _resourceConfig() internal view override returns (ResourceMetering.ResourceConfig memory)` CHANGED from 54fb14d747326552 -> `ded8c5fac79657c2`
+- v1.1.0 `src/L1/OptimismPortal.sol:209` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _l2OutputIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external whenNotPaused` CHANGED from 89a513107d7c604c -> `880a310ab448bee2`
+- v1.1.0 `src/L1/OptimismPortal.sol:284` `function finalizeWithdrawalTransaction(Types.WithdrawalTransaction memory _tx) external whenNotPaused` CHANGED from 59b8dec2ae039098 -> `1992700fd0bac7dd`
+- v1.1.0 `src/L1/OptimismPortal.sol:426` `function isOutputFinalized(uint256 _l2OutputIndex) external view returns (bool)` CHANGED from 1620b097e20b9cae -> `fa3d0939013c936b`
+- v1.1.0 `src/L1/OptimismPortal.sol:434` `function _isFinalizationPeriodElapsed(uint256 _timestamp) internal view returns (bool)` CHANGED from a0bf4c2f6dccb106 -> `ea27de572ffa8dde`
+- v1.1.0 `src/L1/SystemConfig.sol:155` `function initialize( address _owner, uint256 _overhead, uint256 _scalar, bytes32 _batcherHash, uint64 _gasLimit, address _unsafeBlockSigner, ResourceMetering.ResourceConfig memory _config, uint256 _startBlock, address _batchInbox, SystemConfig.Addresses memory _addresses ) public reinitializer(Constants.INITIALIZER)` FIRST -> `51a1b201fda7d00a`
+- v1.1.0 `src/L1/SystemConfig.sol:208` `function unsafeBlockSigner() public view returns (address addr_)` FIRST -> `e2156b529d5aeb6d`
+- v1.1.0 `src/L1/SystemConfig.sol:213` `function l1CrossDomainMessenger() external view returns (address addr_)` FIRST -> `8104d6ca9f4c6e31`
+- v1.1.0 `src/L1/SystemConfig.sol:218` `function l1ERC721Bridge() external view returns (address addr_)` FIRST -> `7b84994f041b52f6`
+- v1.1.0 `src/L1/SystemConfig.sol:223` `function l1StandardBridge() external view returns (address addr_)` FIRST -> `270114fee1567f98`
+- v1.1.0 `src/L1/SystemConfig.sol:228` `function l2OutputOracle() external view returns (address addr_)` FIRST -> `293e572418ac936e`
+- v1.1.0 `src/L1/SystemConfig.sol:233` `function optimismPortal() external view returns (address addr_)` FIRST -> `518040c0276d6631`
+- v1.1.0 `src/L1/SystemConfig.sol:238` `function optimismMintableERC20Factory() external view returns (address addr_)` FIRST -> `95b6f4100d038b86`
+- v1.1.0 `src/L1/SystemConfig.sol:243` `function batchInbox() external view returns (address addr_)` FIRST -> `d276b19b3f607fac`
+- v1.1.0 `src/L1/SystemConfig.sol:257` `function _setStartBlock(uint256 _startBlock) internal` FIRST -> `59111e6f2a90dfc4`
+- v1.1.0 `src/L1/SystemConfig.sol:270` `function setUnsafeBlockSigner(address _unsafeBlockSigner) external onlyOwner` CHANGED from 73b39971956c5649 -> `f60bc1d5627799a1`
+- v1.1.0 `src/L1/SystemConfig.sol:276` `function _setUnsafeBlockSigner(address _unsafeBlockSigner) internal` CHANGED from 2e35001b26b91509 -> `f3545c208488aa0a`
+- v1.1.0 `src/L1/SystemConfig.sol:285` `function setBatcherHash(bytes32 _batcherHash) external onlyOwner` CHANGED from 62fb7d36f93dda6b -> `49c5549937cf8aa1`
+- v1.1.0 `src/L1/SystemConfig.sol:291` `function _setBatcherHash(bytes32 _batcherHash) internal` FIRST -> `788bea8a50dff502`
+- v1.1.0 `src/L1/SystemConfig.sol:301` `function setGasConfig(uint256 _overhead, uint256 _scalar) external onlyOwner` CHANGED from 67b460de81fbe5f8 -> `8750091516ea52e2`
+- v1.1.0 `src/L1/SystemConfig.sol:308` `function _setGasConfig(uint256 _overhead, uint256 _scalar) internal` FIRST -> `f3988874cff24d68`
+- v1.1.0 `src/L1/SystemConfig.sol:318` `function setGasLimit(uint64 _gasLimit) external onlyOwner` CHANGED from e27c5c42bc2908aa -> `314ef053e88cd977`
+- v1.1.0 `src/L1/SystemConfig.sol:324` `function _setGasLimit(uint64 _gasLimit) internal` FIRST -> `5bc3b995d3021bd2`
+- v1.1.0 `src/dispute/DisputeGameFactory.sol:50` `function initialize(address _owner) public initializer` FIRST -> `67e7181ec5b20366`
+- v1.1.0 `src/dispute/DisputeGameFactory.sol:56` `function gameCount() external view returns (uint256 gameCount_)` FIRST -> `22f19815cd45245a`
+- v1.1.0 `src/dispute/DisputeGameFactory.sol:61` `function games( GameType _gameType, Claim _rootClaim, bytes calldata _extraData ) external view returns (IDisputeGame proxy_, Timestamp timestamp_)` FIRST -> `67e6e4e80f600ed2`
+- v1.1.0 `src/dispute/DisputeGameFactory.sol:75` `function gameAtIndex(uint256 _index) external view returns (GameType gameType_, Timestamp timestamp_, IDisputeGame proxy_)` FIRST -> `93fedd0dcff113f9`
+- v1.1.0 `src/dispute/DisputeGameFactory.sol:84` `function create( GameType _gameType, Claim _rootClaim, bytes calldata _extraData ) external returns (IDisputeGame proxy_)` FIRST -> `bdcfc2de5a03295d`
+- v1.1.0 `src/dispute/DisputeGameFactory.sol:117` `function getGameUUID( GameType _gameType, Claim _rootClaim, bytes memory _extraData ) public pure returns (Hash uuid_)` FIRST -> `eb81f0081534304d`
+- v1.1.0 `src/dispute/DisputeGameFactory.sol:158` `function setImplementation(GameType _gameType, IDisputeGame _impl) external onlyOwner` FIRST -> `d6846afbd644853e`
+- v1.1.0 `src/libraries/SafeCall.sol:12` `function send(address _target, uint256 _gas, uint256 _value) internal returns (bool)` FIRST -> `d59039527b0986a4`
+- v1.1.0 `src/libraries/SafeCall.sol:34` `function call(address _target, uint256 _gas, uint256 _value, bytes memory _calldata) internal returns (bool)` FIRST -> `dd5d92bcf18afabc`
+- v1.1.0 `src/universal/CrossDomainMessenger.sol:180` `function sendMessage(address _target, bytes calldata _message, uint32 _minGasLimit) external payable` FIRST -> `69eeedf1ae27198b`
+- v1.1.0 `src/universal/CrossDomainMessenger.sol:363` `function _sendMessage(address _to, uint64 _gasLimit, uint256 _value, bytes memory _data) internal virtual` FIRST -> `d90e553795155d07`
+- v1.1.0 `src/universal/ProxyAdmin.sol:161` `function upgrade(address payable _proxy, address _implementation) public onlyOwner` CHANGED from 10e995f44d0bf0f5 -> `98f4e956f27e3b07`
+- v1.1.0 `src/universal/StandardBridge.sol:113` `modifier onlyOtherBridge()` CHANGED from 801024214b1323ae -> `8257d9bafc4f1f58`
+- v1.1.0 `src/universal/StandardBridge.sol:129` `function __StandardBridge_init(CrossDomainMessenger _messenger) internal onlyInitializing` FIRST -> `f2cb8f8cc94bed97`
+- v1.1.0 `src/universal/StandardBridge.sol:140` `function MESSENGER() external view returns (CrossDomainMessenger)` FIRST -> `37d953bfc7983251`
+- v1.1.0 `src/universal/StandardBridge.sol:145` `function otherBridge() external view returns (StandardBridge)` FIRST -> `82e35c8cedab5db2`
+- v1.1.0 `src/universal/StandardBridge.sol:170` `function bridgeETHTo(address _to, uint32 _minGasLimit, bytes calldata _extraData) public payable` FIRST -> `513d7b9b4edd759b`
+- v1.1.0 `src/universal/StandardBridge.sol:233` `function finalizeBridgeETH( address _from, address _to, uint256 _amount, bytes calldata _extraData ) public payable onlyOtherBridge` CHANGED from ef25fdc78d13011a -> `0917c11d56a4e51a`
+- v1.1.0 `src/universal/StandardBridge.sol:301` `function _initiateBridgeETH( address _from, address _to, uint256 _amount, uint32 _minGasLimit, bytes memory _extraData ) internal` CHANGED from f677dea63e480bc2 -> `6b2ed7aeb5439fab`
+- v1.1.0 `src/universal/StandardBridge.sol:332` `function _initiateBridgeERC20( address _localToken, address _remoteToken, address _from, address _to, uint256 _amount, uint32 _minGasLimit, bytes memory _extraData ) internal` CHANGED from bab1c9c15b1eab5f -> `241dfab0b7f6baa2`
+- v1.1.0 `src/universal/StorageSetter.sol:18` `function setBytes32(bytes32 _slot, bytes32 _value) public` FIRST -> `0d148a46704e9e4a`
+- v1.1.0 `src/universal/StorageSetter.sol:23` `function getBytes32(bytes32 _slot) external view returns (bytes32)` FIRST -> `974c3f648e172a75`
+- v1.1.0 `src/universal/StorageSetter.sol:28` `function setUint(bytes32 _slot, uint256 _value) public` FIRST -> `d86fbbe196d0e212`
+- v1.1.0 `src/universal/StorageSetter.sol:33` `function getUint(bytes32 _slot) external view returns (uint256)` FIRST -> `a4a80ae9cbf0bbb5`
+- v1.1.0 `src/universal/StorageSetter.sol:38` `function setAddress(bytes32 _slot, address _address) public` FIRST -> `28537b0bd3a34c88`
+- v1.1.0 `src/universal/StorageSetter.sol:43` `function getAddress(bytes32 _slot) external view returns (address)` FIRST -> `10989e5903b3b56a`
+- v1.2.0 `src/L1/L1CrossDomainMessenger.sol:37` `function initialize(SuperchainConfig _superchainConfig) public initializer` FIRST -> `bcdef7c20fbfcfb6`
+- v1.2.0 `src/L1/L1CrossDomainMessenger.sol:63` `function paused() public view override returns (bool)` FIRST -> `f8505193ce2616db`
+- v1.2.0 `src/L1/L1StandardBridge.sol:87` `function initialize(SuperchainConfig _superchainConfig) public initializer` FIRST -> `1cda815974ff03f5`
+- v1.2.0 `src/L1/L1StandardBridge.sol:92` `function paused() public view override returns (bool)` FIRST -> `f8505193ce2616db`
+- v1.2.0 `src/L1/OptimismPortal.sol:90` `modifier whenNotPaused()` CHANGED from e0fe222383f4a1bd -> `0772b03e175a8f8c`
+- v1.2.0 `src/L1/OptimismPortal.sol:110` `function initialize(SuperchainConfig _superchainConfig) public initializer` FIRST -> `3a09c2e15d750ea7`
+- v1.2.0 `src/L1/OptimismPortal.sol:120` `function l2Oracle() public view returns (L2OutputOracle)` FIRST -> `1b2843540f4a90a2`
+- v1.2.0 `src/L1/OptimismPortal.sol:126` `function systemConfig() public view returns (SystemConfig)` FIRST -> `9fca3c4c1f5d523d`
+- v1.2.0 `src/L1/OptimismPortal.sol:134` `function GUARDIAN() external view returns (address)` CHANGED from fdb8173b65dcc131 -> `ff9aaba83dca9ae0`
+- v1.2.0 `src/L1/OptimismPortal.sol:142` `function guardian() public view returns (address)` FIRST -> `6980998fbb637345`
+- v1.2.0 `src/L1/OptimismPortal.sol:147` `function paused() public view returns (bool paused_)` FIRST -> `277239caa70b7dd2`
+- v1.2.0 `src/L1/OptimismPortal.sol:182` `function _resourceConfig() internal view override returns (ResourceMetering.ResourceConfig memory)` CHANGED from ded8c5fac79657c2 -> `54fb14d747326552`
+- v1.2.0 `src/L1/OptimismPortal.sol:191` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _l2OutputIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external whenNotPaused` CHANGED from 880a310ab448bee2 -> `89a513107d7c604c`
+- v1.2.0 `src/L1/OptimismPortal.sol:266` `function finalizeWithdrawalTransaction(Types.WithdrawalTransaction memory _tx) external whenNotPaused` CHANGED from 1992700fd0bac7dd -> `59b8dec2ae039098`
+- v1.2.0 `src/L1/OptimismPortal.sol:408` `function isOutputFinalized(uint256 _l2OutputIndex) external view returns (bool)` CHANGED from fa3d0939013c936b -> `1620b097e20b9cae`
+- v1.2.0 `src/L1/OptimismPortal.sol:416` `function _isFinalizationPeriodElapsed(uint256 _timestamp) internal view returns (bool)` CHANGED from ea27de572ffa8dde -> `a0bf4c2f6dccb106`
+- v1.2.0 `src/L1/SuperchainConfig.sol:49` `function initialize(address _guardian, bool _paused) public initializer` FIRST -> `ba6cf017e80afac6`
+- v1.2.0 `src/L1/SuperchainConfig.sol:57` `function guardian() public view returns (address guardian_)` FIRST -> `dc0c50bea62b8e69`
+- v1.2.0 `src/L1/SuperchainConfig.sol:62` `function paused() public view returns (bool paused_)` FIRST -> `3361f15540a0701e`
+- v1.2.0 `src/L1/SuperchainConfig.sol:68` `function pause(string memory _identifier) external` FIRST -> `cf00c7b455a1865c`
+- v1.2.0 `src/L1/SuperchainConfig.sol:75` `function _pause(string memory _identifier) internal` FIRST -> `9f96d7fa169fb23c`
+- v1.2.0 `src/L1/SuperchainConfig.sol:81` `function unpause() external` FIRST -> `192111e186c2fa1f`
+- v1.2.0 `src/L1/SuperchainConfig.sol:90` `function _setGuardian(address _guardian) internal` FIRST -> `65ddb1d062656881`
+- v1.2.0 `src/L1/SystemConfig.sol:109` `function initialize( address _owner, uint256 _overhead, uint256 _scalar, bytes32 _batcherHash, uint64 _gasLimit, address _unsafeBlockSigner, ResourceMetering.ResourceConfig memory _config ) public initializer` CHANGED from c2c5f744f09675c8 -> `0a05407e78503e8e`
+- v1.2.0 `src/dispute/DisputeGameFactory.sol:87` `function create( GameType _gameType, Claim _rootClaim, bytes calldata _extraData ) external payable returns (IDisputeGame proxy_)` FIRST -> `332a1ff24b9cabf5`
+- v1.2.0 `src/dispute/DisputeGameFactory.sol:124` `function getGameUUID( GameType _gameType, Claim _rootClaim, bytes calldata _extraData ) public pure returns (Hash uuid_)` FIRST -> `095966c35eab974c`
+- v1.2.0 `src/dispute/DisputeGameFactory.sol:143` `function setInitBond(GameType _gameType, uint256 _initBond) external onlyOwner` FIRST -> `5f00a85b868f0c69`
+- v1.2.0 `src/universal/CrossDomainMessenger.sol:211` `function relayMessage( uint256 _nonce, address _sender, address _target, uint256 _value, uint256 _minGasLimit, bytes calldata _message ) external payable` CHANGED from 501eb42ab34e3c91 -> `71f919d73a3f89a9`
+- v1.2.0 `src/universal/CrossDomainMessenger.sol:338` `function baseGas(bytes calldata _message, uint32 _minGasLimit) public pure returns (uint64)` CHANGED from 1f89933eef7887f0 -> `21869efc82c9156a`
+- v1.2.0 `src/universal/CrossDomainMessenger.sol:359` `function __CrossDomainMessenger_init() internal onlyInitializing` CHANGED from af5300a61a7b4911 -> `6fae78a6646cb85e`
+- v1.2.0 `src/universal/CrossDomainMessenger.sol:397` `function paused() public view virtual returns (bool)` FIRST -> `a0628851dbc330a1`
+- v1.2.0 `src/universal/StandardBridge.sol:104` `modifier onlyOtherBridge()` CHANGED from 8257d9bafc4f1f58 -> `801024214b1323ae`
+- v1.2.0 `src/universal/StandardBridge.sol:139` `function paused() public view virtual returns (bool)` FIRST -> `a0628851dbc330a1`
+- v1.2.0 `src/universal/StandardBridge.sol:227` `function finalizeBridgeETH( address _from, address _to, uint256 _amount, bytes calldata _extraData ) public payable onlyOtherBridge` CHANGED from 0917c11d56a4e51a -> `d2caa48404ff8dc4`
+- v1.2.0 `src/universal/StandardBridge.sol:260` `function finalizeBridgeERC20( address _localToken, address _remoteToken, address _from, address _to, uint256 _amount, bytes calldata _extraData ) public onlyOtherBridge` CHANGED from 8e757f7a152020d4 -> `568d1e6919613127`
+- v1.2.0 `src/universal/StandardBridge.sol:297` `function _initiateBridgeETH( address _from, address _to, uint256 _amount, uint32 _minGasLimit, bytes memory _extraData ) internal` CHANGED from 6b2ed7aeb5439fab -> `f677dea63e480bc2`
+- v1.2.0 `src/universal/StandardBridge.sol:328` `function _initiateBridgeERC20( address _localToken, address _remoteToken, address _from, address _to, uint256 _amount, uint32 _minGasLimit, bytes memory _extraData ) internal` CHANGED from 241dfab0b7f6baa2 -> `bab1c9c15b1eab5f`
+- v1.2.0 `src/universal/StorageSetter.sol:29` `function setBytes32(Slot[] calldata slots) public` FIRST -> `276af78c1b83fed6`
+- v1.2.0 `src/universal/StorageSetter.sol:37` `function getBytes32(bytes32 _slot) external view returns (bytes32 value_)` FIRST -> `8b9abd1d2a4ceb36`
+- v1.2.0 `src/universal/StorageSetter.sol:47` `function getUint(bytes32 _slot) external view returns (uint256 value_)` FIRST -> `6ed9d4a8b9a9ac85`
+- v1.2.0 `src/universal/StorageSetter.sol:57` `function getAddress(bytes32 _slot) external view returns (address addr_)` FIRST -> `dda423ac40daaf2f`
+- v1.2.0 `src/universal/StorageSetter.sol:62` `function setBool(bytes32 _slot, bool _value) public` FIRST -> `5e97f47894d9c439`
+- v1.2.0 `src/universal/StorageSetter.sol:67` `function getBool(bytes32 _slot) external view returns (bool value_)` FIRST -> `533583eddc686af8`
+- v1.3.0 `src/L1/L1CrossDomainMessenger.sol:35` `function initialize(SuperchainConfig _superchainConfig, OptimismPortal _portal) public initializer` FIRST -> `57d7c21d05f16265`
+- v1.3.0 `src/L1/L1CrossDomainMessenger.sol:45` `function PORTAL() external view returns (OptimismPortal)` FIRST -> `83eef7e84abd33c2`
+- v1.3.0 `src/L1/L1CrossDomainMessenger.sol:50` `function _sendMessage(address _to, uint64 _gasLimit, uint256 _value, bytes memory _data) internal override` CHANGED from cabe612ef89a15e3 -> `945534a85b8b1dbb`
+- v1.3.0 `src/L1/L1CrossDomainMessenger.sol:61` `function _isOtherMessenger() internal view override returns (bool)` CHANGED from c1e35cff49e6b5c9 -> `5a813fb5a3dc5f8a`
+- v1.3.0 `src/L1/L1CrossDomainMessenger.sol:66` `function _isUnsafeTarget(address _target) internal view override returns (bool)` CHANGED from e34e791c3b9ddf10 -> `1f6e1558dcd380cc`
+- v1.3.0 `src/L1/L1StandardBridge.sol:87` `function initialize(CrossDomainMessenger _messenger, SuperchainConfig _superchainConfig) public initializer` FIRST -> `c66db9aee5ffcd58`
+- v1.3.0 `src/L1/L1StandardBridge.sol:219` `function l2TokenBridge() external view returns (address)` CHANGED from c1c2a06be0c864b7 -> `f8d7d338eb62ef2c`
+- v1.3.0 `src/L1/OptimismPortal.sol:110` `function initialize( L2OutputOracle _l2Oracle, SystemConfig _systemConfig, SuperchainConfig _superchainConfig ) public initializer` FIRST -> `0c44c4df93773ecf`
+- v1.3.0 `src/L1/OptimismPortal.sol:196` `function _resourceConfig() internal view override returns (ResourceMetering.ResourceConfig memory)` CHANGED from 54fb14d747326552 -> `ded8c5fac79657c2`
+- v1.3.0 `src/L1/OptimismPortal.sol:205` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _l2OutputIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external whenNotPaused` CHANGED from 89a513107d7c604c -> `880a310ab448bee2`
+- v1.3.0 `src/L1/OptimismPortal.sol:280` `function finalizeWithdrawalTransaction(Types.WithdrawalTransaction memory _tx) external whenNotPaused` CHANGED from 59b8dec2ae039098 -> `1992700fd0bac7dd`
+- v1.3.0 `src/L1/OptimismPortal.sol:422` `function isOutputFinalized(uint256 _l2OutputIndex) external view returns (bool)` CHANGED from 1620b097e20b9cae -> `fa3d0939013c936b`
+- v1.3.0 `src/L1/OptimismPortal.sol:430` `function _isFinalizationPeriodElapsed(uint256 _timestamp) internal view returns (bool)` CHANGED from a0bf4c2f6dccb106 -> `ea27de572ffa8dde`
+- v1.3.0 `src/L1/SystemConfig.sol:153` `function initialize( address _owner, uint256 _overhead, uint256 _scalar, bytes32 _batcherHash, uint64 _gasLimit, address _unsafeBlockSigner, ResourceMetering.ResourceConfig memory _config, address _batchInbox, SystemConfig.Addresses memory _addresses ) public initializer` FIRST -> `d131e85b472c7c20`
+- v1.3.0 `src/L1/SystemConfig.sol:245` `function startBlock() external view returns (uint256 startBlock_)` FIRST -> `5e8bb0d319939492`
+- v1.3.0 `src/L1/SystemConfig.sol:322` `function _setStartBlock() internal` FIRST -> `2aec0307f2823552`
+- v1.3.0 `src/universal/CrossDomainMessenger.sol:176` `function sendMessage(address _target, bytes calldata _message, uint32 _minGasLimit) external payable` CHANGED from 69eeedf1ae27198b -> `14f8b6947e478d0a`
+- v1.3.0 `src/universal/CrossDomainMessenger.sol:207` `function relayMessage( uint256 _nonce, address _sender, address _target, uint256 _value, uint256 _minGasLimit, bytes calldata _message ) external payable` CHANGED from 71f919d73a3f89a9 -> `82549d8800ecb2dc`
+- v1.3.0 `src/universal/CrossDomainMessenger.sol:323` `function OTHER_MESSENGER() public view returns (CrossDomainMessenger)` FIRST -> `d4fa09cb68e42e2d`
+- v1.3.0 `src/universal/CrossDomainMessenger.sol:342` `function baseGas(bytes calldata _message, uint32 _minGasLimit) public pure returns (uint64)` CHANGED from 21869efc82c9156a -> `977eb4d6799c5b0e`
+- v1.3.0 `src/universal/CrossDomainMessenger.sol:364` `function __CrossDomainMessenger_init(CrossDomainMessenger _otherMessenger) internal onlyInitializing` FIRST -> `61347067ecbff8e7`
+- v1.3.0 `src/universal/StandardBridge.sol:106` `modifier onlyOtherBridge()` CHANGED from 801024214b1323ae -> `c3f93d86e9a3d73f`
+- v1.3.0 `src/universal/StandardBridge.sol:118` `function __StandardBridge_init( CrossDomainMessenger _messenger, StandardBridge _otherBridge ) internal onlyInitializing` FIRST -> `8f2a2da88ddb103c`
+- v1.3.0 `src/universal/StandardBridge.sol:145` `function OTHER_BRIDGE() external view returns (StandardBridge)` FIRST -> `87d2fb5aca77be09`
+- v1.3.0 `src/universal/StandardBridge.sol:241` `function finalizeBridgeETH( address _from, address _to, uint256 _amount, bytes calldata _extraData ) public payable onlyOtherBridge` CHANGED from d2caa48404ff8dc4 -> `cf0e014705ac92e8`
+- v1.3.0 `src/universal/StandardBridge.sol:311` `function _initiateBridgeETH( address _from, address _to, uint256 _amount, uint32 _minGasLimit, bytes memory _extraData ) internal` CHANGED from f677dea63e480bc2 -> `d23c1db8c81bff5f`
+- v1.3.0 `src/universal/StandardBridge.sol:342` `function _initiateBridgeERC20( address _localToken, address _remoteToken, address _from, address _to, uint256 _amount, uint32 _minGasLimit, bytes memory _extraData ) internal` CHANGED from bab1c9c15b1eab5f -> `209f5396cce97730`
+- v1.4.0 `src/L1/OptimismPortal.sol:89` `modifier whenNotPaused()` CHANGED from 0772b03e175a8f8c -> `19e5df2860a0ffdd`
+- v1.4.0 `src/L1/OptimismPortal.sol:181` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _l2OutputIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external whenNotPaused` CHANGED from 880a310ab448bee2 -> `e05d17e804748a07`
+- v1.4.0 `src/L1/OptimismPortal.sol:259` `function finalizeWithdrawalTransaction(Types.WithdrawalTransaction memory _tx) external whenNotPaused` CHANGED from 1992700fd0bac7dd -> `a6b342509f88da94`
+- v1.4.0 `src/L1/OptimismPortal.sol:353` `function depositTransaction( address _to, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) public payable metered(_gasLimit)` CHANGED from 6aa3c441d39fbe1c -> `18a82f427a6f33ee`
+- v1.4.0 `src/L1/OptimismPortal2.sol:137` `modifier whenNotPaused()` FIRST -> `19e5df2860a0ffdd`
+- v1.4.0 `src/L1/OptimismPortal2.sol:163` `function initialize( DisputeGameFactory _disputeGameFactory, SystemConfig _systemConfig, SuperchainConfig _superchainConfig, GameType _initialRespectedGameType ) public initializer` FIRST -> `f55726bffe61c800`
+- v1.4.0 `src/L1/OptimismPortal2.sol:196` `function guardian() public view returns (address)` FIRST -> `6980998fbb637345`
+- v1.4.0 `src/L1/OptimismPortal2.sol:201` `function paused() public view returns (bool)` FIRST -> `f49d305df216e9d1`
+- v1.4.0 `src/L1/OptimismPortal2.sol:206` `function proofMaturityDelaySeconds() public view returns (uint256)` FIRST -> `7b65bd950a25a7b9`
+- v1.4.0 `src/L1/OptimismPortal2.sol:211` `function disputeGameFinalityDelaySeconds() public view returns (uint256)` FIRST -> `ce7e2b5dc9f8fe85`
+- v1.4.0 `src/L1/OptimismPortal2.sol:222` `function minimumGasLimit(uint64 _byteCount) public pure returns (uint64)` FIRST -> `7795c7549e071397`
+- v1.4.0 `src/L1/OptimismPortal2.sol:230` `receive() external payable` FIRST -> `a68e8d141ad95fe7`
+- v1.4.0 `src/L1/OptimismPortal2.sol:237` `function donateETH() external payable` FIRST -> `ed39be79b7a88196`
+- v1.4.0 `src/L1/OptimismPortal2.sol:245` `function _resourceConfig() internal view override returns (ResourceMetering.ResourceConfig memory)` FIRST -> `ded8c5fac79657c2`
+- v1.4.0 `src/L1/OptimismPortal2.sol:254` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _disputeGameIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external whenNotPaused` FIRST -> `a53e4fabb68adad9`
+- v1.4.0 `src/L1/OptimismPortal2.sol:332` `function finalizeWithdrawalTransaction(Types.WithdrawalTransaction memory _tx) external whenNotPaused` FIRST -> `3443335d570a79c3`
+- v1.4.0 `src/L1/OptimismPortal2.sol:339` `function finalizeWithdrawalTransactionExternalProof( Types.WithdrawalTransaction memory _tx, address _proofSubmitter ) public whenNotPaused` FIRST -> `2ae48295ddd6ef90`
+- v1.4.0 `src/L1/OptimismPortal2.sol:398` `function depositTransaction( address _to, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) public payable metered(_gasLimit)` FIRST -> `18a82f427a6f33ee`
+- v1.4.0 `src/L1/OptimismPortal2.sol:441` `function blacklistDisputeGame(IDisputeGame _disputeGame) external` FIRST -> `593ba9534dee46fd`
+- v1.4.0 `src/L1/OptimismPortal2.sol:450` `function setRespectedGameType(GameType _gameType) external` FIRST -> `2e322394b97f8820`
+- v1.4.0 `src/L1/OptimismPortal2.sol:461` `function checkWithdrawal(bytes32 _withdrawalHash, address _proofSubmitter) public view` FIRST -> `e8de1335b78b4cc0`
+- v1.4.0 `src/L1/OptimismPortal2.sol:527` `function numProofSubmitters(bytes32 _withdrawalHash) external view returns (uint256)` FIRST -> `eb9303bf0be7368b`
+- v1.4.0 `src/L1/SystemConfig.sol:159` `function initialize( address _owner, uint256 _overhead, uint256 _scalar, bytes32 _batcherHash, uint64 _gasLimit, address _unsafeBlockSigner, ResourceMetering.ResourceConfig memory _config, address _batchInbox, SystemConfig.Addresses memory _addresses ) public initializer` CHANGED from d131e85b472c7c20 -> `1df8e938eb5090b1`
+- v1.4.0 `src/L1/SystemConfig.sol:210` `function maximumGasLimit() public pure returns (uint64)` FIRST -> `c87ec9d1f904163e`
+- v1.4.0 `src/L1/SystemConfig.sol:238` `function disputeGameFactory() external view returns (address addr_)` FIRST -> `3ae9125e08b2837d`
+- v1.4.0 `src/L1/SystemConfig.sol:318` `function _setGasLimit(uint64 _gasLimit) internal` CHANGED from 5bc3b995d3021bd2 -> `391b42d31c43ab2a`
+- v1.4.0 `src/dispute/AnchorStateRegistry.sol:46` `function initialize(StartingAnchorRoot[] memory _startingAnchorRoots) public initializer` FIRST -> `3347590922ecf072`
+- v1.4.0 `src/dispute/AnchorStateRegistry.sol:54` `function disputeGameFactory() external view returns (IDisputeGameFactory)` FIRST -> `97eb019016210ac7`
+- v1.4.0 `src/dispute/AnchorStateRegistry.sol:59` `function tryUpdateAnchorState() external` FIRST -> `813207fdd4cdf5c8`
+- v1.4.0 `src/dispute/DisputeGameFactory.sol:59` `function games( GameType _gameType, Claim _rootClaim, bytes calldata _extraData ) external view returns (IDisputeGame proxy_, Timestamp timestamp_)` CHANGED from 67e6e4e80f600ed2 -> `9210f4f5961dd17a`
+- v1.4.0 `src/dispute/DisputeGameFactory.sol:74` `function gameAtIndex(uint256 _index) external view returns (GameType gameType_, Timestamp timestamp_, IDisputeGame proxy_)` CHANGED from 93fedd0dcff113f9 -> `51dd84f112d8dc48`
+- v1.4.0 `src/dispute/DisputeGameFactory.sol:84` `function create( GameType _gameType, Claim _rootClaim, bytes calldata _extraData ) external payable returns (IDisputeGame proxy_)` CHANGED from 332a1ff24b9cabf5 -> `6761fe206a88f0d8`
+- v1.4.0 `src/dispute/DisputeGameFactory.sol:148` `function findLatestGames( GameType _gameType, uint256 _start, uint256 _n ) external view returns (GameSearchResult[] memory games_)` FIRST -> `63f5086c9fc09066`
+- v1.4.0 `src/dispute/weth/DelayedWETH.sol:45` `function initialize(address _owner, SuperchainConfig _config) public initializer` FIRST -> `664a324c539703d9`
+- v1.4.0 `src/dispute/weth/DelayedWETH.sol:52` `function delay() external view returns (uint256)` FIRST -> `f2543d777ac63b1c`
+- v1.4.0 `src/dispute/weth/DelayedWETH.sol:57` `function unlock(address _guy, uint256 _wad) external` FIRST -> `190d76fa187d409c`
+- v1.4.0 `src/dispute/weth/DelayedWETH.sol:69` `function withdraw(uint256 _wad) public override(WETH98, IWETH)` FIRST -> `78e817718b0d90b4`
+- v1.4.0 `src/dispute/weth/DelayedWETH.sol:74` `function withdraw(address _guy, uint256 _wad) public` FIRST -> `9db1448a9ab0e9f4`
+- v1.4.0 `src/dispute/weth/DelayedWETH.sol:85` `function recover(uint256 _wad) external` FIRST -> `261f3ac0fb1792fe`
+- v1.4.0 `src/dispute/weth/DelayedWETH.sol:92` `function hold(address _guy, uint256 _wad) external` FIRST -> `ff04d1d5919e068e`
+- v1.5.0 `src/L1/L1CrossDomainMessenger.sol:44` `function initialize( SuperchainConfig _superchainConfig, OptimismPortal _portal, SystemConfig _systemConfig ) public initializer` FIRST -> `72a4e5d3716afd30`
+- v1.5.0 `src/L1/L1CrossDomainMessenger.sol:59` `function gasPayingToken() internal view override returns (address _addr, uint8 _decimals)` FIRST -> `c7ee382fda083bcd`
+- v1.5.0 `src/L1/L1StandardBridge.sol:95` `function initialize( CrossDomainMessenger _messenger, SuperchainConfig _superchainConfig, SystemConfig _systemConfig ) public initializer` FIRST -> `f97c8576df4f9af8`
+- v1.5.0 `src/L1/L1StandardBridge.sol:122` `function gasPayingToken() internal view override returns (address addr_, uint8 decimals_)` FIRST -> `0f441cebd6715b6f`
+- v1.5.0 `src/L1/OptimismPortal.sol:165` `function balance() public view returns (uint256)` FIRST -> `986d0cbad5378187`
+- v1.5.0 `src/L1/OptimismPortal.sol:215` `function gasPayingToken() internal view returns (address addr_, uint8 decimals_)` FIRST -> `5a58d4995e652ec7`
+- v1.5.0 `src/L1/OptimismPortal.sol:232` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _l2OutputIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external whenNotPaused` CHANGED from e05d17e804748a07 -> `1d4c201e0e99207a`
+- v1.5.0 `src/L1/OptimismPortal.sol:310` `function finalizeWithdrawalTransaction(Types.WithdrawalTransaction memory _tx) external whenNotPaused` CHANGED from a6b342509f88da94 -> `c253d92ee1f1e902`
+- v1.5.0 `src/L1/OptimismPortal.sol:440` `function depositERC20Transaction( address _to, uint256 _mint, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) public metered(_gasLimit)` FIRST -> `1556cdf508b8a061`
+- v1.5.0 `src/L1/OptimismPortal.sol:488` `function depositTransaction( address _to, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) public payable metered(_gasLimit)` CHANGED from 18a82f427a6f33ee -> `f2325e562dfb8949`
+- v1.5.0 `src/L1/OptimismPortal.sol:519` `function _depositTransaction( address _to, uint256 _mint, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) internal` FIRST -> `70dbf7afae32806c`
+- v1.5.0 `src/L1/OptimismPortal.sol:561` `function setGasPayingToken(address _token, uint8 _decimals, bytes32 _name, bytes32 _symbol) external` FIRST -> `f7685e19db4accd4`
+- v1.5.0 `src/L1/SystemConfig.sol:168` `function initialize( address _owner, uint256 _overhead, uint256 _scalar, bytes32 _batcherHash, uint64 _gasLimit, address _unsafeBlockSigner, ResourceMetering.ResourceConfig memory _config, address _batchInbox, SystemConfig.Addresses memory _addresses ) public initializer` CHANGED from 1df8e938eb5090b1 -> `edd4bccf58611dae`
+- v1.5.0 `src/L1/SystemConfig.sol:253` `function optimismPortal() public view returns (address addr_)` FIRST -> `541754db8390641d`
+- v1.5.0 `src/L1/SystemConfig.sol:273` `function gasPayingToken() public view returns (address addr_, uint8 decimals_)` FIRST -> `c8fa0e899a46fde1`
+- v1.5.0 `src/L1/SystemConfig.sol:279` `function isCustomGasToken() public view returns (bool)` FIRST -> `25d0c106496b96c7`
+- v1.5.0 `src/L1/SystemConfig.sol:285` `function gasPayingTokenName() external view returns (string memory name_)` FIRST -> `b07f655650a16dc0`
+- v1.5.0 `src/L1/SystemConfig.sol:290` `function gasPayingTokenSymbol() external view returns (string memory symbol_)` FIRST -> `adc53d72fdb9fbb3`
+- v1.5.0 `src/L1/SystemConfig.sol:299` `function _setGasPayingToken(address _token) internal` FIRST -> `eb301714d6f7d42b`
+- v1.5.0 `src/universal/CrossDomainMessenger.sol:176` `function sendMessage(address _target, bytes calldata _message, uint32 _minGasLimit) external payable` CHANGED from 14f8b6947e478d0a -> `3eae7b557f1397d3`
+- v1.5.0 `src/universal/CrossDomainMessenger.sol:346` `function baseGas(bytes calldata _message, uint32 _minGasLimit) public pure returns (uint64)` CHANGED from 977eb4d6799c5b0e -> `a4595709eeea86cf`
+- v1.5.0 `src/universal/CrossDomainMessenger.sol:366` `function gasPayingToken() internal view virtual returns (address, uint8)` FIRST -> `92aaa06c45e5a8ab`
+- v1.5.0 `src/universal/CrossDomainMessenger.sol:369` `function isCustomGasToken() internal view returns (bool)` FIRST -> `5fa0046dfbe4d93d`
+- v1.5.0 `src/universal/StandardBridge.sol:134` `function gasPayingToken() internal view virtual returns (address, uint8)` FIRST -> `92aaa06c45e5a8ab`
+- v1.5.0 `src/universal/StandardBridge.sol:137` `function isCustomGasToken() internal view returns (bool)` FIRST -> `5fa0046dfbe4d93d`
+- v1.5.0 `src/universal/StandardBridge.sol:244` `function finalizeBridgeETH( address _from, address _to, uint256 _amount, bytes calldata _extraData ) public payable onlyOtherBridge` CHANGED from cf0e014705ac92e8 -> `56383d290f45069c`
+- v1.5.0 `src/universal/StandardBridge.sol:315` `function _initiateBridgeETH( address _from, address _to, uint256 _amount, uint32 _minGasLimit, bytes memory _extraData ) internal` CHANGED from d23c1db8c81bff5f -> `30ae88d824227c6d`
+- v1.5.0 `src/universal/StandardBridge.sol:347` `function _initiateBridgeERC20( address _localToken, address _remoteToken, address _from, address _to, uint256 _amount, uint32 _minGasLimit, bytes memory _extraData ) internal` CHANGED from 209f5396cce97730 -> `60f16be3abd0bd13`
+- v1.6.0 `src/L1/OptimismPortal.sol:132` `function version() public pure virtual returns (string memory)` FIRST -> `abd18aac90652d5c`
+- v1.6.0 `src/L1/OptimismPortal2.sol:157` `function version() public pure virtual returns (string memory)` FIRST -> `7828ea2287253267`
+- v1.6.0 `src/L1/OptimismPortal2.sol:208` `function balance() public view returns (uint256)` FIRST -> `986d0cbad5378187`
+- v1.6.0 `src/L1/OptimismPortal2.sol:267` `function gasPayingToken() internal view returns (address addr_, uint8 decimals_)` FIRST -> `5a58d4995e652ec7`
+- v1.6.0 `src/L1/OptimismPortal2.sol:284` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _disputeGameIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external whenNotPaused` CHANGED from a53e4fabb68adad9 -> `c60ae143688e536b`
+- v1.6.0 `src/L1/OptimismPortal2.sol:362` `function finalizeWithdrawalTransactionExternalProof( Types.WithdrawalTransaction memory _tx, address _proofSubmitter ) public whenNotPaused` CHANGED from 2ae48295ddd6ef90 -> `bbebcaa0edfff4b3`
+- v1.6.0 `src/L1/OptimismPortal2.sol:456` `function depositERC20Transaction( address _to, uint256 _mint, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) public metered(_gasLimit)` FIRST -> `1556cdf508b8a061`
+- v1.6.0 `src/L1/OptimismPortal2.sol:504` `function depositTransaction( address _to, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) public payable metered(_gasLimit)` CHANGED from 18a82f427a6f33ee -> `f2325e562dfb8949`
+- v1.6.0 `src/L1/OptimismPortal2.sol:535` `function _depositTransaction( address _to, uint256 _mint, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) internal` FIRST -> `70dbf7afae32806c`
+- v1.6.0 `src/L1/OptimismPortal2.sol:577` `function setGasPayingToken(address _token, uint8 _decimals, bytes32 _name, bytes32 _symbol) external` FIRST -> `f7685e19db4accd4`
+- v1.6.0 `src/L1/OptimismPortal2.sol:622` `function checkWithdrawal(bytes32 _withdrawalHash, address _proofSubmitter) public view` CHANGED from e8de1335b78b4cc0 -> `bbc240c6f0125299`
+- v1.6.0 `src/L1/OptimismPortalInterop.sol:26` `function version() public pure override returns (string memory)` FIRST -> `a3ed398d49854940`
+- v1.6.0 `src/L1/OptimismPortalInterop.sol:33` `function setConfig(ConfigType _type, bytes memory _value) external` FIRST -> `417fb367a1aaeed0`
+- v1.6.0 `src/L1/SystemConfig.sol:128` `function version() public pure virtual returns (string memory)` FIRST -> `71e900628e73c143`
+- v1.6.0 `src/L1/SystemConfig.sol:179` `function initialize( address _owner, uint32 _basefeeScalar, uint32 _blobbasefeeScalar, bytes32 _batcherHash, uint64 _gasLimit, address _unsafeBlockSigner, ResourceMetering.ResourceConfig memory _config, address _batchInbox, SystemConfig.Addresses memory _addresses ) public initializer` FIRST -> `65b637a908ee7fa8`
+- v1.6.0 `src/L1/SystemConfig.sol:310` `function _setGasPayingToken(address _token) internal virtual` FIRST -> `9fae473e4b5fdb8b`
+- v1.6.0 `src/L1/SystemConfig.sol:370` `function _setGasConfig(uint256 _overhead, uint256 _scalar) internal` CHANGED from f3988874cff24d68 -> `14d52db8fd78b5e9`
+- v1.6.0 `src/L1/SystemConfig.sol:383` `function setGasConfigEcotone(uint32 _basefeeScalar, uint32 _blobbasefeeScalar) external onlyOwner` FIRST -> `a9a5361b13e64918`
+- v1.6.0 `src/L1/SystemConfig.sol:390` `function _setGasConfigEcotone(uint32 _basefeeScalar, uint32 _blobbasefeeScalar) internal` FIRST -> `1b93dde5c196ab1e`
+- v1.6.0 `src/dispute/AnchorStateRegistry.sol:51` `function initialize( StartingAnchorRoot[] memory _startingAnchorRoots, SuperchainConfig _superchainConfig ) public initializer` FIRST -> `cb219f8e57632d0d`
+- v1.6.0 `src/dispute/AnchorStateRegistry.sol:71` `function tryUpdateAnchorState() external` CHANGED from 813207fdd4cdf5c8 -> `40a501bf19d7280b`
+- v1.6.0 `src/dispute/AnchorStateRegistry.sol:99` `function setAnchorState(IFaultDisputeGame _game) external` FIRST -> `e0745a3ef9f88814`
+- v1.6.0 `src/dispute/weth/DelayedWETH.sol:85` `function recover(uint256 _wad) external` CHANGED from 261f3ac0fb1792fe -> `86902364ef325c64`
+- v1.6.0 `src/libraries/SafeCall.sol:12` `function send(address _target, uint256 _gas, uint256 _value) internal returns (bool success_)` FIRST -> `30c6f635e48dbc16`
+- v1.6.0 `src/libraries/SafeCall.sol:30` `function send(address _target, uint256 _value) internal returns (bool success_)` FIRST -> `bb04c0a9eaf7b51e`
+- v1.6.0 `src/libraries/SafeCall.sol:39` `function call( address _target, uint256 _gas, uint256 _value, bytes memory _calldata ) internal returns (bool success_)` FIRST -> `e991b3cc39863281`
+- v1.6.0 `src/libraries/SafeCall.sol:66` `function call(address _target, uint256 _value, bytes memory _calldata) internal returns (bool success_)` FIRST -> `936389ff27f15bdd`
+- v1.8.0 `src/L1/L1CrossDomainMessenger.sol:49` `function initialize( ISuperchainConfig _superchainConfig, IOptimismPortal _portal, ISystemConfig _systemConfig ) public initializer` FIRST -> `b6472352390f2004`
+- v1.8.0 `src/L1/L1CrossDomainMessenger.sol:64` `function gasPayingToken() internal view override returns (address addr_, uint8 decimals_)` FIRST -> `0f441cebd6715b6f`
+- v1.8.0 `src/L1/L1CrossDomainMessenger.sol:72` `function PORTAL() external view returns (IOptimismPortal)` FIRST -> `2ae8e5ab9614b2df`
+- v1.8.0 `src/L1/L1StandardBridge.sol:99` `function initialize( ICrossDomainMessenger _messenger, ISuperchainConfig _superchainConfig, ISystemConfig _systemConfig ) public initializer` FIRST -> `215b2e1dda6ccf26`
+- v1.8.0 `src/L1/OptimismPortal.sol:150` `function version() public pure virtual returns (string memory)` CHANGED from abd18aac90652d5c -> `a7c2a5e3dd5df899`
+- v1.8.0 `src/L1/OptimismPortal.sol:167` `function initialize( IL2OutputOracle _l2Oracle, ISystemConfig _systemConfig, ISuperchainConfig _superchainConfig ) public initializer` FIRST -> `0d4efe719fe4dd55`
+- v1.8.0 `src/L1/OptimismPortal.sol:243` `function _resourceConfig() internal view override returns (ResourceConfig memory)` FIRST -> `3e913825a004506f`
+- v1.8.0 `src/L1/OptimismPortal.sol:338` `function finalizeWithdrawalTransaction(Types.WithdrawalTransaction memory _tx) external whenNotPaused` CHANGED from c253d92ee1f1e902 -> `c5b1173bd1b93623`
+- v1.8.0 `src/L1/OptimismPortal.sol:589` `function setGasPayingToken(address _token, uint8 _decimals, bytes32 _name, bytes32 _symbol) external` CHANGED from f7685e19db4accd4 -> `2444a3b4c75dc9b1`
+- v1.8.0 `src/L1/OptimismPortal2.sol:187` `function version() public pure virtual returns (string memory)` CHANGED from 7828ea2287253267 -> `fefd1d5db114a1c4`
+- v1.8.0 `src/L1/OptimismPortal2.sol:208` `function initialize( IDisputeGameFactory _disputeGameFactory, ISystemConfig _systemConfig, ISuperchainConfig _superchainConfig, GameType _initialRespectedGameType ) public initializer` FIRST -> `56c890e749c2d1b0`
+- v1.8.0 `src/L1/OptimismPortal2.sol:305` `function _resourceConfig() internal view override returns (ResourceMetering.ResourceConfig memory config_)` FIRST -> `1abcc0dc719414ab`
+- v1.8.0 `src/L1/OptimismPortal2.sol:610` `function setGasPayingToken(address _token, uint8 _decimals, bytes32 _name, bytes32 _symbol) external` CHANGED from f7685e19db4accd4 -> `2444a3b4c75dc9b1`
+- v1.8.0 `src/L1/OptimismPortalInterop.sol:27` `function version() public pure override returns (string memory)` CHANGED from a3ed398d49854940 -> `139615b4ba407a31`
+- v1.8.0 `src/L1/SystemConfig.sol:141` `function version() public pure virtual returns (string memory)` CHANGED from 71e900628e73c143 -> `4e00d7dad2f13d3b`
+- v1.8.0 `src/L1/SystemConfig.sol:192` `function initialize( address _owner, uint32 _basefeeScalar, uint32 _blobbasefeeScalar, bytes32 _batcherHash, uint64 _gasLimit, address _unsafeBlockSigner, IResourceMetering.ResourceConfig memory _config, address _batchInbox, SystemConfig.Addresses memory _addresses ) public initializer` FIRST -> `c596ebbf4747f518`
+- v1.8.0 `src/L1/SystemConfig.sol:323` `function _setGasPayingToken(address _token) internal virtual` CHANGED from 9fae473e4b5fdb8b -> `29e92eff831f7b94`
+- v1.8.0 `src/L1/SystemConfig.sol:383` `function _setGasConfig(uint256 _overhead, uint256 _scalar) internal` CHANGED from 14d52db8fd78b5e9 -> `9dae2bc382f7e52d`
+- v1.8.0 `src/L1/SystemConfig.sol:403` `function _setGasConfigEcotone(uint32 _basefeeScalar, uint32 _blobbasefeeScalar) internal` CHANGED from 1b93dde5c196ab1e -> `48e778a3d5af3ded`
+- v1.8.0 `src/L1/SystemConfig.sol:433` `function setEIP1559Params(uint32 _denominator, uint32 _elasticity) external onlyOwner` FIRST -> `b88f9d51890e2384`
+- v1.8.0 `src/L1/SystemConfig.sol:438` `function _setEIP1559Params(uint32 _denominator, uint32 _elasticity) internal` FIRST -> `fcdfd4f7005426f2`
+- v1.8.0 `src/L1/SystemConfig.sol:467` `function resourceConfig() external view returns (IResourceMetering.ResourceConfig memory)` FIRST -> `1b7d0cf525a79573`
+- v1.8.0 `src/L1/SystemConfig.sol:476` `function _setResourceConfig(IResourceMetering.ResourceConfig memory _config) internal` FIRST -> `e61d99dd6a265664`
+- v1.8.0 `src/dispute/AnchorStateRegistry.sol:54` `function initialize( StartingAnchorRoot[] memory _startingAnchorRoots, ISuperchainConfig _superchainConfig ) public initializer` FIRST -> `eb732596a9bc76a9`
+- v1.8.0 `src/dispute/DelayedWETH.sol:56` `function initialize(address _owner, ISuperchainConfig _config) public initializer` FIRST -> `6670f4de4a682a97`
+- v1.8.0 `src/dispute/DelayedWETH.sol:84` `function withdraw(uint256 _wad) public override` FIRST -> `27c09f0bd2c5fd17`
+- v1.8.0 `src/dispute/DelayedWETH.sol:113` `function hold(address _guy, uint256 _wad) external` CHANGED from ff04d1d5919e068e -> `af8c07abe278df93`
+- v1.8.0 `src/libraries/SafeCall.sol:73` `function call(address _target, bytes memory _calldata) internal returns (bool success_)` FIRST -> `2aa493ca046a3ce5`
+- v1.8.0 `src/universal/ProxyAdmin.sol:71` `function setAddressManager(IAddressManager _address) external onlyOwner` FIRST -> `3d32a67b7e816177`
+- v1.8.0 `src/universal/ProxyAdmin.sol:136` `function changeProxyAdmin(address payable _proxy, address _newAdmin) external onlyOwner` CHANGED from d37bbd0f843be14d -> `96acc11b7700bea2`
+- v1.8.0 `src/universal/ProxyAdmin.sol:152` `function upgrade(address payable _proxy, address _implementation) public onlyOwner` CHANGED from 98f4e956f27e3b07 -> `c75594f692a8e379`
+- v1.8.0 `src/universal/ProxyAdmin.sol:175` `function upgradeAndCall( address payable _proxy, address _implementation, bytes memory _data ) external payable onlyOwner` CHANGED from f3a942853b60ff2b -> `70c52c2eec8756a8`
+- v1.8.0 `src/universal/StandardBridge.sol:119` `function __StandardBridge_init( ICrossDomainMessenger _messenger, StandardBridge _otherBridge ) internal onlyInitializing` FIRST -> `0d94483fc1a3b7c7`
+- v1.8.0 `src/universal/StandardBridge.sol:147` `function MESSENGER() external view returns (ICrossDomainMessenger)` FIRST -> `956df8816d959317`
+- v1.8.0 `src/universal/StorageSetter.sol:29` `function setBytes32(Slot[] calldata _slots) public` FIRST -> `b0f2c2d8dec981a2`
+- v2.0.0 `src/L1/L1CrossDomainMessenger.sol:45` `function initialize(ISuperchainConfig _superchainConfig, IOptimismPortal _portal) external initializer` FIRST -> `6ff8159e52328841`
+- v2.0.0 `src/L1/L1StandardBridge.sol:96` `function initialize(ICrossDomainMessenger _messenger, ISuperchainConfig _superchainConfig) external initializer` FIRST -> `e56c8461a54810f9`
+- v2.0.0 `src/L1/OptimismPortal2.sol:182` `function version() public pure virtual returns (string memory)` CHANGED from fefd1d5db114a1c4 -> `133319eae4324e91`
+- v2.0.0 `src/L1/OptimismPortal2.sol:198` `function initialize( IDisputeGameFactory _disputeGameFactory, ISystemConfig _systemConfig, ISuperchainConfig _superchainConfig, GameType _initialRespectedGameType ) external initializer` FIRST -> `be239ed3e34bf762`
+- v2.0.0 `src/L1/OptimismPortal2.sol:292` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _disputeGameIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external whenNotPaused` CHANGED from c60ae143688e536b -> `d95a442358feaca6`
+- v2.0.0 `src/L1/OptimismPortal2.sol:389` `function finalizeWithdrawalTransactionExternalProof( Types.WithdrawalTransaction memory _tx, address _proofSubmitter ) public whenNotPaused` CHANGED from bbebcaa0edfff4b3 -> `0ae53c9a24227380`
+- v2.0.0 `src/L1/OptimismPortal2.sol:446` `function depositTransaction( address _to, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) public payable metered(_gasLimit)` CHANGED from f2325e562dfb8949 -> `602a19967c48f29c`
+- v2.0.0 `src/L1/OptimismPortal2.sol:498` `function setRespectedGameType(GameType _gameType) external` CHANGED from 2e322394b97f8820 -> `d13cbbcf1631a0e9`
+- v2.0.0 `src/L1/OptimismPortal2.sol:516` `function checkWithdrawal(bytes32 _withdrawalHash, address _proofSubmitter) public view` CHANGED from bbc240c6f0125299 -> `e69a6e890697f8cb`
+- v2.0.0 `src/L1/OptimismPortalInterop.sol:29` `function version() public pure override returns (string memory)` CHANGED from 139615b4ba407a31 -> `41922650a68155d7`
+- v2.0.0 `src/L1/OptimismPortalInterop.sol:36` `function setConfig(ConfigType _type, bytes memory _value) external` CHANGED from 417fb367a1aaeed0 -> `0733325f236d1576`
+- v2.0.0 `src/L1/SuperchainConfig.sol:55` `function initialize(address _guardian, bool _paused) external initializer` FIRST -> `94c25fa4febddefc`
+- v2.0.0 `src/L1/SystemConfig.sol:133` `function version() public pure virtual returns (string memory)` CHANGED from 4e00d7dad2f13d3b -> `a64b3406b644a392`
+- v2.0.0 `src/L1/SystemConfig.sol:157` `function initialize( address _owner, uint32 _basefeeScalar, uint32 _blobbasefeeScalar, bytes32 _batcherHash, uint64 _gasLimit, address _unsafeBlockSigner, IResourceMetering.ResourceConfig memory _config, address _batchInbox, SystemConfig.Addresses memory _addresses ) public initializer` CHANGED from c596ebbf4747f518 -> `07d3924fa12e3c33`
+- v2.0.0 `src/L1/SystemConfig.sol:220` `function l1CrossDomainMessenger() public view returns (address addr_)` FIRST -> `4d7c350e9d85ccda`
+- v2.0.0 `src/L1/SystemConfig.sol:225` `function l1ERC721Bridge() public view returns (address addr_)` FIRST -> `452e93481a959edc`
+- v2.0.0 `src/L1/SystemConfig.sol:230` `function l1StandardBridge() public view returns (address addr_)` FIRST -> `9775e6c3b494f25e`
+- v2.0.0 `src/L1/SystemConfig.sol:235` `function disputeGameFactory() public view returns (address addr_)` FIRST -> `fba9567de6fc8fee`
+- v2.0.0 `src/L1/SystemConfig.sol:245` `function optimismMintableERC20Factory() public view returns (address addr_)` FIRST -> `c2aa310a23d203e8`
+- v2.0.0 `src/L1/SystemConfig.sol:250` `function getAddresses() external view returns (Addresses memory)` FIRST -> `89cd50e87bc206a3`
+- v2.0.0 `src/dispute/AnchorStateRegistry.sol:71` `function initialize( ISuperchainConfig _superchainConfig, IDisputeGameFactory _disputeGameFactory, IOptimismPortal2 _portal, OutputRoot memory _startingAnchorRoot ) external initializer` FIRST -> `bf7875b54ca019a4`
+- v2.0.0 `src/dispute/AnchorStateRegistry.sol:88` `function respectedGameType() public view returns (GameType)` FIRST -> `265f6ba5b2191bfe`
+- v2.0.0 `src/dispute/AnchorStateRegistry.sol:97` `function anchors(GameType ) external view returns (Hash, uint256)` FIRST -> `91ed902d46ab3eeb`
+- v2.0.0 `src/dispute/AnchorStateRegistry.sol:103` `function getAnchorRoot() public view returns (Hash, uint256)` FIRST -> `53906c9bea8a623a`
+- v2.0.0 `src/dispute/AnchorStateRegistry.sol:116` `function isGameRegistered(IDisputeGame _game) public view returns (bool)` FIRST -> `81afa546f7d387f3`
+- v2.0.0 `src/dispute/AnchorStateRegistry.sol:131` `function isGameRespected(IDisputeGame _game) public view returns (bool)` FIRST -> `ca1b95d357c4299e`
+- v2.0.0 `src/dispute/AnchorStateRegistry.sol:138` `function isGameBlacklisted(IDisputeGame _game) public view returns (bool)` FIRST -> `17bf8c6110351d44`
+- v2.0.0 `src/dispute/AnchorStateRegistry.sol:145` `function isGameRetired(IDisputeGame _game) public view returns (bool)` FIRST -> `e21afac0cca8ddae`
+- v2.0.0 `src/dispute/AnchorStateRegistry.sol:155` `function isGameResolved(IDisputeGame _game) public view returns (bool)` FIRST -> `432c4a1974258410`
+- v2.0.0 `src/dispute/AnchorStateRegistry.sol:173` `function isGameProper(IDisputeGame _game) public view returns (bool)` FIRST -> `51b69aa6f202c70b`
+- v2.0.0 `src/dispute/AnchorStateRegistry.sol:195` `function isGameFinalized(IDisputeGame _game) public view returns (bool)` FIRST -> `9726f670ca070e8d`
+- v2.0.0 `src/dispute/AnchorStateRegistry.sol:213` `function isGameClaimValid(IDisputeGame _game) public view returns (bool)` FIRST -> `59f80573eed5e2ac`
+- v2.0.0 `src/dispute/AnchorStateRegistry.sol:239` `function setAnchorState(IDisputeGame _game) public` FIRST -> `97be93a205ab4587`
+- v2.0.0 `src/dispute/DelayedWETH.sol:51` `function initialize(address _owner, ISuperchainConfig _config) external initializer` FIRST -> `99f77c195f648135`
+- v2.0.0 `src/dispute/DelayedWETH.sol:107` `function hold(address _guy) external` FIRST -> `309c71d32eba9efc`
+- v2.0.0 `src/dispute/DelayedWETH.sol:114` `function hold(address _guy, uint256 _wad) public` FIRST -> `4f2cf3e4a7c14a41`
+- v2.0.0 `src/dispute/DisputeGameFactory.sol:77` `function initialize(address _owner) external initializer` FIRST -> `e3f8ce25f1b390f8`
+- v2.0.0 `src/universal/CrossDomainMessenger.sol:177` `function sendMessage(address _target, bytes calldata _message, uint32 _minGasLimit) external payable` CHANGED from 3eae7b557f1397d3 -> `14f8b6947e478d0a`
+- v2.0.0 `src/universal/CrossDomainMessenger.sol:343` `function baseGas(bytes calldata _message, uint32 _minGasLimit) public pure returns (uint64)` CHANGED from a4595709eeea86cf -> `977eb4d6799c5b0e`
+- v2.0.0 `src/universal/StandardBridge.sol:105` `modifier onlyEOA()` CHANGED from 67b7c2b7d25e3afa -> `a0c42707f2b42f1e`
+- v2.0.0 `src/universal/StandardBridge.sol:239` `function finalizeBridgeETH( address _from, address _to, uint256 _amount, bytes calldata _extraData ) public payable onlyOtherBridge` CHANGED from 56383d290f45069c -> `cf0e014705ac92e8`
+- v2.0.0 `src/universal/StandardBridge.sol:272` `function finalizeBridgeERC20( address _localToken, address _remoteToken, address _from, address _to, uint256 _amount, bytes calldata _extraData ) public onlyOtherBridge` CHANGED from 568d1e6919613127 -> `495f3848f1144f1f`
+- v2.0.0 `src/universal/StandardBridge.sol:309` `function _initiateBridgeETH( address _from, address _to, uint256 _amount, uint32 _minGasLimit, bytes memory _extraData ) internal` CHANGED from 30ae88d824227c6d -> `d23c1db8c81bff5f`
+- v2.0.0 `src/universal/StandardBridge.sol:340` `function _initiateBridgeERC20( address _localToken, address _remoteToken, address _from, address _to, uint256 _amount, uint32 _minGasLimit, bytes memory _extraData ) internal` CHANGED from 60f16be3abd0bd13 -> `3ab44b6dd4223152`
+- v3.0.0 `src/L1/OptimismPortal2.sol:182` `function version() public pure virtual returns (string memory)` CHANGED from 133319eae4324e91 -> `e74ed7296a8d997f`
+- v3.0.0 `src/L1/OptimismPortal2.sol:257` `function minimumGasLimit(uint64 _byteCount) public pure returns (uint64)` CHANGED from 7795c7549e071397 -> `a20c2827a283394c`
+- v3.0.0 `src/L1/OptimismPortalInterop.sol:29` `function version() public pure override returns (string memory)` CHANGED from 41922650a68155d7 -> `646b5fe2c1de9de0`
+- v3.0.0 `src/L1/SystemConfig.sol:140` `function version() public pure virtual returns (string memory)` CHANGED from a64b3406b644a392 -> `f9d8705c9333c175`
+- v3.0.0 `src/L1/SystemConfig.sol:388` `function setOperatorFeeScalars(uint32 _operatorFeeScalar, uint64 _operatorFeeConstant) external onlyOwner` FIRST -> `11fd9fdd2210e8ed`
+- v3.0.0 `src/L1/SystemConfig.sol:393` `function _setOperatorFeeScalars(uint32 _operatorFeeScalar, uint64 _operatorFeeConstant) internal` FIRST -> `ba9320591fbaebc9`
+- v3.0.0 `src/universal/CrossDomainMessenger.sol:222` `function relayMessage( uint256 _nonce, address _sender, address _target, uint256 _value, uint256 _minGasLimit, bytes calldata _message ) external payable` CHANGED from 82549d8800ecb2dc -> `b510a84a59caead8`
+- v3.0.0 `src/universal/CrossDomainMessenger.sol:357` `function baseGas(bytes memory _message, uint32 _minGasLimit) public pure returns (uint64)` FIRST -> `845ca53573c7f8b0`
+- v4.0.0 `src/L1/ETHLockbox.sol:77` `function version() public view virtual returns (string memory)` FIRST -> `fab47cccaf4cb3f5`
+- v4.0.0 `src/L1/ETHLockbox.sol:93` `function initialize( ISystemConfig _systemConfig, IOptimismPortal[] calldata _portals ) external reinitializer(initVersion())` FIRST -> `d8216be10c30b56c`
+- v4.0.0 `src/L1/ETHLockbox.sol:111` `function paused() public view returns (bool)` FIRST -> `c2465a7947378a8f`
+- v4.0.0 `src/L1/ETHLockbox.sol:117` `function superchainConfig() public view returns (ISuperchainConfig)` FIRST -> `e97c02975fefda3c`
+- v4.0.0 `src/L1/ETHLockbox.sol:123` `function authorizePortal(IOptimismPortal _portal) external` FIRST -> `011c5986dc3e24aa`
+- v4.0.0 `src/L1/ETHLockbox.sol:132` `function receiveLiquidity() external payable` FIRST -> `ef3a41ec210afa13`
+- v4.0.0 `src/L1/ETHLockbox.sol:143` `function lockETH() external payable` FIRST -> `432addeef8bbfa27`
+- v4.0.0 `src/L1/ETHLockbox.sol:156` `function unlockETH(uint256 _value) external` FIRST -> `16b717e3d01c9354`
+- v4.0.0 `src/L1/ETHLockbox.sol:183` `function authorizeLockbox(IETHLockbox _lockbox) external` FIRST -> `c6c1670efebe247b`
+- v4.0.0 `src/L1/ETHLockbox.sol:202` `function migrateLiquidity(IETHLockbox _lockbox) external` FIRST -> `d68827aa462620f0`
+- v4.0.0 `src/L1/ETHLockbox.sol:219` `function _authorizePortal(IOptimismPortal _portal) internal` FIRST -> `0d813c369a23a5b6`
+- v4.0.0 `src/L1/L1CrossDomainMessenger.sol:53` `function initialize(ISystemConfig _systemConfig, IOptimismPortal _portal) external reinitializer(initVersion())` FIRST -> `e40e1ef55acad1a0`
+- v4.0.0 `src/L1/L1CrossDomainMessenger.sol:65` `function upgrade(ISystemConfig _systemConfig) external reinitializer(initVersion())` FIRST -> `a3525737226d6b5e`
+- v4.0.0 `src/L1/L1CrossDomainMessenger.sol:74` `function paused() public view override returns (bool)` CHANGED from f8505193ce2616db -> `e24950d77ff7622e`
+- v4.0.0 `src/L1/L1CrossDomainMessenger.sol:80` `function superchainConfig() public view returns (ISuperchainConfig)` FIRST -> `e97c02975fefda3c`
+- v4.0.0 `src/L1/L1StandardBridge.sol:104` `function initialize( ICrossDomainMessenger _messenger, ISystemConfig _systemConfig ) external reinitializer(initVersion())` FIRST -> `000015415a1b7b92`
+- v4.0.0 `src/L1/L1StandardBridge.sol:124` `function upgrade(ISystemConfig _systemConfig) external reinitializer(initVersion())` FIRST -> `a3525737226d6b5e`
+- v4.0.0 `src/L1/L1StandardBridge.sol:133` `function paused() public view override returns (bool)` CHANGED from f8505193ce2616db -> `e24950d77ff7622e`
+- v4.0.0 `src/L1/L1StandardBridge.sol:139` `function superchainConfig() public view returns (ISuperchainConfig)` FIRST -> `e97c02975fefda3c`
+- v4.0.0 `src/L1/OptimismPortal2.sol:236` `function version() public pure virtual returns (string memory)` CHANGED from e74ed7296a8d997f -> `78a4771d5e26bf55`
+- v4.0.0 `src/L1/OptimismPortal2.sol:250` `function initialize( ISystemConfig _systemConfig, IAnchorStateRegistry _anchorStateRegistry, IETHLockbox _ethLockbox ) external reinitializer(initVersion())` FIRST -> `615469ea3c45e86d`
+- v4.0.0 `src/L1/OptimismPortal2.sol:278` `function upgrade( IAnchorStateRegistry _anchorStateRegistry, IETHLockbox _ethLockbox ) external reinitializer(initVersion())` FIRST -> `4417bc55452386b2`
+- v4.0.0 `src/L1/OptimismPortal2.sol:294` `function paused() public view returns (bool)` CHANGED from f49d305df216e9d1 -> `c2465a7947378a8f`
+- v4.0.0 `src/L1/OptimismPortal2.sol:304` `function disputeGameFactory() public view returns (IDisputeGameFactory)` FIRST -> `cce4da747fc15640`
+- v4.0.0 `src/L1/OptimismPortal2.sol:310` `function superchainConfig() external view returns (ISuperchainConfig)` FIRST -> `c26c05b43ba7f4d8`
+- v4.0.0 `src/L1/OptimismPortal2.sol:316` `function guardian() external view returns (address)` FIRST -> `9a82643fe0195908`
+- v4.0.0 `src/L1/OptimismPortal2.sol:322` `function disputeGameFinalityDelaySeconds() external view returns (uint256)` FIRST -> `c3db7037fa47d44c`
+- v4.0.0 `src/L1/OptimismPortal2.sol:328` `function respectedGameType() external view returns (GameType)` FIRST -> `eac41a288cde1945`
+- v4.0.0 `src/L1/OptimismPortal2.sol:337` `function respectedGameTypeUpdatedAt() external view returns (uint64)` FIRST -> `831e55294028954a`
+- v4.0.0 `src/L1/OptimismPortal2.sol:345` `function disputeGameBlacklist(IDisputeGame _disputeGame) public view returns (bool)` FIRST -> `0b3519e5fb0d967f`
+- v4.0.0 `src/L1/OptimismPortal2.sol:374` `function migrateLiquidity() public` FIRST -> `9998876dbc1b356f`
+- v4.0.0 `src/L1/OptimismPortal2.sol:396` `function migrateToSuperRoots(IETHLockbox _newLockbox, IAnchorStateRegistry _newAnchorStateRegistry) external` FIRST -> `1f9a831b8019a676`
+- v4.0.0 `src/L1/OptimismPortal2.sol:439` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, IDisputeGame _disputeGameProxy, uint256 _outputRootIndex, Types.SuperRootProof calldata _superRootProof, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external` FIRST -> `c67bf4970ffcf3b4`
+- v4.0.0 `src/L1/OptimismPortal2.sol:469` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _disputeGameIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external` FIRST -> `47b4541ed7a24d14`
+- v4.0.0 `src/L1/OptimismPortal2.sol:506` `function _proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, IDisputeGame _disputeGameProxy, uint256 _outputRootIndex, Types.SuperRootProof memory _superRootProof, Types.OutputRootProof memory _outputRootProof, bytes[] memory _withdrawalProof ) internal` FIRST -> `ecf9d00b50df01f4`
+- v4.0.0 `src/L1/OptimismPortal2.sol:617` `function finalizeWithdrawalTransaction(Types.WithdrawalTransaction memory _tx) external` FIRST -> `c5725b526437b9ec`
+- v4.0.0 `src/L1/OptimismPortal2.sol:624` `function finalizeWithdrawalTransactionExternalProof( Types.WithdrawalTransaction memory _tx, address _proofSubmitter ) public` FIRST -> `20ad3c859e8825e4`
+- v4.0.0 `src/L1/OptimismPortal2.sol:693` `function checkWithdrawal(bytes32 _withdrawalHash, address _proofSubmitter) public view` CHANGED from e69a6e890697f8cb -> `ae065fa1c880a8f9`
+- v4.0.0 `src/L1/OptimismPortal2.sol:740` `function depositTransaction( address _to, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) public payable metered(_gasLimit)` CHANGED from 602a19967c48f29c -> `fb1590e9cb0bd303`
+- v4.0.0 `src/L1/OptimismPortal2.sol:798` `function _assertNotPaused() internal view` FIRST -> `273f4d801023e0f9`
+- v4.0.0 `src/L1/OptimismPortal2.sol:805` `function _isUnsafeTarget(address _target) internal view virtual returns (bool)` FIRST -> `07ca560b9926c725`
+- v4.0.0 `src/L1/ProxyAdminOwnedBase.sol:41` `function proxyAdminOwner() public view returns (address)` FIRST -> `13d70b90bc0c682e`
+- v4.0.0 `src/L1/ProxyAdminOwnedBase.sol:46` `function proxyAdmin() public view returns (IProxyAdmin)` FIRST -> `5d205c0c82b0b520`
+- v4.0.0 `src/L1/ProxyAdminOwnedBase.sol:81` `function _assertSharedProxyAdminOwner(address _proxy) internal view` FIRST -> `34b590963ea2e535`
+- v4.0.0 `src/L1/ProxyAdminOwnedBase.sol:88` `function _assertOnlyProxyAdminOwner() internal view` FIRST -> `6c87add8d46a2f7a`
+- v4.0.0 `src/L1/ProxyAdminOwnedBase.sol:95` `function _assertOnlyProxyAdmin() internal view` FIRST -> `0af04abbf9ec250d`
+- v4.0.0 `src/L1/ProxyAdminOwnedBase.sol:101` `function _assertOnlyProxyAdminOrProxyAdminOwner() internal view` FIRST -> `761b4a152946a3fd`
+- v4.0.0 `src/L1/SuperchainConfig.sol:72` `function initialize(address _guardian) external reinitializer(initVersion())` FIRST -> `d3ce6a6c576c7715`
+- v4.0.0 `src/L1/SuperchainConfig.sol:81` `function upgrade() external reinitializer(initVersion())` FIRST -> `d36f19acf187cf09`
+- v4.0.0 `src/L1/SuperchainConfig.sol:104` `function pauseExpiry() external pure returns (uint256)` FIRST -> `0bbf1b95f89e7dac`
+- v4.0.0 `src/L1/SuperchainConfig.sol:110` `function pause(address _identifier) external` FIRST -> `08c28c523ff2c822`
+- v4.0.0 `src/L1/SuperchainConfig.sol:127` `function unpause(address _identifier) external` FIRST -> `24f0389716d01dd9`
+- v4.0.0 `src/L1/SuperchainConfig.sol:138` `function extend(address _identifier) external` FIRST -> `a2e26cca02528c66`
+- v4.0.0 `src/L1/SuperchainConfig.sol:155` `function pausable(address _identifier) external view returns (bool)` FIRST -> `684ec85378ef382a`
+- v4.0.0 `src/L1/SuperchainConfig.sol:164` `function paused() external view returns (bool)` FIRST -> `aa8e03f0d9544dc4`
+- v4.0.0 `src/L1/SuperchainConfig.sol:171` `function paused(address _identifier) public view returns (bool)` FIRST -> `fc7a6c2e99363df4`
+- v4.0.0 `src/L1/SuperchainConfig.sol:180` `function expiration(address _identifier) external view returns (uint256)` FIRST -> `60d4afb65635e2fb`
+- v4.0.0 `src/L1/SuperchainConfig.sol:189` `function _setGuardian(address _guardian) internal` CHANGED from 65ddb1d062656881 -> `126e5aa50725e519`
+- v4.0.0 `src/L1/SuperchainConfig.sol:195` `function _assertOnlyGuardian() internal view` FIRST -> `ed1d328b8b5e6664`
+- v4.0.0 `src/L1/SystemConfig.sol:146` `function version() public pure virtual returns (string memory)` CHANGED from f9d8705c9333c175 -> `18a286c8d7a31b66`
+- v4.0.0 `src/L1/SystemConfig.sol:172` `function initialize( address _owner, uint32 _basefeeScalar, uint32 _blobbasefeeScalar, bytes32 _batcherHash, uint64 _gasLimit, address _unsafeBlockSigner, IResourceMetering.ResourceConfig memory _config, address _batchInbox, SystemConfig.Addresses memory _addresses, uint256 _l2ChainId, ISuperchainConfig _superchainConfig ) public reinitializer(initVersion())` FIRST -> `9b3402d5e167418f`
+- v4.0.0 `src/L1/SystemConfig.sol:219` `function upgrade(uint256 _l2ChainId, ISuperchainConfig _superchainConfig) external reinitializer(initVersion())` FIRST -> `40651d90e5a61be5`
+- v4.0.0 `src/L1/SystemConfig.sol:279` `function disputeGameFactory() public view returns (address addr_)` CHANGED from fba9567de6fc8fee -> `e41825bff5609d2a`
+- v4.0.0 `src/L1/SystemConfig.sol:295` `function getAddresses() external view returns (Addresses memory)` CHANGED from 89cd50e87bc206a3 -> `516b98f9cc301f79`
+- v4.0.0 `src/L1/SystemConfig.sol:490` `function paused() public view returns (bool)` FIRST -> `7cd63bae03b0e114`
+- v4.0.0 `src/L1/SystemConfig.sol:497` `function guardian() public view returns (address)` FIRST -> `6980998fbb637345`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:89` `function initialize( ISystemConfig _systemConfig, IDisputeGameFactory _disputeGameFactory, Proposal memory _startingAnchorRoot, GameType _startingRespectedGameType ) external reinitializer(initVersion())` FIRST -> `2db115431f031d7a`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:110` `function paused() public view returns (bool)` FIRST -> `c2465a7947378a8f`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:116` `function superchainConfig() public view returns (ISuperchainConfig)` FIRST -> `e97c02975fefda3c`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:121` `function disputeGameFinalityDelaySeconds() external view returns (uint256)` FIRST -> `1001bc21df3a71c9`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:127` `function setRespectedGameType(GameType _gameType) external` FIRST -> `7ce1ddb3abc78f4f`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:137` `function updateRetirementTimestamp() external` FIRST -> `bab3ee0f012bf892`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:148` `function blacklistDisputeGame(IDisputeGame _disputeGame) external` FIRST -> `0b5f0f1f35477ba0`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:168` `function getAnchorRoot() public view returns (Hash, uint256)` CHANGED from 53906c9bea8a623a -> `f5b529d7a7df8fa4`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:182` `function isGameRegistered(IDisputeGame _game) public view returns (bool)` CHANGED from 81afa546f7d387f3 -> `2b03b7e736461cb6`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:215` `function isGameBlacklisted(IDisputeGame _game) public view returns (bool)` CHANGED from 17bf8c6110351d44 -> `b7552708dfdbddb2`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:222` `function isGameRetired(IDisputeGame _game) public view returns (bool)` CHANGED from e21afac0cca8ddae -> `440ae9429c5003cb`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:249` `function isGameProper(IDisputeGame _game) public view returns (bool)` CHANGED from 51b69aa6f202c70b -> `d6077d2323adf74b`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:276` `function isGameFinalized(IDisputeGame _game) public view returns (bool)` CHANGED from 9726f670ca070e8d -> `ecec3a396234f123`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:320` `function setAnchorState(IDisputeGame _game) public` CHANGED from 97be93a205ab4587 -> `eb981074ba13443e`
+- v4.0.0 `src/dispute/AnchorStateRegistry.sol:345` `function _assertOnlyGuardian() internal view` FIRST -> `7e98b72076416362`
+- v4.0.0 `src/dispute/DelayedWETH.sol:53` `function initialize(ISystemConfig _systemConfig) external reinitializer(initVersion())` FIRST -> `57e13835eb7affa9`
+- v4.0.0 `src/dispute/DelayedWETH.sol:69` `function config() public view returns (ISuperchainConfig)` FIRST -> `a369a94fd91b5169`
+- v4.0.0 `src/dispute/DelayedWETH.sol:96` `function withdraw(address _guy, uint256 _wad) public` CHANGED from 9db1448a9ab0e9f4 -> `697e1835c6d9d895`
+- v4.0.0 `src/dispute/DelayedWETH.sol:108` `function recover(uint256 _wad) external` CHANGED from 86902364ef325c64 -> `8c5fa44662b7e6ae`
+- v4.0.0 `src/dispute/DelayedWETH.sol:124` `function hold(address _guy, uint256 _wad) public` CHANGED from 4f2cf3e4a7c14a41 -> `508e1f13d218821f`
+- v4.0.0 `src/dispute/DisputeGameFactory.sol:79` `function initialize(address _owner) external reinitializer(initVersion())` FIRST -> `719d667dc0df19c2`
+- v4.1.0 `src/L1/OptimismPortal2.sol:209` `function version() public pure virtual returns (string memory)` CHANGED from 78a4771d5e26bf55 -> `755a8d43f92c797b`
+- v4.1.0 `src/L1/OptimismPortal2.sol:222` `function initialize( ISystemConfig _systemConfig, IAnchorStateRegistry _anchorStateRegistry ) external reinitializer(initVersion())` FIRST -> `8c10e33648b91730`
+- v4.1.0 `src/L1/OptimismPortal2.sol:251` `function upgrade(IAnchorStateRegistry _anchorStateRegistry) external reinitializer(initVersion())` FIRST -> `ff5267a2ac9f3868`
+- v4.1.0 `src/L1/OptimismPortal2.sol:348` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _disputeGameIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external` CHANGED from 47b4541ed7a24d14 -> `8848f3bfcb0570ed`
+- v4.1.0 `src/L1/OptimismPortal2.sol:446` `function finalizeWithdrawalTransactionExternalProof( Types.WithdrawalTransaction memory _tx, address _proofSubmitter ) public` CHANGED from 20ad3c859e8825e4 -> `7c9943ff433b4159`
+- v4.1.0 `src/L1/OptimismPortal2.sol:519` `function checkWithdrawal(bytes32 _withdrawalHash, address _proofSubmitter) public view` CHANGED from ae065fa1c880a8f9 -> `44a6d07d85b198e2`
+- v4.1.0 `src/L1/OptimismPortal2.sol:566` `function depositTransaction( address _to, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) public payable metered(_gasLimit)` CHANGED from fb1590e9cb0bd303 -> `4506b54162747ef2`
+- v4.1.0 `src/L1/OptimismPortal2.sol:627` `function _isUsingLockbox() internal view returns (bool)` FIRST -> `439132f2ca3a341d`
+- v4.1.0 `src/L1/OptimismPortal2.sol:639` `function _assertValidLockboxState() internal view` FIRST -> `fc149dbf9ff1cfa4`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:233` `function version() public pure virtual returns (string memory)` FIRST -> `2620a77cf13e3c21`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:247` `function initialize( ISystemConfig _systemConfig, IAnchorStateRegistry _anchorStateRegistry, IETHLockbox _ethLockbox ) external reinitializer(initVersion())` FIRST -> `615469ea3c45e86d`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:275` `function upgrade( IAnchorStateRegistry _anchorStateRegistry, IETHLockbox _ethLockbox ) external reinitializer(initVersion())` FIRST -> `4417bc55452386b2`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:291` `function paused() public view returns (bool)` FIRST -> `c2465a7947378a8f`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:296` `function proofMaturityDelaySeconds() public view returns (uint256)` FIRST -> `7b65bd950a25a7b9`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:301` `function disputeGameFactory() public view returns (IDisputeGameFactory)` FIRST -> `cce4da747fc15640`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:307` `function superchainConfig() external view returns (ISuperchainConfig)` FIRST -> `c26c05b43ba7f4d8`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:313` `function guardian() external view returns (address)` FIRST -> `9a82643fe0195908`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:319` `function disputeGameFinalityDelaySeconds() external view returns (uint256)` FIRST -> `c3db7037fa47d44c`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:325` `function respectedGameType() external view returns (GameType)` FIRST -> `eac41a288cde1945`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:334` `function respectedGameTypeUpdatedAt() external view returns (uint64)` FIRST -> `831e55294028954a`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:342` `function disputeGameBlacklist(IDisputeGame _disputeGame) public view returns (bool)` FIRST -> `0b3519e5fb0d967f`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:353` `function minimumGasLimit(uint64 _byteCount) public pure returns (uint64)` FIRST -> `a20c2827a283394c`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:361` `receive() external payable` FIRST -> `a68e8d141ad95fe7`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:366` `function donateETH() external payable` FIRST -> `ed39be79b7a88196`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:371` `function migrateLiquidity() public` FIRST -> `9998876dbc1b356f`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:393` `function migrateToSuperRoots(IETHLockbox _newLockbox, IAnchorStateRegistry _newAnchorStateRegistry) external` FIRST -> `1f9a831b8019a676`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:436` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, IDisputeGame _disputeGameProxy, uint256 _outputRootIndex, Types.SuperRootProof calldata _superRootProof, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external` FIRST -> `c67bf4970ffcf3b4`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:466` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _disputeGameIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external` FIRST -> `47b4541ed7a24d14`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:503` `function _proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, IDisputeGame _disputeGameProxy, uint256 _outputRootIndex, Types.SuperRootProof memory _superRootProof, Types.OutputRootProof memory _outputRootProof, bytes[] memory _withdrawalProof ) internal` FIRST -> `ecf9d00b50df01f4`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:614` `function finalizeWithdrawalTransaction(Types.WithdrawalTransaction memory _tx) external` FIRST -> `c5725b526437b9ec`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:621` `function finalizeWithdrawalTransactionExternalProof( Types.WithdrawalTransaction memory _tx, address _proofSubmitter ) public` FIRST -> `20ad3c859e8825e4`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:690` `function checkWithdrawal(bytes32 _withdrawalHash, address _proofSubmitter) public view` FIRST -> `ae065fa1c880a8f9`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:737` `function depositTransaction( address _to, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) public payable metered(_gasLimit)` FIRST -> `fb1590e9cb0bd303`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:790` `function numProofSubmitters(bytes32 _withdrawalHash) external view returns (uint256)` FIRST -> `eb9303bf0be7368b`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:795` `function _assertNotPaused() internal view` FIRST -> `273f4d801023e0f9`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:802` `function _isUnsafeTarget(address _target) internal view virtual returns (bool)` FIRST -> `07ca560b9926c725`
+- v4.1.0 `src/L1/OptimismPortalInterop.sol:810` `function _resourceConfig() internal view override returns (ResourceMetering.ResourceConfig memory config_)` FIRST -> `1abcc0dc719414ab`
+- v4.1.0 `src/L1/SystemConfig.sol:158` `function version() public pure virtual returns (string memory)` CHANGED from 18a286c8d7a31b66 -> `b21d8b7326bd7760`
+- v4.1.0 `src/L1/SystemConfig.sol:231` `function upgrade(uint256 _l2ChainId, ISuperchainConfig _superchainConfig) external reinitializer(initVersion())` CHANGED from 40651d90e5a61be5 -> `dbf811e7d17f0a78`
+- v4.1.0 `src/L1/SystemConfig.sol:503` `function setFeature(bytes32 _feature, bool _enabled) external` FIRST -> `283e2448f7c6aa59`
+- v4.1.0 `src/L1/SystemConfig.sol:526` `function paused() public view returns (bool)` CHANGED from 7cd63bae03b0e114 -> `671a67b944fbea77`
+- v5.0.0 `src/L1/OptimismPortal2.sol:209` `function version() public pure virtual returns (string memory)` CHANGED from 755a8d43f92c797b -> `9f912169e8ea2361`
+- v5.0.0 `src/L1/OptimismPortalInterop.sol:233` `function version() public pure virtual returns (string memory)` CHANGED from 2620a77cf13e3c21 -> `89c16365dbfbf63f`
+- v5.0.0 `src/L1/SystemConfig.sol:170` `function version() public pure virtual returns (string memory)` CHANGED from b21d8b7326bd7760 -> `620590a9576c4338`
+- v5.0.0 `src/L1/SystemConfig.sol:428` `function setMinBaseFee(uint64 _minBaseFee) external onlyOwner` FIRST -> `534ae6d379feb837`
+- v5.0.0 `src/L1/SystemConfig.sol:433` `function _setMinBaseFee(uint64 _minBaseFee) internal` FIRST -> `16daa3b315a253be`
+- v5.0.0 `src/L1/SystemConfig.sol:458` `function setDAFootprintGasScalar(uint16 _daFootprintGasScalar) external onlyOwner` FIRST -> `56d07eccdac19023`
+- v5.0.0 `src/L1/SystemConfig.sol:463` `function _setDAFootprintGasScalar(uint16 _dAFootprintGasScalar) internal` FIRST -> `123f9bbbe2d09dc6`
+- v5.0.0 `src/L1/SystemConfig.sol:523` `function setFeature(bytes32 _feature, bool _enabled) external` CHANGED from 283e2448f7c6aa59 -> `627320bcb39665a9`
+- v5.0.0 `src/dispute/DisputeGameFactory.sol:147` `function create( GameType _gameType, Claim _rootClaim, bytes calldata _extraData ) external payable returns (IDisputeGame proxy_)` CHANGED from 6761fe206a88f0d8 -> `71eb2a803e1d4741`
+- v5.0.0 `src/dispute/DisputeGameFactory.sol:288` `function setImplementation(GameType _gameType, IDisputeGame _impl, bytes calldata _args) external onlyOwner` FIRST -> `30481f7a20ebbec0`
+- v6.0.0 `src/L1/OptimismPortal2.sol:212` `function version() public pure virtual returns (string memory)` CHANGED from 9f912169e8ea2361 -> `dfae8727ea0d9c75`
+- v6.0.0 `src/L1/OptimismPortal2.sol:337` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _disputeGameIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external` CHANGED from 8848f3bfcb0570ed -> `aaf11f6f92eb5b75`
+- v6.0.0 `src/L1/OptimismPortal2.sol:440` `function finalizeWithdrawalTransactionExternalProof( Types.WithdrawalTransaction memory _tx, address _proofSubmitter ) public` CHANGED from 7c9943ff433b4159 -> `2a477b68ad852ac9`
+- v6.0.0 `src/L1/OptimismPortal2.sol:518` `function checkWithdrawal(bytes32 _withdrawalHash, address _proofSubmitter) public view` CHANGED from 44a6d07d85b198e2 -> `e3a73bfa96e8e491`
+- v6.0.0 `src/L1/OptimismPortal2.sol:565` `function depositTransaction( address _to, uint256 _value, uint64 _gasLimit, bool _isCreation, bytes memory _data ) public payable metered(_gasLimit)` CHANGED from 4506b54162747ef2 -> `f244848a554d7b23`
+- v6.0.0 `src/L1/OptimismPortal2.sol:636` `function _isUsingCustomGasToken() internal view returns (bool)` FIRST -> `9b72213398a9efa5`
+- v6.0.0 `src/L1/SystemConfig.sol:174` `function version() public pure virtual returns (string memory)` CHANGED from 620590a9576c4338 -> `143eefd09734c17d`
+- v6.0.0 `src/L1/SystemConfig.sol:200` `function initialize( address _owner, uint32 _basefeeScalar, uint32 _blobbasefeeScalar, bytes32 _batcherHash, uint64 _gasLimit, address _unsafeBlockSigner, IResourceMetering.ResourceConfig memory _config, address _batchInbox, SystemConfig.Addresses memory _addresses, uint256 _l2ChainId, ISuperchainConfig _superchainConfig ) public reinitializer(initVersion())` CHANGED from 9b3402d5e167418f -> `e46db412ad0569f9`
+- v6.0.0 `src/L1/SystemConfig.sol:302` `function delayedWETH() public view returns (address addr_)` FIRST -> `48d3fc086f0b5d95`
+- v6.0.0 `src/L1/SystemConfig.sol:307` `function getAddresses() external view returns (Addresses memory)` CHANGED from 516b98f9cc301f79 -> `c64009789afb1328`
+- v6.0.0 `src/L1/SystemConfig.sol:345` `function setBatcherHash(address _batcher) external onlyOwner` FIRST -> `f1f4b0954fa39960`
+- v6.0.0 `src/L1/SystemConfig.sol:539` `function setFeature(bytes32 _feature, bool _enabled) external` CHANGED from 627320bcb39665a9 -> `bd93375d89340d83`
+- v6.0.0 `src/L1/SystemConfig.sol:607` `function isCustomGasToken() public view returns (bool)` CHANGED from 25d0c106496b96c7 -> `3dbad5a93803b218`
+- v6.0.0 `src/dispute/AnchorStateRegistry.sol:89` `function initialize( ISystemConfig _systemConfig, IDisputeGameFactory _disputeGameFactory, Proposal memory _startingAnchorRoot, GameType _startingRespectedGameType ) external reinitializer(initVersion())` CHANGED from 2db115431f031d7a -> `d78b4de869129b78`
+- v6.0.0 `src/dispute/AnchorStateRegistry.sol:135` `function getStartingAnchorRoot() external view returns (Proposal memory)` FIRST -> `ea526ac694f6a40a`
+- v6.0.0 `src/dispute/DisputeGameFactory.sol:147` `function create( GameType _gameType, Claim _rootClaim, bytes calldata _extraData ) external payable returns (IDisputeGame proxy_)` CHANGED from 71eb2a803e1d4741 -> `e3be1f64def2a480`
+- v7.0.0 `src/L1/ETHLockbox.sol:77` `function version() public view virtual returns (string memory)` CHANGED from fab47cccaf4cb3f5 -> `0145f57117327f53`
+- v7.0.0 `src/L1/OptimismPortal2.sol:238` `function version() public pure virtual returns (string memory)` CHANGED from dfae8727ea0d9c75 -> `3bfd7e5b50b3f5eb`
+- v7.0.0 `src/L1/OptimismPortal2.sol:251` `function initialize( ISystemConfig _systemConfig, IAnchorStateRegistry _anchorStateRegistry, IETHLockbox _ethLockbox ) external reinitializer(initVersion())` CHANGED from 615469ea3c45e86d -> `75d3d59cf861c78d`
+- v7.0.0 `src/L1/OptimismPortal2.sol:368` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _disputeGameIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external` CHANGED from aaf11f6f92eb5b75 -> `4dc0e0892bf4441d`
+- v7.0.0 `src/L1/OptimismPortal2.sol:479` `function migrateLiquidity() public` CHANGED from 9998876dbc1b356f -> `9b0a648a34624b27`
+- v7.0.0 `src/L1/OptimismPortal2.sol:503` `function migrateToSharedDisputeGame( IETHLockbox _newLockbox, IAnchorStateRegistry _newAnchorStateRegistry ) external` FIRST -> `4a64e1a17de96a7a`
+- v7.0.0 `src/L1/OptimismPortal2.sol:620` `function checkWithdrawal(bytes32 _withdrawalHash, address _proofSubmitter) public view` CHANGED from e3a73bfa96e8e491 -> `90b9e9676f89d070`
+- v7.0.0 `src/L1/OptimismPortal2.sol:738` `function _isUsingInterop() internal view returns (bool)` FIRST -> `a952fa042ade5685`
+- v7.0.0 `src/L1/OptimismPortal2.sol:758` `function _assertValidInteropState() internal view` FIRST -> `ed189b00100daad8`
+- v7.0.0 `src/L1/SystemConfig.sol:178` `function version() public pure virtual returns (string memory)` CHANGED from 143eefd09734c17d -> `9157856632ef8c1f`
+- v7.0.0 `src/L1/SystemConfig.sol:204` `function initialize( address _owner, uint32 _basefeeScalar, uint32 _blobbasefeeScalar, bytes32 _batcherHash, uint64 _gasLimit, address _unsafeBlockSigner, IResourceMetering.ResourceConfig memory _config, address _batchInbox, SystemConfig.Addresses memory _addresses, uint256 _l2ChainId, ISuperchainConfig _superchainConfig ) public reinitializer(initVersion())` CHANGED from e46db412ad0569f9 -> `7c6b6aeeb51486f9`
+- v7.0.0 `src/L1/SystemConfig.sol:312` `function lastUsedOPCM() public view returns (address addr_)` FIRST -> `3959cda920072c8d`
+- v7.0.0 `src/L1/SystemConfig.sol:317` `function lastUsedOPCMVersion() public view returns (string memory version_)` FIRST -> `87da6a4ee060b154`
+- v7.0.0 `src/L1/SystemConfig.sol:322` `function getAddresses() external view returns (Addresses memory)` CHANGED from c64009789afb1328 -> `19ce78f3df02afca`
+- v7.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:89` `function migrate(MigrateInput calldata _input) public` FIRST -> `724dab195ec99023`
+- v7.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:253` `function _migratePortal( ISystemConfig _systemConfig, IETHLockbox _newLockbox, IAnchorStateRegistry _newASR ) internal` FIRST -> `8f117b0ec3c3181a`
+- v7.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:313` `function contractsContainer() public view returns (IOPContractsManagerContainer)` FIRST -> `d07fbc30d83878df`
+- v7.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:84` `function chainIdToBatchInboxAddress(uint256 _l2ChainId) external pure returns (address)` FIRST -> `831048d9aad16ce4`
+- v7.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:96` `function computeSalt( uint256 _l2ChainId, string memory _saltMixer, string memory _contractName ) public pure returns (bytes32)` FIRST -> `b4875892f1f55ab8`
+- v7.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:112` `function isMatchingInstructionByKey( ExtraInstruction memory _instruction, string memory _key ) public pure returns (bool)` FIRST -> `0c0c68d880d5a1b0`
+- v7.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:128` `function isMatchingInstruction( ExtraInstruction memory _instruction, string memory _key, bytes memory _data ) public pure returns (bool)` FIRST -> `05d31835fbbdef1f`
+- v7.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:146` `function hasInstruction( ExtraInstruction[] memory _instructions, string memory _key, bytes memory _data ) public pure returns (bool)` FIRST -> `8144cdcaef91fd12`
+- v7.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:167` `function getInstructionByKey( ExtraInstruction[] memory _instructions, string memory _key ) public pure returns (ExtraInstruction memory)` FIRST -> `1fd28433b107ad7c`
+- v7.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:189` `function loadBytes( address _source, bytes4 _selector, string memory _name, ExtraInstruction[] memory _instructions ) external view returns (bytes memory)` FIRST -> `eb300175cfa83156`
+- v7.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:231` `function loadOrDeployProxy( address _source, bytes4 _selector, ProxyDeployArgs memory _args, string memory _contractName, ExtraInstruction[] memory _instructions ) external returns (address payable)` FIRST -> `29c74f36d54d7bcf`
+- v7.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:307` `function upgrade( IProxyAdmin _proxyAdmin, address _target, address _implementation, bytes memory _data, bytes32 _slot, uint8 _offset ) external` FIRST -> `a371f1a794ac74a7`
+- v7.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:364` `function implementations() public view returns (IOPContractsManagerContainer.Implementations memory)` FIRST -> `ad8bd0767bda9b37`
+- v7.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:370` `function blueprints() public view returns (IOPContractsManagerContainer.Blueprints memory)` FIRST -> `42281e8b68332e84`
+- v7.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:377` `function getGameImpl(GameType _gameType) public view returns (IDisputeGame)` FIRST -> `2721ec7edc02870a`
+- v7.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:404` `function makeGameArgs( uint256 _l2ChainId, IAnchorStateRegistry _anchorStateRegistry, IDelayedWETH _delayedWETH, IOPContractsManagerUtils.DisputeGameConfig memory _gcfg ) public view returns (bytes memory)` FIRST -> `ede21037f2d41554`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:156` `function version() public pure returns (string memory)` FIRST -> `44a7727ff2023dcb`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:183` `function upgradeSuperchain(SuperchainUpgradeInput memory _inp) external returns (SuperchainContracts memory)` FIRST -> `c6bb6359668e0775`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:206` `function deploy(FullConfig memory _cfg) external returns (ChainContracts memory)` FIRST -> `11b3932dd3884b41`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:229` `function upgrade(UpgradeInput memory _inp) external returns (ChainContracts memory)` FIRST -> `a50ead1e1b8584d1`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:278` `function migrate(IOPContractsManagerMigrator.MigrateInput calldata _input) public` FIRST -> `526b37e911628919`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:298` `function _assertValidUpgradeInstructions(IOPContractsManagerUtils.ExtraInstruction[] memory _extraInstructions) internal view` FIRST -> `10e5d83b8e19eca4`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:323` `function _isPermittedInstruction(IOPContractsManagerUtils.ExtraInstruction memory _instruction) internal view returns (bool)` FIRST -> `24b25d2c2457ad35`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:370` `function _loadChainContracts( ISystemConfig _systemConfig, uint256 _l2ChainId, string memory _saltMixer, IOPContractsManagerUtils.ExtraInstruction[] memory _extraInstructions ) internal returns (ChainContracts memory)` FIRST -> `0b59c0fb9544a733`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:553` `function _loadFullConfig( UpgradeInput memory _upgradeInput, ChainContracts memory _chainContracts ) internal view returns (FullConfig memory)` FIRST -> `5b7b331a1286af52`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:688` `function _assertValidFullConfig(FullConfig memory _cfg, bool _isInitialDeployment) internal view` FIRST -> `5d29d3b2675b54c2`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:758` `function _apply( FullConfig memory _cfg, ChainContracts memory _cts, bool _isInitialDeployment ) internal returns (ChainContracts memory)` FIRST -> `24c43c0d8eecf073`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:981` `function _makeSystemConfigInitArgs( FullConfig memory _cfg, ChainContracts memory _cts ) internal view returns (bytes memory)` FIRST -> `0c97d4eb27010415`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:1029` `function isPermittedUpgradeSequence(ISystemConfig _systemConfig) public view returns (bool)` FIRST -> `9384b203edff3d90`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:1062` `function blueprints() public view returns (IOPContractsManagerContainer.Blueprints memory)` FIRST -> `f867e2f3128b2a66`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:1067` `function implementations() public view returns (IOPContractsManagerContainer.Implementations memory)` FIRST -> `c8883e39b5bcedd9`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:1074` `function isDevFeatureEnabled(bytes32 _feature) public view returns (bool)` FIRST -> `49864b8aea7bbb58`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:1083` `function _onlyDelegateCall() internal view` FIRST -> `d2b18678b818e682`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:1093` `function _version() internal view returns (string memory)` FIRST -> `8db36cbcd2bbbb4f`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:1099` `function contractsContainer() public view returns (IOPContractsManagerContainer)` FIRST -> `d07fbc30d83878df`
+- v7.0.0 `src/L1/opcm/OPContractsManagerV2.sol:1105` `function devFeatureBitmap() public view returns (bytes32)` FIRST -> `b929867107bbf6cc`
+- v7.0.0 `src/dispute/AnchorStateRegistry.sol:89` `function initialize( ISystemConfig _systemConfig, IDisputeGameFactory _disputeGameFactory, Proposal memory _startingAnchorRoot, GameType _startingRespectedGameType ) external reinitializer(initVersion())` CHANGED from d78b4de869129b78 -> `41c2ca73ff7e8b05`
+- v7.0.0 `src/dispute/AnchorStateRegistry.sol:216` `function isGameRegistered(IDisputeGame _game) public view returns (bool)` CHANGED from 2b03b7e736461cb6 -> `d082b5caaa3030a2`
+- v7.0.0 `src/dispute/AnchorStateRegistry.sol:346` `function setAnchorState(IDisputeGame _game) public` CHANGED from eb981074ba13443e -> `410cf782d229b9a4`
+- v7.0.0 `src/dispute/DisputeGameFactory.sol:147` `function create( GameType _gameType, Claim _rootClaim, bytes calldata _extraData ) external payable returns (IDisputeGame proxy_)` CHANGED from e3be1f64def2a480 -> `6811fc8ae6335219`
+- v7.0.0 `src/dispute/lib/Types.sol:99` `function isSuperGame(GameType _gameType) internal pure returns (bool)` FIRST -> `ac747b11170a2221`
+- v8.0.0 `src/L1/OptimismPortal2.sol:245` `function version() public pure virtual returns (string memory)` CHANGED from 3bfd7e5b50b3f5eb -> `4e61b069026bcf2b`
+- v8.0.0 `src/L1/OptimismPortal2.sol:375` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _disputeGameIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external` CHANGED from 4dc0e0892bf4441d -> `6aa6322cad807892`
+- v8.0.0 `src/L1/OptimismPortal2.sol:510` `function migrateToSharedDisputeGame( IETHLockbox _newLockbox, IAnchorStateRegistry _newAnchorStateRegistry ) external` CHANGED from 4a64e1a17de96a7a -> `7bda4adbba6a5e2a`
+- v8.0.0 `src/L1/SystemConfig.sol:179` `function version() public pure virtual returns (string memory)` CHANGED from 9157856632ef8c1f -> `2790acab8a867323`
+- v8.0.0 `src/L1/SystemConfig.sol:203` `function initialize( address _owner, uint32 _basefeeScalar, uint32 _blobbasefeeScalar, bytes32 _batcherHash, uint64 _gasLimit, address _unsafeBlockSigner, IResourceMetering.ResourceConfig memory _config, SystemConfig.Addresses memory _addresses, uint256 _l2ChainId, ISuperchainConfig _superchainConfig ) public reinitializer(initVersion())` FIRST -> `828fff9a7c1f3783`
+- v8.0.0 `src/L1/SystemConfig.sol:386` `function _setGasConfigEcotone(uint32 _basefeeScalar, uint32 _blobbasefeeScalar) internal` CHANGED from 48e778a3d5af3ded -> `ef7f33f8068f558b`
+- v8.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:110` `function migrate(MigrateInput calldata _input) public` CHANGED from 724dab195ec99023 -> `6bb9f794cda46a30`
+- v8.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:283` `function setInteropDisputeGames(MigrateInput calldata _input) public` FIRST -> `e42209c65094cff8`
+- v8.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:359` `function _validateChainSystemConfigs(ISystemConfig[] calldata _chainSystemConfigs) internal view` FIRST -> `f6a6754ec96cb9c5`
+- v8.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:395` `function _updateSystemConfigDelayedWETH( ISystemConfig _systemConfig, IDelayedWETH _delayedWETH, address _systemConfigImpl ) internal` FIRST -> `09a5fd4d324d52ce`
+- v8.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:419` `function _makeSystemConfigInitArgs( ISystemConfig _systemConfig, ISystemConfig.Addresses memory _addrs ) internal view returns (bytes memory)` FIRST -> `ac9e8dd394fae985`
+- v8.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:448` `function _migratePortal( ISystemConfig _systemConfig, IETHLockbox _newLockbox, IAnchorStateRegistry _newASR ) internal` CHANGED from 8f117b0ec3c3181a -> `626bfff63268eee6`
+- v8.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:237` `function loadOrDeployProxy( address _source, bytes4 _selector, ProxyDeployArgs memory _args, string memory _contractName, ExtraInstruction[] memory _instructions ) external returns (address payable)` CHANGED from 29c74f36d54d7bcf -> `e1397a31ab4c2501`
+- v8.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:313` `function upgrade( IProxyAdmin _proxyAdmin, address _target, address _implementation, bytes memory _data, bytes32 _slot, uint8 _offset ) external` CHANGED from a371f1a794ac74a7 -> `2b72920e0a6a3b17`
+- v8.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:396` `function _adminFor(IProxyAdmin _defaultAdmin, address _target) internal view returns (IProxyAdmin)` FIRST -> `c7ea9e863893f169`
+- v8.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:416` `function systemConfigFor(ISystemConfig _default, address _target) external view returns (ISystemConfig)` FIRST -> `f8f781a5beec97fe`
+- v8.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:440` `function getGameImpl(GameType _gameType) public view returns (IDisputeGame)` CHANGED from 2721ec7edc02870a -> `36ef05f67c81c8dd`
+- v8.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:465` `function makeGameArgs( uint256 _l2ChainId, IAnchorStateRegistry _anchorStateRegistry, IDelayedWETH _delayedWETH, IOPContractsManagerUtils.DisputeGameConfig memory _gcfg ) public view returns (bytes memory)` CHANGED from ede21037f2d41554 -> `13696ceeaaf4681b`
+- v8.0.0 `src/L1/opcm/OPContractsManagerV2.sol:162` `function version() public pure returns (string memory)` CHANGED from 44a7727ff2023dcb -> `e864a7c7079abc9e`
+- v8.0.0 `src/L1/opcm/OPContractsManagerV2.sol:237` `function upgrade(UpgradeInput memory _inp) external returns (ChainContracts memory)` CHANGED from a50ead1e1b8584d1 -> `4fb9a7184fe21cfc`
+- v8.0.0 `src/L1/opcm/OPContractsManagerV2.sol:303` `function setInteropDisputeGames(IOPContractsManagerMigrator.MigrateInput calldata _input) public` FIRST -> `9cd74c9a9231f674`
+- v8.0.0 `src/L1/opcm/OPContractsManagerV2.sol:349` `function _isPermittedInstruction(IOPContractsManagerUtils.ExtraInstruction memory _instruction) internal view returns (bool)` CHANGED from 24b25d2c2457ad35 -> `22810c82bf2d5390`
+- v8.0.0 `src/L1/opcm/OPContractsManagerV2.sol:386` `function _loadChainContracts( ISystemConfig _systemConfig, uint256 _l2ChainId, string memory _saltMixer, IOPContractsManagerUtils.ExtraInstruction[] memory _extraInstructions ) internal returns (ChainContracts memory)` CHANGED from 0b59c0fb9544a733 -> `78e4c56e621121e3`
+- v8.0.0 `src/L1/opcm/OPContractsManagerV2.sol:704` `function _assertValidFullConfig(FullConfig memory _cfg, bool _isInitialDeployment) internal view` CHANGED from 5d29d3b2675b54c2 -> `b3fa54ec0d8cb405`
+- v8.0.0 `src/L1/opcm/OPContractsManagerV2.sol:823` `function _apply( FullConfig memory _cfg, ChainContracts memory _cts, bool _isInitialDeployment ) internal returns (ChainContracts memory)` CHANGED from 24c43c0d8eecf073 -> `2966fe2e81db61f8`
+- v8.0.0 `src/L1/opcm/OPContractsManagerV2.sol:1032` `function _makeSystemConfigInitArgs( FullConfig memory _cfg, ChainContracts memory _cts ) internal view returns (bytes memory)` CHANGED from 0c97d4eb27010415 -> `96d6aa1d51575e45`
+- v8.0.0 `src/dispute/lib/Types.sol:99` `function isSuperGame(GameType _gameType) internal pure returns (bool)` CHANGED from ac747b11170a2221 -> `3a35d9e0b5baa540`
+- v9.0.0 `src/L1/ETHLockbox.sol:82` `function version() public view virtual returns (string memory)` CHANGED from 0145f57117327f53 -> `b77bfe462b306c49`
+- v9.0.0 `src/L1/ETHLockbox.sol:94` `function initialize( ISuperchainConfig _superchainConfig, IOptimismPortal[] calldata _portals ) external reinitializer(initVersion())` FIRST -> `2de3f0eabea4af03`
+- v9.0.0 `src/L1/ETHLockbox.sol:112` `function paused() public view returns (bool)` CHANGED from c2465a7947378a8f -> `3708dfb034ab310b`
+- v9.0.0 `src/L1/ETHLockbox.sol:118` `function guardian() public view returns (address)` FIRST -> `6980998fbb637345`
+- v9.0.0 `src/L1/ETHLockbox.sol:220` `function _authorizePortal(IOptimismPortal _portal) internal` CHANGED from 0d813c369a23a5b6 -> `e8fc6e7b6988607b`
+- v9.0.0 `src/L1/L1CrossDomainMessenger.sol:117` `function baseGas(bytes memory _message, uint32 _minGasLimit) public pure override returns (uint64)` FIRST -> `48736f6302f6946a`
+- v9.0.0 `src/L1/L1CrossDomainMessenger.sol:146` `function _localRelayReservedGas() internal pure override returns (uint64)` FIRST -> `208182ce20ad4da7`
+- v9.0.0 `src/L1/L1CrossDomainMessenger.sol:151` `function _localRelayGasCheckBuffer() internal pure override returns (uint64)` FIRST -> `ac9556e5fcda3987`
+- v9.0.0 `src/L1/OptimismPortal2.sol:260` `function version() public pure virtual returns (string memory)` CHANGED from 4e61b069026bcf2b -> `85258790fcedaaf6`
+- v9.0.0 `src/L1/OptimismPortal2.sol:306` `function paused() public view returns (bool)` CHANGED from c2465a7947378a8f -> `c6431e09232d029d`
+- v9.0.0 `src/L1/OptimismPortal2.sol:322` `function superchainConfig() external view returns (ISuperchainConfig)` CHANGED from c26c05b43ba7f4d8 -> `05623ea677222d6a`
+- v9.0.0 `src/L1/OptimismPortal2.sol:328` `function guardian() external view returns (address)` CHANGED from 9a82643fe0195908 -> `2ada54f3d52e0f6e`
+- v9.0.0 `src/L1/OptimismPortal2.sol:390` `function proveWithdrawalTransaction( Types.WithdrawalTransaction memory _tx, uint256 _disputeGameIndex, Types.OutputRootProof calldata _outputRootProof, bytes[] calldata _withdrawalProof ) external` CHANGED from 6aa6322cad807892 -> `c0c04f0f160ce7bd`
+- v9.0.0 `src/L1/OptimismPortal2.sol:502` `function migrateLiquidity() public` CHANGED from 9b0a648a34624b27 -> `82febf7b592b827f`
+- v9.0.0 `src/L1/OptimismPortal2.sol:577` `function finalizeWithdrawalTransactionExternalProof( Types.WithdrawalTransaction memory _tx, address _proofSubmitter ) public` CHANGED from 2a477b68ad852ac9 -> `710994f21bc1b3c2`
+- v9.0.0 `src/L1/OptimismPortal2.sol:671` `function checkWithdrawal(bytes32 _withdrawalHash, address _proofSubmitter) public view` CHANGED from 90b9e9676f89d070 -> `a5070edefd009cd1`
+- v9.0.0 `src/L1/OptimismPortal2.sol:711` `function deleteProvenWithdrawal(bytes32 _withdrawalHash, address _proofSubmitter) external` FIRST -> `112e23fc63b32dcd`
+- v9.0.0 `src/L1/OptimismPortal2.sol:839` `function _assertValidLockboxState() internal view` CHANGED from fc149dbf9ff1cfa4 -> `4ed2817bd6a22f6f`
+- v9.0.0 `src/L1/SuperchainConfig.sol:152` `function isLocalOrGlobalPaused(address _identifier) external view returns (bool)` FIRST -> `98a888e19130404c`
+- v9.0.0 `src/L1/SystemConfig.sol:179` `function version() public pure virtual returns (string memory)` CHANGED from 2790acab8a867323 -> `5423a60ffd3582da`
+- v9.0.0 `src/L1/SystemConfig.sol:532` `function setFeature(bytes32 _feature, bool _enabled) external` CHANGED from bd93375d89340d83 -> `b9f5bbb4645e27ce`
+- v9.0.0 `src/L1/SystemConfig.sol:574` `function paused() public view returns (bool)` CHANGED from 671a67b944fbea77 -> `773047c335e89f46`
+- v9.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:129` `function migrate(MigrateInput calldata _input) public` CHANGED from 6bb9f794cda46a30 -> `aa17e3cda59bd130`
+- v9.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:291` `function _validateChainSystemConfigs(ISystemConfig[] calldata _chainSystemConfigs) internal view` CHANGED from f6a6754ec96cb9c5 -> `173f1b39e9c89e5a`
+- v9.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:339` `function _validateDisputeGameConfigs( IOPContractsManagerUtils.DisputeGameConfig[] calldata _gameConfigs, GameType _startingRespectedGameType ) internal view` FIRST -> `c625193bda72b0a9`
+- v9.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:363` `function _assertValidDisputeGameConfig(IOPContractsManagerUtils.DisputeGameConfig calldata _gameConfig) internal view` FIRST -> `1afabd441b02eeb8`
+- v9.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:417` `function _updateDelayedWETHLockbox( ISystemConfig _systemConfig, IETHLockbox _ethLockbox, address _delayedWETHImpl ) internal` FIRST -> `6023ef9fdbb31aa6`
+- v9.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:437` `function _updateSystemConfigDelayedWETH( ISystemConfig _systemConfig, IDelayedWETH _delayedWETH, address _systemConfigImpl ) internal` CHANGED from 09a5fd4d324d52ce -> `9ca6f9344049c90b`
+- v9.0.0 `src/L1/opcm/OPContractsManagerMigrator.sol:475` `function _migratePortal( ISystemConfig _systemConfig, IETHLockbox _newLockbox, IAnchorStateRegistry _newASR, IOPContractsManagerContainer.Implementations memory _impls ) internal` FIRST -> `61b1a359c40d25a7`
+- v9.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:236` `function loadOrDeployProxy( address _source, bytes4 _selector, ProxyDeployArgs memory _args, string memory _contractName, ExtraInstruction[] memory _instructions ) external returns (address payable)` CHANGED from e1397a31ab4c2501 -> `323c6b8a45f19234`
+- v9.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:312` `function upgrade( IProxyAdmin _proxyAdmin, address _target, address _implementation, bytes memory _data, bytes32 _slot, uint8 _offset ) external` CHANGED from 2b72920e0a6a3b17 -> `151cd8dcdda6875f`
+- v9.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:518` `function _compareToLastUsedOPCM( ISystemConfig _systemConfig, address _opcm ) private view returns (bool isSameOPCM_, SemverComp.Semver memory lastUsedSemver_, SemverComp.Semver memory thisSemver_)` FIRST -> `fc5c9358838375e2`
+- v9.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:536` `function isPermittedUpgradeSequence(ISystemConfig _systemConfig, address _opcm) external view returns (bool)` FIRST -> `66f4b4d075184800`
+- v9.0.0 `src/L1/opcm/OPContractsManagerUtils.sol:571` `function isPermittedMigrateSequence(ISystemConfig _systemConfig, address _opcm) external view returns (bool)` FIRST -> `b5965f2edf3439a8`
+- v9.0.0 `src/L1/opcm/OPContractsManagerV2.sol:170` `function version() public pure returns (string memory)` CHANGED from e864a7c7079abc9e -> `f0bfd3bffd03eaa5`
+- v9.0.0 `src/L1/opcm/OPContractsManagerV2.sol:197` `function upgradeSuperchain(SuperchainUpgradeInput calldata _inp) external returns (SuperchainContracts memory)` FIRST -> `99d3e6e5e8d74514`
+- v9.0.0 `src/L1/opcm/OPContractsManagerV2.sol:244` `function upgrade(UpgradeInput memory _inp) external returns (ChainContracts memory)` CHANGED from 4fb9a7184fe21cfc -> `adaec9612c7aa586`
+- v9.0.0 `src/L1/opcm/OPContractsManagerV2.sol:293` `function migrate(IOPContractsManagerMigrator.MigrateInput calldata _input) public` CHANGED from 526b37e911628919 -> `39d8e7c6f03aa67c`
+- v9.0.0 `src/L1/opcm/OPContractsManagerV2.sol:347` `function _isPermittedInstruction(IOPContractsManagerUtils.ExtraInstruction memory _instruction) internal view returns (bool)` CHANGED from 22810c82bf2d5390 -> `111e7d16863681d2`
+- v9.0.0 `src/L1/opcm/OPContractsManagerV2.sol:384` `function _loadChainContracts( ISystemConfig _systemConfig, uint256 _l2ChainId, string memory _saltMixer, IOPContractsManagerUtils.ExtraInstruction[] memory _extraInstructions ) internal returns (ChainContracts memory)` CHANGED from 78e4c56e621121e3 -> `53090af447baeedb`
+- v9.0.0 `src/L1/opcm/OPContractsManagerV2.sol:687` `function _assertValidFullConfig(FullConfig memory _cfg, bool _isInitialDeployment) internal view` CHANGED from b3fa54ec0d8cb405 -> `9d58cf0ab6bf8958`
+- v9.0.0 `src/L1/opcm/OPContractsManagerV2.sol:803` `function _apply( FullConfig memory _cfg, ChainContracts memory _cts, bool _isInitialDeployment ) internal returns (ChainContracts memory)` CHANGED from 2966fe2e81db61f8 -> `990cf33cf5e00059`
+- v9.0.0 `src/L1/opcm/OPContractsManagerV2.sol:1040` `function isPermittedUpgradeSequence(ISystemConfig _systemConfig) public view returns (bool)` CHANGED from 9384b203edff3d90 -> `1e6ba3d3cc1e56ed`
+- v9.0.0 `src/L1/opcm/OPContractsManagerV2.sol:1048` `function isPermittedMigrateSequence(ISystemConfig _systemConfig) public view returns (bool)` FIRST -> `bc606ea99ed84d79`
+- v9.0.0 `src/dispute/AnchorStateRegistry.sol:94` `function initialize( IETHLockbox _ethLockbox, IDisputeGameFactory _disputeGameFactory, Proposal memory _startingAnchorRoot, GameType _startingRespectedGameType ) external reinitializer(initVersion())` FIRST -> `4c52003442fb0528`
+- v9.0.0 `src/dispute/AnchorStateRegistry.sol:136` `function paused() public view returns (bool)` CHANGED from c2465a7947378a8f -> `c6431e09232d029d`
+- v9.0.0 `src/dispute/AnchorStateRegistry.sol:142` `function superchainConfig() public view returns (ISuperchainConfig)` CHANGED from e97c02975fefda3c -> `1b626011da9f4e54`
+- v9.0.0 `src/dispute/AnchorStateRegistry.sol:193` `function anchors( GameType ) external view returns (Hash, uint256)` FIRST -> `91ed902d46ab3eeb`
+- v9.0.0 `src/dispute/AnchorStateRegistry.sol:375` `function _assertOnlyGuardian() internal view` CHANGED from 7e98b72076416362 -> `ee7e56234a7b0fe7`
+- v9.0.0 `src/dispute/DelayedWETH.sol:58` `function initialize(IETHLockbox _ethLockbox) external reinitializer(initVersion())` FIRST -> `c75a1a4769a4bbc1`
+- v9.0.0 `src/dispute/DelayedWETH.sol:74` `function config() public view returns (ISuperchainConfig)` CHANGED from a369a94fd91b5169 -> `0ca90a56bf14c007`
+- v9.0.0 `src/dispute/DelayedWETH.sol:101` `function withdraw(address _guy, uint256 _wad) public` CHANGED from 697e1835c6d9d895 -> `931702936afdc275`
+- v9.0.0 `src/dispute/lib/Types.sol:101` `function clearedGameTypes() internal pure returns (GameType[] memory types_)` FIRST -> `68b0e8434338680e`
+- v9.0.0 `src/libraries/SafeCall.sol:121` `function callWithMinGas( address _target, uint256 _minGas, uint256 _value, bytes memory _calldata ) internal returns (bool)` CHANGED from 2ebed84eea002828 -> `479b074784fcb0b2`
+- v9.0.0 `src/universal/CrossDomainMessenger.sol:209` `function relayMessage( uint256 _nonce, address _sender, address _target, uint256 _value, uint256 _minGasLimit, bytes memory _message ) external payable` FIRST -> `47abf09b5ff69772`
+- v9.0.0 `src/universal/CrossDomainMessenger.sol:339` `function RELAY_CONSTANT_OVERHEAD() external view virtual returns (uint64)` FIRST -> `6409f7929389e07c`
+- v9.0.0 `src/universal/CrossDomainMessenger.sol:343` `function RELAY_CALL_OVERHEAD() external view virtual returns (uint64)` FIRST -> `7498ea7cfa807f6d`
+- v9.0.0 `src/universal/CrossDomainMessenger.sol:347` `function RELAY_RESERVED_GAS() external view virtual returns (uint64)` FIRST -> `8326f3752fc58f5d`
+- v9.0.0 `src/universal/CrossDomainMessenger.sol:352` `function RELAY_GAS_CHECK_BUFFER() external view virtual returns (uint64)` FIRST -> `f7273541a959be4d`
+- v9.0.0 `src/universal/CrossDomainMessenger.sol:361` `function baseGas(bytes memory _message, uint32 _minGasLimit) public pure virtual returns (uint64)` FIRST -> `12468856bc78a43c`
+- v9.0.0 `src/universal/CrossDomainMessenger.sol:371` `function _baseGas( bytes memory _message, uint32 _minGasLimit, uint64 _relayConstantOverhead, uint64 _relayCallOverhead, uint64 _relayReservedGas, uint64 _relayGasCheckBuffer ) internal pure returns (uint64)` FIRST -> `8ed7034759c95475`
+- v9.0.0 `src/universal/CrossDomainMessenger.sol:424` `function __CrossDomainMessenger_init(CrossDomainMessenger _otherMessenger) internal onlyInitializing` CHANGED from 61347067ecbff8e7 -> `ec58a8216b4ba090`
+- v9.0.0 `src/universal/CrossDomainMessenger.sol:461` `function _localRelayReservedGas() internal pure virtual returns (uint64)` FIRST -> `8346af27bccc2221`
+- v9.0.0 `src/universal/CrossDomainMessenger.sol:466` `function _localRelayGasCheckBuffer() internal pure virtual returns (uint64)` FIRST -> `4b6ebc71b342e697`
