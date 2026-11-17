@@ -28,14 +28,14 @@ All listed release transactions are marked EXECUTED in `superchain-ops/src/tasks
 - The ProxyAdmin/DGF owner is a 2-of-2 Safe; its owner Safes are 5-of-7 and 10-of-13. The SystemConfig owner is a 5-of-7 Safe. Setup and every `AddedOwner`, `RemovedOwner`, and `ChangedThreshold` event through the pinned block are in `governanceSafeHistory`.
 - Guardian: `0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2` through shared SuperchainConfig `0x95703e…`; `lastUsedOPCM=0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f`.
 - ETH lockbox feature `true`, interop `false`, custom gas token `false`.
-- `gasLimit=60000000 [6e7]`, EIP-1559 denominator/elasticity `250/12`, `minBaseFee=500000 [5e5]`. These are operator/governance inputs, not hidden implementation differences.
+- `gasLimit=60000000`, EIP-1559 denominator/elasticity `250/12`, `minBaseFee=500000`. These are operator/governance inputs, not hidden implementation differences.
 
 ## Custody
 
 | release | block | Portal wei | ETHLockbox wei | L1XDM wei | L1StandardBridge wei |
 |---|---:|---:|---:|---:|---:|
-| U2 | 22254924 | 7112787816511489527676 | None | 0 | 0 |
-| U3 | 22342667 | 112975345150884031215154 | None | 0 | 0 |
+| U2 | 22254924 | 7112787816511489527676 | — | 0 | 0 |
+| U3 | 22342667 | 112975345150884031215154 | — | 0 | 0 |
 | U16 | 22990722 | 0 | 133613248268096507106891 | 0 | 0 |
 | U16a | 23492571 | 0 | 100128634737695642066910 | 0 | 0 |
 | U17 | 23878509 | 0 | 64031754985238360154101 | 0 | 0 |
@@ -60,7 +60,7 @@ The U16 `ETHMigrated` event is decoded in `UPGRADE-PATH.json`. At 26433900, bala
 | DelayedWETH | `0xa0157f0730dea8d1a5c358dc1d340a05d8796c23` | 22990722 | 6186–7864 (1679) | 0 | `1.5.0` |
 | DelayedWETH | `0xc9edb4e340f4e9683b4557bd9db8f9d932177c86` | 21431684 | 1822–6185 (4321) | 80000000000000000 | `1.3.0` |
 
-Current respected type is **9**, retirement timestamp `1753380731 [1.753e9]`, anchor `0xaf8bf886b957cbe734cdaabd672ec35e2d0095e4a780853e2ad1c5e818630c2b at L2 timestamp 1794263862 [1.794e9]`. Every `ImplementationSet`, bond, args, absolute-prestate observation, anchor update, retirement, and blacklist event is retained in `UPGRADE-PATH.json`. v9 accepts a factory-registered game only after blacklist/retirement/finality checks (`AnchorStateRegistry.sol:256-262,286-325,331-352`) and records respect at creation (`SuperFaultDisputeGame.sol:338-340`).
+Current respected type is **9**, retirement timestamp `1753380731`, anchor `0xaf8bf886b957cbe734cdaabd672ec35e2d0095e4a780853e2ad1c5e818630c2b at L2 timestamp 1794263862`. Every `ImplementationSet`, bond, args, absolute-prestate observation, anchor update, retirement, and blacklist event is retained in `UPGRADE-PATH.json`. v9 accepts a factory-registered game only after blacklist/retirement/finality checks (`AnchorStateRegistry.sol:256-262,286-325,331-352`) and records respect at creation (`SuperFaultDisputeGame.sol:338-340`).
 
 ## Game census
 

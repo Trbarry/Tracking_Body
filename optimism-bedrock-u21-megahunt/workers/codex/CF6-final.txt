@@ -1,0 +1,31 @@
+Completed the reusable historical harness.
+
+- [Self-contained Foundry project](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF6)
+- [Worker report](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CF6-report.md)
+- [Upgrade manifest](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF6/op-upgrade-blocks.json)
+- [Differential results](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF6/differential-results.md)
+
+Facts locked:
+
+- Binary-search discovery found 66 implementation changes across 22 unique blocks for all seven requested contracts, with durable before/after forks.
+- Official v5–v9 upgrades replay successfully at blocks 23877377, 24421512, 25397811, 26048619, and 26430859; post-state matches real implementation locators.
+- 14/14 named tests pass with `-j 1`.
+- A real v7 withdrawal proof survives v8 and v9 unchanged, passes v9 validation, and finalizes with the exact expected target balance delta.
+- A real v7 failed-message authorization survives v8/v9 and remains permissionlessly retryable.
+- OP, Ink, Soneium, and Unichain L1 deployment handles pass the same validation body.
+
+Primitives:
+
+- [PRIM-CF6-01](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/primitives/PRIM-CF6-01.md): valid v7 proven-withdrawal state carries through v8/v9 and finalizes under v9.
+- [PRIM-CF6-02](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/primitives/PRIM-CF6-02.md): v7 failed-message retry authorization remains intact across v8/v9.
+
+Strongest negatives:
+
+- [REJ-CF6-01](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/rejected/REJ-CF6-01.md): no v8/v9 corruption or invalidation of the tested v7 proof.
+- [REJ-CF6-02](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/rejected/REJ-CF6-02.md): no clearing or re-keying of the tested failed-message bit.
+
+No candidate was opened; score: N/A.
+
+Limits: in-flight fixtures cover v7 only; full governance transaction fixtures cover v5–v9; no legacy L2OutputOracle proof, value-bearing failed message, or dual L1/L2 devstack.
+
+Next-wave edges: pre-Bedrock messenger nonce/version transitions, L2OutputOracle-era proofs across fault-proof migration, and value-bearing failed messages around pause/ETHLockbox migrations.
