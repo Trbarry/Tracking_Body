@@ -1,6 +1,6 @@
 # Lane 30 verification
 
-Harness: `/home/user/u21-work/codex-30/h`; `l1n = http://127.0.0.1:8547`; Solidity 0.8.25; Cancun execution (matching the current pinned fork, not future Amsterdam).
+Harness: `/home/user/u21-work/codex-30/h`; `l1n = http://127.0.0.1:8547`; Solidity 0.8.25 with Cancun compiler target. These tests do not model future Amsterdam/EIP-8037 rules.
 
 ## Real in-flight game
 
