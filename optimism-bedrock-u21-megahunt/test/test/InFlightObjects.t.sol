@@ -11,7 +11,7 @@ contract InFlightObjectsTest is InFlightObjects {
     address constant FRESH_SUBMITTER = address(uint160(0x5B0F6F6));
 
     function _eras() internal pure returns (uint256[] memory e) {
-        e = new uint256[](17);
+        e = new uint256[](HFData.POINTS);
         uint256 n;
         for (uint256 i = HFData.BEDROCK; i < HFData.POINTS; i++) {
             // BEDROCK_STEP1 (portal not initialised yet) is the only point without a usable portal.

@@ -59,12 +59,11 @@ The U16 `ETHMigrated` event is decoded in `UPGRADE-PATH.json`. At 26433900, bala
 | DelayedWETH | `0x6cbd14da021e39a7895ae151ac72ecc9023e87f6` | 23491328 | 1202–2265 (1064) | 0 | `1.5.0` |
 | DelayedWETH | `0xf6b1554f483c391414d3830927e3600c105aae6e` | 21995971 | 406–921 (516) | 0 | `1.3.0` |
 
-Current respected type is **9**, retirement timestamp `1753379243 [1.753e9]`, anchor `0x6cf0114f1c0fab7f2d989c7b4fec4870afb70959ff328d23f3ac4fe74c948231
-1794244697 [1.794e9]`. Every `ImplementationSet`, bond, args, absolute-prestate observation, anchor update, retirement, and blacklist event is retained in `UPGRADE-PATH.json`. v9 accepts a factory-registered game only after blacklist/retirement/finality checks (`AnchorStateRegistry.sol:256-262,286-325,331-352`) and records respect at creation (`SuperFaultDisputeGame.sol:338-340`).
+Current respected type is **9**, retirement timestamp `1753379243 [1.753e9]`, anchor `0x6cf0114f1c0fab7f2d989c7b4fec4870afb70959ff328d23f3ac4fe74c948231 at L2 timestamp 1794244697 [1.794e9]`. Every `ImplementationSet`, bond, args, absolute-prestate observation, anchor update, retirement, and blacklist event is retained in `UPGRADE-PATH.json`. v9 accepts a factory-registered game only after blacklist/retirement/finality checks (`AnchorStateRegistry.sol:256-262,286-325,331-352`) and records respect at creation (`SuperFaultDisputeGame.sol:338-340`).
 
 ## Game census
 
-Scanned `2640` games in batches of 20 through Multicall3 at L1 block 26433900; types `{0: 2076, 1: 190, 8: 256, 9: 118}`, statuses `{0: 8, 1: 19, 2: 2613}`, claim-valid `1685`, blacklisted `0`. Raw current-proposer flags: `1475`; after recognizing documented proposer rotations: `1`. Public L2 endpoint used for header verification: `https://rpc-gel.inkonchain.com`. Root-check detail is embedded in the JSON.
+Scanned `2640` games in batches of 20 through Multicall3 at L1 block 26433900; types `{0: 2076, 1: 190, 8: 256, 9: 118}`, statuses `{0: 8, 1: 19, 2: 2613}`, claim-valid `1685`, blacklisted `0`. Raw current-proposer flags: `1475`; after recognizing documented proposer rotations: `1`. Passive L2 endpoint used for header verification: `https://rpc-gel.inkonchain.com`. Root-check detail is embedded in the JSON.
 
 ## Pause and storage-history notes
 
@@ -74,4 +73,4 @@ The four OP-only legacy residues (XDM 51/151, bridge 1, portal 54) are zero on t
 
 ## Coverage limits
 
-L1 logs were scanned from genesis through 26433900; code birth used archive binary search. The census is complete to the factory count observed at the pinned block. L2 header verification was limited to unexpected live games. Balance history is sampled at every executed release plus the migration event and pinned head; intra-release deposits/withdrawals were not reconstructed transaction-by-transaction.
+L1 logs were scanned from genesis through 26433900; code birth used archive binary search. The census is complete to the factory count observed at the pinned block. L2 header verification was limited to unexpected live games, plus one claim-valid OP control. Balance history is sampled at every executed release plus the migration event and pinned head; intra-release deposits/withdrawals were not reconstructed transaction-by-transaction.

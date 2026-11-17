@@ -1,0 +1,49 @@
+{
+  "rpc": "http://127.0.0.1:7545",
+  "block": 26433900,
+  "factory": "0xe5965ab5962edc7477c8520243a95517cd252fa9",
+  "method": "gameAtIndex(uint256), then version(), anchorStateRegistry(), and weth() on the returned clone",
+  "samples": [
+    {
+      "index": 0,
+      "game_type": 0,
+      "created_at": 1715895731,
+      "game": "0xa019ec50dfd0ca20f92912342891138b07a24633",
+      "version": "1.2.0",
+      "anchor_state_registry": "0x18dac71c228d1c32c99489b7323d441e1175e443",
+      "delayed_weth": "0xe497b094d6dbb3d5e4caac9a14696d7572588d14",
+      "generation": 0
+    },
+    {
+      "index": 9759,
+      "game_type": 0,
+      "created_at": 1753135595,
+      "game": "0x4b59e06f437618dd5a4363877c59d34ba19c45a9",
+      "version": "1.4.1",
+      "anchor_state_registry": "0x1c68ecfbf9c8b1e6c0677965b3b9ecf9a104305b",
+      "delayed_weth": "0x323dfc63c9b83cb83f40325aab74b245937cbdf0",
+      "generation": 1
+    },
+    {
+      "index": 20000,
+      "game_type": 8,
+      "created_at": 1789935263,
+      "game": "0xfb4d9a677aebbeab9807c8bcc3d0fcd84ff9e826",
+      "version": "2.4.2",
+      "anchor_state_registry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+      "delayed_weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162",
+      "generation": 2
+    },
+    {
+      "index": 21388,
+      "game_type": 9,
+      "created_at": 1794906359,
+      "game": "0x668513abb2b32a988f9f4aada89ca48a974f8b65",
+      "version": "0.8.0",
+      "anchor_state_registry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+      "delayed_weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162",
+      "generation": 2
+    }
+  ],
+  "conclusion": "Layout-reordered AnchorStateRegistry and DelayedWETH generations are distinct proxies. Historical game clones retain their generation-specific immutable references; no in-place old-layout reinterpretation was observed."
+}

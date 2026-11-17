@@ -104,6 +104,12 @@ def main() -> None:
             "unique_implementations": len(records),
             "locked_legacy_byte_255": sum(r["all_relevant_legacy_initializer_bytes_locked_255"] for r in records),
             "not_locked_by_relevant_legacy_byte": sum(not r["all_relevant_legacy_initializer_bytes_locked_255"] for r in records),
+            "all_relevant_legacy_initializer_bytes_nonzero": sum(
+                all(value != 0 for value in r["initializer_bytes"].values()) for r in records
+            ),
+            "at_least_one_relevant_legacy_initializer_byte_zero": sum(
+                any(value == 0 for value in r["initializer_bytes"].values()) for r in records
+            ),
             "nonzero_oz_v5_slot": sum(int(r["oz_v5_initializable_slot"], 16) != 0 for r in records),
             "nonzero_balance": sum(r["balance_wei"] != 0 for r in records),
         },

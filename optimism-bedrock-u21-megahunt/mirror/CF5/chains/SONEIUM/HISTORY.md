@@ -57,12 +57,11 @@ The U16 `ETHMigrated` event is decoded in `UPGRADE-PATH.json`. At 26433900, bala
 | DelayedWETH | `0x70277624cde90492231eb23309e1251beb18dff5` | 23491328 | 3679–6866 (3188) | 0 | `1.5.0` |
 | DelayedWETH | `0x9aea1fd851b63d57ba4fc556b0e0c170126c9eaf` | 21314185 | 0–2840 (2841) | 0 | `1.3.0` |
 
-Current respected type is **5**, retirement timestamp `1753380095 [1.753e9]`, anchor `0x50c1c95b0ebce6c4f928ad428f7dc55ada152471e31e0e78c1fae1f34a60a717
-1794559147 [1.794e9]`. Every `ImplementationSet`, bond, args, absolute-prestate observation, anchor update, retirement, and blacklist event is retained in `UPGRADE-PATH.json`. v9 accepts a factory-registered game only after blacklist/retirement/finality checks (`AnchorStateRegistry.sol:256-262,286-325,331-352`) and records respect at creation (`SuperFaultDisputeGame.sol:338-340`).
+Current respected type is **5**, retirement timestamp `1753380095 [1.753e9]`, anchor `0x50c1c95b0ebce6c4f928ad428f7dc55ada152471e31e0e78c1fae1f34a60a717 at L2 timestamp 1794559147 [1.794e9]`. Every `ImplementationSet`, bond, args, absolute-prestate observation, anchor update, retirement, and blacklist event is retained in `UPGRADE-PATH.json`. v9 accepts a factory-registered game only after blacklist/retirement/finality checks (`AnchorStateRegistry.sol:256-262,286-325,331-352`) and records respect at creation (`SuperFaultDisputeGame.sol:338-340`).
 
 ## Game census
 
-Scanned `8537` games in batches of 20 through Multicall3 at L1 block 26433900; types `{1: 7955, 5: 582}`, statuses `{2: 8537}`, claim-valid `5668`, blacklisted `0`. Raw current-proposer flags: `0`; after recognizing documented proposer rotations: `0`. Public L2 endpoint used for header verification: `https://rpc.soneium.org`. Root-check detail is embedded in the JSON.
+Scanned `8537` games in batches of 20 through Multicall3 at L1 block 26433900; types `{1: 7955, 5: 582}`, statuses `{2: 8537}`, claim-valid `5668`, blacklisted `0`. Raw current-proposer flags: `0`; after recognizing documented proposer rotations: `0`. Passive L2 endpoint used for header verification: `https://rpc.soneium.org`. Root-check detail is embedded in the JSON.
 
 ## Pause and storage-history notes
 
@@ -72,4 +71,4 @@ The four OP-only legacy residues (XDM 51/151, bridge 1, portal 54) are zero on t
 
 ## Coverage limits
 
-L1 logs were scanned from genesis through 26433900; code birth used archive binary search. The census is complete to the factory count observed at the pinned block. L2 header verification was limited to unexpected live games. Balance history is sampled at every executed release plus the migration event and pinned head; intra-release deposits/withdrawals were not reconstructed transaction-by-transaction.
+L1 logs were scanned from genesis through 26433900; code birth used archive binary search. The census is complete to the factory count observed at the pinned block. L2 header verification was limited to unexpected live games, plus one claim-valid OP control. Balance history is sampled at every executed release plus the migration event and pinned head; intra-release deposits/withdrawals were not reconstructed transaction-by-transaction.

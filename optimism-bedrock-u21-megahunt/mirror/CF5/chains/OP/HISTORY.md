@@ -60,12 +60,11 @@ The U16 `ETHMigrated` event is decoded in `UPGRADE-PATH.json`. At 26433900, bala
 | DelayedWETH | `0xe214879ad573693a4c49f7654449caa455cde34f` | 22990599 | 9828–11506 (1679) | 0 | `1.5.0` |
 | DelayedWETH | `0xe497b094d6dbb3d5e4caac9a14696d7572588d14` | 19884569 | 0–2236 (2237) | 160000000000000000 | `1.0.0` |
 
-Current respected type is **9**, retirement timestamp `1753379243 [1.753e9]`, anchor `0x1780727e85b9a6a2f265739802b24afdeb1d3f86b6f8b0bdd762c7b0c6ff0846
-1794262423 [1.794e9]`. Every `ImplementationSet`, bond, args, absolute-prestate observation, anchor update, retirement, and blacklist event is retained in `UPGRADE-PATH.json`. v9 accepts a factory-registered game only after blacklist/retirement/finality checks (`AnchorStateRegistry.sol:256-262,286-325,331-352`) and records respect at creation (`SuperFaultDisputeGame.sol:338-340`).
+Current respected type is **9**, retirement timestamp `1753379243 [1.753e9]`, anchor `0x1780727e85b9a6a2f265739802b24afdeb1d3f86b6f8b0bdd762c7b0c6ff0846 at L2 timestamp 1794262423 [1.794e9]`. Every `ImplementationSet`, bond, args, absolute-prestate observation, anchor update, retirement, and blacklist event is retained in `UPGRADE-PATH.json`. v9 accepts a factory-registered game only after blacklist/retirement/finality checks (`AnchorStateRegistry.sol:256-262,286-325,331-352`) and records respect at creation (`SuperFaultDisputeGame.sol:338-340`).
 
 ## Game census
 
-Scanned `21389` games in batches of 20 through Multicall3 at L1 block 26433900; types `{0: 17288, 1: 617, 8: 2190, 9: 1294}`, statuses `{0: 85, 1: 145, 2: 21159}`, claim-valid `11312`, blacklisted `0`. Raw current-proposer flags: `12`; after recognizing documented proposer rotations: `1`. Public L2 endpoint used for header verification: `https://mainnet.optimism.io`. Root-check detail is embedded in the JSON.
+Scanned `21389` games in batches of 20 through Multicall3 at L1 block 26433900; types `{0: 17288, 1: 617, 8: 2190, 9: 1294}`, statuses `{0: 85, 1: 145, 2: 21159}`, claim-valid `11312`, blacklisted `0`. Raw current-proposer flags: `12`; after recognizing documented proposer rotations: `1`. Passive L2 endpoint used for header verification: `http://127.0.0.1:7546`. Root-check detail is embedded in the JSON.
 
 ## Pause and storage-history notes
 
@@ -75,4 +74,4 @@ OP alone retains non-zero legacy spacers: XDM slots 51/151, bridge slot 1, porta
 
 ## Coverage limits
 
-L1 logs were scanned from genesis through 26433900; code birth used archive binary search. The census is complete to the factory count observed at the pinned block. L2 header verification was limited to unexpected live games. Balance history is sampled at every executed release plus the migration event and pinned head; intra-release deposits/withdrawals were not reconstructed transaction-by-transaction.
+L1 logs were scanned from genesis through 26433900; code birth used archive binary search. The census is complete to the factory count observed at the pinned block. L2 header verification was limited to unexpected live games, plus one claim-valid OP control. Balance history is sampled at every executed release plus the migration event and pinned head; intra-release deposits/withdrawals were not reconstructed transaction-by-transaction.

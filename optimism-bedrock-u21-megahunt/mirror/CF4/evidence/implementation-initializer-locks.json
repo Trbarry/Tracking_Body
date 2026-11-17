@@ -1654,6 +1654,8 @@
     "unique_implementations": 102,
     "locked_legacy_byte_255": 64,
     "not_locked_by_relevant_legacy_byte": 38,
+    "all_relevant_legacy_initializer_bytes_nonzero": 95,
+    "at_least_one_relevant_legacy_initializer_byte_zero": 7,
     "nonzero_oz_v5_slot": 0,
     "nonzero_balance": 2
   }

@@ -400,6 +400,16 @@ abstract contract InFlightObjects is UpgradeReplay {
     {
         uint32 gt = IGame(template).gameType();
         bytes memory extra = IGame(template).extraData();
+        if (gt == 9 && extra.length >= 32) {
+            // Super-root game (type 9, v8+): extraData is the super-root preimage
+            // (0x01 | uint64 timestamp | (uint256 chainId, bytes32 outputRoot)...) and the factory
+            // requires rootClaim == keccak256(extraData) (else BadExtraData()). Replace the last
+            // output root with `rootClaim` and derive the root claim from the preimage.
+            assembly {
+                mstore(add(add(extra, 32), sub(mload(extra), 32)), rootClaim)
+            }
+            rootClaim = keccak256(extra);
+        }
         uint256 bond = IDGF(dgf).initBonds(gt);
         vm.deal(creator, creator.balance + bond);
         vm.prank(creator, creator);

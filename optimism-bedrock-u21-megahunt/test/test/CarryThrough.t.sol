@@ -373,6 +373,9 @@ contract CarryThroughTest is InFlightObjects {
         bytes32 topicDigest; // emitters + topic0 sequence
         bytes32 fullDigest; // emitters + all topics + data
         int256[] deltas;
+        bytes32[] logHashes; // per log: keccak(emitter, topics, data)
+        bytes32[] logTopic0;
+        address[] logEmitter;
     }
 
     function _watch() internal pure returns (address[] memory w) {
@@ -400,7 +403,13 @@ contract CarryThroughTest is InFlightObjects {
         Vm.Log[] memory logs = vm.getRecordedLogs();
         s.outcome = _outcome(s.ok, ret);
         s.nLogs = logs.length;
+        s.logHashes = new bytes32[](logs.length);
+        s.logTopic0 = new bytes32[](logs.length);
+        s.logEmitter = new address[](logs.length);
         for (uint256 k; k < logs.length; k++) {
+            s.logHashes[k] = keccak256(abi.encode(logs[k].emitter, logs[k].topics, logs[k].data));
+            s.logTopic0[k] = logs[k].topics.length > 0 ? logs[k].topics[0] : bytes32(0);
+            s.logEmitter[k] = logs[k].emitter;
             s.topicDigest = keccak256(abi.encode(s.topicDigest, logs[k].emitter, logs[k].topics.length > 0 ? logs[k].topics[0] : bytes32(0)));
             s.fullDigest = keccak256(abi.encode(s.fullDigest, logs[k].emitter, logs[k].topics, logs[k].data));
         }
@@ -430,8 +439,21 @@ contract CarryThroughTest is InFlightObjects {
         bool sameBal = _sameDeltas(a.deltas, b.deltas);
         identical = sameOutcome && sameFull && sameBal;
         row = string.concat("| ", c.name, " | ", a.outcome, " | ", b.outcome, " | ", sameOutcome ? "same" : "DIFF", " | ");
-        row = string.concat(row, vm.toString(a.nLogs), " / ", vm.toString(b.nLogs), " ", sameEv ? "same" : "DIFF", sameFull ? " (bytes same)" : " (bytes differ)", " | ");
+        row = string.concat(row, vm.toString(a.nLogs), " / ", vm.toString(b.nLogs), " ", sameEv ? "same" : "DIFF", sameFull ? " (bytes same)" : _firstLogDiff(a, b), " | ");
         row = string.concat(row, _deltaStr(a.deltas), " | ", _deltaStr(b.deltas), " | ", sameBal ? "same" : "DIFF", " |\n");
+    }
+
+    /// @dev " (bytes differ at log i: emitter, topic0)"
+    function _firstLogDiff(DiffSide memory a, DiffSide memory b) internal pure returns (string memory) {
+        uint256 n = a.nLogs < b.nLogs ? a.nLogs : b.nLogs;
+        for (uint256 k; k < n; k++) {
+            if (a.logHashes[k] != b.logHashes[k]) {
+                return string.concat(
+                    " (bytes differ from log ", vm.toString(k), ": ", vm.toString(a.logEmitter[k]), " topic0 ", vm.toString(a.logTopic0[k]), ")"
+                );
+            }
+        }
+        return " (bytes differ: extra logs)";
     }
 
     function _diffCalls() internal view returns (DiffCall[] memory c) {

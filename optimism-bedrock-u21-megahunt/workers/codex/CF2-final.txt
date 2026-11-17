@@ -1,0 +1,34 @@
+Completed. `CF2-DAG-INTEGRITY` passes all tag, JSON, receipt, endpoint, and raw proxy-history checks.
+
+Files written:
+
+- [RELEASE-DAG.md](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF2/RELEASE-DAG.md)
+- [RELEASE-DAG.json](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF2/RELEASE-DAG.json)
+- [OP Mainnet history](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF2/impl-history-op-mainnet.json)
+- [Ink history](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF2/impl-history-ink.json)
+- [Soneium history](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF2/impl-history-soneium.json)
+- [Unichain history](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF2/impl-history-unichain.json)
+- [Verification script](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF2/verify-release-dag.sh)
+- [Worker report](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CF2-report.md)
+
+Facts locked:
+
+- Exact DAG: 29 nodes and 30 edges.
+- Canyon/Ecotone/Fjord map to `v1.1.0`/`v1.2.0`/`v1.5.0` L2 code, not separate L1 proxy transitions.
+- Current messenger and bridge retain OVM proxy dialects.
+- ASR comprises three successive proxy objects, not one history.
+- All four targets took U16 before U16a and already used ETHLockbox at U21; no ETH moved.
+- U20 did not activate interop. U21 called ordinary upgrades, not `migrate()`, so valid existing proofs survived.
+- Late `v2.1.0`, `v2.2.0`, and `v3.0.1` are side/tooling branches.
+
+Primitives:
+
+- `PRIM-CF2-01`: path-conditioned ETH custody survives version convergence.
+- `PRIM-CF2-02`: legacy proxy dialect remains current authorization state.
+- `PRIM-CF2-03`: game type, prestate, root format and creation-time objects form a proof tuple.
+
+Candidate: none; score N/A. Three hypotheses were rejected: target direct-U15→U16a divergence, U21 blanket proof invalidation, and Granite ASR storage persisting in the current ASR.
+
+Limits: no distinct U12 core-proxy transaction; sibling histories cover only requested Portal/SystemConfig; Arena-Z U18a hashes were not reconstructed.
+
+Next wave: U16→U16a→U21 custody branches; U18→U19→U20/U21 proof-format transitions; legacy proxy routing through OPCMv2 reinitialization.

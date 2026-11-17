@@ -1,0 +1,14 @@
+| era | block | DGF | games | newest IN_PROGRESS (index, type) | create() like it with another root | new game status |
+|---|---|---|---|---|---|---|
+| V1_4_0_FP | 20069896 | 1.0.0 | 31 | 0xAc132e41358f8C2f5efF0e9dBFAB3E86F73958E4 (30, type 0) | ok | 0 |
+| V1_6_0_ASR | 20731124 | 1.0.0 | 2263 | 0xc40D969d76CB8cEE5FD97C0c7ce54561A6F26080 (2262, type 0) | ok | 0 |
+| V1_8_0 | 21702224 | 1.0.0 | 5503 | 0xeFcb28ec52D6AecEA1BDdF3c9EA1DBFDFa844668 (5502, type 0) | ok | 0 |
+| U13_V2 | 22189731 | 1.0.1 | 7135 | 0xF83094e4c02d302D04221eef991FA4a2F336F067 (7134, type 0) | ok | 0 |
+| U14_V3 | 22347196 | 1.0.1 | 7663 | 0x9469d3d7cd4a81176366274934a9DeA4b45bf08B (7662, type 0) | ok | 0 |
+| U16_V4 | 22997799 | 1.2.0 | 9852 | 0x17382c5847f2E648176E14c7ebB7BF94023DCcdA (9851, type 0) | ok | 0 |
+| U16A_V4_1 | 23498528 | 1.2.0 | 11532 | 0x83Ff09BF11e8983A522a22a0AE4841eC3440F5E7 (11531, type 0) | ok | 0 |
+| U17_V5 | 23884577 | 1.3.0 | 12829 | 0x4F45b48D34C270c9C0C796B958461B78742fAa79 (12828, type 0) | ok | 0 |
+| U18_V6 | 24428712 | 1.4.0 | 14657 | 0xaa08127cD9b166C3a3fA016D8f684FE9Bb65e240 (14656, type 0) | ok | 0 |
+| U19_V7 | 25405011 | 1.6.1 | 17929 | 0x44dE0793FA3156aC4490B4dC64853f17fF914e22 (17928, type 8) | ok | 0 |
+| U20_V8 | 26055819 | 1.6.1 | 20119 | 0x5d7b1600AAA860cf362fdbe7Ddecfa99701D0a91 (20118, type 9) | revert 0x9824bdab | - |
+| U21_V9 | 26433900 | 1.6.1 | 21389 | 0x668513Abb2B32A988f9F4AaDa89ca48A974F8b65 (21388, type 9) | revert 0x9824bdab | - |
