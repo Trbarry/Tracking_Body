@@ -64,20 +64,31 @@ During the target call:
   unlock. The finalized bit independently blocks replay after return.
 - `unlockETH` on any lockbox that still authorizes this portal is rejected by the
   lockbox's `l2Sender` check. This includes a formerly used lockbox.
-- A nested deposit/donation is allowed. A deposit locks its own exact call value
-  and creates the matching new liability; it cannot spend unrelated portal ETH.
-- Proving or deleting another proof does not move ETH. Deleting the active proof
-  cannot reopen the already-set finalized mapping, and valid games cannot be
-  deleted (`OptimismPortal2.sol:707-728`).
+- A nested deposit or donation is allowed. A deposit locks its own exact call value
+  and creates the matching new liability; it cannot spend unrelated portal ETH. A
+  target that returns success after donating received value merely converts its own
+  completed withdrawal into portal surplus.
+- Proving another withdrawal can succeed if the callback supplies a genuine proof,
+  but it moves no ETH. Re-proving the active hash cannot clear the already-set
+  finalized mapping. Deleting another permanently invalid proof also moves no ETH;
+  the active valid proof fails the deletion guard
+  (`OptimismPortal2.sol:390-491,707-728`).
+- A callback may invoke permissionless replay of some previously failed messenger
+  message, but that replay spends the value already escrowed in the messenger; it
+  does not access this withdrawal's transient portal balance. Messenger target and
+  reentrancy guards remain independent.
 - Admin liquidity migration is owner-only (`ProxyAdminOwnedBase.sol:88-105`).
 
 The portal blocks itself and its current lockbox as withdrawal targets
 (`OptimismPortal2.sol:845-849`). The messenger separately blocks itself and the
-portal (`L1CrossDomainMessenger.sol:140-143`). SystemConfig and migration methods
-are role-gated. A former lockbox is not on the portal's dynamic bad-target list and
-retains authorization, but a target call can only re-lock the withdrawal into that
-old box (user self-harm); an attempted unlock sees non-default `l2Sender` and
-reverts. No permissionless drain was found.
+portal (`L1CrossDomainMessenger.sol:140-143`). SystemConfig, ASR, ProxyAdmin, and
+migration entry points either reject value/nonprivileged callers or have no ETH
+exit. The StandardBridge's outbound payable path only deposits the same value back
+through the messenger; its inbound finalizer requires the authenticated remote
+bridge. A former lockbox is not on the portal's dynamic bad-target list and retains
+authorization, but a target call can only re-lock the withdrawal into that old box
+(user self-harm); an attempted unlock sees non-default `l2Sender` and reverts. No
+permissionless drain was found.
 
 ## Pause, CGT, and zero-value states
 
@@ -86,7 +97,9 @@ reverts. No permissionless drain was found.
   duplicated (`ETHLockbox.sol:157-170`, `OptimismPortal2.sol:398-409,583-615`).
 - CGT mode rejects positive-value deposits, positive-value proof/finalization, and
   portal liquidity migration. `donateETH` and forced ETH remain possible but create
-  surplus, not ETH liability. OPCM refuses CGT chains
+  surplus, not ETH liability. Zero-value proof/finalization may still read the
+  lockbox as the pause oracle, but never calls its value-moving methods; a zero-value
+  deposit skips `lockETH`. OPCM refuses CGT chains
   (`OPContractsManagerMigrator.sol:483-486`). Live OP Mainnet has CGT=false.
 - Zero-value deposit creates no ETH mint; zero-value withdrawal skips both unlock
   and relock; zero-value lock/migration can emit events but cannot change custody.

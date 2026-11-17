@@ -1,0 +1,5 @@
+Compiling 1 files with Solc 0.8.25
+Solc 0.8.25 finished in 686.76ms
+Error: Compiler run failed:
+Error: Compiler error (/solidity/libsolidity/codegen/LValue.cpp:51):Stack too deep. Try compiling with `--via-ir` (cli) or the equivalent `viaIR: true` (standard JSON) while enabling the optimizer. Otherwise, try removing local variables.
+64 |  ... thdrawalTransactionExternalProof, (w, submitter)));
