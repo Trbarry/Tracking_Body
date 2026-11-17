@@ -1,0 +1,47 @@
+{
+  "lane": 33,
+  "read_only_rpc": "http://127.0.0.1:8547",
+  "block": 26430859,
+  "eip1967_implementation_slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+  "op_mainnet": {
+    "OptimismPortal2": {"proxy":"0xbEb5Fc579115071764c7423A4f12eDde41f106Ed","implementation":"0xb20b23af6071405c37ddda0c0640e8ebb7899645","version":"6.1.0","resolution":"EIP-1967"},
+    "SystemConfig": {"proxy":"0x229047fed2591dbec1eF1118d64F7aF3dB9EB290","implementation":"0xade27248542c0f3e89b49e4eb76155e267f14377","version":"4.3.0","resolution":"EIP-1967"},
+    "ETHLockbox": {"proxy":"0x322b47Ff1FA8D5611F761e3E275C45B71b294D43","implementation":"0xdf75e6b07e98873e36ba5c05508f80c1454e0afe","version":"2.0.0","resolution":"EIP-1967"},
+    "AnchorStateRegistry": {"proxy":"0x23B2C62946350F4246f9f9D027e071f0264FD113","implementation":"0x2b27299c577d4720100e2735b652444dcea652d0","version":"4.0.0","resolution":"EIP-1967"},
+    "DisputeGameFactory": {"proxy":"0xe5965Ab5962eDc7477C8520243A95517CD252fA9","implementation":"0x72b971717e088b59f26d4236be222adb6acd393b","version":"1.6.1","resolution":"EIP-1967"},
+    "SuperchainConfig": {"proxy":"0x95703e0982140D16f8ebA6d158FccEde42f04a4C","implementation":"0xa303a644cfbc0c34f6a9dbeafdeba4c967ea01e7","version":"2.5.0","resolution":"EIP-1967"},
+    "L1CrossDomainMessenger": {"proxy":"0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1","implementation":"0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448","version":"2.13.0","resolution":"ProxyAdmin RESOLVED / AddressManager name OVM_L1CrossDomainMessenger"},
+    "L1StandardBridge": {"proxy":"0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1","implementation":"0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891","version":"2.8.2","resolution":"ProxyAdmin CHUGSPLASH"},
+    "L1ERC721Bridge": {"proxy":"0x5a7749f83b81B301cAb5f48EB8516B986DAef23D","implementation":"0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e","version":"2.9.1","resolution":"EIP-1967"},
+    "OptimismMintableERC20Factory": {"proxy":"0x75505a97BD334E7BD3C476893285569C4136Fa0F","implementation":"0xaabea75da509fa518fd8a91eae4be5813b829b12","version":"1.11.0","resolution":"EIP-1967"},
+    "DelayedWETH": {"proxy":"0x1b6dBF05eAF22D4E70dC993e8A19dD9F3dCb3162","implementation":"0xf024e96317907c3b8d8cb346b9fd9034c8640e15","version":"2.0.0","resolution":"EIP-1967"}
+  },
+  "shared_v9_direct_contracts": {
+    "OPContractsManagerV2": {"address":"0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f","version":"9.0.3"},
+    "OPContractsManagerStandardValidator": {"address":"0x9E1D01E25f411c5da20C33d1EaDe0F83256d41B2","version":"4.1.1"},
+    "OPContractsManagerMigrator": {"address":"0x5B42AB3d7CB6c6dA53b3d5C148Ff34CD998afAC0","version":"not queried"}
+  },
+  "sibling_chains": {
+    "Ink": {
+      "chain_id":57073,
+      "SystemConfig":{"proxy":"0x62c0a111929fa32cec2f76adba54c16afb6e8364","implementation":"0xade27248542c0f3e89b49e4eb76155e267f14377","version":"4.3.0"},
+      "OptimismPortal2":{"proxy":"0x5d66C1782664115999C47c9fA5cd031f495D3e4F","implementation":"0xb20b23af6071405c37ddda0c0640e8ebb7899645","version":"6.1.0"},
+      "ETHLockbox":{"proxy":"0xbd4AbB321138e8Eddc399cE64E66451294325a14","implementation":"0xdf75e6b07e98873e36ba5c05508f80c1454e0afe","version":"2.0.0"},
+      "AnchorStateRegistry":{"proxy":"0xEe018bAf058227872540AC60eFbd38b023d9dAe2","implementation":"0x2b27299c577d4720100e2735b652444dcea652d0","version":"4.0.0"}
+    },
+    "Soneium": {
+      "chain_id":1868,
+      "SystemConfig":{"proxy":"0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3","implementation":"0xade27248542c0f3e89b49e4eb76155e267f14377","version":"4.3.0"},
+      "OptimismPortal2":{"proxy":"0x88e529A6ccd302c948689Cd5156C83D4614FAE92","implementation":"0xb20b23af6071405c37ddda0c0640e8ebb7899645","version":"6.1.0"},
+      "ETHLockbox":{"proxy":"0x67B4de6FfA66EF201Ea6099A89cA397D56622E31","implementation":"0xdf75e6b07e98873e36ba5c05508f80c1454e0afe","version":"2.0.0"},
+      "AnchorStateRegistry":{"proxy":"0x4890928941e62e273dA359374b105F803329F473","implementation":"0x2b27299c577d4720100e2735b652444dcea652d0","version":"4.0.0"}
+    },
+    "Unichain": {
+      "chain_id":130,
+      "SystemConfig":{"proxy":"0xc407398d063f942febbcc6f80a156b47f3f1bda6","implementation":"0xade27248542c0f3e89b49e4eb76155e267f14377","version":"4.3.0"},
+      "OptimismPortal2":{"proxy":"0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2","implementation":"0xb20b23af6071405c37ddda0c0640e8ebb7899645","version":"6.1.0"},
+      "ETHLockbox":{"proxy":"0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5","implementation":"0xdf75e6b07e98873e36ba5c05508f80c1454e0afe","version":"2.0.0"},
+      "AnchorStateRegistry":{"proxy":"0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9","implementation":"0x2b27299c577d4720100e2735b652444dcea652d0","version":"4.0.0"}
+    }
+  }
+}

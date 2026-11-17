@@ -1,0 +1,44 @@
+== post-U21 implementations vs local v9 forge-artifacts (code read at block 26430859)
+OptimismPortal2                  0xb20b23af6071405c37ddda0c0640e8ebb7899645 MATCH (immutable refs masked: 4)  version="6.1.0"
+SystemConfig                     0xade27248542c0f3e89b49e4eb76155e267f14377 MATCH (immutable refs masked: 2)  version="4.3.0"
+ETHLockbox                       0xdf75e6b07e98873e36ba5c05508f80c1454e0afe MATCH (immutable refs masked: 2)  version="2.0.0"
+AnchorStateRegistry              0x2b27299c577d4720100e2735b652444dcea652d0 MATCH (immutable refs masked: 4)  version="4.0.0"
+DisputeGameFactory               0x72b971717e088b59f26d4236be222adb6acd393b MATCH (immutable refs masked: 2)  version="1.6.1"
+DelayedWETH                      0xf024e96317907c3b8d8cb346b9fd9034c8640e15 MATCH (immutable refs masked: 4)  version="2.0.0"
+SuperchainConfig                 0xa303a644cfbc0c34f6a9dbeafdeba4c967ea01e7 MATCH (immutable refs masked: 2)  version="2.5.0"
+L1CrossDomainMessenger           0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448 MATCH (immutable refs masked: 2)  version="2.13.0"
+L1StandardBridge                 0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891 MATCH (immutable refs masked: 2)  version="2.8.2"
+L1ERC721Bridge                   0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e MATCH (immutable refs masked: 2)  version="2.9.1"
+OptimismMintableERC20Factory     0xaabea75da509fa518fd8a91eae4be5813b829b12 MATCH (immutable refs masked: 0)  version="1.11.0"
+StorageSetter                    0x2476c911e6d4d9411e677d8faf15a64ac1fdeee8 MATCH (immutable refs masked: 0)  version="1.2.2"
+OPContractsManagerV2             0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f MATCH (immutable refs masked: 13)  version="9.0.3"
+== pre-U21 implementations vs local v9 artifacts (sanity: must differ)
+OptimismPortal2                  0x1005217ad392dc64cef501fa1777a27d42166748 LENGTH MISMATCH onchain=22494 artifact=23173  version="5.8.0"
+SystemConfig                     0x670b850a235a6fa98cd7a195eb139d0277e471fa LENGTH MISMATCH onchain=12680 artifact=12482  version="4.0.0"
+ETHLockbox                       0xb3a24db07038b51962026329b62e7a965d56a6ad LENGTH MISMATCH onchain=4919 artifact=5006  version="1.3.1"
+AnchorStateRegistry              0x8f40cc98d694ab986f026c5383a181fcc9b6b281 LENGTH MISMATCH onchain=7312 artifact=7311  version="3.9.0"
+DelayedWETH                      0xe440cc08a71694c8229323803f59024e3144630e LENGTH MISMATCH onchain=5921 artifact=5922  version="1.5.1"
+SuperchainConfig                 0x5570b1f2b97b1e35b5c6f9ee76f6cf02c9917504 LENGTH MISMATCH onchain=3132 artifact=3195  version="2.4.3"
+L1CrossDomainMessenger           0x59D497530b00062f40950ba8EaB88868bf7F86f0 LENGTH MISMATCH onchain=9614 artifact=9454  version="2.11.1"
+== game implementations registered at block N vs v9 artifacts; gameArgs pre/post
+op type 5: impl pre=0x5C3eb47cB0174aea522a2a9Ae79487139A53D691 post=0x5C3eb47cB0174aea522a2a9Ae79487139A53D691 [SuperPermissionedDisputeGame: MATCH (immutable refs masked: 0)] bond pre=0 post=0
+     args pre =0x23b2c62946350f4246f9f9d027e071f0264fd113473300df21d047806a082244b417f96b32f13a33
+     args post=0x23b2c62946350f4246f9f9d027e071f0264fd113c27ba3e0fc01567a5e57ae0c391aa98cecba5be0
+op type 9: impl pre=0x19AF533Cc2A2A55786DCB8672aA5717e64213208 post=0x19AF533Cc2A2A55786DCB8672aA5717e64213208 [SuperFaultDisputeGame: MATCH (immutable refs masked: 31)] bond pre=80000000000000000 [8e16] post=80000000000000000 [8e16]
+     args pre =0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1dfacc005dcd857b401e4732e6f7837135a22825cfa23b2c62946350f4246f9f9d027e071f0264fd1131b6dbf05eaf22d4e70dc993e8a19dd9f3dcb31620000000000000000000000000000000000000000000000000000000000000000
+     args post=0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfa23b2c62946350f4246f9f9d027e071f0264fd1131b6dbf05eaf22d4e70dc993e8a19dd9f3dcb31620000000000000000000000000000000000000000000000000000000000000000
+ink type 5: impl pre=0x5C3eb47cB0174aea522a2a9Ae79487139A53D691 post=0x5C3eb47cB0174aea522a2a9Ae79487139A53D691 [SuperPermissionedDisputeGame: MATCH (immutable refs masked: 0)] bond pre=0 post=0
+     args pre =0xee018baf058227872540ac60efbd38b023d9dae23832bfbef03173e4c49a00ec0dd178817a02d177
+     args post=0xee018baf058227872540ac60efbd38b023d9dae23832bfbef03173e4c49a00ec0dd178817a02d177
+ink type 9: impl pre=0x19AF533Cc2A2A55786DCB8672aA5717e64213208 post=0x19AF533Cc2A2A55786DCB8672aA5717e64213208 [SuperFaultDisputeGame: MATCH (immutable refs masked: 31)] bond pre=80000000000000000 [8e16] post=80000000000000000 [8e16]
+     args pre =0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1dfacc005dcd857b401e4732e6f7837135a22825cfaee018baf058227872540ac60efbd38b023d9dae257b4c29daee99a28e6e86778b499361294c134ea0000000000000000000000000000000000000000000000000000000000000000
+     args post=0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfaee018baf058227872540ac60efbd38b023d9dae257b4c29daee99a28e6e86778b499361294c134ea0000000000000000000000000000000000000000000000000000000000000000
+soneium type 5: impl pre=0x5C3eb47cB0174aea522a2a9Ae79487139A53D691 post=0x5C3eb47cB0174aea522a2a9Ae79487139A53D691 [SuperPermissionedDisputeGame: MATCH (immutable refs masked: 0)] bond pre=0 post=0
+     args pre =0x4890928941e62e273da359374b105f803329f473400c164c4a8ca84385b70eed6eb03ea847c8e1b8
+     args post=0x4890928941e62e273da359374b105f803329f473400c164c4a8ca84385b70eed6eb03ea847c8e1b8
+unichain type 5: impl pre=0x5C3eb47cB0174aea522a2a9Ae79487139A53D691 post=0x5C3eb47cB0174aea522a2a9Ae79487139A53D691 [SuperPermissionedDisputeGame: MATCH (immutable refs masked: 0)] bond pre=0 post=0
+     args pre =0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff986b392ca30ad7453c8d88b56eb5a04fd0e2175b7
+     args post=0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff986b392ca30ad7453c8d88b56eb5a04fd0e2175b7
+unichain type 9: impl pre=0x19AF533Cc2A2A55786DCB8672aA5717e64213208 post=0x19AF533Cc2A2A55786DCB8672aA5717e64213208 [SuperFaultDisputeGame: MATCH (immutable refs masked: 31)] bond pre=80000000000000000 [8e16] post=80000000000000000 [8e16]
+     args pre =0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1dfacc005dcd857b401e4732e6f7837135a22825cfa27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff974ad145ac900f1dd5551f0c9e143314dc4022fcf0000000000000000000000000000000000000000000000000000000000000000
+     args post=0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfa27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff974ad145ac900f1dd5551f0c9e143314dc4022fcf0000000000000000000000000000000000000000000000000000000000000000

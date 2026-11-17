@@ -1,0 +1,72 @@
+{
+  "lane": 33,
+  "snapshot_date": "2026-11-17",
+  "timezone": "UTC",
+  "sources": [
+    {
+      "url": "https://immunefi.com/bug-bounty/optimism/",
+      "status": "LIVE_OK_REDIRECT",
+      "http_status": 200,
+      "redirects": 1,
+      "final_url": "https://immunefi.com/bug-bounty/optimism/information/"
+    },
+    {
+      "url": "https://immunefi.com/bug-bounty/optimism/information/",
+      "status": "LIVE_OK_SERVER_RENDERED_WITH_EMBEDDED_RSC_JSON",
+      "http_status": 200,
+      "bytes": 245113,
+      "sha256": "736fd2202213941f775e4a446bf989512bb636bc38ddd401434a1a2257140d2c"
+    },
+    {
+      "url": "https://immunefi.com/bug-bounty/optimism/scope/",
+      "status": "LIVE_OK_SERVER_RENDERED_WITH_EMBEDDED_RSC_JSON",
+      "http_status": 200,
+      "bytes": 297096,
+      "sha256": "141c5ac2c761e99e32e89dc71d1d21f4486af2243c748aea2fdab3881db7d3ba"
+    },
+    {
+      "url": "https://gov.optimism.io/search.json?q=Upgrade%2021",
+      "status": "LIVE_OK_JSON",
+      "http_status": 200,
+      "bytes": 72352,
+      "sha256": "a4045feabd93882ba548b766b73d77685c9f785ab0f55618de81fbfc629c18fb"
+    },
+    {
+      "url": "https://gov.optimism.io/t/upgrade-21-interop-readiness/10948.json",
+      "status": "LIVE_OK_JSON",
+      "http_status": 200,
+      "bytes": 60496,
+      "sha256": "703080e44c7095357a94c52dbe1ac925d1059a88441191e856fd04075a30d577"
+    },
+    {
+      "url": "https://vote.optimism.io/proposals/18704058920168992233750266034048958164367667396985967653465644941701644737084",
+      "status": "PARTIAL_WEB_RENDERER_OK_DIRECT_CURL_FORBIDDEN",
+      "direct_http_status": 403,
+      "direct_response_bytes": 70,
+      "direct_response_sha256": "32a0f648ea36e8610c4aa4b5dc87584ecad9437450d902436c2281e48c923cca",
+      "observed_via_web_renderer": "title, proposer, description, SUCCEEDED status, end time, against percentage",
+      "observed_via_search_index": "vote start and end display times"
+    },
+    {
+      "url": "https://github.com/ethereum-optimism/superchain-ops/tree/903cefaa0f07738a81f6473a9adc5c3d7161e5a8/src/tasks/eth/084-U21-op-ink-soneium-uni",
+      "status": "LIVE_OK_GIT_HTTPS_SHALLOW_CLONE",
+      "commit": "903cefaa0f07738a81f6473a9adc5c3d7161e5a8"
+    },
+    {
+      "path": "/home/user/ethereum-optimism/optimism/docs/public-docs/notices/upgrade-21.mdx",
+      "status": "LOCAL_OK_PINNED",
+      "commit": "e5423ae69b154100a77361d74eb6d7170b2c34aa"
+    },
+    {
+      "path": "/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/snapshots/semver-lock.json",
+      "status": "LOCAL_OK_PINNED",
+      "commit": "ba6fcadbc57eb99918c5b0f14f57c72527f531e3"
+    },
+    {
+      "url": "http://127.0.0.1:8547",
+      "status": "LOCAL_ARCHIVE_FORK_READS_OK_NO_MUTATIONS",
+      "chain": "Ethereum mainnet",
+      "block": 26430859
+    }
+  ]
+}
