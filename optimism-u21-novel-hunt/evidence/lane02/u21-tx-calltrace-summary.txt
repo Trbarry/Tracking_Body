@@ -1,0 +1,571 @@
+CALL PAO Safe.execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes) value=0
+  DELEGATECALL 0xd9db270c1b5e3bd161e8c8503c55ceabee709552.execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes) value=0
+    DELEGATECALL Multicall3Delegatecall.aggregate3((address,bool,bytes)[]) value=0
+      DELEGATECALL OPCMV2.0x86fe1c66 value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=SuperchainConfig impl=StorageSetter value=0
+            CALL SuperchainConfig.upgradeTo(address) value=0
+          CALL SuperchainConfig.setBytes32(bytes32,bytes32) slot= val=0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20000 value=0
+          CALL OP.ProxyAdmin.upgradeAndCall(address,address,bytes) proxy=SuperchainConfig impl=0xa303a644cfbc0c34f6a9dbeafdeba4c967ea01e7 value=0
+            CALL SuperchainConfig.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xa303a644cfbc0c34f6a9dbeafdeba4c967ea01e7.initialize(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=SuperchainConfig impl=StorageSetter value=0
+            CALL SuperchainConfig.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=SuperchainConfig impl=0xa303a644cfbc0c34f6a9dbeafdeba4c967ea01e7 value=0
+            CALL SuperchainConfig.upgradeTo(address) value=0
+      DELEGATECALL OPCMV2.0x8a847e2e value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.SystemConfig impl=StorageSetter value=0
+            CALL OP.SystemConfig.upgradeTo(address) value=0
+          CALL OP.SystemConfig.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL OP.ProxyAdmin.upgradeAndCall(address,address,bytes) proxy=OP.SystemConfig impl=0xade27248542c0f3e89b49e4eb76155e267f14377 value=0
+            CALL OP.SystemConfig.upgradeToAndCall(address,bytes) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.SystemConfig impl=StorageSetter value=0
+            CALL OP.SystemConfig.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.SystemConfig impl=0xade27248542c0f3e89b49e4eb76155e267f14377 value=0
+            CALL OP.SystemConfig.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.Portal impl=StorageSetter value=0
+            CALL OP.Portal.upgradeTo(address) value=0
+          CALL OP.Portal.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL OP.ProxyAdmin.upgradeAndCall(address,address,bytes) proxy=OP.Portal impl=0xb20b23af6071405c37ddda0c0640e8ebb7899645 value=0
+            CALL OP.Portal.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xb20b23af6071405c37ddda0c0640e8ebb7899645.initialize(address,address,address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.Portal impl=StorageSetter value=0
+            CALL OP.Portal.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.Portal impl=0xb20b23af6071405c37ddda0c0640e8ebb7899645 value=0
+            CALL OP.Portal.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.Lockbox impl=StorageSetter value=0
+            CALL OP.Lockbox.upgradeTo(address) value=0
+          CALL OP.Lockbox.setBytes32(bytes32,bytes32) slot= val=00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900000 value=0
+          CALL OP.ProxyAdmin.upgradeAndCall(address,address,bytes) proxy=OP.Lockbox impl=0xdf75e6b07e98873e36ba5c05508f80c1454e0afe value=0
+            CALL OP.Lockbox.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xdf75e6b07e98873e36ba5c05508f80c1454e0afe.initialize(address,address[]) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.Lockbox impl=StorageSetter value=0
+            CALL OP.Lockbox.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.Lockbox impl=0xdf75e6b07e98873e36ba5c05508f80c1454e0afe value=0
+            CALL OP.Lockbox.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.L1CDM impl=StorageSetter value=0
+            CALL OP.AddressManager.setAddress(string,address) value=0
+          CALL OP.L1CDM.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL OP.ProxyAdmin.upgradeAndCall(address,address,bytes) proxy=OP.L1CDM impl=0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448 value=0
+            CALL OP.AddressManager.setAddress(string,address) value=0
+            CALL OP.L1CDM.initialize(address,address) value=0
+              DELEGATECALL 0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448.initialize(address,address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.L1CDM impl=StorageSetter value=0
+            CALL OP.AddressManager.setAddress(string,address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.L1CDM impl=0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448 value=0
+            CALL OP.AddressManager.setAddress(string,address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.L1SB impl=StorageSetter value=0
+            CALL OP.L1SB.setStorage(bytes32,bytes32) value=0
+          CALL OP.L1SB.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL OP.ProxyAdmin.upgradeAndCall(address,address,bytes) proxy=OP.L1SB impl=0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891 value=0
+            CALL OP.L1SB.setStorage(bytes32,bytes32) value=0
+            CALL OP.L1SB.initialize(address,address) value=0
+              DELEGATECALL 0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891.initialize(address,address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.L1SB impl=StorageSetter value=0
+            CALL OP.L1SB.setStorage(bytes32,bytes32) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.L1SB impl=0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891 value=0
+            CALL OP.L1SB.setStorage(bytes32,bytes32) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.L1ERC721 impl=StorageSetter value=0
+            CALL OP.L1ERC721.upgradeTo(address) value=0
+          CALL OP.L1ERC721.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL OP.ProxyAdmin.upgradeAndCall(address,address,bytes) proxy=OP.L1ERC721 impl=0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e value=0
+            CALL OP.L1ERC721.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e.initialize(address,address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.L1ERC721 impl=StorageSetter value=0
+            CALL OP.L1ERC721.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.L1ERC721 impl=0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e value=0
+            CALL OP.L1ERC721.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.OMERC20F impl=StorageSetter value=0
+            CALL OP.OMERC20F.upgradeTo(address) value=0
+          CALL OP.OMERC20F.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL OP.ProxyAdmin.upgradeAndCall(address,address,bytes) proxy=OP.OMERC20F impl=0xaabea75da509fa518fd8a91eae4be5813b829b12 value=0
+            CALL OP.OMERC20F.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xaabea75da509fa518fd8a91eae4be5813b829b12.initialize(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.OMERC20F impl=StorageSetter value=0
+            CALL OP.OMERC20F.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.OMERC20F impl=0xaabea75da509fa518fd8a91eae4be5813b829b12 value=0
+            CALL OP.OMERC20F.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.DGF impl=StorageSetter value=0
+            CALL OP.DGF.upgradeTo(address) value=0
+          CALL OP.DGF.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL OP.ProxyAdmin.upgradeAndCall(address,address,bytes) proxy=OP.DGF impl=0x72b971717e088b59f26d4236be222adb6acd393b value=0
+            CALL OP.DGF.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.initialize(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.DGF impl=StorageSetter value=0
+            CALL OP.DGF.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.DGF impl=0x72b971717e088b59f26d4236be222adb6acd393b value=0
+            CALL OP.DGF.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.DelayedWETH impl=StorageSetter value=0
+            CALL OP.DelayedWETH.upgradeTo(address) value=0
+          CALL OP.DelayedWETH.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL OP.ProxyAdmin.upgradeAndCall(address,address,bytes) proxy=OP.DelayedWETH impl=0xf024e96317907c3b8d8cb346b9fd9034c8640e15 value=0
+            CALL OP.DelayedWETH.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xf024e96317907c3b8d8cb346b9fd9034c8640e15.initialize(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.DelayedWETH impl=StorageSetter value=0
+            CALL OP.DelayedWETH.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.DelayedWETH impl=0xf024e96317907c3b8d8cb346b9fd9034c8640e15 value=0
+            CALL OP.DelayedWETH.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.ASR impl=StorageSetter value=0
+            CALL OP.ASR.upgradeTo(address) value=0
+          CALL OP.ASR.setBytes32(bytes32,bytes32) slot= val=00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900000 value=0
+          CALL OP.ProxyAdmin.upgradeAndCall(address,address,bytes) proxy=OP.ASR impl=0x2b27299c577d4720100e2735b652444dcea652d0 value=0
+            CALL OP.ASR.upgradeToAndCall(address,bytes) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.ASR impl=StorageSetter value=0
+            CALL OP.ASR.upgradeTo(address) value=0
+          CALL OP.ProxyAdmin.upgrade(address,address) proxy=OP.ASR impl=0x2b27299c577d4720100e2735b652444dcea652d0 value=0
+            CALL OP.ASR.upgradeTo(address) value=0
+        CALL OP.DGF.setImplementation(uint32,address,bytes) gameType=0 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=0 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL OP.DGF.setInitBond(uint32,uint256) gameType=0 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=0 bond=0 value=0
+        CALL OP.DGF.setImplementation(uint32,address,bytes) gameType=1 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=1 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL OP.DGF.setInitBond(uint32,uint256) gameType=1 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=1 bond=0 value=0
+        CALL OP.DGF.setImplementation(uint32,address,bytes) gameType=8 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=8 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL OP.DGF.setInitBond(uint32,uint256) gameType=8 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=8 bond=0 value=0
+        CALL OP.DGF.setImplementation(uint32,address,bytes) gameType=5 impl=0x5c3eb47cb0174aea522a2a9ae79487139a53d691 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=5 impl=0x5c3eb47cb0174aea522a2a9ae79487139a53d691 value=0
+        CALL OP.DGF.setInitBond(uint32,uint256) gameType=5 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=5 bond=0 value=0
+        CALL OP.DGF.setImplementation(uint32,address,bytes) gameType=9 impl=0x19af533cc2a2a55786dcb8672aa5717e64213208 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=9 impl=0x19af533cc2a2a55786dcb8672aa5717e64213208 value=0
+        CALL OP.DGF.setInitBond(uint32,uint256) gameType=9 bond=80000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=9 bond=80000000000000000 value=0
+        CALL OP.DGF.setImplementation(uint32,address,bytes) gameType=10 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=10 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL OP.DGF.setInitBond(uint32,uint256) gameType=10 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=10 bond=0 value=0
+        CALL OP.DGF.setImplementation(uint32,address,bytes) gameType=4 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=4 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL OP.DGF.setInitBond(uint32,uint256) gameType=4 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=4 bond=0 value=0
+      DELEGATECALL OPCMV2.0x8a847e2e value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x62c0a111929fa32cec2f76adba54c16afb6e8364 impl=StorageSetter value=0
+            CALL 0x62c0a111929fa32cec2f76adba54c16afb6e8364.upgradeTo(address) value=0
+          CALL 0x62c0a111929fa32cec2f76adba54c16afb6e8364.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgradeAndCall(address,address,bytes) proxy=0x62c0a111929fa32cec2f76adba54c16afb6e8364 impl=0xade27248542c0f3e89b49e4eb76155e267f14377 value=0
+            CALL 0x62c0a111929fa32cec2f76adba54c16afb6e8364.upgradeToAndCall(address,bytes) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x62c0a111929fa32cec2f76adba54c16afb6e8364 impl=StorageSetter value=0
+            CALL 0x62c0a111929fa32cec2f76adba54c16afb6e8364.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x62c0a111929fa32cec2f76adba54c16afb6e8364 impl=0xade27248542c0f3e89b49e4eb76155e267f14377 value=0
+            CALL 0x62c0a111929fa32cec2f76adba54c16afb6e8364.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x5d66c1782664115999c47c9fa5cd031f495d3e4f impl=StorageSetter value=0
+            CALL 0x5d66c1782664115999c47c9fa5cd031f495d3e4f.upgradeTo(address) value=0
+          CALL 0x5d66c1782664115999c47c9fa5cd031f495d3e4f.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgradeAndCall(address,address,bytes) proxy=0x5d66c1782664115999c47c9fa5cd031f495d3e4f impl=0xb20b23af6071405c37ddda0c0640e8ebb7899645 value=0
+            CALL 0x5d66c1782664115999c47c9fa5cd031f495d3e4f.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xb20b23af6071405c37ddda0c0640e8ebb7899645.initialize(address,address,address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x5d66c1782664115999c47c9fa5cd031f495d3e4f impl=StorageSetter value=0
+            CALL 0x5d66c1782664115999c47c9fa5cd031f495d3e4f.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x5d66c1782664115999c47c9fa5cd031f495d3e4f impl=0xb20b23af6071405c37ddda0c0640e8ebb7899645 value=0
+            CALL 0x5d66c1782664115999c47c9fa5cd031f495d3e4f.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0xbd4abb321138e8eddc399ce64e66451294325a14 impl=StorageSetter value=0
+            CALL 0xbd4abb321138e8eddc399ce64e66451294325a14.upgradeTo(address) value=0
+          CALL 0xbd4abb321138e8eddc399ce64e66451294325a14.setBytes32(bytes32,bytes32) slot= val=0000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640000 value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgradeAndCall(address,address,bytes) proxy=0xbd4abb321138e8eddc399ce64e66451294325a14 impl=0xdf75e6b07e98873e36ba5c05508f80c1454e0afe value=0
+            CALL 0xbd4abb321138e8eddc399ce64e66451294325a14.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xdf75e6b07e98873e36ba5c05508f80c1454e0afe.initialize(address,address[]) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0xbd4abb321138e8eddc399ce64e66451294325a14 impl=StorageSetter value=0
+            CALL 0xbd4abb321138e8eddc399ce64e66451294325a14.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0xbd4abb321138e8eddc399ce64e66451294325a14 impl=0xdf75e6b07e98873e36ba5c05508f80c1454e0afe value=0
+            CALL 0xbd4abb321138e8eddc399ce64e66451294325a14.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x69d3cf86b2bf1a9e99875b7e2d9b6a84426c171f impl=StorageSetter value=0
+            CALL 0x9b7c9bbd6d540a8a4dedd935819fc4408ba71153.setAddress(string,address) value=0
+          CALL 0x69d3cf86b2bf1a9e99875b7e2d9b6a84426c171f.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgradeAndCall(address,address,bytes) proxy=0x69d3cf86b2bf1a9e99875b7e2d9b6a84426c171f impl=0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448 value=0
+            CALL 0x9b7c9bbd6d540a8a4dedd935819fc4408ba71153.setAddress(string,address) value=0
+            CALL 0x69d3cf86b2bf1a9e99875b7e2d9b6a84426c171f.initialize(address,address) value=0
+              DELEGATECALL 0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448.initialize(address,address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x69d3cf86b2bf1a9e99875b7e2d9b6a84426c171f impl=StorageSetter value=0
+            CALL 0x9b7c9bbd6d540a8a4dedd935819fc4408ba71153.setAddress(string,address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x69d3cf86b2bf1a9e99875b7e2d9b6a84426c171f impl=0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448 value=0
+            CALL 0x9b7c9bbd6d540a8a4dedd935819fc4408ba71153.setAddress(string,address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x88ff1e5b602916615391f55854588efcbb7663f0 impl=StorageSetter value=0
+            CALL 0x88ff1e5b602916615391f55854588efcbb7663f0.setStorage(bytes32,bytes32) value=0
+          CALL 0x88ff1e5b602916615391f55854588efcbb7663f0.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgradeAndCall(address,address,bytes) proxy=0x88ff1e5b602916615391f55854588efcbb7663f0 impl=0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891 value=0
+            CALL 0x88ff1e5b602916615391f55854588efcbb7663f0.setStorage(bytes32,bytes32) value=0
+            CALL 0x88ff1e5b602916615391f55854588efcbb7663f0.initialize(address,address) value=0
+              DELEGATECALL 0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891.initialize(address,address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x88ff1e5b602916615391f55854588efcbb7663f0 impl=StorageSetter value=0
+            CALL 0x88ff1e5b602916615391f55854588efcbb7663f0.setStorage(bytes32,bytes32) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x88ff1e5b602916615391f55854588efcbb7663f0 impl=0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891 value=0
+            CALL 0x88ff1e5b602916615391f55854588efcbb7663f0.setStorage(bytes32,bytes32) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x661235a238b11191211fa95d4dd9e423d521e0be impl=StorageSetter value=0
+            CALL 0x661235a238b11191211fa95d4dd9e423d521e0be.upgradeTo(address) value=0
+          CALL 0x661235a238b11191211fa95d4dd9e423d521e0be.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgradeAndCall(address,address,bytes) proxy=0x661235a238b11191211fa95d4dd9e423d521e0be impl=0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e value=0
+            CALL 0x661235a238b11191211fa95d4dd9e423d521e0be.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e.initialize(address,address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x661235a238b11191211fa95d4dd9e423d521e0be impl=StorageSetter value=0
+            CALL 0x661235a238b11191211fa95d4dd9e423d521e0be.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x661235a238b11191211fa95d4dd9e423d521e0be impl=0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e value=0
+            CALL 0x661235a238b11191211fa95d4dd9e423d521e0be.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0xa8b389a82e088b164cd03230e900980cced34d29 impl=StorageSetter value=0
+            CALL 0xa8b389a82e088b164cd03230e900980cced34d29.upgradeTo(address) value=0
+          CALL 0xa8b389a82e088b164cd03230e900980cced34d29.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgradeAndCall(address,address,bytes) proxy=0xa8b389a82e088b164cd03230e900980cced34d29 impl=0xaabea75da509fa518fd8a91eae4be5813b829b12 value=0
+            CALL 0xa8b389a82e088b164cd03230e900980cced34d29.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xaabea75da509fa518fd8a91eae4be5813b829b12.initialize(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0xa8b389a82e088b164cd03230e900980cced34d29 impl=StorageSetter value=0
+            CALL 0xa8b389a82e088b164cd03230e900980cced34d29.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0xa8b389a82e088b164cd03230e900980cced34d29 impl=0xaabea75da509fa518fd8a91eae4be5813b829b12 value=0
+            CALL 0xa8b389a82e088b164cd03230e900980cced34d29.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x10d7b35078d3baabb96dd45a9143b94be65b12cd impl=StorageSetter value=0
+            CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.upgradeTo(address) value=0
+          CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgradeAndCall(address,address,bytes) proxy=0x10d7b35078d3baabb96dd45a9143b94be65b12cd impl=0x72b971717e088b59f26d4236be222adb6acd393b value=0
+            CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.initialize(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x10d7b35078d3baabb96dd45a9143b94be65b12cd impl=StorageSetter value=0
+            CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x10d7b35078d3baabb96dd45a9143b94be65b12cd impl=0x72b971717e088b59f26d4236be222adb6acd393b value=0
+            CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x57b4c29daee99a28e6e86778b499361294c134ea impl=StorageSetter value=0
+            CALL 0x57b4c29daee99a28e6e86778b499361294c134ea.upgradeTo(address) value=0
+          CALL 0x57b4c29daee99a28e6e86778b499361294c134ea.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgradeAndCall(address,address,bytes) proxy=0x57b4c29daee99a28e6e86778b499361294c134ea impl=0xf024e96317907c3b8d8cb346b9fd9034c8640e15 value=0
+            CALL 0x57b4c29daee99a28e6e86778b499361294c134ea.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xf024e96317907c3b8d8cb346b9fd9034c8640e15.initialize(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x57b4c29daee99a28e6e86778b499361294c134ea impl=StorageSetter value=0
+            CALL 0x57b4c29daee99a28e6e86778b499361294c134ea.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0x57b4c29daee99a28e6e86778b499361294c134ea impl=0xf024e96317907c3b8d8cb346b9fd9034c8640e15 value=0
+            CALL 0x57b4c29daee99a28e6e86778b499361294c134ea.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0xee018baf058227872540ac60efbd38b023d9dae2 impl=StorageSetter value=0
+            CALL 0xee018baf058227872540ac60efbd38b023d9dae2.upgradeTo(address) value=0
+          CALL 0xee018baf058227872540ac60efbd38b023d9dae2.setBytes32(bytes32,bytes32) slot= val=0000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640000 value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgradeAndCall(address,address,bytes) proxy=0xee018baf058227872540ac60efbd38b023d9dae2 impl=0x2b27299c577d4720100e2735b652444dcea652d0 value=0
+            CALL 0xee018baf058227872540ac60efbd38b023d9dae2.upgradeToAndCall(address,bytes) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0xee018baf058227872540ac60efbd38b023d9dae2 impl=StorageSetter value=0
+            CALL 0xee018baf058227872540ac60efbd38b023d9dae2.upgradeTo(address) value=0
+          CALL 0xd56045e68956fce2576e680c95a4750cf8241f79.upgrade(address,address) proxy=0xee018baf058227872540ac60efbd38b023d9dae2 impl=0x2b27299c577d4720100e2735b652444dcea652d0 value=0
+            CALL 0xee018baf058227872540ac60efbd38b023d9dae2.upgradeTo(address) value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setImplementation(uint32,address,bytes) gameType=0 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=0 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setInitBond(uint32,uint256) gameType=0 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=0 bond=0 value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setImplementation(uint32,address,bytes) gameType=1 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=1 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setInitBond(uint32,uint256) gameType=1 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=1 bond=0 value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setImplementation(uint32,address,bytes) gameType=8 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=8 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setInitBond(uint32,uint256) gameType=8 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=8 bond=0 value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setImplementation(uint32,address,bytes) gameType=5 impl=0x5c3eb47cb0174aea522a2a9ae79487139a53d691 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=5 impl=0x5c3eb47cb0174aea522a2a9ae79487139a53d691 value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setInitBond(uint32,uint256) gameType=5 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=5 bond=0 value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setImplementation(uint32,address,bytes) gameType=9 impl=0x19af533cc2a2a55786dcb8672aa5717e64213208 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=9 impl=0x19af533cc2a2a55786dcb8672aa5717e64213208 value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setInitBond(uint32,uint256) gameType=9 bond=80000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=9 bond=80000000000000000 value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setImplementation(uint32,address,bytes) gameType=10 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=10 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setInitBond(uint32,uint256) gameType=10 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=10 bond=0 value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setImplementation(uint32,address,bytes) gameType=4 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=4 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x10d7b35078d3baabb96dd45a9143b94be65b12cd.setInitBond(uint32,uint256) gameType=4 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=4 bond=0 value=0
+      DELEGATECALL OPCMV2.0x8a847e2e value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3 impl=StorageSetter value=0
+            CALL 0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3.upgradeTo(address) value=0
+          CALL 0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgradeAndCall(address,address,bytes) proxy=0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3 impl=0xade27248542c0f3e89b49e4eb76155e267f14377 value=0
+            CALL 0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3.upgradeToAndCall(address,bytes) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3 impl=StorageSetter value=0
+            CALL 0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3 impl=0xade27248542c0f3e89b49e4eb76155e267f14377 value=0
+            CALL 0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x88e529a6ccd302c948689cd5156c83d4614fae92 impl=StorageSetter value=0
+            CALL 0x88e529a6ccd302c948689cd5156c83d4614fae92.upgradeTo(address) value=0
+          CALL 0x88e529a6ccd302c948689cd5156c83d4614fae92.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgradeAndCall(address,address,bytes) proxy=0x88e529a6ccd302c948689cd5156c83d4614fae92 impl=0xb20b23af6071405c37ddda0c0640e8ebb7899645 value=0
+            CALL 0x88e529a6ccd302c948689cd5156c83d4614fae92.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xb20b23af6071405c37ddda0c0640e8ebb7899645.initialize(address,address,address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x88e529a6ccd302c948689cd5156c83d4614fae92 impl=StorageSetter value=0
+            CALL 0x88e529a6ccd302c948689cd5156c83d4614fae92.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x88e529a6ccd302c948689cd5156c83d4614fae92 impl=0xb20b23af6071405c37ddda0c0640e8ebb7899645 value=0
+            CALL 0x88e529a6ccd302c948689cd5156c83d4614fae92.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x67b4de6ffa66ef201ea6099a89ca397d56622e31 impl=StorageSetter value=0
+            CALL 0x67b4de6ffa66ef201ea6099a89ca397d56622e31.upgradeTo(address) value=0
+          CALL 0x67b4de6ffa66ef201ea6099a89ca397d56622e31.setBytes32(bytes32,bytes32) slot= val=000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30000 value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgradeAndCall(address,address,bytes) proxy=0x67b4de6ffa66ef201ea6099a89ca397d56622e31 impl=0xdf75e6b07e98873e36ba5c05508f80c1454e0afe value=0
+            CALL 0x67b4de6ffa66ef201ea6099a89ca397d56622e31.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xdf75e6b07e98873e36ba5c05508f80c1454e0afe.initialize(address,address[]) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x67b4de6ffa66ef201ea6099a89ca397d56622e31 impl=StorageSetter value=0
+            CALL 0x67b4de6ffa66ef201ea6099a89ca397d56622e31.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x67b4de6ffa66ef201ea6099a89ca397d56622e31 impl=0xdf75e6b07e98873e36ba5c05508f80c1454e0afe value=0
+            CALL 0x67b4de6ffa66ef201ea6099a89ca397d56622e31.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x9cf951e3f74b644e621b36ca9cea147a78d4c39f impl=StorageSetter value=0
+            CALL 0xb24bfeece1b3b7a44559f4cbc21bed312b130b70.setAddress(string,address) value=0
+          CALL 0x9cf951e3f74b644e621b36ca9cea147a78d4c39f.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgradeAndCall(address,address,bytes) proxy=0x9cf951e3f74b644e621b36ca9cea147a78d4c39f impl=0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448 value=0
+            CALL 0xb24bfeece1b3b7a44559f4cbc21bed312b130b70.setAddress(string,address) value=0
+            CALL 0x9cf951e3f74b644e621b36ca9cea147a78d4c39f.initialize(address,address) value=0
+              DELEGATECALL 0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448.initialize(address,address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x9cf951e3f74b644e621b36ca9cea147a78d4c39f impl=StorageSetter value=0
+            CALL 0xb24bfeece1b3b7a44559f4cbc21bed312b130b70.setAddress(string,address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x9cf951e3f74b644e621b36ca9cea147a78d4c39f impl=0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448 value=0
+            CALL 0xb24bfeece1b3b7a44559f4cbc21bed312b130b70.setAddress(string,address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0xeb9bf100225c214efc3e7c651ebbadcf85177607 impl=StorageSetter value=0
+            CALL 0xeb9bf100225c214efc3e7c651ebbadcf85177607.setStorage(bytes32,bytes32) value=0
+          CALL 0xeb9bf100225c214efc3e7c651ebbadcf85177607.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgradeAndCall(address,address,bytes) proxy=0xeb9bf100225c214efc3e7c651ebbadcf85177607 impl=0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891 value=0
+            CALL 0xeb9bf100225c214efc3e7c651ebbadcf85177607.setStorage(bytes32,bytes32) value=0
+            CALL 0xeb9bf100225c214efc3e7c651ebbadcf85177607.initialize(address,address) value=0
+              DELEGATECALL 0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891.initialize(address,address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0xeb9bf100225c214efc3e7c651ebbadcf85177607 impl=StorageSetter value=0
+            CALL 0xeb9bf100225c214efc3e7c651ebbadcf85177607.setStorage(bytes32,bytes32) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0xeb9bf100225c214efc3e7c651ebbadcf85177607 impl=0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891 value=0
+            CALL 0xeb9bf100225c214efc3e7c651ebbadcf85177607.setStorage(bytes32,bytes32) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x5933e323be8896dfacd1cd671442f27daa10a053 impl=StorageSetter value=0
+            CALL 0x5933e323be8896dfacd1cd671442f27daa10a053.upgradeTo(address) value=0
+          CALL 0x5933e323be8896dfacd1cd671442f27daa10a053.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgradeAndCall(address,address,bytes) proxy=0x5933e323be8896dfacd1cd671442f27daa10a053 impl=0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e value=0
+            CALL 0x5933e323be8896dfacd1cd671442f27daa10a053.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e.initialize(address,address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x5933e323be8896dfacd1cd671442f27daa10a053 impl=StorageSetter value=0
+            CALL 0x5933e323be8896dfacd1cd671442f27daa10a053.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x5933e323be8896dfacd1cd671442f27daa10a053 impl=0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e value=0
+            CALL 0x5933e323be8896dfacd1cd671442f27daa10a053.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0xc1047e30efc9e172cfe7aa0219895b6a43fc415f impl=StorageSetter value=0
+            CALL 0xc1047e30efc9e172cfe7aa0219895b6a43fc415f.upgradeTo(address) value=0
+          CALL 0xc1047e30efc9e172cfe7aa0219895b6a43fc415f.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgradeAndCall(address,address,bytes) proxy=0xc1047e30efc9e172cfe7aa0219895b6a43fc415f impl=0xaabea75da509fa518fd8a91eae4be5813b829b12 value=0
+            CALL 0xc1047e30efc9e172cfe7aa0219895b6a43fc415f.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xaabea75da509fa518fd8a91eae4be5813b829b12.initialize(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0xc1047e30efc9e172cfe7aa0219895b6a43fc415f impl=StorageSetter value=0
+            CALL 0xc1047e30efc9e172cfe7aa0219895b6a43fc415f.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0xc1047e30efc9e172cfe7aa0219895b6a43fc415f impl=0xaabea75da509fa518fd8a91eae4be5813b829b12 value=0
+            CALL 0xc1047e30efc9e172cfe7aa0219895b6a43fc415f.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0 impl=StorageSetter value=0
+            CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.upgradeTo(address) value=0
+          CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgradeAndCall(address,address,bytes) proxy=0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0 impl=0x72b971717e088b59f26d4236be222adb6acd393b value=0
+            CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.initialize(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0 impl=StorageSetter value=0
+            CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0 impl=0x72b971717e088b59f26d4236be222adb6acd393b value=0
+            CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x18fbb58c366e21f395ddec7cba0510a2d9116b47 impl=StorageSetter value=0
+            CALL 0x18fbb58c366e21f395ddec7cba0510a2d9116b47.upgradeTo(address) value=0
+          CALL 0x18fbb58c366e21f395ddec7cba0510a2d9116b47.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgradeAndCall(address,address,bytes) proxy=0x18fbb58c366e21f395ddec7cba0510a2d9116b47 impl=0xf024e96317907c3b8d8cb346b9fd9034c8640e15 value=0
+            CALL 0x18fbb58c366e21f395ddec7cba0510a2d9116b47.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xf024e96317907c3b8d8cb346b9fd9034c8640e15.initialize(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x18fbb58c366e21f395ddec7cba0510a2d9116b47 impl=StorageSetter value=0
+            CALL 0x18fbb58c366e21f395ddec7cba0510a2d9116b47.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x18fbb58c366e21f395ddec7cba0510a2d9116b47 impl=0xf024e96317907c3b8d8cb346b9fd9034c8640e15 value=0
+            CALL 0x18fbb58c366e21f395ddec7cba0510a2d9116b47.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x4890928941e62e273da359374b105f803329f473 impl=StorageSetter value=0
+            CALL 0x4890928941e62e273da359374b105f803329f473.upgradeTo(address) value=0
+          CALL 0x4890928941e62e273da359374b105f803329f473.setBytes32(bytes32,bytes32) slot= val=000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30000 value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgradeAndCall(address,address,bytes) proxy=0x4890928941e62e273da359374b105f803329f473 impl=0x2b27299c577d4720100e2735b652444dcea652d0 value=0
+            CALL 0x4890928941e62e273da359374b105f803329f473.upgradeToAndCall(address,bytes) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x4890928941e62e273da359374b105f803329f473 impl=StorageSetter value=0
+            CALL 0x4890928941e62e273da359374b105f803329f473.upgradeTo(address) value=0
+          CALL 0x89889b569c3a505f3640ee1bd0ac1d557f436d2a.upgrade(address,address) proxy=0x4890928941e62e273da359374b105f803329f473 impl=0x2b27299c577d4720100e2735b652444dcea652d0 value=0
+            CALL 0x4890928941e62e273da359374b105f803329f473.upgradeTo(address) value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setImplementation(uint32,address,bytes) gameType=0 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=0 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setInitBond(uint32,uint256) gameType=0 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=0 bond=0 value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setImplementation(uint32,address,bytes) gameType=1 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=1 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setInitBond(uint32,uint256) gameType=1 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=1 bond=0 value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setImplementation(uint32,address,bytes) gameType=8 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=8 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setInitBond(uint32,uint256) gameType=8 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=8 bond=0 value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setImplementation(uint32,address,bytes) gameType=5 impl=0x5c3eb47cb0174aea522a2a9ae79487139a53d691 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=5 impl=0x5c3eb47cb0174aea522a2a9ae79487139a53d691 value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setInitBond(uint32,uint256) gameType=5 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=5 bond=0 value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setImplementation(uint32,address,bytes) gameType=9 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=9 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setInitBond(uint32,uint256) gameType=9 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=9 bond=0 value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setImplementation(uint32,address,bytes) gameType=10 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=10 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setInitBond(uint32,uint256) gameType=10 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=10 bond=0 value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setImplementation(uint32,address,bytes) gameType=4 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=4 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0.setInitBond(uint32,uint256) gameType=4 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=4 bond=0 value=0
+      DELEGATECALL OPCMV2.0x8a847e2e value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0xc407398d063f942febbcc6f80a156b47f3f1bda6 impl=StorageSetter value=0
+            CALL 0xc407398d063f942febbcc6f80a156b47f3f1bda6.upgradeTo(address) value=0
+          CALL 0xc407398d063f942febbcc6f80a156b47f3f1bda6.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgradeAndCall(address,address,bytes) proxy=0xc407398d063f942febbcc6f80a156b47f3f1bda6 impl=0xade27248542c0f3e89b49e4eb76155e267f14377 value=0
+            CALL 0xc407398d063f942febbcc6f80a156b47f3f1bda6.upgradeToAndCall(address,bytes) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0xc407398d063f942febbcc6f80a156b47f3f1bda6 impl=StorageSetter value=0
+            CALL 0xc407398d063f942febbcc6f80a156b47f3f1bda6.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0xc407398d063f942febbcc6f80a156b47f3f1bda6 impl=0xade27248542c0f3e89b49e4eb76155e267f14377 value=0
+            CALL 0xc407398d063f942febbcc6f80a156b47f3f1bda6.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2 impl=StorageSetter value=0
+            CALL 0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2.upgradeTo(address) value=0
+          CALL 0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgradeAndCall(address,address,bytes) proxy=0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2 impl=0xb20b23af6071405c37ddda0c0640e8ebb7899645 value=0
+            CALL 0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xb20b23af6071405c37ddda0c0640e8ebb7899645.initialize(address,address,address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2 impl=StorageSetter value=0
+            CALL 0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2 impl=0xb20b23af6071405c37ddda0c0640e8ebb7899645 value=0
+            CALL 0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x08ba0023ed60c7bd040716dd13c45fa0062df5c5 impl=StorageSetter value=0
+            CALL 0x08ba0023ed60c7bd040716dd13c45fa0062df5c5.upgradeTo(address) value=0
+          CALL 0x08ba0023ed60c7bd040716dd13c45fa0062df5c5.setBytes32(bytes32,bytes32) slot= val=00000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda60000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=00000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda60000 value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgradeAndCall(address,address,bytes) proxy=0x08ba0023ed60c7bd040716dd13c45fa0062df5c5 impl=0xdf75e6b07e98873e36ba5c05508f80c1454e0afe value=0
+            CALL 0x08ba0023ed60c7bd040716dd13c45fa0062df5c5.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xdf75e6b07e98873e36ba5c05508f80c1454e0afe.initialize(address,address[]) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x08ba0023ed60c7bd040716dd13c45fa0062df5c5 impl=StorageSetter value=0
+            CALL 0x08ba0023ed60c7bd040716dd13c45fa0062df5c5.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x08ba0023ed60c7bd040716dd13c45fa0062df5c5 impl=0xdf75e6b07e98873e36ba5c05508f80c1454e0afe value=0
+            CALL 0x08ba0023ed60c7bd040716dd13c45fa0062df5c5.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x9a3d64e386c18cb1d6d5179a9596a4b5736e98a6 impl=StorageSetter value=0
+            CALL 0x8098f676033a377b9defe302e9fe6877cd63d575.setAddress(string,address) value=0
+          CALL 0x9a3d64e386c18cb1d6d5179a9596a4b5736e98a6.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgradeAndCall(address,address,bytes) proxy=0x9a3d64e386c18cb1d6d5179a9596a4b5736e98a6 impl=0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448 value=0
+            CALL 0x8098f676033a377b9defe302e9fe6877cd63d575.setAddress(string,address) value=0
+            CALL 0x9a3d64e386c18cb1d6d5179a9596a4b5736e98a6.initialize(address,address) value=0
+              DELEGATECALL 0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448.initialize(address,address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x9a3d64e386c18cb1d6d5179a9596a4b5736e98a6 impl=StorageSetter value=0
+            CALL 0x8098f676033a377b9defe302e9fe6877cd63d575.setAddress(string,address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x9a3d64e386c18cb1d6d5179a9596a4b5736e98a6 impl=0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448 value=0
+            CALL 0x8098f676033a377b9defe302e9fe6877cd63d575.setAddress(string,address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x81014f44b0a345033bb2b3b21c7a1a308b35feea impl=StorageSetter value=0
+            CALL 0x81014f44b0a345033bb2b3b21c7a1a308b35feea.setStorage(bytes32,bytes32) value=0
+          CALL 0x81014f44b0a345033bb2b3b21c7a1a308b35feea.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgradeAndCall(address,address,bytes) proxy=0x81014f44b0a345033bb2b3b21c7a1a308b35feea impl=0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891 value=0
+            CALL 0x81014f44b0a345033bb2b3b21c7a1a308b35feea.setStorage(bytes32,bytes32) value=0
+            CALL 0x81014f44b0a345033bb2b3b21c7a1a308b35feea.initialize(address,address) value=0
+              DELEGATECALL 0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891.initialize(address,address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x81014f44b0a345033bb2b3b21c7a1a308b35feea impl=StorageSetter value=0
+            CALL 0x81014f44b0a345033bb2b3b21c7a1a308b35feea.setStorage(bytes32,bytes32) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x81014f44b0a345033bb2b3b21c7a1a308b35feea impl=0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891 value=0
+            CALL 0x81014f44b0a345033bb2b3b21c7a1a308b35feea.setStorage(bytes32,bytes32) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0xd04d0d87e0bd4d2e50286760a3ef323fea6849cf impl=StorageSetter value=0
+            CALL 0xd04d0d87e0bd4d2e50286760a3ef323fea6849cf.upgradeTo(address) value=0
+          CALL 0xd04d0d87e0bd4d2e50286760a3ef323fea6849cf.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgradeAndCall(address,address,bytes) proxy=0xd04d0d87e0bd4d2e50286760a3ef323fea6849cf impl=0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e value=0
+            CALL 0xd04d0d87e0bd4d2e50286760a3ef323fea6849cf.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e.initialize(address,address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0xd04d0d87e0bd4d2e50286760a3ef323fea6849cf impl=StorageSetter value=0
+            CALL 0xd04d0d87e0bd4d2e50286760a3ef323fea6849cf.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0xd04d0d87e0bd4d2e50286760a3ef323fea6849cf impl=0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e value=0
+            CALL 0xd04d0d87e0bd4d2e50286760a3ef323fea6849cf.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0xa2b597eaeacb6f627e088cbead319e934ed5edad impl=StorageSetter value=0
+            CALL 0xa2b597eaeacb6f627e088cbead319e934ed5edad.upgradeTo(address) value=0
+          CALL 0xa2b597eaeacb6f627e088cbead319e934ed5edad.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgradeAndCall(address,address,bytes) proxy=0xa2b597eaeacb6f627e088cbead319e934ed5edad impl=0xaabea75da509fa518fd8a91eae4be5813b829b12 value=0
+            CALL 0xa2b597eaeacb6f627e088cbead319e934ed5edad.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xaabea75da509fa518fd8a91eae4be5813b829b12.initialize(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0xa2b597eaeacb6f627e088cbead319e934ed5edad impl=StorageSetter value=0
+            CALL 0xa2b597eaeacb6f627e088cbead319e934ed5edad.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0xa2b597eaeacb6f627e088cbead319e934ed5edad impl=0xaabea75da509fa518fd8a91eae4be5813b829b12 value=0
+            CALL 0xa2b597eaeacb6f627e088cbead319e934ed5edad.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x2f12d621a16e2d3285929c9996f478508951dfe4 impl=StorageSetter value=0
+            CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.upgradeTo(address) value=0
+          CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgradeAndCall(address,address,bytes) proxy=0x2f12d621a16e2d3285929c9996f478508951dfe4 impl=0x72b971717e088b59f26d4236be222adb6acd393b value=0
+            CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.initialize(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x2f12d621a16e2d3285929c9996f478508951dfe4 impl=StorageSetter value=0
+            CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x2f12d621a16e2d3285929c9996f478508951dfe4 impl=0x72b971717e088b59f26d4236be222adb6acd393b value=0
+            CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x74ad145ac900f1dd5551f0c9e143314dc4022fcf impl=StorageSetter value=0
+            CALL 0x74ad145ac900f1dd5551f0c9e143314dc4022fcf.upgradeTo(address) value=0
+          CALL 0x74ad145ac900f1dd5551f0c9e143314dc4022fcf.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=0000000000000000000000000000000000000000000000000000000000000000 value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgradeAndCall(address,address,bytes) proxy=0x74ad145ac900f1dd5551f0c9e143314dc4022fcf impl=0xf024e96317907c3b8d8cb346b9fd9034c8640e15 value=0
+            CALL 0x74ad145ac900f1dd5551f0c9e143314dc4022fcf.upgradeToAndCall(address,bytes) value=0
+              DELEGATECALL 0xf024e96317907c3b8d8cb346b9fd9034c8640e15.initialize(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x74ad145ac900f1dd5551f0c9e143314dc4022fcf impl=StorageSetter value=0
+            CALL 0x74ad145ac900f1dd5551f0c9e143314dc4022fcf.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x74ad145ac900f1dd5551f0c9e143314dc4022fcf impl=0xf024e96317907c3b8d8cb346b9fd9034c8640e15 value=0
+            CALL 0x74ad145ac900f1dd5551f0c9e143314dc4022fcf.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 impl=StorageSetter value=0
+            CALL 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9.upgradeTo(address) value=0
+          CALL 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9.setBytes32(bytes32,bytes32) slot= val=00000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda60000 value=0
+            DELEGATECALL StorageSetter.setBytes32(bytes32,bytes32) slot= val=00000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda60000 value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgradeAndCall(address,address,bytes) proxy=0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 impl=0x2b27299c577d4720100e2735b652444dcea652d0 value=0
+            CALL 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9.upgradeToAndCall(address,bytes) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 impl=StorageSetter value=0
+            CALL 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9.upgradeTo(address) value=0
+          CALL 0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4.upgrade(address,address) proxy=0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 impl=0x2b27299c577d4720100e2735b652444dcea652d0 value=0
+            CALL 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9.upgradeTo(address) value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setImplementation(uint32,address,bytes) gameType=0 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=0 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setInitBond(uint32,uint256) gameType=0 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=0 bond=0 value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setImplementation(uint32,address,bytes) gameType=1 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=1 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setInitBond(uint32,uint256) gameType=1 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=1 bond=0 value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setImplementation(uint32,address,bytes) gameType=8 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=8 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setInitBond(uint32,uint256) gameType=8 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=8 bond=0 value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setImplementation(uint32,address,bytes) gameType=5 impl=0x5c3eb47cb0174aea522a2a9ae79487139a53d691 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=5 impl=0x5c3eb47cb0174aea522a2a9ae79487139a53d691 value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setInitBond(uint32,uint256) gameType=5 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=5 bond=0 value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setImplementation(uint32,address,bytes) gameType=9 impl=0x19af533cc2a2a55786dcb8672aa5717e64213208 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=9 impl=0x19af533cc2a2a55786dcb8672aa5717e64213208 value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setInitBond(uint32,uint256) gameType=9 bond=80000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=9 bond=80000000000000000 value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setImplementation(uint32,address,bytes) gameType=10 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=10 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setInitBond(uint32,uint256) gameType=10 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=10 bond=0 value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setImplementation(uint32,address,bytes) gameType=4 impl=0x0000000000000000000000000000000000000000 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setImplementation(uint32,address,bytes) gameType=4 impl=0x0000000000000000000000000000000000000000 value=0
+        CALL 0x2f12d621a16e2d3285929c9996f478508951dfe4.setInitBond(uint32,uint256) gameType=4 bond=0 value=0
+          DELEGATECALL 0x72b971717e088b59f26d4236be222adb6acd393b.setInitBond(uint32,uint256) gameType=4 bond=0 value=0

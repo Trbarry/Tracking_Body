@@ -1,0 +1,27 @@
+Completed lane 27 independently. No reportable candidate survived; no `CAND-27xx` file or score was created.
+
+Files:
+
+- [Full lane report](/home/user/Tracking_Body/optimism-u21-novel-hunt/lanes/LANE-27-report.md)
+- [On-chain reads](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-27/ONCHAIN_READS.md), [30-game inventory](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-27/GAME_INVENTORY.md), [migration model](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-27/MIGRATION_MODEL.md)
+- Proxy map, state diff, test results, and three copied PoCs are under [mirror/lane-27](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-27).
+- Six exact kill records: `REJ-2701` through `REJ-2706`.
+
+Primitives:
+
+- `PRIM-2701`: Permissionless type-9 registration accepts arbitrary hash-consistent super-root preimages.
+- `PRIM-2702`: Duplicate/unsorted chain entries pass structural decoding; lookup is first-match.
+- `PRIM-2703`: Creation-time respect survives later type/implementation removal.
+- `PRIM-2704`: Anchors are cross-type, while registry membership relies on the configured factory domain.
+- `PRIM-2705`: Migration atomically cuts both portals over to a fresh shared proof domain.
+
+Strongest negatives:
+
+- Duplicate-chain games are proper/respected but not claim-valid until finalized `DEFENDER_WINS`; canonical fault-proof transitions contain the malformed proposal.
+- Portal proof format is selected solely from the registered game type—callers cannot choose legacy versus super.
+- Nine sampled claim-valid historical type-0/type-8 defender games, including retirement and type-transition boundaries, exactly matched canonical L2 roots. The scan was not exhaustive due archive rate limiting.
+- CREATE2 occupation, pre-registration, old-game survival, and proof-survival migration ideas fail against the fresh atomic DGF/ASR deployment.
+
+All four Forge suites pass: 8 tests, 0 failures.
+
+Further attention: exhaustive historical semantic-root scanning; remaining super-root consumers for ordering/chain-ID-width disagreement; regression review if any future migration reuses a DGF across ASRs.

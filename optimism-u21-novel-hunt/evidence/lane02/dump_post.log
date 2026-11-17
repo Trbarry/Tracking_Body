@@ -20,3 +20,6 @@ ink-57073 L1CrossDomainMessenger ok 20
 ink-57073 L1StandardBridge ok 9
 ink-57073 L1ERC721Bridge ok 7
 ink-57073 OptimismMintableERC20Factory ok 4
+ink-57073 ProxyAdmin ok 4
+soneium-1868 SystemConfig ok 13
+soneium-1868 OptimismPortal2 ok 17

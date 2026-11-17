@@ -1,6 +1,6 @@
 # Lane 27 report — AnchorStateRegistry and dispute migration
 
-Date: 2026-11-17. Independent mirror of lane 07. Source pin: `/home/user/ethereum-optimism/op-v9.0.0` at `ba6fcadbc57eb99918c5b0f14f57c72527f531e3`; comparison pin `/home/user/ethereum-optimism/op-v8.0.0`. Chain evidence is from the pinned passive forks and the allowed OP Mainnet read endpoint. No public-network transaction was sent.
+Date: 2026-11-17. Independent mirror of lane 07. Source pin: `/home/user/ethereum-optimism/op-v9.0.0` at `ba6fcadbc57eb99918c5b0f14f57c72527f531e3`; comparison pin `/home/user/ethereum-optimism/op-v8.0.0` at `f45a5ccfebcdf6da3f5b09cbc512667c063730b7`. Chain evidence is from the pinned passive forks and the allowed OP Mainnet read endpoint. No public-network transaction was sent.
 
 ## Result
 
