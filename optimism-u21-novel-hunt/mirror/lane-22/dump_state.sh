@@ -186,6 +186,17 @@ while IFS='|' read -r chain name proxy proxy_admin portal; do
       params: [$proxy, .[1], "latest"]
     }]' > "$request_file"
   curl -sS -H 'content-type: application/json' --data-binary @"$request_file" "$rpc_url" > "$response_file"
+  # The shared local fork can occasionally return a transient per-item error in a large batch.
+  # Retry only those read-only storage requests individually and require a complete dump.
+  while read -r failed_slot; do
+    [[ -z "$failed_slot" ]] && continue
+    retry_value=$(cast storage "$proxy" "$failed_slot" --rpc-url "$rpc_url")
+    jq --argjson id "$failed_slot" --arg value "$retry_value" '
+      map(if .id == $id then {jsonrpc: "2.0", id: $id, result: $value} else . end)
+    ' "$response_file" > "$response_file.retry"
+    mv "$response_file.retry" "$response_file"
+  done < <(jq -r '.[] | select(.result == null) | .id' "$response_file")
+  jq -e 'all(.[]; .result != null)' "$response_file" >/dev/null
 
   slot_zero=$(jq -r '.[] | select(.id == 0) | .result' "$response_file")
   if [[ "$name" == L1CrossDomainMessenger ]]; then

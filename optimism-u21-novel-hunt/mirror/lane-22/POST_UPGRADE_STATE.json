@@ -9425,7 +9425,7 @@
             "109": {
               "label": "<unused-or-unstructured>",
               "type": "bytes32",
-              "raw": null,
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
             }
           },
@@ -14359,7 +14359,7 @@
             "108": {
               "label": "<unused-or-unstructured>",
               "type": "bytes32",
-              "raw": null,
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
             },
             "109": {
@@ -18119,49 +18119,49 @@
             "57": {
               "label": "<unused-or-unstructured>",
               "type": "bytes32",
-              "raw": null,
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
             },
             "58": {
               "label": "<unused-or-unstructured>",
               "type": "bytes32",
-              "raw": null,
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
             },
             "59": {
               "label": "<unused-or-unstructured>",
               "type": "bytes32",
-              "raw": null,
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
             },
             "60": {
               "label": "<unused-or-unstructured>",
               "type": "bytes32",
-              "raw": null,
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
             },
             "61": {
               "label": "<unused-or-unstructured>",
               "type": "bytes32",
-              "raw": null,
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
             },
             "62": {
               "label": "<unused-or-unstructured>",
               "type": "bytes32",
-              "raw": null,
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
             },
             "63": {
               "label": "<unused-or-unstructured>",
               "type": "bytes32",
-              "raw": null,
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
             },
             "64": {
               "label": "<unused-or-unstructured>",
               "type": "bytes32",
-              "raw": null,
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
             },
             "65": {
