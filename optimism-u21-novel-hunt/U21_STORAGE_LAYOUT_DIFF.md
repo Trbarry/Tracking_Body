@@ -27,13 +27,24 @@ Raw material (all reproducible, read-only):
 ## 0. Result in one paragraph
 
 On all four chains U21 is, storage-wise, a **pointer-only upgrade**. The upgrade tx changed exactly **47 storage slots**
-(net): 33 EIP-1967 implementation slots... (see §3 for the exact list), 4 `OPCM_SLOT`s, 4 AddressManager entries, and
-**12 new v9 pointers** (`ETHLockbox.superchainConfig`, `AnchorStateRegistry.ethLockbox`, `DelayedWETH.ethLockbox`, x4 chains),
-plus 5 DisputeGameFactory `gameArgs` words (new prestate for type 9 on OP/Ink/Unichain; new SUPER_PERMISSIONED proposer on
-OP Mainnet only) and the Safe nonce. No ETH moved, no feature flag changed, no `_initialized` byte changed (net), no legacy
-slot was cleared, no mapping was touched. Every value that v9 reads is either unchanged-in-place with unchanged type, or was
-zero before and is written by the v9 initializer. **No slot holding a pre-upgrade value is read by v9 under a different
-meaning** (source review + differential fork test `test_legacySpacerSlotsAreDeadStorage`). No candidate vulnerability.
+(net, exhaustive list in §3.1):
+
+| # | What | Where |
+|---|---|---|
+| 21 | EIP-1967 implementation slot | SystemConfig, OptimismPortal2, ETHLockbox, AnchorStateRegistry, DelayedWETH on each of the 4 chains + the shared SuperchainConfig |
+| 4 | AddressManager `addresses["OVM_L1CrossDomainMessenger"]` | new L1CrossDomainMessenger implementation, 4 chains |
+| 4 | `SystemConfig` `OPCM_SLOT` | lastUsedOPCM 8.0.1 -> 9.0.3 |
+| 12 | **new v9 pointers** | `ETHLockbox.superchainConfig` (slot 3), `AnchorStateRegistry.ethLockbox` (slot 6 bytes 12-31), `DelayedWETH.ethLockbox` (slot 5), x4 chains |
+| 3 | DGF `gameArgs[9]` word 0 | new absolute prestate, OP / Ink / Unichain |
+| 2 | DGF `gameArgs[5]` words 0-1 | new SUPER_PERMISSIONED proposer, **OP Mainnet only** |
+| 1 | Safe nonce | 48 -> 49 |
+
+No ETH moved, no feature flag changed, no `_initialized` byte changed (net), no legacy slot was cleared, no mapping entry
+was touched. Every value that v9 reads is either unchanged in place with an unchanged type, or was zero before and is
+written by the v9 initializer. **No slot holding a pre-upgrade value is read by v9 under a different meaning** (source
+review + differential fork test `test_legacySpacerSlotsAreDeadStorage`). All ten initializers are locked on all four
+chains and all implementations are locked. Withdrawal-proof entries created under v8 decode identically under v9 (21 real
+entries; 4 real withdrawals proven under v8 were finalized under v9). **No candidate vulnerability in this lane.**
 
 ## 1. Source-level layout diff v7 -> v8 -> v9
 
@@ -363,9 +374,10 @@ balance changed in the tx. No code was created or destroyed.
 | unichain-130 | SystemConfig `0xc407398d063f942febbcc6f80a156b47f3f1bda6` | 0x360894a1..382bbc | `0x000000000000000000000000670b850a235a6fa98cd7a195eb139d0277e471fa` | `0x000000000000000000000000ade27248542c0f3e89b49e4eb76155e267f14377` | EIP-1967 implementation. Written 4x in the tx (StorageSetter -> impl -> StorageSetter -> impl) by `OPContractsManagerUtils.upgrade` (src/L1/opcm/OPContractsManagerUtils.sol:354,372,379,386); net = new v9 implementation. |
 | unichain-130 | SystemConfig `0xc407398d063f942febbcc6f80a156b47f3f1bda6` | 0x99f45962..63ff42 | `0x0000000000000000000000001951828ce913dc4383a8a1695695d537a11d896a` | `0x0000000000000000000000002d91e6f2bcf6cd1df90e1faf9714e18705ea331f` | `OPCM_SLOT` (keccak('systemconfig.opcm')-1) = lastUsedOPCM: 8.0.1 OPCM -> OPCMV2 9.0.3. `SystemConfig.initialize` (src/L1/SystemConfig.sol:237) with `addrs.opcm = opcmV2` (OPContractsManagerV2.sol:852). |
 
-Count check: 33 implementation slots (4 x {SystemConfig, Portal, ETHLockbox, ASR, DelayedWETH} = 20... see table; the
-L1StandardBridge / L1ERC721Bridge / OptimismMintableERC20Factory / DisputeGameFactory proxies show **no** net change
-because their v9 implementation address equals the v8 one, see §4) + 1 SuperchainConfig implementation.
+Count check: 21 + 4 + 4 + 12 + 3 + 2 + 1 = 47. The L1StandardBridge, L1ERC721Bridge, OptimismMintableERC20Factory and
+DisputeGameFactory proxies emitted the same four `Upgraded` events as everything else but show **no** net change, because
+their v9 implementation address equals the v8 one (see §4). L1CDM (ResolvedDelegateProxy) has no implementation slot of its
+own; its change is the AddressManager entry.
 
 Writes that happened inside the tx but netted to zero (from the call trace, 571 state-changing calls):
 
