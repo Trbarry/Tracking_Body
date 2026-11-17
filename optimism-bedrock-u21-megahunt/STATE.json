@@ -67,6 +67,12 @@
           "ATK-T4": "13 exp, 11 kills, 0 cand",
           "ATK-T2": "19 exp, 6 kills, 0 cand",
           "ATK-T5": "running"
+        },
+        "codex_results": {
+          "CATK-T1": "15 exp, 0 cand",
+          "CATK-T2": "STOPPED by OpenAI cyber filter, not re-run",
+          "CATK-T3": "19 exp, 7 kills, 0 cand",
+          "CATK-T4": "STOPPED by OpenAI cyber filter, not re-run"
         }
       }
     },

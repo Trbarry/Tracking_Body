@@ -174,3 +174,11 @@ third-party targets in T2 (21,608 unrelayed legacy messages to third-party L1 co
 | `rejected/ATTACK-T4-10.md` | ATTACK-T4-10 — Span-batch transaction codec disagrees on a user-signed transaction |
 | `rejected/ATTACK-T4-11.md` | ATTACK-T4-11 — Embedded rollup / L1 config differs (old kona registry vs new vs op-node) |
 
+## Resume-wave Codex mirrors
+
+| Mirror | Result |
+|---|---|
+| CATK-T1 | 15 experiments, 0 candidates (`workers/CATK-T1-report.md`, `mirror/CATK-T1/`) — agrees with ATK-T1 |
+| CATK-T2 | STOPPED by the OpenAI cybersecurity filter; not re-run (CADRE-LEGAL 5) |
+| CATK-T3 | 19 experiments, 7 kills (`rejected/ATTACK-CATK-T3-*`), 0 candidates — agrees with ATK-T3 |
+| CATK-T4 | STOPPED by the OpenAI cybersecurity filter; not re-run (CADRE-LEGAL 5). Partial log reproduces ATK-T4-03 (same 4 malformed-log divergences, identical valid-case hashes on kona v1.7/v1.9/op-node) |
