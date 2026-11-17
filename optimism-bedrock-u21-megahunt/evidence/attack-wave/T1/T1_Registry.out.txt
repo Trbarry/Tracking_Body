@@ -1,0 +1,52 @@
+No files changed, compilation skipped
+
+Ran 3 tests for test/T1_Registry.t.sol:T1_Registry
+[PASS] test_T1_01_registeredTypesBoundToPortalRegistry() (gas: 3488671)
+Logs:
+  == chain OP respected type 9
+    type 5 0x5C3eb47cB0174aea522a2a9Ae79487139A53D691
+      args len 40 bond 0
+      attacker create REVERTS (permissioned)
+    type 9 0x19AF533Cc2A2A55786DCB8672aA5717e64213208
+      args len 124 bond 80000000000000000
+      attacker game 0x72Ef448a5BF9bc900842A2a3fc344468964158d7 ASR bound, respected true
+  == chain Ink respected type 9
+    type 5 0x5C3eb47cB0174aea522a2a9Ae79487139A53D691
+      args len 40 bond 0
+      attacker create REVERTS (permissioned)
+    type 9 0x19AF533Cc2A2A55786DCB8672aA5717e64213208
+      args len 124 bond 80000000000000000
+      attacker game 0xa038fD0E27EDA686c9e28e59c2aB34e371EEf9cb ASR bound, respected true
+  == chain Soneium respected type 5
+    type 5 0x5C3eb47cB0174aea522a2a9Ae79487139A53D691
+      args len 40 bond 0
+      attacker create REVERTS (permissioned)
+  == chain Unichain respected type 9
+    type 5 0x5C3eb47cB0174aea522a2a9Ae79487139A53D691
+      args len 40 bond 0
+      attacker create REVERTS (permissioned)
+    type 9 0x19AF533Cc2A2A55786DCB8672aA5717e64213208
+      args len 124 bond 80000000000000000
+      attacker game 0x139A6dA9736EceAAa5E80457E461D1704DaD0a3D ASR bound, respected true
+
+[PASS] test_T1_02_anchorGamesClean() (gas: 336066)
+Logs:
+  OP 0x55A5CFd4270340b3822BB9D8eebdb450ac206f95 9
+     seq 1794298459 createdAt 1794299939
+  Ink 0x38925ef2ec5451E7280CC7bBe08E73E74ebf8945 9
+     seq 1794288067 createdAt 1794289511
+  Soneium 0x5dFB50E0E35005a0d302799bAaFf6E99134eC454 5
+     seq 1794596679 createdAt 1794597779
+  Unichain 0x944a783a2f1F187F0D475Df8aCf09c9463bCAfD5 9
+     seq 1794300387 createdAt 1794301655
+
+[PASS] test_T1_03_txOriginTypesClosed() (gas: 1098476)
+Logs:
+  OP type-5 proposer 0xc27ba3E0Fc01567a5E57Ae0c391AA98cECBA5bE0 0
+  Ink type-5 proposer 0x3832bfbeF03173E4C49a00ec0DD178817A02D177 0
+  Soneium type-5 proposer 0x400c164C4a8cA84385B70EEd6eB03ea847c8E1b8 0
+  Unichain type-5 proposer 0x86b392cA30aD7453c8d88B56EB5A04fD0E2175b7 0
+
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 34.97ms (14.28ms CPU time)
+
+Ran 1 test suite in 47.46ms (34.97ms CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)

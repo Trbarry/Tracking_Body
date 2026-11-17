@@ -1,0 +1,19 @@
+No files changed, compilation skipped
+
+Ran 2 tests for test/T1_Games.t.sol:T1_Games
+[PASS] test_T1_09_closeGameAnchorStarvation() (gas: 81313427)
+Logs:
+  game idx 21359 0xdABd4b65aE61b75BFB63DDFe6531a54FD9597e70
+  min non-reverting closeGame gas 128411
+  starved (closed, anchor not moved) outcomes in band: 0
+
+[PASS] test_T1_10_reproveAfterFinalizeAndDelete() (gas: 4691510)
+Logs:
+  real withdrawal hash / prover / value
+  0x38479d42d553750f0bc9be7bbc16dbabad0c5e59bee9b92ce17f9826339a9218
+  0xb9B397fb65c9a336A6F117598361cE1efe05F35B 119592959152653799482
+  finalized once; re-prove accepted; second finalize AlreadyFinalized; deletes refused
+
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 258.70ms (237.27ms CPU time)
+
+Ran 1 test suite in 276.43ms (258.70ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

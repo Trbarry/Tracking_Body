@@ -1,0 +1,58 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/T1_Portal.t.sol:T1_Portal
+[PASS] test_T1_08_minGasGuaranteeDirectWithdrawals() (gas: 1341217961)
+Logs:
+  fresh account, value 0
+      min non-reverting outer gas 381646 success at min true
+  precompile 0x0a (point eval), value 0
+      min non-reverting outer gas 1015904 success at min false
+      precompile 0x0a with empty input: call fails by input validation (sender's choice)
+  fresh account, value 21000
+      min non-reverting outer gas 403343 success at min true
+  probe, no value 21000
+      min non-reverting outer gas 197993 success at min true
+  probe, value 21000
+      min non-reverting outer gas 216827 success at min true
+  7702-delegated EOA -> probe, value 21000
+      min non-reverting outer gas 216839 success at min true
+  precompile 0x0a (point eval), value 21000
+      min non-reverting outer gas 1015928 success at min false
+      precompile 0x0a with empty input: call fails by input validation (sender's choice)
+  fresh account, value 100000
+      min non-reverting outer gas 484883 success at min true
+  probe, no value 100000
+      min non-reverting outer gas 279533 success at min true
+  probe, value 100000
+      min non-reverting outer gas 298379 success at min true
+  7702-delegated EOA -> probe, value 100000
+      min non-reverting outer gas 298379 success at min true
+  precompile 0x0a (point eval), value 100000
+      min non-reverting outer gas 1015940 success at min false
+      precompile 0x0a with empty input: call fails by input validation (sender's choice)
+  fresh account, value 1000000
+      min non-reverting outer gas 1413669 success at min true
+  probe, no value 1000000
+      min non-reverting outer gas 1208332 success at min true
+  probe, value 1000000
+      min non-reverting outer gas 1227177 success at min true
+  7702-delegated EOA -> probe, value 1000000
+      min non-reverting outer gas 1227177 success at min true
+  precompile 0x0a (point eval), value 1000000
+      min non-reverting outer gas 1224349 success at min false
+      precompile 0x0a with empty input: call fails by input validation (sender's choice)
+  fresh account, value 10000000
+      min non-reverting outer gas 10701663 success at min true
+  probe, no value 10000000
+      min non-reverting outer gas 10496314 success at min true
+  probe, value 10000000
+      min non-reverting outer gas 10515159 success at min true
+  7702-delegated EOA -> probe, value 10000000
+      min non-reverting outer gas 10515147 success at min true
+  precompile 0x0a (point eval), value 10000000
+      min non-reverting outer gas 10512331 success at min false
+      precompile 0x0a with empty input: call fails by input validation (sender's choice)
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.58s (1.56s CPU time)
+
+Ran 1 test suite in 1.59s (1.58s CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
