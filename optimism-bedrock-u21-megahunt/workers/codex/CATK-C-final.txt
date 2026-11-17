@@ -1,0 +1,20 @@
+Executed 9 deployed-fork experiments: **9 passed, 0 failed**. No public transaction was broadcast.
+
+**Candidates:** 0. No candidate file created.
+
+Top kills:
+
+- Forced-failure band exists (`minGasLimit` 15,382,430–15,510,449), but an actual portal-created failure replayed successfully in the next capped transaction. Direct replay ceiling: 15,981,628. Honest rejected score: **1**.
+- L2-created large-data/specific-gas messages can exceed portal capacity: demonstrated L2 edge 379,200 bytes versus portal edge 323,168 bytes. This is sender-selected and exactly matches the programme’s known exclusion. Score: **-4**.
+- Value, new-account surcharge, and deployed StandardBridge paths produced no third-party stranding. Score: **0**.
+- Gas-burning targets preserve `failedMessages`; failure is target-semantic rather than lost messenger state. Score: **-1**.
+
+Highest-value next experiment: an adaptive two-dimensional `(payload size, minGasLimit)` sweep near the portal boundary, preserving naturally created failure state and immediately replaying each exact message, including a value-bearing StandardBridge case.
+
+Artifacts:
+
+- [CATK-C report](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CATK-C-report.md)
+- [Fork test](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-C/test/GasCapCATKC.t.sol)
+- [Test results](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-C/evidence/TEST-RESULTS.md)
+- [Symbolic inequalities](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-C/evidence/SYMBOLIC-INEQUALITIES.md)
+- [Live objects](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-C/evidence/LIVE-OBJECTS-CATK-C.md)

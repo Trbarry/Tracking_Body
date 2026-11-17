@@ -1,0 +1,19 @@
+Command: forge test -j 1 --match-path test/CATK_B.t.sol -vv
+Fork: http://127.0.0.1:8545, Ethereum block 26433900
+
+Ran 8 tests for test/CATK_B.t.sol:CATKBTest
+[PASS] test_deployedERC721BridgeRequiresMessengerAndCommittedL2Bridge()
+[PASS] test_falsePortalFinalizationsAreLegacyV0Duplicates()
+[PASS] test_liveValueBearingFailuresAllSettledAndNoMessengerCustody()
+[PASS] test_liveZeroValueFailuresChronologicalReplayOrder()
+  recovered: 0x18b123eba23716f71c057e6aea971962e44dd5ff7060a448940f3b70cc544c25
+  recovered: 0x6c9a36ef9b84c9b81e771d69cb3510a754dc27a0c8d7107d0ff886eeffd0623d
+  recovered: 0x71c9882b0173bb6c4f718642f0e20c3171c2669c9e4ef0ef99d64ee958ee4162
+  recovered zero-value messages: 3
+[PASS] test_liveZeroValueFailuresReverseReplayOrder()
+  same three recovered, recovered zero-value messages: 3
+[PASS] test_realApplicationVictimForcedFailedThenSettlesExactly()
+[PASS] test_realERC20BridgeVictimForcedFailedThenSettlesExactly()
+[PASS] test_realStandardBridgeVictimForcedFailedThenSettlesExactly()
+
+Suite result: ok. 8 passed; 0 failed; 0 skipped.
