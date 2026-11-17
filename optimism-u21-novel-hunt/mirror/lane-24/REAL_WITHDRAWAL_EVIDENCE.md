@@ -38,7 +38,7 @@ numProofSubmitters(hash)                     1
 finalizedWithdrawals(hash)                   false
 ```
 
-The game is registered/proper/respected and not blacklisted/retired, but remains IN_PROGRESS, so `isGameClaimValid=false`. Storage survived U21; current unresolved status is the only finalization blocker. Fork assertion: `tests/WithdrawalFinalization24.t.sol:524-535`.
+The game is registered/proper/respected and not blacklisted/retired, but remains IN_PROGRESS, so `isGameClaimValid=false`. Storage survived U21; current unresolved status is the only finalization blocker. Fork assertion: `tests/WithdrawalFinalization24.t.sol:532-543`.
 
 ## B. Real v8 failed message replayed through v9
 

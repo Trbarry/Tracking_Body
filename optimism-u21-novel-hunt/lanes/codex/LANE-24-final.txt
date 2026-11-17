@@ -1,0 +1,32 @@
+Completed lane 24 independently. No bounty candidate survived falsification. The deployed-code fork suite passed **17/17**, and the private Anvil was stopped; no public-network writes occurred.
+
+Files:
+
+- [Full lane report](/home/user/Tracking_Body/optimism-u21-novel-hunt/lanes/LANE-24-report.md)
+- [Artifact index](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-24/README.md)
+- [Fork PoC suite](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-24/tests/WithdrawalFinalization24.t.sol)
+- Six `PRIM-24xx`, ten `REJ-24xx`, implementation/state/diff evidence, real calldata, and JSON evidence index.
+
+Primitives:
+
+- **PRIM-2401:** External-proof finalizers can gas-cap an under-specified direct contract withdrawal into finalized non-delivery.
+- **PRIM-2402:** Messenger failure is either recorded for replay or atomically rolls back Portal finalization.
+- **PRIM-2403:** Per-submitter proofs converge on one hash-global replay bit.
+- **PRIM-2404:** Existing proofs are re-evaluated against mutable current ASR, pause, retirement, blacklist, and feature configuration.
+- **PRIM-2405:** The pre-Amsterdam 183,600-gas new-account reserve is conservative today but preserves retry.
+- **PRIM-2406:** Real v8 proof and failed-message storage survive U21 unchanged.
+
+No `CAND-24xx` was created. PRIM-2401 was reproducible but rejected with honest score **3**: v9 explicitly documents and tests terminal failure for direct non-messenger withdrawals, and the victim’s encoded floor was below target requirements.
+
+Strongest negatives:
+
+- Alternate games, submitters, deletion, and re-proof cannot bypass `finalizedWithdrawals[hash]`.
+- A real v8 failed message replayed safely through deployed v9 and retained its failure bit.
+- Across 2,508 finalizations covering the v5.8 deployment, the sole `success=false` event was an already-delivered version-0 legacy duplicate.
+- Return bombs, sender/target mismatch, and current Amsterdam reserve produced no replay or terminal messenger gap.
+
+Follow-up compositions:
+
+1. Higher-level wrappers that emit direct withdrawals with low fixed gas and no replay mechanism.
+2. Re-test new-account and messenger reserves on an Amsterdam-capable EVM.
+3. ASR/Lockbox migration combined with target-address collision or stale proof-selection automation.

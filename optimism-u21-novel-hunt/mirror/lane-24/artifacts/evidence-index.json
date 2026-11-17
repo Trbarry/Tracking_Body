@@ -1,0 +1,49 @@
+{
+  "pinned": {
+    "v9_commit": "ba6fcadbc57eb99918c5b0f14f57c72527f531e3",
+    "upgrade_tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+    "n_minus_1": 26430858,
+    "n": 26430859,
+    "later": 26433900
+  },
+  "real_pre_u21_proof": {
+    "tx": "0xe7d32d524f4bb828a405871e8dd0e583c6a88838489534757cb31462b3e7c089",
+    "block": 26429992,
+    "withdrawal_hash": "0xcb4d1cae41ae4f41058343d205d1e295eb5e4a55a380f45694e2b88991a1651d",
+    "submitter": "0x47728c875b7F52a40227d662f83a3C3d0f7E6FBB",
+    "game": "0x86512332B510F40Bb9361dE685cA1e4815dEe5fe",
+    "proof_timestamp": 1794861023,
+    "persists_at_n": true,
+    "finalized_at_n": false
+  },
+  "real_v8_failed_message": {
+    "tx": "0x39d668d98f82c46c021edabfda5b7187012022e9d018aee4998852835a667155",
+    "block": 26385051,
+    "withdrawal_hash": "0x4f04ff252de2f69c20e7c447715aec8264fc9447dc330a9d3298b4f515974946",
+    "message_hash": "0x9546105b80a67d2890768f2cf1c9bfdbc6d855ed8e8d7f47373d491b8bb11312",
+    "state_at_n": { "failed": true, "successful": false },
+    "private_v9_replay_tx": "0x3f68afcec1631d43229e7fcd3b3aa831a196777c8adedf38a7747f67fd5916e0",
+    "private_v9_replay_status": 1,
+    "private_v9_replay_event": "FailedRelayedMessage",
+    "private_snapshot_reverted": true
+  },
+  "historical_finalization_scan": {
+    "from_block": 25900000,
+    "to_block": 26430858,
+    "portal_v5_8_first_block": 26048619,
+    "events": 2508,
+    "false_events": 1,
+    "range_errors": 0,
+    "sole_false_tx": "0xcaaa4a154a865d2ab0264135001b1577b0cce0688de176fa1299e8f0b3992000",
+    "sole_false_was_already_relayed_v0": true,
+    "v0_hash": "0xaef8e13f0a6fcac3ea486125f3666b13b0b0333971bd4257a11cdec35a4b574f",
+    "v0_successful": true
+  },
+  "fork_suite": {
+    "tests": 17,
+    "passed": 17,
+    "failed": 0,
+    "direct_failure_gas_cap": 350000,
+    "candidate_count": 0
+  }
+}

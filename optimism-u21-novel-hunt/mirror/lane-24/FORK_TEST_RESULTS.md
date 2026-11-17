@@ -30,7 +30,7 @@ The private Anvil was used solely because uncached random mapping-slot reads on 
 | Messenger application failure | Portal finalized; `failed=true`; later replay succeeds once |
 | Messenger pre-record revert | Portal rollback; outer unfinalized; both messenger bits false |
 | Two proof submitters / two games | One target execution; alternate proof blocked globally |
-| Delete then recreate proof | Recreated valid record can finalize before global finalization |
+| Delete/recreate and mature re-proof | Exact deleted key recreated; mature proof overwritten by second real game and remained finalizable |
 | Real v8 proof at N | Same game/timestamp, unfinalized |
 | Synthetic v8 failed bit → v9 successful replay | `failed=true,successful=true`; next replay blocked |
 | Real v8 failed message → v9 replay | Target still rejects; failure re-recorded; replay remains available |

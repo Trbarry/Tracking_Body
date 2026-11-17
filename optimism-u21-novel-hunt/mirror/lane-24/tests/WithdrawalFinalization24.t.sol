@@ -511,12 +511,20 @@ contract WithdrawalFinalization24Test is Test {
         assertEq(storedGame, address(0));
         vm.clearMockedCalls();
 
+        // The exact deleted (hash, submitter) key can be recreated by a later valid proof.
+        _installProof(realPreUpgradeHash, realSubmitter, VALID_GAME_A);
+        (storedGame,) = portal.provenWithdrawals(realPreUpgradeHash, realSubmitter);
+        assertEq(storedGame, VALID_GAME_A);
+
         GasGate24 target = new GasGate24(0);
         IPortal24.WithdrawalTransaction memory replacement =
             _tx(13, USER, address(target), 0, 50_000, hex"2413");
         bytes32 replacementHash = _hash(replacement);
-        // Recreate the same submitter key against another valid game, as re-proving would do.
+        // Re-proving an already mature record overwrites its game/timestamp and remains usable.
         _installProof(replacementHash, realSubmitter, VALID_GAME_A);
+        _installProof(replacementHash, realSubmitter, VALID_GAME_B);
+        (storedGame,) = portal.provenWithdrawals(replacementHash, realSubmitter);
+        assertEq(storedGame, VALID_GAME_B);
         _finalizeExternal(replacement, realSubmitter);
         assertEq(target.calls(), 1);
     }

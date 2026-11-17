@@ -25,3 +25,13 @@ soneium-1868 SystemConfig ok 13
 soneium-1868 OptimismPortal2 ok 17
 soneium-1868 ETHLockbox ok 4
 soneium-1868 AnchorStateRegistry ok 7
+soneium-1868 DisputeGameFactory ok 9
+soneium-1868 DelayedWETH ok 6
+soneium-1868 L1CrossDomainMessenger ok 20
+soneium-1868 L1StandardBridge ok 9
+soneium-1868 L1ERC721Bridge ok 7
+soneium-1868 OptimismMintableERC20Factory ok 4
+soneium-1868 ProxyAdmin ok 4
+unichain-130 SystemConfig ok 13
+unichain-130 OptimismPortal2 ok 17
+unichain-130 ETHLockbox ok 4

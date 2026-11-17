@@ -4,25 +4,21 @@ Ran 3 tests for test/AdversarialTargets.t.sol:AdversarialTargetsTest
 [PASS] test_mockedReentrantMessenger_cannotDoubleFinalize() (gas: 769454)
 [PASS] test_mockedSuccessfulNoopMessenger_canStillProduceFinalizedNeither() (gas: 342067)
 [PASS] test_v9ReverterAndGasBurner_leaveMessengerWithdrawalReplayable() (gas: 5180086)
-Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 97.98ms (97.67ms CPU time)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 56.21ms (55.82ms CPU time)
 
 Ran 3 tests for test/PortalStateInvariants.t.sol:PortalStateInvariantsTest
 [PASS] test_deleteProvenWithdrawal_onlyDeletesPermanentlyInvalidProof() (gas: 108714)
 [PASS] test_pauseBlocksProofsFinalizationAndUnlocks_butKeepsInflowsOpen() (gas: 952122)
 [PASS] test_reproveIsolationAndFinalizationUniqueness_realProof() (gas: 983493)
-Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 111.50ms (111.31ms CPU time)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 74.48ms (73.99ms CPU time)
 
 Ran 1 test for test/RealWithdrawalFinalization.t.sol:RealWithdrawalFinalizationTest
 [PASS] test_realType9MessengerWithdrawal_finalizesEndToEnd() (gas: 463922)
-Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 41.46ms (20.02ms CPU time)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 29.50ms (14.65ms CPU time)
 
 Ran 1 test for test/Sanity.t.sol:SanityTest
 [PASS] test_sanity() (gas: 18328)
-Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 23.06ms (1.02ms CPU time)
-
-Ran 1 test for test/PortalHandlerInvariant.t.sol:PortalHandlerInvariantTest
-[PASS] test_handlerDeterministicStateMachineSweep() (gas: 1403924)
-Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 37.62ms (6.29ms CPU time)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 12.02ms (1.48ms CPU time)
 
 Ran 4 tests for test/DepositDifferential.t.sol:DepositDifferentialTest
 [PASS] test_120001BytesAndUnderpricedGas_revertOnBothVersions() (gas: 872994)
@@ -55,32 +51,23 @@ Logs:
   N 120k deposit gas: 5635990
 
 [PASS] test_valueDepositMovesETHDirectlyToLockbox_notPortal() (gas: 221829)
-Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 178.83ms (215.16ms CPU time)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 158.46ms (158.26ms CPU time)
 
-Ran 4 tests for test/DifferentialWithdrawal.t.sol:DifferentialWithdrawalTest
-[PASS] test_binarySearchMinimumGas_v8AndV9RealMessengerPaths() (gas: 8945985)
+Ran 5 tests for test/DifferentialWithdrawal.t.sol:DifferentialWithdrawalTest
+[PASS] test_binarySearchMinimumGas_v8AndV9RealMessengerPaths() (gas: 9046203)
 Logs:
   v8 minimum outer gas: 643533
   v9 minimum outer gas: 648547
 
-[PASS] test_documentedDiff_failingMessengerFinalizesOnV8_revertsOnV9() (gas: 625736)
-[PASS] test_exactNMinus1ToN_sameRealFixture_sameSuccessfulOutcome() (gas: 936013)
+[PASS] test_documentedDiff_failingMessengerFinalizesOnV8_revertsOnV9() (gas: 626125)
+[PASS] test_exactNMinus1ToN_reproveBehaviorSame() (gas: 1314966)
+[PASS] test_exactNMinus1ToN_sameRealFixture_sameSuccessfulOutcome() (gas: 936032)
 Logs:
   N-1 finalize call gas (harness measurement): 213582
   N finalize call gas (harness measurement): 219563
 
-[PASS] test_viewGetterDiffs_areDocumentedAndWired() (gas: 78344)
-Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 403.46ms (402.80ms CPU time)
-
-Ran 3 tests for test/MessengerGasBoundary.t.sol:MessengerGasBoundaryTest
-[PASS] testFuzz_gasClassificationNeverFinalizedNeither(uint32) (runs: 64, μ: 314784, ~: 336860)
-[PASS] test_binarySearchExactBoundaries_noFinalizedNeither() (gas: 14920582)
-Logs:
-  minimum outer gas for non-reverting finalization: 708920
-  minimum outer gas for successful inner relay: 708920
-
-[PASS] test_deterministic128PointSweep_noFinalizedNeither() (gas: 38021545)
-Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 435.92ms (745.89ms CPU time)
+[PASS] test_viewGetterDiffs_areDocumentedAndWired() (gas: 78397)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 364.57ms (364.22ms CPU time)
 
 Ran 2 tests for test/NewAccountGasDifferential.t.sol:NewAccountGasDifferentialTest
 [PASS] test_v8ToV9EmptyAccountMinimumGasDiff_mockedProofOnly() (gas: 5186573)
@@ -95,6 +82,106 @@ Logs:
   v9 min gas, empty target: 419518
   v9 empty-account reservation delta: 186504
 
-Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 2.97s (5.67s CPU time)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 2.99s (5.45s CPU time)
 
-Ran 9 test suites in 3.00s (4.30s CPU time): 22 tests passed, 0 failed, 0 skipped (22 total tests)
+Ran 5 tests for test/PortalHandlerInvariant.t.sol:PortalHandlerInvariantTest
+[PASS] invariant_ethCustodyConservation() (runs: 16, calls: 160, reverts: 0)
+
+╭---------------------+-------------------------------+-------+---------+----------╮
+| Contract            | Selector                      | Calls | Reverts | Discards |
++==================================================================================+
+| PortalHandlerLane31 | actionDeleteValidProof        | 28    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionDeposit                 | 21    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionDonate                  | 21    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionFinalizeOrReplay        | 27    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionPauseOrExtend           | 19    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionProveAsAnotherSubmitter | 23    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionWarp                    | 21    | 0       | 0        |
+╰---------------------+-------------------------------+-------+---------+----------╯
+
+[PASS] invariant_finalizedMessengerHasRecordedOutcome() (runs: 16, calls: 160, reverts: 0)
+
+╭---------------------+-------------------------------+-------+---------+----------╮
+| Contract            | Selector                      | Calls | Reverts | Discards |
++==================================================================================+
+| PortalHandlerLane31 | actionDeleteValidProof        | 19    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionDeposit                 | 27    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionDonate                  | 32    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionFinalizeOrReplay        | 12    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionPauseOrExtend           | 19    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionProveAsAnotherSubmitter | 25    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionWarp                    | 26    | 0       | 0        |
+╰---------------------+-------------------------------+-------+---------+----------╯
+
+[PASS] invariant_l2SenderAlwaysRestored() (runs: 16, calls: 160, reverts: 0)
+
+╭---------------------+-------------------------------+-------+---------+----------╮
+| Contract            | Selector                      | Calls | Reverts | Discards |
++==================================================================================+
+| PortalHandlerLane31 | actionDeleteValidProof        | 20    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionDeposit                 | 27    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionDonate                  | 21    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionFinalizeOrReplay        | 16    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionPauseOrExtend           | 27    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionProveAsAnotherSubmitter | 21    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionWarp                    | 28    | 0       | 0        |
+╰---------------------+-------------------------------+-------+---------+----------╯
+
+[PASS] invariant_portalHoldsOnlyExplicitDonations() (runs: 16, calls: 160, reverts: 0)
+
+╭---------------------+-------------------------------+-------+---------+----------╮
+| Contract            | Selector                      | Calls | Reverts | Discards |
++==================================================================================+
+| PortalHandlerLane31 | actionDeleteValidProof        | 21    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionDeposit                 | 20    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionDonate                  | 32    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionFinalizeOrReplay        | 20    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionPauseOrExtend           | 17    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionProveAsAnotherSubmitter | 27    | 0       | 0        |
+|---------------------+-------------------------------+-------+---------+----------|
+| PortalHandlerLane31 | actionWarp                    | 23    | 0       | 0        |
+╰---------------------+-------------------------------+-------+---------+----------╯
+
+[PASS] test_handlerDeterministicStateMachineSweep() (gas: 1404840)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 2.81s (3.23s CPU time)
+
+Ran 3 tests for test/MessengerGasBoundary.t.sol:MessengerGasBoundaryTest
+[PASS] testFuzz_gasClassificationNeverFinalizedNeither(uint32) (runs: 64, μ: 288883, ~: 336860)
+[PASS] test_binarySearchExactBoundaries_noFinalizedNeither() (gas: 14920646)
+Logs:
+  minimum outer gas for non-reverting finalization: 708920
+  minimum outer gas for successful inner relay: 708920
+
+[PASS] test_deterministic128PointSweep_noFinalizedNeither() (gas: 38046819)
+Logs:
+  classification: reverted: 43
+  classification: finalized + relayed: 85
+  classification: finalized + failedMessages: 0
+  classification: finalized + neither: 0
+
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 3.09s (3.52s CPU time)
+
+Ran 9 test suites in 3.23s (9.59s CPU time): 27 tests passed, 0 failed, 0 skipped (27 total tests)

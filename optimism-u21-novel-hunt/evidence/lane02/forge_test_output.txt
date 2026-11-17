@@ -1,0 +1,16 @@
+No files changed, compilation skipped
+
+Ran 2 tests for test/U21WithdrawalBoundary.t.sol:U21WithdrawalBoundaryTest
+[PASS] test_deleteProvenWithdrawalLeavesSubmitterResidue() (gas: 128659)
+[PASS] test_entriesProvenUnderV8ReadIdenticallyUnderV9() (gas: 262364)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 40.41ms (52.42ms CPU time)
+
+Ran 5 tests for test/U21StorageReinit.t.sol:U21StorageReinitTest
+[PASS] test_featureFlagsAreOneWay() (gas: 40890)
+[PASS] test_implementationsAreLocked() (gas: 98963)
+[PASS] test_legacySpacerSlotsAreDeadStorage() (gas: 1135591)
+[PASS] test_newV9FieldsWiredOnAllFourChains() (gas: 510645)
+[PASS] test_reinitializeRevertsForEveryCaller() (gas: 1446437)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 41.36ms (64.99ms CPU time)
+
+Ran 2 test suites in 56.50ms (81.77ms CPU time): 7 tests passed, 0 failed, 0 skipped (7 total tests)
