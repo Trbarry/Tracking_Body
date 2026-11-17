@@ -80,6 +80,14 @@ PAGES={'2022_05-Bedrock_Contracts-Zeppelin':19,'2022_08-Bedrock_GoLang-SigmaPrim
 INFO={}
 for m in mods:
     INFO.update(getattr(m,'INFO',{}))
+INFO.update({'2022_05-Bedrock_Contracts-Zeppelin':'Low L-01 and Notes N-01..N-10 (10) not recorded','2022_08-Bedrock_GoLang-SigmaPrime':'Informational 3 (OPB-12..OPB-14) not recorded',
+ '2023_01-Bedrock-Sherlock-contest':'25 "S" (specification) issues: 2 recorded (S-7, S-24), 23 counted only','2023_03-Bedrock-Sherlock-fix-review':'all 9 final issues recorded','2023_12-SuperchainConfigUpgrade-Trust':'1 additional recommendation not recorded',
+ '2024_02-MCP_L1-Cantina':mods[2].MC_INFO,'2024_03-FaultProofs-Sherlock-contest':'4 final Mediums recorded; 16 of 31 excluded submission families recorded as fam-*; 15 families by title only (see ext/2024-02-optimism-2024-judging)',
+ '2022_11-Invariant_Testing-TrailOfBits':'1 finding; invariant tables p11-24 not recorded','2023_01-Bedrock_Updates-TrailOfBits':'single finding','2025_03-Interop-Contracts-Spearbit':mods[4].IC_INFO,'2025_11-Custom-Gas-Token-Spearbit':mods[5].CG2_INFO,
+ '2025_05-Upgrade16-Spearbit':'same 14 findings as 2025_05-Interop-Portal-Spearbit; 8 cross-referenced','2025_09-U16a-Spearbit':'Info not recorded: 5.2.2, 5.2.4, 5.2.7','2025_07-VerifyOPCM-Spearbit':'all 3 recorded'})
+rec('2025_01-IRI-OffbeatLabs','L-01')['tests_added']='fuzz test that closeGame() either reverts or updates the anchor state; semgrep rule forcing try/catch blocks to be marked EIP-150 safe (PR 14144)'
+rec('2025_02-Upgrade13-Spearbit','5.2.6')['tests_added']='fuzz test + semgrep rule (PR 14144)'
+rec('2026_11-U21-Cantina','3.1.17')['tests_added']='planned ("tests are to be added next to the existing ASR-RGT cases"), not part of the audited release'
 INFO.setdefault('2022_12-DepositTransaction-RuntimeVerification','formal verification report: 0 severity-rated findings; 2 minor spec deviations in the metered modifier (p11) and gas notes')
 cnt=collections.Counter(r['report'] for r in R)
 reports=[]

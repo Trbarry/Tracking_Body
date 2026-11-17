@@ -25,18 +25,18 @@ fam = submission family not in a final report, ctx/int = advisory or internal fi
 
 | Report | Pages | Findings recorded | Not recorded individually |
 |---|---|---|---|
-| 2022_05-Bedrock_Contracts-Zeppelin | 19 | 15 (C:1, H:2, L:6, M:6) | 9 |
-| 2022_08-Bedrock_GoLang-SigmaPrime | 29 | 11 (C:1, H:2, L:1, M:7) | 3 |
+| 2022_05-Bedrock_Contracts-Zeppelin | 19 | 15 (C:1, H:2, L:6, M:6) | Low L-01 and Notes N-01..N-10 (10) not recorded |
+| 2022_08-Bedrock_GoLang-SigmaPrime | 29 | 11 (C:1, H:2, L:1, M:7) | Informational 3 (OPB-12..OPB-14) not recorded |
 | 2022_09-Bedrock_and_Periphery-Zeppelin | 29 | 14 (I:1, L:5, M:8) | L:8 not recorded individually (L-01,02,03,06,07,09,10,11,13), N:11 |
-| 2022_11-Invariant_Testing-TrailOfBits | 35 | 1 (U:1) |  |
+| 2022_11-Invariant_Testing-TrailOfBits | 35 | 1 (U:1) | 1 finding; invariant tables p11-24 not recorded |
 | 2022_12-DepositTransaction-RuntimeVerification | 13 | 0 (—) | formal verification report: 0 severity-rated findings; 2 minor spec deviations in the metered modifier (p11) and gas notes |
-| 2023_01-Bedrock-Sherlock-contest | external repo (README.md 3814 lines) | 18 (H:3, L:2, M:13) |  |
-| 2023_01-Bedrock_Updates-TrailOfBits | 26 | 1 (H:1) |  |
-| 2023_03-Bedrock-Sherlock-fix-review | external repo (README.md) | 9 (H:3, M:6) |  |
-| 2023_12-SuperchainConfigUpgrade-Trust | 23 | 13 (H:1, I:1, L:8, M:3) |  |
+| 2023_01-Bedrock-Sherlock-contest | external repo (README.md 3814 lines) | 18 (H:3, L:2, M:13) | 25 "S" (specification) issues: 2 recorded (S-7, S-24), 23 counted only |
+| 2023_01-Bedrock_Updates-TrailOfBits | 26 | 1 (H:1) | single finding |
+| 2023_03-Bedrock-Sherlock-fix-review | external repo (README.md) | 9 (H:3, M:6) | all 9 final issues recorded |
+| 2023_12-SuperchainConfigUpgrade-Trust | 23 | 13 (H:1, I:1, L:8, M:3) | 1 additional recommendation not recorded |
 | 2024_02-Kontrol-pausability-RuntimeVerification | external README (raw.githubusercontent.com, commit 876e16ad04968f0bb641eb76f98eb77e7e1a3e16) | 0 (—) | verification artefact, no findings |
-| 2024_02-MCP_L1-Cantina | 11 | 5 (I:1, L:4) |  |
-| 2024_03-FaultProofs-Sherlock-contest | 60 | 20 (M:4, fam:16) |  |
+| 2024_02-MCP_L1-Cantina | 11 | 5 (I:1, L:4) | Low not recorded: 3.1.3 (FeeVault gaps, L2), 3.1.5 (version numbers), 3.1.6 (tests); Informational: 7 (3.2.7 recorded for relevance) |
+| 2024_03-FaultProofs-Sherlock-contest | 60 | 20 (M:4, fam:16) | 4 final Mediums recorded; 16 of 31 excluded submission families recorded as fam-*; 15 families by title only (see ext/2024-02-optimism-2024-judging) |
 | 2024_08-Fault-Proofs-MIPS-Cantina | 11 | 13 (C:1, H:1, L:3, M:8) | Gas 1, Info 19 |
 | 2024_08-Fault-Proofs-No-MIPS-Spearbit | 24 | 10 (L:6, M:4) | Gas 1, Info 12 |
 | 2024_10-Cannon-FGETFD-3DocSecurity | md | 0 (—) | 0 findings; 1 false positive (challenger docker embeds) |
@@ -46,19 +46,19 @@ fam = submission family not in a final report, ctx/int = advisory or internal fi
 | 2025_01-MT-Cannon-Base | 7 | 1 (M:1) | Info 6 |
 | 2025_01-MT-Cannon-Spearbit | 11 | 3 (H:1, L:1, M:1) | Gas 5, Info 8 |
 | 2025_02-Upgrade13-Spearbit | 16 | 10 (I:2, L:6, M:2) | Info not recorded: 5.3.1-5.3.9 (5.3.3 FDG unlock timing change noted in blacklist) |
-| 2025_03-Interop-Contracts-Spearbit | 21 | 6 (H:2, L:1, M:3) |  |
+| 2025_03-Interop-Contracts-Spearbit | 21 | 6 (H:2, L:1, M:3) | Low not recorded: 5.3.1 (sendETH invalid chain id), 5.3.3 (addDependency chain id), 5.3.4 (isDeposit bypass); Gas 3; Info 8 |
 | 2025_03-Interop-Portal-Wonderland | 8 | 5 (I:2, L:3) | Info I-0,I-2,I-3 not recorded |
 | 2025_04-Interop-Portal-Cantina-contest | 38 | 26 (I:19, L:7) | all 26 recorded |
-| 2025_04-op-program-blob-handling-aleph_v | 2 | 1 (pre:1) | notes only |
+| 2025_04-op-program-blob-handling-aleph_v | 2 | 1 (ctx:1) | notes only |
 | 2025_05-Cannon-Go-Updates-Coinbase | 3 | 0 (—) | 0 findings |
 | 2025_05-Interop-Portal-Spearbit | 13 | 8 (I:3, L:5) | Gas 1; Info not recorded: 5.3.2,5.3.3,5.3.4,5.3.5,5.3.8 |
-| 2025_05-Upgrade16-Spearbit | 14 | 8 (I:3, L:5) |  |
+| 2025_05-Upgrade16-Spearbit | 14 | 8 (I:3, L:5) | same 14 findings as 2025_05-Interop-Portal-Spearbit; 8 cross-referenced |
 | 2025_06-Cannon-3DOC | 9 | 2 (L:1, M:1) | Info 1 |
 | 2025_06-Cannon-fix-review-Spearbit | 6 | 2 (int:2) | closing remark only |
-| 2025_07-VerifyOPCM-Spearbit | 6 | 3 (I:1, L:1, M:1) | all recorded |
-| 2025_09-U16a-Spearbit | 12 | 7 (I:4, L:3) | Info not recorded: 5.2.2,5.2.4,5.2.7 |
+| 2025_07-VerifyOPCM-Spearbit | 6 | 3 (I:1, L:1, M:1) | all 3 recorded |
+| 2025_09-U16a-Spearbit | 12 | 7 (I:4, L:3) | Info not recorded: 5.2.2, 5.2.4, 5.2.7 |
 | 2025_10-U17-Spearbit | 8 | 3 (I:3) | 3 info all recorded |
-| 2025_11-Custom-Gas-Token-Spearbit | 14 | 3 (I:1, L:2) |  |
+| 2025_11-Custom-Gas-Token-Spearbit | 14 | 3 (I:1, L:2) | Low not recorded: 3.1.1 (Go predeploy mirrors), 3.1.3, 3.1.5, 3.1.6 (L2 CGT predeploys); Gas 2; Info 8 others |
 | 2026_01-U18-Cantina | 9 | 6 (I:2, L:4) | Gas 1 |
 | 2026_03-Kona-Cantina | 50 | 37 (C:2, H:1, L:32, M:2) | Info 18 |
 | 2026_05-U19-Cantina | 13 | 15 (I:2, L:10, M:3) | Info 3.3.3 not recorded |

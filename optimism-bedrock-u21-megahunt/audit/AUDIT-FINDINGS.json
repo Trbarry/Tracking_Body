@@ -51,7 +51,7 @@
     "scope": "All production bridge contracts (OptimismPortal, L2OutputOracle, CrossDomainMessenger L1/L2, StandardBridge L1/L2, L2ToL1MessagePasser, OptimismMintableERC20/Factory, Hashing/withdrawal verifier libs). L2 nodes and offchain components assumed to work as documented (p5).",
     "explicit_out_of_scope": "New functionality introduced by the mid-audit rewrite was not exhaustively reviewed (p5). L1->L2 messages not charged gas on L2 at audit time: metering scheme (ResourceMetering) did not exist yet (p5). Genesis output-root correctness of L2OutputOracle (p6).",
     "findings_recorded": 15,
-    "not_recorded_individually": 9
+    "not_recorded_individually": "Low L-01 and Notes N-01..N-10 (10) not recorded"
    },
    {
     "report": "2022_08-Bedrock_GoLang-SigmaPrime",
@@ -60,7 +60,7 @@
     "scope": "Go implementation of op-node and op-geth only (p2-4).",
     "explicit_out_of_scope": "Native Go / go-ethereum libraries and dependencies; smart contracts (p4).",
     "findings_recorded": 11,
-    "not_recorded_individually": 3
+    "not_recorded_individually": "Informational 3 (OPB-12..OPB-14) not recorded"
    },
    {
     "report": "2022_09-Bedrock_and_Periphery-Zeppelin",
@@ -78,7 +78,7 @@
     "scope": "Testing-strategy review: invariants of OptimismPortal + ResourceMetering, op-node, op-geth; Echidna/Slither/go test (p4,9).",
     "explicit_out_of_scope": "Concurrent/asynchronous cascading deposits+withdrawals were NOT tested; not all invariants documented; block production/fee computation not tested for all config permutations (p9-10).",
     "findings_recorded": 1,
-    "not_recorded_individually": ""
+    "not_recorded_individually": "1 finding; invariant tables p11-24 not recorded"
    },
    {
     "report": "2023_01-Bedrock_Updates-TrailOfBits",
@@ -87,7 +87,7 @@
     "scope": "System-configuration workflow (SystemConfig, op-node ConfigUpdate parsing, op-geth L1 cost) and two-step withdrawal workflow (OptimismPortal prove/finalize) (p9-11).",
     "explicit_out_of_scope": "Late commits ee96ff8 (ResourceMetering, L2ToL1MessagePasser, L2OutputOracle changes) and 991120f (refactored MerkleTrie) and PRs 4329/4337 (OptimismPortal, CrossDomainMessenger) were reviewed but NOT evaluated in the context of the larger system (p11).",
     "findings_recorded": 1,
-    "not_recorded_individually": ""
+    "not_recorded_individually": "single finding"
    },
    {
     "report": "2023_01-Bedrock-Sherlock-contest",
@@ -96,7 +96,7 @@
     "scope": "All contracts in packages/contracts-bedrock, op-node, op-geth, migration tooling (op-chain-ops) per contest description; source: ext/2023-01-optimism-judging/README.md",
     "explicit_out_of_scope": "LES subprotocol declared unsupported by sponsor (M-7 discussion); privileged roles trusted; spec-only issues classed \"S\"",
     "findings_recorded": 18,
-    "not_recorded_individually": ""
+    "not_recorded_individually": "25 \"S\" (specification) issues: 2 recorded (S-7, S-24), 23 counted only"
    },
    {
     "report": "2023_03-Bedrock-Sherlock-fix-review",
@@ -105,7 +105,7 @@
     "scope": "Fix review of the Bedrock contest: packages/contracts-bedrock, migration (op-chain-ops), op-node/op-geth; source: ext/2023-03-optimism-judging/README.md",
     "explicit_out_of_scope": "privileged roles; user misconfiguration judged Medium at most",
     "findings_recorded": 9,
-    "not_recorded_individually": ""
+    "not_recorded_individually": "all 9 final issues recorded"
    },
    {
     "report": "2023_12-SuperchainConfigUpgrade-Trust",
@@ -114,7 +114,7 @@
     "scope": "ALL CHANGES since the Sherlock contest commit in SuperchainConfig, L1CrossDomainMessenger, L1ERC721Bridge, L1StandardBridge, OptimismPortal, CrossDomainMessenger, ERC721Bridge, StandardBridge; special attention: gas-issue mitigations, storage slots across upgrades, reentrancy changes, SuperchainConfig pause, upgrade procedure side-effects (p5).",
     "explicit_out_of_scope": "SystemConfig, L2OutputOracle, OptimismMintableERC20Factory, ProxyAdmin, AddressManager/ResolvedDelegateProxy, L2 predeploys, off-chain; only centralization risks introduced by the upgrade are listed (p23).",
     "findings_recorded": 13,
-    "not_recorded_individually": ""
+    "not_recorded_individually": "1 additional recommendation not recorded"
    },
    {
     "report": "2024_02-MCP_L1-Cantina",
@@ -123,7 +123,7 @@
     "scope": "MCP L1 upgrade (immutables -> storage so implementations are shared): OptimismPortal, L1CrossDomainMessenger, L1StandardBridge, L1ERC721Bridge, OptimismMintableERC20Factory, L2OutputOracle, SystemConfig + op-chain-ops/upgrades/l1.go (README; p4-10).",
     "explicit_out_of_scope": "No finding status / fix review is printed in the report. L2 contracts only incidentally. SuperchainConfig not re-reviewed.",
     "findings_recorded": 5,
-    "not_recorded_individually": ""
+    "not_recorded_individually": "Low not recorded: 3.1.3 (FeeVault gaps, L2), 3.1.5 (version numbers), 3.1.6 (tests); Informational: 7 (3.2.7 recorded for relevance)"
    },
    {
     "report": "2024_03-FaultProofs-Sherlock-contest",
@@ -132,7 +132,7 @@
     "scope": "Fault-proof system safeguards: OptimismPortal2, DisputeGameFactory, AnchorStateRegistry, DelayedWETH, FaultDisputeGame, MIPS, PreimageOracle. Contest premise: ASSUME THE GAME IS BUGGY and look for ways to bypass the safety net (air-gap + DelayedWETH + guardian).",
     "explicit_out_of_scope": "Per judging: any issue whose root cause is in FaultDisputeGame/MIPS/PreimageOracle is OUT OF SCOPE unless it bypasses the airgap and/or DelayedWETH safety net; re-org / network liveness issues invalid by default. Result: 11 \"H\" and 20 \"M\" submission families in the judging repo are NOT in the final report (4 Mediums only).",
     "findings_recorded": 20,
-    "not_recorded_individually": ""
+    "not_recorded_individually": "4 final Mediums recorded; 16 of 31 excluded submission families recorded as fam-*; 15 families by title only (see ext/2024-02-optimism-2024-judging)"
    },
    {
     "report": "2024_08-Fault-Proofs-MIPS-Cantina",
@@ -267,7 +267,7 @@
     "scope": "Interop contracts: CrossL2Inbox, L2ToL2CrossDomainMessenger, SuperchainWETH/ETHLiquidity, SuperchainTokenBridge, OptimismPortalInterop + SharedLockbox (pre-redesign), SuperchainConfigInterop (dependency set).",
     "explicit_out_of_scope": "SharedLockbox/SuperchainConfigInterop design was DEPRECATED right after (\"lockbox redesign PR 14588\", \"SuperchainConfig changes are being deprecated\"); CrossL2Inbox to be redesigned. 0 of 9 Low+ findings fixed at report time. Interop not live -> Immunefi downgrade one level.",
     "findings_recorded": 6,
-    "not_recorded_individually": ""
+    "not_recorded_individually": "Low not recorded: 5.3.1 (sendETH invalid chain id), 5.3.3 (addDependency chain id), 5.3.4 (isDeposit bypass); Gas 3; Info 8"
    },
    {
     "report": "2025_03-Interop-Portal-Wonderland",
@@ -303,7 +303,7 @@
     "scope": "EXPLICIT FILE LIST (p3): ETHLockbox, L1CrossDomainMessenger, L1ERC721Bridge, L1StandardBridge, OPContractsManager (only the changes for Upgrade 16), OptimismPortal2, ProtocolVersions, SuperchainConfig, SystemConfig, MIPS64, AnchorStateRegistry, DelayedWETH, DisputeGameFactory, SuperFaultDisputeGame, SuperPermissionedDisputeGame, Encoding, Hashing, DeputyPauseModule.",
     "explicit_out_of_scope": "FaultDisputeGame/PermissionedDisputeGame (non-super) not in the list; OPCM only as a diff; OptimismMintableERC20Factory, ProxyAdmin, AddressManager not listed. SAME ENGAGEMENT AND SAME 14 FINDINGS as 2025_05-Interop-Portal-Spearbit (commit 7cd84fed): records below are cross-references.",
     "findings_recorded": 8,
-    "not_recorded_individually": ""
+    "not_recorded_individually": "same 14 findings as 2025_05-Interop-Portal-Spearbit; 8 cross-referenced"
    },
    {
     "report": "2025_07-VerifyOPCM-Spearbit",
@@ -312,7 +312,7 @@
     "scope": "scripts/deploy/VerifyOPCM.s.sol and that it verifies src/L1/OPContractsManager.sol (p3).",
     "explicit_out_of_scope": "everything else; all 3 findings acknowledged, none fixed for U16.",
     "findings_recorded": 3,
-    "not_recorded_individually": "all recorded"
+    "not_recorded_individually": "all 3 recorded"
    },
    {
     "report": "2025_09-U16a-Spearbit",
@@ -321,7 +321,7 @@
     "scope": "Files (appendix): MIPS64State, MIPS64Syscalls, MIPS64, L1CrossDomainMessenger, L1ERC721Bridge, L1StandardBridge, OptimismPortal2, SystemConfig, OPContractsManager. THE ONLY REPORT THAT EXPLICITLY FORK-TESTED TWO SOURCE VERSIONS: U15->U16a direct, U16->U16a, fresh U16a deploy (5.2.6).",
     "explicit_out_of_scope": "ETHLockbox, ASR, DGF, game contracts, DelayedWETH not in the file list; interop dev-feature path not exercised in tests (\"did not occur in the test run\").",
     "findings_recorded": 7,
-    "not_recorded_individually": "Info not recorded: 5.2.2,5.2.4,5.2.7"
+    "not_recorded_individually": "Info not recorded: 5.2.2, 5.2.4, 5.2.7"
    },
    {
     "report": "2025_10-U17-Spearbit",
@@ -339,7 +339,7 @@
     "scope": "DeployConfig.s.sol, DeployOPChain.s.sol, L2Genesis.s.sol, L1/OPContractsManager, L1/OptimismPortal2, L1/SystemConfig, L2/L1BlockCGT, L2ToL1MessagePasserCGT, LiquidityController, NativeAssetLiquidity (p3).",
     "explicit_out_of_scope": "CGT not used by OP Mainnet/Ink/Soneium/Unichain (Immunefi: unused feature -> one level down).",
     "findings_recorded": 3,
-    "not_recorded_individually": ""
+    "not_recorded_individually": "Low not recorded: 3.1.1 (Go predeploy mirrors), 3.1.3, 3.1.5, 3.1.6 (L2 CGT predeploys); Gas 2; Info 8 others"
    },
    {
     "report": "2026_01-U18-Cantina",
@@ -5626,7 +5626,7 @@
    "exact_commit": "984bae9146398a2997ec13757bfe2438ca8f92eb (OptimismPortal2, OptimismPortalInterop, AnchorStateRegistry, DelayedWETH, FaultDisputeGame, Errors/Types, PortalErrors) and ce2ce43 (OPContractsManager, AnchorStateRegistry) (p2)",
    "fix_commit": "optimism PR 14144",
    "fix_strategy": "fuzz test + semgrep rule marking try/catch as EIP-150 safe (PR 14144); monitoring of anchor age",
-   "tests_added": "not stated",
+   "tests_added": "fuzz test that closeGame() either reverts or updates the anchor state; semgrep rule forcing try/catch blocks to be marked EIP-150 safe (PR 14144)",
    "scope_assumptions": "CHANGES in the two commits: dispute game validation moved to wasRespectedGameTypeWhenCreated / isGameProper / isGameClaimValid; single anchorGame; two-step resolve/closeGame; bond distribution modes NORMAL/REFUND; legacy games explicitly rejected (p2,7-9).",
    "explicit_out_of_scope": "Only the diffs; MIPS, DGF, DelayedWETH design (I-02 acknowledged as intentional).",
    "residual_assumptions": "SAFETY CONDITION: gas cost of the try-callee is not much larger than the remainder of the caller; changes with gas repricing (Amsterdam) or with heavier setAnchorState (super roots)",
@@ -5946,7 +5946,7 @@
    "exact_commit": "7d6d15437b7580b022f4c8c1ea9c0cd8d2e587e1 (README; -> op-contracts/v2.0.0); Jan 21 - Feb 21 2025",
    "fix_commit": "optimism PR 14144",
    "fix_strategy": "fuzz test + semgrep rule + monitoring (PR 14144)",
-   "tests_added": "not stated",
+   "tests_added": "fuzz test + semgrep rule (PR 14144)",
    "scope_assumptions": "Upgrade 13: OPContractsManager (deploy/upgrade/addGameType), SystemConfig, AnchorStateRegistry, FaultDisputeGame, OptimismPortal2, DisputeGameFactory, SuperchainConfig as changed for U13.",
    "explicit_out_of_scope": "Not an edge review of every chain history: reviews the v2.0.0 code and OPCM upgrade path from the immediately preceding standard version. MIPS64 reviewed separately. No statement about pre-existing games / proofs created under v1.x.",
    "residual_assumptions": "",
@@ -10184,7 +10184,7 @@
    "exact_commit": "optimism-private 8fdb2775612f23a7d51bde6c1f4961faf7e0dd7b (-> op-contracts/v9.0.0) (p3); Oct 14-27 2026; report dated 2026-11-16",
    "fix_commit": "not stated",
    "fix_strategy": "acknowledged (\"cheap and worth taking\", not in U21)",
-   "tests_added": "not stated",
+   "tests_added": "planned (\"tests are to be added next to the existing ASR-RGT cases\"), not part of the audited release",
    "scope_assumptions": "AnchorStateRegistry, CrossDomainMessenger, DelayedWETH, ETHLockbox, L1CrossDomainMessenger, OPContractsManagerMigrationValidator, OPContractsManagerMigrator, OPContractsManagerStandardValidator, OPContractsManagerUtils(+Caller), OPContractsManagerV2, OptimismPortal2, StandardValidatorUtils, SuperchainConfig, SystemConfig, Types + their interfaces (p3-4). (Findings also cite GasConstants, SafeCall, L2CrossDomainMessenger, L2ToL1MessagePasser.)",
    "explicit_out_of_scope": "NOT in the file list: DisputeGameFactory, all game implementations (FaultDisputeGame/Permissioned/Super*/ZK), MIPS64, PreimageOracle, L1StandardBridge, L1ERC721Bridge, OptimismMintableERC20Factory, ProxyAdmin, AddressManager, kona prestate change. \"U21 does not invoke migrate()\" (3.1.8). STATUS: ALL 19 LOW ACKNOWLEDGED (0 fixed); 2 of 15 Info fixed (docs/version) (p3).",
    "residual_assumptions": "respected type and factory registration are independent state in two contracts with two different authorities (guardian vs PAO)",

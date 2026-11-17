@@ -105,3 +105,38 @@ scanned 20600..20619
 scanned 20800..20819
 scanned 21000..21019
 scanned 21200..21219
+
+DGF 0xe5965Ab5962eDc7477C8520243A95517CD252fA9 ASR 0x23B2C62946350F4246f9f9D027e071f0264FD113 block 26433900 games 0..21388 (21389)
+(type, creator, status, claimValid, blacklisted, retired) -> count
+(0, '0x473300df21d047806a082244b417f96b32f13a33', 2, False, False, True) 9143
+(0, '0x473300df21d047806a082244b417f96b32f13a33', 2, True, False, False) 8029
+(8, '0x473300df21d047806a082244b417f96b32f13a33', 2, True, False, False) 2167
+(9, '0x473300df21d047806a082244b417f96b32f13a33', 2, True, False, False) 1115
+(1, '0x473300df21d047806a082244b417f96b32f13a33', 2, False, False, True) 617
+(9, '0x473300df21d047806a082244b417f96b32f13a33', 2, False, False, False) 84
+(9, '0x473300df21d047806a082244b417f96b32f13a33', 0, False, False, False) 74
+(0, '0xaa08d45476da6831e03b707dbd4d473e1a0f9288', 1, False, False, True) 61
+(0, '0xaa08d45476da6831e03b707dbd4d473e1a0f9288', 1, False, False, False) 48
+(8, '0xaa08d45476da6831e03b707dbd4d473e1a0f9288', 1, False, False, False) 13
+(9, '0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0', 0, False, False, False) 11
+(9, '0xaa08d45476da6831e03b707dbd4d473e1a0f9288', 1, False, False, False) 6
+(0, '0xf2fbae9b080ae2ac24a56cf456636804fa54db29', 2, False, False, True) 2
+(8, '0x4cea68bfa2fac3e11eb05680894d9f13ab99ecd0', 1, False, False, False) 2
+(0, '0xf2fbae9b080ae2ac24a56cf456636804fa54db29', 1, False, False, True) 1
+(0, '0x64d8b3da3ac1ada3e9dd1da29335a9e586fd6ae5', 2, False, False, True) 1
+(0, '0x394400571c825da37ca4d6780417dfb514141b1f', 1, False, False, True) 1
+(0, '0x7cfed2a2d4a98680dac6aa55120f5af2ec562ebd', 1, False, False, True) 1
+(0, '0xc37f6a6c4ab335e20d10f034b90386e2fb70bbf5', 1, False, False, True) 1
+(8, '0x9a2e021ddbe7c7223f481163da9fb03dbbdc200f', 1, False, False, False) 1
+(8, '0x34e0f440335e9aaed33bd1b7e1e1b254c4d3722e', 1, False, False, False) 1
+(8, '0x34e0f440335e9aaed33bd1b7e1e1b254c4d3722e', 2, True, False, False) 1
+(8, '0x86205ad7fb5d817bb581d8df28294b9fd1f0cc97', 1, False, False, False) 1
+(8, '0x1f618a6c69383c837c51f755dc5fa4c7454d5a96', 1, False, False, False) 1
+(8, '0x1bf71293bc683e5a6b2dff6fa80eb111be9efb3f', 1, False, False, False) 1
+(8, '0xfeede1e90742a80a4f74af742a1ed079752c9ba8', 1, False, False, False) 1
+(8, '0x76adf26d920204868ba9a4ea1944ea4ff9d0d255', 1, False, False, False) 1
+(9, '0x6842ec29e31d5c4269a4c3bda056c42ed86057f8', 1, False, False, False) 1
+(9, '0x0bce8d03b884fdf021f7935e5b1929f5d3aa6309', 1, False, False, False) 1
+(9, '0x1d0519eed308bcd49e4ebc149284f83ebc275284', 1, False, False, False) 1
+(9, '0x7813cc252d34c1f5275a930df0c308f4cd0b312d', 1, False, False, False) 1
+EXIT 0

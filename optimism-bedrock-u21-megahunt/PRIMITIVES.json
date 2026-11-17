@@ -920,7 +920,7 @@
    "PERSISTENT_STATE_OR_OBJECT": "SystemConfig slot 107 (l2ChainId, written once at v4.0.0 upgrade() from the permissioned game immutable) + super-root extraData of every type-5/9 clone",
    "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
    "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
-   "UNREVIEWED_CROSS-UPGRADE_EDGE": "l2ChainId was copied at U16 from getL2ChainId(permissionedDisputeGame) (v4.1.0 src/L1/OPContractsManager.sol:686); a chain whose permissioned implementation carried a wrong immutable would bind super-root proofs to the wrong id. Only the four chains' current values were read.",
+   "UNREVIEWED_CROSS-UPGRADE_EDGE": "l2ChainId was copied at U16 from getL2ChainId(permissionedDisputeGame) into SystemConfig.upgrade (v4.0.0 src/L1/OPContractsManager.sol:640,658; v4.1.0 :695,704); a chain whose permissioned implementation carried a wrong immutable would bind super-root proofs to the wrong id. Only the four chains' current values were read.",
    "NEXT_EXPERIMENT": "For every chain upgraded by an OPCM >= v4.0.0, compare SystemConfig.l2ChainId() with the id in the registry's latest super-root extraData and with the L2 eth_chainId.",
    "priority": "P1",
    "pass_a_status": "benign",
