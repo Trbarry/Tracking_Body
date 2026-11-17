@@ -27,6 +27,33 @@
       ],
       "rpc": "https://rpc-gel.inkonchain.com"
     },
+    "OP": {
+      "flagged": [
+        {
+          "blacklisted": false,
+          "calculatedOutputRoot": "0x51396457e477e2df197ae9f82473425b296b469e22e6849d217949067b3b971c",
+          "claimValid": true,
+          "createdAt": 1787107331,
+          "creator": "0x34e0f440335e9aaed33bd1b7e1e1b254c4d3722e",
+          "embeddedOutputRoot": "0x51396457e477e2df197ae9f82473425b296b469e22e6849d217949067b3b971c",
+          "game": "0x4ffb1a59a7d81876377a74b59869670d8192abff",
+          "index": 19206,
+          "l2BlockHash": "0x01c1d53d8204d1d5a61a5aa36688543f928d8f63590ffa05e3649e3cf5a1c3b3",
+          "l2BlockNumber": 155450031,
+          "l2SequenceNumber": 155450031,
+          "matches": true,
+          "retired": false,
+          "rootClaim": "0x51396457e477e2df197ae9f82473425b296b469e22e6849d217949067b3b971c",
+          "stateRoot": "0x89bae1ad551f128995eb9a6eb0b4608105aa0b81ef3f6dbbf8052094ab60d67d",
+          "status": 2,
+          "thirdPartyLive": true,
+          "type": 8,
+          "weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162",
+          "withdrawalsRoot": "0x70677ffca04da5e41d6f12482cf724d92c91c1a97b2bddbcbaf1d389499caf69"
+        }
+      ],
+      "rpc": "http://127.0.0.1:7546"
+    },
     "SONEIUM": {
       "flagged": [],
       "rpc": "https://rpc.soneium.org"

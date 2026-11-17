@@ -6,7 +6,7 @@ pragma solidity ^0.8.15;
 // run against each of them:
 //
 //     function test_x() public { _forkAt(26433900); _forEachChain(this.body); }
-//     function body(Chain memory c) external { IPortal(c.portal).depositTransaction(...); }
+//     function body(OpChain memory c) external { IPortal(c.portal).depositTransaction(...); }
 //
 // Addresses: PASS A U21_PROXY_IMPLEMENTATION_MAP.md section 2 and LANE_CONTEXT.md section 3 (read at
 // L1 blocks 26430858 / 26430859 / 26433900). `_resolveChain` re-derives every handle from the
@@ -18,7 +18,7 @@ pragma solidity ^0.8.15;
 
 import "./Ifaces.sol";
 
-struct Chain {
+struct OpChain {
     string name;
     uint256 chainId;
     address systemConfig;
@@ -48,7 +48,7 @@ library Chains {
     // Base is NOT part of the U21 transaction; its portal is listed only for negative controls.
     address internal constant BASE_PORTAL = 0x49048044D57e1C92A77f79988d21Fa8fAF74E97e;
 
-    function get(uint256 i) internal pure returns (Chain memory c) {
+    function get(uint256 i) internal pure returns (OpChain memory c) {
         if (i == OP) {
             c.name = "OP Mainnet";
             c.chainId = 10;
@@ -117,14 +117,14 @@ library Chains {
 
 abstract contract MultiChain {
     /// @notice Hard-coded handles of chain `i` (Chains.OP / INK / SONEIUM / UNICHAIN).
-    function _chain(uint256 i) internal pure returns (Chain memory) {
+    function _chain(uint256 i) internal pure returns (OpChain memory) {
         return Chains.get(i);
     }
 
     /// @notice Handles of chain `i` re-derived from its SystemConfig on the ACTIVE fork (U16 or
     ///         later). delayedWeth, addressManager and proxyAdmin have no on-chain pointer from the
     ///         SystemConfig in every era and are copied from the table.
-    function _resolveChain(uint256 i) internal view returns (Chain memory c) {
+    function _resolveChain(uint256 i) internal view returns (OpChain memory c) {
         c = Chains.get(i);
         ISystemConfig sc = ISystemConfig(c.systemConfig);
         c.chainId = sc.l2ChainId();
@@ -141,13 +141,13 @@ abstract contract MultiChain {
     /// @notice Runs `body` once per chain. `body` must be an external function of the test contract
     ///         (`this.body`). State changes of one iteration are visible to the next; wrap the body
     ///         in vm.snapshotState / vm.revertToStateAndDelete if the iterations must be independent.
-    function _forEachChain(function(Chain memory) external body) internal {
+    function _forEachChain(function(OpChain memory) external body) internal {
         for (uint256 i; i < Chains.COUNT; i++) {
             body(Chains.get(i));
         }
     }
 
-    function _sameHandles(Chain memory a, Chain memory b) internal pure returns (bool) {
+    function _sameHandles(OpChain memory a, OpChain memory b) internal pure returns (bool) {
         return a.chainId == b.chainId && a.systemConfig == b.systemConfig && a.portal == b.portal && a.lockbox == b.lockbox
             && a.l1cdm == b.l1cdm && a.l1Bridge == b.l1Bridge && a.erc721Bridge == b.erc721Bridge
             && a.erc20Factory == b.erc20Factory && a.dgf == b.dgf && a.asr == b.asr;

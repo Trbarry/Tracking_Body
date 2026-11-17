@@ -1,4 +1,90 @@
 {
+  "absolutePrestatePolicyHistory": [
+    {
+      "block": 22254924,
+      "label": "U2",
+      "source": "eth/000 or 002 config.toml",
+      "types": {
+        "0": "0x039facea52b20c605c05efb0a33560a92de7074218998f75bcdf61e8989cb5d9",
+        "1": "0x039facea52b20c605c05efb0a33560a92de7074218998f75bcdf61e8989cb5d9"
+      }
+    },
+    {
+      "block": 22342667,
+      "label": "U3",
+      "source": "eth/003 or 005 config.toml",
+      "types": {
+        "0": "0x03ee2917da962ec266b091f4b62121dc9682bb0db534633707325339f99ee405",
+        "1": "0x03ee2917da962ec266b091f4b62121dc9682bb0db534633707325339f99ee405"
+      }
+    },
+    {
+      "block": 22432925,
+      "label": "Isthmus prestate update",
+      "source": "eth/009 or 010 config.toml",
+      "types": {
+        "0": "0x03682932cec7ce0a3874b19675a6bbc923054a7b321efc7d3835187b172494b6",
+        "1": "0x03682932cec7ce0a3874b19675a6bbc923054a7b321efc7d3835187b172494b6"
+      }
+    },
+    {
+      "block": 22990722,
+      "label": "U16",
+      "source": "eth/017-019 config.toml",
+      "types": {
+        "0": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
+        "1": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8"
+      }
+    },
+    {
+      "block": 23878509,
+      "label": "U17",
+      "source": "eth/032 or 035 config.toml",
+      "types": {
+        "0": "0x03caa1871bb9fe7f9b11217c245c16e4ded33367df5b3ccb2c6d0a847a217d1b",
+        "1": "0x03caa1871bb9fe7f9b11217c245c16e4ded33367df5b3ccb2c6d0a847a217d1b"
+      }
+    },
+    {
+      "block": 24427874,
+      "label": "U18",
+      "source": "eth/040 or 041 config.toml",
+      "types": {
+        "0": "0x033c000916b4a88cfffeceddd6cf0f4be3897a89195941e5a7c3f8209b4dbb6e",
+        "1": "0x033c000916b4a88cfffeceddd6cf0f4be3897a89195941e5a7c3f8209b4dbb6e",
+        "8": "0x0323914d3050e80c3d09da528be54794fde60cd26849cd3410dde0da7cd7d4fa"
+      }
+    },
+    {
+      "block": 25475307,
+      "label": "U19",
+      "source": "eth/053 or 054 config.toml",
+      "types": {
+        "0": null,
+        "1": "0xdead000000000000000000000000000000000000000000000000000000000000",
+        "8": "0x0337ecb3604c0b40c352e0c7711beb17a212d583f4fe956fd8d66e29ad5f9025"
+      }
+    },
+    {
+      "block": 26048619,
+      "label": "U20",
+      "source": "eth/071 config.toml and README.md:16-33",
+      "types": {
+        "5": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df",
+        "9": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+      }
+    },
+    {
+      "block": 26430859,
+      "label": "U21",
+      "source": "eth/084 config.toml and README.md:16-38",
+      "types": {
+        "5": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9",
+        "9": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+      }
+    }
+  ],
+  "absolutePrestateReadNote": "Before the gameArgs blueprint pattern the implementation getter is effective. In newer releases a direct blueprint read is zero; absolutePrestatePolicyHistory records the effective per-chain value pinned in signed task calldata.",
   "allEIP1967UpgradedEventsForCurrentProxyAddresses": [
     {
       "block": 21116362,
@@ -198930,10 +199016,10 @@
   ],
   "disputeGameConfigurationHistory": [
     {
-      "absolutePrestate": "0x00000000deaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddead",
       "block": 21116377,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2024-11-04T19:28:47+00:00",
+      "directImplementationAbsolutePrestateRead": "0x00000000deaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddead",
       "event": "ImplementationSet",
       "gameType": 1,
       "hash": "0xa35b675085abcbd63ca8fea3ecdd34d31fdd472a5a6688d23500aac669932ebc",
@@ -198943,10 +199029,10 @@
       "transactionHash": "0xf7ee0b2de7b79b6b3462acdb76895e23b138435baa6cda905722f3eea576e05c"
     },
     {
-      "absolutePrestate": "0x0336751a224445089ba5456c8028376a0faf2bafa81d35f43fab8730258cdf37",
       "block": 21645364,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-01-17T16:20:11+00:00",
+      "directImplementationAbsolutePrestateRead": "0x0336751a224445089ba5456c8028376a0faf2bafa81d35f43fab8730258cdf37",
       "event": "ImplementationSet",
       "gameType": 1,
       "hash": "0xbbd077708e0d0ac7a2040fc91356fe3c0f97eba56951195db5406261dbcd20df",
@@ -198956,10 +199042,10 @@
       "transactionHash": "0xfcdc3edd3631f3b4119ffa84b961c192530a084ff131f1eff895207469a9b210"
     },
     {
-      "absolutePrestate": "0x0336751a224445089ba5456c8028376a0faf2bafa81d35f43fab8730258cdf37",
       "block": 21645364,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-01-17T16:20:11+00:00",
+      "directImplementationAbsolutePrestateRead": "0x0336751a224445089ba5456c8028376a0faf2bafa81d35f43fab8730258cdf37",
       "event": "ImplementationSet",
       "gameType": 0,
       "hash": "0xbbd077708e0d0ac7a2040fc91356fe3c0f97eba56951195db5406261dbcd20df",
@@ -198993,10 +199079,10 @@
       "transactionHash": "0xfcdc3edd3631f3b4119ffa84b961c192530a084ff131f1eff895207469a9b210"
     },
     {
-      "absolutePrestate": "0x039facea52b20c605c05efb0a33560a92de7074218998f75bcdf61e8989cb5d9",
       "block": 22254924,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-04-12T19:18:59+00:00",
+      "directImplementationAbsolutePrestateRead": "0x039facea52b20c605c05efb0a33560a92de7074218998f75bcdf61e8989cb5d9",
       "event": "ImplementationSet",
       "gameType": 1,
       "hash": "0x2d78b3bcf9029c9795f255efa8a4367f672052f42088d6aa88dff061f0b0e5e9",
@@ -199006,10 +199092,10 @@
       "transactionHash": "0x7e5e478cafbe30293645e6972a477f77dcfdc006c4cf1dd248a94e6386d04159"
     },
     {
-      "absolutePrestate": "0x039facea52b20c605c05efb0a33560a92de7074218998f75bcdf61e8989cb5d9",
       "block": 22254924,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-04-12T19:18:59+00:00",
+      "directImplementationAbsolutePrestateRead": "0x039facea52b20c605c05efb0a33560a92de7074218998f75bcdf61e8989cb5d9",
       "event": "ImplementationSet",
       "gameType": 0,
       "hash": "0x2d78b3bcf9029c9795f255efa8a4367f672052f42088d6aa88dff061f0b0e5e9",
@@ -199019,10 +199105,10 @@
       "transactionHash": "0x7e5e478cafbe30293645e6972a477f77dcfdc006c4cf1dd248a94e6386d04159"
     },
     {
-      "absolutePrestate": "0x03ee2917da962ec266b091f4b62121dc9682bb0db534633707325339f99ee405",
       "block": 22342667,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-04-25T01:12:11+00:00",
+      "directImplementationAbsolutePrestateRead": "0x03ee2917da962ec266b091f4b62121dc9682bb0db534633707325339f99ee405",
       "event": "ImplementationSet",
       "gameType": 1,
       "hash": "0xfdfcb77a9ae89bbdc0d8c32058de17ff47bfee6592e3d7d15763e54a4fd56b4f",
@@ -199032,10 +199118,10 @@
       "transactionHash": "0xc74c5e0dddfa9e2d0fd5d902fb7b1aa4cc28ba034ebed7bf3a0aa3a8b8d21b20"
     },
     {
-      "absolutePrestate": "0x03ee2917da962ec266b091f4b62121dc9682bb0db534633707325339f99ee405",
       "block": 22342667,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-04-25T01:12:11+00:00",
+      "directImplementationAbsolutePrestateRead": "0x03ee2917da962ec266b091f4b62121dc9682bb0db534633707325339f99ee405",
       "event": "ImplementationSet",
       "gameType": 0,
       "hash": "0xfdfcb77a9ae89bbdc0d8c32058de17ff47bfee6592e3d7d15763e54a4fd56b4f",
@@ -199045,10 +199131,10 @@
       "transactionHash": "0xc74c5e0dddfa9e2d0fd5d902fb7b1aa4cc28ba034ebed7bf3a0aa3a8b8d21b20"
     },
     {
-      "absolutePrestate": "0x03682932cec7ce0a3874b19675a6bbc923054a7b321efc7d3835187b172494b6",
       "block": 22432925,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-05-07T16:28:47+00:00",
+      "directImplementationAbsolutePrestateRead": "0x03682932cec7ce0a3874b19675a6bbc923054a7b321efc7d3835187b172494b6",
       "event": "ImplementationSet",
       "gameType": 0,
       "hash": "0x331a21c76d1ff6d49f6ad22e4ecfb3d3b67a849629e0adb9da6bc7a5e3e6980b",
@@ -199070,10 +199156,10 @@
       "transactionHash": "0xd3247421f6f8039ab186878aa996984a67b3149dd543e688b1d30236516eba00"
     },
     {
-      "absolutePrestate": "0x03682932cec7ce0a3874b19675a6bbc923054a7b321efc7d3835187b172494b6",
       "block": 22432925,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-05-07T16:28:47+00:00",
+      "directImplementationAbsolutePrestateRead": "0x03682932cec7ce0a3874b19675a6bbc923054a7b321efc7d3835187b172494b6",
       "event": "ImplementationSet",
       "gameType": 1,
       "hash": "0x331a21c76d1ff6d49f6ad22e4ecfb3d3b67a849629e0adb9da6bc7a5e3e6980b",
@@ -199095,10 +199181,10 @@
       "transactionHash": "0xd3247421f6f8039ab186878aa996984a67b3149dd543e688b1d30236516eba00"
     },
     {
-      "absolutePrestate": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
       "block": 22990722,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-07-24T18:12:11+00:00",
+      "directImplementationAbsolutePrestateRead": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
       "event": "ImplementationSet",
       "gameType": 1,
       "hash": "0xd5cfa60acc33e7e3ac86bfffa75837fad2a5fb8a568ef2f706f837ce3ec23777",
@@ -199108,10 +199194,10 @@
       "transactionHash": "0x1f1f283ad793a901a94e11241d46b87cd264b2e276a690b9554148ba56c57959"
     },
     {
-      "absolutePrestate": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
       "block": 22990722,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-07-24T18:12:11+00:00",
+      "directImplementationAbsolutePrestateRead": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
       "event": "ImplementationSet",
       "gameType": 0,
       "hash": "0xd5cfa60acc33e7e3ac86bfffa75837fad2a5fb8a568ef2f706f837ce3ec23777",
@@ -199121,10 +199207,10 @@
       "transactionHash": "0x1f1f283ad793a901a94e11241d46b87cd264b2e276a690b9554148ba56c57959"
     },
     {
-      "absolutePrestate": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
       "block": 23492571,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-10-02T20:45:59+00:00",
+      "directImplementationAbsolutePrestateRead": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
       "event": "ImplementationSet",
       "gameType": 1,
       "hash": "0x324c99443762859cfa29231aebe76cc992fb394af0fa2f698f34633cf639d1bd",
@@ -199134,10 +199220,10 @@
       "transactionHash": "0xc98240172fa3950ec9c62f32cc09d0eb0ed21684b02f1b2677357674cda64ca5"
     },
     {
-      "absolutePrestate": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
       "block": 23492571,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-10-02T20:45:59+00:00",
+      "directImplementationAbsolutePrestateRead": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
       "event": "ImplementationSet",
       "gameType": 0,
       "hash": "0x324c99443762859cfa29231aebe76cc992fb394af0fa2f698f34633cf639d1bd",
@@ -199147,10 +199233,10 @@
       "transactionHash": "0xc98240172fa3950ec9c62f32cc09d0eb0ed21684b02f1b2677357674cda64ca5"
     },
     {
-      "absolutePrestate": "0x03caa1871bb9fe7f9b11217c245c16e4ded33367df5b3ccb2c6d0a847a217d1b",
       "block": 23878509,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-11-25T21:35:35+00:00",
+      "directImplementationAbsolutePrestateRead": "0x03caa1871bb9fe7f9b11217c245c16e4ded33367df5b3ccb2c6d0a847a217d1b",
       "event": "ImplementationSet",
       "gameType": 1,
       "hash": "0x9db1c4db36d2172dd0c1c4137865340d8d979f5204b131a00cc4f148ed15ca79",
@@ -199160,10 +199246,10 @@
       "transactionHash": "0x7c9e6b65258838fb38bc0bf584cb0c0802bc0dfbbe877a8639880e2ed88b3aa6"
     },
     {
-      "absolutePrestate": "0x03caa1871bb9fe7f9b11217c245c16e4ded33367df5b3ccb2c6d0a847a217d1b",
       "block": 23878509,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2025-11-25T21:35:35+00:00",
+      "directImplementationAbsolutePrestateRead": "0x03caa1871bb9fe7f9b11217c245c16e4ded33367df5b3ccb2c6d0a847a217d1b",
       "event": "ImplementationSet",
       "gameType": 0,
       "hash": "0x9db1c4db36d2172dd0c1c4137865340d8d979f5204b131a00cc4f148ed15ca79",
@@ -199173,10 +199259,10 @@
       "transactionHash": "0x7c9e6b65258838fb38bc0bf584cb0c0802bc0dfbbe877a8639880e2ed88b3aa6"
     },
     {
-      "absolutePrestate": "0x0000000000000000000000000000000000000000000000000000000000000000",
       "block": 24427874,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-02-10T17:30:23+00:00",
+      "directImplementationAbsolutePrestateRead": "0x0000000000000000000000000000000000000000000000000000000000000000",
       "event": "ImplementationSet",
       "gameType": 1,
       "hash": "0xfb8d0c0253a62da3b2ea7b490d1f79afed7a5dc10d9559c7a60591b5eb3b01de",
@@ -199198,10 +199284,10 @@
       "transactionHash": "0x5672a02ba8c40bd35c87787ceddff5181c588e697a1924be6ea061af71cbb4ca"
     },
     {
-      "absolutePrestate": "0x0000000000000000000000000000000000000000000000000000000000000000",
       "block": 24427874,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-02-10T17:30:23+00:00",
+      "directImplementationAbsolutePrestateRead": "0x0000000000000000000000000000000000000000000000000000000000000000",
       "event": "ImplementationSet",
       "gameType": 0,
       "hash": "0xfb8d0c0253a62da3b2ea7b490d1f79afed7a5dc10d9559c7a60591b5eb3b01de",
@@ -199223,10 +199309,10 @@
       "transactionHash": "0x5672a02ba8c40bd35c87787ceddff5181c588e697a1924be6ea061af71cbb4ca"
     },
     {
-      "absolutePrestate": "0x0000000000000000000000000000000000000000000000000000000000000000",
       "block": 24427874,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-02-10T17:30:23+00:00",
+      "directImplementationAbsolutePrestateRead": "0x0000000000000000000000000000000000000000000000000000000000000000",
       "event": "ImplementationSet",
       "gameType": 8,
       "hash": "0xfb8d0c0253a62da3b2ea7b490d1f79afed7a5dc10d9559c7a60591b5eb3b01de",
@@ -199260,10 +199346,10 @@
       "transactionHash": "0x5672a02ba8c40bd35c87787ceddff5181c588e697a1924be6ea061af71cbb4ca"
     },
     {
-      "absolutePrestate": null,
       "block": 25475307,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-07-06T18:32:35+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 0,
       "hash": "0xfbdb36453c071f1ac3543236c3ff12f378ae1478e7705f9fb6964e160467ba2e",
@@ -199297,10 +199383,10 @@
       "transactionHash": "0xb3c65cbf6285d4b32d576c866fffced1c77747c53163b604e20feb6aad121421"
     },
     {
-      "absolutePrestate": "0x0000000000000000000000000000000000000000000000000000000000000000",
       "block": 25475307,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-07-06T18:32:35+00:00",
+      "directImplementationAbsolutePrestateRead": "0x0000000000000000000000000000000000000000000000000000000000000000",
       "event": "ImplementationSet",
       "gameType": 1,
       "hash": "0xfbdb36453c071f1ac3543236c3ff12f378ae1478e7705f9fb6964e160467ba2e",
@@ -199334,10 +199420,10 @@
       "transactionHash": "0xb3c65cbf6285d4b32d576c866fffced1c77747c53163b604e20feb6aad121421"
     },
     {
-      "absolutePrestate": "0x0000000000000000000000000000000000000000000000000000000000000000",
       "block": 25475307,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-07-06T18:32:35+00:00",
+      "directImplementationAbsolutePrestateRead": "0x0000000000000000000000000000000000000000000000000000000000000000",
       "event": "ImplementationSet",
       "gameType": 8,
       "hash": "0xfbdb36453c071f1ac3543236c3ff12f378ae1478e7705f9fb6964e160467ba2e",
@@ -199371,10 +199457,10 @@
       "transactionHash": "0xb3c65cbf6285d4b32d576c866fffced1c77747c53163b604e20feb6aad121421"
     },
     {
-      "absolutePrestate": null,
       "block": 25475307,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-07-06T18:32:35+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 4,
       "hash": "0xfbdb36453c071f1ac3543236c3ff12f378ae1478e7705f9fb6964e160467ba2e",
@@ -199408,10 +199494,10 @@
       "transactionHash": "0xb3c65cbf6285d4b32d576c866fffced1c77747c53163b604e20feb6aad121421"
     },
     {
-      "absolutePrestate": null,
       "block": 25475307,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-07-06T18:32:35+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 5,
       "hash": "0xfbdb36453c071f1ac3543236c3ff12f378ae1478e7705f9fb6964e160467ba2e",
@@ -199445,10 +199531,10 @@
       "transactionHash": "0xb3c65cbf6285d4b32d576c866fffced1c77747c53163b604e20feb6aad121421"
     },
     {
-      "absolutePrestate": null,
       "block": 25475307,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-07-06T18:32:35+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 9,
       "hash": "0xfbdb36453c071f1ac3543236c3ff12f378ae1478e7705f9fb6964e160467ba2e",
@@ -199482,10 +199568,10 @@
       "transactionHash": "0xb3c65cbf6285d4b32d576c866fffced1c77747c53163b604e20feb6aad121421"
     },
     {
-      "absolutePrestate": null,
       "block": 25475307,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-07-06T18:32:35+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 10,
       "hash": "0xfbdb36453c071f1ac3543236c3ff12f378ae1478e7705f9fb6964e160467ba2e",
@@ -199519,10 +199605,10 @@
       "transactionHash": "0xb3c65cbf6285d4b32d576c866fffced1c77747c53163b604e20feb6aad121421"
     },
     {
-      "absolutePrestate": null,
       "block": 26048619,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-09-24T16:51:23+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 0,
       "hash": "0x8bf49c3035ecaa8283410136ecff25620c5c9c46a912d1945f1ec447b9c0cb47",
@@ -199556,10 +199642,10 @@
       "transactionHash": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a"
     },
     {
-      "absolutePrestate": null,
       "block": 26048619,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-09-24T16:51:23+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 1,
       "hash": "0x8bf49c3035ecaa8283410136ecff25620c5c9c46a912d1945f1ec447b9c0cb47",
@@ -199593,10 +199679,10 @@
       "transactionHash": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a"
     },
     {
-      "absolutePrestate": null,
       "block": 26048619,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-09-24T16:51:23+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 8,
       "hash": "0x8bf49c3035ecaa8283410136ecff25620c5c9c46a912d1945f1ec447b9c0cb47",
@@ -199630,10 +199716,10 @@
       "transactionHash": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a"
     },
     {
-      "absolutePrestate": null,
       "block": 26048619,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-09-24T16:51:23+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 5,
       "hash": "0x8bf49c3035ecaa8283410136ecff25620c5c9c46a912d1945f1ec447b9c0cb47",
@@ -199667,10 +199753,10 @@
       "transactionHash": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a"
     },
     {
-      "absolutePrestate": null,
       "block": 26048619,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-09-24T16:51:23+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 9,
       "hash": "0x8bf49c3035ecaa8283410136ecff25620c5c9c46a912d1945f1ec447b9c0cb47",
@@ -199704,10 +199790,10 @@
       "transactionHash": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a"
     },
     {
-      "absolutePrestate": null,
       "block": 26048619,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-09-24T16:51:23+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 10,
       "hash": "0x8bf49c3035ecaa8283410136ecff25620c5c9c46a912d1945f1ec447b9c0cb47",
@@ -199741,10 +199827,10 @@
       "transactionHash": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a"
     },
     {
-      "absolutePrestate": null,
       "block": 26048619,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-09-24T16:51:23+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 4,
       "hash": "0x8bf49c3035ecaa8283410136ecff25620c5c9c46a912d1945f1ec447b9c0cb47",
@@ -199778,10 +199864,10 @@
       "transactionHash": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a"
     },
     {
-      "absolutePrestate": null,
       "block": 26299517,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-10-29T16:12:47+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 5,
       "hash": "0xcca6e5f85deb58c0e2987eef98c4dc0ab9a02eb805d05f3cd3e82e3124bcd7ec",
@@ -199803,10 +199889,10 @@
       "transactionHash": "0x626a5b99524a4602fdb8e373f2148e88fb9e7bf48740a804c35542bfc532de2f"
     },
     {
-      "absolutePrestate": null,
       "block": 26430859,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-11-16T23:23:59+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 0,
       "hash": "0x4614b93aa7c5c4b7daa98b105b3d1f7232ce37372c83b13a8fef33c417803ff7",
@@ -199840,10 +199926,10 @@
       "transactionHash": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
     },
     {
-      "absolutePrestate": null,
       "block": 26430859,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-11-16T23:23:59+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 1,
       "hash": "0x4614b93aa7c5c4b7daa98b105b3d1f7232ce37372c83b13a8fef33c417803ff7",
@@ -199877,10 +199963,10 @@
       "transactionHash": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
     },
     {
-      "absolutePrestate": null,
       "block": 26430859,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-11-16T23:23:59+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 8,
       "hash": "0x4614b93aa7c5c4b7daa98b105b3d1f7232ce37372c83b13a8fef33c417803ff7",
@@ -199914,10 +200000,10 @@
       "transactionHash": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
     },
     {
-      "absolutePrestate": null,
       "block": 26430859,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-11-16T23:23:59+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 5,
       "hash": "0x4614b93aa7c5c4b7daa98b105b3d1f7232ce37372c83b13a8fef33c417803ff7",
@@ -199951,10 +200037,10 @@
       "transactionHash": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
     },
     {
-      "absolutePrestate": null,
       "block": 26430859,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-11-16T23:23:59+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 9,
       "hash": "0x4614b93aa7c5c4b7daa98b105b3d1f7232ce37372c83b13a8fef33c417803ff7",
@@ -199988,10 +200074,10 @@
       "transactionHash": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
     },
     {
-      "absolutePrestate": null,
       "block": 26430859,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-11-16T23:23:59+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 10,
       "hash": "0x4614b93aa7c5c4b7daa98b105b3d1f7232ce37372c83b13a8fef33c417803ff7",
@@ -200025,10 +200111,10 @@
       "transactionHash": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
     },
     {
-      "absolutePrestate": null,
       "block": 26430859,
       "contract": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
       "dateUTC": "2026-11-16T23:23:59+00:00",
+      "directImplementationAbsolutePrestateRead": null,
       "event": "ImplementationSet",
       "gameType": 4,
       "hash": "0x4614b93aa7c5c4b7daa98b105b3d1f7232ce37372c83b13a8fef33c417803ff7",

@@ -1,0 +1,31 @@
+{
+  "source": "http://127.0.0.1:7545",
+  "safety": "eth_getTransactionByHash, eth_getBlockByNumber and eth_getStorageAt only",
+  "upgrades": {
+    "v5": {
+      "hash": "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5",
+      "block": 23877377,
+      "fixture": "fixtures/upgrade-v5.json"
+    },
+    "v6": {
+      "hash": "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37",
+      "block": 24421512,
+      "fixture": "fixtures/upgrade-v6.json"
+    },
+    "v7": {
+      "hash": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+      "block": 25397811,
+      "fixture": "fixtures/upgrade-v7.json"
+    },
+    "v8": {
+      "hash": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+      "block": 26048619,
+      "fixture": "fixtures/upgrade-v8.json"
+    },
+    "v9": {
+      "hash": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+      "block": 26430859,
+      "fixture": "fixtures/upgrade-v9.json"
+    }
+  }
+}

@@ -64,6 +64,28 @@ def clean_title(path: Path) -> str:
     return title or fallback.get(ident, f"PASS A primitive {ident}")
 
 
+def pass_a_status(paths: list[Path]) -> str:
+    """Preserve each source primitive's own confidence statement in the ingest."""
+    statuses = []
+    for path in paths:
+        ident = path.stem
+        lines = path.read_text().splitlines()
+        confidence = None
+        for idx, line in enumerate(lines):
+            plain = line.strip().replace("**", "").rstrip("  ")
+            if plain.lower().startswith("confidence:"):
+                confidence = plain.split(":", 1)[1].strip().rstrip(".")
+                break
+            if plain.lower() == "## confidence / benign explanation":
+                confidence = next((item.strip() for item in lines[idx + 1:] if item.strip() and not item.startswith("#")), None)
+                break
+        confidence = (confidence or "no explicit confidence statement in the source primitive").split(". ", 1)[0].rstrip(".")
+        statuses.append(
+            f"{ident}: confidence — {confidence}; PASS A disposition — primitive retained, no established permissionless bounty impact"
+        )
+    return " | ".join(statuses)
+
+
 # These are mechanism-identical duplicate reports, not merely related observations.
 DEDUP_GROUPS = [
     ["0104", "0705"],
@@ -569,7 +591,7 @@ def build_primitives() -> tuple[list[dict], dict[str, str]]:
             "UNREVIEWED_CROSS_UPGRADE_EDGE": facts["edge"],
             "NEXT_EXPERIMENT": next_experiment(members, family),
             "priority": priority_for(members),
-            "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact",
+            "pass_a_status": pass_a_status(paths),
         }
         rec.update(PRIMITIVE_OVERRIDES.get(members[0], {}))
         records.append(rec)
@@ -1065,26 +1087,33 @@ def build_lineage() -> list[dict]:
     return data
 
 
-def build_dead_ends() -> None:
+def build_dead_ends() -> int:
     rej = "/home/user/Tracking_Body/optimism-u21-novel-hunt/rejected"
+    families = [
+        ("Upgrade authority / initializer / atomicity", "Implementations are initializer-disabled; live proxies ended at the intended initializer version; OPCM and ProxyAdmin mutations remain owner-gated; StorageSetter and reinitialization occur atomically in the governed transaction.", "no for the tested U21 bundle", "0101 0102 0103 0105 0203 0209 2102 2103 2104 2202"),
+        ("Upgrade wiring / storage / implementation selection", "Exact replay, slot deltas, bytecode matching, and getter cross-checks found the intended same-chain pointers and implementations; nonzero legacy words remained explicit unread spacers.", "yes — another historical layout, chain, or ordering can differ", "0104 0106 0108 0201 0202 0205 0206 0208 0606 1206 2101 2106 2201"),
+        ("Permissionless deployment / CREATE2 pre-positioning", "Permissionless deployment and governed delegatecall use different deployer/ownership/salt domains; callers acquire no authority over existing chains and cannot occupy the governed address domain tested.", "no unless a future governed flow changes its call/deployer domain", "0110 0705 2108 2705"),
+        ("Validator and observational tooling", "Validator failures and mutable snapshots are diagnostics, not authorization; the checked validator derives the same targets as the upgrade and cannot mutate them.", "yes — live configuration at a later migration block must be re-read", "0111 1207 2107 3204"),
+        ("Pause, feature, and configuration pivots", "Current value exits resolve to the intended lockbox/global pause key and privileged actors alone mutate pause/configuration state; deposits staying open is directional design, not a bypass.", "yes — historical pointer/key divergence or a later privileged feature transition", "0107 0207 0310 0601 0602 0603 0604 0906 1104 1205 2204 2304 2601 2602 2604 3103"),
+        ("Portal / lockbox conservation and accounting", "Executable paths lock or unlock exact value, rollback or relock on failure, and retain hash-global finalization; an aggregate lockbox has no exploitable per-portal debit without a valid authorized withdrawal.", "yes — pre-pooling liability, surplus ETH, or authorization history remains historical", "0301 0303 0305 0307 0308 0311 0407 0902 1208 2301 2302 2303 2306 2307 2906"),
+        ("Callback, unsafe-target, and reentrancy compositions", "Portal/lockbox guards, authorization, unsafe-target checks, and transaction rollback prevented callbacks or spoofed shared-owner probes from gaining a second debit or protocol authority.", "yes — sibling/retired topology after a different migration can reopen target identity", "0309 0410 1003 1005 2305 2408 2901 2902 3002 3003 3105 3203"),
+        ("Proof storage, deletion, and withdrawal uniqueness", "Proof cells are submitter-isolated while finalization is hash-global; deletion is condition-gated and never clears replay protection; array growth or re-proving did not create execution authority.", "yes — a pre-fault-proof non-game proof or distinct historical hash domain", "0204 0404 0409 0501 0502 0503 0504 0506 1105 1204 2203 2308 2402 2403 2501 2502 2503 2504 2505 2506 2508 2509 2510 3104 3202"),
+        ("Old-proof validity across registry migration", "Fresh DGF/ASR migration changes registration and retirement so old proof bytes persist but their old game does not silently retain current execution authority.", "yes — deployed migration ordering/inputs, other chains, and old official games", "0505 0507 0708 0905 2407 2507"),
+        ("Messenger outcomes, replay, and nested relay", "A nonreverting relay records success or failure, while v9 rolls back a failed authenticated L1CDM withdrawal; message hashes and Portal finalization prevent a second economic execution.", "yes — legacy hash equivalence, L3 nesting, or a still-old remote messenger", "0302 0401 0402 0403 0405 0802 0803 0804 0806 0808 1101 1203 2404 2405 2409 2410 3101 3108 3201"),
+        ("Gas budgets, EVM reserves, and large calldata", "The exercised current boundaries produced retryable failure or transaction rollback, not finalized-with-neither; callers can add gas and authenticated messenger failure is atomic at the Portal.", "yes — Amsterdam/EIP-7825 activation, old L2 budgets, or a production-sized deposit", "0304 0306 0406 0408 0605 0801 0805 0807 1004 1102 1103 1201 1209 2401 2406 3005 3106 3107 3206"),
+        ("Super-root structure, game identity, and validity", "Duplicate/foreign entries, type variants, proposer identity, or a forged proof still require a registered respected game and its challenge/fault-proof validity; structure alone did not authorize a withdrawal.", "yes — pre-v1.9 kona soundness, type-5 forwarding, or an unrecomputed historical root", "0701 0702 0703 0706 0707 2701 2702 2703 2704 2706 2904 3102 3207"),
+        ("Old clone / DGF / ASR semantic compatibility", "Existing clones keep immutable dependencies and prestates; DGF configuration changes affect future clones, and the interfaces consumed by old games remained available through U21.", "yes — a concrete old clone with a different immutable layout or pause resolver", "0109 0704 1202 2105 2205 2605 3004"),
+        ("DelayedWETH and in-flight bond credit", "Bond credits remained game/owner-scoped and delayed; the tested pause and recovery changes did not transfer or freeze another game's in-flight credit.", "yes — legacy WETH proxy populations and historical credit must be enumerated", "1002 2606 3001"),
+        ("Shared migration topology and sticky authorization", "Migration entry points are privileged and expected atomic; shared-owner, balance, and topology validation blocked the tested permissionless races, donations, aliases, and re-migration paths.", "yes — eventual migration-block balances, finite type lists, and monotonic retired authorization", "0901 0903 0904 2309 2603 2903 2905 3205 3208"),
+        ("Library / formatter-only semantic-change hypotheses", "Pinned source and bytecode comparison found no live semantic change for the alleged formatter/library deltas in the U21 callers.", "no for the indexed U21 surfaces; earlier release callers remain a separate historical question", "1001 3006"),
+        ("Programme-scope exclusions", "The named current ASR, DelayedWETH, and sibling-chain proxies are explicitly excluded by the programme scope; this is a scope kill, not a technical safety result.", "no — reopen only if programme scope changes", "3301 3302 3303"),
+    ]
+    expected = sorted(p.stem.removeprefix("REJ-") for p in (PASS_A / "rejected").glob("REJ-*.md"))
+    covered = [ident for _, _, _, ids in families for ident in ids.split()]
+    assert sorted(covered) == expected and len(covered) == len(set(covered)) == 180
     rows = [
-        ("Upgrade execution / initializer replay", "The exact U21 bundle was replayed against N-1; proxy storage and initializer versions matched N, implementations were disabled, and wrong same-version offsets either reverted or remained privileged.", "no", f"{rej}/REJ-0101.md; {rej}/REJ-2101.md; {rej}/REJ-2201.md; {rej}/REJ-2205.md"),
-        ("Legacy storage reinterpretation", "Nonzero legacy words/spacers did not feed a current getter or deposit path; layouts retained explicit spacers rather than reusing the slots.", "yes — another chain or pre-v7 layout can differ", f"{rej}/REJ-0201.md; {rej}/REJ-0202.md; {rej}/REJ-2202.md"),
-        ("Direct implementation / partial upgrade takeover", "Implementations disable initialization and ProxyAdmin/OPCM paths require the production authority; StorageSetter+initializer changes are atomic in the governed call.", "no", f"{rej}/REJ-0103.md; {rej}/REJ-2102.md; {rej}/REJ-2103.md"),
-        ("Portal/lockbox conservation", "For executable paths, lockbox delta equals locked minus unlocked; target failure rolls back or relocks exactly and global finalization prevents a second debit.", "yes — pre-U16 portal/failed-withdrawal residue remains historical", f"{rej}/REJ-0301.md; {rej}/REJ-2301.md; {rej}/REJ-2302.md; {rej}/REJ-2901.md"),
-        ("Shared lockbox cross-portal drain today", "Observed authorization is diagonal and Portal unlock enforces authorized caller plus balance/reentrancy checks; no per-portal quota is exploitable without a valid withdrawal.", "yes — event history/ownership divergence can change the premise", f"{rej}/REJ-0901.md; {rej}/REJ-2902.md; {rej}/REJ-2903.md"),
-        ("Proof deletion enables execution/replay", "Deletion is limited to permanent challenger-win or blacklist invalidation, clears only one submitter cell, and cannot clear the hash-global finalized bit.", "yes — a historical non-game proof address reopens cleanup reachability", f"{rej}/REJ-0501.md; {rej}/REJ-2501.md; {rej}/REJ-2506.md"),
-        ("Multiple submitters / re-prove double withdrawal", "Proof cells are isolated but finalizedWithdrawals is hash-global; array duplicates are enumeration garbage, not additional execution authority.", "no, except a distinct historical hash domain for one economic action", f"{rej}/REJ-0401.md; {rej}/REJ-2403.md; {rej}/REJ-2502.md; {rej}/REJ-2503.md"),
-        ("Current-registry proof survives fresh shared migration", "A fresh DGF changes factory registration and a fresh ASR stamps retirement time; the old proof bytes persist but checkWithdrawal rejects the referenced old game.", "yes — only if deployed migration ordering/inputs differ", f"{rej}/REJ-0704.md; {rej}/REJ-2505.md; {rej}/REJ-2705.md"),
-        ("Messenger double relay / finalized-without-record", "Every normal nonreverting relay writes success or failure; v9 Portal reverts a failed L1CDM subcall, and hash-global Portal finalization prevents a second withdrawal execution.", "yes — Amsterdam/L2CDM timing or legacy hash equivalence", f"{rej}/REJ-0403.md; {rej}/REJ-0801.md; {rej}/REJ-1201.md; {rej}/REJ-3101.md"),
-        ("Nested replay theft", "Nested finalization can park ETH in L1CDM failedMessages but cannot claim it under a different message or suppress an honest retry; direct Portal reentrancy is blocked.", "no for theft; L3 composition remains open", f"{rej}/REJ-0304.md; {rej}/REJ-1102.md; {rej}/REJ-1202.md"),
-        ("Pause misses a current value exit", "Current ETH/ERC20/ERC721 release paths resolve to the lockbox key and revert while it is paused; deposits/locks remaining open is deliberate directional semantics.", "yes — historic pointer/key divergence", f"{rej}/REJ-0601.md; {rej}/REJ-1204.md; {rej}/REJ-2602.md; {rej}/REJ-3102.md"),
-        ("Expired/arbitrary pause as permissionless freeze", "Only Guardian mutates timestamps; arbitrary identifiers are inert unless a consumer points to them, and expiry returns false although operational reset is awkward.", "yes — current-state-only pointer premise", f"{rej}/REJ-0603.md; {rej}/REJ-0604.md; {rej}/REJ-2603.md"),
-        ("Malformed/noncanonical super root directly wins", "Structural acceptance does not bypass the respected game, challenge window, and fault-proof soundness; duplicate/unsorted entries still need a defender win.", "yes — pre-v1.9 kona soundness is L1", f"{rej}/REJ-0701.md; {rej}/REJ-2701.md; {rej}/REJ-2702.md"),
-        ("Invalid-legacy-game hypothesis on OP", "The full OP census found the tested third-party defender-win root canonical; current validity alone does not establish a bad historical root.", "yes — other chains and un-recomputed official roots", f"{rej}/REJ-0101.md; {rej}/REJ-0702.md; {rej}/REJ-2703.md"),
-        ("CREATE2 pre-positioning of governed migration", "Standalone Utils and legitimate delegatecall contexts have different CREATE2 deployers; the actual migration salt includes timestamp and governed flow context.", "no unless a future flow CALLs Utils", f"{rej}/REJ-2104.md; {rej}/REJ-2704.md; {rej}/REJ-3004.md"),
-        ("Gas boundary is permanent loss under current rules", "Current v9 tests found retryable failure rather than finalized-neither; users can add gas and Portal reverts failed messenger subcalls.", "yes — future Amsterdam/EIP-7825 or L2 still-old messenger", f"{rej}/REJ-0804.md; {rej}/REJ-1001.md; {rej}/REJ-3006.md; {rej}/REJ-3202.md"),
-        ("Migration validator observations are onchain invariants", "Zero-balance and finite game-type checks are mutable snapshots/operational validation, not authorization or conservation invariants.", "yes — live balances/game types at the eventual migration block", f"{rej}/REJ-0902.md; {rej}/REJ-3005.md; {rej}/REJ-3201.md"),
+        (family, fact, current, "; ".join(f"{rej}/REJ-{ident}.md" for ident in ids.split()))
+        for family, fact, current, ids in families
     ]
     md = [
         "# Dead ends — do not redo without the stated historical reopen condition",
@@ -1098,6 +1127,7 @@ def build_dead_ends() -> None:
         md.append(f"| {fam} | {fact} | {current} | `{evidence.replace('; ', '`; `')}` |")
     md.extend(["", "## Limits", "", "PASS A did not exhaust pre-Bedrock proof records, every chain's historical blacklist/type/retirement transitions, the pre-v1.9 kona program, Amsterdam/EIP-7825 execution, or the eventual shared-migration block state. Those are not negative findings and are the only justified reopenings above."])
     (OUT / "DEAD-ENDS-NO-REDO.md").write_text("\n".join(md) + "\n")
+    return len(families)
 
 
 def main() -> None:
@@ -1105,11 +1135,14 @@ def main() -> None:
     records, source_to_a = build_primitives()
     build_matrix(records, source_to_a)
     lineage = build_lineage()
-    build_dead_ends()
+    dead_end_families = build_dead_ends()
     summary = {
         "source_primitive_files": sum(len(r["source_files"]) for r in records),
         "deduplicated_records": len(records),
         "priority_counts": {p: sum(r["priority"] == p for r in records) for p in ["P0", "P1", "P2"]},
+        "source_rejection_files": 180,
+        "dead_end_families": dead_end_families,
+        "matrix_axes": sum(r["priority"] in {"P0", "P1"} for r in records),
         "lineage_records": len(lineage),
     }
     (OUT / "BUILD-SUMMARY.json").write_text(json.dumps(summary, indent=2) + "\n")

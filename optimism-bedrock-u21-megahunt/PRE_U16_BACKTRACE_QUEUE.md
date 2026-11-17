@@ -59,3 +59,10 @@ F4 status update (appended 2026-11-17, rows above are not edited; Opus 5.5 run, 
 - B06 -> storage facts only (§4.1, §4.6, `REJ-F4-06.md`); pause-identifier semantics stay with the pause owner.
 - B02 / B10 -> storage side done (slots unchanged at every tag, 88/88 sampled hashes); entry-level full scan still open.
 - New: PRIM-F4-01 (U20 ASR anchor unit change; Unichain / Soneium census open), PRIM-F4-02, PRIM-F4-03.
+
+F5 status update (appended 2026-11-17, rows above are not edited; model Opus 5.5 per CLAUDE.md exception):
+- B13 -> DONE: `CHAIN-HISTORY-DIFFERENTIAL.md` (14 divergence rows), `chains/<CHAIN>/*` for OP / Ink / Soneium / Unichain, fork tests `test/F5/F5_ChainHistoryDifferential{,2}.t.sol` (6/6 PASS @26433900). No unprivileged security-relevant chain-to-chain divergence; Soneium differs only by its permissioned game-type set.
+- Input for B03: portal / L1CDM / L1StandardBridge = 0 ETH on all four chains at every post-U16 upgrade block; migrated OP 236,752.243 / Ink 6,020.611 / Soneium 8,877.051 / Unichain 133,613.248 ETH; lockboxes @26433900 182,541.068 / 23,088.758 / 2,195.560 / 18,266.158.
+- Input for B04: all 43,480 non-retired games bound to the live ASR (C15); blacklist empty on all chains; respected-type history OP/Ink/Unichain 0→8→9, Soneium 1→5; two invalid in-progress third-party type-9 games (Ink #2638, Unichain #17586) countered and inert. PRIM-F5-01: the orphaned gen2 ASRs accept live-registry games and anyone can move their anchor (inert).
+- Input for B06: no per-identifier pause ever hit the four chains; shared SuperchainConfig global pause 2025-05-13 (~10 min); identifier pause of Swellchain's portal 2026-08-05, expired 2026-11-04.
+- Input for B09: ETH in legacy DelayedWETH: OP 0.16+0.08+0.08, Ink 0.08, Unichain 0.08 (owner still Unichain Safe 0x6d5b183f…), Soneium 0.

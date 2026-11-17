@@ -54,6 +54,12 @@ if dupes:
 if EXCLUDED & set(actual_sources):
     fail("excluded 3301..3303 entered PRIMITIVES.json")
 
+dead_ends = (OUT / "DEAD-ENDS-NO-REDO.md").read_text()
+covered_rejections = re.findall(r"/rejected/(REJ-\d+\.md)", dead_ends)
+expected_rejections = sorted(p.name for p in (SRC.parent / "rejected").glob("REJ-*.md"))
+if sorted(covered_rejections) != expected_rejections or len(covered_rejections) != len(set(covered_rejections)):
+    fail("dead-end rejection coverage is not exact/unique")
+
 matrix_records = [r["id"] for r in records if r["priority"] in {"P0", "P1"}]
 with (OUT / "PRIMITIVE-COMPATIBILITY-MATRIX.csv").open(newline="") as fh:
     matrix = list(csv.reader(fh))
@@ -101,4 +107,4 @@ for required in ["PRIMITIVES.json", "PRIMITIVE-COMPATIBILITY-MATRIX.csv", "DEAD-
     if not (OUT / required).is_file() or (OUT / required).stat().st_size == 0:
         fail(f"missing/empty deliverable: {required}")
 
-print(f"CW0DeliverablesValidation: PASS — {len(actual_sources)} sources -> {len(records)} records; {len(matrix_records)} P0/P1 matrix axes; {len(lineage)} lineage records; {len(refs)} pinned citations checked")
+print(f"CW0DeliverablesValidation: PASS — {len(actual_sources)} sources -> {len(records)} records; {len(covered_rejections)} rejections covered; {len(matrix_records)} P0/P1 matrix axes; {len(lineage)} lineage records; {len(refs)} pinned citations checked")

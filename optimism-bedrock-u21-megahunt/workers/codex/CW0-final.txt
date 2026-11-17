@@ -1,0 +1,34 @@
+Completed the independent Track-A mirror without reading worker/audit outputs or sending state-changing RPCs/public transactions.
+
+Files:
+
+- [PRIMITIVES.json](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CW0/PRIMITIVES.json)
+- [PRIMITIVE-COMPATIBILITY-MATRIX.csv](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CW0/PRIMITIVE-COMPATIBILITY-MATRIX.csv)
+- [DEAD-ENDS-NO-REDO.md](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CW0/DEAD-ENDS-NO-REDO.md)
+- [SEMANTIC-LINEAGE.md](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CW0/SEMANTIC-LINEAGE.md) and [JSON](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CW0/SEMANTIC-LINEAGE.json)
+- [CW0 report](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CW0-report.md)
+
+Locked facts:
+
+- 112 in-scope primitive sources became 89 conservative exact-deduplicated records: 24 P0, 58 P1, 7 P2.
+- All 180 rejections are covered exactly once across 17 dead-end families.
+- Proof identity evolved from hash-global L2OO proof storage to per-submitter game proofs, while finalization stayed hash-global.
+- Custody moved Portal → per-chain/shared ETHLockbox; pause identity moved local → global → scoped → lockbox-keyed.
+- ASR moved per-type anchors → one shared anchor/predicate pipeline; DGF UUID remained stable while clone argument meaning changed.
+
+P0 primitives cluster around:
+
+- A-002: old-prestate type-9 consumption.
+- A-004/A-008/A-079: type-5 proposer and shared-anchor identity.
+- A-012: nested replay parked messenger value.
+- A-022/A-044: forged/Trojan super-root proofs.
+- A-017/A-035/A-041/A-045/A-046/A-086/A-089: cross-version gas budgets.
+- A-034/A-040/A-061/A-071/A-074/A-081/A-085: migration residue.
+- A-060: pooled lockbox liability.
+- A-087: calldata-proportional deposit gas boundary.
+
+No new `PRIM-CW0`, rejection, or candidate was warranted. Candidate readiness: **0/10**—no permissionless impact survived falsification.
+
+Strongest negatives: hash-global replay protection, condition-gated proof deletion, exact rollback/relock on call failure, and fresh DGF/ASR invalidation of old proofs.
+
+Next wave: pre-v1.9 type-9 execution; migration residue plus per-chain ETH liability; Amsterdam/EIP-7825 gas-cap arithmetic. `CW0DeliverablesValidation` passes with 265 pinned citations.

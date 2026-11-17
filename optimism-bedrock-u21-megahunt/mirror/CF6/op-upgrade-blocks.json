@@ -1,0 +1,1324 @@
+{
+  "chainId": 1,
+  "rpcUsed": "http://127.0.0.1:7545",
+  "headBlock": 26430859,
+  "checkpointStep": 10000,
+  "method": "EIP-1967 Upgraded and AddressManager AddressSet log blocks are verified against block-end storage; the eventless ChugSplash bridge is sampled every <=10,000 blocks and each changed interval is refined by binary search",
+  "limitation": "an A->B->A round trip wholly inside one checkpoint interval is invisible; same-transaction transient implementations are intentionally excluded",
+  "contracts": {
+    "OptimismPortal": {
+      "proxy": "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+      "proxyKind": "EIP-1967",
+      "storageAddress": "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+      "storageSlot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+      "proxyDeploymentBlock": 17365802,
+      "discovery": "upgrade-event blocks verified by storage at block-1 and block",
+      "transitions": [
+        {
+          "beforeBlock": 17423157,
+          "afterBlock": 17423158,
+          "beforeImplementation": "0x0000000000000000000000000000000000000000",
+          "afterImplementation": "0x28a55488fef40005309e2da0040dbe9d300a64ab",
+          "transactionHashes": [
+            "0xe2ff41f9bdf03d5455f55539b8b9c350276a179ca7f79322e2077d7c1ffb1268"
+          ]
+        },
+        {
+          "beforeBlock": 19314492,
+          "afterBlock": 19314493,
+          "beforeImplementation": "0x28a55488fef40005309e2da0040dbe9d300a64ab",
+          "afterImplementation": "0xababe63514ddd6277356f8cc3d6518aa8bdeb4de",
+          "transactionHashes": [
+            "0x3f7c36a1d636cdb23bf4f9171c27ebe58b73f4c0e6a33dbaac2c2f3c142faf50"
+          ]
+        },
+        {
+          "beforeBlock": 19634865,
+          "afterBlock": 19634866,
+          "beforeImplementation": "0xababe63514ddd6277356f8cc3d6518aa8bdeb4de",
+          "afterImplementation": "0x2d778797049fe9259d947d1ed8e5442226dfb589",
+          "transactionHashes": [
+            "0x4758bd62359bc69d7e8a0faaf5308d826379c23258d689a7430d5c0ad0361ad2"
+          ]
+        },
+        {
+          "beforeBlock": 20062695,
+          "afterBlock": 20062696,
+          "beforeImplementation": "0x2d778797049fe9259d947d1ed8e5442226dfb589",
+          "afterImplementation": "0xe2f826324b2faf99e513d16d266c3f80ae87832b",
+          "transactionHashes": [
+            "0xbe810ed6e1e827930bd46cde42c4883662ddb6d244a26af2f0409cc2782bee61"
+          ]
+        },
+        {
+          "beforeBlock": 22182530,
+          "afterBlock": 22182531,
+          "beforeImplementation": "0xe2f826324b2faf99e513d16d266c3f80ae87832b",
+          "afterImplementation": "0x2d7e764a0d9919e16983a46595cfa81fc34fa7cd",
+          "transactionHashes": [
+            "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29"
+          ]
+        },
+        {
+          "beforeBlock": 22339995,
+          "afterBlock": 22339996,
+          "beforeImplementation": "0x2d7e764a0d9919e16983a46595cfa81fc34fa7cd",
+          "afterImplementation": "0xb443da3e07052204a02d630a8933dac05a0d6fb4",
+          "transactionHashes": [
+            "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12"
+          ]
+        },
+        {
+          "beforeBlock": 22990598,
+          "afterBlock": 22990599,
+          "beforeImplementation": "0xb443da3e07052204a02d630a8933dac05a0d6fb4",
+          "afterImplementation": "0xefed7f38bb9be74bba583a1a5b7d0fe7c9d5787a",
+          "transactionHashes": [
+            "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+          ]
+        },
+        {
+          "beforeBlock": 23491327,
+          "afterBlock": 23491328,
+          "beforeImplementation": "0xefed7f38bb9be74bba583a1a5b7d0fe7c9d5787a",
+          "afterImplementation": "0x381e729ff983fa4bced820e7b922d79bf653b999",
+          "transactionHashes": [
+            "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329"
+          ]
+        },
+        {
+          "beforeBlock": 23877376,
+          "afterBlock": 23877377,
+          "beforeImplementation": "0x381e729ff983fa4bced820e7b922d79bf653b999",
+          "afterImplementation": "0x7cf803296662e8c72a6c1d6450572209acf7f202",
+          "transactionHashes": [
+            "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5"
+          ]
+        },
+        {
+          "beforeBlock": 24421511,
+          "afterBlock": 24421512,
+          "beforeImplementation": "0x7cf803296662e8c72a6c1d6450572209acf7f202",
+          "afterImplementation": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+          "transactionHashes": [
+            "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37"
+          ]
+        },
+        {
+          "beforeBlock": 25397810,
+          "afterBlock": 25397811,
+          "beforeImplementation": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+          "afterImplementation": "0xe89f13c5ee4033b2d3cd76c9d6958efbfe26d3c2",
+          "transactionHashes": [
+            "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+          ]
+        },
+        {
+          "beforeBlock": 26048618,
+          "afterBlock": 26048619,
+          "beforeImplementation": "0xe89f13c5ee4033b2d3cd76c9d6958efbfe26d3c2",
+          "afterImplementation": "0x1005217ad392dc64cef501fa1777a27d42166748",
+          "transactionHashes": [
+            "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a"
+          ]
+        },
+        {
+          "beforeBlock": 26430858,
+          "afterBlock": 26430859,
+          "beforeImplementation": "0x1005217ad392dc64cef501fa1777a27d42166748",
+          "afterImplementation": "0xb20b23af6071405c37ddda0c0640e8ebb7899645",
+          "transactionHashes": [
+            "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
+          ]
+        }
+      ]
+    },
+    "SystemConfig": {
+      "proxy": "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290",
+      "proxyKind": "EIP-1967",
+      "storageAddress": "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290",
+      "storageSlot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+      "proxyDeploymentBlock": 17365804,
+      "discovery": "upgrade-event blocks verified by storage at block-1 and block",
+      "transitions": [
+        {
+          "beforeBlock": 17422443,
+          "afterBlock": 17422444,
+          "beforeImplementation": "0x0000000000000000000000000000000000000000",
+          "afterImplementation": "0x5efa852e92800d1c982711761e45c3fe39a2b6d8",
+          "transactionHashes": [
+            "0x76bceccd7d44656f5a129a600a6120091570b897c1d45c18cd7134cfe67c2537"
+          ]
+        },
+        {
+          "beforeBlock": 19314492,
+          "afterBlock": 19314493,
+          "beforeImplementation": "0x5efa852e92800d1c982711761e45c3fe39a2b6d8",
+          "afterImplementation": "0x33a032ec93ec0c492ec4bf0b30d5f51986e5a314",
+          "transactionHashes": [
+            "0x3f7c36a1d636cdb23bf4f9171c27ebe58b73f4c0e6a33dbaac2c2f3c142faf50"
+          ]
+        },
+        {
+          "beforeBlock": 19634865,
+          "afterBlock": 19634866,
+          "beforeImplementation": "0x33a032ec93ec0c492ec4bf0b30d5f51986e5a314",
+          "afterImplementation": "0xba2492e52f45651b60b8b38d4ea5e2390c64ffb1",
+          "transactionHashes": [
+            "0x4758bd62359bc69d7e8a0faaf5308d826379c23258d689a7430d5c0ad0361ad2"
+          ]
+        },
+        {
+          "beforeBlock": 20062695,
+          "afterBlock": 20062696,
+          "beforeImplementation": "0xba2492e52f45651b60b8b38d4ea5e2390c64ffb1",
+          "afterImplementation": "0xf56d96b2535b932656d3c04ebf51babff241d886",
+          "transactionHashes": [
+            "0xbe810ed6e1e827930bd46cde42c4883662ddb6d244a26af2f0409cc2782bee61"
+          ]
+        },
+        {
+          "beforeBlock": 21695023,
+          "afterBlock": 21695024,
+          "beforeImplementation": "0xf56d96b2535b932656d3c04ebf51babff241d886",
+          "afterImplementation": "0xab9d6cb7a427c0765163a7f45bb91cafe5f2d375",
+          "transactionHashes": [
+            "0x86da7386a26978c3db89e97c1f4feee613a8a0c07bbe4640624b05276f49c350"
+          ]
+        },
+        {
+          "beforeBlock": 22182530,
+          "afterBlock": 22182531,
+          "beforeImplementation": "0xab9d6cb7a427c0765163a7f45bb91cafe5f2d375",
+          "afterImplementation": "0x760c48c62a85045a6b69f07f4a9f22868659cbcc",
+          "transactionHashes": [
+            "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29"
+          ]
+        },
+        {
+          "beforeBlock": 22339995,
+          "afterBlock": 22339996,
+          "beforeImplementation": "0x760c48c62a85045a6b69f07f4a9f22868659cbcc",
+          "afterImplementation": "0x340f923e5c7cbb2171146f64169ec9d5a9ffe647",
+          "transactionHashes": [
+            "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12"
+          ]
+        },
+        {
+          "beforeBlock": 22990598,
+          "afterBlock": 22990599,
+          "beforeImplementation": "0x340f923e5c7cbb2171146f64169ec9d5a9ffe647",
+          "afterImplementation": "0xfaa660bf783cbaa55e1b7f3475c20db74a53b9fa",
+          "transactionHashes": [
+            "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+          ]
+        },
+        {
+          "beforeBlock": 23491327,
+          "afterBlock": 23491328,
+          "beforeImplementation": "0xfaa660bf783cbaa55e1b7f3475c20db74a53b9fa",
+          "afterImplementation": "0x2bfe4a5bd5a41e9d848d843ebcdfa15954e9a557",
+          "transactionHashes": [
+            "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329"
+          ]
+        },
+        {
+          "beforeBlock": 23877376,
+          "afterBlock": 23877377,
+          "beforeImplementation": "0x2bfe4a5bd5a41e9d848d843ebcdfa15954e9a557",
+          "afterImplementation": "0x2fa28989fc559836e9d66dff3010c7f7f41c65ed",
+          "transactionHashes": [
+            "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5"
+          ]
+        },
+        {
+          "beforeBlock": 24421511,
+          "afterBlock": 24421512,
+          "beforeImplementation": "0x2fa28989fc559836e9d66dff3010c7f7f41c65ed",
+          "afterImplementation": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+          "transactionHashes": [
+            "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37"
+          ]
+        },
+        {
+          "beforeBlock": 25397810,
+          "afterBlock": 25397811,
+          "beforeImplementation": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+          "afterImplementation": "0x42ad0173051225ac784100e9acd43349707f4db9",
+          "transactionHashes": [
+            "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+          ]
+        },
+        {
+          "beforeBlock": 26048618,
+          "afterBlock": 26048619,
+          "beforeImplementation": "0x42ad0173051225ac784100e9acd43349707f4db9",
+          "afterImplementation": "0x670b850a235a6fa98cd7a195eb139d0277e471fa",
+          "transactionHashes": [
+            "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a"
+          ]
+        },
+        {
+          "beforeBlock": 26430858,
+          "afterBlock": 26430859,
+          "beforeImplementation": "0x670b850a235a6fa98cd7a195eb139d0277e471fa",
+          "afterImplementation": "0xade27248542c0f3e89b49e4eb76155e267f14377",
+          "transactionHashes": [
+            "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
+          ]
+        }
+      ]
+    },
+    "L1CrossDomainMessenger": {
+      "proxy": "0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1",
+      "proxyKind": "ResolvedDelegateProxy / AddressManager",
+      "storageAddress": "0xdE1FCfB0851916CA5101820A69b13a4E276bd81F",
+      "storageSlot": "0x515216935740e67dfdda5cf8e248ea32b3277787818ab59153061ac875c9385e",
+      "proxyDeploymentBlock": 12686757,
+      "discovery": "upgrade-event blocks verified by storage at block-1 and block",
+      "transitions": [
+        {
+          "beforeBlock": 12686755,
+          "afterBlock": 12686756,
+          "beforeImplementation": "0x0000000000000000000000000000000000000000",
+          "afterImplementation": "0x16393737d09d2722ad13dca3ca8c3db957699f1d",
+          "transactionHashes": [
+            "0xd19d40f11c375feeea5fe47576ce98a3a08caac68b2a8a52fb95dd1a76dd205a"
+          ]
+        },
+        {
+          "beforeBlock": 12706527,
+          "afterBlock": 12706528,
+          "beforeImplementation": "0x16393737d09d2722ad13dca3ca8c3db957699f1d",
+          "afterImplementation": "0xbfba066b5ca610fe70adce45fcb622f945891bb0",
+          "transactionHashes": [
+            "0x98a05fb521b3349dd92cff2e104d78c6c318add003bb501c0d416b2b4d75df8a"
+          ]
+        },
+        {
+          "beforeBlock": 13596293,
+          "afterBlock": 13596294,
+          "beforeImplementation": "0xbfba066b5ca610fe70adce45fcb622f945891bb0",
+          "afterImplementation": "0x0000000000000000000000000000000000000000",
+          "transactionHashes": [
+            "0x2625aa2013fd1a650fb0264d2746be597e12f846baa48a68fe14539c200ed6dc"
+          ]
+        },
+        {
+          "beforeBlock": 13596780,
+          "afterBlock": 13596781,
+          "beforeImplementation": "0x0000000000000000000000000000000000000000",
+          "afterImplementation": "0xd9166833ff12a5f900ccfbf2c8b62a90f1ca1fd5",
+          "transactionHashes": [
+            "0xbabb37235bd38ae5a29717590eedfd9b02f84a12b890b2126feac68f223d7448"
+          ]
+        },
+        {
+          "beforeBlock": 17422443,
+          "afterBlock": 17422444,
+          "beforeImplementation": "0xd9166833ff12a5f900ccfbf2c8b62a90f1ca1fd5",
+          "afterImplementation": "0x0000000000000000000000000000000000000000",
+          "transactionHashes": [
+            "0x76bceccd7d44656f5a129a600a6120091570b897c1d45c18cd7134cfe67c2537"
+          ]
+        },
+        {
+          "beforeBlock": 17423157,
+          "afterBlock": 17423158,
+          "beforeImplementation": "0x0000000000000000000000000000000000000000",
+          "afterImplementation": "0x2150bc3c64cbfddbac9815ef615d6ab8671bfe43",
+          "transactionHashes": [
+            "0xe2ff41f9bdf03d5455f55539b8b9c350276a179ca7f79322e2077d7c1ffb1268"
+          ]
+        },
+        {
+          "beforeBlock": 19314492,
+          "afterBlock": 19314493,
+          "beforeImplementation": "0x2150bc3c64cbfddbac9815ef615d6ab8671bfe43",
+          "afterImplementation": "0xa95b24af19f8907390ed15f8348a1a5e6ccbc5c6",
+          "transactionHashes": [
+            "0x3f7c36a1d636cdb23bf4f9171c27ebe58b73f4c0e6a33dbaac2c2f3c142faf50"
+          ]
+        },
+        {
+          "beforeBlock": 19634865,
+          "afterBlock": 19634866,
+          "beforeImplementation": "0xa95b24af19f8907390ed15f8348a1a5e6ccbc5c6",
+          "afterImplementation": "0xd3494713a5cfad3f5359379dfa074e2ac8c6fd65",
+          "transactionHashes": [
+            "0x4758bd62359bc69d7e8a0faaf5308d826379c23258d689a7430d5c0ad0361ad2"
+          ]
+        },
+        {
+          "beforeBlock": 22182530,
+          "afterBlock": 22182531,
+          "beforeImplementation": "0xd3494713a5cfad3f5359379dfa074e2ac8c6fd65",
+          "afterImplementation": "0x3ea6084748ed1b2a9b5d4426181f1ad8c93f6231",
+          "transactionHashes": [
+            "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29"
+          ]
+        },
+        {
+          "beforeBlock": 22339995,
+          "afterBlock": 22339996,
+          "beforeImplementation": "0x3ea6084748ed1b2a9b5d4426181f1ad8c93f6231",
+          "afterImplementation": "0x5d5a095665886119693f0b41d8dfee78da033e8b",
+          "transactionHashes": [
+            "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12"
+          ]
+        },
+        {
+          "beforeBlock": 22990598,
+          "afterBlock": 22990599,
+          "beforeImplementation": "0x5d5a095665886119693f0b41d8dfee78da033e8b",
+          "afterImplementation": "0xd26bb3aaaa4cb5638a8581a4c4b1d937d8e05c54",
+          "transactionHashes": [
+            "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+          ]
+        },
+        {
+          "beforeBlock": 23491327,
+          "afterBlock": 23491328,
+          "beforeImplementation": "0xd26bb3aaaa4cb5638a8581a4c4b1d937d8e05c54",
+          "afterImplementation": "0x22d12e0faebd62d429514a65ebae32dd316c12d6",
+          "transactionHashes": [
+            "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329"
+          ]
+        },
+        {
+          "beforeBlock": 23877376,
+          "afterBlock": 23877377,
+          "beforeImplementation": "0x22d12e0faebd62d429514a65ebae32dd316c12d6",
+          "afterImplementation": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+          "transactionHashes": [
+            "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5"
+          ]
+        },
+        {
+          "beforeBlock": 25397810,
+          "afterBlock": 25397811,
+          "beforeImplementation": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+          "afterImplementation": "0x59d497530b00062f40950ba8eab88868bf7f86f0",
+          "transactionHashes": [
+            "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+          ]
+        },
+        {
+          "beforeBlock": 26430858,
+          "afterBlock": 26430859,
+          "beforeImplementation": "0x59d497530b00062f40950ba8eab88868bf7f86f0",
+          "afterImplementation": "0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448",
+          "transactionHashes": [
+            "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
+          ]
+        }
+      ]
+    },
+    "L1StandardBridge": {
+      "proxy": "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
+      "proxyKind": "L1ChugSplashProxy / EIP-1967 slot",
+      "storageAddress": "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
+      "storageSlot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+      "proxyDeploymentBlock": 12686786,
+      "transitions": [
+        {
+          "beforeBlock": 12686786,
+          "afterBlock": 12686787,
+          "beforeImplementation": "0x0000000000000000000000000000000000000000",
+          "afterImplementation": "0x9091dda480b232133a7d2e4cb23336b4f0293196"
+        },
+        {
+          "beforeBlock": 13596914,
+          "afterBlock": 13596915,
+          "beforeImplementation": "0x9091dda480b232133a7d2e4cb23336b4f0293196",
+          "afterImplementation": "0x40e0c049f4671846e9cff93aaed88f2b48e527bb"
+        },
+        {
+          "beforeBlock": 17423157,
+          "afterBlock": 17423158,
+          "beforeImplementation": "0x40e0c049f4671846e9cff93aaed88f2b48e527bb",
+          "afterImplementation": "0xbfb731cd36d26c2a7287716de857e4380c73a64a",
+          "transactionHashes": [
+            "0xe2ff41f9bdf03d5455f55539b8b9c350276a179ca7f79322e2077d7c1ffb1268"
+          ]
+        },
+        {
+          "beforeBlock": 19314492,
+          "afterBlock": 19314493,
+          "beforeImplementation": "0xbfb731cd36d26c2a7287716de857e4380c73a64a",
+          "afterImplementation": "0x566511a1a09561e2896f8c0fd77e8544e59bfdb0",
+          "transactionHashes": [
+            "0x3f7c36a1d636cdb23bf4f9171c27ebe58b73f4c0e6a33dbaac2c2f3c142faf50"
+          ]
+        },
+        {
+          "beforeBlock": 19634865,
+          "afterBlock": 19634866,
+          "beforeImplementation": "0x566511a1a09561e2896f8c0fd77e8544e59bfdb0",
+          "afterImplementation": "0x64b5a5ed26dcb17370ff4d33a8d503f0fbd06cff",
+          "transactionHashes": [
+            "0x4758bd62359bc69d7e8a0faaf5308d826379c23258d689a7430d5c0ad0361ad2"
+          ]
+        },
+        {
+          "beforeBlock": 22182530,
+          "afterBlock": 22182531,
+          "beforeImplementation": "0x64b5a5ed26dcb17370ff4d33a8d503f0fbd06cff",
+          "afterImplementation": "0x78972e88ab8bbb517a36caea23b931bab58ad3c6",
+          "transactionHashes": [
+            "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29"
+          ]
+        },
+        {
+          "beforeBlock": 22339995,
+          "afterBlock": 22339996,
+          "beforeImplementation": "0x78972e88ab8bbb517a36caea23b931bab58ad3c6",
+          "afterImplementation": "0x0b09ba359a106c9ea3b181cbc5f394570c7d2a7a",
+          "transactionHashes": [
+            "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12"
+          ]
+        },
+        {
+          "beforeBlock": 22990598,
+          "afterBlock": 22990599,
+          "beforeImplementation": "0x0b09ba359a106c9ea3b181cbc5f394570c7d2a7a",
+          "afterImplementation": "0x44afb7722af276a601d524f429016a18b6923df0",
+          "transactionHashes": [
+            "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+          ]
+        },
+        {
+          "beforeBlock": 23491327,
+          "afterBlock": 23491328,
+          "beforeImplementation": "0x44afb7722af276a601d524f429016a18b6923df0",
+          "afterImplementation": "0xe32b192fb1dca88fcb1c56b3acb429e32238adcb",
+          "transactionHashes": [
+            "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329"
+          ]
+        },
+        {
+          "beforeBlock": 23877376,
+          "afterBlock": 23877377,
+          "beforeImplementation": "0xe32b192fb1dca88fcb1c56b3acb429e32238adcb",
+          "afterImplementation": "0x61525eaacddb97d9184afc205827e6a4fd0bf62a",
+          "transactionHashes": [
+            "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5"
+          ]
+        },
+        {
+          "beforeBlock": 25397810,
+          "afterBlock": 25397811,
+          "beforeImplementation": "0x61525eaacddb97d9184afc205827e6a4fd0bf62a",
+          "afterImplementation": "0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891",
+          "transactionHashes": [
+            "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+          ]
+        }
+      ],
+      "discovery": "<=10,000-block slot checkpoints plus binary search"
+    },
+    "DisputeGameFactory": {
+      "proxy": "0xe5965Ab5962eDc7477C8520243A95517CD252fA9",
+      "proxyKind": "EIP-1967",
+      "storageAddress": "0xe5965Ab5962eDc7477C8520243A95517CD252fA9",
+      "storageSlot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+      "proxyDeploymentBlock": 19884569,
+      "discovery": "upgrade-event blocks verified by storage at block-1 and block",
+      "transitions": [
+        {
+          "beforeBlock": 19884569,
+          "afterBlock": 19884570,
+          "beforeImplementation": "0x0000000000000000000000000000000000000000",
+          "afterImplementation": "0xc641a33cab81c559f2bd4b21ea34c290e2440c2b",
+          "transactionHashes": [
+            "0x2c16c813ff50e9e09a3c58508a9b90293c896f1f91534d09a5002f50bc8760ff"
+          ]
+        },
+        {
+          "beforeBlock": 22182530,
+          "afterBlock": 22182531,
+          "beforeImplementation": "0xc641a33cab81c559f2bd4b21ea34c290e2440c2b",
+          "afterImplementation": "0x4bba758f006ef09402ef31724203f316ab74e4a0",
+          "transactionHashes": [
+            "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29"
+          ]
+        },
+        {
+          "beforeBlock": 22990598,
+          "afterBlock": 22990599,
+          "beforeImplementation": "0x4bba758f006ef09402ef31724203f316ab74e4a0",
+          "afterImplementation": "0x33d1e8571a85a538ed3d5a4d88f46c112383439d",
+          "transactionHashes": [
+            "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+          ]
+        },
+        {
+          "beforeBlock": 23877376,
+          "afterBlock": 23877377,
+          "beforeImplementation": "0x33d1e8571a85a538ed3d5a4d88f46c112383439d",
+          "afterImplementation": "0x74fac1d45b98bae058f8f566201c9a81b85c7d50",
+          "transactionHashes": [
+            "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5"
+          ]
+        },
+        {
+          "beforeBlock": 24421511,
+          "afterBlock": 24421512,
+          "beforeImplementation": "0x74fac1d45b98bae058f8f566201c9a81b85c7d50",
+          "afterImplementation": "0xc040f392e52cb6970ca8e110c280fe24e07c5e2c",
+          "transactionHashes": [
+            "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37"
+          ]
+        },
+        {
+          "beforeBlock": 25397810,
+          "afterBlock": 25397811,
+          "beforeImplementation": "0xc040f392e52cb6970ca8e110c280fe24e07c5e2c",
+          "afterImplementation": "0x72b971717e088b59f26d4236be222adb6acd393b",
+          "transactionHashes": [
+            "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+          ]
+        }
+      ]
+    },
+    "AnchorStateRegistry": {
+      "proxy": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+      "proxyKind": "EIP-1967",
+      "storageAddress": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+      "storageSlot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+      "proxyDeploymentBlock": 22990599,
+      "discovery": "upgrade-event blocks verified by storage at block-1 and block",
+      "transitions": [
+        {
+          "beforeBlock": 22990598,
+          "afterBlock": 22990599,
+          "beforeImplementation": "0x0000000000000000000000000000000000000000",
+          "afterImplementation": "0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e",
+          "transactionHashes": [
+            "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+          ]
+        },
+        {
+          "beforeBlock": 24421511,
+          "afterBlock": 24421512,
+          "beforeImplementation": "0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e",
+          "afterImplementation": "0x36398155cd17cfe804f69b233edda800dd4d5aa5",
+          "transactionHashes": [
+            "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37"
+          ]
+        },
+        {
+          "beforeBlock": 25397810,
+          "afterBlock": 25397811,
+          "beforeImplementation": "0x36398155cd17cfe804f69b233edda800dd4d5aa5",
+          "afterImplementation": "0x8f40cc98d694ab986f026c5383a181fcc9b6b281",
+          "transactionHashes": [
+            "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+          ]
+        },
+        {
+          "beforeBlock": 26430858,
+          "afterBlock": 26430859,
+          "beforeImplementation": "0x8f40cc98d694ab986f026c5383a181fcc9b6b281",
+          "afterImplementation": "0x2b27299c577d4720100e2735b652444dcea652d0",
+          "transactionHashes": [
+            "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
+          ]
+        }
+      ]
+    },
+    "ETHLockbox": {
+      "proxy": "0x322b47Ff1FA8D5611F761e3E275C45B71b294D43",
+      "proxyKind": "EIP-1967",
+      "storageAddress": "0x322b47Ff1FA8D5611F761e3E275C45B71b294D43",
+      "storageSlot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+      "proxyDeploymentBlock": 22990599,
+      "discovery": "upgrade-event blocks verified by storage at block-1 and block",
+      "transitions": [
+        {
+          "beforeBlock": 22990598,
+          "afterBlock": 22990599,
+          "beforeImplementation": "0x0000000000000000000000000000000000000000",
+          "afterImplementation": "0x784d2f03593a42a6e4676a012762f18775ecbbe6",
+          "transactionHashes": [
+            "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+          ]
+        },
+        {
+          "beforeBlock": 25397810,
+          "afterBlock": 25397811,
+          "beforeImplementation": "0x784d2f03593a42a6e4676a012762f18775ecbbe6",
+          "afterImplementation": "0xb3a24db07038b51962026329b62e7a965d56a6ad",
+          "transactionHashes": [
+            "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+          ]
+        },
+        {
+          "beforeBlock": 26430858,
+          "afterBlock": 26430859,
+          "beforeImplementation": "0xb3a24db07038b51962026329b62e7a965d56a6ad",
+          "afterImplementation": "0xdf75e6b07e98873e36ba5c05508f80c1454e0afe",
+          "transactionHashes": [
+            "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
+          ]
+        }
+      ]
+    }
+  },
+  "chronology": [
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 12686755,
+      "afterBlock": 12686756,
+      "beforeImplementation": "0x0000000000000000000000000000000000000000",
+      "afterImplementation": "0x16393737d09d2722ad13dca3ca8c3db957699f1d",
+      "transactionHashes": [
+        "0xd19d40f11c375feeea5fe47576ce98a3a08caac68b2a8a52fb95dd1a76dd205a"
+      ]
+    },
+    {
+      "contract": "L1StandardBridge",
+      "beforeBlock": 12686786,
+      "afterBlock": 12686787,
+      "beforeImplementation": "0x0000000000000000000000000000000000000000",
+      "afterImplementation": "0x9091dda480b232133a7d2e4cb23336b4f0293196"
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 12706527,
+      "afterBlock": 12706528,
+      "beforeImplementation": "0x16393737d09d2722ad13dca3ca8c3db957699f1d",
+      "afterImplementation": "0xbfba066b5ca610fe70adce45fcb622f945891bb0",
+      "transactionHashes": [
+        "0x98a05fb521b3349dd92cff2e104d78c6c318add003bb501c0d416b2b4d75df8a"
+      ]
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 13596293,
+      "afterBlock": 13596294,
+      "beforeImplementation": "0xbfba066b5ca610fe70adce45fcb622f945891bb0",
+      "afterImplementation": "0x0000000000000000000000000000000000000000",
+      "transactionHashes": [
+        "0x2625aa2013fd1a650fb0264d2746be597e12f846baa48a68fe14539c200ed6dc"
+      ]
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 13596780,
+      "afterBlock": 13596781,
+      "beforeImplementation": "0x0000000000000000000000000000000000000000",
+      "afterImplementation": "0xd9166833ff12a5f900ccfbf2c8b62a90f1ca1fd5",
+      "transactionHashes": [
+        "0xbabb37235bd38ae5a29717590eedfd9b02f84a12b890b2126feac68f223d7448"
+      ]
+    },
+    {
+      "contract": "L1StandardBridge",
+      "beforeBlock": 13596914,
+      "afterBlock": 13596915,
+      "beforeImplementation": "0x9091dda480b232133a7d2e4cb23336b4f0293196",
+      "afterImplementation": "0x40e0c049f4671846e9cff93aaed88f2b48e527bb"
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 17422443,
+      "afterBlock": 17422444,
+      "beforeImplementation": "0xd9166833ff12a5f900ccfbf2c8b62a90f1ca1fd5",
+      "afterImplementation": "0x0000000000000000000000000000000000000000",
+      "transactionHashes": [
+        "0x76bceccd7d44656f5a129a600a6120091570b897c1d45c18cd7134cfe67c2537"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 17422443,
+      "afterBlock": 17422444,
+      "beforeImplementation": "0x0000000000000000000000000000000000000000",
+      "afterImplementation": "0x5efa852e92800d1c982711761e45c3fe39a2b6d8",
+      "transactionHashes": [
+        "0x76bceccd7d44656f5a129a600a6120091570b897c1d45c18cd7134cfe67c2537"
+      ]
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 17423157,
+      "afterBlock": 17423158,
+      "beforeImplementation": "0x0000000000000000000000000000000000000000",
+      "afterImplementation": "0x2150bc3c64cbfddbac9815ef615d6ab8671bfe43",
+      "transactionHashes": [
+        "0xe2ff41f9bdf03d5455f55539b8b9c350276a179ca7f79322e2077d7c1ffb1268"
+      ]
+    },
+    {
+      "contract": "L1StandardBridge",
+      "beforeBlock": 17423157,
+      "afterBlock": 17423158,
+      "beforeImplementation": "0x40e0c049f4671846e9cff93aaed88f2b48e527bb",
+      "afterImplementation": "0xbfb731cd36d26c2a7287716de857e4380c73a64a",
+      "transactionHashes": [
+        "0xe2ff41f9bdf03d5455f55539b8b9c350276a179ca7f79322e2077d7c1ffb1268"
+      ]
+    },
+    {
+      "contract": "OptimismPortal",
+      "beforeBlock": 17423157,
+      "afterBlock": 17423158,
+      "beforeImplementation": "0x0000000000000000000000000000000000000000",
+      "afterImplementation": "0x28a55488fef40005309e2da0040dbe9d300a64ab",
+      "transactionHashes": [
+        "0xe2ff41f9bdf03d5455f55539b8b9c350276a179ca7f79322e2077d7c1ffb1268"
+      ]
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 19314492,
+      "afterBlock": 19314493,
+      "beforeImplementation": "0x2150bc3c64cbfddbac9815ef615d6ab8671bfe43",
+      "afterImplementation": "0xa95b24af19f8907390ed15f8348a1a5e6ccbc5c6",
+      "transactionHashes": [
+        "0x3f7c36a1d636cdb23bf4f9171c27ebe58b73f4c0e6a33dbaac2c2f3c142faf50"
+      ]
+    },
+    {
+      "contract": "L1StandardBridge",
+      "beforeBlock": 19314492,
+      "afterBlock": 19314493,
+      "beforeImplementation": "0xbfb731cd36d26c2a7287716de857e4380c73a64a",
+      "afterImplementation": "0x566511a1a09561e2896f8c0fd77e8544e59bfdb0",
+      "transactionHashes": [
+        "0x3f7c36a1d636cdb23bf4f9171c27ebe58b73f4c0e6a33dbaac2c2f3c142faf50"
+      ]
+    },
+    {
+      "contract": "OptimismPortal",
+      "beforeBlock": 19314492,
+      "afterBlock": 19314493,
+      "beforeImplementation": "0x28a55488fef40005309e2da0040dbe9d300a64ab",
+      "afterImplementation": "0xababe63514ddd6277356f8cc3d6518aa8bdeb4de",
+      "transactionHashes": [
+        "0x3f7c36a1d636cdb23bf4f9171c27ebe58b73f4c0e6a33dbaac2c2f3c142faf50"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 19314492,
+      "afterBlock": 19314493,
+      "beforeImplementation": "0x5efa852e92800d1c982711761e45c3fe39a2b6d8",
+      "afterImplementation": "0x33a032ec93ec0c492ec4bf0b30d5f51986e5a314",
+      "transactionHashes": [
+        "0x3f7c36a1d636cdb23bf4f9171c27ebe58b73f4c0e6a33dbaac2c2f3c142faf50"
+      ]
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 19634865,
+      "afterBlock": 19634866,
+      "beforeImplementation": "0xa95b24af19f8907390ed15f8348a1a5e6ccbc5c6",
+      "afterImplementation": "0xd3494713a5cfad3f5359379dfa074e2ac8c6fd65",
+      "transactionHashes": [
+        "0x4758bd62359bc69d7e8a0faaf5308d826379c23258d689a7430d5c0ad0361ad2"
+      ]
+    },
+    {
+      "contract": "L1StandardBridge",
+      "beforeBlock": 19634865,
+      "afterBlock": 19634866,
+      "beforeImplementation": "0x566511a1a09561e2896f8c0fd77e8544e59bfdb0",
+      "afterImplementation": "0x64b5a5ed26dcb17370ff4d33a8d503f0fbd06cff",
+      "transactionHashes": [
+        "0x4758bd62359bc69d7e8a0faaf5308d826379c23258d689a7430d5c0ad0361ad2"
+      ]
+    },
+    {
+      "contract": "OptimismPortal",
+      "beforeBlock": 19634865,
+      "afterBlock": 19634866,
+      "beforeImplementation": "0xababe63514ddd6277356f8cc3d6518aa8bdeb4de",
+      "afterImplementation": "0x2d778797049fe9259d947d1ed8e5442226dfb589",
+      "transactionHashes": [
+        "0x4758bd62359bc69d7e8a0faaf5308d826379c23258d689a7430d5c0ad0361ad2"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 19634865,
+      "afterBlock": 19634866,
+      "beforeImplementation": "0x33a032ec93ec0c492ec4bf0b30d5f51986e5a314",
+      "afterImplementation": "0xba2492e52f45651b60b8b38d4ea5e2390c64ffb1",
+      "transactionHashes": [
+        "0x4758bd62359bc69d7e8a0faaf5308d826379c23258d689a7430d5c0ad0361ad2"
+      ]
+    },
+    {
+      "contract": "DisputeGameFactory",
+      "beforeBlock": 19884569,
+      "afterBlock": 19884570,
+      "beforeImplementation": "0x0000000000000000000000000000000000000000",
+      "afterImplementation": "0xc641a33cab81c559f2bd4b21ea34c290e2440c2b",
+      "transactionHashes": [
+        "0x2c16c813ff50e9e09a3c58508a9b90293c896f1f91534d09a5002f50bc8760ff"
+      ]
+    },
+    {
+      "contract": "OptimismPortal",
+      "beforeBlock": 20062695,
+      "afterBlock": 20062696,
+      "beforeImplementation": "0x2d778797049fe9259d947d1ed8e5442226dfb589",
+      "afterImplementation": "0xe2f826324b2faf99e513d16d266c3f80ae87832b",
+      "transactionHashes": [
+        "0xbe810ed6e1e827930bd46cde42c4883662ddb6d244a26af2f0409cc2782bee61"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 20062695,
+      "afterBlock": 20062696,
+      "beforeImplementation": "0xba2492e52f45651b60b8b38d4ea5e2390c64ffb1",
+      "afterImplementation": "0xf56d96b2535b932656d3c04ebf51babff241d886",
+      "transactionHashes": [
+        "0xbe810ed6e1e827930bd46cde42c4883662ddb6d244a26af2f0409cc2782bee61"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 21695023,
+      "afterBlock": 21695024,
+      "beforeImplementation": "0xf56d96b2535b932656d3c04ebf51babff241d886",
+      "afterImplementation": "0xab9d6cb7a427c0765163a7f45bb91cafe5f2d375",
+      "transactionHashes": [
+        "0x86da7386a26978c3db89e97c1f4feee613a8a0c07bbe4640624b05276f49c350"
+      ]
+    },
+    {
+      "contract": "DisputeGameFactory",
+      "beforeBlock": 22182530,
+      "afterBlock": 22182531,
+      "beforeImplementation": "0xc641a33cab81c559f2bd4b21ea34c290e2440c2b",
+      "afterImplementation": "0x4bba758f006ef09402ef31724203f316ab74e4a0",
+      "transactionHashes": [
+        "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29"
+      ]
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 22182530,
+      "afterBlock": 22182531,
+      "beforeImplementation": "0xd3494713a5cfad3f5359379dfa074e2ac8c6fd65",
+      "afterImplementation": "0x3ea6084748ed1b2a9b5d4426181f1ad8c93f6231",
+      "transactionHashes": [
+        "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29"
+      ]
+    },
+    {
+      "contract": "L1StandardBridge",
+      "beforeBlock": 22182530,
+      "afterBlock": 22182531,
+      "beforeImplementation": "0x64b5a5ed26dcb17370ff4d33a8d503f0fbd06cff",
+      "afterImplementation": "0x78972e88ab8bbb517a36caea23b931bab58ad3c6",
+      "transactionHashes": [
+        "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29"
+      ]
+    },
+    {
+      "contract": "OptimismPortal",
+      "beforeBlock": 22182530,
+      "afterBlock": 22182531,
+      "beforeImplementation": "0xe2f826324b2faf99e513d16d266c3f80ae87832b",
+      "afterImplementation": "0x2d7e764a0d9919e16983a46595cfa81fc34fa7cd",
+      "transactionHashes": [
+        "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 22182530,
+      "afterBlock": 22182531,
+      "beforeImplementation": "0xab9d6cb7a427c0765163a7f45bb91cafe5f2d375",
+      "afterImplementation": "0x760c48c62a85045a6b69f07f4a9f22868659cbcc",
+      "transactionHashes": [
+        "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29"
+      ]
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 22339995,
+      "afterBlock": 22339996,
+      "beforeImplementation": "0x3ea6084748ed1b2a9b5d4426181f1ad8c93f6231",
+      "afterImplementation": "0x5d5a095665886119693f0b41d8dfee78da033e8b",
+      "transactionHashes": [
+        "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12"
+      ]
+    },
+    {
+      "contract": "L1StandardBridge",
+      "beforeBlock": 22339995,
+      "afterBlock": 22339996,
+      "beforeImplementation": "0x78972e88ab8bbb517a36caea23b931bab58ad3c6",
+      "afterImplementation": "0x0b09ba359a106c9ea3b181cbc5f394570c7d2a7a",
+      "transactionHashes": [
+        "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12"
+      ]
+    },
+    {
+      "contract": "OptimismPortal",
+      "beforeBlock": 22339995,
+      "afterBlock": 22339996,
+      "beforeImplementation": "0x2d7e764a0d9919e16983a46595cfa81fc34fa7cd",
+      "afterImplementation": "0xb443da3e07052204a02d630a8933dac05a0d6fb4",
+      "transactionHashes": [
+        "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 22339995,
+      "afterBlock": 22339996,
+      "beforeImplementation": "0x760c48c62a85045a6b69f07f4a9f22868659cbcc",
+      "afterImplementation": "0x340f923e5c7cbb2171146f64169ec9d5a9ffe647",
+      "transactionHashes": [
+        "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12"
+      ]
+    },
+    {
+      "contract": "AnchorStateRegistry",
+      "beforeBlock": 22990598,
+      "afterBlock": 22990599,
+      "beforeImplementation": "0x0000000000000000000000000000000000000000",
+      "afterImplementation": "0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e",
+      "transactionHashes": [
+        "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+      ]
+    },
+    {
+      "contract": "DisputeGameFactory",
+      "beforeBlock": 22990598,
+      "afterBlock": 22990599,
+      "beforeImplementation": "0x4bba758f006ef09402ef31724203f316ab74e4a0",
+      "afterImplementation": "0x33d1e8571a85a538ed3d5a4d88f46c112383439d",
+      "transactionHashes": [
+        "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+      ]
+    },
+    {
+      "contract": "ETHLockbox",
+      "beforeBlock": 22990598,
+      "afterBlock": 22990599,
+      "beforeImplementation": "0x0000000000000000000000000000000000000000",
+      "afterImplementation": "0x784d2f03593a42a6e4676a012762f18775ecbbe6",
+      "transactionHashes": [
+        "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+      ]
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 22990598,
+      "afterBlock": 22990599,
+      "beforeImplementation": "0x5d5a095665886119693f0b41d8dfee78da033e8b",
+      "afterImplementation": "0xd26bb3aaaa4cb5638a8581a4c4b1d937d8e05c54",
+      "transactionHashes": [
+        "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+      ]
+    },
+    {
+      "contract": "L1StandardBridge",
+      "beforeBlock": 22990598,
+      "afterBlock": 22990599,
+      "beforeImplementation": "0x0b09ba359a106c9ea3b181cbc5f394570c7d2a7a",
+      "afterImplementation": "0x44afb7722af276a601d524f429016a18b6923df0",
+      "transactionHashes": [
+        "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+      ]
+    },
+    {
+      "contract": "OptimismPortal",
+      "beforeBlock": 22990598,
+      "afterBlock": 22990599,
+      "beforeImplementation": "0xb443da3e07052204a02d630a8933dac05a0d6fb4",
+      "afterImplementation": "0xefed7f38bb9be74bba583a1a5b7d0fe7c9d5787a",
+      "transactionHashes": [
+        "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 22990598,
+      "afterBlock": 22990599,
+      "beforeImplementation": "0x340f923e5c7cbb2171146f64169ec9d5a9ffe647",
+      "afterImplementation": "0xfaa660bf783cbaa55e1b7f3475c20db74a53b9fa",
+      "transactionHashes": [
+        "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716"
+      ]
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 23491327,
+      "afterBlock": 23491328,
+      "beforeImplementation": "0xd26bb3aaaa4cb5638a8581a4c4b1d937d8e05c54",
+      "afterImplementation": "0x22d12e0faebd62d429514a65ebae32dd316c12d6",
+      "transactionHashes": [
+        "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329"
+      ]
+    },
+    {
+      "contract": "L1StandardBridge",
+      "beforeBlock": 23491327,
+      "afterBlock": 23491328,
+      "beforeImplementation": "0x44afb7722af276a601d524f429016a18b6923df0",
+      "afterImplementation": "0xe32b192fb1dca88fcb1c56b3acb429e32238adcb",
+      "transactionHashes": [
+        "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329"
+      ]
+    },
+    {
+      "contract": "OptimismPortal",
+      "beforeBlock": 23491327,
+      "afterBlock": 23491328,
+      "beforeImplementation": "0xefed7f38bb9be74bba583a1a5b7d0fe7c9d5787a",
+      "afterImplementation": "0x381e729ff983fa4bced820e7b922d79bf653b999",
+      "transactionHashes": [
+        "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 23491327,
+      "afterBlock": 23491328,
+      "beforeImplementation": "0xfaa660bf783cbaa55e1b7f3475c20db74a53b9fa",
+      "afterImplementation": "0x2bfe4a5bd5a41e9d848d843ebcdfa15954e9a557",
+      "transactionHashes": [
+        "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329"
+      ]
+    },
+    {
+      "contract": "DisputeGameFactory",
+      "beforeBlock": 23877376,
+      "afterBlock": 23877377,
+      "beforeImplementation": "0x33d1e8571a85a538ed3d5a4d88f46c112383439d",
+      "afterImplementation": "0x74fac1d45b98bae058f8f566201c9a81b85c7d50",
+      "transactionHashes": [
+        "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5"
+      ]
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 23877376,
+      "afterBlock": 23877377,
+      "beforeImplementation": "0x22d12e0faebd62d429514a65ebae32dd316c12d6",
+      "afterImplementation": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+      "transactionHashes": [
+        "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5"
+      ]
+    },
+    {
+      "contract": "L1StandardBridge",
+      "beforeBlock": 23877376,
+      "afterBlock": 23877377,
+      "beforeImplementation": "0xe32b192fb1dca88fcb1c56b3acb429e32238adcb",
+      "afterImplementation": "0x61525eaacddb97d9184afc205827e6a4fd0bf62a",
+      "transactionHashes": [
+        "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5"
+      ]
+    },
+    {
+      "contract": "OptimismPortal",
+      "beforeBlock": 23877376,
+      "afterBlock": 23877377,
+      "beforeImplementation": "0x381e729ff983fa4bced820e7b922d79bf653b999",
+      "afterImplementation": "0x7cf803296662e8c72a6c1d6450572209acf7f202",
+      "transactionHashes": [
+        "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 23877376,
+      "afterBlock": 23877377,
+      "beforeImplementation": "0x2bfe4a5bd5a41e9d848d843ebcdfa15954e9a557",
+      "afterImplementation": "0x2fa28989fc559836e9d66dff3010c7f7f41c65ed",
+      "transactionHashes": [
+        "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5"
+      ]
+    },
+    {
+      "contract": "AnchorStateRegistry",
+      "beforeBlock": 24421511,
+      "afterBlock": 24421512,
+      "beforeImplementation": "0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e",
+      "afterImplementation": "0x36398155cd17cfe804f69b233edda800dd4d5aa5",
+      "transactionHashes": [
+        "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37"
+      ]
+    },
+    {
+      "contract": "DisputeGameFactory",
+      "beforeBlock": 24421511,
+      "afterBlock": 24421512,
+      "beforeImplementation": "0x74fac1d45b98bae058f8f566201c9a81b85c7d50",
+      "afterImplementation": "0xc040f392e52cb6970ca8e110c280fe24e07c5e2c",
+      "transactionHashes": [
+        "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37"
+      ]
+    },
+    {
+      "contract": "OptimismPortal",
+      "beforeBlock": 24421511,
+      "afterBlock": 24421512,
+      "beforeImplementation": "0x7cf803296662e8c72a6c1d6450572209acf7f202",
+      "afterImplementation": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+      "transactionHashes": [
+        "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 24421511,
+      "afterBlock": 24421512,
+      "beforeImplementation": "0x2fa28989fc559836e9d66dff3010c7f7f41c65ed",
+      "afterImplementation": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+      "transactionHashes": [
+        "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37"
+      ]
+    },
+    {
+      "contract": "AnchorStateRegistry",
+      "beforeBlock": 25397810,
+      "afterBlock": 25397811,
+      "beforeImplementation": "0x36398155cd17cfe804f69b233edda800dd4d5aa5",
+      "afterImplementation": "0x8f40cc98d694ab986f026c5383a181fcc9b6b281",
+      "transactionHashes": [
+        "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+      ]
+    },
+    {
+      "contract": "DisputeGameFactory",
+      "beforeBlock": 25397810,
+      "afterBlock": 25397811,
+      "beforeImplementation": "0xc040f392e52cb6970ca8e110c280fe24e07c5e2c",
+      "afterImplementation": "0x72b971717e088b59f26d4236be222adb6acd393b",
+      "transactionHashes": [
+        "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+      ]
+    },
+    {
+      "contract": "ETHLockbox",
+      "beforeBlock": 25397810,
+      "afterBlock": 25397811,
+      "beforeImplementation": "0x784d2f03593a42a6e4676a012762f18775ecbbe6",
+      "afterImplementation": "0xb3a24db07038b51962026329b62e7a965d56a6ad",
+      "transactionHashes": [
+        "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+      ]
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 25397810,
+      "afterBlock": 25397811,
+      "beforeImplementation": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+      "afterImplementation": "0x59d497530b00062f40950ba8eab88868bf7f86f0",
+      "transactionHashes": [
+        "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+      ]
+    },
+    {
+      "contract": "L1StandardBridge",
+      "beforeBlock": 25397810,
+      "afterBlock": 25397811,
+      "beforeImplementation": "0x61525eaacddb97d9184afc205827e6a4fd0bf62a",
+      "afterImplementation": "0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891",
+      "transactionHashes": [
+        "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+      ]
+    },
+    {
+      "contract": "OptimismPortal",
+      "beforeBlock": 25397810,
+      "afterBlock": 25397811,
+      "beforeImplementation": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+      "afterImplementation": "0xe89f13c5ee4033b2d3cd76c9d6958efbfe26d3c2",
+      "transactionHashes": [
+        "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 25397810,
+      "afterBlock": 25397811,
+      "beforeImplementation": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+      "afterImplementation": "0x42ad0173051225ac784100e9acd43349707f4db9",
+      "transactionHashes": [
+        "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
+      ]
+    },
+    {
+      "contract": "OptimismPortal",
+      "beforeBlock": 26048618,
+      "afterBlock": 26048619,
+      "beforeImplementation": "0xe89f13c5ee4033b2d3cd76c9d6958efbfe26d3c2",
+      "afterImplementation": "0x1005217ad392dc64cef501fa1777a27d42166748",
+      "transactionHashes": [
+        "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 26048618,
+      "afterBlock": 26048619,
+      "beforeImplementation": "0x42ad0173051225ac784100e9acd43349707f4db9",
+      "afterImplementation": "0x670b850a235a6fa98cd7a195eb139d0277e471fa",
+      "transactionHashes": [
+        "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a"
+      ]
+    },
+    {
+      "contract": "AnchorStateRegistry",
+      "beforeBlock": 26430858,
+      "afterBlock": 26430859,
+      "beforeImplementation": "0x8f40cc98d694ab986f026c5383a181fcc9b6b281",
+      "afterImplementation": "0x2b27299c577d4720100e2735b652444dcea652d0",
+      "transactionHashes": [
+        "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
+      ]
+    },
+    {
+      "contract": "ETHLockbox",
+      "beforeBlock": 26430858,
+      "afterBlock": 26430859,
+      "beforeImplementation": "0xb3a24db07038b51962026329b62e7a965d56a6ad",
+      "afterImplementation": "0xdf75e6b07e98873e36ba5c05508f80c1454e0afe",
+      "transactionHashes": [
+        "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
+      ]
+    },
+    {
+      "contract": "L1CrossDomainMessenger",
+      "beforeBlock": 26430858,
+      "afterBlock": 26430859,
+      "beforeImplementation": "0x59d497530b00062f40950ba8eab88868bf7f86f0",
+      "afterImplementation": "0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448",
+      "transactionHashes": [
+        "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
+      ]
+    },
+    {
+      "contract": "OptimismPortal",
+      "beforeBlock": 26430858,
+      "afterBlock": 26430859,
+      "beforeImplementation": "0x1005217ad392dc64cef501fa1777a27d42166748",
+      "afterImplementation": "0xb20b23af6071405c37ddda0c0640e8ebb7899645",
+      "transactionHashes": [
+        "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
+      ]
+    },
+    {
+      "contract": "SystemConfig",
+      "beforeBlock": 26430858,
+      "afterBlock": 26430859,
+      "beforeImplementation": "0x670b850a235a6fa98cd7a195eb139d0277e471fa",
+      "afterImplementation": "0xade27248542c0f3e89b49e4eb76155e267f14377",
+      "transactionHashes": [
+        "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
+      ]
+    }
+  ]
+}

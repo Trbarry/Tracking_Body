@@ -4,7 +4,7 @@
 
 No new vulnerability candidate was established. No `PRIM-CW0-*`, `REJ-CW0-*`, or `CAND-CW0-*` file was warranted: the independent historical pass found semantic pivots and persistent-object compositions worth testing, but no permissionless impact survived the evidence threshold.
 
-The 115-file PASS A corpus contains 112 in-scope primitives after the required exclusion of PRIM-3301..3303. Conservative mechanism-identical deduplication produced 89 `A-*` records: 24 P0, 58 P1, 7 P2. `CW0DeliverablesValidation` passed with all 112 source files covered exactly once, an 82×82 P0/P1 matrix, 21 lineage records, and 265 tag-qualified citations resolved within pinned source files.
+The 115-file PASS A corpus contains 112 in-scope primitives after the required exclusion of PRIM-3301..3303. Conservative mechanism-identical deduplication produced 89 `A-*` records: 24 P0, 58 P1, 7 P2. `CW0DeliverablesValidation` passed with all 112 source files and all 180 rejection files covered exactly once, an 82×82 P0/P1 matrix, 21 lineage records, and 265 tag-qualified citations resolved within pinned source files.
 
 ## Facts locked
 

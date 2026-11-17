@@ -713,7 +713,64 @@
      "txs_with_logs_from_target": []
     }
    ]
+  },
+  {
+   "name": "L2ToL2CrossDomainMessenger",
+   "address": "0x4200000000000000000000000000000000000023",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x4200000000000000000000000000000000000023",
+   "first_code_block": 105235063,
+   "history": [
+    {
+     "block": 105235063,
+     "timestamp": 1686068903,
+     "utc": "2023-06-06 16:28:23",
+     "slot_value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "implementation": "0x0000000000000000000000000000000000000000",
+     "version": null,
+     "txs_with_logs_from_target": []
+    }
+   ]
+  },
+  {
+   "name": "SuperchainETHBridge",
+   "address": "0x4200000000000000000000000000000000000024",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x4200000000000000000000000000000000000024",
+   "first_code_block": 105235063,
+   "history": [
+    {
+     "block": 105235063,
+     "timestamp": 1686068903,
+     "utc": "2023-06-06 16:28:23",
+     "slot_value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "implementation": "0x0000000000000000000000000000000000000000",
+     "version": null,
+     "txs_with_logs_from_target": []
+    }
+   ]
+  },
+  {
+   "name": "ETHLiquidity",
+   "address": "0x4200000000000000000000000000000000000025",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x4200000000000000000000000000000000000025",
+   "first_code_block": 105235063,
+   "history": [
+    {
+     "block": 105235063,
+     "timestamp": 1686068903,
+     "utc": "2023-06-06 16:28:23",
+     "slot_value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "implementation": "0x0000000000000000000000000000000000000000",
+     "version": null,
+     "txs_with_logs_from_target": []
+    }
+   ]
   }
  ],
- "rpc_calls": 4981
+ "rpc_calls": 5812
 }

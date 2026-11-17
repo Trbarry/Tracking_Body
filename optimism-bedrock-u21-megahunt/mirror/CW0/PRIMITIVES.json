@@ -21,7 +21,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a game clone under an older implementation/gameArgs/prestate; consume it through today's mutable ASR predicates or shared anchor",
     "NEXT_EXPERIMENT": "closed on OP by C13; reopen on Ink/Soneium/Unichain or for an official-proposer root not recomputed in PASS A.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0101: confidence \u2014 high that the state exists; low that it is exploitable; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-002",
@@ -45,7 +45,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a game clone under an older implementation/gameArgs/prestate; consume it through today's mutable ASR predicates or shared anchor",
     "NEXT_EXPERIMENT": "L1: execute old-prestate type-9 games against the pre-v1.9.0 kona program and compare the exact prestate transition.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0102: confidence \u2014 high (state), unknown (impact); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-003",
@@ -66,7 +66,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create bond credit in a legacy DelayedWETH or via payable fallback; consume/recover it after pause-source or singleton re-pointing",
     "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0103: confidence \u2014 high (behaviour), low (usefulness); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-004",
@@ -91,7 +91,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a game clone under an older implementation/gameArgs/prestate; consume it through today's mutable ASR predicates or shared anchor",
     "NEXT_EXPERIMENT": "L7: trace the type-5 proposer call graph and test whether a born-resolved cross-type game can advance the shared anchor under every deployed forwarding path.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0104: confidence \u2014 high (behaviour), very low (reachability); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-0705: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-005",
@@ -114,7 +114,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a scoped pause or store a dependency pointer under an earlier identifier generation; consume it after the v9 lockbox-key pivot",
     "NEXT_EXPERIMENT": "closed: C8 unless a historical chain profile proves pointer or identifier divergence.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0201: confidence \u2014 high that the dependency structure is as described; low that it is ever exploitable; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-006",
@@ -137,7 +137,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "write a slot or initializer byte under a pre-v7 layout; consume it through the current same-version reset/reinitializer machinery",
     "NEXT_EXPERIMENT": "closed: C2",
     "priority": "P2",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0202: confidence \u2014 high (facts); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-007",
@@ -161,7 +161,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     "NEXT_EXPERIMENT": "closed: C4/C5 unless a pre-fault-proof non-game proof record is found.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0203: confidence \u2014 high (behaviour); impact: none on funds; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-008",
@@ -185,7 +185,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a game clone under an older implementation/gameArgs/prestate; consume it through today's mutable ASR predicates or shared anchor",
     "NEXT_EXPERIMENT": "L7: trace the type-5 proposer call graph and test whether a born-resolved cross-type game can advance the shared anchor under every deployed forwarding path.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0204: confidence \u2014 high (fact); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-009",
@@ -207,7 +207,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a legacy hash, failedMessages entry, or old-budget withdrawal before U21; consume it through the current replay and portal atomicity branches",
     "NEXT_EXPERIMENT": "closed: C5/C7 for direct replay; retain only if a historical hash-domain split or L3 composition is demonstrated.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0301: confidence \u2014 high (real implementations, real proven withdrawals; the direct-withdrawal target was replaced with `vm.etch`); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-010",
@@ -229,7 +229,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a legacy hash, failedMessages entry, or old-budget withdrawal before U21; consume it through the current replay and portal atomicity branches",
     "NEXT_EXPERIMENT": "closed: C5/C7 for direct replay; retain only if a historical hash-domain split or L3 composition is demonstrated.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0302: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-011",
@@ -255,7 +255,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create ETH liability or authorization before the v4/v7 custody split; consume it after pooling, re-pointing, or a failed current finalization",
     "NEXT_EXPERIMENT": "closed: C3/C9 for current topology; reopen only with pre-U16 residue or historical authorization divergence.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0303: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-2304: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-012",
@@ -281,7 +281,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a legacy hash, failedMessages entry, or old-budget withdrawal before U21; consume it through the current replay and portal atomicity branches",
     "NEXT_EXPERIMENT": "L3: replay parked failedMessages through targets with pause and migration transitions; measure whether value can become permanently unrecoverable.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0304: confidence \u2014 high for the mechanics; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-0401: confidence \u2014 high (reproduced on fork against deployed implementations); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-0803: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-1102: confidence \u2014 high (executed against real bytecode on both forks); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-1202: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-013",
@@ -307,7 +307,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a scoped pause or store a dependency pointer under an earlier identifier generation; consume it after the v9 lockbox-key pivot",
     "NEXT_EXPERIMENT": "closed: C8 unless a historical chain profile proves pointer or identifier divergence.",
     "priority": "P2",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0305: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-2307: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-2602: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-3102: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-014",
@@ -333,7 +333,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create ETH liability or authorization before the v4/v7 custody split; consume it after pooling, re-pointing, or a failed current finalization",
     "NEXT_EXPERIMENT": "L8/L9: reconstruct pre-migration per-chain ETH liability and compose orphaned singleton state, sticky authorization, and cleared game types.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0306: confidence \u2014 medium (not executed end to end); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-0901: confidence \u2014 high (behaviour), impact none by itself; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-015",
@@ -358,7 +358,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0402: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-2401: confidence \u2014 High confidence in the primitive, low confidence as a bounty issue; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-016",
@@ -380,7 +380,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a messenger withdrawal under pre-v9 outcome semantics, then finalize through the sender-only v9 guard where L1CDM returns normally but its mappings encode failure",
     "NEXT_EXPERIMENT": "closed: C5/C7 for direct replay; retain only if a historical hash-domain split or L3 composition is demonstrated.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0403: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-017",
@@ -401,7 +401,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a message using the old L2 budget; consume it on L1 after U21 or a future Amsterdam cost activation",
     "NEXT_EXPERIMENT": "L5: solve the EIP-7825 transaction-gas cap against v9's 150k local reserve and maximum replay calldata.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0404: confidence \u2014 high for today's rules; Amsterdam statements are reasoning only; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-018",
@@ -422,7 +422,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create proxy/version state under the first OPCM V2 bundle; consume it in a later same-version replay or migration with changed initializer metadata",
     "NEXT_EXPERIMENT": "closed: C1 for the U21 bundle; exercise against the first historical layout/reinitializer version that differs.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0405: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-019",
@@ -446,7 +446,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     "NEXT_EXPERIMENT": "closed: C4/C5 unless a pre-fault-proof non-game proof record is found.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0406: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-020",
@@ -471,7 +471,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     "NEXT_EXPERIMENT": "closed: C4/C5 unless a pre-fault-proof non-game proof record is found.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0501: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-2501: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-021",
@@ -497,7 +497,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     "NEXT_EXPERIMENT": "closed: C4/C5 unless a pre-fault-proof non-game proof record is found.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0502: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-2502: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-3103: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-022",
@@ -521,7 +521,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a game clone under an older implementation/gameArgs/prestate; consume it through today's mutable ASR predicates or shared anchor",
     "NEXT_EXPERIMENT": "L4: price a sustained Trojan super-root withdrawal-delay strategy using real bond/finality timing.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0503: confidence \u2014 high for the on-chain behaviour; medium for exploit economics (bond recovery needs the attacker's own counter-claim to be the honest one and to stay uncountered \u2014 not simulated); unverified which production front-ends/SDKs auto-select the newest game; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-023",
@@ -545,7 +545,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0504: confidence \u2014 high (simulation uses the same-lockbox variant of the swap, not the full `OPContractsManagerV2.migrate` transaction); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-024",
@@ -569,7 +569,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a game clone under an older implementation/gameArgs/prestate; consume it through today's mutable ASR predicates or shared anchor",
     "NEXT_EXPERIMENT": "closed on OP by C13; reopen on Ink/Soneium/Unichain or for an official-proposer root not recomputed in PASS A.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0505: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-025",
@@ -592,7 +592,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a scoped pause or store a dependency pointer under an earlier identifier generation; consume it after the v9 lockbox-key pivot",
     "NEXT_EXPERIMENT": "closed: C8 unless a historical chain profile proves pointer or identifier divergence.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0601: confidence \u2014 high (code + chain state + fork test); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-026",
@@ -613,7 +613,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create bond credit in a legacy DelayedWETH or via payable fallback; consume/recover it after pause-source or singleton re-pointing",
     "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0602: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-027",
@@ -637,7 +637,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a scoped pause or store a dependency pointer under an earlier identifier generation; consume it after the v9 lockbox-key pivot",
     "NEXT_EXPERIMENT": "closed: C8 unless a historical chain profile proves pointer or identifier divergence.",
     "priority": "P2",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0603: confidence \u2014 high on mechanics; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-2603: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-028",
@@ -660,7 +660,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a scoped pause or store a dependency pointer under an earlier identifier generation; consume it after the v9 lockbox-key pivot",
     "NEXT_EXPERIMENT": "closed: C8 unless a historical chain profile proves pointer or identifier divergence.",
     "priority": "P2",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0604: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-029",
@@ -683,7 +683,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create liquidity/proofs/messages with a feature disabled, then consume them after CGT/ETH_LOCKBOX/INTEROP flips without object-by-object conversion",
     "NEXT_EXPERIMENT": "Historical fork: create liquidity/proofs/messages before a CGT/ETH_LOCKBOX/INTEROP transition, flip only the relevant L1 or L2 feature state, then exercise every current consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0605: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-030",
@@ -707,7 +707,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create an immutable game under old factory/ASR/chain-binding inputs; consume it after a mutable singleton or identity source is re-pointed",
     "NEXT_EXPERIMENT": "closed: C11/C12 unless the old kona prestate or a non-atomic ASR/DGF migration breaks the factory domain.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0606: confidence \u2014 medium (on-chain facts high; off-chain program not analysed here); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-0903: confidence \u2014 high for the facts; exploitability unknown (depends on off-chain program semantics); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-031",
@@ -730,7 +730,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create an immutable game under old factory/ASR/chain-binding inputs; consume it after a mutable singleton or identity source is re-pointed",
     "NEXT_EXPERIMENT": "closed: C11/C12 unless the old kona prestate or a non-atomic ASR/DGF migration breaks the factory domain.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0701: confidence \u2014 high for L1; high for kona at the v9 tag source (assumption: prestate 0x03e5a548\u2026 is built from this tree \u2014; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-032",
@@ -754,7 +754,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a game clone under an older implementation/gameArgs/prestate; consume it through today's mutable ASR predicates or shared anchor",
     "NEXT_EXPERIMENT": "closed on OP by C13; reopen on Ink/Soneium/Unichain or for an official-proposer root not recomputed in PASS A.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0702: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-033",
@@ -777,7 +777,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a game under an earlier implementation/prestate at a chosen l1Head, then consume it after mutable factory/ASR config changes while UUID and creation timestamp persist",
     "NEXT_EXPERIMENT": "closed: C11/C12 unless the old kona prestate or a non-atomic ASR/DGF migration breaks the factory domain.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0703: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-034",
@@ -799,7 +799,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create proof, authorization, liquidity, or game before migration; consume it after fresh DGF/ASR and shared-lockbox cutover",
     "NEXT_EXPERIMENT": "L8/L9: reconstruct pre-migration per-chain ETH liability and compose orphaned singleton state, sticky authorization, and cleared game types.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0704: confidence \u2014 high for the modelled input; the real task may differ in startingAnchorRoot / prestate; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-035",
@@ -820,7 +820,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a message using the old L2 budget; consume it on L1 after U21 or a future Amsterdam cost activation",
     "NEXT_EXPERIMENT": "L5: solve the EIP-7825 transaction-gas cap against v9's 150k local reserve and maximum replay calldata.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0801: confidence \u2014 high (measured on deployed bytecode, transaction semantics, both versions); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-036",
@@ -842,7 +842,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a messenger withdrawal under pre-v9 outcome semantics, then finalize through the sender-only v9 guard where L1CDM returns normally but its mappings encode failure",
     "NEXT_EXPERIMENT": "closed: C5/C7 for direct replay; retain only if a historical hash-domain split or L3 composition is demonstrated.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0802: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-037",
@@ -863,7 +863,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a message using the old L2 budget; consume it on L1 after U21 or a future Amsterdam cost activation",
     "NEXT_EXPERIMENT": "closed: C6 for current rules; reopen on Amsterdam activation or L5 cap arithmetic.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0804: confidence \u2014 high for today's rules; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-038",
@@ -885,7 +885,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a legacy hash, failedMessages entry, or old-budget withdrawal before U21; consume it through the current replay and portal atomicity branches",
     "NEXT_EXPERIMENT": "closed: C5/C7 for direct replay; retain only if a historical hash-domain split or L3 composition is demonstrated.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0805: confidence \u2014 high for the facts; the sweeper's intent is unknown (looks like a relayer; recipients differ); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-039",
@@ -908,7 +908,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "establish the validator's zero-balance premise at one block, then mutate the historical account before or inside the eventual governed migration sequence",
     "NEXT_EXPERIMENT": "L8/L9: reconstruct pre-migration per-chain ETH liability and compose orphaned singleton state, sticky authorization, and cleared game types.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0902: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-3201: confidence \u2014 High for the primitive; high that it is currently benign; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-040",
@@ -930,7 +930,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create proof, authorization, liquidity, or game before migration; consume it after fresh DGF/ASR and shared-lockbox cutover",
     "NEXT_EXPERIMENT": "L8/L9: reconstruct pre-migration per-chain ETH liability and compose orphaned singleton state, sticky authorization, and cleared game types.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-0904: confidence \u2014 high (state deltas measured); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-041",
@@ -951,7 +951,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a message using the old L2 budget; consume it on L1 after U21 or a future Amsterdam cost activation",
     "NEXT_EXPERIMENT": "L5: solve the EIP-7825 transaction-gas cap against v9's 150k local reserve and maximum replay calldata.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-1001: confidence \u2014 high for today's rules (reproduced); medium for the Amsterdam statement (argued from v9's own; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-042",
@@ -972,7 +972,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a message using the old L2 budget; consume it on L1 after U21 or a future Amsterdam cost activation",
     "NEXT_EXPERIMENT": "closed: C6 for current rules; reopen on Amsterdam activation or L5 cap arithmetic.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-1002: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-043",
@@ -996,7 +996,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a clone with old immutable singleton/prestate arguments, reinitialize the shared proxies at M, then resolve/redeem the old clone through new singleton semantics",
     "NEXT_EXPERIMENT": "closed: C1 for the U21 bundle; exercise against the first historical layout/reinitializer version that differs.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-1003: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-3001: confidence \u2014 High as a boundary; negative for an active exploit; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-044",
@@ -1020,7 +1020,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a game clone under an older implementation/gameArgs/prestate; consume it through today's mutable ASR predicates or shared anchor",
     "NEXT_EXPERIMENT": "L4: price a sustained Trojan super-root withdrawal-delay strategy using real bond/finality timing.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-1101: confidence \u2014 high for the facts (direct chain reads); the interpretation \"attack probe vs; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-045",
@@ -1041,7 +1041,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a message using the old L2 budget; consume it on L1 after U21 or a future Amsterdam cost activation",
     "NEXT_EXPERIMENT": "L5: solve the EIP-7825 transaction-gas cap against v9's 150k local reserve and maximum replay calldata.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-1103: confidence \u2014 high for the measured behaviour; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-046",
@@ -1062,7 +1062,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a message using the old L2 budget; consume it on L1 after U21 or a future Amsterdam cost activation",
     "NEXT_EXPERIMENT": "L5: solve the EIP-7825 transaction-gas cap against v9's 150k local reserve and maximum replay calldata.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-1201: confidence \u2014 high for the measurements; they are from a forge fork (cold account accesses, EVM version of the; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-047",
@@ -1085,7 +1085,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a pointer/authorization relationship under an earlier initializer, then consume it after U21 through a sibling path that omits the newer equality/nonzero check",
     "NEXT_EXPERIMENT": "closed: C1 for the U21 bundle; exercise against the first historical layout/reinitializer version that differs.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-1203: confidence \u2014 high (source reading + reads); PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-048",
@@ -1108,7 +1108,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a scoped pause or store a dependency pointer under an earlier identifier generation; consume it after the v9 lockbox-key pivot",
     "NEXT_EXPERIMENT": "closed: C8 unless a historical chain profile proves pointer or identifier divergence.",
     "priority": "P2",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-1204: confidence \u2014 high; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-049",
@@ -1129,7 +1129,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create proxy/version state under the first OPCM V2 bundle; consume it in a later same-version replay or migration with changed initializer metadata",
     "NEXT_EXPERIMENT": "closed: C1 for the U21 bundle; exercise against the first historical layout/reinitializer version that differs.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2101: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-050",
@@ -1152,7 +1152,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "write a slot or initializer byte under a pre-v7 layout; consume it through the current same-version reset/reinitializer machinery",
     "NEXT_EXPERIMENT": "closed: C1 for the U21 bundle; exercise against the first historical layout/reinitializer version that differs.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2102: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-051",
@@ -1176,7 +1176,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a game clone under an older implementation/gameArgs/prestate; consume it through today's mutable ASR predicates or shared anchor",
     "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2103: confidence \u2014 High for the bifurcation; no claim that either prestate is unsound; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-052",
@@ -1197,7 +1197,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create deterministic occupancy through a caller different from the eventual deployment context; consume the same salt in a governed bundle",
     "NEXT_EXPERIMENT": "closed: C14",
     "priority": "P2",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2104: confidence \u2014 High technically; low current-impact confidence; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-053",
@@ -1220,7 +1220,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "write a slot or initializer byte under a pre-v7 layout; consume it through the current same-version reset/reinitializer machinery",
     "NEXT_EXPERIMENT": "closed: C1 for the U21 bundle; exercise against the first historical layout/reinitializer version that differs.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2201: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-054",
@@ -1243,7 +1243,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "write a slot or initializer byte under a pre-v7 layout; consume it through the current same-version reset/reinitializer machinery",
     "NEXT_EXPERIMENT": "closed: C1 for the U21 bundle; exercise against the first historical layout/reinitializer version that differs.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2202: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-055",
@@ -1266,7 +1266,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a scoped pause or store a dependency pointer under an earlier identifier generation; consume it after the v9 lockbox-key pivot",
     "NEXT_EXPERIMENT": "closed: C8 unless a historical chain profile proves pointer or identifier divergence.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2203: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-056",
@@ -1290,7 +1290,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a game clone under an older implementation/gameArgs/prestate; consume it through today's mutable ASR predicates or shared anchor",
     "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2204: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-057",
@@ -1313,7 +1313,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "write a slot or initializer byte under a pre-v7 layout; consume it through the current same-version reset/reinitializer machinery",
     "NEXT_EXPERIMENT": "closed: C1 for the U21 bundle; exercise against the first historical layout/reinitializer version that differs.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2205: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-058",
@@ -1338,7 +1338,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create ETH liability or authorization before the v4/v7 custody split; consume it after pooling, re-pointing, or a failed current finalization",
     "NEXT_EXPERIMENT": "closed: C3/C9 for current topology; reopen only with pre-U16 residue or historical authorization divergence.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2301: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-059",
@@ -1363,7 +1363,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create ETH liability or authorization before the v4/v7 custody split; consume it after pooling, re-pointing, or a failed current finalization",
     "NEXT_EXPERIMENT": "closed: C3/C9 for current topology; reopen only with pre-U16 residue or historical authorization divergence.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2302: confidence \u2014 High for deployed ordering and arithmetic; modeled-only for substituted target behavior; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-060",
@@ -1389,7 +1389,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create ETH liability or authorization before the v4/v7 custody split; consume it after pooling, re-pointing, or a failed current finalization",
     "NEXT_EXPERIMENT": "L8/L9: reconstruct pre-migration per-chain ETH liability and compose orphaned singleton state, sticky authorization, and cleared game types.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2303: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-2901: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-061",
@@ -1411,7 +1411,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create proof, authorization, liquidity, or game before migration; consume it after fresh DGF/ASR and shared-lockbox cutover",
     "NEXT_EXPERIMENT": "L8/L9: reconstruct pre-migration per-chain ETH liability and compose orphaned singleton state, sticky authorization, and cleared game types.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2305: confidence \u2014 High for code structure; future migration not active at the observed blocks; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-062",
@@ -1433,7 +1433,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a legacy hash, failedMessages entry, or old-budget withdrawal before U21; consume it through the current replay and portal atomicity branches",
     "NEXT_EXPERIMENT": "closed: C5/C7 for direct replay; retain only if a historical hash-domain split or L3 composition is demonstrated.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2306: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-063",
@@ -1458,7 +1458,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create ETH/surplus or a zero-value cross-domain object under an older CGT mode, flip the runtime feature, then consume it through U21's liability guards",
     "NEXT_EXPERIMENT": "Historical fork: create liquidity/proofs/messages before a CGT/ETH_LOCKBOX/INTEROP transition, flip only the relevant L1 or L2 feature state, then exercise every current consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2308: confidence \u2014 High for branches, low relevance to deployed OP configuration; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-064",
@@ -1481,7 +1481,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a legacy hash, failedMessages entry, or old-budget withdrawal before U21; consume it through the current replay and portal atomicity branches",
     "NEXT_EXPERIMENT": "closed: C5/C7 for direct replay; retain only if a historical hash-domain split or L3 composition is demonstrated.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2402: confidence \u2014 no explicit confidence statement in the source primitive; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-3101: confidence \u2014 High for the current deployed code and tested fixture; bounded gas coverage, not a proof over all payloads/future gas rules; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-065",
@@ -1505,7 +1505,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2403: confidence \u2014 no explicit confidence statement in the source primitive; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-066",
@@ -1530,7 +1530,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2404: confidence \u2014 no explicit confidence statement in the source primitive; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-3203: confidence \u2014 High for the temporal coupling; high that the intended first migration is benign; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-067",
@@ -1552,7 +1552,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a message using the old L2 budget; consume it on L1 after U21 or a future Amsterdam cost activation",
     "NEXT_EXPERIMENT": "closed: C6 for current rules; reopen on Amsterdam activation or L5 cap arithmetic.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2405: confidence \u2014 no explicit confidence statement in the source primitive; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-3104: confidence \u2014 High for source behavior and deployed-bytecode gas thresholds; low for any impact claim because proof reachability was mocked; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-068",
@@ -1576,7 +1576,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2406: confidence \u2014 no explicit confidence statement in the source primitive; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-069",
@@ -1600,7 +1600,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2503: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-070",
@@ -1624,7 +1624,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2504: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-071",
@@ -1647,7 +1647,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create proof, authorization, liquidity, or game before migration; consume it after fresh DGF/ASR and shared-lockbox cutover",
     "NEXT_EXPERIMENT": "L8/L9: reconstruct pre-migration per-chain ETH liability and compose orphaned singleton state, sticky authorization, and cleared game types.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2505: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact | PRIM-2705: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-072",
@@ -1671,7 +1671,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2506: confidence \u2014 High on behavior, high that it is production-unreachable permissionlessly; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-073",
@@ -1693,7 +1693,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create liquidity/proofs/messages with a feature disabled, then consume them after CGT/ETH_LOCKBOX/INTEROP flips without object-by-object conversion",
     "NEXT_EXPERIMENT": "Historical fork: create liquidity/proofs/messages before a CGT/ETH_LOCKBOX/INTEROP transition, flip only the relevant L1 or L2 feature state, then exercise every current consumer.",
     "priority": "P2",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2601: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-074",
@@ -1715,7 +1715,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create proof, authorization, liquidity, or game before migration; consume it after fresh DGF/ASR and shared-lockbox cutover",
     "NEXT_EXPERIMENT": "L8/L9: reconstruct pre-migration per-chain ETH liability and compose orphaned singleton state, sticky authorization, and cleared game types.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2604: confidence \u2014 High on source state machine; medium on future production calldata; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-075",
@@ -1737,7 +1737,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a cross-domain object while L1 and L2 flags disagree, transition only one domain, then consume the object in the other domain's feature branch",
     "NEXT_EXPERIMENT": "Historical fork: create liquidity/proofs/messages before a CGT/ETH_LOCKBOX/INTEROP transition, flip only the relevant L1 or L2 feature state, then exercise every current consumer.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2605: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-076",
@@ -1760,7 +1760,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a structurally hash-consistent duplicate/unsorted list under the first super-root game, then consume it through a later Portal/fault-proof-program version",
     "NEXT_EXPERIMENT": "closed: C11/C12 unless the old kona prestate or a non-atomic ASR/DGF migration breaks the factory domain.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2701: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-077",
@@ -1783,7 +1783,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a structurally hash-consistent duplicate/unsorted list under the first super-root game, then consume it through a later Portal/fault-proof-program version",
     "NEXT_EXPERIMENT": "closed: C11/C12 unless the old kona prestate or a non-atomic ASR/DGF migration breaks the factory domain.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2702: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-078",
@@ -1807,7 +1807,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a game clone under an older implementation/gameArgs/prestate; consume it through today's mutable ASR predicates or shared anchor",
     "NEXT_EXPERIMENT": "closed on OP by C13; reopen on Ink/Soneium/Unichain or for an official-proposer root not recomputed in PASS A.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2703: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-079",
@@ -1830,7 +1830,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create an immutable game under old factory/ASR/chain-binding inputs; consume it after a mutable singleton or identity source is re-pointed",
     "NEXT_EXPERIMENT": "L7: trace the type-5 proposer call graph and test whether a born-resolved cross-type game can advance the shared anchor under every deployed forwarding path.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2704: confidence \u2014 High for the primitive; low for any present exploit; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-080",
@@ -1855,7 +1855,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create ETH liability or authorization before the v4/v7 custody split; consume it after pooling, re-pointing, or a failed current finalization",
     "NEXT_EXPERIMENT": "closed: C3/C9 for current topology; reopen only with pre-U16 residue or historical authorization divergence.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2902: confidence \u2014 High for the primitive; high that no present core-contract impact was found; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-081",
@@ -1877,7 +1877,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create proof, authorization, liquidity, or game before migration; consume it after fresh DGF/ASR and shared-lockbox cutover",
     "NEXT_EXPERIMENT": "L8/L9: reconstruct pre-migration per-chain ETH liability and compose orphaned singleton state, sticky authorization, and cleared game types.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-2903: confidence \u2014 High; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-082",
@@ -1900,7 +1900,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a scoped pause or store a dependency pointer under an earlier identifier generation; consume it after the v9 lockbox-key pivot",
     "NEXT_EXPERIMENT": "closed: C8 unless a historical chain profile proves pointer or identifier divergence.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-3002: confidence \u2014 High boundary, killed current exploit; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-083",
@@ -1925,7 +1925,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "no persistent cross-upgrade object identified: EVM transaction rollback kills the pre-metering lock/call effect (closed by C3 unless an external non-rollback observer appears)",
     "NEXT_EXPERIMENT": "closed: C3/C9 for current topology; reopen only with pre-U16 residue or historical authorization divergence.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-3003: confidence \u2014 High primitive, no current bug; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-084",
@@ -1948,7 +1948,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "authorize while two proxy-admin owners compare equal, transfer only one owner later, then consume the monotonic authorization under divergent security domains",
     "NEXT_EXPERIMENT": "closed: C11/C12 unless the old kona prestate or a non-atomic ASR/DGF migration breaks the factory domain.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-3004: confidence \u2014 High predicate weakness; current exploit killed; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-085",
@@ -1969,7 +1969,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a game/config under a type absent from the migration's finite list, then consume it through the old DGF after listed types are cleared",
     "NEXT_EXPERIMENT": "L8/L9: reconstruct pre-migration per-chain ETH liability and compose orphaned singleton state, sticky authorization, and cleared game types.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-3005: confidence \u2014 High structural gap, low present exploitability; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-086",
@@ -1990,7 +1990,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a message using the old L2 budget; consume it on L1 after U21 or a future Amsterdam cost activation",
     "NEXT_EXPERIMENT": "L5: solve the EIP-7825 transaction-gas cap against v9's 150k local reserve and maximum replay calldata.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-3006: confidence \u2014 Medium-high boundary; no current permanent impact; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-087",
@@ -2011,7 +2011,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "construct a relayer/deposit envelope that fit the v8 implementation, then consume the same maximum-size calldata immediately after v9 under transaction/block gas caps",
     "NEXT_EXPERIMENT": "L6: isolate the exact deposit calldata term added at U21 and find the smallest production payload that crosses a block/tx gas limit.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-3105: confidence \u2014 High that deployed gas differs; low on root cause and no eligible impact; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-088",
@@ -2033,7 +2033,7 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a messenger withdrawal under pre-v9 outcome semantics, then finalize through the sender-only v9 guard where L1CDM returns normally but its mappings encode failure",
     "NEXT_EXPERIMENT": "closed: C5/C7 for direct replay; retain only if a historical hash-domain split or L3 composition is demonstrated.",
     "priority": "P1",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-3106: confidence \u2014 High as a contract trust boundary; zero confidence in current permissionless production reachability; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   },
   {
     "id": "A-089",
@@ -2054,6 +2054,6 @@
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a message using the old L2 budget; consume it on L1 after U21 or a future Amsterdam cost activation",
     "NEXT_EXPERIMENT": "L5: solve the EIP-7825 transaction-gas cap against v9's 150k local reserve and maximum replay calldata.",
     "priority": "P0",
-    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+    "pass_a_status": "PRIM-3202: confidence \u2014 High for deployed asymmetry, medium for future-fork behavior, low for present impact; PASS A disposition \u2014 primitive retained, no established permissionless bounty impact"
   }
 ]
