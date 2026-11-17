@@ -13,7 +13,7 @@
       "v1.0.0 factory clone \u2014 contracts/dispute/DisputeGameFactory.sol:78-162",
       "v1.4.0 per-type anchor \u2014 src/dispute/AnchorStateRegistry.sol:20-87",
       "v2.0.0 single anchor/snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
-      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190",
+      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190,278-292",
       "v7.0.0 CREATE2 and super games \u2014 src/dispute/DisputeGameFactory.sol:147-225",
       "v9.0.0 current validity \u2014 src/dispute/AnchorStateRegistry.sol:227-352"
     ],
@@ -30,14 +30,14 @@
     ],
     "title": "SUPER_CANNON_KONA games on the pre-U21 absolute prestate stay in flight, respected and resolvable after U21",
     "family": "dispute-game",
-    "EARLIEST_SEMANTIC_ANCESTOR": "first: v2.0.0:src/dispute/SuperFaultDisputeGame.sol:257-284,1083-1084 (fixed absolute prestate in a super game); current form: v9.0.0:src/dispute/SuperFaultDisputeGame.sol:251-278,823-874 (prestate and singleton addresses in immutable clone args)",
+    "EARLIEST_SEMANTIC_ANCESTOR": "first: v2.0.0:src/dispute/SuperFaultDisputeGame.sol:257-284,1083-1084 (fixed absolute prestate in a super game); immutable-arg form first: v6.0.0:src/dispute/SuperFaultDisputeGame.sol:793-823; current offset form first: v8.0.0:src/dispute/SuperFaultDisputeGame.sol:838-875, preserved at v9.0.0:src/dispute/SuperFaultDisputeGame.sol:823-874",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/dispute/SuperFaultDisputeGame.sol:251-340,823-887 and src/dispute/AnchorStateRegistry.sol:227-352",
     "PERSISTENT_STATE_OR_OBJECT": "already-created type-9 clone embedding the earlier absolute prestate and mutable singleton addresses",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 factory clone \u2014 contracts/dispute/DisputeGameFactory.sol:78-162",
       "v1.4.0 per-type anchor \u2014 src/dispute/AnchorStateRegistry.sol:20-87",
       "v2.0.0 single anchor/snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
-      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190",
+      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190,278-292",
       "v7.0.0 CREATE2 and super games \u2014 src/dispute/DisputeGameFactory.sol:147-225",
       "v9.0.0 current validity \u2014 src/dispute/AnchorStateRegistry.sol:227-352"
     ],
@@ -76,14 +76,14 @@
     ],
     "title": "SUPER_PERMISSIONED games are authorised by `tx.origin`, cost no bond and are DEFENDER_WINS at creation; U21 rotated the OP Mainnet proposer to an EOA that also runs the permissionless proposer [exact PASS-A duplicates: PRIM-0104, PRIM-0705]",
     "family": "dispute-game",
-    "EARLIEST_SEMANTIC_ANCESTOR": "first: v2.0.0:src/dispute/SuperPermissionedDisputeGame.sol:42-52,89-108 (immutable proposer/challenger and tx.origin creation gate); current form: v9.0.0:src/dispute/SuperPermissionedDisputeGame.sol:52-78,133-135 (born-resolved immutable-arg game)",
+    "EARLIEST_SEMANTIC_ANCESTOR": "first: v2.0.0:src/dispute/SuperPermissionedDisputeGame.sol:42-52,89-108 (immutable proposer/challenger and tx.origin creation gate); current born-resolved form first: v8.0.0:src/dispute/SuperPermissionedDisputeGame.sol:48-73, preserved at v9.0.0:src/dispute/SuperPermissionedDisputeGame.sol:52-78,133-135",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/dispute/SuperPermissionedDisputeGame.sol:52-78,133-135 and src/dispute/AnchorStateRegistry.sol:331-370",
     "PERSISTENT_STATE_OR_OBJECT": "type-5 clone, snapshotted respect, proposer immutable arg and possible shared-anchor position",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 factory clone \u2014 contracts/dispute/DisputeGameFactory.sol:78-162",
       "v1.4.0 per-type anchor \u2014 src/dispute/AnchorStateRegistry.sol:20-87",
       "v2.0.0 single anchor/snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
-      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190",
+      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190,278-292",
       "v7.0.0 CREATE2 and super games \u2014 src/dispute/DisputeGameFactory.sol:147-225",
       "v9.0.0 current validity \u2014 src/dispute/AnchorStateRegistry.sol:227-352"
     ],
@@ -106,7 +106,7 @@
     "HISTORICAL_BRANCHES": [
       "v1.0.0 portal-local bool \u2014 contracts/L1/OptimismPortal.sol:83,174-187",
       "v1.2.0 global SuperchainConfig \u2014 src/L1/SuperchainConfig.sol:19-81",
-      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-171",
+      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-182",
       "v4.1.0 SystemConfig-selected key \u2014 src/L1/SystemConfig.sol:503-534",
       "v9.0.0 lockbox key \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
@@ -146,7 +146,7 @@
     ],
     "title": "`deleteProvenWithdrawal` (new in v9) clears `provenWithdrawals[h][s]` but leaves `s` in `proofSubmitters[h]`",
     "family": "proof-lifecycle",
-    "EARLIEST_SEMANTIC_ANCESTOR": "array/cell split first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; delete-without-prune current form first: v9.0.0:src/L1/OptimismPortal2.sol:711-728",
+    "EARLIEST_SEMANTIC_ANCESTOR": "array/cell split first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,315-328; delete-without-prune current form first: v9.0.0:src/L1/OptimismPortal2.sol:711-728",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:671-728",
     "PERSISTENT_STATE_OR_OBJECT": "one per-submitter proof cell, an append-only submitter array entry and the hash-global finalized bit",
     "HISTORICAL_BRANCHES": [
@@ -154,7 +154,7 @@
       "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
       "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
       "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
-      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -170,14 +170,14 @@
     ],
     "title": "U21 rotated the SUPER_PERMISSIONED proposer on OP Mainnet only (the single per-chain asymmetry in the upgrade's storage delta)",
     "family": "dispute-game",
-    "EARLIEST_SEMANTIC_ANCESTOR": "first: v2.0.0:src/dispute/SuperPermissionedDisputeGame.sol:42-52,89-108 (immutable proposer/challenger and tx.origin creation gate); current form: v9.0.0:src/dispute/SuperPermissionedDisputeGame.sol:52-78,133-135 (born-resolved immutable-arg game)",
+    "EARLIEST_SEMANTIC_ANCESTOR": "first: v2.0.0:src/dispute/SuperPermissionedDisputeGame.sol:42-52,89-108 (immutable proposer/challenger and tx.origin creation gate); current born-resolved form first: v8.0.0:src/dispute/SuperPermissionedDisputeGame.sol:48-73, preserved at v9.0.0:src/dispute/SuperPermissionedDisputeGame.sol:52-78,133-135",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/dispute/SuperPermissionedDisputeGame.sol:52-78,133-135 and src/dispute/AnchorStateRegistry.sol:331-370",
     "PERSISTENT_STATE_OR_OBJECT": "type-5 clone, snapshotted respect, proposer immutable arg and possible shared-anchor position",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 factory clone \u2014 contracts/dispute/DisputeGameFactory.sol:78-162",
       "v1.4.0 per-type anchor \u2014 src/dispute/AnchorStateRegistry.sol:20-87",
       "v2.0.0 single anchor/snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
-      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190",
+      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190,278-292",
       "v7.0.0 CREATE2 and super games \u2014 src/dispute/DisputeGameFactory.sol:147-225",
       "v9.0.0 current validity \u2014 src/dispute/AnchorStateRegistry.sol:227-352"
     ],
@@ -199,9 +199,9 @@
     "PERSISTENT_STATE_OR_OBJECT": "mature per-submitter proof and its unfinalized hash-global replay bit",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 v0/v1 replay \u2014 contracts/universal/CrossDomainMessenger.sol:303-413",
-      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:219-330",
-      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
-      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:212-373; src/L1/OptimismPortal2.sol:639-653"
+      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:211-314",
+      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
+      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466; src/L1/OptimismPortal2.sol:639-653"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a legacy hash, failedMessages entry, or old-budget withdrawal before U21; consume it through the current replay and portal atomicity branches",
@@ -221,9 +221,9 @@
     "PERSISTENT_STATE_OR_OBJECT": "in-flight withdrawal execution context: l2Sender, finalized bit and temporarily unlocked ETH",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 v0/v1 replay \u2014 contracts/universal/CrossDomainMessenger.sol:303-413",
-      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:219-330",
-      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
-      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:212-373; src/L1/OptimismPortal2.sol:639-653"
+      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:211-314",
+      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
+      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466; src/L1/OptimismPortal2.sol:639-653"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a legacy hash, failedMessages entry, or old-budget withdrawal before U21; consume it through the current replay and portal atomicity branches",
@@ -246,7 +246,7 @@
       "v1.0.0 portal custody \u2014 contracts/L1/OptimismPortal.sol:325-490",
       "v1.6.0 custom-gas-token branch \u2014 src/L1/OptimismPortal2.sol:362-440,504-573",
       "v4.0.0 per-chain ETHLockbox \u2014 src/L1/ETHLockbox.sol:67-219",
-      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:502-572",
+      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:503-537",
       "v9.0.0 lockbox-sourced pause \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -266,14 +266,14 @@
     ],
     "title": "Finalizing a victim's messenger withdrawal from inside an L1CDM replay moves its ETH from the lockbox into L1CDM [exact PASS-A duplicates: PRIM-0304, PRIM-0401, PRIM-0803, PRIM-1102, PRIM-1202]",
     "family": "messenger-replay",
-    "EARLIEST_SEMANTIC_ANCESTOR": "components first coexist at v1.4.0:src/L1/OptimismPortal2.sol:339-387 and src/universal/CrossDomainMessenger.sol:219-330; current nested-replay outcome: v9.0.0:src/universal/CrossDomainMessenger.sol:212-302 with src/L1/OptimismPortal2.sol:620-653",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302 and src/L1/OptimismPortal2.sol:620-653",
+    "EARLIEST_SEMANTIC_ANCESTOR": "components first coexist at v1.4.0:src/L1/OptimismPortal2.sol:339-387 and src/universal/CrossDomainMessenger.sol:207-310; current nested-replay outcome: v9.0.0:src/universal/CrossDomainMessenger.sol:209-310 with src/L1/OptimismPortal2.sol:620-653",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310 and src/L1/OptimismPortal2.sol:620-653",
     "PERSISTENT_STATE_OR_OBJECT": "a proven messenger withdrawal, outer failedMessages replay context and ETH parked in L1CrossDomainMessenger",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 v0/v1 replay \u2014 contracts/universal/CrossDomainMessenger.sol:303-413",
-      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:219-330",
-      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
-      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:212-373; src/L1/OptimismPortal2.sol:639-653"
+      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:211-314",
+      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
+      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466; src/L1/OptimismPortal2.sol:639-653"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a legacy hash, failedMessages entry, or old-budget withdrawal before U21; consume it through the current replay and portal atomicity branches",
@@ -297,7 +297,7 @@
     "HISTORICAL_BRANCHES": [
       "v1.0.0 portal-local bool \u2014 contracts/L1/OptimismPortal.sol:83,174-187",
       "v1.2.0 global SuperchainConfig \u2014 src/L1/SuperchainConfig.sol:19-81",
-      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-171",
+      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-182",
       "v4.1.0 SystemConfig-selected key \u2014 src/L1/SystemConfig.sol:503-534",
       "v9.0.0 lockbox key \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
@@ -315,14 +315,14 @@
     ],
     "title": "Withdrawal targets v9 does not forbid: previous lockboxes and sibling portals after an interop migration [exact PASS-A duplicates: PRIM-0306, PRIM-0901]",
     "family": "custody",
-    "EARLIEST_SEMANTIC_ANCESTOR": "first relevant migration/lockbox topology: v7.0.0:src/L1/OptimismPortal2.sol:502-572 and src/L1/ETHLockbox.sol:180-232; current unsafe-target predicate: v9.0.0:src/L1/OptimismPortal2.sol:846-849",
+    "EARLIEST_SEMANTIC_ANCESTOR": "first relevant migration/lockbox topology: v7.0.0:src/L1/OptimismPortal2.sol:503-537 and src/L1/ETHLockbox.sol:180-232; current unsafe-target predicate: v9.0.0:src/L1/OptimismPortal2.sol:846-849",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:577-666,741-795,846-849",
     "PERSISTENT_STATE_OR_OBJECT": "retired/sibling portal or lockbox address left authorized and not equal to the current unsafe target",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 portal custody \u2014 contracts/L1/OptimismPortal.sol:325-490",
       "v1.6.0 custom-gas-token branch \u2014 src/L1/OptimismPortal2.sol:362-440,504-573",
       "v4.0.0 per-chain ETHLockbox \u2014 src/L1/ETHLockbox.sol:67-219",
-      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:502-572",
+      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:503-537",
       "v9.0.0 lockbox-sourced pause \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -347,7 +347,7 @@
       "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
       "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
       "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
-      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -368,9 +368,9 @@
     "PERSISTENT_STATE_OR_OBJECT": "withdrawal sender identity plus successfulMessages/failedMessages outcome for the nested relay",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 v0/v1 replay \u2014 contracts/universal/CrossDomainMessenger.sol:303-413",
-      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:219-330",
-      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
-      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:212-373; src/L1/OptimismPortal2.sol:639-653"
+      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:211-314",
+      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
+      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466; src/L1/OptimismPortal2.sol:639-653"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a messenger withdrawal under pre-v9 outcome semantics, then finalize through the sender-only v9 guard where L1CDM returns normally but its mappings encode failure",
@@ -386,11 +386,11 @@
     "title": "Amsterdam gas constants are live on L1 today while L2 still budgets with the old ones",
     "family": "gas-budget",
     "EARLIEST_SEMANTIC_ANCESTOR": "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 and src/libraries/SafeCall.sol:103-171",
     "PERSISTENT_STATE_OR_OBJECT": "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 EIP-150 reserve \u2014 contracts/libraries/SafeCall.sol:91-159",
-      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
+      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
       "v9.0.0 local/remote budget split and codehash-zero reserve \u2014 src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -427,7 +427,7 @@
     ],
     "title": "proof bookkeeping asymmetries (`deleteProvenWithdrawal`, `proofSubmitters`, prove-after-finalize)",
     "family": "proof-lifecycle",
-    "EARLIEST_SEMANTIC_ANCESTOR": "per-submitter cell/list first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; current deletion and hash-global finalization: v9.0.0:src/L1/OptimismPortal2.sol:577-728",
+    "EARLIEST_SEMANTIC_ANCESTOR": "per-submitter cell/list first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,315-328; current deletion and hash-global finalization: v9.0.0:src/L1/OptimismPortal2.sol:577-728",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
     "PERSISTENT_STATE_OR_OBJECT": "per-submitter proof cells, duplicate/stale proofSubmitters entries and one finalizedWithdrawals bit",
     "HISTORICAL_BRANCHES": [
@@ -435,7 +435,7 @@
       "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
       "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
       "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
-      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -452,7 +452,7 @@
     ],
     "title": "exact semantics of the permissionless proof deletion [exact PASS-A duplicates: PRIM-0501, PRIM-2501]",
     "family": "proof-lifecycle",
-    "EARLIEST_SEMANTIC_ANCESTOR": "array/cell split first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; delete-without-prune current form first: v9.0.0:src/L1/OptimismPortal2.sol:711-728",
+    "EARLIEST_SEMANTIC_ANCESTOR": "array/cell split first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,315-328; delete-without-prune current form first: v9.0.0:src/L1/OptimismPortal2.sol:711-728",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:671-728",
     "PERSISTENT_STATE_OR_OBJECT": "one per-submitter proof cell, an append-only submitter array entry and the hash-global finalized bit",
     "HISTORICAL_BRANCHES": [
@@ -460,7 +460,7 @@
       "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
       "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
       "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
-      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -478,7 +478,7 @@
     ],
     "title": "`proofSubmitters[h]` is an append-only, unauthenticated, never-pruned array [exact PASS-A duplicates: PRIM-0502, PRIM-2502, PRIM-3103]",
     "family": "proof-lifecycle",
-    "EARLIEST_SEMANTIC_ANCESTOR": "per-submitter cell/list first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; current deletion and hash-global finalization: v9.0.0:src/L1/OptimismPortal2.sol:577-728",
+    "EARLIEST_SEMANTIC_ANCESTOR": "per-submitter cell/list first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,315-328; current deletion and hash-global finalization: v9.0.0:src/L1/OptimismPortal2.sol:577-728",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
     "PERSISTENT_STATE_OR_OBJECT": "per-submitter proof cells, duplicate/stale proofSubmitters entries and one finalizedWithdrawals bit",
     "HISTORICAL_BRANCHES": [
@@ -486,7 +486,7 @@
       "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
       "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
       "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
-      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -502,14 +502,14 @@
     ],
     "title": "\"Trojan\" super-root game: an INVALID game that embeds the CORRECT per-chain output root accepts unmodified honest proofs",
     "family": "dispute-game",
-    "EARLIEST_SEMANTIC_ANCESTOR": "super-root proof first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified game-type branch: v7.0.0:src/L1/OptimismPortal2.sol:390-492, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
+    "EARLIEST_SEMANTIC_ANCESTOR": "super-root proof first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified game-type branch: v7.0.0:src/L1/OptimismPortal2.sol:368-471, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:390-492 and src/dispute/AnchorStateRegistry.sol:286-352",
     "PERSISTENT_STATE_OR_OBJECT": "attacker-created super-game/root claim and a genuine per-chain output-root inclusion proof",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 factory clone \u2014 contracts/dispute/DisputeGameFactory.sol:78-162",
       "v1.4.0 per-type anchor \u2014 src/dispute/AnchorStateRegistry.sol:20-87",
       "v2.0.0 single anchor/snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
-      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190",
+      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190,278-292",
       "v7.0.0 CREATE2 and super games \u2014 src/dispute/DisputeGameFactory.sol:147-225",
       "v9.0.0 current validity \u2014 src/dispute/AnchorStateRegistry.sol:227-352"
     ],
@@ -534,7 +534,7 @@
       "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
       "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
       "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
-      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -557,7 +557,7 @@
       "v1.0.0 factory clone \u2014 contracts/dispute/DisputeGameFactory.sol:78-162",
       "v1.4.0 per-type anchor \u2014 src/dispute/AnchorStateRegistry.sol:20-87",
       "v2.0.0 single anchor/snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
-      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190",
+      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190,278-292",
       "v7.0.0 CREATE2 and super games \u2014 src/dispute/DisputeGameFactory.sol:147-225",
       "v9.0.0 current validity \u2014 src/dispute/AnchorStateRegistry.sol:227-352"
     ],
@@ -580,7 +580,7 @@
     "HISTORICAL_BRANCHES": [
       "v1.0.0 portal-local bool \u2014 contracts/L1/OptimismPortal.sol:83,174-187",
       "v1.2.0 global SuperchainConfig \u2014 src/L1/SuperchainConfig.sol:19-81",
-      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-171",
+      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-182",
       "v4.1.0 SystemConfig-selected key \u2014 src/L1/SystemConfig.sol:503-534",
       "v9.0.0 lockbox key \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
@@ -619,13 +619,13 @@
     ],
     "title": "An expired pause blocks `pause()` (and therefore the DeputyPauseModule) until the Guardian Safe resets it [exact PASS-A duplicates: PRIM-0603, PRIM-2603]",
     "family": "pause",
-    "EARLIEST_SEMANTIC_ANCESTOR": "first scoped/expiring timestamp model: v4.0.0:src/L1/SuperchainConfig.sol:40-171; current form: v9.0.0:src/L1/SuperchainConfig.sol:39-40,79-162",
+    "EARLIEST_SEMANTIC_ANCESTOR": "first scoped/expiring timestamp model: v4.0.0:src/L1/SuperchainConfig.sol:40-182; current form: v9.0.0:src/L1/SuperchainConfig.sol:39-40,79-162",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/SuperchainConfig.sol:79-162 and src/L1/ETHLockbox.sol:112-113",
     "PERSISTENT_STATE_OR_OBJECT": "pauseTimestamps[identifier], including expired or currently unconsumed identifiers",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 portal-local bool \u2014 contracts/L1/OptimismPortal.sol:83,174-187",
       "v1.2.0 global SuperchainConfig \u2014 src/L1/SuperchainConfig.sol:19-81",
-      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-171",
+      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-182",
       "v4.1.0 SystemConfig-selected key \u2014 src/L1/SystemConfig.sol:503-534",
       "v9.0.0 lockbox key \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
@@ -642,13 +642,13 @@
     ],
     "title": "SuperchainConfig accepts any identifier; non-lockbox identifiers are inert after v9 and the deputy module's post-check still passes",
     "family": "pause",
-    "EARLIEST_SEMANTIC_ANCESTOR": "first scoped/expiring timestamp model: v4.0.0:src/L1/SuperchainConfig.sol:40-171; current form: v9.0.0:src/L1/SuperchainConfig.sol:39-40,79-162",
+    "EARLIEST_SEMANTIC_ANCESTOR": "first scoped/expiring timestamp model: v4.0.0:src/L1/SuperchainConfig.sol:40-182; current form: v9.0.0:src/L1/SuperchainConfig.sol:39-40,79-162",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/SuperchainConfig.sol:79-162 and src/L1/ETHLockbox.sol:112-113",
     "PERSISTENT_STATE_OR_OBJECT": "pauseTimestamps[identifier], including expired or currently unconsumed identifiers",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 portal-local bool \u2014 contracts/L1/OptimismPortal.sol:83,174-187",
       "v1.2.0 global SuperchainConfig \u2014 src/L1/SuperchainConfig.sol:19-81",
-      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-171",
+      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-182",
       "v4.1.0 SystemConfig-selected key \u2014 src/L1/SystemConfig.sol:503-534",
       "v9.0.0 lockbox key \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
@@ -671,13 +671,13 @@
     "HISTORICAL_BRANCHES": [
       "v1.0.0 portal-local bool \u2014 contracts/L1/OptimismPortal.sol:83,174-187",
       "v1.2.0 global SuperchainConfig \u2014 src/L1/SuperchainConfig.sol:19-81",
-      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-171",
+      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-182",
       "v4.1.0 SystemConfig-selected key \u2014 src/L1/SystemConfig.sol:503-534",
       "v9.0.0 lockbox key \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create liquidity/proofs/messages with a feature disabled, then consume them after CGT/ETH_LOCKBOX/INTEROP flips without object-by-object conversion",
-    "NEXT_EXPERIMENT": "closed: C8 unless a historical chain profile proves pointer or identifier divergence.",
+    "NEXT_EXPERIMENT": "Historical fork: create liquidity/proofs/messages before a CGT/ETH_LOCKBOX/INTEROP transition, flip only the relevant L1 or L2 feature state, then exercise every current consumer.",
     "priority": "P1",
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
@@ -689,14 +689,14 @@
     ],
     "title": "For super games the ONLY on-chain chain binding is SystemConfig.l2ChainId at prove time; game args are chain-agnostic [exact PASS-A duplicates: PRIM-0606, PRIM-0903]",
     "family": "identity-binding",
-    "EARLIEST_SEMANTIC_ANCESTOR": "super-root chain selection first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified binding: v7.0.0:src/L1/OptimismPortal2.sol:390-492, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
+    "EARLIEST_SEMANTIC_ANCESTOR": "super-root chain selection first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified binding: v7.0.0:src/L1/OptimismPortal2.sol:368-471, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:390-492, src/dispute/DisputeGameFactory.sol:147-245, and src/dispute/AnchorStateRegistry.sol:227-352",
     "PERSISTENT_STATE_OR_OBJECT": "super-game UUID/root/preimage, immutable l1Head/extraData and SystemConfig.l2ChainId selected at proof time",
     "HISTORICAL_BRANCHES": [
       "v1.4.0 factory/address identity \u2014 src/dispute/AnchorStateRegistry.sol:59-87",
       "v2.0.0 single anchor and snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
       "v4.0.0 super-root portal \u2014 src/L1/OptimismPortal2.sol:396-570",
-      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 lockbox identity source \u2014 src/dispute/AnchorStateRegistry.sol:33-59,136-143"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -712,14 +712,14 @@
     ],
     "title": "what L1 checks vs. what the kona-interop program guarantees about a super-root claim",
     "family": "identity-binding",
-    "EARLIEST_SEMANTIC_ANCESTOR": "super-root chain selection first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified binding: v7.0.0:src/L1/OptimismPortal2.sol:390-492, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
+    "EARLIEST_SEMANTIC_ANCESTOR": "super-root chain selection first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified binding: v7.0.0:src/L1/OptimismPortal2.sol:368-471, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:390-492, src/dispute/DisputeGameFactory.sol:147-245, and src/dispute/AnchorStateRegistry.sol:227-352",
     "PERSISTENT_STATE_OR_OBJECT": "super-game UUID/root/preimage, immutable l1Head/extraData and SystemConfig.l2ChainId selected at proof time",
     "HISTORICAL_BRANCHES": [
       "v1.4.0 factory/address identity \u2014 src/dispute/AnchorStateRegistry.sol:59-87",
       "v2.0.0 single anchor and snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
       "v4.0.0 super-root portal \u2014 src/L1/OptimismPortal2.sol:396-570",
-      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 lockbox identity source \u2014 src/dispute/AnchorStateRegistry.sol:33-59,136-143"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -742,7 +742,7 @@
       "v1.0.0 factory clone \u2014 contracts/dispute/DisputeGameFactory.sol:78-162",
       "v1.4.0 per-type anchor \u2014 src/dispute/AnchorStateRegistry.sol:20-87",
       "v2.0.0 single anchor/snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
-      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190",
+      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190,278-292",
       "v7.0.0 CREATE2 and super games \u2014 src/dispute/DisputeGameFactory.sol:147-225",
       "v9.0.0 current validity \u2014 src/dispute/AnchorStateRegistry.sol:227-352"
     ],
@@ -759,14 +759,14 @@
     ],
     "title": "one game per super root per factory, validity relative to the creation-time l1Head, unbounded timestamp",
     "family": "identity-binding",
-    "EARLIEST_SEMANTIC_ANCESTOR": "super-root chain selection first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified binding: v7.0.0:src/L1/OptimismPortal2.sol:390-492, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
+    "EARLIEST_SEMANTIC_ANCESTOR": "super-root chain selection first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified binding: v7.0.0:src/L1/OptimismPortal2.sol:368-471, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:390-492, src/dispute/DisputeGameFactory.sol:147-245, and src/dispute/AnchorStateRegistry.sol:227-352",
     "PERSISTENT_STATE_OR_OBJECT": "super-game UUID/root/preimage, immutable l1Head/extraData and SystemConfig.l2ChainId selected at proof time",
     "HISTORICAL_BRANCHES": [
       "v1.4.0 factory/address identity \u2014 src/dispute/AnchorStateRegistry.sol:59-87",
       "v2.0.0 single anchor and snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
       "v4.0.0 super-root portal \u2014 src/L1/OptimismPortal2.sol:396-570",
-      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 lockbox identity source \u2014 src/dispute/AnchorStateRegistry.sol:33-59,136-143"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -788,7 +788,7 @@
     "HISTORICAL_BRANCHES": [
       "v4.0.0 portal liquidity/super-root migration \u2014 src/L1/OptimismPortal2.sol:374-429",
       "v7.0.0 shared-game migration \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:89-316",
-      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:528-572",
+      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:510-554",
       "v9.0.0 U21 state \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:129-520"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -805,11 +805,11 @@
     "title": "L2 budget (old constants) vs L1 v9 relay requirement: forced \"finalized + failed\" band",
     "family": "gas-budget",
     "EARLIEST_SEMANTIC_ANCESTOR": "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 and src/libraries/SafeCall.sol:103-171",
     "PERSISTENT_STATE_OR_OBJECT": "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 EIP-150 reserve \u2014 contracts/libraries/SafeCall.sol:91-159",
-      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
+      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
       "v9.0.0 local/remote budget split and codehash-zero reserve \u2014 src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -830,9 +830,9 @@
     "PERSISTENT_STATE_OR_OBJECT": "withdrawal sender identity plus successfulMessages/failedMessages outcome for the nested relay",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 v0/v1 replay \u2014 contracts/universal/CrossDomainMessenger.sol:303-413",
-      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:219-330",
-      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
-      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:212-373; src/L1/OptimismPortal2.sol:639-653"
+      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:211-314",
+      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
+      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466; src/L1/OptimismPortal2.sol:639-653"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a messenger withdrawal under pre-v9 outcome semantics, then finalize through the sender-only v9 guard where L1CDM returns normally but its mappings encode failure",
@@ -848,11 +848,11 @@
     "title": "Amsterdam gas reserves are enforced today (183,600 new-account, 135,000 relay reserve)",
     "family": "gas-budget",
     "EARLIEST_SEMANTIC_ANCESTOR": "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 and src/libraries/SafeCall.sol:103-171",
     "PERSISTENT_STATE_OR_OBJECT": "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 EIP-150 reserve \u2014 contracts/libraries/SafeCall.sol:91-159",
-      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
+      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
       "v9.0.0 local/remote budget split and codehash-zero reserve \u2014 src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -868,14 +868,14 @@
     ],
     "title": "Live cross-upgrade population: version-0 legacy and old-budget messenger withdrawals in flight",
     "family": "messenger-replay",
-    "EARLIEST_SEMANTIC_ANCESTOR": "legacy hash objects first: v1.0.0:contracts/universal/CrossDomainMessenger.sol:303-413; unchanged mapping consumers with U21 budgets: v9.0.0:src/universal/CrossDomainMessenger.sol:212-302",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302 and src/L1/OptimismPortal2.sol:577-666",
+    "EARLIEST_SEMANTIC_ANCESTOR": "legacy hash objects first: v1.0.0:contracts/universal/CrossDomainMessenger.sol:303-413; unchanged mapping consumers with U21 budgets: v9.0.0:src/universal/CrossDomainMessenger.sol:209-310",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310 and src/L1/OptimismPortal2.sol:577-666",
     "PERSISTENT_STATE_OR_OBJECT": "live version-0/old-budget withdrawal, legacy/canonical message hashes and persistent messenger mappings",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 v0/v1 replay \u2014 contracts/universal/CrossDomainMessenger.sol:303-413",
-      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:219-330",
-      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
-      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:212-373; src/L1/OptimismPortal2.sol:639-653"
+      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:211-314",
+      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
+      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466; src/L1/OptimismPortal2.sol:639-653"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a legacy hash, failedMessages entry, or old-budget withdrawal before U21; consume it through the current replay and portal atomicity branches",
@@ -897,7 +897,7 @@
     "HISTORICAL_BRANCHES": [
       "v4.0.0 portal liquidity/super-root migration \u2014 src/L1/OptimismPortal2.sol:374-429",
       "v7.0.0 shared-game migration \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:89-316",
-      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:528-572",
+      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:510-554",
       "v9.0.0 U21 state \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:129-520"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -919,7 +919,7 @@
     "HISTORICAL_BRANCHES": [
       "v4.0.0 portal liquidity/super-root migration \u2014 src/L1/OptimismPortal2.sol:374-429",
       "v7.0.0 shared-game migration \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:89-316",
-      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:528-572",
+      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:510-554",
       "v9.0.0 U21 state \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:129-520"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -936,11 +936,11 @@
     "title": "Cross-version relay gas budget: L1CrossDomainMessenger 2.13.0 (U21) relays with a 150k reserve while the live L2CrossDomainMessenger 2.2.1 still sizes withdrawals for a 45k reserve",
     "family": "gas-budget",
     "EARLIEST_SEMANTIC_ANCESTOR": "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 and src/libraries/SafeCall.sol:103-171",
     "PERSISTENT_STATE_OR_OBJECT": "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 EIP-150 reserve \u2014 contracts/libraries/SafeCall.sol:91-159",
-      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
+      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
       "v9.0.0 local/remote budget split and codehash-zero reserve \u2014 src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -957,11 +957,11 @@
     "title": "`SafeCall.callWithMinGas` floor is now state-dependent (+183,600 for value to a zero-codehash target) and still multiplies a user-supplied uint256 `gasLimit` unchecked",
     "family": "gas-budget",
     "EARLIEST_SEMANTIC_ANCESTOR": "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 and src/libraries/SafeCall.sol:103-171",
     "PERSISTENT_STATE_OR_OBJECT": "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 EIP-150 reserve \u2014 contracts/libraries/SafeCall.sol:91-159",
-      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
+      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
       "v9.0.0 local/remote budget split and codehash-zero reserve \u2014 src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1001,14 +1001,14 @@
     ],
     "title": "Live on-chain precedent: forged 90,000 ETH withdrawal proof against an attacker-created type-9 game (future super-root timestamp), still stored in the portal after U21",
     "family": "dispute-game",
-    "EARLIEST_SEMANTIC_ANCESTOR": "super-root proof first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified game-type branch: v7.0.0:src/L1/OptimismPortal2.sol:390-492, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
+    "EARLIEST_SEMANTIC_ANCESTOR": "super-root proof first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified game-type branch: v7.0.0:src/L1/OptimismPortal2.sol:368-471, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:390-492 and src/dispute/AnchorStateRegistry.sol:286-352",
     "PERSISTENT_STATE_OR_OBJECT": "attacker-created super-game/root claim and a genuine per-chain output-root inclusion proof",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 factory clone \u2014 contracts/dispute/DisputeGameFactory.sol:78-162",
       "v1.4.0 per-type anchor \u2014 src/dispute/AnchorStateRegistry.sol:20-87",
       "v2.0.0 single anchor/snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
-      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190",
+      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190,278-292",
       "v7.0.0 CREATE2 and super games \u2014 src/dispute/DisputeGameFactory.sol:147-225",
       "v9.0.0 current validity \u2014 src/dispute/AnchorStateRegistry.sol:227-352"
     ],
@@ -1026,11 +1026,11 @@
     "title": "The relay-reserve defect that U21 fixes on L1 is still live in the (un-upgraded) L2CrossDomainMessenger 2.2.1: a 20\u201360 KB L1\u2192L2 message whose target exhausts its gas is recorded in NEITHER mapping (deposit tx reverts), unreplayable, ETH stranded",
     "family": "gas-budget",
     "EARLIEST_SEMANTIC_ANCESTOR": "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 and src/libraries/SafeCall.sol:103-171",
     "PERSISTENT_STATE_OR_OBJECT": "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 EIP-150 reserve \u2014 contracts/libraries/SafeCall.sol:91-159",
-      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
+      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
       "v9.0.0 local/remote budget split and codehash-zero reserve \u2014 src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1047,11 +1047,11 @@
     "title": "L1 relay reserve raised by 105,000 gas with no L2 counterpart: measured remaining margin, and public getters that report the wrong side",
     "family": "gas-budget",
     "EARLIEST_SEMANTIC_ANCESTOR": "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 and src/libraries/SafeCall.sol:103-171",
     "PERSISTENT_STATE_OR_OBJECT": "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 EIP-150 reserve \u2014 contracts/libraries/SafeCall.sol:91-159",
-      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
+      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
       "v9.0.0 local/remote budget split and codehash-zero reserve \u2014 src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1096,7 +1096,7 @@
     "HISTORICAL_BRANCHES": [
       "v1.0.0 portal-local bool \u2014 contracts/L1/OptimismPortal.sol:83,174-187",
       "v1.2.0 global SuperchainConfig \u2014 src/L1/SuperchainConfig.sol:19-81",
-      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-171",
+      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-182",
       "v4.1.0 SystemConfig-selected key \u2014 src/L1/SystemConfig.sol:503-534",
       "v9.0.0 lockbox key \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
@@ -1157,14 +1157,14 @@
     ],
     "title": "DGF configuration updates bifurcate old and new game prestates",
     "family": "dispute-game",
-    "EARLIEST_SEMANTIC_ANCESTOR": "implementation mapping first: v1.0.0:contracts/dispute/DisputeGameFactory.sol:30-37,78-162; dynamic gameArgs first: v5.0.0:src/dispute/DisputeGameFactory.sol:70-190; current dual layout: v9.0.0:src/dispute/DisputeGameFactory.sol:147-225,312-318",
+    "EARLIEST_SEMANTIC_ANCESTOR": "implementation mapping first: v1.0.0:contracts/dispute/DisputeGameFactory.sol:30-37,78-162; dynamic gameArgs first: v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292; current dual layout: v9.0.0:src/dispute/DisputeGameFactory.sol:147-225,312-318",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/dispute/DisputeGameFactory.sol:147-245,302-329 and src/dispute/AnchorStateRegistry.sol:227-352",
     "PERSISTENT_STATE_OR_OBJECT": "old and new immutable game clones sharing a UUID schema but embedding different implementation arguments/prestates",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 factory clone \u2014 contracts/dispute/DisputeGameFactory.sol:78-162",
       "v1.4.0 per-type anchor \u2014 src/dispute/AnchorStateRegistry.sol:20-87",
       "v2.0.0 single anchor/snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
-      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190",
+      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190,278-292",
       "v7.0.0 CREATE2 and super games \u2014 src/dispute/DisputeGameFactory.sol:147-225",
       "v9.0.0 current validity \u2014 src/dispute/AnchorStateRegistry.sol:227-352"
     ],
@@ -1254,7 +1254,7 @@
     "HISTORICAL_BRANCHES": [
       "v1.0.0 portal-local bool \u2014 contracts/L1/OptimismPortal.sol:83,174-187",
       "v1.2.0 global SuperchainConfig \u2014 src/L1/SuperchainConfig.sol:19-81",
-      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-171",
+      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-182",
       "v4.1.0 SystemConfig-selected key \u2014 src/L1/SystemConfig.sol:503-534",
       "v9.0.0 lockbox key \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
@@ -1271,14 +1271,14 @@
     ],
     "title": "dynamic gameArgs payload mutation behind a stable mapping head",
     "family": "dispute-game",
-    "EARLIEST_SEMANTIC_ANCESTOR": "implementation mapping first: v1.0.0:contracts/dispute/DisputeGameFactory.sol:30-37,78-162; dynamic gameArgs first: v5.0.0:src/dispute/DisputeGameFactory.sol:70-190; current dual layout: v9.0.0:src/dispute/DisputeGameFactory.sol:147-225,312-318",
+    "EARLIEST_SEMANTIC_ANCESTOR": "implementation mapping first: v1.0.0:contracts/dispute/DisputeGameFactory.sol:30-37,78-162; dynamic gameArgs first: v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292; current dual layout: v9.0.0:src/dispute/DisputeGameFactory.sol:147-225,312-318",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/dispute/DisputeGameFactory.sol:147-245,302-329 and src/dispute/AnchorStateRegistry.sol:227-352",
     "PERSISTENT_STATE_OR_OBJECT": "old and new immutable game clones sharing a UUID schema but embedding different implementation arguments/prestates",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 factory clone \u2014 contracts/dispute/DisputeGameFactory.sol:78-162",
       "v1.4.0 per-type anchor \u2014 src/dispute/AnchorStateRegistry.sol:20-87",
       "v2.0.0 single anchor/snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
-      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190",
+      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190,278-292",
       "v7.0.0 CREATE2 and super games \u2014 src/dispute/DisputeGameFactory.sol:147-225",
       "v9.0.0 current validity \u2014 src/dispute/AnchorStateRegistry.sol:227-352"
     ],
@@ -1325,7 +1325,7 @@
       "v1.0.0 portal custody \u2014 contracts/L1/OptimismPortal.sol:325-490",
       "v1.6.0 custom-gas-token branch \u2014 src/L1/OptimismPortal2.sol:362-440,504-573",
       "v4.0.0 per-chain ETHLockbox \u2014 src/L1/ETHLockbox.sol:67-219",
-      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:502-572",
+      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:503-537",
       "v9.0.0 lockbox-sourced pause \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1348,7 +1348,7 @@
       "v1.0.0 portal custody \u2014 contracts/L1/OptimismPortal.sol:325-490",
       "v1.6.0 custom-gas-token branch \u2014 src/L1/OptimismPortal2.sol:362-440,504-573",
       "v4.0.0 per-chain ETHLockbox \u2014 src/L1/ETHLockbox.sol:67-219",
-      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:502-572",
+      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:503-537",
       "v9.0.0 lockbox-sourced pause \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1372,7 +1372,7 @@
       "v1.0.0 portal custody \u2014 contracts/L1/OptimismPortal.sol:325-490",
       "v1.6.0 custom-gas-token branch \u2014 src/L1/OptimismPortal2.sol:362-440,504-573",
       "v4.0.0 per-chain ETHLockbox \u2014 src/L1/ETHLockbox.sol:67-219",
-      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:502-572",
+      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:503-537",
       "v9.0.0 lockbox-sourced pause \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1394,7 +1394,7 @@
     "HISTORICAL_BRANCHES": [
       "v4.0.0 portal liquidity/super-root migration \u2014 src/L1/OptimismPortal2.sol:374-429",
       "v7.0.0 shared-game migration \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:89-316",
-      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:528-572",
+      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:510-554",
       "v9.0.0 U21 state \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:129-520"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1415,9 +1415,9 @@
     "PERSISTENT_STATE_OR_OBJECT": "mature proof, global finalized bit, temporarily unlocked value and possible messenger failedMessages custody",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 v0/v1 replay \u2014 contracts/universal/CrossDomainMessenger.sol:303-413",
-      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:219-330",
-      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
-      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:212-373; src/L1/OptimismPortal2.sol:639-653"
+      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:211-314",
+      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
+      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466; src/L1/OptimismPortal2.sol:639-653"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a legacy hash, failedMessages entry, or old-budget withdrawal before U21; consume it through the current replay and portal atomicity branches",
@@ -1432,19 +1432,19 @@
     ],
     "title": "CGT and zero-value branches sever ETH liability creation without rejecting surplus",
     "family": "custody",
-    "EARLIEST_SEMANTIC_ANCESTOR": "runtime feature map first: v4.1.0:src/L1/SystemConfig.sol:139,503-534; current immutable/transition guards: v9.0.0:src/L1/SystemConfig.sol:532-568 and src/L1/OptimismPortal2.sol:500-589,741-759",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/SystemConfig.sol:532-568 and src/L1/OptimismPortal2.sol:500-589,741-759",
-    "PERSISTENT_STATE_OR_OBJECT": "feature bit plus pre-existing Portal/lockbox ETH, proofs, messages and cached dependencies",
+    "EARLIEST_SEMANTIC_ANCESTOR": "custom-gas-token liability split first: v1.5.0:src/L1/OptimismPortal.sol:165-215,232-585; runtime feature-map form first: v4.1.0:src/L1/SystemConfig.sol:139,503-534; current zero-value/CGT branches: v9.0.0:src/L1/OptimismPortal2.sol:500-589,741-759",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:500-589,741-759 and src/L1/SystemConfig.sol:532-568",
+    "PERSISTENT_STATE_OR_OBJECT": "feature bit plus Portal/lockbox ETH surplus and zero-value deposit/withdrawal message objects",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 portal custody \u2014 contracts/L1/OptimismPortal.sol:325-490",
       "v1.6.0 custom-gas-token branch \u2014 src/L1/OptimismPortal2.sol:362-440,504-573",
       "v4.0.0 per-chain ETHLockbox \u2014 src/L1/ETHLockbox.sol:67-219",
-      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:502-572",
+      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:503-537",
       "v9.0.0 lockbox-sourced pause \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
-    "UNREVIEWED_CROSS_UPGRADE_EDGE": "create liquidity/proofs/messages with a feature disabled, then consume them after CGT/ETH_LOCKBOX/INTEROP flips without object-by-object conversion",
-    "NEXT_EXPERIMENT": "closed: C3/C9 for current topology; reopen only with pre-U16 residue or historical authorization divergence.",
+    "UNREVIEWED_CROSS_UPGRADE_EDGE": "create ETH/surplus or a zero-value cross-domain object under an older CGT mode, flip the runtime feature, then consume it through U21's liability guards",
+    "NEXT_EXPERIMENT": "Historical fork: create liquidity/proofs/messages before a CGT/ETH_LOCKBOX/INTEROP transition, flip only the relevant L1 or L2 feature state, then exercise every current consumer.",
     "priority": "P1",
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
@@ -1461,9 +1461,9 @@
     "PERSISTENT_STATE_OR_OBJECT": "mature proof, global finalized bit, temporarily unlocked value and possible messenger failedMessages custody",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 v0/v1 replay \u2014 contracts/universal/CrossDomainMessenger.sol:303-413",
-      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:219-330",
-      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
-      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:212-373; src/L1/OptimismPortal2.sol:639-653"
+      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:211-314",
+      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
+      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466; src/L1/OptimismPortal2.sol:639-653"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a legacy hash, failedMessages entry, or old-budget withdrawal before U21; consume it through the current replay and portal atomicity branches",
@@ -1478,7 +1478,7 @@
     ],
     "title": "Per-submitter proofs converge on one hash-global replay bit",
     "family": "proof-lifecycle",
-    "EARLIEST_SEMANTIC_ANCESTOR": "hash-global finalization first: v1.0.0:contracts/L1/OptimismPortal.sol:72,383-409; per-submitter proof cells first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; current form: v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
+    "EARLIEST_SEMANTIC_ANCESTOR": "hash-global finalization first: v1.0.0:contracts/L1/OptimismPortal.sol:72,383-409; per-submitter proof cells first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,315-328; current form: v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
     "PERSISTENT_STATE_OR_OBJECT": "multiple submitter proof cells converging on finalizedWithdrawals[withdrawalHash]",
     "HISTORICAL_BRANCHES": [
@@ -1486,7 +1486,7 @@
       "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
       "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
       "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
-      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1511,7 +1511,7 @@
       "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
       "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
       "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
-      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1529,11 +1529,11 @@
     "title": "Conservative pre-Amsterdam new-account reserve [exact PASS-A duplicates: PRIM-2405, PRIM-3104]",
     "family": "gas-budget",
     "EARLIEST_SEMANTIC_ANCESTOR": "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 and src/libraries/SafeCall.sol:103-171",
     "PERSISTENT_STATE_OR_OBJECT": "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 EIP-150 reserve \u2014 contracts/libraries/SafeCall.sol:91-159",
-      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
+      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
       "v9.0.0 local/remote budget split and codehash-zero reserve \u2014 src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1549,7 +1549,7 @@
     ],
     "title": "v8 proof and messenger replay state survive U21 unchanged",
     "family": "proof-lifecycle",
-    "EARLIEST_SEMANTIC_ANCESTOR": "current proof storage form first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; v8-to-v9 consumer remains at v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
+    "EARLIEST_SEMANTIC_ANCESTOR": "current proof storage form first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,315-328; v8-to-v9 consumer remains at v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:577-728 and src/universal/CrossDomainMessenger.sol:212-302",
     "PERSISTENT_STATE_OR_OBJECT": "pre-U21 provenWithdrawal cells, submitter list, finalized bit and messenger replay mappings",
     "HISTORICAL_BRANCHES": [
@@ -1557,7 +1557,7 @@
       "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
       "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
       "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
-      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1573,7 +1573,7 @@
     ],
     "title": "Adversarial proving cannot overwrite another submitter's proof cell",
     "family": "proof-lifecycle",
-    "EARLIEST_SEMANTIC_ANCESTOR": "per-submitter isolation first/current storage shape: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; current consumer: v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-705",
+    "EARLIEST_SEMANTIC_ANCESTOR": "per-submitter isolation first/current storage shape: v1.4.0:src/L1/OptimismPortal2.sol:83-95,315-328; current consumer: v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-705",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-705",
     "PERSISTENT_STATE_OR_OBJECT": "two disjoint provenWithdrawals[hash][submitter] cells and one hash-global finalization bit",
     "HISTORICAL_BRANCHES": [
@@ -1581,7 +1581,7 @@
       "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
       "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
       "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
-      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1597,7 +1597,7 @@
     ],
     "title": "v8 proofs survive the v9 implementation upgrade",
     "family": "proof-lifecycle",
-    "EARLIEST_SEMANTIC_ANCESTOR": "current proof storage form first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; v8-to-v9 consumer remains at v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
+    "EARLIEST_SEMANTIC_ANCESTOR": "current proof storage form first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,315-328; v8-to-v9 consumer remains at v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:577-728 and src/universal/CrossDomainMessenger.sol:212-302",
     "PERSISTENT_STATE_OR_OBJECT": "pre-U21 provenWithdrawal cells, submitter list, finalized bit and messenger replay mappings",
     "HISTORICAL_BRANCHES": [
@@ -1605,7 +1605,7 @@
       "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
       "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
       "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
-      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1628,7 +1628,7 @@
     "HISTORICAL_BRANCHES": [
       "v4.0.0 portal liquidity/super-root migration \u2014 src/L1/OptimismPortal2.sol:374-429",
       "v7.0.0 shared-game migration \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:89-316",
-      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:528-572",
+      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:510-554",
       "v9.0.0 U21 state \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:129-520"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1652,7 +1652,7 @@
       "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
       "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
       "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
-      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1674,12 +1674,12 @@
     "HISTORICAL_BRANCHES": [
       "v4.0.0 portal liquidity/super-root migration \u2014 src/L1/OptimismPortal2.sol:374-429",
       "v7.0.0 shared-game migration \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:89-316",
-      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:528-572",
+      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:510-554",
       "v9.0.0 U21 state \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:129-520"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create liquidity/proofs/messages with a feature disabled, then consume them after CGT/ETH_LOCKBOX/INTEROP flips without object-by-object conversion",
-    "NEXT_EXPERIMENT": "L8/L9: reconstruct pre-migration per-chain ETH liability and compose orphaned singleton state, sticky authorization, and cleared game types.",
+    "NEXT_EXPERIMENT": "Historical fork: create liquidity/proofs/messages before a CGT/ETH_LOCKBOX/INTEROP transition, flip only the relevant L1 or L2 feature state, then exercise every current consumer.",
     "priority": "P2",
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
@@ -1696,7 +1696,7 @@
     "HISTORICAL_BRANCHES": [
       "v4.0.0 portal liquidity/super-root migration \u2014 src/L1/OptimismPortal2.sol:374-429",
       "v7.0.0 shared-game migration \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:89-316",
-      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:528-572",
+      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:510-554",
       "v9.0.0 U21 state \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:129-520"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1718,12 +1718,12 @@
     "HISTORICAL_BRANCHES": [
       "v4.0.0 portal liquidity/super-root migration \u2014 src/L1/OptimismPortal2.sol:374-429",
       "v7.0.0 shared-game migration \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:89-316",
-      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:528-572",
+      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:510-554",
       "v9.0.0 U21 state \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:129-520"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a cross-domain object while L1 and L2 flags disagree, transition only one domain, then consume the object in the other domain's feature branch",
-    "NEXT_EXPERIMENT": "L8/L9: reconstruct pre-migration per-chain ETH liability and compose orphaned singleton state, sticky authorization, and cleared game types.",
+    "NEXT_EXPERIMENT": "Historical fork: create liquidity/proofs/messages before a CGT/ETH_LOCKBOX/INTEROP transition, flip only the relevant L1 or L2 feature state, then exercise every current consumer.",
     "priority": "P1",
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
@@ -1734,14 +1734,14 @@
     ],
     "title": "permissionless type-9 registration of arbitrary hash-consistent super-root preimages",
     "family": "identity-binding",
-    "EARLIEST_SEMANTIC_ANCESTOR": "super-root chain selection first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified binding: v7.0.0:src/L1/OptimismPortal2.sol:390-492, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
+    "EARLIEST_SEMANTIC_ANCESTOR": "super-root chain selection first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified binding: v7.0.0:src/L1/OptimismPortal2.sol:368-471, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:390-492, src/dispute/DisputeGameFactory.sol:147-245, and src/dispute/AnchorStateRegistry.sol:227-352",
     "PERSISTENT_STATE_OR_OBJECT": "super-game UUID/root/preimage, immutable l1Head/extraData and SystemConfig.l2ChainId selected at proof time",
     "HISTORICAL_BRANCHES": [
       "v1.4.0 factory/address identity \u2014 src/dispute/AnchorStateRegistry.sol:59-87",
       "v2.0.0 single anchor and snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
       "v4.0.0 super-root portal \u2014 src/L1/OptimismPortal2.sol:396-570",
-      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 lockbox identity source \u2014 src/dispute/AnchorStateRegistry.sol:33-59,136-143"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1757,14 +1757,14 @@
     ],
     "title": "duplicate/unsorted super-root entries are structurally accepted and chain lookup is first-match",
     "family": "identity-binding",
-    "EARLIEST_SEMANTIC_ANCESTOR": "super-root chain selection first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified binding: v7.0.0:src/L1/OptimismPortal2.sol:390-492, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
+    "EARLIEST_SEMANTIC_ANCESTOR": "super-root chain selection first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified binding: v7.0.0:src/L1/OptimismPortal2.sol:368-471, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:390-492, src/dispute/DisputeGameFactory.sol:147-245, and src/dispute/AnchorStateRegistry.sol:227-352",
     "PERSISTENT_STATE_OR_OBJECT": "super-game UUID/root/preimage, immutable l1Head/extraData and SystemConfig.l2ChainId selected at proof time",
     "HISTORICAL_BRANCHES": [
       "v1.4.0 factory/address identity \u2014 src/dispute/AnchorStateRegistry.sol:59-87",
       "v2.0.0 single anchor and snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
       "v4.0.0 super-root portal \u2014 src/L1/OptimismPortal2.sol:396-570",
-      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 lockbox identity source \u2014 src/dispute/AnchorStateRegistry.sol:33-59,136-143"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1787,7 +1787,7 @@
       "v1.0.0 factory clone \u2014 contracts/dispute/DisputeGameFactory.sol:78-162",
       "v1.4.0 per-type anchor \u2014 src/dispute/AnchorStateRegistry.sol:20-87",
       "v2.0.0 single anchor/snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
-      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190",
+      "v5.0.0 gameArgs \u2014 src/dispute/DisputeGameFactory.sol:70-190,278-292",
       "v7.0.0 CREATE2 and super games \u2014 src/dispute/DisputeGameFactory.sol:147-225",
       "v9.0.0 current validity \u2014 src/dispute/AnchorStateRegistry.sol:227-352"
     ],
@@ -1811,7 +1811,7 @@
       "v1.4.0 factory/address identity \u2014 src/dispute/AnchorStateRegistry.sol:59-87",
       "v2.0.0 single anchor and snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
       "v4.0.0 super-root portal \u2014 src/L1/OptimismPortal2.sol:396-570",
-      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 lockbox identity source \u2014 src/dispute/AnchorStateRegistry.sol:33-59,136-143"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1827,14 +1827,14 @@
     ],
     "title": "A withdrawal can make one portal originate an L2 deposit through a sibling portal",
     "family": "custody",
-    "EARLIEST_SEMANTIC_ANCESTOR": "first relevant migration/lockbox topology: v7.0.0:src/L1/OptimismPortal2.sol:502-572 and src/L1/ETHLockbox.sol:180-232; current unsafe-target predicate: v9.0.0:src/L1/OptimismPortal2.sol:846-849",
+    "EARLIEST_SEMANTIC_ANCESTOR": "first relevant migration/lockbox topology: v7.0.0:src/L1/OptimismPortal2.sol:503-537 and src/L1/ETHLockbox.sol:180-232; current unsafe-target predicate: v9.0.0:src/L1/OptimismPortal2.sol:846-849",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:577-666,741-795,846-849",
     "PERSISTENT_STATE_OR_OBJECT": "retired/sibling portal or lockbox address left authorized and not equal to the current unsafe target",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 portal custody \u2014 contracts/L1/OptimismPortal.sol:325-490",
       "v1.6.0 custom-gas-token branch \u2014 src/L1/OptimismPortal2.sol:362-440,504-573",
       "v4.0.0 per-chain ETHLockbox \u2014 src/L1/ETHLockbox.sol:67-219",
-      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:502-572",
+      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:503-537",
       "v9.0.0 lockbox-sourced pause \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1856,7 +1856,7 @@
     "HISTORICAL_BRANCHES": [
       "v4.0.0 portal liquidity/super-root migration \u2014 src/L1/OptimismPortal2.sol:374-429",
       "v7.0.0 shared-game migration \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:89-316",
-      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:528-572",
+      "v8.0.0 validation hardening \u2014 src/L1/OptimismPortal2.sol:510-554",
       "v9.0.0 U21 state \u2014 src/L1/opcm/OPContractsManagerMigrator.sol:129-520"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1878,7 +1878,7 @@
     "HISTORICAL_BRANCHES": [
       "v1.0.0 portal-local bool \u2014 contracts/L1/OptimismPortal.sol:83,174-187",
       "v1.2.0 global SuperchainConfig \u2014 src/L1/SuperchainConfig.sol:19-81",
-      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-171",
+      "v4.0.0 expiring scoped timestamp \u2014 src/L1/SuperchainConfig.sol:40-182",
       "v4.1.0 SystemConfig-selected key \u2014 src/L1/SystemConfig.sol:503-534",
       "v9.0.0 lockbox key \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
@@ -1902,7 +1902,7 @@
       "v1.0.0 portal custody \u2014 contracts/L1/OptimismPortal.sol:325-490",
       "v1.6.0 custom-gas-token branch \u2014 src/L1/OptimismPortal2.sol:362-440,504-573",
       "v4.0.0 per-chain ETHLockbox \u2014 src/L1/ETHLockbox.sol:67-219",
-      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:502-572",
+      "v7.0.0 shared-lockbox migration \u2014 src/L1/OptimismPortal2.sol:503-537",
       "v9.0.0 lockbox-sourced pause \u2014 src/L1/ETHLockbox.sol:112-119"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1925,7 +1925,7 @@
       "v1.4.0 factory/address identity \u2014 src/dispute/AnchorStateRegistry.sol:59-87",
       "v2.0.0 single anchor and snapshot respect \u2014 src/dispute/AnchorStateRegistry.sol:39-239",
       "v4.0.0 super-root portal \u2014 src/L1/OptimismPortal2.sol:396-570",
-      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v7.0.0 unified super-game branch \u2014 src/L1/OptimismPortal2.sol:368-471",
       "v9.0.0 lockbox identity source \u2014 src/dispute/AnchorStateRegistry.sol:33-59,136-143"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1963,11 +1963,11 @@
     "title": "cross-version gas floors split across L1/L2 and future EVM rules",
     "family": "gas-budget",
     "EARLIEST_SEMANTIC_ANCESTOR": "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 and src/libraries/SafeCall.sol:103-171",
     "PERSISTENT_STATE_OR_OBJECT": "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 EIP-150 reserve \u2014 contracts/libraries/SafeCall.sol:91-159",
-      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
+      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
       "v9.0.0 local/remote budget split and codehash-zero reserve \u2014 src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -1983,12 +1983,12 @@
     ],
     "title": "Exact upgrade boundary introduces calldata-proportional deposit gas regression",
     "family": "gas-budget",
-    "EARLIEST_SEMANTIC_ANCESTOR": "first/current regression boundary: v9.0.0:src/L1/OptimismPortal2.sol:741-795; predecessor comparison: v8.0.0:src/L1/OptimismPortal2.sol:741-790",
+    "EARLIEST_SEMANTIC_ANCESTOR": "first/current regression boundary: v9.0.0:src/L1/OptimismPortal2.sol:741-795; predecessor comparison: v8.0.0:src/L1/OptimismPortal2.sol:684-738",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:741-795",
     "PERSISTENT_STATE_OR_OBJECT": "user-selected deposit calldata length and gasLimit at the v8\u2192v9 implementation boundary",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 EIP-150 reserve \u2014 contracts/libraries/SafeCall.sol:91-159",
-      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
+      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
       "v9.0.0 local/remote budget split and codehash-zero reserve \u2014 src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
@@ -2009,9 +2009,9 @@
     "PERSISTENT_STATE_OR_OBJECT": "withdrawal sender identity plus successfulMessages/failedMessages outcome for the nested relay",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 v0/v1 replay \u2014 contracts/universal/CrossDomainMessenger.sol:303-413",
-      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:219-330",
-      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
-      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:212-373; src/L1/OptimismPortal2.sol:639-653"
+      "v1.2.0 paused relay \u2014 src/universal/CrossDomainMessenger.sol:211-314",
+      "v3.0.0 EIP-7623 baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
+      "v9.0.0 local/remote reserve split and portal L1CDM revert \u2014 src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466; src/L1/OptimismPortal2.sol:639-653"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
     "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a messenger withdrawal under pre-v9 outcome semantics, then finalize through the sender-only v9 guard where L1CDM returns normally but its mappings encode failure",
@@ -2027,11 +2027,11 @@
     "title": "Asymmetric deployed messenger gas budgets across the upgrade boundary",
     "family": "gas-budget",
     "EARLIEST_SEMANTIC_ANCESTOR": "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
-    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 and src/libraries/SafeCall.sol:103-171",
     "PERSISTENT_STATE_OR_OBJECT": "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
     "HISTORICAL_BRANCHES": [
       "v1.0.0 EIP-150 reserve \u2014 contracts/libraries/SafeCall.sol:91-159",
-      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
+      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:357-396",
       "v9.0.0 local/remote budget split and codehash-zero reserve \u2014 src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"
     ],
     "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",

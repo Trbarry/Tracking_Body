@@ -11,17 +11,19 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 | v1.2.0 | Global SuperchainConfig pause; messenger/bridge pause; DGF bonds/UUID form | `v1.2.0:src/L1/SuperchainConfig.sol:19-81`; `src/L1/L1CrossDomainMessenger.sol:63-64` |
 | v1.3.0 | Structured SystemConfig restored; messenger otherMessenger becomes storage | `v1.3.0:src/L1/SystemConfig.sol:150-210`; `src/universal/CrossDomainMessenger.sol:80-110` |
 | v1.4.0 | Portal2 per-submitter game proofs; ASR per-type anchors; DelayedWETH | `v1.4.0:src/L1/OptimismPortal2.sol:51-522`; `src/dispute/AnchorStateRegistry.sol:20-87` |
+| v1.5.0 | Legacy Portal/messenger/bridge gain custom-gas-token branches | `v1.5.0:src/L1/OptimismPortal.sol:165-215,232-585`; `src/universal/CrossDomainMessenger.sol:176-195` |
 | v1.6.0 | Custom-gas-token custody branch; guardian anchor override; safer recover call | `v1.6.0:src/L1/OptimismPortal2.sol:362-440,504-573`; `src/dispute/AnchorStateRegistry.sol:99-119` |
+| v1.8.0 | Typed-interface migration and Ecotone fee/EIP-1559 initializer arguments | `v1.8.0:src/L1/SystemConfig.sol:192-230,383-438`; `src/L1/OptimismPortal2.sol:208-240` |
 | v2.0.0 | Snapshot-respect games, single anchorGame, full ASR predicates; super games/type-5 | `v2.0.0:src/dispute/AnchorStateRegistry.sol:39-262`; `src/dispute/SuperPermissionedDisputeGame.sol:89-108` |
 | v2.1/v2.2 | No indexed target semantic delta | `SOURCE-FUNCTION-INDEX.json` |
-| v3.0.0 | EIP-7623-aware messenger baseGas | `v3.0.0:src/universal/CrossDomainMessenger.sol:354-390` |
+| v3.0.0 | EIP-7623-aware messenger baseGas | `v3.0.0:src/universal/CrossDomainMessenger.sol:357-396` |
 | v3.0.1 | No indexed target semantic delta | `SOURCE-FUNCTION-INDEX.json` |
-| v4.0.0 | ETHLockbox custody; scoped expiring pauses; ASR owns invalidation; super-root Portal | `v4.0.0:src/L1/ETHLockbox.sol:67-219`; `src/dispute/AnchorStateRegistry.sol:34-340` |
+| v4.0.0 | ETHLockbox custody; scoped expiring pauses; ASR owns invalidation; super-root Portal | `v4.0.0:src/L1/ETHLockbox.sol:67-232`; `src/dispute/AnchorStateRegistry.sol:34-340` |
 | v4.1.0 | Output-root/interoperability Portal split; runtime features/pause-key selection | `v4.1.0:src/L1/SystemConfig.sol:139,503-534` |
-| v5.0.0 | DGF gameArgs becomes persistent future-clone configuration | `v5.0.0:src/dispute/DisputeGameFactory.sol:70-190` |
+| v5.0.0 | DGF gameArgs becomes persistent future-clone configuration | `v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292` |
 | v6.0.0 | ASR retirement preserved across reinitialization; dual clone-arg layout | `v6.0.0:src/dispute/AnchorStateRegistry.sol:107-115`; `src/dispute/DisputeGameFactory.sol:140-220` |
-| v7.0.0 | Unified super-game proving, shared-game migration, deterministic DGF clones, OPCM V2 | `v7.0.0:src/L1/OptimismPortal2.sol:390-572`; `src/L1/opcm/OPContractsManagerV2.sol:229-290` |
-| v8.0.0 | Shared migration validation hardening | `v8.0.0:src/L1/OptimismPortal2.sol:528-572` |
+| v7.0.0 | Unified super-game proving, shared-game migration, deterministic DGF clones, OPCM V2 | `v7.0.0:src/L1/OptimismPortal2.sol:368-537`; `src/L1/opcm/OPContractsManagerV2.sol:229-290` |
+| v8.0.0 | Shared migration validation hardening; type-5 becomes a born-resolved proposer-gated game | `v8.0.0:src/L1/OptimismPortal2.sol:510-554`; `src/dispute/SuperPermissionedDisputeGame.sol:48-73` |
 | v9.0.0 | Lockbox-sourced pause/guardian, delete proof, split gas budgets, atomic failed-L1CDM withdrawal | `v9.0.0:src/L1/OptimismPortal2.sol:273-330,577-728`; `src/L1/L1CrossDomainMessenger.sol:43-153` |
 
 ## Per-function/field records
@@ -67,8 +69,8 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
   - v1.2.0:src/L1/OptimismPortal.sol:147-149 — pause/guardian route through SuperchainConfig.
   - v1.4.0:src/L1/OptimismPortal2.sol:163-190 — initializer adds DGF and game-validity state.
   - v4.0.0:src/L1/OptimismPortal2.sol:250-273,294-318 — dependencies reinitialized; pause/guardian route through SystemConfig.
-  - v4.1.0:src/L1/OptimismPortal2.sol:250-300 — lockbox feature branch replaces always-on lockbox form.
-  - v7.0.0:src/L1/OptimismPortal2.sol:273-303 — initializer accepts lockbox and interop config.
+  - v4.1.0:src/L1/OptimismPortal2.sol:222-260,446-514,566-616 — lockbox use becomes feature-gated.
+  - v7.0.0:src/L1/OptimismPortal2.sol:251-281 — initializer accepts lockbox and interop config.
   - v9.0.0:src/L1/OptimismPortal2.sol:273-330 — pause, guardian, and SuperchainConfig now route through ETHLockbox.
 - **ALL_CALL_ORDER_CHANGES:**
   - None identified in the pinned releases.
@@ -99,7 +101,7 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
   - v2.0.0:src/L1/OptimismPortal2.sol:292-378 — respect is snapshotted at game creation and creation must be after cutoff.
   - v4.0.0:src/L1/OptimismPortal2.sol:439-570,693-727 — validity governance moves into ASR; super-root proof branch added.
   - v4.1.0:src/L1/OptimismPortal2.sol:430-570 — output-root Portal2 and interop Portal split.
-  - v7.0.0:src/L1/OptimismPortal2.sol:390-492 — one function branches on registered game type and extracts per-chain root from super games.
+  - v7.0.0:src/L1/OptimismPortal2.sol:368-471 — one function branches on registered game type and extracts per-chain root from super games.
   - v9.0.0:src/L1/OptimismPortal2.sol:390-492,671-705 — current ASR proper/respected checks and current-registry revalidation.
 - **ALL_CALL_ORDER_CHANGES:**
   - v1.4.0 proves game identity before MPT inclusion and writes last; v4.0.0 delegates current validity to ASR before root-format branch.
@@ -154,11 +156,12 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 - **ORIGINAL_MEANING:** Deposits escrow msg.value in Portal and emit an opaque L2 mint/call-value transaction; donate accepts unaccounted ETH.
 - **ORIGINAL_INVARIANT:** Deposit value is exactly escrowed once; migration cannot strand the active withdrawal backing.
 - **ALL_SEMANTIC_CHANGES:**
+  - v1.5.0:src/L1/OptimismPortal.sol:165-215,232-585 — the legacy Portal first adds custom-gas-token balance, prove/finalize and split mint/value deposit branches.
   - v1.6.0:src/L1/OptimismPortal2.sol:362-440,504-573 — custom-gas-token mode separates native balance accounting.
   - v4.0.0:src/L1/OptimismPortal2.sol:374-429,740-788 — deposits lock ETH in ETHLockbox; portal liquidity and super-root migrations added.
   - v4.1.0:src/L1/OptimismPortal2.sol:222-260,446-514,566-616 — lockbox use becomes feature-gated.
-  - v7.0.0:src/L1/OptimismPortal2.sol:502-572 — shared-dispute-game migration repoints lockbox and ASR.
-  - v8.0.0:src/L1/OptimismPortal2.sol:528-572 — nonzero/new-lockbox authorization checks hardened.
+  - v7.0.0:src/L1/OptimismPortal2.sol:503-537 — shared-dispute-game migration repoints lockbox and ASR.
+  - v8.0.0:src/L1/OptimismPortal2.sol:510-554 — nonzero/new-lockbox authorization checks hardened.
   - v9.0.0:src/L1/OptimismPortal2.sol:502-572,741-795 — CGT guard and current shared migration.
 - **ALL_CALL_ORDER_CHANGES:**
   - v4.0.0 deposit body locks ETH before ResourceMetering modifier completes: v9.0.0:src/L1/OptimismPortal2.sol:741-795.
@@ -211,10 +214,11 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 - **ORIGINAL_MEANING:** Accept v0 legacy and v1 canonical hashes; initial relay authenticates other messenger, replay requires failedMessages; sentinel blocks reentrancy; every nonreverting call writes success or failure.
 - **ORIGINAL_INVARIANT:** One economic message cannot succeed twice, and failed messages remain permissionlessly retryable.
 - **ALL_SEMANTIC_CHANGES:**
-  - v1.2.0:src/universal/CrossDomainMessenger.sol:219-330 — relay becomes pause-aware and asserts success mapping consistency.
+  - v1.2.0:src/universal/CrossDomainMessenger.sol:211-314 — relay becomes pause-aware and asserts success mapping consistency.
   - v1.3.0:src/universal/CrossDomainMessenger.sol:80-110 — otherMessenger changes immutable→storage without changing hash.
-  - v3.0.0:src/universal/CrossDomainMessenger.sol:354-390 — baseGas accounts for EIP-7623 calldata floor.
-  - v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 — local reserve/check split from advertised remote budget.
+  - v1.5.0:src/universal/CrossDomainMessenger.sol:176-195,346-371 — custom-gas-token mode forbids value-message creation and changes base-gas support; v2.0.0:src/universal/CrossDomainMessenger.sol:177-195 removes that send-time branch.
+  - v3.0.0:src/universal/CrossDomainMessenger.sol:357-396 — baseGas accounts for EIP-7623 calldata floor.
+  - v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 — local reserve/check split from advertised remote budget.
 - **ALL_CALL_ORDER_CHANGES:**
   - Initial/replay branch precedes unsafe-target and success checks; gas/reentrant failure is recorded before target call; target call then selects success vs failed mapping.
 - **ALL_REVERT_SEMANTIC_CHANGES:**
@@ -295,7 +299,8 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 - **ORIGINAL_MEANING:** Only the counterpart bridge may finalize; ETH requires exact msg.value and successful recipient call; ERC20 mints native token or decrements escrow then transfers.
 - **ORIGINAL_INVARIANT:** Exactly one messenger-authenticated finalize releases/mints exactly the encoded amount.
 - **ALL_SEMANTIC_CHANGES:**
-  - v1.2.0:src/universal/StandardBridge.sol:250-340 — both finalize paths become pause-aware.
+  - v1.2.0:src/universal/StandardBridge.sol:139-141,227-299 — both finalize paths become pause-aware.
+  - v1.5.0:src/universal/StandardBridge.sol:244-266 — ETH finalization rejects custom-gas-token mode; v2.0.0:src/universal/StandardBridge.sol:239-260 removes that extra rejection.
   - v2.0.0:src/universal/StandardBridge.sol:230-310 — naming/interface refactor; custody invariant unchanged.
   - v9.0.0:src/universal/StandardBridge.sol:239-299 — current exact-value and escrow/mint split.
 - **ALL_CALL_ORDER_CHANGES:**
@@ -307,7 +312,7 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 - **ALL_AUTHORIZATION_CHANGES:**
   - onlyOtherBridge resolves xDomainMessageSender through messenger: v9.0.0:src/universal/StandardBridge.sol:111-117.
 - **ALL_PAUSE_SOURCE_CHANGES:**
-  - v1.2 virtual pause; current L1 bridge ultimately consumes ETHLockbox-key pause through SystemConfig.
+  - v1.2 virtual pause; current L1 bridge reads SystemConfig.paused at v9.0.0:src/L1/L1StandardBridge.sol:122-124, which reaches the ETHLockbox key via src/L1/SystemConfig.sol:574-576.
 - **OBJECTS_CREATED_UNDER_OLD_MEANING:**
   - Legacy v0 bridge messages, escrowed ERC20 balances, failedMessages.
 - **MIGRATION_OR_INVALIDATION_EVENTS:**
@@ -326,6 +331,8 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
   - v1.1.0:src/L1/SystemConfig.sol:30-73,155-191 — Addresses struct moves dependencies into fixed unstructured slots and adds startBlock/batchInbox.
   - v1.2.0:src/L1/SystemConfig.sol:109-150 — maintenance branch temporarily retains lean initializer shape.
   - v1.3.0:src/L1/SystemConfig.sol:150-210 — structured address scheme restored with automatic startBlock.
+  - v1.5.0:src/L1/SystemConfig.sol:168-305 — gas-paying-token state/getters enter initialization-era configuration.
+  - v1.8.0:src/L1/SystemConfig.sol:192-230,383-438 — initializer uses Ecotone basefee/blob scalars and EIP-1559 parameters are added.
   - v4.0.0:src/L1/SystemConfig.sol:133-200 — l2ChainId and SuperchainConfig added.
   - v4.1.0:src/L1/SystemConfig.sol:139-226 — features mapping enters initializer state.
   - v9.0.0:src/L1/SystemConfig.sol:49-99,203-248 — Addresses includes DelayedWETH/OPCM; no batch-inbox initializer argument.
@@ -381,7 +388,7 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 - **ORIGINAL_MEANING:** One guardian controls one global unstructured paused bit.
 - **ORIGINAL_INVARIANT:** A global pause consistently blocks security-critical exits until guardian unpauses.
 - **ALL_SEMANTIC_CHANGES:**
-  - v4.0.0:src/L1/SuperchainConfig.sol:40-171 — pause becomes expiring timestamp mapping keyed by identifier; initializer migrates old guardian/global pause.
+  - v4.0.0:src/L1/SuperchainConfig.sol:40-182 — pause becomes expiring timestamp mapping keyed by identifier; initializer migrates old guardian/global pause.
   - v9.0.0:src/L1/SuperchainConfig.sol:30-40,79-153 — local paused(address) excludes global; new isLocalOrGlobalPaused explicitly ORs both.
 - **ALL_CALL_ORDER_CHANGES:**
   - pause refuses any nonzero historical timestamp, even expired; extend refreshes a nonzero timestamp: v9 lines 79-120.
@@ -498,7 +505,7 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
   - v1.1.0:src/dispute/DisputeGameFactory.sol:30-115 — append-only GameId list/timestamp and upgradeability added.
   - v1.2.0:src/dispute/DisputeGameFactory.sol:87-134 — init bonds and abi.encode UUID form established.
   - v1.4.0:src/dispute/DisputeGameFactory.sol:84-132 — creator/root/parentHash/extraData immutable layout.
-  - v5.0.0:src/dispute/DisputeGameFactory.sol:70-190 — mutable per-type gameArgs appended to future clones.
+  - v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292 — mutable per-type gameArgs appended to future clones.
   - v6.0.0:src/dispute/DisputeGameFactory.sol:140-220 — empty legacy args and explicit-gameType new layout bifurcate clone decoding.
   - v7.0.0:src/dispute/DisputeGameFactory.sol:147-225 — collision check precedes deterministic CREATE2 clone.
   - v9.0.0:src/dispute/DisputeGameFactory.sol:147-245,312-318 — current dual-layout create and dynamic gameArgs setter.
@@ -550,7 +557,7 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 
 ### ETHLockbox — `authorized portals/lockboxes; lockETH/unlockETH; migrateLiquidity; pause/guardian`
 
-- **FIRST_INTRODUCED:** v4.0.0:src/L1/ETHLockbox.sol:67-219
+- **FIRST_INTRODUCED:** v4.0.0:src/L1/ETHLockbox.sol:67-232
 - **ORIGINAL_MEANING:** Per-chain lockbox escrows Portal deposits, returns value through donateETH before withdrawal execution, and can migrate all balance to an authorized same-owner lockbox.
 - **ORIGINAL_INVARIANT:** Only authorized same-domain portals debit; unlock is paused, nonreentrant against an executing withdrawal, and backed by balance.
 - **ALL_SEMANTIC_CHANGES:**

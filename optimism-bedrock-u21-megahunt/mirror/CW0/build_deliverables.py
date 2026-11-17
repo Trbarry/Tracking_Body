@@ -309,11 +309,18 @@ override(
     "pauseTimestamps[identifier], including expired or currently unconsumed identifiers",
 )
 override(
-    "0605 2308 2601",
+    "0605 2601",
     "runtime feature map first: v4.1.0:src/L1/SystemConfig.sol:139,503-534; current immutable/transition guards: v9.0.0:src/L1/SystemConfig.sol:532-568 and src/L1/OptimismPortal2.sol:500-589,741-759",
     "v9.0.0:src/L1/SystemConfig.sol:532-568 and src/L1/OptimismPortal2.sol:500-589,741-759",
     "feature bit plus pre-existing Portal/lockbox ETH, proofs, messages and cached dependencies",
     "create liquidity/proofs/messages with a feature disabled, then consume them after CGT/ETH_LOCKBOX/INTEROP flips without object-by-object conversion",
+)
+override(
+    "2308",
+    "custom-gas-token liability split first: v1.5.0:src/L1/OptimismPortal.sol:165-215,232-585; runtime feature-map form first: v4.1.0:src/L1/SystemConfig.sol:139,503-534; current zero-value/CGT branches: v9.0.0:src/L1/OptimismPortal2.sol:500-589,741-759",
+    "v9.0.0:src/L1/OptimismPortal2.sol:500-589,741-759 and src/L1/SystemConfig.sol:532-568",
+    "feature bit plus Portal/lockbox ETH surplus and zero-value deposit/withdrawal message objects",
+    "create ETH/surplus or a zero-value cross-domain object under an older CGT mode, flip the runtime feature, then consume it through U21's liability guards",
 )
 override(
     "0606 0701 0703 2701 2702",
@@ -478,6 +485,7 @@ def next_experiment(members: list[str], family: str) -> str:
     if ids & {"0404", "0801", "1001", "1103", "1201", "3006", "3202"}: return "L5: solve the EIP-7825 transaction-gas cap against v9's 150k local reserve and maximum replay calldata."
     if ids & {"3105"}: return "L6: isolate the exact deposit calldata term added at U21 and find the smallest production payload that crosses a block/tx gas limit."
     if ids & {"0104", "0204", "0705", "2704"}: return "L7: trace the type-5 proposer call graph and test whether a born-resolved cross-type game can advance the shared anchor under every deployed forwarding path."
+    if ids & {"0605", "2308", "2601", "2605"}: return "Historical fork: create liquidity/proofs/messages before a CGT/ETH_LOCKBOX/INTEROP transition, flip only the relevant L1 or L2 feature state, then exercise every current consumer."
     if family == "migration" or ids & {"0901", "2303", "2305", "2901", "2903", "3005"}: return "L8/L9: reconstruct pre-migration per-chain ETH liability and compose orphaned singleton state, sticky authorization, and cleared game types."
     if ids & {"0101", "0505", "0702", "2703"}: return "closed on OP by C13; reopen on Ink/Soneium/Unichain or for an official-proposer root not recomputed in PASS A."
     if ids & {"0202"}: return "closed: C2"
