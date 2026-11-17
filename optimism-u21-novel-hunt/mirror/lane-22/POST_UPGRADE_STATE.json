@@ -1990,6 +1990,30 @@
               "type": "mapping(bytes32 => bool)",
               "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
+            },
+            "0x99f45962df4bc30de8d4c3c6d1ffc0f100edce16e80c7a5768b6d55ca463ff42": {
+              "label": "OPCM_SLOT/lastUsedOPCM",
+              "type": "address",
+              "raw": "0x0000000000000000000000002d91e6f2bcf6cd1df90e1faf9714e18705ea331f",
+              "decoded": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f"
+            },
+            "0x58e88e949bd180ff86d6c072735c3d8d5a05a543c16130176ec0bc0adf3fd806": {
+              "label": "isFeatureEnabled[ETH_LOCKBOX]",
+              "type": "bool",
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "decoded": true
+            },
+            "0x252630ff969d59d68f549a020f5a95de1229566c4ecda0b4de628fdba9eecdc7": {
+              "label": "isFeatureEnabled[INTEROP]",
+              "type": "bool",
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "decoded": false
+            },
+            "0x3ec9a18bd22a834e2a13465cc2aa2a9aebb161ffdebf39cdb0028dbb1b5394b4": {
+              "label": "isFeatureEnabled[CUSTOM_GAS_TOKEN]",
+              "type": "bool",
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "decoded": false
             }
           },
           "getters": {
@@ -2001,7 +2025,9 @@
             "paused": "false",
             "feature_ETH_LOCKBOX": "true",
             "feature_INTEROP": "false",
-            "feature_CUSTOM_GAS_TOKEN": "false"
+            "feature_CUSTOM_GAS_TOKEN": "false",
+            "lastUsedOPCM": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+            "lastUsedOPCMVersion": "\"9.0.3\""
           },
           "ethBalance": "0"
         },
@@ -6049,6 +6075,30 @@
               "type": "mapping(bytes32 => bool)",
               "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
+            },
+            "0x99f45962df4bc30de8d4c3c6d1ffc0f100edce16e80c7a5768b6d55ca463ff42": {
+              "label": "OPCM_SLOT/lastUsedOPCM",
+              "type": "address",
+              "raw": "0x0000000000000000000000002d91e6f2bcf6cd1df90e1faf9714e18705ea331f",
+              "decoded": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f"
+            },
+            "0x58e88e949bd180ff86d6c072735c3d8d5a05a543c16130176ec0bc0adf3fd806": {
+              "label": "isFeatureEnabled[ETH_LOCKBOX]",
+              "type": "bool",
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "decoded": true
+            },
+            "0x252630ff969d59d68f549a020f5a95de1229566c4ecda0b4de628fdba9eecdc7": {
+              "label": "isFeatureEnabled[INTEROP]",
+              "type": "bool",
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "decoded": false
+            },
+            "0x3ec9a18bd22a834e2a13465cc2aa2a9aebb161ffdebf39cdb0028dbb1b5394b4": {
+              "label": "isFeatureEnabled[CUSTOM_GAS_TOKEN]",
+              "type": "bool",
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "decoded": false
             }
           },
           "getters": {
@@ -6060,7 +6110,9 @@
             "paused": "false",
             "feature_ETH_LOCKBOX": "true",
             "feature_INTEROP": "false",
-            "feature_CUSTOM_GAS_TOKEN": "false"
+            "feature_CUSTOM_GAS_TOKEN": "false",
+            "lastUsedOPCM": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+            "lastUsedOPCMVersion": "\"9.0.3\""
           },
           "ethBalance": "0"
         },
@@ -10989,6 +11041,30 @@
               "type": "mapping(bytes32 => bool)",
               "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
+            },
+            "0x99f45962df4bc30de8d4c3c6d1ffc0f100edce16e80c7a5768b6d55ca463ff42": {
+              "label": "OPCM_SLOT/lastUsedOPCM",
+              "type": "address",
+              "raw": "0x0000000000000000000000002d91e6f2bcf6cd1df90e1faf9714e18705ea331f",
+              "decoded": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f"
+            },
+            "0x58e88e949bd180ff86d6c072735c3d8d5a05a543c16130176ec0bc0adf3fd806": {
+              "label": "isFeatureEnabled[ETH_LOCKBOX]",
+              "type": "bool",
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "decoded": true
+            },
+            "0x252630ff969d59d68f549a020f5a95de1229566c4ecda0b4de628fdba9eecdc7": {
+              "label": "isFeatureEnabled[INTEROP]",
+              "type": "bool",
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "decoded": false
+            },
+            "0x3ec9a18bd22a834e2a13465cc2aa2a9aebb161ffdebf39cdb0028dbb1b5394b4": {
+              "label": "isFeatureEnabled[CUSTOM_GAS_TOKEN]",
+              "type": "bool",
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "decoded": false
             }
           },
           "getters": {
@@ -11000,7 +11076,9 @@
             "paused": "false",
             "feature_ETH_LOCKBOX": "true",
             "feature_INTEROP": "false",
-            "feature_CUSTOM_GAS_TOKEN": "false"
+            "feature_CUSTOM_GAS_TOKEN": "false",
+            "lastUsedOPCM": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+            "lastUsedOPCMVersion": "\"9.0.3\""
           },
           "ethBalance": "0"
         },
@@ -15929,6 +16007,30 @@
               "type": "mapping(bytes32 => bool)",
               "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
               "decoded": null
+            },
+            "0x99f45962df4bc30de8d4c3c6d1ffc0f100edce16e80c7a5768b6d55ca463ff42": {
+              "label": "OPCM_SLOT/lastUsedOPCM",
+              "type": "address",
+              "raw": "0x0000000000000000000000002d91e6f2bcf6cd1df90e1faf9714e18705ea331f",
+              "decoded": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f"
+            },
+            "0x58e88e949bd180ff86d6c072735c3d8d5a05a543c16130176ec0bc0adf3fd806": {
+              "label": "isFeatureEnabled[ETH_LOCKBOX]",
+              "type": "bool",
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "decoded": true
+            },
+            "0x252630ff969d59d68f549a020f5a95de1229566c4ecda0b4de628fdba9eecdc7": {
+              "label": "isFeatureEnabled[INTEROP]",
+              "type": "bool",
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "decoded": false
+            },
+            "0x3ec9a18bd22a834e2a13465cc2aa2a9aebb161ffdebf39cdb0028dbb1b5394b4": {
+              "label": "isFeatureEnabled[CUSTOM_GAS_TOKEN]",
+              "type": "bool",
+              "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "decoded": false
             }
           },
           "getters": {
@@ -15940,7 +16042,9 @@
             "paused": "false",
             "feature_ETH_LOCKBOX": "true",
             "feature_INTEROP": "false",
-            "feature_CUSTOM_GAS_TOKEN": "false"
+            "feature_CUSTOM_GAS_TOKEN": "false",
+            "lastUsedOPCM": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+            "lastUsedOPCMVersion": "\"9.0.3\""
           },
           "ethBalance": "0"
         },

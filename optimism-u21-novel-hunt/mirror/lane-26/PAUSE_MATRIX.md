@@ -1,6 +1,6 @@
 # Lane 26 — pause resolver and value-path matrix
 
-Pinned v9 root: `/home/user/ethereum-optimism/op-v9.0.0`, commit `ba6f...`. All state-changing checks below ran only inside Foundry forks of L1 block 26,430,859.
+Pinned v9 root: `/home/user/ethereum-optimism/op-v9.0.0`, commit `ba6fcadbc57eb99918c5b0f14f57c72527f531e3`. All state-changing checks below ran only inside Foundry forks of L1 block 26,430,859.
 
 ## Resolver graph
 

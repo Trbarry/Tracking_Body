@@ -1,6 +1,6 @@
 # Lane 26 — SystemConfig feature-state machine
 
-Scope is `op-contracts/v9.0.0` at pinned commit `ba6f...`; source references below are relative to `/home/user/ethereum-optimism/op-v9.0.0`. Historical references name the v8/v7 roots explicitly. Live state was read passively at L1 blocks 26,430,858 (N-1), 26,430,859 (N), and 26,433,900; mutations were only in `forge test` forks.
+Scope is `op-contracts/v9.0.0` at pinned commit `ba6fcadbc57eb99918c5b0f14f57c72527f531e3`; source references below are relative to `/home/user/ethereum-optimism/op-v9.0.0`. Historical references name the v8/v7 roots explicitly. Live state was read passively at L1 blocks 26,430,858 (N-1), 26,430,859 (N), and 26,433,900; mutations were only in `forge test` forks.
 
 ## Setter and consumer matrix
 

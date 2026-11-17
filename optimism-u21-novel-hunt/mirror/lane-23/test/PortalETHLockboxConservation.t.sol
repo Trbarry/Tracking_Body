@@ -200,6 +200,25 @@ contract PortalETHLockboxConservationTest is Test {
         assertEq(PORTAL.l2Sender(), DEFAULT_L2_SENDER);
     }
 
+    function test_realProofModeledInsufficientLockboxBalanceRevertsAtomically() public {
+        WithdrawalTransaction memory txn_ = WithdrawalFixture23.transaction();
+        bytes32 withdrawalHash = WithdrawalFixture23.hash(txn_);
+        uint256 modeledBalance = txn_.value - 1;
+        uint256 portalBefore = address(PORTAL).balance;
+
+        // Local-only balance mutation to isolate the deployed lockbox's aggregate-balance guard.
+        // This does not claim that the production lockbox is underfunded.
+        vm.deal(address(LOCKBOX), modeledBalance);
+
+        vm.expectRevert(bytes4(keccak256("ETHLockbox_InsufficientBalance()")));
+        PORTAL.finalizeWithdrawalTransactionExternalProof(txn_, WithdrawalFixture23.SUBMITTER);
+
+        assertFalse(PORTAL.finalizedWithdrawals(withdrawalHash));
+        assertEq(address(LOCKBOX).balance, modeledBalance);
+        assertEq(address(PORTAL).balance, portalBefore);
+        assertEq(PORTAL.l2Sender(), DEFAULT_L2_SENDER);
+    }
+
     function test_modeledDirectWithdrawalFailureRelocksExactValueAndPreservesPortalSurplus() public {
         // Use the exact end-of-upgrade-block fork and advance only time to proof maturity. This
         // keeps the arbitrary modeled mapping slot isolated from the rate-limited later fork cache.

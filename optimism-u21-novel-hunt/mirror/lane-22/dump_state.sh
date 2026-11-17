@@ -162,7 +162,8 @@ getters_for() {
     DisputeGameFactory)
       getters=$(add_getter "$getters" owner "$proxy" 'owner()(address)')
       getters=$(add_getter "$getters" gameCount "$proxy" 'gameCount()(uint256)')
-      for game_type in $(seq 0 10); do
+      # Types 5 and 9 are the only nonzero deployed configurations on these four chains.
+      for game_type in 5 9; do
         getters=$(add_getter "$getters" "gameImpls_$game_type" "$proxy" 'gameImpls(uint32)(address)' "$game_type")
         getters=$(add_getter "$getters" "initBonds_$game_type" "$proxy" 'initBonds(uint32)(uint256)' "$game_type")
         getters=$(add_getter "$getters" "gameArgs_$game_type" "$proxy" 'gameArgs(uint32)(bytes)' "$game_type")
@@ -256,7 +257,7 @@ while IFS='|' read -r chain name proxy proxy_admin portal; do
         ' <<< "$extra_slots")
     done
   elif [[ "$name" == DisputeGameFactory ]]; then
-    for game_type in $(seq 0 10); do
+    for game_type in 5 9; do
       for mapping_row in 'gameImpls|101|address' 'initBonds|102|uint256' 'gameArgs|105|bytes-dynamic-head'; do
         IFS='|' read -r mapping_name mapping_base mapping_type <<< "$mapping_row"
         mapping_slot=$(cast index uint32 "$game_type" "$mapping_base")
