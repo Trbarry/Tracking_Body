@@ -38,7 +38,17 @@
       "range": "Bedrock -> v7.0.0"
     },
     "C_global_composition": {
-      "status": "NOT_STARTED"
+      "status": "ATTACK_WAVE_RUNNING",
+      "lanes": [
+        "ATK-A old-prestate soundness",
+        "ATK-B messenger forced failure",
+        "ATK-C gas cap undeliverability",
+        "ATK-D trojan super-root",
+        "ATK-E migration poisoning",
+        "ATK-F unsafe targets"
+      ],
+      "mirrors": "CATK-A..F (Codex Daybreak)",
+      "model": "Opus 5.5 (CLAUDE.md exception, Mythos quota until 2026-11-22)"
     },
     "D_reachability_poc_triage": {
       "status": "NOT_STARTED"
@@ -46,12 +56,12 @@
   },
   "tracks": {
     "A_blind_archaeology": {
-      "primitive_registry_frozen": false
+      "primitive_registry_frozen": true
     },
     "B_audit_miner": {
-      "status": "STARTING",
+      "status": "DONE",
       "isolated_dir": "audit/",
-      "merge_allowed": false
+      "merge_allowed": true
     }
   },
   "wave_0": {
