@@ -1,0 +1,19 @@
+Completed CATK-B with a deterministic kill: no bounty candidate.
+
+- Experiments: **16**; final harness **9/9 tests passed**.
+- Candidate: none. Closest known forced-failure primitive scores **−1** after known-issue, retryable-inconvenience, and no-eligible-impact deductions.
+- Four-chain census: 32,007 portal finalizations and 22 unique failed messages.
+- All four `success=false` finalizations were legacy-v0 duplicates whose correct hashes were already successful.
+- All four value-bearing failures—**328.23639966839066 ETH** total—were later replayed successfully; scoped L1CDM balances are zero.
+- Real nested compositions reproduced forced failure against:
+  - 2,000 ETH StandardBridge withdrawal
+  - ERC20 StandardBridge withdrawal
+  - 363.438235322873695226 ETH application withdrawal
+
+  In every case, permissionless replay paid the committed recipient exactly once; attacker gain was zero.
+- ERC721’s messenger/L2-bridge authentication and atomic escrow transition block competing consumption.
+- Replaying all 15 active zero-ETH failures in forward and reverse order recovered the same three; the remaining twelve hit pre-existing target errors, not attack-created state.
+
+Deliverables: [report](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CATK-B-report.md), [live census](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-B/LIVE-OBJECTS-CATK-B.md), [fork tests](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-B/test/CATK_B.t.sol), and six kill records under `rejected/ATTACK-CATK-B-01..06.md`.
+
+Highest-value next experiment: passively decode/trace all 32,007 finalized withdrawals to enumerate every inner relay target, scan resolved implementations for `portal.l2Sender()` or time gates, then fork-test any hit with an unchanged real fixture. No public transaction was broadcast.
