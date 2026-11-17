@@ -107,3 +107,70 @@ Kill files: **73** (Opus lanes + Codex mirrors). Experiments executed (from the 
 | `rejected/ATTACK-CATK-F-05.md` | ATTACK-CATK-F-05 — sibling portal composition / alias privilege | deterministic but confers no listed role. |
 | `rejected/ATTACK-CATK-F-06.md` | ATTACK-CATK-F-06 — benign-at-initiation target gains later privileged code | with no shared protocol target or authority. |
 
+
+# RESUME WAVE (2026-11-17) — CADRE-LEGAL prepended to every prompt
+
+Opus 5.5 lanes ATK-T1..T4; Codex mirrors CATK-T1..T4 running (sandboxed). Candidates: **0**. Kill files: **40**.
+Experiments: T1 15, T2 19, T3 19, T4 13. Reports: `workers/ATK-T*-report.md`. Out of authorization (recorded, not pursued):
+third-party targets in T2 (21,608 unrelayed legacy messages to third-party L1 contracts) and T3 (wrong-pair escrows, 2 NFTs).
+
+## Lane T1 — Fix-regression (audit-fix mutation, top 15)
+
+| Kill file | Title |
+|---|---|
+| `rejected/ATTACK-T1-01.md` | ATTACK-T1-01 — Registry-binding check removed at v7: a game bound to another registry passes the portal's registry |
+| `rejected/ATTACK-T1-02.md` | ATTACK-T1-02 — Blacklist check removed from getAnchorRoot: a blacklisted / retired / de-respected anchor seeds new games |
+| `rejected/ATTACK-T1-03.md` | ATTACK-T1-03 — Re-prove gate removed at v1.4.0: per-submitter records after finalization / across registries / via delete |
+| `rejected/ATTACK-T1-04.md` | ATTACK-T1-04 — "Messenger never reverts / portal always finalizes" inverted at v9: make a first relay revert |
+| `rejected/ATTACK-T1-05.md` | ATTACK-T1-05 — Pause identifier follows a mutable pointer: a value path resolves pause through a different chain |
+| `rejected/ATTACK-T1-06.md` | ATTACK-T1-06 — Block-number challenge is the only anchor sanity check; absent on the live game types |
+| `rejected/ATTACK-T1-07.md` | ATTACK-T1-07 — try/catch around setAnchorState in closeGame starved of gas (never fixed in code) |
+| `rejected/ATTACK-T1-08.md` | ATTACK-T1-08 — SafeCall reserve constants: a third-party finalizer starves the target of a DIRECT withdrawal |
+| `rejected/ATTACK-T1-09.md` | ATTACK-T1-09 — Legacy portal spacers are never cleared: residue in a legacy slot changes v9 behaviour |
+| `rejected/ATTACK-T1-10.md` | ATTACK-T1-10 — Initializer idempotence under OPCMv2 (re-run initializers reset sentinels / metering) |
+| `rejected/ATTACK-T1-11.md` | ATTACK-T1-11 — Creator identity: tx.origin-authorised (super-)permissioned games, DEFENDER_WINS at creation |
+| `rejected/ATTACK-T1-12.md` | ATTACK-T1-12 — Timeless blacklist / retirement after finality interacts with matured proofs or deleteProvenWithdrawal |
+| `rejected/ATTACK-T1-13.md` | ATTACK-T1-13 — Bindings that exist only in the validator (game registry == portal registry; SystemConfig.l2ChainId) |
+| `rejected/ATTACK-T1-14.md` | ATTACK-T1-14 — Proof-program fixes vs prestates already deployed (games created under a pre-fix prestate) |
+| `rejected/ATTACK-T1-15.md` | ATTACK-T1-15 — DelayedWETH generations: old proxies keep bonds while "paused"/"delay" change meaning |
+
+## Lane T2 — Legacy carry-through (OVM / pre-fault-proof objects)
+
+| Kill file | Title |
+|---|---|
+| `rejected/ATTACK-T2-01.md` | ATTACK-T2-01 — Already-paid legacy (version-0) withdrawal is paid a second time through the v9 portal |
+| `rejected/ATTACK-T2-02.md` | ATTACK-T2-02 — Unrelayed legacy (version-0) withdrawal delivered under a different meaning in v9 |
+| `rejected/ATTACK-T2-03.md` | ATTACK-T2-03 — Attacker creates a NEW version-0 (or first-relay) messenger object after Bedrock |
+| `rejected/ATTACK-T2-04.md` | ATTACK-T2-04 — Never-finalized Bedrock-era withdrawals of older eras are mis-consumed by v9 |
+| `rejected/ATTACK-T2-05.md` | ATTACK-T2-05 — A withdrawal of a legacy L1StandardBridge pair releases more than was deposited for that pair |
+| `rejected/ATTACK-T2-06.md` | ATTACK-T2-06 — Pre-Bedrock escrow of a pair whose L1 token v9 now classifies as OptimismMintable is frozen |
+
+## Lane T3 — Bridge token identity, ERC721 bridge, mintable factory
+
+| Kill file | Title |
+|---|---|
+| `rejected/ATTACK-T3-01.md` | ATTACK-T3-01 — Attacker-deployed L2 token (any interface answers) releases a real L1 token's escrow |
+| `rejected/ATTACK-T3-02.md` | ATTACK-T3-02 — Fake L2 remote mints an L1-side OptimismMintableERC20 (L1 factory 1.11.0 tokens) |
+| `rejected/ATTACK-T3-03.md` | ATTACK-T3-03 — Legacy vs new interface disagreement on a real L2 token rebinds its L1 identity |
+| `rejected/ATTACK-T3-04.md` | ATTACK-T3-04 — Census: L1 releases exceed what was deposited for a pair (deposits[l1][l2] vs L2 supply) |
+| `rejected/ATTACK-T3-05.md` | ATTACK-T3-05 — L1ERC721Bridge releases an escrowed NFT to someone other than the party the L2 burn designated |
+| `rejected/ATTACK-T3-06.md` | ATTACK-T3-06 — ERC721 bridge deltas up to 2.9.1: pause source, deposits mapping, finalize checks |
+| `rejected/ATTACK-T3-07.md` | ATTACK-T3-07 — U21 "L1 bridge hardening" / L1CrossDomainMessenger 2.13.0 changes how old in-flight bridge messages finalize |
+| `rejected/ATTACK-T3-08.md` | ATTACK-T3-08 — OptimismMintableERC20Factory: squat / rebind a token's remote identity or bridge |
+
+## Lane T4 — Proof-program differential (kona v1.7.0 / v1.9.0 / op-node)
+
+| Kill file | Title |
+|---|---|
+| `rejected/ATTACK-T4-01.md` | ATTACK-T4-01 — Old vs new kona derive a different payload from the same user deposits / L1 data |
+| `rejected/ATTACK-T4-02.md` | ATTACK-T4-02 — kona (both prestates) vs op-node disagree on a portal deposit an L1 user can emit |
+| `rejected/ATTACK-T4-03.md` | ATTACK-T4-03 — Malformed TransactionDeposited encodings that kona and op-node decode differently |
+| `rejected/ATTACK-T4-04.md` | ATTACK-T4-04 — L1-info deposit differs across hardfork boundaries or the L1 blob-fee schedule (BPO1/BPO2) |
+| `rejected/ATTACK-T4-05.md` | ATTACK-T4-05 — Bedrock-version L1 fee scalar with non-zero padding (op-node MaxUint32 vs kona truncation) |
+| `rejected/ATTACK-T4-06.md` | ATTACK-T4-06 — FPVM system-config reconstruction from the parent L2 block differs from op-node |
+| `rejected/ATTACK-T4-07.md` | ATTACK-T4-07 — Deposit receipts (nonce, receipt version, failed deposits) give a different receipts root |
+| `rejected/ATTACK-T4-08.md` | ATTACK-T4-08 — Output-root / super-root encoding differs between kona and op-node / the posted claims |
+| `rejected/ATTACK-T4-09.md` | ATTACK-T4-09 — Deposit-only fallback keeps a different transaction set |
+| `rejected/ATTACK-T4-10.md` | ATTACK-T4-10 — Span-batch transaction codec disagrees on a user-signed transaction |
+| `rejected/ATTACK-T4-11.md` | ATTACK-T4-11 — Embedded rollup / L1 config differs (old kona registry vs new vs op-node) |
+

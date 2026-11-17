@@ -55,7 +55,8 @@
           "ATK-T1 fix-regression",
           "ATK-T2 legacy carry-through",
           "ATK-T3 bridge token identity",
-          "ATK-T4 proof-program differential"
+          "ATK-T4 proof-program differential",
+          "ATK-T5 custody solvency (lead L9)"
         ],
         "briefs": "workers/briefs/resume/",
         "codex_mirrors": "CATK-T1..T4 launched 2026-11-17 in Codex workspace-write sandbox (network to local proxies), after user go-ahead; bypass flag not used",
@@ -64,7 +65,8 @@
           "ATK-T1": "15 exp, 15 kills, 0 cand",
           "ATK-T3": "19 exp, 8 kills, 0 cand",
           "ATK-T4": "13 exp, 11 kills, 0 cand",
-          "ATK-T2": "running"
+          "ATK-T2": "19 exp, 6 kills, 0 cand",
+          "ATK-T5": "running"
         }
       }
     },
