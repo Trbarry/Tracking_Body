@@ -1,0 +1,50 @@
+[
+ {
+  "l1": "0xf5a4de12d538795e3483d18104d1dd7b6cfb287f",
+  "l2": "0x0a13b0156b66f16d550ad13b25bae8807283edfb",
+  "withdrawals": 1,
+  "withdrawn": "1000000000000000000",
+  "deposits": "4000000000000000000",
+  "l1_mintable_bridge": false
+ },
+ {
+  "l1": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+  "l2": "0x3a337a6ada9d885b6ad95ec48f9b75f197b5ae35",
+  "withdrawals": 98,
+  "withdrawn": "3638568805758",
+  "deposits": "110918985253",
+  "l1_mintable_bridge": false
+ },
+ {
+  "l1": "0xd2ba23de8a19316a638dc1e7a9adda1d74233368",
+  "l2": "0x6ef08f42c936f5d101b76160c816d3c8181c9867",
+  "withdrawals": 37,
+  "withdrawn": "2225833253802898841157472",
+  "deposits": "101568982356165908521109",
+  "l1_mintable_bridge": false
+ },
+ {
+  "l1": "0xd5e0eda0214f1d05af466e483d9376a77a67448b",
+  "l2": "0xf93322688ddfe432c21c0b4e709d77deab7e923f",
+  "withdrawals": 10,
+  "withdrawn": "1610649720024332127221392",
+  "deposits": "1580941490598362097826794",
+  "l1_mintable_bridge": false
+ },
+ {
+  "l1": "0xe53ec727dbdeb9e2d5456c3be40cff031ab40a55",
+  "l2": "0xf765356c901a064a74fa4560622f21c91048c3d7",
+  "withdrawals": 58,
+  "withdrawn": "153476636843574061318823",
+  "deposits": "87827309216710894737905",
+  "l1_mintable_bridge": false
+ },
+ {
+  "l1": "0x2781246fe707bb15cee3e5ea354e2154a2877b16",
+  "l2": "0xbc63230d1c4d0cd241d66f5aae75f3d1d6c0949a",
+  "withdrawals": 6,
+  "withdrawn": "18177219302996448787083546",
+  "deposits": "1394947750208671122777552",
+  "l1_mintable_bridge": false
+ }
+]
