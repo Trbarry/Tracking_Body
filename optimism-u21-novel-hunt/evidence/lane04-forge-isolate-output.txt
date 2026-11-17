@@ -1,0 +1,40 @@
+Logs:
+  direct burner, value 1 ETH, gasLimit 0
+     min outer gas for finalized-UNDELIVERED / target gas at entry: 1017976 830645
+  direct burner, value 0, gasLimit 100k
+     min outer gas for finalized-UNDELIVERED / target gas at entry: 376408 231294
+  direct burner, value 1 ETH, gasLimit 100k
+     min outer gas for finalized-UNDELIVERED / target gas at entry: 1018012 830645
+  wrapper(1 level)->burner, value 1 ETH, gasLimit 0
+     min outer gas for finalized-UNDELIVERED / target gas at entry: 604628 430114
+  wrapper(2 levels)->burner, value 1 ETH, gasLimit 0
+     min outer gas for finalized-UNDELIVERED / target gas at entry: 472202 301794
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.17s (1.14s CPU time)
+Ran 2 tests for test/Fab.t.sol:FabTest
+[PASS] test_gas_freshEOA_value_today() (gas: 260898852)
+Logs:
+  fresh EOA (codehash 0), gasLimit 0, value 1 ETH
+    gas >= 100000 outcome 0
+    gas >= 154000 outcome 1
+    gas >= 381000 outcome 4
+  same EOA after 1 wei dust (codehash keccak(empty))
+    gas >= 100000 outcome 0
+    gas >= 154000 outcome 1
+    gas >= 194500 outcome 4
+[PASS] test_probe_gas_received_at_minimum() (gas: 3826188)
+Logs:
+  min portal-call gas 278777 target gasleft at entry 136691
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 4.79s (4.78s CPU time)
+Ran 2 tests for test/CrossVersion.t.sol:CrossVersionTest
+[PASS] test_failedV8_upgrade_replayV9() (gas: 168161036)
+Logs:
+    v9 replay gas >= 20000 outcome 0
+    v9 replay gas >= 75000 outcome 5
+    v9 replay gas >= 265500 outcome 4
+[PASS] test_v8_sweep() (gas: 155050587)
+Logs:
+    v8 gas >= 100000 outcome 0
+    v8 gas >= 173000 outcome 1
+    v8 gas >= 536000 outcome 4
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 6.44s (12.39s CPU time)
+Ran 3 test suites in 6.45s (12.40s CPU time): 5 tests passed, 0 failed, 0 skipped (5 total tests)

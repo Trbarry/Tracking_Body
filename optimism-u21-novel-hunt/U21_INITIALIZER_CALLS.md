@@ -8,7 +8,7 @@ Baseline: mainnet N-1 = 26430858 (`l1pre`) -> N = 26430859 (`l1n`), cross-checke
 - 4 x `OPCMv2.upgrade` -> 10 `Utils.upgrade` each, in this fixed order (`OPContractsManagerV2.sol:832-959`): SystemConfig, OptimismPortal2, ETHLockbox, L1CrossDomainMessenger, L1StandardBridge, L1ERC721Bridge, OptimismMintableERC20Factory, DisputeGameFactory, DelayedWETH, AnchorStateRegistry; then 7 x (`setImplementation`, `setInitBond`) on the DisputeGameFactory (six configured types + unconditional clear of SUPER_CANNON=4).
 - Total: 41 initializer executions, 41 StorageSetter `setBytes32` writes, 28 `setImplementation` + 28 `setInitBond`.
 - NOT executed (confirmed by absence in trace and logs): `SystemConfig.setFeature` (ETH_LOCKBOX already true on all four chains, no `FeatureSet` log), `OptimismPortal2.migrateLiquidity` (`wasUsingEthLockbox` true; portal balances 0 before and after), any proxy deployment (no `ProxyCreation` log; the `PermittedProxyDeployment = "ETHLockbox"` instruction passed for all four chains was unused), `transferOwnership` of ProxyAdmin/DGF (initial deployment only), `migrate`.
-- No function named `upgrade()` exists on any v9 L1 contract; the only (re)initializer entry point per contract is `initialize`.
+- No proxied v9 L1 contract has an `upgrade()` reinitializer (`grep 'function upgrade('` under `src/L1`, `src/dispute`, `src/universal` only returns `OPContractsManagerV2.upgrade`, `OPContractsManagerUtils.upgrade` and `ProxyAdmin.upgrade`); the only (re)initializer entry point per contract is `initialize`.
 
 Extra instructions supplied per chain: `overrides.cfg.startingRespectedGameType` = 9 (OP, Ink, Unichain) / 5 (Soneium) - equal to the value already stored in each AnchorStateRegistry at N-1, so the override changed nothing - and `PermittedProxyDeployment` = `"ETHLockbox"` (unused).
 
@@ -410,4 +410,77 @@ Implementation contracts: `_initialized == 0xff` on all eleven (`cast storage <i
 - storage: 6 distinct slots written, 2 net-changed:
   - `0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc`: `0x0000000000000000000000008f40cc98d694ab986f026c5383a181fcc9b6b281` -> `0x0000000000000000000000002b27299c577d4720100e2735b652444dcea652d0`
   - `0x0000000000000000000000000000000000000000000000000000000000000006`: `0x0000000000000000000000000000000000000000000000006882777b00000009` -> `0x08ba0023ed60c7bd040716dd13c45fa0062df5c5000000006882777b00000009`
+
+## 4. Slot-by-slot attribution (OP Mainnet shown; the other three chains have the identical slot set, verified programmatically)
+
+`(xk)` = number of SSTOREs to the slot inside the tx. "same" = final value equals the N-1 value.
+
+| Proxy | Slot | Meaning | Instruction that wrote it | Net change |
+|---|---|---|---|---|
+| Safe | 5 | Safe nonce | `execTransaction` | 48 -> 49 |
+| SuperchainConfig | 0x3608...2bbc (x4) | EIP-1967 implementation | Utils.upgrade steps 1,4,5,7 | `0x5570b1f2...` -> `0xA303a644...` |
+| SuperchainConfig | 0 (x4) | `_initialized`,`_initializing`,`guardian` | StorageSetter clear; `reinitializer` enter; `_setGuardian`; `reinitializer` exit | same (`guardian=0x09f7150D...`, `_initialized=2`) |
+| SystemConfig | 0x3608...2bbc (x4) | implementation | Utils.upgrade | `0x670b850A...` -> `0xADe27248...` |
+| SystemConfig | 0 (x3) | `_initialized`,`_initializing` | StorageSetter clear; modifier enter/exit | same (3) |
+| SystemConfig | 0x33 (x2) | `_owner` | `__Ownable_init()` (owner := ProxyAdmin), `transferOwnership(_owner)` | same (`0x847B5c17...`); two `OwnershipTransferred` logs |
+| SystemConfig | 0x67 | `batcherHash` | `_setBatcherHash` | same; emits `ConfigUpdate(0, BATCHER)` |
+| SystemConfig | 0x66, 0x68 (x2) | `scalar`; `gasLimit`/`basefeeScalar`/`blobbasefeeScalar` | `_setGasConfigEcotone`, `_setGasLimit` | same; emits `ConfigUpdate(0, FEE_SCALARS)` and `ConfigUpdate(0, GAS_LIMIT)` |
+| SystemConfig | 0x65a7ed54...1c08 | UNSAFE_BLOCK_SIGNER_SLOT | `Storage.setAddress` | same |
+| SystemConfig | 0x383f2918...0636, 0x46adcbeb...d5a7, 0x9904ba90...6376, 0x4b6c74f9...19ac, 0xa04c5bb9...320c, 0x51547f31...58ff | L1xDM, L1ERC721Bridge, L1StandardBridge, OptimismPortal, OptimismMintableERC20Factory, DelayedWETH address slots | `Storage.setAddress` x6 | same |
+| SystemConfig | 0x99f45962...ff42 | OPCM_SLOT (`lastUsedOPCM`) | `Storage.setAddress(OPCM_SLOT, opcmV2)` | **`0x1951828C...` (8.0.1) -> `0x2d91e6F2...` (9.0.3)** |
+| SystemConfig | 0x65; 0x71ac1282...c597 | `overhead`; LEGACY_BATCH_INBOX_SLOT | `overhead = 0`; `Storage.setAddress(LEGACY_BATCH_INBOX_SLOT, 0)` | same (both already 0) |
+| SystemConfig | 0x69; 0x6b; 0x6c | `_resourceConfig`; `l2ChainId`; `superchainConfig` (+`minBaseFee` packed) | `_setResourceConfig`; assignments | same |
+| OptimismPortal2 | 0x3608...2bbc (x4) | implementation | Utils.upgrade | `0x1005217a...` -> `0xb20B23af...` |
+| OptimismPortal2 | 0 (x3); 0x37; 0x3e; 0x3f | init bytes; `systemConfig`; `anchorStateRegistry`; `ethLockbox` | StorageSetter + `initialize` | same |
+| ETHLockbox | 0x3608...2bbc (x4) | implementation | Utils.upgrade | `0xb3A24DB0...` -> `0xDF75E6b0...` |
+| ETHLockbox | 0 (x3) | init bytes (+ legacy `systemConfig` at offset 2, now `spacer_0_2_20`) | StorageSetter + modifier | same; the stale SystemConfig address stays in the spacer and is never read by v2.0.0 |
+| ETHLockbox | 3 | `superchainConfig` (NEW slot) | `superchainConfig = _superchainConfig` | **0 -> `0x95703e09...`** |
+| ETHLockbox | 0xe94ce3e9...2398 | `authorizedPortals[portal]` | `_authorizePortal` | same (true); emits `PortalAuthorized` |
+| AddressManager | 0x51521693...385e (x4) | `addresses[keccak("OVM_L1CrossDomainMessenger")]` | ProxyAdmin.upgrade for RESOLVED type | `0x59D49753...` -> `0x7d4Ec7fB...` |
+| L1CrossDomainMessenger | 0 (x3); 0xfc; 0xfe; 0xcf | init byte at offset 20; `portal`; `systemConfig`; `otherMessenger` | StorageSetter + `initialize` / `__CrossDomainMessenger_init` | same (`xDomainMsgSender` slot 0xcc not written: already non-zero) |
+| L1StandardBridge | 0x3608...2bbc (x4); 0 (x3); 3; 4; 0x34 | impl (via `setStorage`); init; `messenger`; `otherBridge`; `systemConfig` | Utils.upgrade + `initialize` | same (impl `0xB37a11Aa...` unchanged) |
+| L1ERC721Bridge | 0x3608...2bbc (x4); 0 (x3); 1; 2; 0x33 | impl; init; `messenger`; `otherBridge`; `systemConfig` | same pattern | same (impl `0x9F164f1d...` unchanged) |
+| OptimismMintableERC20Factory | 0x3608...2bbc (x4); 0 (x4); 1 | impl; init; `bridge` | same pattern | same (impl `0xaAbEA75D...` unchanged) |
+| DisputeGameFactory | 0x3608...2bbc (x4); 0 (x3); 0x33 (x2) | impl; init; `_owner` | Utils.upgrade; `__Ownable_init` + `_transferOwnership(Safe)` | same (impl `0x72B97171...` unchanged; owner = Safe) |
+| DisputeGameFactory | 27 mapping/bytes slots (23 on Soneium) | `gameImpls[t]`, `initBonds[t]`, `gameArgs[t]` for t in {0,1,8,5,9,10,4} | 7 x `setImplementation` + 7 x `setInitBond` | 3 changed on OP (type-5 args: 2 words; type-9 args word 0), 1 on Ink and Unichain (type-9 args word 0), 0 on Soneium |
+| DelayedWETH | 0x3608...2bbc (x4) | implementation | Utils.upgrade | `0xE440CC08...` -> `0xF024e963...` |
+| DelayedWETH | 0 (x3) | init bytes | StorageSetter + modifier | same |
+| DelayedWETH | 5 | `ethLockbox` (NEW slot) | `ethLockbox = _ethLockbox` | **0 -> chain lockbox**; legacy slot 4 (`systemConfig`, now `spacer_4_0_20`) not written and keeps the SystemConfig address |
+| AnchorStateRegistry | 0x3608...2bbc (x4) | implementation | Utils.upgrade | `0x8F40Cc98...` -> `0x2b27299C...` |
+| AnchorStateRegistry | 0 (x3) | init bytes (+ legacy `systemConfig` at offset 2, now spacer) | StorageSetter + modifier | same; stale SystemConfig address stays in the spacer |
+| AnchorStateRegistry | 1; 3; 4 | `disputeGameFactory`; `startingAnchorRoot.root`; `.l2SequenceNumber` | `initialize` | same (`rootChanged == false`, so `anchorGame` slot 2 is not touched) |
+| AnchorStateRegistry | 6 | `respectedGameType` (4 bytes) + `retirementTimestamp` (8) + `ethLockbox` (20, NEW, offset 12) | `ethLockbox = ...`, `respectedGameType = ...` | **upper 20 bytes 0 -> chain lockbox**; game type and retirement timestamp unchanged (`retirementTimestamp != 0` so it is not reset) |
+
+Totals: 339 distinct slots written over 46 accounts; net-changed slots per chain = 2 (SystemConfig) + 1 (Portal) + 2 (Lockbox) + 1 (AddressManager) + 2 (DelayedWETH) + 2 (ASR) + DGF (3/1/0/1), plus 1 for SuperchainConfig and 1 for the Safe nonce. Every written slot is attributed above; there is no write outside the proxies being upgraded, their AddressManagers and the Safe.
+
+## 5. DisputeGameFactory configuration writes (per chain, N-1 -> N)
+
+Input order is fixed by `VALID_GAME_TYPES` (`OPContractsManagerV2.sol:122`): CANNON(0), PERMISSIONED_CANNON(1), CANNON_KONA(8), SUPER_PERMISSIONED(5), SUPER_CANNON_KONA(9), ZK_DISPUTE_GAME(10); then SUPER_CANNON(4) is cleared unconditionally (line 995-996). Game args are built by `Utils.makeGameArgs` (lines 445-509); for super games the chain id word is 0.
+
+| Chain | Type | impl N-1 | bond N-1 | gameArgs N-1 | impl N | bond N | gameArgs N |
+|---|---|---|---|---|---|---|---|
+| OP | 5 | `0x5C3eb47cB0174aea522a2a9Ae79487139A53D691` | 0 | `0x23b2c62946350f4246f9f9d027e071f0264fd113473300df21d047806a082244b417f96b32f13a33` | `0x5C3eb47cB0174aea522a2a9Ae79487139A53D691` | 0 | `0x23b2c62946350f4246f9f9d027e071f0264fd113c27ba3e0fc01567a5e57ae0c391aa98cecba5be0` |
+| OP | 9 | `0x19AF533Cc2A2A55786DCB8672aA5717e64213208` | 80000000000000000 | `0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1dfacc005dcd857b401e4732e6f7837135a22825cfa23b2c62946350f4246f9f9d027e071f0264fd1131b6dbf05eaf22d4e70dc993e8a19dd9f3dcb31620000000000000000000000000000000000000000000000000000000000000000` | `0x19AF533Cc2A2A55786DCB8672aA5717e64213208` | 80000000000000000 | `0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfa23b2c62946350f4246f9f9d027e071f0264fd1131b6dbf05eaf22d4e70dc993e8a19dd9f3dcb31620000000000000000000000000000000000000000000000000000000000000000` |
+| Ink | 5 | `0x5C3eb47cB0174aea522a2a9Ae79487139A53D691` | 0 | `0xee018baf058227872540ac60efbd38b023d9dae23832bfbef03173e4c49a00ec0dd178817a02d177` | `0x5C3eb47cB0174aea522a2a9Ae79487139A53D691` | 0 | `0xee018baf058227872540ac60efbd38b023d9dae23832bfbef03173e4c49a00ec0dd178817a02d177` |
+| Ink | 9 | `0x19AF533Cc2A2A55786DCB8672aA5717e64213208` | 80000000000000000 | `0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1dfacc005dcd857b401e4732e6f7837135a22825cfaee018baf058227872540ac60efbd38b023d9dae257b4c29daee99a28e6e86778b499361294c134ea0000000000000000000000000000000000000000000000000000000000000000` | `0x19AF533Cc2A2A55786DCB8672aA5717e64213208` | 80000000000000000 | `0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfaee018baf058227872540ac60efbd38b023d9dae257b4c29daee99a28e6e86778b499361294c134ea0000000000000000000000000000000000000000000000000000000000000000` |
+| Soneium | 5 | `0x5C3eb47cB0174aea522a2a9Ae79487139A53D691` | 0 | `0x4890928941e62e273da359374b105f803329f473400c164c4a8ca84385b70eed6eb03ea847c8e1b8` | `0x5C3eb47cB0174aea522a2a9Ae79487139A53D691` | 0 | `0x4890928941e62e273da359374b105f803329f473400c164c4a8ca84385b70eed6eb03ea847c8e1b8` |
+| Unichain | 5 | `0x5C3eb47cB0174aea522a2a9Ae79487139A53D691` | 0 | `0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff986b392ca30ad7453c8d88b56eb5a04fd0e2175b7` | `0x5C3eb47cB0174aea522a2a9Ae79487139A53D691` | 0 | `0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff986b392ca30ad7453c8d88b56eb5a04fd0e2175b7` |
+| Unichain | 9 | `0x19AF533Cc2A2A55786DCB8672aA5717e64213208` | 80000000000000000 | `0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1dfacc005dcd857b401e4732e6f7837135a22825cfa27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff974ad145ac900f1dd5551f0c9e143314dc4022fcf0000000000000000000000000000000000000000000000000000000000000000` | `0x19AF533Cc2A2A55786DCB8672aA5717e64213208` | 80000000000000000 | `0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfa27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff974ad145ac900f1dd5551f0c9e143314dc4022fcf0000000000000000000000000000000000000000000000000000000000000000` |
+
+All other types written by the loop (0, 1, 8, 10, 4; and 9 on Soneium) were already unset at N-1 and stay unset: implementation 0, bond 0, empty args. Types the OPCM does not manage (2, 3, 6, 7, 11, 12 probed) are unset on all four factories.
+
+Decoded changes:
+- SUPER_CANNON_KONA (9) on OP, Ink, Unichain: `absolutePrestate` `0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df` -> `0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9`; vm `0xaCc005DC...` (MIPS64), the chain's own AnchorStateRegistry and DelayedWETH, chain id word 0, bond 0.08 ETH: all unchanged.
+- SUPER_PERMISSIONED (5) on OP Mainnet only: `proposer` `0x473300df21D047806A082244b417f96b32f13A33` -> `0xc27ba3E0Fc01567a5E57Ae0c391AA98cECBA5bE0` (an EOA, nonce 1 at N-1 and 11 at 26433900). Ink/Soneium/Unichain proposers unchanged. This is input chosen by the ProxyAdmin owner, not derived on chain.
+- Game implementations are unchanged on every chain, so games created before and after U21 run the same code; they differ only in prestate (type 9) and they all read the upgraded ASR v4.0.0 / DelayedWETH v2.0.0 through the same proxies.
+
+## 6. "Should have changed but did not" and "changed unexpectedly"
+
+- Changed unexpectedly: nothing. The only value-level surprise relative to a pure "same config, new code" upgrade is the OP Mainnet type-5 proposer rotation (section 5), which is explicit in the tx input.
+- Legacy `systemConfig` words left in place: ETHLockbox slot 0 bytes 2-21, AnchorStateRegistry slot 0 bytes 2-21, DelayedWETH slot 4. In v9 these are private spacers with no reader (`grep` shows no use). They are stale-but-correct pointers to the same chain's SystemConfig and are harmless; they would only matter to a later implementation that re-labels the spacer.
+- `SystemConfig.START_BLOCK_SLOT` not rewritten (`_setStartBlock` only writes when zero): correct, start blocks preserved (OP 17422444, Ink 21344310, Soneium 21314185, Unichain 21116363).
+- `AnchorStateRegistry.retirementTimestamp` not bumped (1753379243 OP/Ink, 1753380095 Soneium, 1753380731 Unichain): by design (`AnchorStateRegistry.sol:124-132`), so no game created before U21 was retired by it - see PRIM-0101/0102.
+- `L1CrossDomainMessenger.xDomainMsgSender` not rewritten: correct (only set when zero).
+- SystemConfig fields that `initialize` does not take (EIP-1559 params, operator fee, `minBaseFee`, `daFootprintGasScalar`) are untouched storage and no `ConfigUpdate` is emitted for them; the three re-emitted `ConfigUpdate` events (batcher, fee scalars, gas limit) carry the values already in force.
+- Pause state: `SuperchainConfig.expiration(x) == 0` at N-1 and after for address(0) and for every portal and lockbox of the four chains, so the identifier consolidation onto the lockbox could not drop an active pause.
 

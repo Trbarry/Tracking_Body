@@ -1,0 +1,13 @@
+No files changed, compilation skipped
+Ran 2 tests for test/SafeCallFloor.t.sol:SafeCallFloorTest
+[PASS] test_floor_depends_on_target_existence() (gas: 145970895)
+Logs:
+  min gas, 1 wei to non-existent account: 361500
+  min gas, 1 wei to existing account: 175000
+  min gas, 0 value to non-existent account: 158500
+  delta (fresh - existing): 186500
+[PASS] test_uint256_gasLimit_wraps_floor() (gas: 227280)
+Logs:
+  declared gasLimit (2^250), gas actually seen by target: 79580
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 1.72s (1.61s CPU time)
+Ran 1 test suite in 1.72s (1.72s CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

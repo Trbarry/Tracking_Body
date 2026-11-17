@@ -1,0 +1,53 @@
+Compiling 1 files with Solc 0.8.25
+Solc 0.8.25 finished in 987.57ms
+Compiler run successful with warnings:
+Ran 5 tests for test/MessengerGasCrossVersion.t.sol:MessengerGasCrossVersionTest
+[PASS] test_oldBudget_gasBurningTarget_bigMessage() (gas: 445258064)
+Logs:
+  old L2 budget, gas-burning target, 20kB message, minGas 100k
+    withdrawal gasLimit: 831400
+    first gas where finalize does not revert: 1056000
+    first gas where message is relayed OK: 0
+    samples recorded as FAILED (replayable): 41
+    last gas recorded FAILED: 1296000
+    samples finalized with no record (LOSS): 0
+[PASS] test_oldBudget_gasBurningTarget_minGas0() (gas: 78383740)
+Logs:
+  old L2 budget, gas-burning target, 1 ETH, minGas 0
+    withdrawal gasLimit: 310160
+    first gas where finalize does not revert: 456000
+    first gas where message is relayed OK: 0
+    samples recorded as FAILED (replayable): 115
+    last gas recorded FAILED: 798000
+    samples finalized with no record (LOSS): 0
+[PASS] test_oldBudget_gasBurningTarget_minGas200k() (gas: 84301274)
+Logs:
+  old L2 budget, gas-burning target, 1 ETH, minGas 200k
+    withdrawal gasLimit: 513334
+    first gas where finalize does not revert: 664000
+    first gas where message is relayed OK: 0
+    samples recorded as FAILED (replayable): 85
+    last gas recorded FAILED: 1000000
+    samples finalized with no record (LOSS): 0
+[PASS] test_oldBudget_targetGetsMinGas() (gas: 271329356)
+Logs:
+  first gas relayed OK: 959000
+  minimum gas observed inside target: 666269
+[PASS] test_oldBudget_valueToNewAccount() (gas: 185558428)
+Logs:
+  old L2 budget, 1 ETH to new account, minGas 0
+    withdrawal gasLimit: 310160
+    first gas where finalize does not revert: 454000
+    first gas where message is relayed OK: 454000
+    samples recorded as FAILED (replayable): 0
+    last gas recorded FAILED: 0
+    samples finalized with no record (LOSS): 0
+  new (v9 L2CDM 2.4.0) budget, 1 ETH to new account, minGas 0
+    withdrawal gasLimit: 415160
+    first gas where finalize does not revert: 562000
+    first gas where message is relayed OK: 562000
+    samples recorded as FAILED (replayable): 0
+    last gas recorded FAILED: 0
+    samples finalized with no record (LOSS): 0
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 3.73s (9.11s CPU time)
+Ran 1 test suite in 3.73s (3.73s CPU time): 5 tests passed, 0 failed, 0 skipped (5 total tests)

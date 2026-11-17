@@ -1,0 +1,160 @@
+Compiling 1 files with Solc 0.8.25
+Solc 0.8.25 finished in 2.01s
+Compiler run successful with warnings:
+Ran 2 tests for test/Basic.t.sol:BasicTest
+[PASS] test_dump() (gas: 366450273)
+Logs:
+  40 26432559 0x4200000000000000000000000000000000000007 0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1
+  41 26432798 0x4200000000000000000000000000000000000007 0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1
+  42 26433490 0x4200000000000000000000000000000000000007 0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1
+[PASS] test_finalize_messenger_v8proof() (gas: 28647616)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 1.87s (1.82s CPU time)
+Ran 4 tests for test/Fab2.t.sol:Fab2Test
+[PASS] test_big_200k() (gas: 727413202)
+Logs:
+  S / gasLimit 200000 3510160
+    gas >= 3510160 outcome 1
+    gas >= 4812192 outcome 4
+[PASS] test_big_20k() (gas: 32664169)
+Logs:
+  S / gasLimit 20000 630160
+    gas >= 630160 outcome 1
+    gas >= 902422 outcome 4
+[PASS] test_forced_fail_via_nested_finalize_in_replay() (gas: 29857393)
+Logs:
+  victim 2000 ETH now custodied by L1CDM, message failed, not delivered
+[PASS] test_nested_finalize_inside_portal_relay_blocked() (gas: 29347591)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 2.38s (2.29s CPU time)
+Ran 2 tests for test/L2Side.t.sol:L2SideTest
+[PASS] test_l2cdm_cannot_target_passer() (gas: 29884)
+[PASS] test_sendMessage_always_targets_other_messenger_and_old_baseGas() (gas: 81311)
+Logs:
+  L2 baseGas(2 bytes, 100000) = 411779
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 8.83ms (5.53ms CPU time)
+Ran 2 tests for test/Quant.t.sol:QuantTest
+[PASS] test_forced_failure_thresholds() (gas: 126805845)
+Logs:
+  direct burner, value 1 ETH, gasLimit 0
+     min outer gas for finalized-UNDELIVERED / target gas at entry: 1011744 830645
+  direct burner, value 0, gasLimit 100k
+     min outer gas for finalized-UNDELIVERED / target gas at entry: 370212 231294
+  direct burner, value 1 ETH, gasLimit 100k
+     min outer gas for finalized-UNDELIVERED / target gas at entry: 1011744 830645
+  wrapper(1 level)->burner, value 1 ETH, gasLimit 0
+     min outer gas for finalized-UNDELIVERED / target gas at entry: 597137 428894
+  wrapper(2 levels)->burner, value 1 ETH, gasLimit 0
+     min outer gas for finalized-UNDELIVERED / target gas at entry: 463392 299296
+[PASS] test_state_dependent_target_thirdparty_timing() (gas: 295119)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 810.99ms (761.98ms CPU time)
+Ran 3 tests for test/CrossVersion.t.sol:CrossVersionTest
+[PASS] test_failedV8_upgrade_replayV9() (gas: 85162646)
+Logs:
+    v9 replay gas >= 20000 outcome 5
+    v9 replay gas >= 205000 outcome 4
+[PASS] test_provenV8_upgrade_finalizeV9() (gas: 35016708)
+[PASS] test_v8_sweep() (gas: 143901029)
+Logs:
+    v8 gas >= 100000 outcome 0
+    v8 gas >= 154000 outcome 1
+    v8 gas >= 518000 outcome 4
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 14.29s (25.08s CPU time)
+Ran 5 tests for test/Real.t.sol:RealTest
+[PASS] test_delete_paths() (gas: 28865102)
+[PASS] test_feevault_etched_reverting_target_thirdparty() (gas: 28600537)
+[PASS] test_feevault_thirdparty_external() (gas: 132937260)
+Logs:
+    gas >= 150000 outcome 1
+    gas >= 587000 outcome 4
+[PASS] test_multi_submitters_single_execution() (gas: 29295284)
+[PASS] test_reprove_resets_own_timer_only() (gas: 28995523)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 4.63s (4.62s CPU time)
+Ran 11 tests for test/Fab.t.sol:FabTest
+[PASS] test_cond_senderL2CDM_messageToUnsafeTarget_neverFinalizable() (gas: 221277)
+[PASS] test_cond_senderL2CDM_targetNotL1CDM_reverting() (gas: 234980)
+[PASS] test_cond_senderNotL2CDM_targetL1CDM_relayReverts() (gas: 221034)
+[PASS] test_cond_senderNotL2CDM_withValue_reverting_relocks() (gas: 245455)
+[PASS] test_gas_burner_need2M_limit100k_value() (gas: 807752989)
+Logs:
+  burner need 2M, gasLimit 100k, value 1 ETH
+    gas >= 150000 outcome 1
+    gas >= 235000 outcome 0
+    gas >= 955000 outcome 5
+    gas >= 2160000 outcome 4
+[PASS] test_gas_burner_need500k_limit100k_value() (gas: 399134853)
+Logs:
+  burner need 500k, gasLimit 100k, value 1 ETH
+    gas >= 150000 outcome 1
+    gas >= 231000 outcome 0
+    gas >= 611000 outcome 4
+[PASS] test_gas_burner_need60k_limit0_value() (gas: 90551498)
+Logs:
+  burner need 60k, gasLimit 0, value 1 ETH
+    gas >= 100000 outcome 1
+    gas >= 128000 outcome 0
+    gas >= 159500 outcome 4
+[PASS] test_gas_freshEOA_value_today() (gas: 162728023)
+Logs:
+  fresh EOA (codehash 0), gasLimit 0, value 1 ETH
+    gas >= 100000 outcome 1
+    gas >= 314500 outcome 4
+  same EOA after 1 wei dust (codehash keccak(empty))
+    gas >= 100000 outcome 1
+    gas >= 128000 outcome 4
+[PASS] test_messenger_failed_then_replay_and_no_double() (gas: 522908)
+[PASS] test_probe_gas_received_at_minimum() (gas: 1969262)
+Logs:
+  min portal-call gas 214749 target gasleft at entry 139152
+[PASS] test_returnbomb() (gas: 780224761)
+Logs:
+  return bomb 2MB, gasLimit 100k, value 1 ETH
+    gas >= 150000 outcome 1
+    gas >= 235000 outcome 0
+    gas >= 955000 outcome 5
+  revert bomb 2MB, gasLimit 100k, value 1 ETH
+    gas >= 150000 outcome 1
+    gas >= 235000 outcome 0
+    gas >= 955000 outcome 5
+Suite result: ok. 11 passed; 0 failed; 0 skipped; finished in 21.18s (22.87s CPU time)
+Ran 5 tests for test/GasSweep.t.sol:GasSweep2Test
+[PASS] test_big_trace() (gas: 28545657)
+[PASS] test_big_wide() (gas: 48540800)
+Logs:
+  idx/gasLimit/value 10 3336267 0
+    gas >= 3600000 outcome 1
+    gas >= 3700000 outcome 5
+[PASS] test_sweep_messenger_big() (gas: 113037184)
+Logs:
+  idx/gasLimit/value 10 3336267 0
+    gas >= 3000000 outcome 1
+    gas >= 3606000 outcome 5
+[PASS] test_sweep_messenger_erc20() (gas: 170404603)
+Logs:
+  idx/gasLimit/value 40 516982 0
+    gas >= 200000 outcome 1
+    gas >= 696000 outcome 4
+[PASS] test_sweep_messenger_eth_2000() (gas: 138118766)
+Logs:
+  idx/gasLimit/value 36 312784 2000000000000000000000
+    gas >= 100000 outcome 0
+    gas >= 140000 outcome 1
+    gas >= 504000 outcome 4
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 23.61s (23.56s CPU time)
+Ran 3 tests for test/GasSweep.t.sol:GasSweepTest
+[PASS] test_sweep_messenger_big() (gas: 113037162)
+Logs:
+  idx/gasLimit/value 10 3336267 0
+    gas >= 3000000 outcome 1
+    gas >= 3606000 outcome 5
+[PASS] test_sweep_messenger_erc20() (gas: 170404603)
+Logs:
+  idx/gasLimit/value 40 516982 0
+    gas >= 200000 outcome 1
+    gas >= 696000 outcome 4
+[PASS] test_sweep_messenger_eth_2000() (gas: 138118766)
+Logs:
+  idx/gasLimit/value 36 312784 2000000000000000000000
+    gas >= 100000 outcome 0
+    gas >= 140000 outcome 1
+    gas >= 504000 outcome 4
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 8.60s (10.86s CPU time)
+Ran 9 test suites in 24.77s (77.38s CPU time): 37 tests passed, 0 failed, 0 skipped (37 total tests)

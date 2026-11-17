@@ -1,0 +1,37 @@
+[PASS] testFuzz_F_sequenceConservation(uint256) (runs: 256, μ: 1198537, ~: 1214296)
+[PASS] test_A_deposit_valueExceedingMsgValue_isOnlyAnL2Concern() (gas: 130129)
+[PASS] test_A_deposit_valueGoesToLockbox_mintEqualsLocked() (gas: 136783)
+[PASS] test_A_receive_isDeposit_zeroValueDoesNotTouchLockbox_donateStaysInPortal() (gas: 244048)
+[PASS] test_B_finalize_guards() (gas: 655450)
+[PASS] test_B_lockbox_callerRestrictions() (gas: 125220)
+[PASS] test_B_portal_callerRestrictions() (gas: 98179)
+[PASS] test_B_unlockGuard_l2Sender_mockedPortalCaller() (gas: 63772)
+[PASS] test_C_L1CDMCallFailed_keepsWithdrawalReplayable_mockedRevert() (gas: 449278)
+[PASS] test_C_bridgeWithdrawal_adversarialRecipient_reentrancyMatrix() (gas: 2939069)
+[PASS] test_C_bridgeWithdrawal_recipientReverts_valueParkedInCDM_replayOnce() (gas: 1755570)
+[PASS] test_C_finalize_real638ETH_exactOnce() (gas: 406384)
+  unlocked: 638177259920741319864
+  re-locked in same tx: 0
+  lockbox delta (wei, negative): 638177259920741319864
+  L1 target balance delta: 0
+  L1CDM balance after: 0
+[PASS] test_D_direct_estimationOrigin_revertsBeforeRelock() (gas: 1670923)
+[PASS] test_D_direct_feeVault_realTarget_success() (gas: 315624)
+[PASS] test_D_direct_reentrantTarget_matrix_and_strandedDonation() (gas: 2661237)
+[PASS] test_D_direct_targetBurnsAllGas_relockStillFits() (gas: 6430189)
+  reverted with tx gas: 480000
+  reverted with tx gas: 520000
+  finalized(failed) with tx gas: 560000
+  finalized(failed) with tx gas: 600000
+  finalized(failed) with tx gas: 800000
+  finalized(failed) with tx gas: 3000000
+[PASS] test_D_direct_targetReverts_valueRelocked_liabilityGone() (gas: 1688835)
+[PASS] test_E_pause_identifierIsLockbox_depositsStillLock_withdrawalsBlocked() (gas: 568693)
+[PASS] test_G_inflightPreU21Message_minimumGas_638ETH_minGasLimitZero() (gas: 3795892)
+  min tx gas accepted by portal: 518078
+  outcome at min gas: relayed
+[PASS] test_G_inflightPreU21Message_minimumGas_bridgeETH() (gas: 3209471)
+  min tx gas accepted by portal: 884472
+  outcome at min gas: relayed
+[PASS] test_H_nestedFinalizeInsideReplay_parksVictimValueInCDM_thenReplayPaysOnce() (gas: 2700844)
+Suite result: ok. 21 passed; 0 failed; 0 skipped; finished in 4.02s (10.36s CPU time)

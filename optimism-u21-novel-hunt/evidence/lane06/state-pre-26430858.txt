@@ -1,0 +1,129 @@
+block 26430858  SC version "2.4.3"  guardian 0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2  global ts 0 
+=== op SystemConfig 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290
+  version()(string) = "4.0.0" 
+  owner()(address) = 0x847B5c174615B1B7fDF770882256e2D3E95b9D92 
+  l2ChainId()(uint256) = 10 
+  superchainConfig()(address) = 0x95703e0982140D16f8ebA6d158FccEde42f04a4C 
+  paused()(bool) = false 
+  guardian()(address) = 0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2 
+  gasLimit()(uint64) = 40000000 [4e7] 
+  initVersion()(uint8) = 3 
+  minimumGasLimit()(uint64) = 21000000 [2.1e7] 
+  lastUsedOPCM()(address) = 0x1951828Ce913DC4383a8A1695695D537a11D896a 
+  lastUsedOPCMVersion()(string) = "8.0.1" 
+  isCustomGasToken()(bool) = false 
+  disputeGameFactory()(address) = 0xe5965Ab5962eDc7477C8520243A95517CD252fA9 
+  optimismPortal()(address) = 0xbEb5Fc579115071764c7423A4f12eDde41f106Ed 
+  delayedWETH()(address) = 0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162 
+  resourceConfig()((uint32,uint8,uint8,uint32,uint32,uint128)) = (20000000 [2e7], 10, 8, 1000000000 [1e9], 1000000 [1e6], 340282366920938463463374607431768211455 [3.402e38]) 
+  feature ETH_LOCKBOX = true 
+  feature CUSTOM_GAS_TOKEN = false 
+  feature INTEROP = false 
+  slot0..=0x0000000000000000000000000000000000000000000000000000000000000003 impl=0x000000000000000000000000670b850a235a6fa98cd7a195eb139d0277e471fa
+  -- portal 0xbEb5Fc579115071764c7423A4f12eDde41f106Ed version "5.8.0"  paused false  sysCfg 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290  asr 0x23B2C62946350F4246f9f9D027e071f0264FD113  lockbox 0x322b47Ff1FA8D5611F761e3E275C45B71b294D43  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000 l2Sender 0x000000000000000000000000000000000000dEaD  initV 3 
+     SC.pauseTimestamps[portal] = 0 
+  -- lockbox 0x322b47Ff1FA8D5611F761e3E275C45B71b294D43 version "1.3.1"  paused false  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  sysCfg(legacy) 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290  authPortal true  bal 182416.306525160721816415 pao 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A 
+     slots: 0=0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001 3=0x0000000000000000000000000000000000000000000000000000000000000000
+     SC.pauseTimestamps[lockbox] = 0 
+  -- ASR 0x23B2C62946350F4246f9f9D027e071f0264FD113 version "3.9.0"  paused false  lockbox Error: server returned an error response: error code 3: execution reverted, data: "0x"  sysCfg(legacy) 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  dgf 0xe5965Ab5962eDc7477C8520243A95517CD252fA9  rgt 9 
+  -- DelayedWETH(sysCfg) 0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162 version "1.5.1"  lockbox Error: could not decode output; did you specify the wrong function return data type?  Context:  sysCfg(legacy) 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290  config 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 20.582782000000000000 delay 302400 [3.024e5] 
+  -- l1CrossDomainMessenger 0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1 version "2.11.1"  paused false  sysCfg 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1StandardBridge 0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1 version "2.8.2"  paused false  sysCfg 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1ERC721Bridge 0x5a7749f83b81B301cAb5f48EB8516B986DAef23D version "2.9.1"  paused false  sysCfg 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+     L1CDM portal 0xbEb5Fc579115071764c7423A4f12eDde41f106Ed  other 0x4200000000000000000000000000000000000007 
+=== ink SystemConfig 0x62c0a111929fa32cec2f76adba54c16afb6e8364
+  version()(string) = "4.0.0" 
+  owner()(address) = 0x847B5c174615B1B7fDF770882256e2D3E95b9D92 
+  l2ChainId()(uint256) = 57073 [5.707e4] 
+  superchainConfig()(address) = 0x95703e0982140D16f8ebA6d158FccEde42f04a4C 
+  paused()(bool) = false 
+  guardian()(address) = 0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2 
+  gasLimit()(uint64) = 30000000 [3e7] 
+  initVersion()(uint8) = 3 
+  minimumGasLimit()(uint64) = 21000000 [2.1e7] 
+  lastUsedOPCM()(address) = 0x1951828Ce913DC4383a8A1695695D537a11D896a 
+  lastUsedOPCMVersion()(string) = "8.0.1" 
+  isCustomGasToken()(bool) = false 
+  disputeGameFactory()(address) = 0x10d7B35078d3baabB96Dd45a9143B94be65b12CD 
+  optimismPortal()(address) = 0x5d66C1782664115999C47c9fA5cd031f495D3e4F 
+  delayedWETH()(address) = 0x57b4C29DAee99a28E6E86778b499361294c134eA 
+  resourceConfig()((uint32,uint8,uint8,uint32,uint32,uint128)) = (20000000 [2e7], 10, 8, 1000000000 [1e9], 1000000 [1e6], 340282366920938463463374607431768211455 [3.402e38]) 
+  feature ETH_LOCKBOX = true 
+  feature CUSTOM_GAS_TOKEN = false 
+  feature INTEROP = false 
+  slot0..=0x0000000000000000000000000000000000000000000000000000000000000003 impl=0x000000000000000000000000670b850a235a6fa98cd7a195eb139d0277e471fa
+  -- portal 0x5d66C1782664115999C47c9fA5cd031f495D3e4F version "5.8.0"  paused false  sysCfg 0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364  asr 0xEe018bAf058227872540AC60eFbd38b023d9dAe2  lockbox 0xbd4AbB321138e8Eddc399cE64E66451294325a14  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000 l2Sender 0x000000000000000000000000000000000000dEaD  initV 3 
+     SC.pauseTimestamps[portal] = 0 
+  -- lockbox 0xbd4AbB321138e8Eddc399cE64E66451294325a14 version "1.3.1"  paused false  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  sysCfg(legacy) 0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364  authPortal true  bal 23088.758336628210326229 pao 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A 
+     slots: 0=0x0000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640001 3=0x0000000000000000000000000000000000000000000000000000000000000000
+     SC.pauseTimestamps[lockbox] = 0 
+  -- ASR 0xEe018bAf058227872540AC60eFbd38b023d9dAe2 version "3.9.0"  paused false  lockbox Error: server returned an error response: error code 3: execution reverted, data: "0x"  sysCfg(legacy) 0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  dgf 0x10d7B35078d3baabB96Dd45a9143B94be65b12CD  rgt 9 
+  -- DelayedWETH(sysCfg) 0x57b4C29DAee99a28E6E86778b499361294c134eA version "1.5.1"  lockbox Error: could not decode output; did you specify the wrong function return data type?  Context:  sysCfg(legacy) 0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364  config 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 5.710376000000000000 delay 302400 [3.024e5] 
+  -- l1CrossDomainMessenger 0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f version "2.11.1"  paused false  sysCfg 0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1StandardBridge 0x88FF1e5b602916615391F55854588EFcBB7663f0 version "2.8.2"  paused false  sysCfg 0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1ERC721Bridge 0x661235a238B11191211fa95D4Dd9E423d521E0Be version "2.9.1"  paused false  sysCfg 0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+     L1CDM portal 0x5d66C1782664115999C47c9fA5cd031f495D3e4F  other 0x4200000000000000000000000000000000000007 
+=== soneium SystemConfig 0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3
+  version()(string) = "4.0.0" 
+  owner()(address) = 0x509182eC226b3B71D36A3255A80EF0b1A9D43033 
+  l2ChainId()(uint256) = 1868 
+  superchainConfig()(address) = 0x95703e0982140D16f8ebA6d158FccEde42f04a4C 
+  paused()(bool) = false 
+  guardian()(address) = 0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2 
+  gasLimit()(uint64) = 40000000 [4e7] 
+  initVersion()(uint8) = 3 
+  minimumGasLimit()(uint64) = 21000000 [2.1e7] 
+  lastUsedOPCM()(address) = 0x1951828Ce913DC4383a8A1695695D537a11D896a 
+  lastUsedOPCMVersion()(string) = "8.0.1" 
+  isCustomGasToken()(bool) = false 
+  disputeGameFactory()(address) = 0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0 
+  optimismPortal()(address) = 0x88e529A6ccd302c948689Cd5156C83D4614FAE92 
+  delayedWETH()(address) = 0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47 
+  resourceConfig()((uint32,uint8,uint8,uint32,uint32,uint128)) = (20000000 [2e7], 10, 8, 1000000000 [1e9], 1000000 [1e6], 340282366920938463463374607431768211455 [3.402e38]) 
+  feature ETH_LOCKBOX = true 
+  feature CUSTOM_GAS_TOKEN = false 
+  feature INTEROP = false 
+  slot0..=0x0000000000000000000000000000000000000000000000000000000000000003 impl=0x000000000000000000000000670b850a235a6fa98cd7a195eb139d0277e471fa
+  -- portal 0x88e529A6ccd302c948689Cd5156C83D4614FAE92 version "5.8.0"  paused false  sysCfg 0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3  asr 0x4890928941e62e273dA359374b105F803329F473  lockbox 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000 l2Sender 0x000000000000000000000000000000000000dEaD  initV 3 
+     SC.pauseTimestamps[portal] = 0 
+  -- lockbox 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31 version "1.3.1"  paused false  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  sysCfg(legacy) 0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3  authPortal true  bal 2195.560152606106316659 pao 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A 
+     slots: 0=0x000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30001 3=0x0000000000000000000000000000000000000000000000000000000000000000
+     SC.pauseTimestamps[lockbox] = 0 
+  -- ASR 0x4890928941e62e273dA359374b105F803329F473 version "3.9.0"  paused false  lockbox Error: server returned an error response: error code 3: execution reverted, data: "0x"  sysCfg(legacy) 0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  dgf 0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0  rgt 5 
+  -- DelayedWETH(sysCfg) 0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47 version "1.5.1"  lockbox Error: could not decode output; did you specify the wrong function return data type?  Context:  sysCfg(legacy) 0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3  config 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000 delay 302400 [3.024e5] 
+  -- l1CrossDomainMessenger 0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f version "2.11.1"  paused false  sysCfg 0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1StandardBridge 0xeb9bf100225c214Efc3E7C651ebbaDcF85177607 version "2.8.2"  paused false  sysCfg 0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1ERC721Bridge 0x5933e323bE8896DfaCd1cD671442F27dAA10a053 version "2.9.1"  paused false  sysCfg 0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+     L1CDM portal 0x88e529A6ccd302c948689Cd5156C83D4614FAE92  other 0x4200000000000000000000000000000000000007 
+=== unichain SystemConfig 0xc407398d063f942febbcc6f80a156b47f3f1bda6
+  version()(string) = "4.0.0" 
+  owner()(address) = 0x847B5c174615B1B7fDF770882256e2D3E95b9D92 
+  l2ChainId()(uint256) = 130 
+  superchainConfig()(address) = 0x95703e0982140D16f8ebA6d158FccEde42f04a4C 
+  paused()(bool) = false 
+  guardian()(address) = 0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2 
+  gasLimit()(uint64) = 60000000 [6e7] 
+  initVersion()(uint8) = 3 
+  minimumGasLimit()(uint64) = 21000000 [2.1e7] 
+  lastUsedOPCM()(address) = 0x1951828Ce913DC4383a8A1695695D537a11D896a 
+  lastUsedOPCMVersion()(string) = "8.0.1" 
+  isCustomGasToken()(bool) = false 
+  disputeGameFactory()(address) = 0x2F12d621a16e2d3285929C9996f478508951dFe4 
+  optimismPortal()(address) = 0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2 
+  delayedWETH()(address) = 0x74ad145aC900F1DD5551F0C9E143314DC4022FCf 
+  resourceConfig()((uint32,uint8,uint8,uint32,uint32,uint128)) = (20000000 [2e7], 10, 8, 1000000000 [1e9], 1000000 [1e6], 340282366920938463463374607431768211455 [3.402e38]) 
+  feature ETH_LOCKBOX = true 
+  feature CUSTOM_GAS_TOKEN = false 
+  feature INTEROP = false 
+  slot0..=0x0000000000000000000000000000000000000000000000000000000000000003 impl=0x000000000000000000000000670b850a235a6fa98cd7a195eb139d0277e471fa
+  -- portal 0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2 version "5.8.0"  paused false  sysCfg 0xc407398d063f942feBbcC6F80a156b47F3f1BDA6  asr 0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9  lockbox 0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000 l2Sender 0x000000000000000000000000000000000000dEaD  initV 3 
+     SC.pauseTimestamps[portal] = 0 
+  -- lockbox 0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5 version "1.3.1"  paused false  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  sysCfg(legacy) 0xc407398d063f942feBbcC6F80a156b47F3f1BDA6  authPortal true  bal 18222.347018032559647506 pao 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A 
+     slots: 0=0x00000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda60001 3=0x0000000000000000000000000000000000000000000000000000000000000000
+     SC.pauseTimestamps[lockbox] = 0 
+  -- ASR 0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9 version "3.9.0"  paused false  lockbox Error: server returned an error response: error code 3: execution reverted, data: "0x"  sysCfg(legacy) 0xc407398d063f942feBbcC6F80a156b47F3f1BDA6  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  dgf 0x2F12d621a16e2d3285929C9996f478508951dFe4  rgt 9 
+  -- DelayedWETH(sysCfg) 0x74ad145aC900F1DD5551F0C9E143314DC4022FCf version "1.5.1"  lockbox Error: could not decode output; did you specify the wrong function return data type?  Context:  sysCfg(legacy) 0xc407398d063f942feBbcC6F80a156b47F3f1BDA6  config 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 21.419797000000000000 delay 302400 [3.024e5] 
+  -- l1CrossDomainMessenger 0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6 version "2.11.1"  paused false  sysCfg 0xc407398d063f942feBbcC6F80a156b47F3f1BDA6  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1StandardBridge 0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA version "2.8.2"  paused false  sysCfg 0xc407398d063f942feBbcC6F80a156b47F3f1BDA6  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1ERC721Bridge 0xD04D0D87E0bd4D2E50286760a3EF323FeA6849Cf version "2.9.1"  paused false  sysCfg 0xc407398d063f942feBbcC6F80a156b47F3f1BDA6  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+     L1CDM portal 0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2  other 0x4200000000000000000000000000000000000007 

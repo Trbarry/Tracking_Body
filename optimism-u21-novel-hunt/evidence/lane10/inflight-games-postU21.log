@@ -1,0 +1,17 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/InflightGames.t.sol:InflightGamesTest
+[PASS] test_inflight_games_payout_postU21() (gas: 17579479)
+Logs:
+  fork: l1
+  gameCount: 21389
+  pre-U21 games with WETH balance tested: 67
+    in progress at fork block: 25
+    resolved, not closed: 29
+    closed, credit unclaimed: 13
+  paid out in full: 67
+  failures: 0
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 70.84s (70.84s CPU time)
+
+Ran 1 test suite in 70.85s (70.84s CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

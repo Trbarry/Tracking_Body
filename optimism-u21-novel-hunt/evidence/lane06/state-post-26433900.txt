@@ -1,0 +1,205 @@
+block 26433900  SC version "2.5.0"  guardian 0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2  global ts 0 
+=== op SystemConfig 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290
+  version()(string) = "4.3.0" 
+  owner()(address) = 0x847B5c174615B1B7fDF770882256e2D3E95b9D92 
+  l2ChainId()(uint256) = 10 
+  superchainConfig()(address) = 0x95703e0982140D16f8ebA6d158FccEde42f04a4C 
+  paused()(bool) = false 
+  guardian()(address) = 0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2 
+  batcherHash()(bytes32) = 0x0000000000000000000000006887246668a3b87f54deb3b94ba47a6f63f32985 
+  unsafeBlockSigner()(address) = 0xAAAA45d9549EDA09E70937013520214382Ffc4A2 
+  gasLimit()(uint64) = 40000000 [4e7] 
+  overhead()(uint256) = 0 
+  scalar()(uint256) = 452312848583266388373324160190187140051835877600158453279135543542576845931 [4.523e74] 
+  basefeeScalar()(uint32) = 5227 
+  blobbasefeeScalar()(uint32) = 1014213 [1.014e6] 
+  eip1559Denominator()(uint32) = 250 
+  eip1559Elasticity()(uint32) = 2 
+  operatorFeeScalar()(uint32) = 0 
+  operatorFeeConstant()(uint64) = 0 
+  daFootprintGasScalar()(uint16) = 0 
+  minBaseFee()(uint64) = 0 
+  startBlock()(uint256) = 17422444 [1.742e7] 
+  initVersion()(uint8) = 3 
+  minimumGasLimit()(uint64) = 21000000 [2.1e7] 
+  lastUsedOPCM()(address) = 0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f 
+  lastUsedOPCMVersion()(string) = "9.0.3" 
+  isCustomGasToken()(bool) = false 
+  proxyAdmin()(address) = 0x543bA4AADBAb8f9025686Bd03993043599c6fB04 
+  proxyAdminOwner()(address) = 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A 
+  disputeGameFactory()(address) = 0xe5965Ab5962eDc7477C8520243A95517CD252fA9 
+  l1CrossDomainMessenger()(address) = 0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1 
+  l1ERC721Bridge()(address) = 0x5a7749f83b81B301cAb5f48EB8516B986DAef23D 
+  l1StandardBridge()(address) = 0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1 
+  optimismPortal()(address) = 0xbEb5Fc579115071764c7423A4f12eDde41f106Ed 
+  optimismMintableERC20Factory()(address) = 0x75505a97BD334E7BD3C476893285569C4136Fa0F 
+  delayedWETH()(address) = 0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162 
+  resourceConfig()((uint32,uint8,uint8,uint32,uint32,uint128)) = (20000000 [2e7], 10, 8, 1000000000 [1e9], 1000000 [1e6], 340282366920938463463374607431768211455 [3.402e38]) 
+  feature ETH_LOCKBOX = true 
+  feature CUSTOM_GAS_TOKEN = false 
+  feature INTEROP = false 
+  slot0..=0x0000000000000000000000000000000000000000000000000000000000000003 impl=0x000000000000000000000000ade27248542c0f3e89b49e4eb76155e267f14377
+  -- portal 0xbEb5Fc579115071764c7423A4f12eDde41f106Ed version "6.1.0"  paused false  sysCfg 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290  asr 0x23B2C62946350F4246f9f9D027e071f0264FD113  lockbox 0x322b47Ff1FA8D5611F761e3E275C45B71b294D43  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000 l2Sender 0x000000000000000000000000000000000000dEaD  initV 3 
+     SC.pauseTimestamps[portal] = 0 
+  -- lockbox 0x322b47Ff1FA8D5611F761e3E275C45B71b294D43 version "2.0.0"  paused false  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  sysCfg(legacy) Error: server returned an error response: error code 3: execution reverted, data: "0x"  authPortal true  bal 182541.068255115703234018 pao 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A 
+     slots: 0=0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001 3=0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c
+     SC.pauseTimestamps[lockbox] = 0 
+  -- ASR 0x23B2C62946350F4246f9f9D027e071f0264FD113 version "4.0.0"  paused false  lockbox 0x322b47Ff1FA8D5611F761e3E275C45B71b294D43  sysCfg(legacy) Error: server returned an error response: error code 3: execution reverted, data: "0x"  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  dgf 0xe5965Ab5962eDc7477C8520243A95517CD252fA9  rgt 9 
+  -- DelayedWETH(sysCfg) 0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162 version "2.0.0"  lockbox 0x322b47Ff1FA8D5611F761e3E275C45B71b294D43  sysCfg(legacy) Error: could not decode output; did you specify the wrong function return data type?  Context:  config 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 20.662782000000000000 delay 302400 [3.024e5] 
+  -- l1CrossDomainMessenger 0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1 version "2.13.0"  paused false  sysCfg 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1StandardBridge 0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1 version "2.8.2"  paused false  sysCfg 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1ERC721Bridge 0x5a7749f83b81B301cAb5f48EB8516B986DAef23D version "2.9.1"  paused false  sysCfg 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+     L1CDM portal 0xbEb5Fc579115071764c7423A4f12eDde41f106Ed  other 0x4200000000000000000000000000000000000007 
+=== ink SystemConfig 0x62c0a111929fa32cec2f76adba54c16afb6e8364
+  version()(string) = "4.3.0" 
+  owner()(address) = 0x847B5c174615B1B7fDF770882256e2D3E95b9D92 
+  l2ChainId()(uint256) = 57073 [5.707e4] 
+  superchainConfig()(address) = 0x95703e0982140D16f8ebA6d158FccEde42f04a4C 
+  paused()(bool) = false 
+  guardian()(address) = 0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2 
+  batcherHash()(bytes32) = 0x0000000000000000000000006db6161fc5662450e801398bad62dd9921216b98 
+  unsafeBlockSigner()(address) = 0x7b322282DF45E537E5de76D60E1432Db3cF3F8E1 
+  gasLimit()(uint64) = 30000000 [3e7] 
+  overhead()(uint256) = 0 
+  scalar()(uint256) = 452312848583266388373324160190187140051835877600158453279134670023538250056 [4.523e74] 
+  basefeeScalar()(uint32) = 4424 
+  blobbasefeeScalar()(uint32) = 810831 [8.108e5] 
+  eip1559Denominator()(uint32) = 0 
+  eip1559Elasticity()(uint32) = 0 
+  operatorFeeScalar()(uint32) = 0 
+  operatorFeeConstant()(uint64) = 0 
+  daFootprintGasScalar()(uint16) = 0 
+  minBaseFee()(uint64) = 0 
+  startBlock()(uint256) = 21344310 [2.134e7] 
+  initVersion()(uint8) = 3 
+  minimumGasLimit()(uint64) = 21000000 [2.1e7] 
+  lastUsedOPCM()(address) = 0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f 
+  lastUsedOPCMVersion()(string) = "9.0.3" 
+  isCustomGasToken()(bool) = false 
+  proxyAdmin()(address) = 0xd56045E68956FCe2576E680c95a4750cf8241f79 
+  proxyAdminOwner()(address) = 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A 
+  disputeGameFactory()(address) = 0x10d7B35078d3baabB96Dd45a9143B94be65b12CD 
+  l1CrossDomainMessenger()(address) = 0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f 
+  l1ERC721Bridge()(address) = 0x661235a238B11191211fa95D4Dd9E423d521E0Be 
+  l1StandardBridge()(address) = 0x88FF1e5b602916615391F55854588EFcBB7663f0 
+  optimismPortal()(address) = 0x5d66C1782664115999C47c9fA5cd031f495D3e4F 
+  optimismMintableERC20Factory()(address) = 0xA8B389A82e088b164cD03230e900980CcED34d29 
+  delayedWETH()(address) = 0x57b4C29DAee99a28E6E86778b499361294c134eA 
+  resourceConfig()((uint32,uint8,uint8,uint32,uint32,uint128)) = (20000000 [2e7], 10, 8, 1000000000 [1e9], 1000000 [1e6], 340282366920938463463374607431768211455 [3.402e38]) 
+  feature ETH_LOCKBOX = true 
+  feature CUSTOM_GAS_TOKEN = false 
+  feature INTEROP = false 
+  slot0..=0x0000000000000000000000000000000000000000000000000000000000000003 impl=0x000000000000000000000000ade27248542c0f3e89b49e4eb76155e267f14377
+  -- portal 0x5d66C1782664115999C47c9fA5cd031f495D3e4F version "6.1.0"  paused false  sysCfg 0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364  asr 0xEe018bAf058227872540AC60eFbd38b023d9dAe2  lockbox 0xbd4AbB321138e8Eddc399cE64E66451294325a14  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000 l2Sender 0x000000000000000000000000000000000000dEaD  initV 3 
+     SC.pauseTimestamps[portal] = 0 
+  -- lockbox 0xbd4AbB321138e8Eddc399cE64E66451294325a14 version "2.0.0"  paused false  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  sysCfg(legacy) Error: server returned an error response: error code 3: execution reverted, data: "0x"  authPortal true  bal 23088.758336628210326229 pao 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A 
+     slots: 0=0x0000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640001 3=0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c
+     SC.pauseTimestamps[lockbox] = 0 
+  -- ASR 0xEe018bAf058227872540AC60eFbd38b023d9dAe2 version "4.0.0"  paused false  lockbox 0xbd4AbB321138e8Eddc399cE64E66451294325a14  sysCfg(legacy) Error: server returned an error response: error code 3: execution reverted, data: "0x"  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  dgf 0x10d7B35078d3baabB96Dd45a9143B94be65b12CD  rgt 9 
+  -- DelayedWETH(sysCfg) 0x57b4C29DAee99a28E6E86778b499361294c134eA version "2.0.0"  lockbox 0xbd4AbB321138e8Eddc399cE64E66451294325a14  sysCfg(legacy) Error: could not decode output; did you specify the wrong function return data type?  Context:  config 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 5.710376000000000000 delay 302400 [3.024e5] 
+  -- l1CrossDomainMessenger 0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f version "2.13.0"  paused false  sysCfg 0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1StandardBridge 0x88FF1e5b602916615391F55854588EFcBB7663f0 version "2.8.2"  paused false  sysCfg 0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1ERC721Bridge 0x661235a238B11191211fa95D4Dd9E423d521E0Be version "2.9.1"  paused false  sysCfg 0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+     L1CDM portal 0x5d66C1782664115999C47c9fA5cd031f495D3e4F  other 0x4200000000000000000000000000000000000007 
+=== soneium SystemConfig 0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3
+  version()(string) = "4.3.0" 
+  owner()(address) = 0x509182eC226b3B71D36A3255A80EF0b1A9D43033 
+  l2ChainId()(uint256) = 1868 
+  superchainConfig()(address) = 0x95703e0982140D16f8ebA6d158FccEde42f04a4C 
+  paused()(bool) = false 
+  guardian()(address) = 0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2 
+  batcherHash()(bytes32) = 0x0000000000000000000000006776be80dbada6a02b5f2095cf13734ac303b8d1 
+  unsafeBlockSigner()(address) = 0x7c2Bd59ee2a2C7391c9A240132f26071e9546262 
+  gasLimit()(uint64) = 40000000 [4e7] 
+  overhead()(uint256) = 0 
+  scalar()(uint256) = 452312848583266388373324160190187140051835877600158453279137802119848928776 [4.523e74] 
+  basefeeScalar()(uint32) = 9736 
+  blobbasefeeScalar()(uint32) = 1540079 [1.54e6] 
+  eip1559Denominator()(uint32) = 250 
+  eip1559Elasticity()(uint32) = 10 
+  operatorFeeScalar()(uint32) = 0 
+  operatorFeeConstant()(uint64) = 0 
+  daFootprintGasScalar()(uint16) = 0 
+  minBaseFee()(uint64) = 12000000 [1.2e7] 
+  startBlock()(uint256) = 21314185 [2.131e7] 
+  initVersion()(uint8) = 3 
+  minimumGasLimit()(uint64) = 21000000 [2.1e7] 
+  lastUsedOPCM()(address) = 0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f 
+  lastUsedOPCMVersion()(string) = "9.0.3" 
+  isCustomGasToken()(bool) = false 
+  proxyAdmin()(address) = 0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a 
+  proxyAdminOwner()(address) = 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A 
+  disputeGameFactory()(address) = 0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0 
+  l1CrossDomainMessenger()(address) = 0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f 
+  l1ERC721Bridge()(address) = 0x5933e323bE8896DfaCd1cD671442F27dAA10a053 
+  l1StandardBridge()(address) = 0xeb9bf100225c214Efc3E7C651ebbaDcF85177607 
+  optimismPortal()(address) = 0x88e529A6ccd302c948689Cd5156C83D4614FAE92 
+  optimismMintableERC20Factory()(address) = 0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F 
+  delayedWETH()(address) = 0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47 
+  resourceConfig()((uint32,uint8,uint8,uint32,uint32,uint128)) = (20000000 [2e7], 10, 8, 1000000000 [1e9], 1000000 [1e6], 340282366920938463463374607431768211455 [3.402e38]) 
+  feature ETH_LOCKBOX = true 
+  feature CUSTOM_GAS_TOKEN = false 
+  feature INTEROP = false 
+  slot0..=0x0000000000000000000000000000000000000000000000000000000000000003 impl=0x000000000000000000000000ade27248542c0f3e89b49e4eb76155e267f14377
+  -- portal 0x88e529A6ccd302c948689Cd5156C83D4614FAE92 version "6.1.0"  paused false  sysCfg 0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3  asr 0x4890928941e62e273dA359374b105F803329F473  lockbox 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000 l2Sender 0x000000000000000000000000000000000000dEaD  initV 3 
+     SC.pauseTimestamps[portal] = 0 
+  -- lockbox 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31 version "2.0.0"  paused false  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  sysCfg(legacy) Error: server returned an error response: error code 3: execution reverted, data: "0x"  authPortal true  bal 2195.560152606106316659 pao 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A 
+     slots: 0=0x000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30001 3=0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c
+     SC.pauseTimestamps[lockbox] = 0 
+  -- ASR 0x4890928941e62e273dA359374b105F803329F473 version "4.0.0"  paused false  lockbox 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31  sysCfg(legacy) Error: server returned an error response: error code 3: execution reverted, data: "0x"  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  dgf 0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0  rgt 5 
+  -- DelayedWETH(sysCfg) 0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47 version "2.0.0"  lockbox 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31  sysCfg(legacy) Error: could not decode output; did you specify the wrong function return data type?  Context:  config 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000 delay 302400 [3.024e5] 
+  -- l1CrossDomainMessenger 0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f version "2.13.0"  paused false  sysCfg 0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1StandardBridge 0xeb9bf100225c214Efc3E7C651ebbaDcF85177607 version "2.8.2"  paused false  sysCfg 0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1ERC721Bridge 0x5933e323bE8896DfaCd1cD671442F27dAA10a053 version "2.9.1"  paused false  sysCfg 0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+     L1CDM portal 0x88e529A6ccd302c948689Cd5156C83D4614FAE92  other 0x4200000000000000000000000000000000000007 
+=== unichain SystemConfig 0xc407398d063f942febbcc6f80a156b47f3f1bda6
+  version()(string) = "4.3.0" 
+  owner()(address) = 0x847B5c174615B1B7fDF770882256e2D3E95b9D92 
+  l2ChainId()(uint256) = 130 
+  superchainConfig()(address) = 0x95703e0982140D16f8ebA6d158FccEde42f04a4C 
+  paused()(bool) = false 
+  guardian()(address) = 0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2 
+  batcherHash()(bytes32) = 0x0000000000000000000000009ef649e8746cc47a17708a5e86b2d66c7f6c00d1 
+  unsafeBlockSigner()(address) = 0xFaACA0A10e4a23C5E01485DE07767547d4D8056D 
+  gasLimit()(uint64) = 60000000 [6e7] 
+  overhead()(uint256) = 0 
+  scalar()(uint256) = 452312848583266388373324160190187140051835877600158453279135053001477064656 [4.523e74] 
+  basefeeScalar()(uint32) = 2000 
+  blobbasefeeScalar()(uint32) = 900000 [9e5] 
+  eip1559Denominator()(uint32) = 250 
+  eip1559Elasticity()(uint32) = 12 
+  operatorFeeScalar()(uint32) = 0 
+  operatorFeeConstant()(uint64) = 0 
+  daFootprintGasScalar()(uint16) = 0 
+  minBaseFee()(uint64) = 500000 [5e5] 
+  startBlock()(uint256) = 21116363 [2.111e7] 
+  initVersion()(uint8) = 3 
+  minimumGasLimit()(uint64) = 21000000 [2.1e7] 
+  lastUsedOPCM()(address) = 0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f 
+  lastUsedOPCMVersion()(string) = "9.0.3" 
+  isCustomGasToken()(bool) = false 
+  proxyAdmin()(address) = 0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4 
+  proxyAdminOwner()(address) = 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A 
+  disputeGameFactory()(address) = 0x2F12d621a16e2d3285929C9996f478508951dFe4 
+  l1CrossDomainMessenger()(address) = 0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6 
+  l1ERC721Bridge()(address) = 0xD04D0D87E0bd4D2E50286760a3EF323FeA6849Cf 
+  l1StandardBridge()(address) = 0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA 
+  optimismPortal()(address) = 0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2 
+  optimismMintableERC20Factory()(address) = 0xA2B597EaeAcb6F627e088cbEaD319e934ED5edad 
+  delayedWETH()(address) = 0x74ad145aC900F1DD5551F0C9E143314DC4022FCf 
+  resourceConfig()((uint32,uint8,uint8,uint32,uint32,uint128)) = (20000000 [2e7], 10, 8, 1000000000 [1e9], 1000000 [1e6], 340282366920938463463374607431768211455 [3.402e38]) 
+  feature ETH_LOCKBOX = true 
+  feature CUSTOM_GAS_TOKEN = false 
+  feature INTEROP = false 
+  slot0..=0x0000000000000000000000000000000000000000000000000000000000000003 impl=0x000000000000000000000000ade27248542c0f3e89b49e4eb76155e267f14377
+  -- portal 0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2 version "6.1.0"  paused false  sysCfg 0xc407398d063f942feBbcC6F80a156b47F3f1BDA6  asr 0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9  lockbox 0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000 l2Sender 0x000000000000000000000000000000000000dEaD  initV 3 
+     SC.pauseTimestamps[portal] = 0 
+  -- lockbox 0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5 version "2.0.0"  paused false  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  sysCfg(legacy) Error: server returned an error response: error code 3: execution reverted, data: "0x"  authPortal true  bal 18266.157945407766718622 pao 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A 
+     slots: 0=0x00000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda60001 3=0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c
+     SC.pauseTimestamps[lockbox] = 0 
+  -- ASR 0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9 version "4.0.0"  paused false  lockbox 0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5  sysCfg(legacy) Error: server returned an error response: error code 3: execution reverted, data: "0x"  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  dgf 0x2F12d621a16e2d3285929C9996f478508951dFe4  rgt 9 
+  -- DelayedWETH(sysCfg) 0x74ad145aC900F1DD5551F0C9E143314DC4022FCf version "2.0.0"  lockbox 0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5  sysCfg(legacy) Error: could not decode output; did you specify the wrong function return data type?  Context:  config 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 21.419797000000000000 delay 302400 [3.024e5] 
+  -- l1CrossDomainMessenger 0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6 version "2.13.0"  paused false  sysCfg 0xc407398d063f942feBbcC6F80a156b47F3f1BDA6  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1StandardBridge 0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA version "2.8.2"  paused false  sysCfg 0xc407398d063f942feBbcC6F80a156b47F3f1BDA6  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+  -- l1ERC721Bridge 0xD04D0D87E0bd4D2E50286760a3EF323FeA6849Cf version "2.9.1"  paused false  sysCfg 0xc407398d063f942feBbcC6F80a156b47F3f1BDA6  sc 0x95703e0982140D16f8ebA6d158FccEde42f04a4C  bal 0.000000000000000000
+     L1CDM portal 0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2  other 0x4200000000000000000000000000000000000007 
