@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.25;
 
-import { Test } from "forge-std/Test.sol";
+import {Test} from "forge-std/Test.sol";
 
 interface IPortal25 {
     function version() external view returns (string memory);
@@ -46,7 +46,9 @@ contract UnregisteredGame25 {
         wasRespectedGameTypeWhenCreated = _respected;
     }
 
-    function setStatus(uint8 _status) external { status = _status; }
+    function setStatus(uint8 _status) external {
+        status = _status;
+    }
 
     function gameData() external pure returns (uint32 gameType, bytes32 rootClaim, bytes memory extraData) {
         return (9, bytes32(uint256(0x2525)), hex"2525");
@@ -61,24 +63,20 @@ contract EmptyFactory25 {
 
 contract ProofLifecycleTest is Test {
     IPortal25 internal constant PORTAL = IPortal25(0xbEb5Fc579115071764c7423A4f12eDde41f106Ed);
-    IAnchorStateRegistry25 internal constant ASR =
-        IAnchorStateRegistry25(0x23B2C62946350F4246f9f9D027e071f0264FD113);
-    ISuperchainConfig25 internal constant SUPERCHAIN =
-        ISuperchainConfig25(0x95703e0982140D16f8ebA6d158FccEde42f04a4C);
+    IAnchorStateRegistry25 internal constant ASR = IAnchorStateRegistry25(0x23B2C62946350F4246f9f9D027e071f0264FD113);
+    ISuperchainConfig25 internal constant SUPERCHAIN = ISuperchainConfig25(0x95703e0982140D16f8ebA6d158FccEde42f04a4C);
 
     address internal constant LOCKBOX = 0x322b47Ff1FA8D5611F761e3E275C45B71b294D43;
     address internal constant GUARDIAN = 0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2;
 
     // Proven before U21 and still IN_PROGRESS at N.
-    bytes32 internal constant PRE_N_HASH =
-        0x8df3d52a499b3881a91e2a38a6eb46d136d7b47d5abb52685965acc39b1df241;
+    bytes32 internal constant PRE_N_HASH = 0x8df3d52a499b3881a91e2a38a6eb46d136d7b47d5abb52685965acc39b1df241;
     address internal constant PRE_N_SUBMITTER = 0x6A9C2449c32779F89d0CcAfd746152e237c1BDf2;
     address internal constant PRE_N_GAME = 0xbEc6373FA5B74517350D9CB358a5e7D9F3DaB356;
     uint64 internal constant PRE_N_TIMESTAMP = 1_794_853_991;
 
     // Proven before U21 and finalized under v6.1.0 at block 0x1935326.
-    bytes32 internal constant CROSS_VERSION_HASH =
-        0x6d7c43da9a7a7c3ce288cf3c41cbc55644ac6c5128696d4e8ecbaf1243e74af4;
+    bytes32 internal constant CROSS_VERSION_HASH = 0x6d7c43da9a7a7c3ce288cf3c41cbc55644ac6c5128696d4e8ecbaf1243e74af4;
     address internal constant CROSS_VERSION_SUBMITTER = 0xBF84721Cc6A0D4895d0f186498C7382c489878E3;
     address internal constant CROSS_VERSION_GAME = 0xFd0C8dD55d270916fb1097C27D217A06162537D6;
     uint64 internal constant CROSS_VERSION_TIMESTAMP = 1_794_231_107;
@@ -95,9 +93,8 @@ contract ProofLifecycleTest is Test {
         assertEq(preTimestamp, PRE_N_TIMESTAMP);
 
         // v8 has no delete selector.
-        (bool preDelete,) = address(PORTAL).call(
-            abi.encodeCall(IPortal25.deleteProvenWithdrawal, (PRE_N_HASH, PRE_N_SUBMITTER))
-        );
+        (bool preDelete,) =
+            address(PORTAL).call(abi.encodeCall(IPortal25.deleteProvenWithdrawal, (PRE_N_HASH, PRE_N_SUBMITTER)));
         assertFalse(preDelete);
 
         vm.createSelectFork("l1n");
@@ -216,9 +213,7 @@ contract ProofLifecycleTest is Test {
         ASR.blacklistDisputeGame(noCode);
         assertTrue(ASR.isGameBlacklisted(noCode));
 
-        (bool ok,) = address(PORTAL).call(
-            abi.encodeCall(IPortal25.deleteProvenWithdrawal, (withdrawalHash, submitter))
-        );
+        (bool ok,) = address(PORTAL).call(abi.encodeCall(IPortal25.deleteProvenWithdrawal, (withdrawalHash, submitter)));
         assertFalse(ok);
         (address storedGame, uint64 timestamp) = PORTAL.provenWithdrawals(withdrawalHash, submitter);
         assertEq(storedGame, noCode);
@@ -228,8 +223,7 @@ contract ProofLifecycleTest is Test {
     function test_crossVersionProofFinalizedUnderV9() external {
         vm.createSelectFork("l1n");
         assertEq(PORTAL.version(), "6.1.0");
-        (address gameAtN, uint64 timestampAtN) =
-            PORTAL.provenWithdrawals(CROSS_VERSION_HASH, CROSS_VERSION_SUBMITTER);
+        (address gameAtN, uint64 timestampAtN) = PORTAL.provenWithdrawals(CROSS_VERSION_HASH, CROSS_VERSION_SUBMITTER);
         assertEq(gameAtN, CROSS_VERSION_GAME);
         assertEq(timestampAtN, CROSS_VERSION_TIMESTAMP);
         assertLt(timestampAtN, U21_TIMESTAMP);

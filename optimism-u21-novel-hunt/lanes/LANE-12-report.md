@@ -253,7 +253,7 @@ same asymmetry; the numbers here are new).
 1. Under EIP-8037 a value transfer to an empty account costs 183,600 state gas inside the CALL;
    without the reservation the callee could receive less than `minGas`.
 2. Siblings `SafeCall.call` / `send` do not reserve (the messenger covers it in its own reserve,
-   comment v9:src/libraries/GasConstants.sol:37-41).
+   comment v9:src/libraries/GasConstants.sol:39-43).
 3. Before the CALL.
 4. Only the portal uses `callWithMinGas`.
 5. `codehash` is read at call time for the call being made — correct.
@@ -394,7 +394,7 @@ Rejected: REJ-1201 … REJ-1209 (see files).
 
 1. Amsterdam before an L2 messenger upgrade: with the L2 still budgeting 310,160 for an empty
    message, a value transfer to a new account needs ~391k on L1 by the source's own measurement
-   (v9:src/libraries/GasConstants.sol:37-41). The failure mode is a revert (retry with more gas) or
+   (v9:src/libraries/GasConstants.sol:39-43). The failure mode is a revert (retry with more gas) or
    a replayable failed message, never a loss — worth one test on an Amsterdam-rules EVM if one is
    available.
 2. `ValidationInput` -> `ValidationInputDev` mapping (SCKDG-40 false failure): is any tooling
