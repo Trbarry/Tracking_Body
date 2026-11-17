@@ -1,0 +1,30 @@
+[package]
+name = "t4-diff"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "t4-diff"
+path = "../common/main.rs"
+
+[dependencies]
+kona-protocol = { path = "/home/user/u21-work/T4/src-v1.7.0/rust/kona/crates/protocol/protocol", default-features = false, features = ["std"] }
+kona-genesis = { path = "/home/user/u21-work/T4/src-v1.7.0/rust/kona/crates/protocol/genesis", default-features = false, features = ["std"] }
+kona-registry = { path = "/home/user/u21-work/T4/src-v1.7.0/rust/kona/crates/protocol/registry", default-features = false }
+kona-interop = { path = "/home/user/u21-work/T4/src-v1.7.0/rust/kona/crates/protocol/interop", default-features = false, features = ["std"] }
+kona-derive = { path = "/home/user/u21-work/T4/src-v1.7.0/rust/kona/crates/protocol/derive", default-features = false, features = ["test-utils"] }
+op-alloy-consensus = { path = "/home/user/u21-work/T4/src-v1.7.0/rust/op-alloy/crates/consensus", default-features = false, features = ["std", "k256", "serde"] }
+kona-mpt = { path = "/home/user/u21-work/T4/src-v1.7.0/rust/kona/crates/proof/mpt", default-features = false }
+op-alloy-rpc-types-engine = { path = "/home/user/u21-work/T4/src-v1.7.0/rust/op-alloy/crates/rpc-types-engine", default-features = false, features = ["std"] }
+alloy-primitives = { version = "1", default-features = false, features = ["std"] }
+alloy-consensus = { version = "2", default-features = false, features = ["std", "serde"] }
+alloy-eips = { version = "2", default-features = false, features = ["std"] }
+alloy-rlp = { version = "0.3", default-features = false }
+serde_json = { version = "1" }
+
+[profile.release]
+opt-level = 1
+debug = false
+incremental = false
+
+[workspace]

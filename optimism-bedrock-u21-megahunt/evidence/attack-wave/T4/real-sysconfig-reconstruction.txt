@@ -1,0 +1,2 @@
+parent blocks 1023 kona7==kona9 1023 kona==op-node PayloadToSystemConfig 1023 header hash re-derived 1023 tx0 hash re-derived 1023 errors 0
+example {"batcher": "0x6887246668a3b87f54deb3b94ba47a6f63f32985", "da_footprint": 400, "eip1559": "000000fa00000002", "gas_limit": 40000000, "hash_ok": true, "id": "range:159634384", "min_base_fee": 0, "operator_fee": "0/0", "overhead": "0x0000000000000000000000000000000000000000000000000000000000000000", "scalar": "0x010000000000000000000000000000000000000000000000000f79c50000146b", "tx_ok": true}

@@ -1,0 +1,9 @@
+116	[none]	trailing data after padded opaqueData: kona accepts, op-node rejects (length check)
+58	[none]	padding bytes non-zero: kona rejects (InvalidOpaqueDataPadding), op-node ignores padding
+55	[none]	mint >= 2^128: kona keeps only the low 128 bits (u128), op-node keeps the full big.Int mint
+54	[priv]	bedrock-version scalar with non-zero padding: op-node baseFeeScalar=MaxUint32 (spec), kona truncates to bytes 28..32 — dead post-Ecotone on both update paths
+51	[none]	non-zero high 12 bytes in from topic: kona rejects (FromDecode), op-node truncates
+19	[none]	L1 blob base fee >= 2^128 (excess blob gas >= ~1e9): kona saturates u128, op-node exact big.Int / >2^256 error
+3	[none]	Holocene activation block: kona emits zero eip1559 params, op-node forwards SystemConfig value (zero on mainnet at activation)
+2	[none]	pre-Cancun L1 header carrying blob fields (cannot exist): op-node panics in CalcBlobFee, kona computes
+UNEXPLAINED 0

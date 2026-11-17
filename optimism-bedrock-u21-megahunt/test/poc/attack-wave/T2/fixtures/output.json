@@ -1,0 +1,19 @@
+{
+ "gameIndex": 21388,
+ "game": "0x668513Abb2B32A988f9F4AaDa89ca48A974F8b65",
+ "l2Block": 159653251,
+ "version": "0x0000000000000000000000000000000000000000000000000000000000000000",
+ "stateRoot": "0x845e11b79c2b90d87bffb89e695ba6e33dd6ea717cae7ed7e9970eec40a0cb98",
+ "messagePasserStorageRoot": "0x3d89411d2dc3fae78a27b7ded689d8495c79ef79ac9214ad84586457b87cbaab",
+ "latestBlockhash": "0x5abed0543588bf6fa3f922cc85ceaad145f771e66e7e61e0c05c439c9df05c20",
+ "outputRoot": "0x05bfbbc4c8ee97467ddca915bf6704eaa7fc1580473cd2ca22ddda355bd64111",
+ "ids": [
+  "ovm1_relayed_600ETH",
+  "ovm1_unrelayed_25ETH",
+  "ovm2_relayed_35555ETH",
+  "ovm2_unrelayed",
+  "bedrock_regolith_messenger",
+  "ecotone_direct_eoa",
+  "isthmus_direct_feevault"
+ ]
+}

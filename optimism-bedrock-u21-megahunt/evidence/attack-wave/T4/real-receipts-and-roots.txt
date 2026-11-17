@@ -1,0 +1,9 @@
+OP Mainnet blocks 277 receipts 9607 by type {126: 330, 0: 1305, 2: 7970, 4: 2} deposit receipts 330 (incl. L1-info) failed deposits 0
+kona-v1.7.0 == header receiptsRoot 277 / 277
+kona-v1.9.0 == header receiptsRoot 277 / 277
+op-node v9 == header receiptsRoot 277 / 277
+
+game:0x675e956b1912df79108408ca524fb37810500d10:ts1794868743:l2159634983 rootClaim 0x3c35e3118a9795065e6283c0b2efb02330e19e1c6ee96842a8d0088314affda7 super-root(kona v1.7.0)==claim True (kona v1.9.0) True (op-node v9) True
+game:0x2f55f48e8318a65d374f4113583279fbac8d86fd:ts1794772435:l2159586829 rootClaim 0xf193a51e29ae04a209454c24ceb4d7cf4252ff6d5121f0a5355567a8fc5cdcc2 super-root(kona v1.7.0)==claim True (kona v1.9.0) True (op-node v9) True
+game:0x5d62795e45fca7bdf9c20a26464e1bb4b4f369ed:ts1794620587:l2159510905 rootClaim 0xf303ca463a66848a587fc0370b261dac061ac2cf70a6d46a260cea7445c69e6b super-root(kona v1.7.0)==claim True (kona v1.9.0) True (op-node v9) True
+game:0x42d0c7b4bf515bf95017d686fdf4d56d0d8ce9cb:ts1794627987:l2159514605 rootClaim 0xc58f835553d264bf047e045675f35e26aa070bb28f6839ed695c005f2a0c6313 super-root(kona v1.7.0)==claim True (kona v1.9.0) True (op-node v9) True

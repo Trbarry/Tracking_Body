@@ -1,0 +1,13 @@
+[PASS] test_B1_fakeL2Tokens_cannotReleaseHonestEscrow() (gas: 6040356)
+[PASS] test_B2_perPairBarrier_isExact_selfFundedOnly() (gas: 3788640)
+[PASS] test_B3_l1Mintable_remoteIdentityBound() (gas: 2892457)
+[PASS] test_C1_erc721_identityAndRecipient() (gas: 4213054)
+[PASS] test_C2_realEscrow_flags_and_auth() (gas: 49636)
+[PASS] test_C3_pauseSource_consistent() (gas: 93566)
+  systemConfig: 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290
+[PASS] test_D1_u21_differential_sameOutcomes() (gas: 14148544)
+  L1CDM: 2.11.1
+  L1CDM: 2.13.0
+[PASS] test_D2_legacyFormat_prePost_sameOutcome() (gas: 2600236)
+[PASS] test_F1_factory_identity_cannotBeRebound() (gas: 11281524)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 9.21s (9.16s CPU time)

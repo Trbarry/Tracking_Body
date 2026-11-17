@@ -1,0 +1,31 @@
+{
+ "OP": [
+  {
+   "local": "0x1287c312ba284ddbc6f7506f38382428174cab14",
+   "remote": "0xf655c8567e0f213e6c634cd2a68d992152161dc6",
+   "block": 21078232,
+   "tx": "0xd9d5362b6a3bfe2a93769f29670b4fc6e2f5e9fc2ddd4cff71813aa4cf4e042b"
+  },
+  {
+   "local": "0x8c21c7a7ec0190636ef181a50c2e30c55c263ed3",
+   "remote": "0x6e58089d8e8f664823d26454f49a5a0f2ff697fe",
+   "block": 22213307,
+   "tx": "0x8bab6e64f8dee4764ceb52b3b8e1f3f3e6ed24ad5a1efc592dd4a32fc5d908ce"
+  },
+  {
+   "local": "0x19638baef31dab2774f857d1a50194e41b1e71b2",
+   "remote": "0x8c21c7a7ec0190636ef181a50c2e30c55c263ed3",
+   "block": 22213478,
+   "tx": "0x780a466567b70e8fda0cbea4f5a43553f85710349ccb4646599c8ae2868b1bce"
+  },
+  {
+   "local": "0xc9b2578df7f96323927ef5d71e100a847fc998db",
+   "remote": "0xe9e51a0bfa37fcb2c98dd998e5856aa0e1ea7568",
+   "block": 23367231,
+   "tx": "0x0f868b223836b885d4cc5b7e85013dcceec3be302b26121d5cf5777e5e446a10"
+  }
+ ],
+ "Ink": [],
+ "Soneium": [],
+ "Unichain": []
+}
