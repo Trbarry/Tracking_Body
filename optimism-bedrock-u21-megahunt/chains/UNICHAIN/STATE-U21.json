@@ -1,0 +1,1596 @@
+{
+ "chain": "UNICHAIN",
+ "pinnedBlock": 26433900,
+ "sources": [
+  "PASS A POST_UPGRADE_STATE_26433900.json (getters, raw slots)",
+  "F5 census / stage2 / root verification"
+ ],
+ "contracts": {
+  "SystemConfig": {
+   "proxy": "0xc407398d063f942febbcc6f80a156b47f3f1bda6",
+   "implementation": "0xade27248542c0f3e89b49e4eb76155e267f14377",
+   "version": "\"4.3.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"4.3.0\"",
+    "owner()(address)": "0x847B5c174615B1B7fDF770882256e2D3E95b9D92",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "overhead()(uint256)": "0",
+    "scalar()(uint256)": "452312848583266388373324160190187140051835877600158453279135053001477064656 [4.523e74]",
+    "batcherHash()(bytes32)": "0x0000000000000000000000009ef649e8746cc47a17708a5e86b2d66c7f6c00d1",
+    "gasLimit()(uint64)": "60000000 [6e7]",
+    "basefeeScalar()(uint32)": "2000",
+    "blobbasefeeScalar()(uint32)": "900000 [9e5]",
+    "eip1559Denominator()(uint32)": "250",
+    "eip1559Elasticity()(uint32)": "12",
+    "operatorFeeScalar()(uint32)": "0",
+    "operatorFeeConstant()(uint64)": "0",
+    "daFootprintGasScalar()(uint16)": "0",
+    "minBaseFee()(uint64)": "500000 [5e5]",
+    "l2ChainId()(uint256)": "130",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "unsafeBlockSigner()(address)": "0xFaACA0A10e4a23C5E01485DE07767547d4D8056D",
+    "l1CrossDomainMessenger()(address)": "0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6",
+    "l1ERC721Bridge()(address)": "0xD04D0D87E0bd4D2E50286760a3EF323FeA6849Cf",
+    "l1StandardBridge()(address)": "0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA",
+    "optimismPortal()(address)": "0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2",
+    "optimismMintableERC20Factory()(address)": "0xA2B597EaeAcb6F627e088cbEaD319e934ED5edad",
+    "delayedWETH()(address)": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+    "disputeGameFactory()(address)": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+    "lastUsedOPCM()(address)": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+    "lastUsedOPCMVersion()(string)": "\"9.0.3\"",
+    "startBlock()(uint256)": "21116363 [2.111e7]",
+    "paused()(bool)": "false",
+    "guardian()(address)": "0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2",
+    "isCustomGasToken()(bool)": "false",
+    "resourceConfig()((uint32,uint8,uint8,uint32,uint32,uint128))": "(20000000 [2e7], 10, 8, 1000000000 [1e9], 1000000 [1e6], 340282366920938463463374607431768211455 [3.402e38])",
+    "minimumGasLimit()(uint64)": "21000000 [2.1e7]",
+    "batchInbox()(address)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+    "isFeatureEnabled(bytes32)(bool) 0x4554485f4c4f434b424f58000000000000000000000000000000000000000000": "true",
+    "isFeatureEnabled(bytes32)(bool) 0x494e5445524f5000000000000000000000000000000000000000000000000000": "false",
+    "isFeatureEnabled(bytes32)(bool) 0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000": "false"
+   }
+  },
+  "OptimismPortal2": {
+   "proxy": "0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2",
+   "implementation": "0xb20b23af6071405c37ddda0c0640e8ebb7899645",
+   "version": "\"6.1.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"6.1.0\"",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "l2Sender()(address)": "0x000000000000000000000000000000000000dEaD",
+    "systemConfig()(address)": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+    "anchorStateRegistry()(address)": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+    "ethLockbox()(address)": "0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5",
+    "disputeGameFactory()(address)": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "guardian()(address)": "0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2",
+    "paused()(bool)": "false",
+    "proofMaturityDelaySeconds()(uint256)": "604800 [6.048e5]",
+    "disputeGameFinalityDelaySeconds()(uint256)": "302400 [3.024e5]",
+    "respectedGameType()(uint32)": "9",
+    "respectedGameTypeUpdatedAt()(uint64)": "1753380731 [1.753e9]",
+    "params()(uint128,uint64,uint64)": "1000000000 [1e9]\n514422 [5.144e5]\n26433755 [2.643e7]"
+   }
+  },
+  "ETHLockbox": {
+   "proxy": "0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5",
+   "implementation": "0xdf75e6b07e98873e36ba5c05508f80c1454e0afe",
+   "version": "\"2.0.0\"",
+   "ethBalanceEther": 18266.157945407766,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.0.0\"",
+    "initVersion()(uint8)": "1",
+    "proxyAdmin()(address)": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "systemConfig()(address)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "guardian()(address)": "0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2",
+    "paused()(bool)": "false",
+    "authorizedPortals(address)(bool) 0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2": "true",
+    "authorizedLockboxes(address)(bool) 0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5": "false"
+   }
+  },
+  "AnchorStateRegistry": {
+   "proxy": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+   "implementation": "0x2b27299c577d4720100e2735b652444dcea652d0",
+   "version": "\"4.0.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"4.0.0\"",
+    "initVersion()(uint8)": "1",
+    "proxyAdmin()(address)": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "systemConfig()(address)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+    "ethLockbox()(address)": "0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "paused()(bool)": "false",
+    "disputeGameFactory()(address)": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+    "anchorGame()(address)": "0x944a783a2f1F187F0D475Df8aCf09c9463bCAfD5",
+    "getStartingAnchorRoot()((bytes32,uint256))": "(0xaf64a866304eb17696278d26290bb172aa941eac3370d9bc8bd313d492beb7d3, 1788848651 [1.788e9])",
+    "getAnchorRoot()(bytes32,uint256)": "0xcbdfd78473ee1cf5dba9afd8a6b1c9163084cee7cc9baf35dcbe99d8a92dfd31\n1794300387 [1.794e9]",
+    "respectedGameType()(uint32)": "9",
+    "retirementTimestamp()(uint64)": "1753380731 [1.753e9]",
+    "disputeGameFinalityDelaySeconds()(uint256)": "302400 [3.024e5]"
+   }
+  },
+  "DisputeGameFactory": {
+   "proxy": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+   "implementation": "0x72b971717e088b59f26d4236be222adb6acd393b",
+   "version": "\"1.6.1\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"1.6.1\"",
+    "owner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "initVersion()(uint8)": "1",
+    "proxyAdmin()(address)": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "gameCount()(uint256)": "17691 [1.769e4]",
+    "gameImpls(uint32)(address) 0": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 1": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 2": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 3": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 4": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 5": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+    "gameImpls(uint32)(address) 6": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 7": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 8": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 9": "0x19AF533Cc2A2A55786DCB8672aA5717e64213208",
+    "gameImpls(uint32)(address) 10": "0x0000000000000000000000000000000000000000",
+    "initBonds(uint32)(uint256) 0": "0",
+    "initBonds(uint32)(uint256) 1": "0",
+    "initBonds(uint32)(uint256) 2": "0",
+    "initBonds(uint32)(uint256) 3": "0",
+    "initBonds(uint32)(uint256) 4": "0",
+    "initBonds(uint32)(uint256) 5": "0",
+    "initBonds(uint32)(uint256) 6": "0",
+    "initBonds(uint32)(uint256) 7": "0",
+    "initBonds(uint32)(uint256) 8": "0",
+    "initBonds(uint32)(uint256) 9": "80000000000000000 [8e16]",
+    "initBonds(uint32)(uint256) 10": "0",
+    "gameArgs(uint32)(bytes) 0": "0x",
+    "gameArgs(uint32)(bytes) 1": "0x",
+    "gameArgs(uint32)(bytes) 2": "0x",
+    "gameArgs(uint32)(bytes) 3": "0x",
+    "gameArgs(uint32)(bytes) 4": "0x",
+    "gameArgs(uint32)(bytes) 5": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff986b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "gameArgs(uint32)(bytes) 6": "0x",
+    "gameArgs(uint32)(bytes) 7": "0x",
+    "gameArgs(uint32)(bytes) 8": "0x",
+    "gameArgs(uint32)(bytes) 9": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfa27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff974ad145ac900f1dd5551f0c9e143314dc4022fcf0000000000000000000000000000000000000000000000000000000000000000",
+    "gameArgs(uint32)(bytes) 10": "0x"
+   }
+  },
+  "DelayedWETH": {
+   "proxy": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+   "implementation": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+   "version": "\"2.0.0\"",
+   "ethBalanceEther": 21.419797,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.0.0\"",
+    "initVersion()(uint8)": "1",
+    "proxyAdmin()(address)": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "systemConfig()(address)": "REVERT: - ABI decoding failed: buffer overrun while deserializing",
+    "ethLockbox()(address)": "0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5",
+    "config()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "delay()(uint256)": "302400 [3.024e5]",
+    "totalSupply()(uint256)": "21419797000000000000 [2.141e19]"
+   }
+  },
+  "L1CrossDomainMessenger": {
+   "proxy": "0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6",
+   "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+   "version": "\"2.13.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.13.0\"",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "portal()(address)": "0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2",
+    "PORTAL()(address)": "0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2",
+    "systemConfig()(address)": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "otherMessenger()(address)": "0x4200000000000000000000000000000000000007",
+    "OTHER_MESSENGER()(address)": "0x4200000000000000000000000000000000000007",
+    "messageNonce()(uint256)": "1766847064778384329583297500742918515827483896875618958121606201292668037 [1.766e72]",
+    "paused()(bool)": "false"
+   }
+  },
+  "L1StandardBridge": {
+   "proxy": "0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA",
+   "implementation": "0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891",
+   "version": "\"2.8.2\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.8.2\"",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "messenger()(address)": "0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6",
+    "otherBridge()(address)": "0x4200000000000000000000000000000000000010",
+    "systemConfig()(address)": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "paused()(bool)": "false"
+   }
+  },
+  "L1ERC721Bridge": {
+   "proxy": "0xD04D0D87E0bd4D2E50286760a3EF323FeA6849Cf",
+   "implementation": "0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e",
+   "version": "\"2.9.1\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.9.1\"",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "messenger()(address)": "0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6",
+    "otherBridge()(address)": "0x4200000000000000000000000000000000000014",
+    "systemConfig()(address)": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "paused()(bool)": "false"
+   }
+  },
+  "OptimismMintableERC20Factory": {
+   "proxy": "0xA2B597EaeAcb6F627e088cbEaD319e934ED5edad",
+   "implementation": "0xaabea75da509fa518fd8a91eae4be5813b829b12",
+   "version": "\"1.11.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"1.11.0\"",
+    "initVersion()(uint8)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+    "bridge()(address)": "0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA",
+    "BRIDGE()(address)": "0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA"
+   }
+  },
+  "ProxyAdmin": {
+   "proxy": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+   "implementation": "0x0000000000000000000000000000000000000000",
+   "version": null,
+   "ethBalanceEther": 0.0,
+   "initializedVersion": null,
+   "getters": {
+    "owner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "addressManager()(address)": "0x8098F676033A377b9Defe302e9fE6877cD63D575",
+    "isUpgrading()(bool)": "false",
+    "proxyType(address)(uint8) 0xc407398d063f942febbcc6f80a156b47f3f1bda6": "0",
+    "proxyType(address)(uint8) 0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2": "0",
+    "proxyType(address)(uint8) 0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5": "0",
+    "proxyType(address)(uint8) 0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9": "0",
+    "proxyType(address)(uint8) 0x2F12d621a16e2d3285929C9996f478508951dFe4": "0",
+    "proxyType(address)(uint8) 0x74ad145aC900F1DD5551F0C9E143314DC4022FCf": "0",
+    "proxyType(address)(uint8) 0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6": "2",
+    "proxyType(address)(uint8) 0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA": "1",
+    "proxyType(address)(uint8) 0xD04D0D87E0bd4D2E50286760a3EF323FeA6849Cf": "0",
+    "proxyType(address)(uint8) 0xA2B597EaeAcb6F627e088cbEaD319e934ED5edad": "0",
+    "getProxyImplementation(address)(address) 0xc407398d063f942febbcc6f80a156b47f3f1bda6": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+    "getProxyImplementation(address)(address) 0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+    "getProxyImplementation(address)(address) 0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+    "getProxyImplementation(address)(address) 0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+    "getProxyImplementation(address)(address) 0x2F12d621a16e2d3285929C9996f478508951dFe4": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+    "getProxyImplementation(address)(address) 0x74ad145aC900F1DD5551F0C9E143314DC4022FCf": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+    "getProxyImplementation(address)(address) 0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+    "getProxyImplementation(address)(address) 0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+    "getProxyImplementation(address)(address) 0xD04D0D87E0bd4D2E50286760a3EF323FeA6849Cf": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+    "getProxyImplementation(address)(address) 0xA2B597EaeAcb6F627e088cbEaD319e934ED5edad": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+    "getProxyAdmin(address)(address) 0xc407398d063f942febbcc6f80a156b47f3f1bda6": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "getProxyAdmin(address)(address) 0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "getProxyAdmin(address)(address) 0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "getProxyAdmin(address)(address) 0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "getProxyAdmin(address)(address) 0x2F12d621a16e2d3285929C9996f478508951dFe4": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "getProxyAdmin(address)(address) 0x74ad145aC900F1DD5551F0C9E143314DC4022FCf": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "getProxyAdmin(address)(address) 0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "getProxyAdmin(address)(address) 0xD04D0D87E0bd4D2E50286760a3EF323FeA6849Cf": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "getProxyAdmin(address)(address) 0xA2B597EaeAcb6F627e088cbEaD319e934ED5edad": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+    "implementationName(address)(string) 0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6": "\"OVM_L1CrossDomainMessenger\""
+   }
+  }
+ },
+ "legacySlots": {
+  "OptimismPortal2.slot53 (legacy paused byte | superchainConfig)": "0x000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c00",
+  "OptimismPortal2.slot54 (legacy l2Oracle)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "OptimismPortal2.slot56 (legacy disputeGameFactory)": "0x0000000000000000000000002f12d621a16e2d3285929c9996f478508951dfe4",
+  "OptimismPortal2.slot59 (legacy respectedGameType | respectedGameTypeUpdatedAt)": "0x0000000000000000000000000000000000000000000000006792914f00000000",
+  "OptimismPortal2.slot63 (ethLockbox | legacy superRootsActive byte)": "0x00000000000000000000000008ba0023ed60c7bd040716dd13c45fa0062df5c5",
+  "L1CrossDomainMessenger.slot51 (legacy OVM owner)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "L1CrossDomainMessenger.slot151 (legacy reentrancy status)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "L1CrossDomainMessenger.slot251 (legacy superchainConfig)": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+  "L1StandardBridge.slot1 (legacy l2TokenBridge)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "L1StandardBridge.slot50 (legacy superchainConfig)": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+  "SystemConfig.slot106 (eip1559Denominator | eip1559Elasticity | operatorFee*)": "0x0000000000000000000000000000000000000000000000000000000c000000fa",
+  "SystemConfig.slot108 (superchainConfig | minBaseFee)": "0x00000000000000000007a12095703e0982140d16f8eba6d158fccede42f04a4c",
+  "DelayedWETH.slot4 (legacy config/systemConfig spacer)": "0x000000000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda6"
+ },
+ "disputeInfra": {
+  "anchorStateRegistries": [
+   {
+    "address": "0x318a642db9e24a85318b8bf18efd5287ba38643b",
+    "bornBlock": 21116359,
+    "bornTime": "2024-11-04 19:25:11",
+    "version": "2.0.0",
+    "games": 3731,
+    "firstGame": 0,
+    "lastGame": 3730,
+    "isCurrent": false,
+    "ethBalance": 0,
+    "respectedGameType": null,
+    "retirementTimestamp": null,
+    "anchorGame": null,
+    "paused": null,
+    "portal": null,
+    "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "disputeGameFactory": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
+    "implSlot": "0x43491a8ca2ea77e9af35878409303743facf95a8",
+    "adminSlot": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4"
+   },
+   {
+    "address": "0xd5d0e176be44e61eab3cf1fa8153758df603376f",
+    "bornBlock": 22254924,
+    "bornTime": "2025-04-12 19:18:59",
+    "version": "2.2.2",
+    "games": 2455,
+    "firstGame": 3731,
+    "lastGame": 6185,
+    "isCurrent": false,
+    "ethBalance": 0,
+    "respectedGameType": 9,
+    "retirementTimestamp": null,
+    "anchorGame": "0xcd1f9c0fa71482e2551e983d3db4940fcbfda350",
+    "paused": null,
+    "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2",
+    "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "disputeGameFactory": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
+    "implSlot": "0x7b465370bb7a333f99edd19599eb7fb1c2d3f8d2",
+    "adminSlot": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4"
+   },
+   {
+    "address": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "bornBlock": 22990722,
+    "bornTime": "2025-07-24 18:12:11",
+    "version": "4.0.0",
+    "games": 11505,
+    "firstGame": 6186,
+    "lastGame": 17690,
+    "isCurrent": true,
+    "ethBalance": 0,
+    "respectedGameType": 9,
+    "retirementTimestamp": 1753380731,
+    "anchorGame": "0x944a783a2f1f187f0d475df8acf09c9463bcafd5",
+    "paused": 0,
+    "portal": null,
+    "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "disputeGameFactory": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
+    "implSlot": "0x2b27299c577d4720100e2735b652444dcea652d0",
+    "adminSlot": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4"
+   }
+  ],
+  "delayedWETH": [
+   {
+    "address": "0x7d8ea656d7417229f420b0c87f6428baa8499d70",
+    "bornBlock": 21116358,
+    "bornTime": "2024-11-04 19:24:59",
+    "version": "1.1.0",
+    "games": 1740,
+    "firstGame": 0,
+    "lastGame": 1739,
+    "isSystemConfigWeth": false,
+    "ethBalanceWei": 0,
+    "ethBalance": 0.0,
+    "totalSupply": 0,
+    "delay": 604800,
+    "owner": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": null,
+    "proxyAdminOwner": null,
+    "implSlot": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+    "adminSlot": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "implVersionNow": "1.1.0"
+   },
+   {
+    "address": "0x84b268a4101a8c8e3ccb33004f81ed08202ba124",
+    "bornBlock": 21582222,
+    "bornTime": "2025-01-08 20:43:11",
+    "version": "1.3.0",
+    "games": 125,
+    "firstGame": 1740,
+    "lastGame": 1867,
+    "isSystemConfigWeth": false,
+    "ethBalanceWei": 0,
+    "ethBalance": 0.0,
+    "totalSupply": 0,
+    "delay": 302400,
+    "owner": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": null,
+    "proxyAdminOwner": null,
+    "implSlot": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
+    "adminSlot": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "implVersionNow": "1.3.0"
+   },
+   {
+    "address": "0xc9edb4e340f4e9683b4557bd9db8f9d932177c86",
+    "bornBlock": 21431684,
+    "bornTime": "2024-12-18 20:04:59",
+    "version": "1.3.0",
+    "games": 4321,
+    "firstGame": 1822,
+    "lastGame": 6185,
+    "isSystemConfigWeth": false,
+    "ethBalanceWei": 80000000000000000,
+    "ethBalance": 0.08,
+    "totalSupply": 80000000000000000,
+    "delay": 302400,
+    "owner": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": null,
+    "proxyAdminOwner": null,
+    "implSlot": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
+    "adminSlot": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "implVersionNow": "1.3.0"
+   },
+   {
+    "address": "0xa0157f0730dea8d1a5c358dc1d340a05d8796c23",
+    "bornBlock": 22990722,
+    "bornTime": "2025-07-24 18:12:11",
+    "version": "1.5.0",
+    "games": 1679,
+    "firstGame": 6186,
+    "lastGame": 7864,
+    "isSystemConfigWeth": false,
+    "ethBalanceWei": 0,
+    "ethBalance": 0.0,
+    "totalSupply": 0,
+    "delay": 302400,
+    "owner": null,
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": "0xc407398d063f942febbcc6f80a156b47f3f1bda6",
+    "proxyAdminOwner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "implSlot": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+    "adminSlot": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "implVersionNow": "1.5.0"
+   },
+   {
+    "address": "0x0bdbec6bd35571f97f96f3ed21822a4f2e071a3c",
+    "bornBlock": 23492571,
+    "bornTime": "2025-10-02 20:45:59",
+    "version": "1.5.0",
+    "games": 6616,
+    "firstGame": 7865,
+    "lastGame": 14480,
+    "isSystemConfigWeth": false,
+    "ethBalanceWei": 0,
+    "ethBalance": 0.0,
+    "totalSupply": 0,
+    "delay": 302400,
+    "owner": null,
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": "0xc407398d063f942febbcc6f80a156b47f3f1bda6",
+    "proxyAdminOwner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "implSlot": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+    "adminSlot": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "implVersionNow": "1.5.0"
+   },
+   {
+    "address": "0x74ad145ac900f1dd5551f0c9e143314dc4022fcf",
+    "bornBlock": 25475307,
+    "bornTime": "2026-07-06 18:32:35",
+    "version": "2.0.0",
+    "games": 3210,
+    "firstGame": 14481,
+    "lastGame": 17690,
+    "isSystemConfigWeth": true,
+    "ethBalanceWei": 21419797000000000000,
+    "ethBalance": 21.419797,
+    "totalSupply": 21419797000000000000,
+    "delay": 302400,
+    "owner": null,
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": null,
+    "proxyAdminOwner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "implSlot": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+    "adminSlot": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "implVersionNow": "2.0.0"
+   }
+  ]
+ },
+ "custodyAtPin": {
+  "block": 26433900,
+  "time": "2026-11-17 09:34:35",
+  "OptimismPortal_before": 0.0,
+  "OptimismPortal_after": 0.0,
+  "L1CrossDomainMessenger_before": 0.0,
+  "L1CrossDomainMessenger_after": 0.0,
+  "L1StandardBridge_before": 0.0,
+  "L1StandardBridge_after": 0.0,
+  "ETHLockbox_before": 18266.157945407766,
+  "ETHLockbox_after": 18266.157945407766
+ },
+ "gameCensus": {
+  "gameCount": 17691,
+  "lineageClasses": [
+   {
+    "type": 1,
+    "gameVersion": "1.3.0",
+    "gameASR": "0x318a642db9e24a85318b8bf18efd5287ba38643b",
+    "weth": "0x7d8ea656d7417229f420b0c87f6428baa8499d70",
+    "absolutePrestate": "0x00000000deaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddead",
+    "n": 1740,
+    "firstIndex": 0,
+    "lastIndex": 1739,
+    "firstCreated": "2024-11-04 21:13:59",
+    "lastCreated": "2025-01-17 16:15:59",
+    "creators": {
+     "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a": 1740
+    }
+   },
+   {
+    "type": 1,
+    "gameVersion": "1.3.1",
+    "gameASR": "0x318a642db9e24a85318b8bf18efd5287ba38643b",
+    "weth": "0x84b268a4101a8c8e3ccb33004f81ed08202ba124",
+    "absolutePrestate": "0x0336751a224445089ba5456c8028376a0faf2bafa81d35f43fab8730258cdf37",
+    "n": 125,
+    "firstIndex": 1740,
+    "lastIndex": 1867,
+    "firstCreated": "2025-01-17 17:16:35",
+    "lastCreated": "2025-01-23 19:34:35",
+    "creators": {
+     "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a": 125
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.3.1",
+    "gameASR": "0x318a642db9e24a85318b8bf18efd5287ba38643b",
+    "weth": "0xc9edb4e340f4e9683b4557bd9db8f9d932177c86",
+    "absolutePrestate": "0x0336751a224445089ba5456c8028376a0faf2bafa81d35f43fab8730258cdf37",
+    "n": 1866,
+    "firstIndex": 1822,
+    "lastIndex": 3730,
+    "firstCreated": "2025-01-22 00:19:11",
+    "lastCreated": "2025-04-12 18:45:59",
+    "creators": {
+     "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a": 1863,
+     "0xfff2f7417be1a4e2ad1f26f538ad6f67d0fe11f2": 3
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.4.1",
+    "gameASR": "0xd5d0e176be44e61eab3cf1fa8153758df603376f",
+    "weth": "0xc9edb4e340f4e9683b4557bd9db8f9d932177c86",
+    "absolutePrestate": "0x039facea52b20c605c05efb0a33560a92de7074218998f75bcdf61e8989cb5d9",
+    "n": 293,
+    "firstIndex": 3731,
+    "lastIndex": 4023,
+    "firstCreated": "2025-04-12 19:46:11",
+    "lastCreated": "2025-04-25 00:47:23",
+    "creators": {
+     "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a": 293
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.4.1",
+    "gameASR": "0xd5d0e176be44e61eab3cf1fa8153758df603376f",
+    "weth": "0xc9edb4e340f4e9683b4557bd9db8f9d932177c86",
+    "absolutePrestate": "0x03ee2917da962ec266b091f4b62121dc9682bb0db534633707325339f99ee405",
+    "n": 302,
+    "firstIndex": 4024,
+    "lastIndex": 4325,
+    "firstCreated": "2025-04-25 01:47:47",
+    "lastCreated": "2025-05-07 15:48:35",
+    "creators": {
+     "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a": 302
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.4.1",
+    "gameASR": "0xd5d0e176be44e61eab3cf1fa8153758df603376f",
+    "weth": "0xc9edb4e340f4e9683b4557bd9db8f9d932177c86",
+    "absolutePrestate": "0x03682932cec7ce0a3874b19675a6bbc923054a7b321efc7d3835187b172494b6",
+    "n": 1860,
+    "firstIndex": 4326,
+    "lastIndex": 6185,
+    "firstCreated": "2025-05-07 16:48:47",
+    "lastCreated": "2025-07-24 17:12:11",
+    "creators": {
+     "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a": 1860
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.7.0",
+    "gameASR": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "weth": "0xa0157f0730dea8d1a5c358dc1d340a05d8796c23",
+    "absolutePrestate": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
+    "n": 1679,
+    "firstIndex": 6186,
+    "lastIndex": 7864,
+    "firstCreated": "2025-07-24 18:12:23",
+    "lastCreated": "2025-10-02 20:06:11",
+    "creators": {
+     "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a": 1679
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.7.0",
+    "gameASR": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "weth": "0x0bdbec6bd35571f97f96f3ed21822a4f2e071a3c",
+    "absolutePrestate": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
+    "n": 1286,
+    "firstIndex": 7865,
+    "lastIndex": 9150,
+    "firstCreated": "2025-10-02 21:06:23",
+    "lastCreated": "2025-11-25 20:53:35",
+    "creators": {
+     "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a": 1286
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.8.0",
+    "gameASR": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "weth": "0x0bdbec6bd35571f97f96f3ed21822a4f2e071a3c",
+    "absolutePrestate": "0x03caa1871bb9fe7f9b11217c245c16e4ded33367df5b3ccb2c6d0a847a217d1b",
+    "n": 1835,
+    "firstIndex": 9151,
+    "lastIndex": 10985,
+    "firstCreated": "2025-11-25 21:53:47",
+    "lastCreated": "2026-02-10 17:08:23",
+    "creators": {
+     "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a": 1835
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "2.2.0",
+    "gameASR": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "weth": "0x0bdbec6bd35571f97f96f3ed21822a4f2e071a3c",
+    "absolutePrestate": "0x033c000916b4a88cfffeceddd6cf0f4be3897a89195941e5a7c3f8209b4dbb6e",
+    "n": 3495,
+    "firstIndex": 10986,
+    "lastIndex": 14480,
+    "firstCreated": "2026-02-10 18:08:35",
+    "lastCreated": "2026-07-06 18:12:47",
+    "creators": {
+     "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a": 3495
+    }
+   },
+   {
+    "type": 8,
+    "gameVersion": "2.4.2",
+    "gameASR": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "weth": "0x74ad145ac900f1dd5551f0c9e143314dc4022fcf",
+    "absolutePrestate": "0x0337ecb3604c0b40c352e0c7711beb17a212d583f4fe956fd8d66e29ad5f9025",
+    "n": 1914,
+    "firstIndex": 14481,
+    "lastIndex": 16394,
+    "firstCreated": "2026-07-06 18:38:59",
+    "lastCreated": "2026-09-24 16:48:11",
+    "creators": {
+     "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a": 1912,
+     "0x7bf86a1d37c2ac030b564becc42720c807c6c73e": 2
+    }
+   },
+   {
+    "type": 9,
+    "gameVersion": "0.8.0",
+    "gameASR": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "weth": "0x74ad145ac900f1dd5551f0c9e143314dc4022fcf",
+    "absolutePrestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df",
+    "n": 1286,
+    "firstIndex": 16395,
+    "lastIndex": 17680,
+    "firstCreated": "2026-09-24 17:52:23",
+    "lastCreated": "2026-11-16 23:00:11",
+    "creators": {
+     "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a": 836,
+     "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7": 437,
+     "0x8e68f16efd97b7fea23deb781483db965c8dd964": 10,
+     "0x299c7d6a43213f4f11bb7196b16f9ff81fc9d01b": 1,
+     "0x5b92f4f541a4ab686b174525063507c56de3fe68": 1,
+     "0x9995c45126e493a80af417eb3f3328a1e4511543": 1
+    }
+   },
+   {
+    "type": 9,
+    "gameVersion": "0.8.0",
+    "gameASR": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "weth": "0x74ad145ac900f1dd5551f0c9e143314dc4022fcf",
+    "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9",
+    "n": 10,
+    "firstIndex": 17681,
+    "lastIndex": 17690,
+    "firstCreated": "2026-11-17 00:00:35",
+    "lastCreated": "2026-11-17 09:03:59",
+    "creators": {
+     "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7": 10
+    }
+   }
+  ],
+  "byTypeCreatorStatus": [
+   {
+    "type": 0,
+    "creator": "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a",
+    "status": "DEFENDER_WINS",
+    "claimValid": true,
+    "retired": false,
+    "n": 8295
+   },
+   {
+    "type": 0,
+    "creator": "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a",
+    "status": "DEFENDER_WINS",
+    "claimValid": false,
+    "retired": true,
+    "n": 4318
+   },
+   {
+    "type": 8,
+    "creator": "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a",
+    "status": "DEFENDER_WINS",
+    "claimValid": true,
+    "retired": false,
+    "n": 1912
+   },
+   {
+    "type": 1,
+    "creator": "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a",
+    "status": "DEFENDER_WINS",
+    "claimValid": false,
+    "retired": true,
+    "n": 1865
+   },
+   {
+    "type": 9,
+    "creator": "0xd5f0e2912c70771c589cd8bb087ede0dab4afa9a",
+    "status": "DEFENDER_WINS",
+    "claimValid": true,
+    "retired": false,
+    "n": 836
+   },
+   {
+    "type": 9,
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "status": "DEFENDER_WINS",
+    "claimValid": true,
+    "retired": false,
+    "n": 280
+   },
+   {
+    "type": 9,
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "status": "IN_PROGRESS",
+    "claimValid": false,
+    "retired": false,
+    "n": 84
+   },
+   {
+    "type": 9,
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "status": "DEFENDER_WINS",
+    "claimValid": false,
+    "retired": false,
+    "n": 83
+   },
+   {
+    "type": 9,
+    "creator": "0x8e68f16efd97b7fea23deb781483db965c8dd964",
+    "status": "CHALLENGER_WINS",
+    "claimValid": false,
+    "retired": false,
+    "n": 10
+   },
+   {
+    "type": 0,
+    "creator": "0xfff2f7417be1a4e2ad1f26f538ad6f67d0fe11f2",
+    "status": "CHALLENGER_WINS",
+    "claimValid": false,
+    "retired": true,
+    "n": 2
+   },
+   {
+    "type": 8,
+    "creator": "0x7bf86a1d37c2ac030b564becc42720c807c6c73e",
+    "status": "CHALLENGER_WINS",
+    "claimValid": false,
+    "retired": false,
+    "n": 2
+   },
+   {
+    "type": 0,
+    "creator": "0xfff2f7417be1a4e2ad1f26f538ad6f67d0fe11f2",
+    "status": "DEFENDER_WINS",
+    "claimValid": false,
+    "retired": true,
+    "n": 1
+   },
+   {
+    "type": 9,
+    "creator": "0x299c7d6a43213f4f11bb7196b16f9ff81fc9d01b",
+    "status": "CHALLENGER_WINS",
+    "claimValid": false,
+    "retired": false,
+    "n": 1
+   },
+   {
+    "type": 9,
+    "creator": "0x5b92f4f541a4ab686b174525063507c56de3fe68",
+    "status": "CHALLENGER_WINS",
+    "claimValid": false,
+    "retired": false,
+    "n": 1
+   },
+   {
+    "type": 9,
+    "creator": "0x9995c45126e493a80af417eb3f3328a1e4511543",
+    "status": "IN_PROGRESS",
+    "claimValid": false,
+    "retired": false,
+    "n": 1
+   }
+  ],
+  "blacklisted": [],
+  "nonRetiredWithForeignASR": [],
+  "claimValid": 11323,
+  "retired": 6186,
+  "inProgress": [
+   {
+    "index": 17586,
+    "type": 9,
+    "game": "0xa41214c2851f0d538b7c6b37fa66e35472ff6f0e",
+    "creator": "0x9995c45126e493a80af417eb3f3328a1e4511543",
+    "createdAt": "2026-11-13 01:02:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17607,
+    "type": 9,
+    "game": "0x4d0aa96119656215eff1425a4562462e0a48791c",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-13 21:35:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17608,
+    "type": 9,
+    "game": "0x280786aea43e8459d0896f6ac6a149e1258698ef",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-13 22:36:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17609,
+    "type": 9,
+    "game": "0xc3009a5910d5c69985b045f73a9b50eefd1bf973",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-13 23:36:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17610,
+    "type": 9,
+    "game": "0x26295a14fc76c26e75026d13d9da0ae7033b51c7",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 00:36:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17611,
+    "type": 9,
+    "game": "0xa0c9d853edb8e01a45de937b1f5d2d5d1f42673f",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 01:37:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17612,
+    "type": 9,
+    "game": "0x9f5ba1b624ae4b7cff2ee8918fb0977d92803c44",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 02:37:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17613,
+    "type": 9,
+    "game": "0x270f935143276d53467886bf6b5e428abd4fdd17",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 03:37:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17614,
+    "type": 9,
+    "game": "0x2307b425870f4f1be576f1d8f2ab9ae39a06bfa3",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 04:38:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17615,
+    "type": 9,
+    "game": "0x73eea973212474c002325fd9c757e61665c6fff6",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 05:38:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17616,
+    "type": 9,
+    "game": "0x14482d0e515ee8b3c80519ee4bec3d4732c5bf5f",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 06:38:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17617,
+    "type": 9,
+    "game": "0x179442b69eefb9fd1dc303f79cbbf291de579981",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 07:39:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17618,
+    "type": 9,
+    "game": "0x926d17b331c52fa53f1e3f2be4a19a6370b2e46c",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 08:39:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17619,
+    "type": 9,
+    "game": "0xa9f49bbac95726aa4447eb61140bb77bb8ccc626",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 09:39:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17620,
+    "type": 9,
+    "game": "0x2e8059dbcd2230528cadd9d7639ade15318a648a",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 10:40:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17621,
+    "type": 9,
+    "game": "0x27aad4cf253fd47187d90c9f8ac90cf06ad87382",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 11:40:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17622,
+    "type": 9,
+    "game": "0x50a4412b71a7cb395bf9e14bdcd5e75a3b0a5321",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 12:40:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17623,
+    "type": 9,
+    "game": "0xd6f1b47be44750bae3e3810c83967a422b49f974",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 13:41:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17624,
+    "type": 9,
+    "game": "0x759c3463145e6dedff2b812e3bbc751885c0ea60",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 14:41:47",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17625,
+    "type": 9,
+    "game": "0x0ec5dc2028aa5afe9087d4f9e39e6c5172d70985",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 15:41:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17626,
+    "type": 9,
+    "game": "0xa6286d46516b9500152024b784a20888a7d899d1",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 16:42:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17627,
+    "type": 9,
+    "game": "0x76dce9c0a76687276bc633e2da864a03110be32c",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 17:42:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17628,
+    "type": 9,
+    "game": "0x939a7ff79fe3d77df5be98b33d4b726001a08d85",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 18:42:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17629,
+    "type": 9,
+    "game": "0x1780e6bca8cb2b757da2100f6118a4b8346069c0",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 19:43:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17630,
+    "type": 9,
+    "game": "0xd9151e10c2752fadc5187dd91a66ac8a4ee46900",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 20:43:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17631,
+    "type": 9,
+    "game": "0xc0184266b78fb9a934bf2c9515834572bd050d3d",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 21:43:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17632,
+    "type": 9,
+    "game": "0xf794d5e45dfb102261b2e75648c77e014569d959",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 22:44:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17633,
+    "type": 9,
+    "game": "0x9aee25e674b401d3cd280d785c40618627ea42b8",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-14 23:44:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17634,
+    "type": 9,
+    "game": "0xc8a9dc9d143cd9eea95ffa957f42a26026a43262",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 00:44:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17635,
+    "type": 9,
+    "game": "0x344ba92facb46a1dc3c07e9c94f8fa70fb0305f0",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 01:45:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17636,
+    "type": 9,
+    "game": "0x04411757bba3da5ec47b825b562d08a4aebfb066",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 02:45:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17637,
+    "type": 9,
+    "game": "0x5d22d047733670ed266896eb6d1208a5dfd20ed3",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 03:45:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17638,
+    "type": 9,
+    "game": "0xf8fe5998aa3aa364f0a220a9c0155e522417d9cc",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 04:46:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17639,
+    "type": 9,
+    "game": "0xb37d809f3dfc85807372295ac844622c85bd5719",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 05:46:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17640,
+    "type": 9,
+    "game": "0xa32ac95d7de2bbb6a8bc3c6785d0ecb2b3b73bbc",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 06:46:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17641,
+    "type": 9,
+    "game": "0x5956312b018e00942c96f6dee586cefb023db31a",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 07:47:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17642,
+    "type": 9,
+    "game": "0x651f59b677396b5f69356a4a1482e2b754c0d170",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 08:47:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17643,
+    "type": 9,
+    "game": "0x451dac81ac55200561e222b60ce3e94bd0970efc",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 09:47:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17644,
+    "type": 9,
+    "game": "0x32d27afff5b5497b7f34f1c75c050eca00c29586",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 10:48:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17645,
+    "type": 9,
+    "game": "0x00e3fcce5793a3ed2656e5bf896b9284ba50040f",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 11:48:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17646,
+    "type": 9,
+    "game": "0x040e349657b12e44e6376bb01acdbd48298f948b",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 12:48:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17647,
+    "type": 9,
+    "game": "0x973dd439d082e7b524af8bf39018d3dd2b7ffcf7",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 13:49:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17648,
+    "type": 9,
+    "game": "0x1af49c9ef651a623f7eaf0b99c59b37c7953f074",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 14:49:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17649,
+    "type": 9,
+    "game": "0xd0218559d180ed9f6d241b32decda1baec5265aa",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 15:49:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17650,
+    "type": 9,
+    "game": "0x16835ff339746e0f1cd0d9382f19f0b774e41b82",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 16:50:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17651,
+    "type": 9,
+    "game": "0x765aadaed5d27a616a8af70dfef9bce1ceab8140",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 17:50:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17652,
+    "type": 9,
+    "game": "0xcd89fc3bcf5898c666b1cd4764a0e2b49f3807fc",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 18:50:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17653,
+    "type": 9,
+    "game": "0x7137b361a7d9e31a39970acf1a37a6ba582e314f",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 19:51:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17654,
+    "type": 9,
+    "game": "0x9b56dfbcb0c9412806ab518bf8b5498428e04549",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 20:51:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17655,
+    "type": 9,
+    "game": "0xdaca7ca594c5df0dd20b524d35ea0905153075fc",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 21:51:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17656,
+    "type": 9,
+    "game": "0x4e13e32c03d55e55da654473905267e2d9cb468f",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 22:52:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17657,
+    "type": 9,
+    "game": "0x7cb59bd8704713792d2daf7aaa00ba28c2813731",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-15 23:52:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17658,
+    "type": 9,
+    "game": "0xc56edae78f0cd9ed0876647f4cffcff09a238865",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 00:52:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17659,
+    "type": 9,
+    "game": "0x1851f73e89d4eb11bdb05c248ffc4c588ea062e6",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 01:53:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17660,
+    "type": 9,
+    "game": "0xfd0bd99d174758d9dbef1b807de2313448ad115a",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 02:53:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17661,
+    "type": 9,
+    "game": "0xafca034180d92220c607f5e1c18430cbecf4b2c4",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 03:53:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17662,
+    "type": 9,
+    "game": "0xda47f80ed2afe1741accce0d20ce5a6a6f7ecf76",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 04:54:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17663,
+    "type": 9,
+    "game": "0x894a2d2e05ff0c1044a9a3519c9a429222206933",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 05:54:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17664,
+    "type": 9,
+    "game": "0xe82b14072751f54a284f05623013852aa9003a2c",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 06:54:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17665,
+    "type": 9,
+    "game": "0xf5899318855023cb4cc0436d10210d8604d08b4e",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 07:55:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17666,
+    "type": 9,
+    "game": "0x533bf9afa0fde0af311215c337f14df8e03c7a53",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 08:55:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17667,
+    "type": 9,
+    "game": "0x65923fc0d8af611ebd4e78e5030df1e9dc816ed7",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 09:55:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17668,
+    "type": 9,
+    "game": "0xaa7e4cc4b8947e89b8c31d88dcc785d8463e8941",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 10:56:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17669,
+    "type": 9,
+    "game": "0x3c9febd49cde79d616524e26dd004d265b6f6c66",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 11:56:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17670,
+    "type": 9,
+    "game": "0x941747c3a6c49da9333acbce30c60cefc9b47197",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 12:56:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17671,
+    "type": 9,
+    "game": "0xe061987df9e56e784124c675607fe454f611ee07",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 13:57:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17672,
+    "type": 9,
+    "game": "0x53ed381e56ed65e44a3165f7d919cb7b52a3562e",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 14:57:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17673,
+    "type": 9,
+    "game": "0xb82205c61507d056565e6fca684e3de0a640e58c",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 15:57:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17674,
+    "type": 9,
+    "game": "0xeaff675c87e1432b6df2b4778601484efbc61d2a",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 16:58:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17675,
+    "type": 9,
+    "game": "0x0c92bd34bb3f8b6b2723d994b11d6d9a86d9f0b2",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 17:58:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17676,
+    "type": 9,
+    "game": "0xa1d458cb44b4311c03d53973b4714ee0df289d4a",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 18:58:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17677,
+    "type": 9,
+    "game": "0xecd171ac0ddd178cb4e369e685e9623ad7416ec7",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 19:59:11",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17678,
+    "type": 9,
+    "game": "0x3ad66b378a52567bb6bde4bdd232c9637581ec09",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 20:59:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17679,
+    "type": 9,
+    "game": "0x704f11ecf9dbeddfbf3b87c2e3b5e173cfc49c6c",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 21:59:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17680,
+    "type": 9,
+    "game": "0x3073a5f81798e353033ba07cf19b49d6390a68d8",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-16 23:00:11",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 17681,
+    "type": 9,
+    "game": "0x53278636d07d6484cefe9df934012f037dc6f92c",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-17 00:00:35",
+    "prestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+   },
+   {
+    "index": 17682,
+    "type": 9,
+    "game": "0x4bb0e65d9199219f01d0326c6ebbab1bcaa7e2b1",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-17 01:01:11",
+    "prestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+   },
+   {
+    "index": 17683,
+    "type": 9,
+    "game": "0xc7ec519e7b740837e95ef12b2a22a367e7e2ddd2",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-17 02:01:35",
+    "prestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+   },
+   {
+    "index": 17684,
+    "type": 9,
+    "game": "0x0b15e22ebc1a478c136586fe7e58924376ef2736",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-17 03:01:59",
+    "prestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+   },
+   {
+    "index": 17685,
+    "type": 9,
+    "game": "0x8fe33455bdc4b27750c36805d549fdb132f370d1",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-17 04:02:11",
+    "prestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+   },
+   {
+    "index": 17686,
+    "type": 9,
+    "game": "0xfcdee963428567cc1c977523a5a2783f44acd89b",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-17 05:02:35",
+    "prestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+   },
+   {
+    "index": 17687,
+    "type": 9,
+    "game": "0x018171b0dfd80065b4a664e231766684fad8d3b7",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-17 06:02:59",
+    "prestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+   },
+   {
+    "index": 17688,
+    "type": 9,
+    "game": "0xc13ed3234a4793779cf97aebe7f171a6c6658692",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-17 07:03:11",
+    "prestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+   },
+   {
+    "index": 17689,
+    "type": 9,
+    "game": "0x0a2c81a1f6c13357f48ab3688af4bb9528c85615",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-17 08:03:35",
+    "prestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+   },
+   {
+    "index": 17690,
+    "type": 9,
+    "game": "0x870e9c5b06f447161b6d10cc716bb326de108119",
+    "creator": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+    "createdAt": "2026-11-17 09:03:59",
+    "prestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+   }
+  ]
+ },
+ "rootVerification": {
+  "method": "output root recomputed from the L2 block header (post-Isthmus withdrawalsRoot); super games: extraData decoded, single-entry check, block = genesis + (timestamp-genesisTime)/blockTime",
+  "table": {
+   "(0, 'DEFENDER_WINS', True, True)": 8295,
+   "(8, 'DEFENDER_WINS', True, True)": 1912,
+   "(8, 'CHALLENGER_WINS', False, False)": 2,
+   "(9, 'DEFENDER_WINS', True, True)": 1116,
+   "(9, 'CHALLENGER_WINS', False, False)": 12,
+   "(9, 'DEFENDER_WINS', False, True)": 83,
+   "(9, 'IN_PROGRESS', False, False)": 1,
+   "(9, 'IN_PROGRESS', False, True)": 84
+  },
+  "anomalies": [
+   {
+    "index": 17586,
+    "type": 9,
+    "game": "0xa41214c2851f0d538b7c6b37fa66e35472ff6f0e",
+    "creator": "0x9995c45126e493a80af417eb3f3328a1e4511543",
+    "status": 0,
+    "claimValid": false,
+    "l2Block": 63783372,
+    "claimedOutput": "0x0cf7603494e163125ec6c1c184b047219ce727ea2b5aa10a935f63294f752e52",
+    "computedOutput": "0x6b26df0bc058f0f7d4946a54047d81100822ef6c7df817f8e047a2a367821e8e",
+    "match": false
+   }
+  ]
+ }
+}

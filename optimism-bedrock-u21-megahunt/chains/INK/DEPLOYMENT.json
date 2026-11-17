@@ -115,8 +115,8 @@
    "firstCodeBlock": 21344310,
    "firstCodeTime": "2024-12-06 15:20:11",
    "implSlotAtFirstCodeBlock": "0x0000000000000000000000000000000000000000",
-   "firstImplementation": "0x0000000000000000000000000000000000000000",
-   "firstImplementationVersion": "<none>",
+   "firstImplementation": "0xd3494713a5cfad3f5359379dfa074e2ac8c6fd65",
+   "firstImplementationVersion": "2.3.0",
    "adminSlotAtFirstCodeBlock": "0x0000000000000000000000000000000000000000",
    "adminSlotAtPin": "0x0000000000000000000000000000000000000000",
    "implAtPin": "0x0000000000000000000000000000000000000000"

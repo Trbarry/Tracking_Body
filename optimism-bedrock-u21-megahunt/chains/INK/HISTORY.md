@@ -15,7 +15,7 @@ Generated from chain state by `scripts/F5-build-chain-files.py`; every row is a 
 | AnchorStateRegistry | `0xEe018bAf058227872540AC60eFbd38b023d9dAe2` | 22990599 | 2025-07-24 17:47:23 | `0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e` (3.5.0) | `0xd56045e68956fce2576e680c95a4750cf8241f79` |
 | DisputeGameFactory | `0x10d7B35078d3baabB96Dd45a9143B94be65b12CD` | 21344310 | 2024-12-06 15:20:11 | `0xc641a33cab81c559f2bd4b21ea34c290e2440c2b` (1.0.0) | `0xd56045e68956fce2576e680c95a4750cf8241f79` |
 | DelayedWETH | `0x57b4C29DAee99a28E6E86778b499361294c134eA` | 25397811 | 2026-06-25 23:05:47 | `0xe440cc08a71694c8229323803f59024e3144630e` (1.5.1) | `0xd56045e68956fce2576e680c95a4750cf8241f79` |
-| L1CrossDomainMessenger | `0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f` | 21344310 | 2024-12-06 15:20:11 | `0x0000000000000000000000000000000000000000` (<none>) | `0x0000000000000000000000000000000000000000` |
+| L1CrossDomainMessenger | `0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f` | 21344310 | 2024-12-06 15:20:11 | `0xd3494713a5cfad3f5359379dfa074e2ac8c6fd65` (2.3.0) | `0x0000000000000000000000000000000000000000` |
 | L1StandardBridge | `0x88FF1e5b602916615391F55854588EFcBB7663f0` | 21344310 | 2024-12-06 15:20:11 | `0x64b5a5ed26dcb17370ff4d33a8d503f0fbd06cff` (2.1.0) | `0xd56045e68956fce2576e680c95a4750cf8241f79` |
 | L1ERC721Bridge | `0x661235a238B11191211fa95D4Dd9E423d521E0Be` | 21344310 | 2024-12-06 15:20:11 | `0xae2af01232a6c4a4d3012c5ec5b1b35059caf10d` (2.1.0) | `0xd56045e68956fce2576e680c95a4750cf8241f79` |
 | OptimismMintableERC20Factory | `0xA8B389A82e088b164cD03230e900980CcED34d29` | 21344310 | 2024-12-06 15:20:11 | `0xe01efbeb1089d1d1db9c6c8b135c934c0734c846` (1.9.0) | `0xd56045e68956fce2576e680c95a4750cf8241f79` |
@@ -39,7 +39,7 @@ Generated from chain state by `scripts/F5-build-chain-files.py`; every row is a 
 | 26048619 | 2026-09-24 | `0x0a0fe86f7b1a3d3d` | 071-U20-op-ink-soneium-uni | SystemConfig=4.0.0*, OptimismPortal=5.8.0*, ETHLockbox=1.3.1*, AnchorStateRegistry=3.9.0*, DisputeGameFactory=1.6.1*, DelayedWETH=1.5.1*, L1ERC721Bridge=2.9.1*, OptimismMintableERC20Factory=1.11.0*, L1CrossDomainMessenger=2.11.1* |
 | 26430859 | 2026-11-16 | `0x024770b5fba87683` | 084-U21-op-ink-soneium-uni | SystemConfig=4.3.0*, OptimismPortal=6.1.0*, ETHLockbox=2.0.0*, AnchorStateRegistry=4.0.0*, DisputeGameFactory=1.6.1*, DelayedWETH=2.0.0*, L1ERC721Bridge=2.9.1*, OptimismMintableERC20Factory=1.11.0*, L1CrossDomainMessenger=2.13.0* |
 
-Cross-check against F2's independent slot-sampling history (`evidence/F2-impl-history-ink.json`): 48 (proxy, block, implementation) entries compared, 12 mismatches.
+Cross-check against F2's independent slot-sampling history (`evidence/F2-impl-history-ink.json`): 48 (proxy, block, implementation) entries compared, 0 mismatches.
 
 `lastUsedOPCM` (SystemConfig) sampled at each upgrade block:
 

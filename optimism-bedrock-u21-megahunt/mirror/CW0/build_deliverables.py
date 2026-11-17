@@ -83,7 +83,7 @@ FAMILY_IDS = {
 
 FAMILY_FACTS = {
     "custody": {
-        "ancestor": "first: v1.0.0:contracts/L1/OptimismPortal.sol:325-420 (withdrawal value and finalize-before-call); current form: v4.0.0:src/L1/ETHLockbox.sol:132-219 (separate pooled custody), with U21 pause/identity source at v9.0.0:src/L1/ETHLockbox.sol:112-235",
+        "ancestor": "first: v1.0.0:contracts/L1/OptimismPortal.sol:325-420 (withdrawal value and finalize-before-call); current form: v4.0.0:src/L1/ETHLockbox.sol:132-232 (separate pooled custody), with U21 pause/identity source at v9.0.0:src/L1/ETHLockbox.sol:112-235",
         "consumer": "v9.0.0:src/L1/OptimismPortal2.sol:577-666,741-795 and v9.0.0:src/L1/ETHLockbox.sol:133-235",
         "state": "ETH in a portal/ETHLockbox/L1 messenger plus monotonic portal/lockbox authorizations",
         "branches": ["v1.0.0 portal custody — contracts/L1/OptimismPortal.sol:325-490", "v1.6.0 custom-gas-token branch — src/L1/OptimismPortal2.sol:362-440,504-573", "v4.0.0 per-chain ETHLockbox — src/L1/ETHLockbox.sol:67-219", "v7.0.0 shared-lockbox migration — src/L1/OptimismPortal2.sol:503-537", "v9.0.0 lockbox-sourced pause — src/L1/ETHLockbox.sol:112-119"],
@@ -909,7 +909,7 @@ def build_lineage() -> list[dict]:
           ["L8 orphaned legacy WETH credit after shared migration; pause behavior of pre-v1.4 deployments."]),
 
         R("ETHLockbox", "authorized portals/lockboxes; lockETH/unlockETH; migrateLiquidity; pause/guardian",
-          "v4.0.0:src/L1/ETHLockbox.sol:67-219",
+          "v4.0.0:src/L1/ETHLockbox.sol:67-232",
           "Per-chain lockbox escrows Portal deposits, returns value through donateETH before withdrawal execution, and can migrate all balance to an authorized same-owner lockbox.",
           "Only authorized same-domain portals debit; unlock is paused, nonreentrant against an executing withdrawal, and backed by balance.",
           ["v7.0.0:src/L1/ETHLockbox.sol:67-232 — shared-lockbox authorization/migration paths are used by interop migration.",
@@ -983,7 +983,7 @@ def build_lineage() -> list[dict]:
         "| v2.1/v2.2 | No indexed target semantic delta | `SOURCE-FUNCTION-INDEX.json` |",
         "| v3.0.0 | EIP-7623-aware messenger baseGas | `v3.0.0:src/universal/CrossDomainMessenger.sol:354-390` |",
         "| v3.0.1 | No indexed target semantic delta | `SOURCE-FUNCTION-INDEX.json` |",
-        "| v4.0.0 | ETHLockbox custody; scoped expiring pauses; ASR owns invalidation; super-root Portal | `v4.0.0:src/L1/ETHLockbox.sol:67-219`; `src/dispute/AnchorStateRegistry.sol:34-340` |",
+        "| v4.0.0 | ETHLockbox custody; scoped expiring pauses; ASR owns invalidation; super-root Portal | `v4.0.0:src/L1/ETHLockbox.sol:67-232`; `src/dispute/AnchorStateRegistry.sol:34-340` |",
         "| v4.1.0 | Output-root/interoperability Portal split; runtime features/pause-key selection | `v4.1.0:src/L1/SystemConfig.sol:139,503-534` |",
         "| v5.0.0 | DGF gameArgs becomes persistent future-clone configuration | `v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292` |",
         "| v6.0.0 | ASR retirement preserved across reinitialization; dual clone-arg layout | `v6.0.0:src/dispute/AnchorStateRegistry.sol:107-115`; `src/dispute/DisputeGameFactory.sol:140-220` |",

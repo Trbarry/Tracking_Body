@@ -1,0 +1,193 @@
+{
+ "chain": "UNICHAIN",
+ "chainId": 130,
+ "source": "F5 scripts/F5-history.py (eth_getCode binary search, eth_getLogs full range through the L1 archive proxy), superchain-registry@edd89bd1",
+ "registry": {
+  "name": "Unichain",
+  "superchain_time": 0,
+  "genesis": {
+   "l2_time": 1730748359,
+   "l1": {
+    "hash": "0x8c799ed21bd97471f76ba48ea54b30f8169c7e4e4a22acfba06951b571e0f4b6",
+    "number": 21116363
+   },
+   "l2": {
+    "hash": "0x3425162ddf41a0a1f0106d67b71828c9a9577e6ddeb94e4f33d2cde1fdc3befe",
+    "number": 0
+   },
+   "system_config": {
+    "batcherAddress": "0x2F60A5184c63ca94f82a27100643DbAbe4F3f7Fd",
+    "overhead": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "scalar": "0x010000000000000000000000000000000000000000000000000dbba0000007d0",
+    "gasLimit": 30000000
+   }
+  },
+  "hardforks": {
+   "canyon_time": 0,
+   "delta_time": 0,
+   "ecotone_time": 0,
+   "fjord_time": 0,
+   "granite_time": 0,
+   "holocene_time": 1736445601,
+   "isthmus_time": 1746806401,
+   "jovian_time": 1764691201,
+   "karst_time": 1783526401,
+   "keep_karst_upgrade_gas": true,
+   "lagoon_time": 1799683201
+  },
+  "block_time": 1,
+  "batch_inbox_addr": "0xFf00000000000000000000000000000000000130",
+  "roles": {
+   "ProxyAdminOwner": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A"
+  },
+  "public_rpc": "https://mainnet.unichain.org",
+  "data_availability_type": "eth-da"
+ },
+ "proxies": {
+  "SystemConfig": {
+   "address": "0xc407398d063f942febbcc6f80a156b47f3f1bda6",
+   "firstCodeBlock": 21116351,
+   "firstCodeTime": "2024-11-04 19:23:35",
+   "implSlotAtFirstCodeBlock": "0x0000000000000000000000000000000000000000",
+   "firstImplementation": "0xf56d96b2535b932656d3c04ebf51babff241d886",
+   "firstImplementationVersion": "2.2.0",
+   "adminSlotAtFirstCodeBlock": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "adminSlotAtPin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "implAtPin": "0xade27248542c0f3e89b49e4eb76155e267f14377"
+  },
+  "OptimismPortal": {
+   "address": "0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2",
+   "firstCodeBlock": 21116350,
+   "firstCodeTime": "2024-11-04 19:23:23",
+   "implSlotAtFirstCodeBlock": "0x0000000000000000000000000000000000000000",
+   "firstImplementation": "0xe2f826324b2faf99e513d16d266c3f80ae87832b",
+   "firstImplementationVersion": "3.10.0",
+   "adminSlotAtFirstCodeBlock": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "adminSlotAtPin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "implAtPin": "0xb20b23af6071405c37ddda0c0640e8ebb7899645"
+  },
+  "ETHLockbox": {
+   "address": "0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5",
+   "firstCodeBlock": 22990722,
+   "firstCodeTime": "2025-07-24 18:12:11",
+   "implSlotAtFirstCodeBlock": "0x784d2f03593a42a6e4676a012762f18775ecbbe6",
+   "firstImplementation": "0x784d2f03593a42a6e4676a012762f18775ecbbe6",
+   "firstImplementationVersion": "1.2.0",
+   "adminSlotAtFirstCodeBlock": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "adminSlotAtPin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "implAtPin": "0xdf75e6b07e98873e36ba5c05508f80c1454e0afe"
+  },
+  "AnchorStateRegistry": {
+   "address": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+   "firstCodeBlock": 22990722,
+   "firstCodeTime": "2025-07-24 18:12:11",
+   "implSlotAtFirstCodeBlock": "0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e",
+   "firstImplementation": "0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e",
+   "firstImplementationVersion": "3.5.0",
+   "adminSlotAtFirstCodeBlock": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "adminSlotAtPin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "implAtPin": "0x2b27299c577d4720100e2735b652444dcea652d0"
+  },
+  "DisputeGameFactory": {
+   "address": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+   "firstCodeBlock": 21116356,
+   "firstCodeTime": "2024-11-04 19:24:35",
+   "implSlotAtFirstCodeBlock": "0x0000000000000000000000000000000000000000",
+   "firstImplementation": "0xc641a33cab81c559f2bd4b21ea34c290e2440c2b",
+   "firstImplementationVersion": "1.0.0",
+   "adminSlotAtFirstCodeBlock": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "adminSlotAtPin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "implAtPin": "0x72b971717e088b59f26d4236be222adb6acd393b"
+  },
+  "DelayedWETH": {
+   "address": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+   "firstCodeBlock": 25475307,
+   "firstCodeTime": "2026-07-06 18:32:35",
+   "implSlotAtFirstCodeBlock": "0xe440cc08a71694c8229323803f59024e3144630e",
+   "firstImplementation": "0xe440cc08a71694c8229323803f59024e3144630e",
+   "firstImplementationVersion": "1.5.1",
+   "adminSlotAtFirstCodeBlock": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "adminSlotAtPin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "implAtPin": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15"
+  },
+  "L1CrossDomainMessenger": {
+   "address": "0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6",
+   "firstCodeBlock": 21116353,
+   "firstCodeTime": "2024-11-04 19:23:59",
+   "implSlotAtFirstCodeBlock": "0x0000000000000000000000000000000000000000",
+   "firstImplementation": "0xd3494713a5cfad3f5359379dfa074e2ac8c6fd65",
+   "firstImplementationVersion": "2.3.0",
+   "adminSlotAtFirstCodeBlock": "0x0000000000000000000000000000000000000000",
+   "adminSlotAtPin": "0x0000000000000000000000000000000000000000",
+   "implAtPin": "0x0000000000000000000000000000000000000000"
+  },
+  "L1StandardBridge": {
+   "address": "0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA",
+   "firstCodeBlock": 21116352,
+   "firstCodeTime": "2024-11-04 19:23:47",
+   "implSlotAtFirstCodeBlock": "0x0000000000000000000000000000000000000000",
+   "firstImplementation": "0x64b5a5ed26dcb17370ff4d33a8d503f0fbd06cff",
+   "firstImplementationVersion": "2.1.0",
+   "adminSlotAtFirstCodeBlock": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "adminSlotAtPin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "implAtPin": "0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891"
+  },
+  "L1ERC721Bridge": {
+   "address": "0xD04D0D87E0bd4D2E50286760a3EF323FeA6849Cf",
+   "firstCodeBlock": 21116355,
+   "firstCodeTime": "2024-11-04 19:24:23",
+   "implSlotAtFirstCodeBlock": "0x0000000000000000000000000000000000000000",
+   "firstImplementation": "0xae2af01232a6c4a4d3012c5ec5b1b35059caf10d",
+   "firstImplementationVersion": "2.1.0",
+   "adminSlotAtFirstCodeBlock": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "adminSlotAtPin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "implAtPin": "0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e"
+  },
+  "OptimismMintableERC20Factory": {
+   "address": "0xA2B597EaeAcb6F627e088cbEaD319e934ED5edad",
+   "firstCodeBlock": 21116354,
+   "firstCodeTime": "2024-11-04 19:24:11",
+   "implSlotAtFirstCodeBlock": "0x0000000000000000000000000000000000000000",
+   "firstImplementation": "0xe01efbeb1089d1d1db9c6c8b135c934c0734c846",
+   "firstImplementationVersion": "1.9.0",
+   "adminSlotAtFirstCodeBlock": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "adminSlotAtPin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+   "implAtPin": "0xaabea75da509fa518fd8a91eae4be5813b829b12"
+  },
+  "ProxyAdmin": {
+   "address": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+   "firstCodeBlock": 21116348,
+   "firstCodeTime": "2024-11-04 19:22:59",
+   "implSlotAtFirstCodeBlock": null,
+   "firstImplementation": null,
+   "firstImplementationVersion": null,
+   "adminSlotAtFirstCodeBlock": null,
+   "adminSlotAtPin": null,
+   "implAtPin": null
+  },
+  "AddressManager": {
+   "address": "0x8098f676033a377b9defe302e9fe6877cd63d575",
+   "firstCodeBlock": 21116347,
+   "firstCodeTime": "2024-11-04 19:22:47",
+   "implSlotAtFirstCodeBlock": null,
+   "firstImplementation": null,
+   "firstImplementationVersion": null,
+   "adminSlotAtFirstCodeBlock": null,
+   "adminSlotAtPin": null,
+   "implAtPin": null
+  }
+ },
+ "deploymentBlocks": [
+  21116347,
+  21116348,
+  21116350,
+  21116351,
+  21116352,
+  21116353,
+  21116354,
+  21116355,
+  21116356,
+  22990722,
+  25475307
+ ]
+}

@@ -1050,7 +1050,57 @@
      "value": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c"
     }
    ]
+  },
+  {
+   "name": "asrCurrent.disputeGameFactory()",
+   "to": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+   "sig": "disputeGameFactory()",
+   "args": [],
+   "calldata": "0xf2b4e617",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 22990722,
+     "timestamp": 1753380731,
+     "utc": "2025-07-24 18:12:11",
+     "value": "0x0000000000000000000000002f12d621a16e2d3285929c9996f478508951dfe4"
+    }
+   ]
+  },
+  {
+   "name": "asrCurrent.systemConfig()",
+   "to": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+   "sig": "systemConfig()",
+   "args": [],
+   "calldata": "0x33d7e2bd",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 22990722,
+     "timestamp": 1753380731,
+     "utc": "2025-07-24 18:12:11",
+     "value": "0x000000000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda6"
+    },
+    {
+     "block": 26430859,
+     "timestamp": 1794871439,
+     "utc": "2026-11-16 23:23:59",
+     "value": null
+    }
+   ]
   }
  ],
- "rpc_calls": 11834
+ "rpc_calls": 12413
 }
