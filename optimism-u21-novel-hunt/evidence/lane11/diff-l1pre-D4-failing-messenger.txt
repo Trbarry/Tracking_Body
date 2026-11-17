@@ -1,0 +1,16 @@
+presetFailedFlag.finalize := ok:0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470
+presetFailedFlag.finalizedFlag := 1
+presetFailedFlag.dLockbox := 0
+presetFailedFlag.portalBal := 0
+presetFailedFlag.cdmBal := 0
+presetFailedFlag.successfulMessages := 0
+presetFailedFlag.event := WithdrawalFinalized(success=false)
+presetFailedFlag.secondFinalize := revert:0x730a107400000000000000000000000000000000000000000000000000000000
+legacyAlreadyRelayed.finalize := ok:0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470
+legacyAlreadyRelayed.finalizedFlag := 1
+legacyAlreadyRelayed.dLockbox := 0
+legacyAlreadyRelayed.portalBal := 0
+legacyAlreadyRelayed.cdmBal := 0
+legacyAlreadyRelayed.successfulMessages := 0
+legacyAlreadyRelayed.event := WithdrawalFinalized(success=false)
+legacyAlreadyRelayed.secondFinalize := revert:0x730a107400000000000000000000000000000000000000000000000000000000

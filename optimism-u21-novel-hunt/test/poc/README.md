@@ -7,14 +7,21 @@ v9 code @ 26433900, `l1pre` = v8 code @ 26430858). Nothing is broadcast anywhere
 
 ```bash
 H=/home/user/Tracking_Body/optimism-u21-novel-hunt
-cd /home/user/u21-work/<lane-id>
-cp $H/test/poc/*.sol test/
-mkdir -p evidence && cp -r $H/evidence/withdrawal-fixtures evidence/      # split per-fixture JSON (fast loader)
-# foundry.toml of the harness needs (already in lane-11's copy, see foundry.toml.lane11):
-#   evm_version = "osaka"                      # mainnet rules at the pin (template says cancun)
-#   gas_limit   = "18446744073709551615"       # the gas scans do 10^4..10^5 probes per test
-forge test -j 1 --match-path test/FixtureE2E.t.sol -vv      # proves the fixture works end to end
+cp -r /home/user/u21-work/template /home/user/u21-work/<lane-id>-fx && cd /home/user/u21-work/<lane-id>-fx
+for f in U21Fixtures.sol U21GasScan.sol FixtureE2E.t.sol GasBoundary.t.sol InjectedGas.t.sol \
+         Differential.t.sol PortalInvariants.t.sol NestedReplay.t.sol L2RelayGas.t.sol; do cp $H/test/poc/$f test/; done
+cp $H/test/poc/foundry.toml.lane11 foundry.toml      # template + evm_version "osaka" + unlimited test gas
+mkdir -p evidence && cp -r $H/evidence/withdrawal-fixtures evidence/   # split per-fixture JSON (fast loader)
+forge test -j 1 --match-path test/FixtureE2E.t.sol -vv   # proves the fixture works end to end
 ```
+
+`foundry.toml.lane11` differs from the template in two lines: `evm_version = "osaka"` (mainnet
+rules at the pin; the template says cancun, which would ignore EIP-7702 delegations) and
+`gas_limit = "18446744073709551615"` (the gas scans do 10^4–10^5 probes per test). Only
+`U21Fixtures.sol` + the `evidence/withdrawal-fixtures/` directory are needed to reuse the fixture.
+The suites write their outputs to `evidence/` of the harness; lane 11's outputs are archived in
+`$H/evidence/lane11/`. Helper scripts (log fetch, calldata decoding, fixture generation, result
+tables, diff) are in `lane11-tools/` (paths inside them point at `/home/user/u21-work/lane-11`).
 
 Use `-j 1`: the shared anvils sit behind a rate-limited upstream (HTTP 429 when several tests
 fetch cold state in parallel). Second runs are served from the anvil cache and are fast.
@@ -112,7 +119,9 @@ when warmed). Do all preparation in `setUp()` if you measure gas.
 | `U21GasScan.sol` | shared probe machinery: outcome class of `finalize…ExternalProof{gas:g}` from a cold snapshot, with ETH accounting on every probe | (library) |
 | `GasBoundary.t.sol` | REAL fixtures: binary search of the minimum gas, every gas value ±`U21_DENSE` around the boundaries, coarse sweep from 0; plus a gas fuzz | `U21_FORK=l1pre|l1 U21_DENSE=800 forge test -j 1 --match-path test/GasBoundary.t.sol -vv` |
 | `InjectedGas.t.sol` | **HARNESS-ONLY injected** withdrawals (`vm.store` of one `provenWithdrawals` entry pointing at a real valid game): inner message size / minGasLimit / value / target behaviour (ok, revert, burn-all-gas, return-bomb, re-enter, empty account, EOA, EIP-7702 delegated) on the real portal + messenger bytecode | `U21_FORK=l1pre|l1 U21_SET=1|2|3 U21_TAG=-S1 forge test -j 1 --match-path test/InjectedGas.t.sol -vv` |
-| `Differential.t.sol` | D1 getters, D2 re-prove, D3 deposits (0…120 001 bytes), D4 finalize with a failing messenger, D5 pause identifiers, D6 `deleteProvenWithdrawal` — `key := value` lines per fork | run with `U21_FORK=l1pre` then `l1`, diff with `python3 diff.py` |
+| `Differential.t.sol` | D1 getters, D2 re-prove, D3 deposits (0…120 001 bytes), D4 finalize with a failing messenger, D5 pause identifiers, D6 `deleteProvenWithdrawal` — `key := value` lines per fork | run with `U21_FORK=l1pre` then `l1`, diff with `python3 lane11-tools/diff.py` |
+| `NestedReplay.t.sol` | finalizing a real victim withdrawal from inside an L1CDM replay → forced `failedMessages` at any gas (PRIM-1102), both forks | `U21_FORK=l1pre|l1 forge test -j 1 --match-path test/NestedReplay.t.sol -vv` |
+| `L2RelayGas.t.sol` | fork `l2`: the un-upgraded L2CDM 2.2.1 relaying L1→L2 messages with the protocol-fixed gas; size × target matrix (PRIM-1103) | `forge test -j 1 --match-path test/L2RelayGas.t.sol -vv` |
 | `PortalInvariants.t.sol` | stateful invariant campaign on `l1` (handlers: deposit, sendMessage, donateETH, prove-replay by other submitters, finalize own/external/random gas, messenger replay, deleteProvenWithdrawal, warp, adversarial `vm.etch` targets, guardian pause/unpause/blacklist) | `FOUNDRY_INVARIANT_RUNS=24 FOUNDRY_INVARIANT_DEPTH=40 forge test -j 1 --match-path test/PortalInvariants.t.sol -vv` |
 
 Outcome classes used by the gas suites: `REVERTED`, `FINALIZED_RELAYED` (successfulMessages),

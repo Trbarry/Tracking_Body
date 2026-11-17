@@ -1,0 +1,2 @@
+campaign 1 (24 runs x 40 calls = 960 calls, 0 failures), aggregated handler outcome counts:
+blacklist.ok=5 delete.ok=1 delete.revert=97 deposit.ok=81 deposit.ok.whilePaused=27 donate.ok=89 etch.bomb=14 etch.burn=14 etch.reenter=12 etch.restore=15 etch.revert=9 finalize.ok=52 finalize.ok.failedMsg=3 finalize.ok.plainOk=2 finalize.ok.relayed=47 finalize.revert=105 finalize.revert.preOK(gas)=7 pause.ok=20 pause.revert=6 prove.ok=39 prove.revert=36 replay.revert=72 sendMessage.ok=104 unpause.ok=41 warp=91

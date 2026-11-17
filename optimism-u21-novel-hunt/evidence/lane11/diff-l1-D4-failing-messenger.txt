@@ -1,0 +1,16 @@
+presetFailedFlag.finalize := revert:0x979d93bf00000000000000000000000000000000000000000000000000000000
+presetFailedFlag.finalizedFlag := 0
+presetFailedFlag.dLockbox := 0
+presetFailedFlag.portalBal := 0
+presetFailedFlag.cdmBal := 0
+presetFailedFlag.successfulMessages := 0
+presetFailedFlag.event := none
+presetFailedFlag.secondFinalize := revert:0x979d93bf00000000000000000000000000000000000000000000000000000000
+legacyAlreadyRelayed.finalize := revert:0x979d93bf00000000000000000000000000000000000000000000000000000000
+legacyAlreadyRelayed.finalizedFlag := 0
+legacyAlreadyRelayed.dLockbox := 0
+legacyAlreadyRelayed.portalBal := 0
+legacyAlreadyRelayed.cdmBal := 0
+legacyAlreadyRelayed.successfulMessages := 0
+legacyAlreadyRelayed.event := none
+legacyAlreadyRelayed.secondFinalize := revert:0x979d93bf00000000000000000000000000000000000000000000000000000000

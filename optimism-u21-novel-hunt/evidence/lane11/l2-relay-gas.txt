@@ -1,0 +1,37 @@
+L2CDM version 2.2.1
+nonzero len=0 minGas=0 frameGas=287864 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+nonzero len=0 minGas=200000 frameGas=491002 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+nonzero len=1000 minGas=0 frameGas=287720 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+nonzero len=1000 minGas=200000 frameGas=490858 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+nonzero len=10000 minGas=0 frameGas=287752 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+nonzero len=10000 minGas=200000 frameGas=490890 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+nonzero len=20000 minGas=0 frameGas=489056 | burn:FAILED(replayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+nonzero len=20000 minGas=200000 frameGas=490954 | burn:FAILED(replayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+nonzero len=30000 minGas=0 frameGas=728992 | burn:FAILED(replayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+nonzero len=30000 minGas=200000 frameGas=728956 | burn:FAILED(replayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+nonzero len=40000 minGas=0 frameGas=969056 | burn:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+nonzero len=40000 minGas=200000 frameGas=969020 | burn:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+nonzero len=60000 minGas=0 frameGas=1449056 | burn:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+nonzero len=60000 minGas=200000 frameGas=1449020 | burn:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+nonzero len=90000 minGas=0 frameGas=2168968 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+nonzero len=90000 minGas=200000 frameGas=2168932 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+nonzero len=119000 minGas=0 frameGas=2865000 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+nonzero len=119000 minGas=200000 frameGas=2864964 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+zero len=0 minGas=0 frameGas=287864 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+zero len=0 minGas=200000 frameGas=491002 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+zero len=1000 minGas=0 frameGas=299720 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+zero len=1000 minGas=200000 frameGas=502858 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+zero len=10000 minGas=0 frameGas=407752 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+zero len=10000 minGas=200000 frameGas=610890 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+zero len=20000 minGas=0 frameGas=729056 | burn:FAILED(replayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+zero len=20000 minGas=200000 frameGas=730954 | burn:FAILED(replayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+zero len=30000 minGas=0 frameGas=1088992 | burn:FAILED(replayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+zero len=30000 minGas=200000 frameGas=1088956 | burn:FAILED(replayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+zero len=40000 minGas=0 frameGas=1449056 | burn:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+zero len=40000 minGas=200000 frameGas=1449020 | burn:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | burn+1eth:DEPOSIT_TX_REVERTED(neither recorded, unreplayable) | ok+1eth:RELAYED
+zero len=60000 minGas=0 frameGas=2169056 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+zero len=60000 minGas=200000 frameGas=2169020 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+zero len=90000 minGas=0 frameGas=3248968 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+zero len=90000 minGas=200000 frameGas=3248932 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+zero len=119000 minGas=0 frameGas=4293000 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
+zero len=119000 minGas=200000 frameGas=4292964 | burn:FAILED(replayable) | burn+1eth:FAILED(replayable) | ok+1eth:RELAYED
