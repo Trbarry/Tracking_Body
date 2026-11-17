@@ -1,0 +1,11 @@
+No bounty candidate found. I executed 11 fork experiments against deployed OPCM 9.0.3; all passed, with the full harness at 12/12. No public state-changing transaction was sent.
+
+- Candidates: none. Best rejected hypothesis—anchor poisoning—scores **-4** after future-only, no-impact, and documented-orphan deductions.
+- Anchor kill: both gen-2 anchors were permissionlessly advanced, but `vm.record` showed zero migration access. Live `anchorGame` slot 2 was also unread. The shared ASR uses only governance calldata.
+- Game/proof kill: pre-positioned games and proofs lose authority because the old DGF types are cleared and the fresh ASR rejects their addresses. A fresh shared game successfully finalized a 1 ETH withdrawal.
+- Liquidity/WETH kill: all ETH was conserved; all 11 legacy WETHs were unread; both live WETH balances remained redeemable.
+- Failure kill: a genuine late migration revert rolled back every pointer, feature bit, balance, deployment, and Safe nonce. Retry succeeded; repeat migration was rejected by `ChainAlreadyMigrated`.
+
+Highest-value next experiment: replay the byte-exact Lagoon Safe payload once published—actual starting root, timestamp, and game configs—after applying this same poison corpus.
+
+Artifacts: [report](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CATK-E-report.md), [fork test](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-E/test/CATKEMigration.t.sol), [experiment ledger](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-E/evidence/EXPERIMENTS.md), [live objects](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-E/LIVE-OBJECTS-CATK-E.md).
