@@ -14,7 +14,7 @@ forge test -j 1 --match-contract CATKEMigrationTest -vv
 RPC alias `l1` must point to the read-only pinned fork at Ethereum block `26433900`. The complete
 self-contained test is `test/CATKEMigration.t.sol`; a byte-identical evidence copy is under this
 directory's `test/` subdirectory. SHA-256:
-`a042e7947f5b203d7ec65c2f644f7f644f1dcf4225ce42d47ea931019a456298`.
+`09604396f4c63e7ba9a461d6c946319713646447f41776d43bd3fc7269f2984f`.
 
 For a call trace of an individual barrier:
 

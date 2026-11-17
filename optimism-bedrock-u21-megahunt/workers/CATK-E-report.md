@@ -28,7 +28,7 @@ anchor poisoning) scores `-4` after future-only, no-impact, and documented-orpha
 | E07 | `test_E07_gen1AndRetiredGameMutationGates` | gen-1 updates, old-type creates, type-5 non-proposer create, owner setters all fail | K02 |
 | E08 | `test_E08_prefundFutureProxyAddresses_noCollisionOrUnsafeRoot` | pre-funded future addresses still deploy; only attacker surplus remains | K05 |
 | E09 | `test_E09_lateFailureRollsBackAllState_thenRetrySucceeds` | real late decode failure is fully atomic; corrected retry succeeds | K06 |
-| E10 | `test_E10_repeatedMigrationRejected_stateUnchanged` | exact `ChainAlreadyMigrated` selector; no delta | K06 |
+| E10 | `test_E10_repeatedMigrationRejected_stateUnchanged` | direct/rogue-delegate attacker calls fail; repeat returns exact `ChainAlreadyMigrated`; no delta | K06 |
 | E11 | `test_E11_postMigrationGameAndWithdrawal_payFromSharedPool` | new shared game finalizes 1 ETH OP withdrawal | positive control |
 
 Exact command: `forge test -j 1 --match-contract CATKEMigrationTest -vv`. Result: **11/11**;

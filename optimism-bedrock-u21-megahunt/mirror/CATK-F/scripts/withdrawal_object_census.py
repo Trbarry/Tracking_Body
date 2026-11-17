@@ -112,6 +112,9 @@ def get_logs(rpc, start, end):
 
 def decode_message(log):
     raw = log["data"][2:]
+    dynamic_offset = int(raw[128:192], 16) * 2
+    dynamic_length = int(raw[dynamic_offset : dynamic_offset + 64], 16) * 2
+    payload = raw[dynamic_offset + 64 : dynamic_offset + 64 + dynamic_length]
     return {
         "block": int(log["blockNumber"], 16),
         "transaction_hash": log["transactionHash"].lower(),
@@ -122,6 +125,28 @@ def decode_message(log):
         "value": int(raw[0:64], 16),
         "gas_limit": int(raw[64:128], 16),
         "withdrawal_hash": "0x" + raw[192:256].lower(),
+        "payload": "0x" + payload.lower(),
+    }
+
+
+def decode_relay(payload):
+    raw = payload[2:]
+    if not raw.startswith("d764ad0b") or len(raw) < 8 + 6 * 64:
+        return None
+    args = raw[8:]
+    message_offset = int(args[5 * 64 : 6 * 64], 16) * 2
+    if len(args) < message_offset + 64:
+        return None
+    message_length = int(args[message_offset : message_offset + 64], 16) * 2
+    message = args[message_offset + 64 : message_offset + 64 + message_length]
+    return {
+        "nonce": int(args[0:64], 16),
+        "sender": "0x" + args[64:128][-40:].lower(),
+        "target": "0x" + args[128:192][-40:].lower(),
+        "value": int(args[192:256], 16),
+        "min_gas_limit": int(args[256:320], 16),
+        "message_bytes": len(message) // 2,
+        "message_selector": "0x" + message[:8].lower() if len(message) >= 8 else "0x",
     }
 
 
@@ -260,6 +285,43 @@ def main():
         item["broad_system_match"] = item["target"] in broad
         if item["broad_system_match"]:
             item["inventory_origins"] = origins[item["target"]]
+    inner_target_counts = Counter()
+    inner_parse_failures = []
+    live_inner_system = []
+    canonical_inner_system_total = 0
+    canonical_inner_broad_total = 0
+    for item in canonical:
+        item["proven_on_l1"] = item["withdrawal_hash"] in proven
+        item["finalized_on_l1"] = item["withdrawal_hash"] in finalized
+        relay = decode_relay(item["payload"])
+        if relay is None:
+            inner_parse_failures.append(
+                {
+                    key: item[key]
+                    for key in ("block", "transaction_hash", "log_index", "sender", "withdrawal_hash")
+                }
+            )
+            continue
+        inner_target_counts[relay["target"]] += 1
+        curated_match = relay["target"] in curated
+        broad_match = relay["target"] in broad
+        canonical_inner_system_total += int(curated_match)
+        canonical_inner_broad_total += int(broad_match)
+        if curated_match and not item["finalized_on_l1"]:
+            live_inner_system.append(
+                {
+                    "withdrawal_hash": item["withdrawal_hash"],
+                    "l2_block": item["block"],
+                    "l2_transaction_hash": item["transaction_hash"],
+                    "outer_sender": item["sender"],
+                    "proven_on_l1": item["proven_on_l1"],
+                    "inner": relay,
+                    "inventory_origins": origins[relay["target"]],
+                }
+            )
+    # Payloads are decoded above but omitted from the evidence rows to keep the census compact.
+    for item in messages:
+        item.pop("payload", None)
 
     chronology = None
     if OUT.exists():
@@ -298,6 +360,19 @@ def main():
             "canonical_l1_messenger_target": len(canonical),
             "canonical_target_wrong_sender": len(canonical_wrong_sender),
             "canonical_wrong_sender_messages": canonical_wrong_sender,
+            "canonical_relay_parse_failures": len(inner_parse_failures),
+            "canonical_relay_parse_failure_rows": inner_parse_failures,
+            "canonical_inner_target_counts": dict(inner_target_counts.most_common()),
+            "canonical_inner_curated_system_total": canonical_inner_system_total,
+            "canonical_inner_broad_system_total": canonical_inner_broad_total,
+            "unfinalized_canonical_inner_system_count": len(live_inner_system),
+            "unfinalized_canonical_inner_system_proven": sum(
+                1 for item in live_inner_system if item["proven_on_l1"]
+            ),
+            "unfinalized_canonical_inner_system_unproven": sum(
+                1 for item in live_inner_system if not item["proven_on_l1"]
+            ),
+            "unfinalized_canonical_inner_system": live_inner_system,
             "direct_nonmessenger": len(direct),
             "direct_distinct_targets": len({item["target"] for item in direct}),
             "direct_proven_on_l1": sum(1 for item in direct if item["proven_on_l1"]),

@@ -719,13 +719,23 @@ contract CATKEMigrationTest is Test {
 
     /// E10: A second migration is rejected by the permanent INTEROP bit before any custody change.
     function test_E10_repeatedMigrationRejected_stateUnchanged() public {
+        MigrateInput memory input = _validInput();
+        vm.prank(ATTACKER);
+        (bool directOK,) = OPCM.call(abi.encodeCall(IOPCM.migrate, (input)));
+        DelegateCallerCATKE rogueDelegate = new DelegateCallerCATKE();
+        vm.prank(ATTACKER);
+        (bool rogueDelegateOK,) = address(rogueDelegate)
+            .call(abi.encodeCall(DelegateCallerCATKE.exec, (OPCM, abi.encodeCall(IOPCM.migrate, (input)))));
+        assertFalse(directOK, "OPCM accepted a non-delegate migration");
+        assertFalse(rogueDelegateOK, "non-owner delegate context migrated chains");
+
         _migrate();
         address sharedASR = OP_PORTAL.anchorStateRegistry();
         address sharedDGF = OP_PORTAL.disputeGameFactory();
         address sharedLockbox = OP_PORTAL.ethLockbox();
         uint256 balance = sharedLockbox.balance;
 
-        (bool ok, bytes memory reason) = _callMigrate(_validInput());
+        (bool ok, bytes memory reason) = _callMigrate(input);
         assertFalse(ok, "repeat migration succeeded");
         assertGe(reason.length, 4);
         bytes4 selector;

@@ -25,7 +25,7 @@ was 12/12.
 | E07 | `test_E07_gen1AndRetiredGameMutationGates` | Try gen-1 ASR updates, type-0 creation, type-5 creation as non-proposer, and factory owner setters | every call fails; types 0/1 unset and gen-1 gate requires a registered game/guardian. Kill K02 |
 | E08 | `test_E08_prefundFutureProxyAddresses_noCollisionOrUnsafeRoot` | Dry-run to derive the three timestamp-specific proxy addresses; revert snapshot; pre-fund each; rerun migration | same proxies deploy; lockbox gains 101 wei surplus; ASR/DGF retain 103/107 attacker wei; supplied root unchanged. Kill K05 |
 | E09 | `test_E09_lateFailureRollsBackAllState_thenRetrySucceeds` | Supply empty type-5 args: passes preflight, fails in final `_makeGameArgs` after per-chain work; then correct and retry | first transaction leaves all pointers, balances, feature bits and Safe nonce unchanged; retry succeeds. Kill K06 |
-| E10 | `test_E10_repeatedMigrationRejected_stateUnchanged` | Repeat valid migration after success | exact `OPContractsManagerMigrator_ChainAlreadyMigrated()` selector; shared pointers/custody unchanged. Kill K06 |
+| E10 | `test_E10_repeatedMigrationRejected_stateUnchanged` | Attempt direct and rogue-delegate migration as attacker; then execute governance migration and repeat it | both attacker calls fail; repeat returns exact `OPContractsManagerMigrator_ChainAlreadyMigrated()` selector; shared pointers/custody unchanged. Kill K06 |
 | E11 | `test_E11_postMigrationGameAndWithdrawal_payFromSharedPool` | Positive control: create shared game, prove OP withdrawal, resolve/wait/finalize | attacker receives exactly 1 ETH from shared lockbox; migrated withdrawal path is live. Control |
 
 ## Logged deterministic addresses at the pinned timestamp
