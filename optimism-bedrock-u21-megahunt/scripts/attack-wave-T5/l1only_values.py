@@ -29,6 +29,15 @@ for l in fin:
     ok = int(l["data"][2:], 16) == 1
     if v is None: miss.append(l["topics"][1])
     rows.append(dict(block=int(l["blockNumber"], 16), tx=l["transactionHash"], hash=l["topics"][1], success=ok, value=None if v is None else str(v)))
+# fallback for calldata the tuple search cannot see (e.g. compressed/packed wrappers): the receipt's single
+# lockbox ETHUnlocked amount next to a single WithdrawalFinalized (lockbox era only)
+UNL = "0xe9512d49448b580f3d29031e9243ee81bc8789a93d6f04ec8f03b694d623637b"; FIN = "0xdb5c7652857aa163daadd670e116628fb42e869d8ac4251ef8971d9e5727df1b"
+for r in rows:
+    if r["value"] is not None: continue
+    rc = rpc.call(rpc.L1, "eth_getTransactionReceipt", [r["tx"]])
+    u = [l for l in rc["logs"] if l["topics"][0] == UNL]; f = [l for l in rc["logs"] if l["topics"][0] == FIN]
+    if len(u) == 1 and len(f) == 1 and f[0]["topics"][1] == r["hash"]:
+        r["value"] = str(int(u[0]["data"][2:], 16)); r["source"] = "receipt ETHUnlocked"; miss.remove(r["hash"])
 json.dump(dict(rows=rows, undecoded=miss), open(sys.argv[2], "w"))
 print("finalized", len(rows), "txs", len(txs), "undecoded", len(miss), "success=false", sum(1 for r in rows if not r["success"]),
       "sum value success", sum(int(r["value"]) for r in rows if r["value"] and r["success"]) / 1e18)

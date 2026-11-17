@@ -1,0 +1,8 @@
+
+Ran 3 tests for test/T5_Custody.t.sol:T5CustodyTest
+[PASS] test_T5_custody_covers_liability_at_26433900() (gas: 18979)
+[PASS] test_T5_donations_and_forced_eth_are_surplus_only() (gas: 141996)
+[PASS] test_T5_every_deposit_path_mints_exactly_what_it_locks() (gas: 1363070)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 1.47s (5.54ms CPU time)
+
+Ran 1 test suite in 1.49s (1.47s CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)

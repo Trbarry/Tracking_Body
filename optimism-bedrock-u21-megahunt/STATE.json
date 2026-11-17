@@ -38,7 +38,7 @@
       "range": "Bedrock -> v7.0.0"
     },
     "C_global_composition": {
-      "status": "RESUME_WAVE_RUNNING",
+      "status": "RESUME_WAVE_DONE",
       "lanes": [
         "ATK-A old-prestate soundness",
         "ATK-B messenger forced failure",
@@ -66,7 +66,7 @@
           "ATK-T3": "19 exp, 8 kills, 0 cand",
           "ATK-T4": "13 exp, 11 kills, 0 cand",
           "ATK-T2": "19 exp, 6 kills, 0 cand",
-          "ATK-T5": "running"
+          "ATK-T5": "23 exp, 5 kills, 0 cand; OP margin +1.70197 ETH"
         },
         "codex_results": {
           "CATK-T1": "15 exp, 0 cand",
@@ -107,8 +107,8 @@
   "mythos_escalation_limit": 3,
   "concurrency_limit": 6,
   "top_root_cause": null,
-  "current_blocker": null,
-  "next_experiment": "targeted wave: audit-fix mutation (top-15 fix-closure targets), uncovered lanes (L2 predeploys, SystemConfig event/client drift, bridge token identity, CGT), OVM-era messenger full scan, pre-fault-proof carry-through",
+  "current_blocker": "no L2 RPC for Ink/Soneium/Unichain; no public debug_executionWitness source",
+  "next_experiment": "Unichain L2 archive endpoint: per-withdrawal L2 MessagePassed value vs L1 calldata (removes last solvency assumption before OP+Unichain pooling); kona-host v1.7.0 --native over an old-game window needs an L2 execution-witness source",
   "model_note": "2026-11-17 ~12:00 UTC: Mythos 5.2 quota exhausted (resets 2026-11-22 00:00 UTC). User switched the session to Opus 5.5 and asked to continue on it; F2/F4/F5/F6 resumed on Opus 5.5 from their saved work. Codex mirrors unaffected.",
   "closures": 17,
   "legal_framework": "CADRE-LEGAL.md \u2014 prepended verbatim to every worker prompt (scripts/mkprompt.sh, scripts/check_prompt.sh)"

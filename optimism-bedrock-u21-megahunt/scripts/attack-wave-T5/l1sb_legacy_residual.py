@@ -1,12 +1,12 @@
 """ATK-T5: pre-Bedrock L1StandardBridge ETH ledger. residual(b) = balance(b) - (sum ETHDepositInitiated - sum ETHWithdrawalFinalized)(<=b).
 Bisects every block where the residual changes (eventless inflow/outflow). Read-only balance reads via :7545."""
-import json, bisect, sys, os
+import json, bisect, sys, os, gzip
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import rpc
 E = "/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/evidence/attack-wave/T5"
 A = "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1"
-ev = [(int(l["blockNumber"], 16), int(l["data"][2:66], 16)) for l in json.load(open(E + "/legacy-l1sb-eth-deposits.json"))["logs"]]
-ev += [(int(l["blockNumber"], 16), -int(l["data"][2:66], 16)) for l in json.load(open(E + "/legacy-l1sb-eth-withdrawals.json"))["logs"]]
+ev = [(int(l["blockNumber"], 16), int(l["data"][2:66], 16)) for l in [l for i in (1, 2) for l in json.load(gzip.open(E + f"/legacy-l1sb-eth-deposits.part{i}.json.gz"))["logs"]]]
+ev += [(int(l["blockNumber"], 16), -int(l["data"][2:66], 16)) for l in json.load(gzip.open(E + "/legacy-l1sb-eth-withdrawals.json.gz"))["logs"]]
 ev.sort(); eb = [e[0] for e in ev]; cum = [0]
 for e in ev: cum.append(cum[-1] + e[1])
 def net(b): return cum[bisect.bisect_right(eb, b)]

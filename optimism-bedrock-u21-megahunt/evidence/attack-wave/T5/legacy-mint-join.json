@@ -1,0 +1,33 @@
+{
+ "l1_deposits": 317436,
+ "l2_mints": 203074,
+ "matched": 203074,
+ "first_matched_l1_block": 13597347,
+ "l2_mints_without_l1": 0,
+ "l2_mints_without_l1_wei": "0",
+ "l2_unmatched": [],
+ "l1_unminted_total": 114362,
+ "l1_unminted_wei": "35074665800946561726970",
+ "l1_unminted_before_13596000": 114360,
+ "wei_before": "35074460800946561726970",
+ "l1_unminted_after_13596000": 2,
+ "wei_after": "205000000000000000",
+ "after_list": [
+  [
+   13596019,
+   307,
+   "0x8d0d277803e7209070d777973cc9a805c5c59a9a",
+   5000000000000000,
+   "0x1caf81b692ccf4c3373e43eae9808824260d9fe25b13680e099b590070584924"
+  ],
+  [
+   13596240,
+   215,
+   "0xd34586c03198eb659671daf9dc3449dc0bda4d04",
+   200000000000000000,
+   "0x7e74b534d03ecc841cb9bf9aacca00ff6433583019d382295816218dc0ba8fb9"
+  ]
+ ],
+ "last_unminted_pre_block": 13595992,
+ "first_matched_after": 13597347
+}

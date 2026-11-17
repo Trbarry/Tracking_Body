@@ -182,3 +182,16 @@ third-party targets in T2 (21,608 unrelayed legacy messages to third-party L1 co
 | CATK-T2 | STOPPED by the OpenAI cybersecurity filter; not re-run (CADRE-LEGAL 5) |
 | CATK-T3 | 19 experiments, 7 kills (`rejected/ATTACK-CATK-T3-*`), 0 candidates — agrees with ATK-T3 |
 | CATK-T4 | STOPPED by the OpenAI cybersecurity filter; not re-run (CADRE-LEGAL 5). Partial log reproduces ATK-T4-03 (same 4 malformed-log divergences, identical valid-case hashes on kona v1.7/v1.9/op-node) |
+
+## Lane T5 — Custody solvency (OP lockbox vs outstanding L2 ETH liability)
+
+OP solvent at L1 26,433,900 / L2 159,654,093: margin **+1.701970012 ETH** (fixed at Bedrock), ledger residual 0 wei at 20
+checkpoints. Ink/Soneium/Unichain L1-only ledgers close to 0 wei (-256 wei genesis precompile dust, not withdrawable).
+
+| Kill file | Title |
+|---|---|
+| `rejected/ATTACK-T5-01.md` | ATTACK-T5-01 — OP Mainnet custody below outstanding L2 ETH liability (protocol insolvency) (KILLED) |
+| `rejected/ATTACK-T5-02.md` | ATTACK-T5-02 — a deposit mints L2 ETH without the matching L1 lock (unbacked L2 ETH) (KILLED) |
+| `rejected/ATTACK-T5-03.md` | ATTACK-T5-03 — an L1 payout without a matching L2 burn / custody outflow not explained by a finalized withdrawal (KILLED) |
+| `rejected/ATTACK-T5-04.md` | ATTACK-T5-04 — donations / forced ETH / governance moves hide a deficit or create an exploitable gap (KILLED) |
+| `rejected/ATTACK-T5-05.md` | ATTACK-T5-05 — Ink / Soneium / Unichain lockbox below its chain's L2 ETH liability before pooling (lead L9) (KILLED to the L1-only bound) |

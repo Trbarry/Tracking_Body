@@ -1,0 +1,101 @@
+{
+ "deposits": 80288,
+ "sum_mint": "20362695592719867548268",
+ "finalized": 1580,
+ "sum_finalized_values": "18167135440113761231609",
+ "failed": 0,
+ "genesis_alloc_wei": "256",
+ "custody": "2195560152606106316659",
+ "liability_upper_L1only": "2195560152606106316915",
+ "margin_wei": "-256",
+ "margin_eth": -2.56e-16,
+ "lockbox_unlocked_sum": "8921069133439560765637",
+ "paid_from_first_unlock_block": "8921069133439560765637",
+ "unlock_vs_paid_diff": "0",
+ "checkpoints": [
+  {
+   "block": 21314185,
+   "actual": "0",
+   "predicted": "0",
+   "residual_wei": "0"
+  },
+  {
+   "block": 21500000,
+   "actual": "100896877353656027890",
+   "predicted": "100896877353656027890",
+   "residual_wei": "0"
+  },
+  {
+   "block": 22000000,
+   "actual": "10027022214428439655879",
+   "predicted": "10027022214428439655879",
+   "residual_wei": "0"
+  },
+  {
+   "block": 22500000,
+   "actual": "13703325286438187182605",
+   "predicted": "13703325286438187182605",
+   "residual_wei": "0"
+  },
+  {
+   "block": 22990669,
+   "actual": "8877050938229307093797",
+   "predicted": "8877050938229307093797",
+   "residual_wei": "0"
+  },
+  {
+   "block": 22990670,
+   "actual": "8877050938229307093797",
+   "predicted": "8877050938229307093797",
+   "residual_wei": "0"
+  },
+  {
+   "block": 23000000,
+   "actual": "8877167238229307093797",
+   "predicted": "8877167238229307093797",
+   "residual_wei": "0"
+  },
+  {
+   "block": 23500000,
+   "actual": "7298491521415861905902",
+   "predicted": "7298491521415861905902",
+   "residual_wei": "0"
+  },
+  {
+   "block": 24000000,
+   "actual": "6230966019880267794039",
+   "predicted": "6230966019880267794039",
+   "residual_wei": "0"
+  },
+  {
+   "block": 24500000,
+   "actual": "3856012104120536463003",
+   "predicted": "3856012104120536463003",
+   "residual_wei": "0"
+  },
+  {
+   "block": 25000000,
+   "actual": "2880899980888834669977",
+   "predicted": "2880899980888834669977",
+   "residual_wei": "0"
+  },
+  {
+   "block": 25500000,
+   "actual": "2632591066888326425689",
+   "predicted": "2632591066888326425689",
+   "residual_wei": "0"
+  },
+  {
+   "block": 26000000,
+   "actual": "2187093189291255256078",
+   "predicted": "2187093189291255256078",
+   "residual_wei": "0"
+  },
+  {
+   "block": 26433900,
+   "actual": "2195560152606106316659",
+   "predicted": "2195560152606106316659",
+   "residual_wei": "0"
+  }
+ ]
+}
