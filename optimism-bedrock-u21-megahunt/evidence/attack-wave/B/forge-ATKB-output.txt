@@ -1,0 +1,51 @@
+No files changed, compilation skipped
+
+Ran 5 tests for test/ATKB.t.sol:ATKBTest
+[PASS] test_E1_census_replay_stillFailed_underV9() (gas: 3250570)
+Logs:
+  msg: 0x18b123eba23716f71c057e6aea971962e44dd5ff7060a448940f3b70cc544c25
+    outcome: DELIVERED
+  msg: 0x1829f5fef01c789059b15c617fb80c38c9d5878d28711b0ac56029c924cd2b92
+    outcome: STILL_FAILED
+  msg: 0x6c9a36ef9b84c9b81e771d69cb3510a754dc27a0c8d7107d0ff886eeffd0623d
+    outcome: DELIVERED
+  msg: 0x71c9882b0173bb6c4f718642f0e20c3171c2669c9e4ef0ef99d64ee958ee4162
+    outcome: DELIVERED
+  msg: 0x33f61390a17c6fc32db1a11557ae861c762d6784a3f4a493138c38051faee088
+    outcome: STILL_FAILED
+  msg: 0x2c820221fbef636211cbff87243f637325f124f5e6c27c91929cb4854000f60f
+    outcome: STILL_FAILED
+  msg: 0xdc594bf2048e71225a1d0bebeab1a81e0e77bef9227e6770a41916396af859d7
+    outcome: STILL_FAILED
+  msg: 0x09af464ae93df20c9d7d768402753578bd7aef7eebfc2f7b1e8a37eb77280ff1
+    outcome: STILL_FAILED
+  msg: 0xe43cf22b3252c92cce6b3884f541ac9986c6859fd0b4421f8ab0a13db78c8802
+    outcome: STILL_FAILED
+  msg: 0xe208b5278fff03643885102e09614d11a39aa3ec0efc3418e9f31170b1dc566f
+    outcome: STILL_FAILED
+  msg: 0x384bf7ec98f1b63104cf6867d15a537510d99750345268f05b15175f07e2dd1e
+    outcome: STILL_FAILED
+  msg: 0x43e0b78554c436637d3a3f6383edce9dd460777a14776a6b035c604c38bd0deb
+    outcome: STILL_FAILED
+  msg: 0xb53bc394addf5cc3467d06f5a06b44cbcbd7f12d71cce812afe5f6f51b65f403
+    outcome: STILL_FAILED
+  msg: 0xae1005458951d769f4f18048ee0fab273be75169c397e0c0fbdc34b8b9081a7d
+    outcome: STILL_FAILED
+  msg: 0x9546105b80a67d2890768f2cf1c9bfdbc6d855ed8e8d7f47373d491b8bb11312
+    outcome: STILL_FAILED
+  delivered by a third-party replay under v9: 3
+
+[PASS] test_E2_forcedFail_ERC20_ordering_and_replay_blocking() (gas: 2268160)
+[PASS] test_E3_replay_gas_sweep_no_starvation_band() (gas: 50481902)
+Logs:
+  still failed (retryable): 112
+  reverted (retryable): 0
+  delivered: 389
+  first delivering call gas: 412000
+  non-delivered above the threshold: 0
+
+[PASS] test_E4_parked_ETH_not_capturable() (gas: 1477460)
+[PASS] test_E5_forcedFail_then_migrate_then_replay() (gas: 5578489)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 409.75ms (391.10ms CPU time)
+
+Ran 1 test suite in 422.96ms (409.75ms CPU time): 5 tests passed, 0 failed, 0 skipped (5 total tests)

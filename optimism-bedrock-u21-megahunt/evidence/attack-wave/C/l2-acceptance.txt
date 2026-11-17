@@ -1,0 +1,7 @@
+{"msgLen": 0, "byte": 0, "minGasLimit": 16000000, "l2_estimateGas": 86388}
+{"msgLen": 0, "byte": 0, "minGasLimit": 4000000000, "l2_estimateGas": 86400}
+{"msgLen": 100000, "byte": 255, "minGasLimit": 0, "l2_estimateGas": 4606505}
+{"msgLen": 350000, "byte": 255, "minGasLimit": 0, "l2_estimateGas": 19295840}
+{"msgLen": 400000, "byte": 0, "minGasLimit": 0, "l2_estimateGas": 18013455}
+{"msgLen": 1000000, "byte": 0, "minGasLimit": 0, "l2_estimateGas": "ERR {\"code\": 3, \"message\": \"execution reverted\", \"data\": \"0x\"}"}
+L2 block gasLimit 40000000

@@ -1,0 +1,3 @@
+# ATK-E E-08 pre-funded predicted CREATE2 addresses
+lockbox 0x8cc1eE887517E6964Ae6C9258784ac74B7E73FCA +5 ETH, asr +1, dgf +1
+migrate: OK, same addresses; lockbox balance 200812226200523469952640 (clean 200807226200523469952640)

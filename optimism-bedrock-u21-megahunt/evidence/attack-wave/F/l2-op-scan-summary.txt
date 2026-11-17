@@ -1,0 +1,8 @@
+chunk 0 hits 0
+chunk 80 hits 0
+chunk 160 hits 0
+chunk 240 hits 0
+chunk 320 hits 1
+chunk 400 hits 1
+L2 hits 1 L1 extra hits 1
+1 ('0x00b700b9da0053009cb84400ed1e8fe251002af3', '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2') ['F4 hist / WETH9']

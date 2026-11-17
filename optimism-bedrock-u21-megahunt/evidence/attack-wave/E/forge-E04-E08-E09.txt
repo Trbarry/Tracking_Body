@@ -1,0 +1,36 @@
+No files changed, compilation skipped
+
+Ran 3 tests for test/ATKE_Poison.t.sol:ATKE_PoisonTest
+[PASS] test_E04_postMigration_poisoned_objects_inert() (gas: 18694248)
+Logs:
+  # ATK-E E-04 post-migration reads of attacker-created/moved objects
+shared.isGameRegistered(opAtkGame)=false shared.isGameClaimValid=false oldASR.isGameProper=true oldDGF.impl(9)=0
+legacy OP DGF.create(9) after migrate: REVERT 0x031c6de4
+shared game created by attacker 0x1A35730CD00eDde802d95DE6B6e3899274987129
+gen2.isGameClaimValid(sharedGame): OK false
+oldASR.setAnchorState(sharedGame): REVERT 0x47ad367a
+portal.respectedGameType() (mirrors shared ASR) 9 respectedGameTypeUpdatedAt 1794908075
+gen2.isGameClaimValid(game#20094) after migrate: OK false
+gen2.getAnchorRoot() after migrate: OK
+old ASRs + both DelayedWETHs ethLockbox == shared lockbox
+
+
+[PASS] test_E08_prefund_predicted_shared_addresses() (gas: 7486869)
+Logs:
+  # ATK-E E-08 pre-funded predicted CREATE2 addresses
+lockbox 0x8cc1eE887517E6964Ae6C9258784ac74B7E73FCA +5 ETH, asr +1, dgf +1
+migrate: OK, same addresses; lockbox balance 200812226200523469952640 (clean 200807226200523469952640)
+
+
+[PASS] test_E09_failed_then_retry_and_repeat() (gas: 21945927)
+Logs:
+  # ATK-E E-09/E-10
+first attempt [UNI,OP]: REVERT 0xe5665c6c
+retry [OP,UNI]: OK, addresses identical to clean run
+repeat migrate: REVERT 0xd4f98c32 (ChainAlreadyMigrated)
+repeat [UNI] only: REVERT 0xd4f98c32
+
+
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 1.79s (1.77s CPU time)
+
+Ran 1 test suite in 1.80s (1.79s CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)

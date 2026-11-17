@@ -1,0 +1,1061 @@
+{
+  "counts": {
+    "failed_relay_events": 30,
+    "failed_relay_unique_messages": 22,
+    "withdrawal_finalized_all": 32007,
+    "withdrawal_finalized_false": 4
+  },
+  "failed_messages": [
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 22863733,
+          "log_index": 485,
+          "tx": "0x8b01805153bec17b8680161861a9465c40f74e549bb0db389b812eee7774edee"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x906ea",
+        "gasUsed": "0x1b50e",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0x09af464ae93df20c9d7d768402753578bd7aef7eebfc2f7b1e8a37eb77280ff1",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0x0166a07a00000000000000000000000048afbbd342f64ef8a9ab1c143719b63c2ad81710000000000000000000000000819845b60a192167ed1139040b4f8eca31834f27000000000000000000000000c2c265e97818ff5303e569413addedf9fcca6b9a000000000000000000000000c2c265e97818ff5303e569413addedf9fcca6b9a00000000000000000000000000000000000000000000000008dc1d3f1a0e46fa00000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000000b7375706572627269646765000000000000000000000000000000000000000000",
+        "message_selector": "0x0166a07a",
+        "min_gas_limit": 200000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292646691,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000006923",
+        "sender": "0x4200000000000000000000000000000000000010",
+        "target": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 18080973,
+          "log_index": 145,
+          "tx": "0x67e2ced1c20c12c3d76b468e487732f9fe51e8e814b00b0da440e3206a7195f2"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x4f705",
+        "gasUsed": "0x12689",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0x1829f5fef01c789059b15c617fb80c38c9d5878d28711b0ac56029c924cd2b92",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0x0166a07a000000000000000000000000d17d5c95b9183354ef24866b61480fc53b72955500000000000000000000000096bbd55479e9923512dcc95eb7df5edde6fb98740000000000000000000000006455781c6c8b1470051a3afcaccb5237bcd1b3c90000000000000000000000006455781c6c8b1470051a3afcaccb5237bcd1b3c9000000000000000000000000000000000000000000000a9d2c5bb8f6e84c000000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000",
+        "message_selector": "0x0166a07a",
+        "min_gas_limit": 0,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292625881,
+        "nonce_hex": "0x10000000000000000000000000000000000000000000000000000000017d9",
+        "sender": "0x4200000000000000000000000000000000000010",
+        "target": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 17941194,
+          "log_index": 142,
+          "tx": "0xa07565e2dea782c02ba5891fc6006be0af9d83ee590dbd5fa4607b6230c08c45"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x5994e",
+        "gasUsed": "0x51b5f",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0x18b123eba23716f71c057e6aea971962e44dd5ff7060a448940f3b70cc544c25",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0x0166a07a000000000000000000000000cb9f85730f57732fc899fb158164b9ed60c77d490000000000000000000000000f5d45a7023612e9e244fe84fac5fcf3740d149200000000000000000000000068da9f01a7de69436f40af6a412ecbcc7eb87ead00000000000000000000000068da9f01a7de69436f40af6a412ecbcc7eb87ead00000000000000000000000000000000000000000000000e2b9ffbe4cfbedc4e00000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000",
+        "message_selector": "0x0166a07a",
+        "min_gas_limit": 0,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292624266,
+        "nonce_hex": "0x100000000000000000000000000000000000000000000000000000000118a",
+        "sender": "0x4200000000000000000000000000000000000010",
+        "target": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 22774953,
+          "log_index": 315,
+          "tx": "0xfef216e752eb239d6b16c1990e09724e73d67903e6d042185e67aef363760ef9"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x906ea",
+        "gasUsed": "0x1b50e",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0x2c820221fbef636211cbff87243f637325f124f5e6c27c91929cb4854000f60f",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0x0166a07a00000000000000000000000048afbbd342f64ef8a9ab1c143719b63c2ad81710000000000000000000000000819845b60a192167ed1139040b4f8eca31834f2700000000000000000000000021de95e2b5b4014b26cbb6ae3c7e3422cdcf314500000000000000000000000021de95e2b5b4014b26cbb6ae3c7e3422cdcf31450000000000000000000000000000000000000000000000009db049f1ab480c8100000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000000b7375706572627269646765000000000000000000000000000000000000000000",
+        "message_selector": "0x0166a07a",
+        "min_gas_limit": 200000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292646694,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000006926",
+        "sender": "0x4200000000000000000000000000000000000010",
+        "target": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 22046337,
+          "log_index": 251,
+          "tx": "0xf11a2f59727900b512c0494fbbee1fa1af88a596e9ffa2e36a554ee5b7f098b0"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x13fb91",
+        "gasUsed": "0x1231c",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0x33f61390a17c6fc32db1a11557ae861c762d6784a3f4a493138c38051faee088",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0xef6ebe5e000000000000000000000000000000000000000000000000000000000000000af47fdbdb815ef0dfd540bb5ee9649782e7fc1680440d2edec0dd7e9e427acb760000000000000000000000000000000000000000000000000000000000002105000000000000000000000000000000000000000000000000b20342ab4a6c8db7000000000000000000000000000000000000000000000000000000006606280f",
+        "message_selector": "0xef6ebe5e",
+        "min_gas_limit": 500000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292635217,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000003c51",
+        "sender": "0x83f6244bd87662118d96d9a6d44f09dfff14b30e",
+        "target": "0xb8901acb165ed027e32754e0ffe830802919727f",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 25271086,
+          "log_index": 869,
+          "tx": "0xf3756d978d84725bc0ab823ef31024e41d336e158920336e7c4ad962da621caf"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0xd64e8",
+        "gasUsed": "0x1b5d1",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0x384bf7ec98f1b63104cf6867d15a537510d99750345268f05b15175f07e2dd1e",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0xa9059cbb000000000000000000000000000040d6c85a13a1aa74565fde87e499dc023c6f000000000000000000000000000000000000000000000000002a6d7aa6c4a214",
+        "message_selector": "0xa9059cbb",
+        "min_gas_limit": 200000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292653248,
+        "nonce_hex": "0x10000000000000000000000000000000000000000000000000000000082c0",
+        "sender": "0x000040d6c85a13a1aa74565fde87e499dc023c6f",
+        "target": "0x9175746e1fb611843cec72ae4d6fa13c6184c9d0",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 25475826,
+          "log_index": 1047,
+          "tx": "0x8c899957c12979b99a02e680e8d695386056ec968fea0cc5d07405b809d27622"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x3b847b",
+        "gasUsed": "0x2c43b",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0x43e0b78554c436637d3a3f6383edce9dd460777a14776a6b035c604c38bd0deb",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0xa6492fe27355534400000000000000000000000000000000000000000000000000000000000000000000000000000000df5fa32b726a5118281e74ad3b7c707423e28f8b00000000000000000000000000000000000000000000007393da406b01ff8d4e",
+        "message_selector": "0xa6492fe2",
+        "min_gas_limit": 3000000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292653531,
+        "nonce_hex": "0x10000000000000000000000000000000000000000000000000000000083db",
+        "sender": "0x136b1ec699c62b0606854056f02dc7bb80482d63",
+        "target": "0x39ea01a0298c315d149a490e34b59dbf2ec7e48f",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 26346791,
+          "log_index": 557,
+          "tx": "0x1768f16e4fc1da6ed24e592192b3d33ef435591e582e900750eb5ec0042b18c4"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x540ef",
+        "gasUsed": "0x1c120",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0xcd58ffed0c83881bb"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": true
+      },
+      "message_hash": "0x4469d07d864c41bc36ce454810ca41b0aab298b8a997658cb49d9219da263276",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0x3a69197e000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000759f4f5f70e51532b54ad512f73b068bf11c2ce3a9f036436d3d5dd8f12da98d51be000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee00000000000000000000000000000000000000000000000cd58ffed0c83881bb00000000000000000000000000000000000000000000000b9956eff58fcdfcd2",
+        "message_selector": "0x3a69197e",
+        "min_gas_limit": 0,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292655089,
+        "nonce_hex": "0x10000000000000000000000000000000000000000000000000000000089f1",
+        "sender": "0xc9475e18e2c5c26ea6adcd55fabe07920bea887e",
+        "target": "0x23ca5e5300d3b35a47dfef6a36ecba5ac0a96e03",
+        "value_wei": 236749727508928692667,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 18837534,
+          "log_index": 360,
+          "tx": "0x96f15efe3c28ceb89526b055ae3fc5c7f3e3010289255530f7a2b82df277398b"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x58034",
+        "gasUsed": "0x503cd",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0x6c9a36ef9b84c9b81e771d69cb3510a754dc27a0c8d7107d0ff886eeffd0623d",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0x0166a07a000000000000000000000000cb9f85730f57732fc899fb158164b9ed60c77d490000000000000000000000000f5d45a7023612e9e244fe84fac5fcf3740d149200000000000000000000000089822746c2e63b39eb9d3bb3af86f6c4f4a5d09d00000000000000000000000089822746c2e63b39eb9d3bb3af86f6c4f4a5d09d00000000000000000000000000000000000000000000003d30cc6b20d37ef87b00000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000",
+        "message_selector": "0x0166a07a",
+        "min_gas_limit": 0,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292631341,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000002d2d",
+        "sender": "0x4200000000000000000000000000000000000010",
+        "target": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 20350732,
+          "log_index": 138,
+          "tx": "0x7f23e4b8ce286bb8e52b77ad075568310bdb5591d9bc2e84abd54aac114bebfe"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x519cb",
+        "gasUsed": "0x4a604",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0x71c9882b0173bb6c4f718642f0e20c3171c2669c9e4ef0ef99d64ee958ee4162",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0x0166a07a000000000000000000000000cb9f85730f57732fc899fb158164b9ed60c77d490000000000000000000000000f5d45a7023612e9e244fe84fac5fcf3740d149200000000000000000000000000bc2b77b0407b77fc8ca50c651be882a6e7820c00000000000000000000000000bc2b77b0407b77fc8ca50c651be882a6e7820c0000000000000000000000000000000000000000000000b300a524ced521b0ed00000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000",
+        "message_selector": "0x0166a07a",
+        "min_gas_limit": 0,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292634268,
+        "nonce_hex": "0x100000000000000000000000000000000000000000000000000000000389c",
+        "sender": "0x4200000000000000000000000000000000000010",
+        "target": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 26385051,
+          "log_index": 898,
+          "tx": "0x39d668d98f82c46c021edabfda5b7187012022e9d018aee4998852835a667155"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x3b8501",
+        "gasUsed": "0x349a6",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0x9546105b80a67d2890768f2cf1c9bfdbc6d855ed8e8d7f47373d491b8bb11312",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0xa6492fe27355534400000000000000000000000000000000000000000000000000000000000000000000000000000000d3ae25ddb644b1d1915cd0bde7a5d090bc7cf39900000000000000000000000000000000000000000000001e084b60c83e680000",
+        "message_selector": "0xa6492fe2",
+        "min_gas_limit": 3000000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292639349,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000004c75",
+        "sender": "0x136b1ec699c62b0606854056f02dc7bb80482d63",
+        "target": "0x39ea01a0298c315d149a490e34b59dbf2ec7e48f",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 26102366,
+          "log_index": 243,
+          "tx": "0xcbdb882ab107e7c72dd7701d1382bdf6f050112413397f4e05c9cefde2b0ad2e"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x397ae1",
+        "gasUsed": "0x2c40e",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0xae1005458951d769f4f18048ee0fab273be75169c397e0c0fbdc34b8b9081a7d",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0xa6492fe273555344000000000000000000000000000000000000000000000000000000000000000000000000000000000cc93b25f86549e5a938bfa6894df755da52b390000000000000000000000000000000000000000000000000002386f26fc10000",
+        "message_selector": "0xa6492fe2",
+        "min_gas_limit": 3000000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292647704,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000006d18",
+        "sender": "0x136b1ec699c62b0606854056f02dc7bb80482d63",
+        "target": "0x39ea01a0298c315d149a490e34b59dbf2ec7e48f",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 26100288,
+          "log_index": 422,
+          "tx": "0x6b417f67d01f7c23226c56100c251f042811f66567281d944616bb5762399954"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x4e9d29",
+        "gasUsed": "0x306da",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0xb53bc394addf5cc3467d06f5a06b44cbcbd7f12d71cce812afe5f6f51b65f403",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0xa6492fe27355534400000000000000000000000000000000000000000000000000000000000000000000000000000000f540a4bd153fc1b740102d07569a0d24d995990d00000000000000000000000000000000000000000000000098a7d9b8314c0000",
+        "message_selector": "0xa6492fe2",
+        "min_gas_limit": 3000000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292647121,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000006ad1",
+        "sender": "0x136b1ec699c62b0606854056f02dc7bb80482d63",
+        "target": "0x39ea01a0298c315d149a490e34b59dbf2ec7e48f",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 23692011,
+          "log_index": 722,
+          "tx": "0x67c52cef34f75e8009e5826897670d0354121b189ee0a82d1119d893cf5b477d"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0xb6f81",
+        "gasUsed": "0xad469",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": true
+      },
+      "message_hash": "0xc51066ad8ca4e5f51cf287c89a98ba085fa7252f65ef7ce750284371b91a0454",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0x5b6787bfbc1293252f7368479d682dd86e3ec52f8cf77622958c3aa0525e43f3a3957a0a0000000000000000000000000000000000000000000000000003a3529440000000000000000000000000000000000000000000000000000000000000000021050000000000000000000000000000000000000000000000000000000068e98e29",
+        "message_selector": "0x5b6787bf",
+        "min_gas_limit": 200000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292649195,
+        "nonce_hex": "0x10000000000000000000000000000000000000000000000000000000072eb",
+        "sender": "0xdcdd23bda7d553c447423440c1f7d386773e3a39",
+        "target": "0xdcdd23bda7d553c447423440c1f7d386773e3a39",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 22482185,
+          "log_index": 55,
+          "tx": "0xad08a545dadd78832e1afd56705f39352ee5fb8b5d7698224f6d5e5334b38a31"
+        },
+        {
+          "block": 22524687,
+          "log_index": 228,
+          "tx": "0x247ca6c558eceaa9c358ec37faaac37f141d3804dde84df7ce857d1e68cc3ec9"
+        },
+        {
+          "block": 22528005,
+          "log_index": 761,
+          "tx": "0x7bba76c511a678dd8ef004d5ce53cd355c1c675e080bfdacfd3bec5e9a233e7c"
+        },
+        {
+          "block": 23039622,
+          "log_index": 274,
+          "tx": "0x3f5fd78b9b2395edd2f0b1f7497308292d8348eb1e5476a75ee89f867d07e2bd"
+        },
+        {
+          "block": 23128046,
+          "log_index": 358,
+          "tx": "0x960356c2d79d9521602b3c648d54e50c865d161e88d222233c54ea7893ffdcce"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x8e37c",
+        "gasUsed": "0x164ae",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": true
+      },
+      "message_hash": "0xd9652b679b8789425c75596ad3f0d7ae26c1001c90f9ac3b10420daa8c43e2a9",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0x0166a07a0000000000000000000000006b175474e89094c44da98b954eedeac495271d0f000000000000000000000000da10009cbd5d07dd0cecc66161fc93d7c9000da1000000000000000000000000c3250a20f8a7bbdd23ade87737ee46a45fe5543e000000000000000000000000464c71f6c2f760dda6093dcb91c24c39e5d6e18c00000000000000000000000000000000000000000000569b40a8bbc4ef34035c00000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000",
+        "message_selector": "0x0166a07a",
+        "min_gas_limit": 250000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292645688,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000006538",
+        "sender": "0x4200000000000000000000000000000000000010",
+        "target": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 23692697,
+          "log_index": 602,
+          "tx": "0xb4e2a8017c85269bb9513084e709d864d8757449db7403c1cf308a5a90829fc3"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x11f247",
+        "gasUsed": "0x10a933",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": true
+      },
+      "message_hash": "0xda5b39fab721d1be300d3000fb4a6e40f6b9072a05273b3a656e6b30047cd616",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0x5b6787bfd6445432675e0f86b2d245384d81573ca0df13f34adfbfdbb2354d9c4841dee60000000000000000000000000000000000000000000000000003a3529440000000000000000000000000000000000000000000000000000000000000000021050000000000000000000000000000000000000000000000000000000068ded22b",
+        "message_selector": "0x5b6787bf",
+        "min_gas_limit": 200000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292649064,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000007268",
+        "sender": "0xdcdd23bda7d553c447423440c1f7d386773e3a39",
+        "target": "0xdcdd23bda7d553c447423440c1f7d386773e3a39",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 22775135,
+          "log_index": 287,
+          "tx": "0xa0fe22f0a0889086714b47e23568e034b3390585ad378285dd3731e4aded5813"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0xcdc00",
+        "gasUsed": "0x1b50e",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0xdc594bf2048e71225a1d0bebeab1a81e0e77bef9227e6770a41916396af859d7",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0x0166a07a00000000000000000000000048afbbd342f64ef8a9ab1c143719b63c2ad81710000000000000000000000000819845b60a192167ed1139040b4f8eca31834f27000000000000000000000000654c13f97b2e7a760084cff3f9a0fd456dde8301000000000000000000000000654c13f97b2e7a760084cff3f9a0fd456dde830100000000000000000000000000000000000000000000000006a341a49c7f861600000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000000b7375706572627269646765000000000000000000000000000000000000000000",
+        "message_selector": "0x0166a07a",
+        "min_gas_limit": 200000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292646688,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000006920",
+        "sender": "0x4200000000000000000000000000000000000010",
+        "target": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 24678434,
+          "log_index": 473,
+          "tx": "0x91f489a41eee0959a0dd587e51795d965296aec57762afb47c4e87b7d3f489ed"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x9a7c8",
+        "gasUsed": "0x13c82",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0xe208b5278fff03643885102e09614d11a39aa3ec0efc3418e9f31170b1dc566f",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0xa9f9e6750000000000000000000000003c513db8bdc3806e4489d62c3d549a5aaf6a4e97000000000000000000000000c98b98d17435aa00830c87ea02474c5007e1f272000000000000000000000000ece27b29e59550846cb9ac9117e103ed92c63504000000000000000000000000ece27b29e59550846cb9ac9117e103ed92c635040000000000000000000000000000000000000000000000000de0b6b3a764000000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000000b7375706572627269646765000000000000000000000000000000000000000000",
+        "message_selector": "0xa9f9e675",
+        "min_gas_limit": 200000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292651759,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000007cef",
+        "sender": "0x158f513096923ff2d3aab2bcf4478536de6725e2",
+        "target": "0xaba2c5f108f7e820c049d5af70b16ac266c8f128",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "op",
+      "events": [
+        {
+          "block": 24678043,
+          "log_index": 1124,
+          "tx": "0xe1cb3df5f699f11795af81c218e51dbb68429748e1e0fc13e5056db9a26e171d"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x820da",
+        "gasUsed": "0x1a944",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": false
+      },
+      "message_hash": "0xe43cf22b3252c92cce6b3884f541ac9986c6859fd0b4421f8ab0a13db78c8802",
+      "messenger": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "relay": {
+        "message": "0x0166a07a000000000000000000000000bb9bc244d798123fde783fcc1c72d3bb8c1894130000000000000000000000007093f7cc206538c963e9cdb190f0884dd9f7678d0000000000000000000000008e19cd9018255ee97559d03c98d47705e81afc8d0000000000000000000000008e19cd9018255ee97559d03c98d47705e81afc8d00000000000000000000000000000000000000000000000046a6dd86d783800000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000",
+        "message_selector": "0x0166a07a",
+        "min_gas_limit": 200000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292651761,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000007cf1",
+        "sender": "0x4200000000000000000000000000000000000010",
+        "target": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+        "value_wei": 0,
+        "version": 1
+      }
+    },
+    {
+      "chain": "ink",
+      "events": [
+        {
+          "block": 22419550,
+          "log_index": 70,
+          "tx": "0x9a44ceba189318fb719edf1377fc54ef2fdf9a7889d32ddae5f4b50f43a7e605"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f",
+        "gas": "0x8102f",
+        "gasUsed": "0x12e32",
+        "to": "0x69d3cf86b2bf1a9e99875b7e2d9b6a84426c171f",
+        "type": "CALL",
+        "value": "0xf0025af3d4a06640"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": true
+      },
+      "message_hash": "0x940ba5ec73a0003ac5147379a5c1d8665ffb674cd11b89d3b87b69bb0cd57941",
+      "messenger": "0x69d3cf86b2bf1a9e99875b7e2d9b6a84426c171f",
+      "relay": {
+        "message": "0x3a69197e000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000768391431a72e1f3742f333a0a371b81dd85b6414d2831b9633286a6e1f77f34c990000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee000000000000000000000000000000000000000000000000f0025af3d4a06640000000000000000000000000000000000000000000000000f0025af3d4a06640",
+        "message_selector": "0x3a69197e",
+        "min_gas_limit": 200000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292620856,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000000438",
+        "sender": "0x355912b2f4cc9da67975cbf2685aaf9874a4d631",
+        "target": "0x0f703cf76e95c37017cffecf9a49ecaf8a87d0e1",
+        "value_wei": 17294485522346960448,
+        "version": 1
+      }
+    },
+    {
+      "chain": "ink",
+      "events": [
+        {
+          "block": 23096290,
+          "log_index": 96,
+          "tx": "0x7d0b3c8f974a8b7644596c79cdb929b8782a0f02eea73f3cf8412ed700498153"
+        },
+        {
+          "block": 23096297,
+          "log_index": 119,
+          "tx": "0x68f5319470121490e0f4dd467d2dd095ba2de79289f89cb54e1b5529ac1d4562"
+        },
+        {
+          "block": 23096313,
+          "log_index": 229,
+          "tx": "0x1279053cdced2b1cfe3dc7af025478b9c2fa076ee08a093e5b6a894be9363a54"
+        },
+        {
+          "block": 23096344,
+          "log_index": 82,
+          "tx": "0xb7689acedcd0896ee6ab5364d42a7370dffdf528e911c7726214c5e2cbd91c00"
+        },
+        {
+          "block": 23096375,
+          "log_index": 84,
+          "tx": "0xf4c5c73874a028854f6a49ed83df64af622a3d791ceab1880885b9f81a1b1461"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f",
+        "gas": "0xd22ed",
+        "gasUsed": "0xc1e17",
+        "to": "0x69d3cf86b2bf1a9e99875b7e2d9b6a84426c171f",
+        "type": "CALL",
+        "value": "0x3297060a502d614b1"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": true
+      },
+      "message_hash": "0xd9204ef4371eca7b4f54ecc662bbddb826f9eafb959739adda4f88cf4d07b8fe",
+      "messenger": "0x69d3cf86b2bf1a9e99875b7e2d9b6a84426c171f",
+      "relay": {
+        "message": "0x3a69197e000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000007683e7b32d1e7baf9d7877ce3a6f61b175f9b06eb01a769e41acd1253ed27fe36292000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee000000000000000000000000000000000000000000000003297060a502d614b1000000000000000000000000000000000000000000000003297060a502d614b1",
+        "message_selector": "0x3a69197e",
+        "min_gas_limit": 200000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292620897,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000000461",
+        "sender": "0x355912b2f4cc9da67975cbf2685aaf9874a4d631",
+        "target": "0x0f703cf76e95c37017cffecf9a49ecaf8a87d0e1",
+        "value_wei": 58326225035908748465,
+        "version": 1
+      }
+    },
+    {
+      "chain": "ink",
+      "events": [
+        {
+          "block": 23175112,
+          "log_index": 105,
+          "tx": "0x62814e9beaa6052389b19c2c26745a53268070dbe7248451802d819ddbc5caf4"
+        }
+      ],
+      "first_failure_frame": {
+        "from": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f",
+        "gas": "0x8f778",
+        "gasUsed": "0x86611",
+        "to": "0x69d3cf86b2bf1a9e99875b7e2d9b6a84426c171f",
+        "type": "CALL",
+        "value": "0xdc2f3803cbe31cc4"
+      },
+      "mapping_at_pinned_block": {
+        "failed": true,
+        "successful": true
+      },
+      "message_hash": "0xfac7aaf73dc66ed712f0d756d6b0432ded6189e3ba77591daaf2557354c84445",
+      "messenger": "0x69d3cf86b2bf1a9e99875b7e2d9b6a84426c171f",
+      "relay": {
+        "message": "0x3a69197e000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000076839b9fdb7e21cf90a0d43ee4e53cf972dd6ba627a4d2a1b811a3fa4e220afb3f02000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee000000000000000000000000000000000000000000000000dc2f3803cbe31cc4000000000000000000000000000000000000000000000000dc2f3803cbe31cc4",
+        "message_selector": "0x3a69197e",
+        "min_gas_limit": 200000,
+        "nonce": 1766847064778384329583297500742918515827483896875618958121606201292620904,
+        "nonce_hex": "0x1000000000000000000000000000000000000000000000000000000000468",
+        "sender": "0x355912b2f4cc9da67975cbf2685aaf9874a4d631",
+        "target": "0x0f703cf76e95c37017cffecf9a49ecaf8a87d0e1",
+        "value_wei": 15865961601206262980,
+        "version": 1
+      }
+    }
+  ],
+  "false_finalizations": [
+    {
+      "block": 25149695,
+      "chain": "op",
+      "mapping_at_block_minus_1": {
+        "v0_successful": true,
+        "v1_failed": false,
+        "v1_successful": false
+      },
+      "mapping_at_pinned_block": {
+        "v0_successful": true,
+        "v1_failed": false,
+        "v1_successful": false
+      },
+      "portal_frame": {
+        "from": "0x7635b2ff264c47c27b34af18bc17b22e010f7571",
+        "gas": "0x17ea52",
+        "gasUsed": "0x34249",
+        "to": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "relay": {
+        "message": "0x1532ec340000000000000000000000007635b2ff264c47c27b34af18bc17b22e010f75710000000000000000000000007635b2ff264c47c27b34af18bc17b22e010f75710000000000000000000000000000000000000000000000000872639bd73416ba00000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000",
+        "message_selector": "0x1532ec34",
+        "min_gas_limit": 0,
+        "nonce": 104274,
+        "nonce_hex": "0x19752",
+        "sender": "0x4200000000000000000000000000000000000010",
+        "target": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+        "value_wei": 608658420630034106,
+        "version": 0
+      },
+      "relay_frame": {
+        "error": "execution reverted",
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x148fb0",
+        "gasUsed": "0x672e",
+        "output": "0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003743726f7373446f6d61696e4d657373656e6765723a206c6567616379207769746864726177616c20616c72656164792072656c61796564000000000000000000",
+        "revertReason": "CrossDomainMessenger: legacy withdrawal already relayed",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x872639bd73416ba"
+      },
+      "tx": "0x110b517a36688e21bbde514f6dfe878d86fa2634d5c1bc63cb439477924206be",
+      "v0_message_hash": "0x15b9af234b3df5e7059a34691ac3928e3eb6b262d84f6247b02923363697402d",
+      "v1_message_hash": "0x894351883f40fd42e84cdee2a686ced7ab3e6f7cea314b74d47918a050739351",
+      "withdrawal": {
+        "data": "0xd764ad0b0000000000000000000000000000000000000000000000000000000000019752000000000000000000000000420000000000000000000000000000000000001000000000000000000000000099c9fc46f92e8a1c0dec1b1747d010903e884be10000000000000000000000000000000000000000000000000872639bd73416ba000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a41532ec340000000000000000000000007635b2ff264c47c27b34af18bc17b22e010f75710000000000000000000000007635b2ff264c47c27b34af18bc17b22e010f75710000000000000000000000000000000000000000000000000872639bd73416ba0000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "gas_limit": 1307593,
+        "nonce": 104274,
+        "nonce_hex": "0x19752",
+        "sender": "0x4200000000000000000000000000000000000007",
+        "target": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "value_wei": 608658420630034106
+      },
+      "withdrawal_hash": "0x50d7b36248d6690bd50386f31cdbae2c0844fa4e01f86babac82b7206bbf6ddd"
+    },
+    {
+      "block": 25149748,
+      "chain": "op",
+      "mapping_at_block_minus_1": {
+        "v0_successful": true,
+        "v1_failed": false,
+        "v1_successful": false
+      },
+      "mapping_at_pinned_block": {
+        "v0_successful": true,
+        "v1_failed": false,
+        "v1_successful": false
+      },
+      "portal_frame": {
+        "from": "0xbcf86fd70a0183433763ab0c14e7a760194f3a9f",
+        "gas": "0x17c8dc",
+        "gasUsed": "0x34249",
+        "to": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "relay": {
+        "message": "0x1532ec34000000000000000000000000bcf86fd70a0183433763ab0c14e7a760194f3a9f000000000000000000000000bcf86fd70a0183433763ab0c14e7a760194f3a9f00000000000000000000000000000000000000000000000000038d7ea4c6800000000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000",
+        "message_selector": "0x1532ec34",
+        "min_gas_limit": 0,
+        "nonce": 103272,
+        "nonce_hex": "0x19368",
+        "sender": "0x4200000000000000000000000000000000000010",
+        "target": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+        "value_wei": 1000000000000000,
+        "version": 0
+      },
+      "relay_frame": {
+        "error": "execution reverted",
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x146f44",
+        "gasUsed": "0x672e",
+        "output": "0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003743726f7373446f6d61696e4d657373656e6765723a206c6567616379207769746864726177616c20616c72656164792072656c61796564000000000000000000",
+        "revertReason": "CrossDomainMessenger: legacy withdrawal already relayed",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x38d7ea4c68000"
+      },
+      "tx": "0x54f967abbb6bb30b3a9dd68043eb1cf6d18ade329a47c415038269d8b1699c2a",
+      "v0_message_hash": "0x128a972a9a3d40610b71b99f79b30f638eeb33abd7911bffd143de65e7de5b7f",
+      "v1_message_hash": "0x05cdd55dbed13574b48797a1d5e1e63bb35baa2d6dae9ef7efba70826ab7c25c",
+      "withdrawal": {
+        "data": "0xd764ad0b0000000000000000000000000000000000000000000000000000000000019368000000000000000000000000420000000000000000000000000000000000001000000000000000000000000099c9fc46f92e8a1c0dec1b1747d010903e884be100000000000000000000000000000000000000000000000000038d7ea4c68000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a41532ec34000000000000000000000000bcf86fd70a0183433763ab0c14e7a760194f3a9f000000000000000000000000bcf86fd70a0183433763ab0c14e7a760194f3a9f00000000000000000000000000000000000000000000000000038d7ea4c680000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "gas_limit": 1307593,
+        "nonce": 103272,
+        "nonce_hex": "0x19368",
+        "sender": "0x4200000000000000000000000000000000000007",
+        "target": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "value_wei": 1000000000000000
+      },
+      "withdrawal_hash": "0x64db0ab9509c1dcd15a09cb23d8f24f88cd508a1b314d4d154c1336213d7a7ec"
+    },
+    {
+      "block": 25163168,
+      "chain": "op",
+      "mapping_at_block_minus_1": {
+        "v0_successful": true,
+        "v1_failed": false,
+        "v1_successful": false
+      },
+      "mapping_at_pinned_block": {
+        "v0_successful": true,
+        "v1_failed": false,
+        "v1_successful": false
+      },
+      "portal_frame": {
+        "from": "0x0520d43ea1fd4d359a129b2f5a4c5b3f1d22ff89",
+        "gas": "0x17e4e2",
+        "gasUsed": "0x34249",
+        "to": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "relay": {
+        "message": "0x1532ec340000000000000000000000000520d43ea1fd4d359a129b2f5a4c5b3f1d22ff890000000000000000000000000520d43ea1fd4d359a129b2f5a4c5b3f1d22ff89000000000000000000000000000000000000000000000000151f1631ceb33c4d00000000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000",
+        "message_selector": "0x1532ec34",
+        "min_gas_limit": 0,
+        "nonce": 102544,
+        "nonce_hex": "0x19090",
+        "sender": "0x4200000000000000000000000000000000000010",
+        "target": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+        "value_wei": 1521959602251578445,
+        "version": 0
+      },
+      "relay_frame": {
+        "error": "execution reverted",
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x148a6b",
+        "gasUsed": "0x672e",
+        "output": "0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003743726f7373446f6d61696e4d657373656e6765723a206c6567616379207769746864726177616c20616c72656164792072656c61796564000000000000000000",
+        "revertReason": "CrossDomainMessenger: legacy withdrawal already relayed",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x151f1631ceb33c4d"
+      },
+      "tx": "0x153180777ba93ac13eec31bb0ec2f3fbb2569512b9acfb0b77580569fdf51699",
+      "v0_message_hash": "0xcd29a374d0e9adb8937c65727587b079f8daa09562ecaf4fafc4b011e746860f",
+      "v1_message_hash": "0x784923ea5b49a2d6fa65f05cbdad076260d55b03185bf2e97d752195082a534d",
+      "withdrawal": {
+        "data": "0xd764ad0b0000000000000000000000000000000000000000000000000000000000019090000000000000000000000000420000000000000000000000000000000000001000000000000000000000000099c9fc46f92e8a1c0dec1b1747d010903e884be1000000000000000000000000000000000000000000000000151f1631ceb33c4d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000a41532ec340000000000000000000000000520d43ea1fd4d359a129b2f5a4c5b3f1d22ff890000000000000000000000000520d43ea1fd4d359a129b2f5a4c5b3f1d22ff89000000000000000000000000000000000000000000000000151f1631ceb33c4d0000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "gas_limit": 1307593,
+        "nonce": 102544,
+        "nonce_hex": "0x19090",
+        "sender": "0x4200000000000000000000000000000000000007",
+        "target": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "value_wei": 1521959602251578445
+      },
+      "withdrawal_hash": "0xd3628e076f6b807297b42b7780a867b7762999081ebee4d0342529cf9aa65977"
+    },
+    {
+      "block": 26139841,
+      "chain": "op",
+      "mapping_at_block_minus_1": {
+        "v0_successful": true,
+        "v1_failed": false,
+        "v1_successful": false
+      },
+      "mapping_at_pinned_block": {
+        "v0_successful": true,
+        "v1_failed": false,
+        "v1_successful": false
+      },
+      "portal_frame": {
+        "from": "0x5b7ab4b4b4768923cddef657084223528c807963",
+        "gas": "0x23df4d",
+        "gasUsed": "0x2ed73",
+        "to": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "relay": {
+        "message": "0xa9f9e6750000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c59900000000000000000000000068f180fcce6836688e9084f035309e29bf0a20950000000000000000000000005b7ab4b4b4768923cddef657084223528c8079630000000000000000000000005b7ab4b4b4768923cddef657084223528c8079630000000000000000000000000000000000000000000000000000000002f612da00000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000",
+        "message_selector": "0xa9f9e675",
+        "min_gas_limit": 0,
+        "nonce": 114402,
+        "nonce_hex": "0x1bee2",
+        "sender": "0x4200000000000000000000000000000000000010",
+        "target": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+        "value_wei": 0,
+        "version": 0
+      },
+      "relay_frame": {
+        "error": "execution reverted",
+        "from": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+        "gas": "0x204c74",
+        "gasUsed": "0x6823",
+        "output": "0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000003743726f7373446f6d61696e4d657373656e6765723a206c6567616379207769746864726177616c20616c72656164792072656c61796564000000000000000000",
+        "revertReason": "CrossDomainMessenger: legacy withdrawal already relayed",
+        "to": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "type": "CALL",
+        "value": "0x0"
+      },
+      "tx": "0xcaaa4a154a865d2ab0264135001b1577b0cce0688de176fa1299e8f0b3992000",
+      "v0_message_hash": "0xaef8e13f0a6fcac3ea486125f3666b13b0b0333971bd4257a11cdec35a4b574f",
+      "v1_message_hash": "0x69fa35cf1923ddf105269d0f3eb1384104f64f75c38711f886cb8386ae8d921a",
+      "withdrawal": {
+        "data": "0xd764ad0b000000000000000000000000000000000000000000000000000000000001bee2000000000000000000000000420000000000000000000000000000000000001000000000000000000000000099c9fc46f92e8a1c0dec1b1747d010903e884be10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000000e4a9f9e6750000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c59900000000000000000000000068f180fcce6836688e9084f035309e29bf0a20950000000000000000000000005b7ab4b4b4768923cddef657084223528c8079630000000000000000000000005b7ab4b4b4768923cddef657084223528c8079630000000000000000000000000000000000000000000000000000000002f612da00000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "gas_limit": 1308617,
+        "nonce": 114402,
+        "nonce_hex": "0x1bee2",
+        "sender": "0x4200000000000000000000000000000000000007",
+        "target": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+        "value_wei": 0
+      },
+      "withdrawal_hash": "0xad0a2811460d8a7f4ef1c467171ee312fb9b85f9ca8965fa44a7e9542cc68ec4"
+    }
+  ],
+  "l1cdm_balances_wei": {
+    "ink": 0,
+    "op": 0,
+    "soneium": 0,
+    "unichain": 0
+  },
+  "meta": {
+    "passive_reads_only": true,
+    "pinned_block": 26433900,
+    "rpc": "http://127.0.0.1:7545"
+  }
+}

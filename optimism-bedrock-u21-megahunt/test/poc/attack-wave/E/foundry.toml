@@ -1,0 +1,25 @@
+# ATK-E — migration poisoning. Self-contained (forge-std only). Forks only; nothing is broadcast.
+[profile.default]
+src = "test"
+test = "test"
+out = "out"
+cache_path = "cache"
+libs = ["lib"]
+solc_version = "0.8.25"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+remappings = ["forge-std/=lib/forge-std/src/"]
+gas_limit = "18446744073709551615"
+memory_limit = 2147483648
+fs_permissions = [
+  { access = "read-write", path = "./" },
+  { access = "read-write", path = "../../../../evidence/attack-wave/E" },
+]
+
+[rpc_endpoints]
+l1 = "http://127.0.0.1:8545"       # Ethereum mainnet pinned @ 26433900 (post-U21), read-only shared fork
+l1arch = "http://127.0.0.1:7545"   # archive proxy (any block)
+
+[lint]
+lint_on_build = false

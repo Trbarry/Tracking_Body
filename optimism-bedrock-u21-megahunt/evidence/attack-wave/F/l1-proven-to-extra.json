@@ -1,0 +1,24 @@
+{
+ "extra_targets": [
+  "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+ ],
+ "logs": [
+  {
+   "address": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+   "topics": [
+    "0x67a6208cfcc0801d50f6cbe764733f4fddf66ac0b04442061a8a8c0cb6b63f62",
+    "0x3e9259dd26db70e9a00ae0281fe11de32c03d07cfb7c2a18c3ea989d0f7673c2",
+    "0x00000000000000000000000000b700b9da0053009cb84400ed1e8fe251002af3",
+    "0x000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+   ],
+   "data": "0x",
+   "blockNumber": "0x12b34bd",
+   "transactionHash": "0x8a27642a8bddeaa7a37d3267526eaa736a4d9f7caf2928bf84ffabb7b1841dc0",
+   "transactionIndex": "0xb5",
+   "blockHash": "0x05cf991b53a3e14de1702a60bc6da324d4e67c915e7404426a59db409d1402f9",
+   "logIndex": "0x197",
+   "blockTimestamp": "0x66137b8b",
+   "removed": false
+  }
+ ]
+}

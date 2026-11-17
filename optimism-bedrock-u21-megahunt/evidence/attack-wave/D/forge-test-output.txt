@@ -1,0 +1,15 @@
+No files changed, compilation skipped
+
+Ran 3 tests for test/AtkD_Trojan.t.sol:AtkDTrojanTest
+[PASS] test_duplicate_variant() (gas: 2163970)
+[PASS] test_negative_controls() (gas: 2113626)
+[PASS] test_trojan_vs_default_tooling_end_to_end() (gas: 5543503)
+Logs:
+  strike gas (create + same-tx counter) 715171
+  attacker capital locked (wei) 167594000000000000
+  victim extra delay (s) 604802
+  attacker recovered (wei) 167594000000000000
+
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 65.74ms (36.96ms CPU time)
+
+Ran 1 test suite in 83.47ms (65.74ms CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)
