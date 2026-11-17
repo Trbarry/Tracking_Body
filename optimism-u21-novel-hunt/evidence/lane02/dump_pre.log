@@ -34,3 +34,7 @@ soneium-1868 OptimismMintableERC20Factory ok 4
 soneium-1868 ProxyAdmin ok 4
 unichain-130 SystemConfig ok 13
 unichain-130 OptimismPortal2 ok 17
+unichain-130 ETHLockbox ok 3
+unichain-130 AnchorStateRegistry ok 7
+unichain-130 DisputeGameFactory ok 9
+unichain-130 DelayedWETH ok 5
