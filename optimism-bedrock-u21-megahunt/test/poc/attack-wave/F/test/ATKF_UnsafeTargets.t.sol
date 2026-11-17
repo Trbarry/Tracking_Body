@@ -173,59 +173,55 @@ contract ATKF_UnsafeTargets is Test {
     }
 
     // ---------------------------------------------------------------- the matrix
+    function _A(string memory s) internal pure returns (address) {
+        return vm.parseAddress(s);
+    }
+
+    function _push(Row[] memory r, uint256 n, Row memory row) internal pure returns (uint256) {
+        r[n] = row;
+        return n + 1;
+    }
+
     function _rows() internal returns (Row[] memory r) {
-        address l1sb = vm.parseAddress("0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1");
-        address l1eb = vm.parseAddress("0x5a7749f83b81B301cAb5f48EB8516B986DAef23D");
-        address pa = vm.parseAddress("0x543bA4AADBAb8f9025686Bd03993043599c6fB04");
-        address am = vm.parseAddress("0xdE1FCfB0851916CA5101820A69b13a4E276bd81F");
-        address scfg = vm.parseAddress("0x95703e0982140D16f8ebA6d158FccEde42f04a4C");
-        address oldAsr1 = vm.parseAddress("0x18DAc71c228D1C32c99489B7323d441E1175e443");
-        address oldAsr2 = vm.parseAddress("0x1c68ECfbf9C8B1E6C0677965b3B9Ecf9A104305b");
-        address dweth = vm.parseAddress("0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162");
-        address dweth1 = vm.parseAddress("0xE497B094d6DbB3D5E4CaAc9a14696D7572588d14");
-        address l2oo = vm.parseAddress("0xdfe97868233d1aa22e815a266982f2cf17685a27");
-        address opcm = vm.parseAddress("0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f");
-        address usdc = vm.parseAddress("0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48");
-        address lbImpl = address(uint160(uint256(vm.load(lockbox[0], 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc))));
 
         r = new Row[](32);
         uint256 n;
         // sibling lockboxes: unlock (theft) and lock (sticky authorization)
         for (uint256 i = 1; i < 4; i++) {
-            r[n++] = Row(string.concat("sibling lockbox unlockETH #", vm.toString(i)), _w(lockbox[i], 0, abi.encodeWithSignature("unlockETH(uint256)", lockbox[i].balance)), false);
-            r[n++] = Row(string.concat("sibling lockbox lockETH #", vm.toString(i)), _w(lockbox[i], 1 ether, abi.encodeWithSignature("lockETH()")), false);
+            n = _push(r, n, Row(string.concat("sibling lockbox unlockETH #", vm.toString(i)), _w(lockbox[i], 0, abi.encodeWithSignature("unlockETH(uint256)", lockbox[i].balance)), false));
+            n = _push(r, n, Row(string.concat("sibling lockbox lockETH #", vm.toString(i)), _w(lockbox[i], 1 ether, abi.encodeWithSignature("lockETH()")), false));
         }
-        r[n++] = Row("OP lockbox implementation unlockETH", _w(lbImpl, 0, abi.encodeWithSignature("unlockETH(uint256)", 1 ether)), false);
-        r[n++] = Row("lockbox receiveLiquidity (Ink)", _w(lockbox[1], 1 ether, abi.encodeWithSignature("receiveLiquidity()")), false);
+        n = _push(r, n, Row("OP lockbox implementation unlockETH", _w(address(uint160(uint256(vm.load(lockbox[0], 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc)))), 0, abi.encodeWithSignature("unlockETH(uint256)", 1 ether)), false));
+        n = _push(r, n, Row("lockbox receiveLiquidity (Ink)", _w(lockbox[1], 1 ether, abi.encodeWithSignature("receiveLiquidity()")), false));
         // messengers: forged first relay (attacker sender => replay branch)
         bytes memory forged = abi.encodeWithSignature("finalizeBridgeETH(address,address,uint256,bytes)", attacker, attacker, 1000 ether, bytes(""));
         for (uint256 i; i < 4; i++) {
-            r[n++] = Row(string.concat("L1CDM forged relayMessage #", vm.toString(i)), _w(l1cdm[i], 0, abi.encodeWithSignature("relayMessage(uint256,address,address,uint256,uint256,bytes)", (uint256(1) << 240) | 777, L2SB, l1sb, uint256(0), uint256(0), forged)), false);
+            n = _push(r, n, Row(string.concat("L1CDM forged relayMessage #", vm.toString(i)), _w(l1cdm[i], 0, abi.encodeWithSignature("relayMessage(uint256,address,address,uint256,uint256,bytes)", (uint256(1) << 240) | 777, L2SB, _A("0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1"), uint256(0), uint256(0), forged)), false));
         }
         // bridges directly
-        r[n++] = Row("L1StandardBridge finalizeBridgeETH", _w(l1sb, 0, forged), false);
-        r[n++] = Row("L1StandardBridge finalizeBridgeERC20", _w(l1sb, 0, abi.encodeWithSignature("finalizeBridgeERC20(address,address,address,address,uint256,bytes)", usdc, vm.parseAddress("0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85"), attacker, attacker, uint256(1e12), bytes(""))), false);
-        r[n++] = Row("L1ERC721Bridge finalizeBridgeERC721", _w(l1eb, 0, abi.encodeWithSignature("finalizeBridgeERC721(address,address,address,address,uint256,bytes)", usdc, usdc, attacker, attacker, uint256(1), bytes(""))), false);
+        n = _push(r, n, Row("L1StandardBridge finalizeBridgeETH", _w(_A("0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1"), 0, forged), false));
+        n = _push(r, n, Row("L1StandardBridge finalizeBridgeERC20", _w(_A("0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1"), 0, abi.encodeWithSignature("finalizeBridgeERC20(address,address,address,address,uint256,bytes)", _A("0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"), vm.parseAddress("0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85"), attacker, attacker, uint256(1e12), bytes(""))), false));
+        n = _push(r, n, Row("L1ERC721Bridge finalizeBridgeERC721", _w(_A("0x5a7749f83b81B301cAb5f48EB8516B986DAef23D"), 0, abi.encodeWithSignature("finalizeBridgeERC721(address,address,address,address,uint256,bytes)", _A("0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"), _A("0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"), attacker, attacker, uint256(1), bytes(""))), false));
         // configuration / authority
-        r[n++] = Row("SystemConfig setGasLimit", _w(sysCfg[0], 0, abi.encodeWithSignature("setGasLimit(uint64)", uint64(1))), false);
-        r[n++] = Row("SystemConfig setFeature", _w(sysCfg[0], 0, abi.encodeWithSignature("setFeature(bytes32,bool)", bytes32("ETH_LOCKBOX"), false)), false);
-        r[n++] = Row("ProxyAdmin upgrade(portal)", _w(pa, 0, abi.encodeWithSignature("upgrade(address,address)", portal[0], attacker)), false);
-        r[n++] = Row("ProxyAdmin transferOwnership", _w(pa, 0, abi.encodeWithSignature("transferOwnership(address)", attacker)), false);
-        r[n++] = Row("AddressManager setAddress", _w(am, 0, abi.encodeWithSignature("setAddress(string,address)", "OVM_L1CrossDomainMessenger", attacker)), false);
-        r[n++] = Row("SuperchainConfig pause(lockbox)", _w(scfg, 0, abi.encodeWithSignature("pause(address)", lockbox[0])), false);
-        r[n++] = Row("ASR v4 setRespectedGameType", _w(asr[0], 0, abi.encodeWithSignature("setRespectedGameType(uint32)", uint32(5))), false);
-        r[n++] = Row("ASR v4 blacklistDisputeGame(anchor)", _w(asr[0], 0, abi.encodeWithSignature("blacklistDisputeGame(address)", IASR(asr[0]).anchorGame())), false);
-        r[n++] = Row("old ASR 2.0.0 updateRetirementTimestamp", _w(oldAsr1, 0, abi.encodeWithSignature("updateRetirementTimestamp()")), false);
-        r[n++] = Row("old ASR 2.2.2 setRespectedGameType", _w(oldAsr2, 0, abi.encodeWithSignature("setRespectedGameType(uint32)", uint32(0))), false);
-        r[n++] = Row("DelayedWETH v2 recover", _w(dweth, 0, abi.encodeWithSignature("recover(uint256)", uint256(1 ether))), false);
-        r[n++] = Row("DelayedWETH g1 hold", _w(dweth1, 0, abi.encodeWithSignature("hold(address,uint256)", attacker, uint256(1 ether))), false);
-        r[n++] = Row("DGF setImplementation", _w(dgf[0], 0, abi.encodeWithSignature("setImplementation(uint32,address)", uint32(9), attacker)), false);
-        r[n++] = Row("L2OutputOracle deleteL2Outputs", _w(l2oo, 0, abi.encodeWithSignature("deleteL2Outputs(uint256)", uint256(1))), false);
-        r[n++] = Row("OPCMv2 upgrade (direct call)", _w(opcm, 0, abi.encodeWithSignature("upgrade(address)", attacker)), false);
+        n = _push(r, n, Row("SystemConfig setGasLimit", _w(sysCfg[0], 0, abi.encodeWithSignature("setGasLimit(uint64)", uint64(1))), false));
+        n = _push(r, n, Row("SystemConfig setFeature", _w(sysCfg[0], 0, abi.encodeWithSignature("setFeature(bytes32,bool)", bytes32("ETH_LOCKBOX"), false)), false));
+        n = _push(r, n, Row("ProxyAdmin upgrade(portal)", _w(_A("0x543bA4AADBAb8f9025686Bd03993043599c6fB04"), 0, abi.encodeWithSignature("upgrade(address,address)", portal[0], attacker)), false));
+        n = _push(r, n, Row("ProxyAdmin transferOwnership", _w(_A("0x543bA4AADBAb8f9025686Bd03993043599c6fB04"), 0, abi.encodeWithSignature("transferOwnership(address)", attacker)), false));
+        n = _push(r, n, Row("AddressManager setAddress", _w(_A("0xdE1FCfB0851916CA5101820A69b13a4E276bd81F"), 0, abi.encodeWithSignature("setAddress(string,address)", "OVM_L1CrossDomainMessenger", attacker)), false));
+        n = _push(r, n, Row("SuperchainConfig pause(lockbox)", _w(_A("0x95703e0982140D16f8ebA6d158FccEde42f04a4C"), 0, abi.encodeWithSignature("pause(address)", lockbox[0])), false));
+        n = _push(r, n, Row("ASR v4 setRespectedGameType", _w(asr[0], 0, abi.encodeWithSignature("setRespectedGameType(uint32)", uint32(5))), false));
+        n = _push(r, n, Row("ASR v4 blacklistDisputeGame(anchor)", _w(asr[0], 0, abi.encodeWithSignature("blacklistDisputeGame(address)", IASR(asr[0]).anchorGame())), false));
+        n = _push(r, n, Row("old ASR 2.0.0 updateRetirementTimestamp", _w(_A("0x18DAc71c228D1C32c99489B7323d441E1175e443"), 0, abi.encodeWithSignature("updateRetirementTimestamp()")), false));
+        n = _push(r, n, Row("old ASR 2.2.2 setRespectedGameType", _w(_A("0x1c68ECfbf9C8B1E6C0677965b3B9Ecf9A104305b"), 0, abi.encodeWithSignature("setRespectedGameType(uint32)", uint32(0))), false));
+        n = _push(r, n, Row("DelayedWETH v2 recover", _w(_A("0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162"), 0, abi.encodeWithSignature("recover(uint256)", uint256(1 ether))), false));
+        n = _push(r, n, Row("DelayedWETH g1 hold", _w(_A("0xE497B094d6DbB3D5E4CaAc9a14696D7572588d14"), 0, abi.encodeWithSignature("hold(address,uint256)", attacker, uint256(1 ether))), false));
+        n = _push(r, n, Row("DGF setImplementation", _w(dgf[0], 0, abi.encodeWithSignature("setImplementation(uint32,address)", uint32(9), attacker)), false));
+        n = _push(r, n, Row("L2OutputOracle deleteL2Outputs", _w(_A("0xdfe97868233d1aa22e815a266982f2cf17685a27"), 0, abi.encodeWithSignature("deleteL2Outputs(uint256)", uint256(1))), false));
+        n = _push(r, n, Row("OPCMv2 upgrade (direct call)", _w(_A("0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f"), 0, abi.encodeWithSignature("upgrade(address)", attacker)), false));
         // permissionless but portal-originated: benign, attacker's own value
-        r[n++] = Row("sibling portal depositTransaction (Ink)", _w(portal[1], 1 ether, abi.encodeWithSignature("depositTransaction(address,uint256,uint64,bool,bytes)", attacker, 1 ether, uint64(100_000), false, bytes(""))), true);
-        r[n++] = Row("own L1CDM sendMessage (xDomainMessageSender = portal on L2)", _w(l1cdm[0], 0, abi.encodeWithSignature("sendMessage(address,bytes,uint32)", attacker, bytes(""), uint32(0))), true);
-        assembly {
+        n = _push(r, n, Row("sibling portal depositTransaction (Ink)", _w(portal[1], 1 ether, abi.encodeWithSignature("depositTransaction(address,uint256,uint64,bool,bytes)", attacker, 1 ether, uint64(100_000), false, bytes(""))), true));
+        n = _push(r, n, Row("own L1CDM sendMessage (xDomainMessageSender = portal on L2)", _w(l1cdm[0], 0, abi.encodeWithSignature("sendMessage(address,bytes,uint32)", attacker, bytes(""), uint32(0))), true));
+        assembly ("memory-safe") {
             mstore(r, n)
         }
     }
