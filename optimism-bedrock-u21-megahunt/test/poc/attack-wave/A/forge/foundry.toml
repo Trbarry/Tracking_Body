@@ -1,0 +1,12 @@
+[profile.default]
+src = "test"
+test = "test"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.25"
+evm_version = "cancun"
+remappings = ["forge-std/=lib/forge-std/src/"]
+
+[rpc_endpoints]
+l1archive = "http://127.0.0.1:7545"   # read-only failover archive proxy, forked at a pinned block
+l2 = "http://127.0.0.1:9545"          # OP Mainnet pinned fork 159654093

@@ -1,0 +1,234 @@
+{
+  "code_present_count": 0,
+  "destinations": [
+    {
+      "block": 159654093,
+      "chain_id": 10,
+      "depositor_account": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+      "destination": "OP",
+      "l1_block_proxy_admin_owner": "0x6b1bae59d09fccbddb6c6cceb07b7279367c4e3b",
+      "l2_proxy_admin_owner": "0x6b1bae59d09fccbddb6c6cceb07b7279367c4e3b",
+      "rpc": "http://127.0.0.1:7546"
+    },
+    {
+      "block": 61424838,
+      "chain_id": 57073,
+      "depositor_account": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+      "destination": "INK",
+      "l1_block_proxy_admin_owner": "0x6b1bae59d09fccbddb6c6cceb07b7279367c4e3b",
+      "l2_proxy_admin_owner": "0x6b1bae59d09fccbddb6c6cceb07b7279367c4e3b",
+      "rpc": "https://rpc-gel.inkonchain.com"
+    },
+    {
+      "block": 30894250,
+      "chain_id": 1868,
+      "depositor_account": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+      "destination": "SONEIUM",
+      "l1_block_proxy_admin_owner": "0x6b1bae59d09fccbddb6c6cceb07b7279367c4e3b",
+      "l2_proxy_admin_owner": "0x6b1bae59d09fccbddb6c6cceb07b7279367c4e3b",
+      "rpc": "https://rpc.soneium.org"
+    },
+    {
+      "block": 64174896,
+      "chain_id": 130,
+      "depositor_account": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+      "destination": "UNICHAIN",
+      "l1_block_proxy_admin_owner": "0x6b1bae59d09fccbddb6c6cceb07b7279367c4e3b",
+      "l2_proxy_admin_owner": "0x6b1bae59d09fccbddb6c6cceb07b7279367c4e3b",
+      "rpc": "https://mainnet.unichain.org"
+    }
+  ],
+  "identity_matrix": [
+    {
+      "alias": "0xcfc6fc579115071764c7423a4f12edde41f117fe",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "OP",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "OP"
+    },
+    {
+      "alias": "0x6e77c1782664115999c47c9fa5cd031f495d4f60",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "OP",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "INK"
+    },
+    {
+      "alias": "0x99f629a6ccd302c948689cd5156c83d4614fbfa3",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "OP",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "SONEIUM"
+    },
+    {
+      "alias": "0x1ce58f6b86a26d3a217d0fa6ffe2b491b956b8b3",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "OP",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "UNICHAIN"
+    },
+    {
+      "alias": "0xcfc6fc579115071764c7423a4f12edde41f117fe",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "INK",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "OP"
+    },
+    {
+      "alias": "0x6e77c1782664115999c47c9fa5cd031f495d4f60",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "INK",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "INK"
+    },
+    {
+      "alias": "0x99f629a6ccd302c948689cd5156c83d4614fbfa3",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "INK",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "SONEIUM"
+    },
+    {
+      "alias": "0x1ce58f6b86a26d3a217d0fa6ffe2b491b956b8b3",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "INK",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "UNICHAIN"
+    },
+    {
+      "alias": "0xcfc6fc579115071764c7423a4f12edde41f117fe",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "SONEIUM",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "OP"
+    },
+    {
+      "alias": "0x6e77c1782664115999c47c9fa5cd031f495d4f60",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "SONEIUM",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "INK"
+    },
+    {
+      "alias": "0x99f629a6ccd302c948689cd5156c83d4614fbfa3",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "SONEIUM",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "SONEIUM"
+    },
+    {
+      "alias": "0x1ce58f6b86a26d3a217d0fa6ffe2b491b956b8b3",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "SONEIUM",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "UNICHAIN"
+    },
+    {
+      "alias": "0xcfc6fc579115071764c7423a4f12edde41f117fe",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "UNICHAIN",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "OP"
+    },
+    {
+      "alias": "0x6e77c1782664115999c47c9fa5cd031f495d4f60",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "UNICHAIN",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "INK"
+    },
+    {
+      "alias": "0x99f629a6ccd302c948689cd5156c83d4614fbfa3",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "UNICHAIN",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "SONEIUM"
+    },
+    {
+      "alias": "0x1ce58f6b86a26d3a217d0fa6ffe2b491b956b8b3",
+      "balance": 0,
+      "code_bytes": 0,
+      "destination_l2": "UNICHAIN",
+      "is_depositor": false,
+      "is_proxy_admin": false,
+      "is_proxy_admin_owner": false,
+      "is_recorded_proxy_admin_owner": false,
+      "source_portal": "UNICHAIN"
+    }
+  ],
+  "method": {
+    "alias_offset": "0x1111000000000000000000000000000000001111",
+    "op_block_is_pinned": true,
+    "other_blocks_are_recorded_latest": true,
+    "rpc_calls": 47,
+    "safety": "read-only eth_chainId/eth_blockNumber/eth_call/eth_getBalance/eth_getCode"
+  },
+  "nonzero_balance_count": 0,
+  "portal_aliases": {
+    "INK": "0x6e77c1782664115999c47c9fa5cd031f495d4f60",
+    "OP": "0xcfc6fc579115071764c7423a4f12edde41f117fe",
+    "SONEIUM": "0x99f629a6ccd302c948689cd5156c83d4614fbfa3",
+    "UNICHAIN": "0x1ce58f6b86a26d3a217d0fa6ffe2b491b956b8b3"
+  },
+  "privileged_identity_count": 0
+}
