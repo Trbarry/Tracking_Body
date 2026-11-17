@@ -1,0 +1,19 @@
+Executed 12 experiments: 8 deployed-bytecode fork tests plus 4 tooling, relayer, cadence, and event-population analyses. Final fork run: **8 passed, 0 failed**.
+
+No candidate preserved. Top lead scored **−5** and was rejected.
+
+Top kills:
+
+- Trojan super-root acceptance is real, including a timestamp-aligned genuine OP output root. Barrier: proofs are submitter-local, and the same submitter can immediately replace the trojan proof with an honest-game proof—no challenge, deletion, or upgrade required. The root behavior is also known from CC25 3.1.6/3.1.7.
+- An attacker cannot overwrite a victim or shared relayer’s proof because storage is keyed by `(withdrawalHash, msg.sender)`.
+- The future shared-game shape also accepts unsorted/duplicate entries, but remains future-only and has the same recovery and impact barriers.
+- A 100-game viem capture costs 8 ETH in bonds; real game 21288 confirms the losing root bond goes to the counterer.
+
+Artifacts:
+
+- [CATK-D report](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CATK-D-report.md)
+- [Fork tests](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-D/tests/TrojanSuperRoot.t.sol)
+- [Tooling evidence](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-D/evidence/TOOLING-SELECTION.md)
+- [Quantification](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-D/evidence/QUANTIFICATION.md)
+
+Highest-value next experiment: obtain the actual production automatic-relayer implementation, if one exists, and run it locally against a newly latest trojan game to determine whether it signs/submits without full-root or game-validity checks.
