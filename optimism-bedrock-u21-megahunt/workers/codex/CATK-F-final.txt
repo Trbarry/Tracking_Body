@@ -1,0 +1,17 @@
+No reportable vulnerability found.
+
+- Experiments: **19** — 15 local-fork tests plus four passive pinned censuses.
+- Verification: **15/15 tests passed**, zero public broadcasts or shared-fork mutations.
+- Candidates: **0**. Six hypotheses rejected, each scored **0/10** due to absent shared-state impact.
+
+Top kills and barriers:
+
+- 35,579 OP withdrawals enumerated; no direct withdrawal targets any of 379 current/historical system addresses. Four noncanonical bridge messages fail immutable `otherBridge` sender checks.
+- Retired lockbox can accept attacker-funded ETH, but `l2Sender != 0xdead` blocks withdrawal-time unlock.
+- Sibling portal composition merely transfers equal custody: OP −1 ETH, sibling +1 ETH.
+- All registry, WETH, factory, and admin targets retain guardian/owner barriers; no portal-owned WETH object exists.
+- The sole code-later withdrawal is a zero-value self-message whose current EIP-7702 delegate rejects the committed selector.
+
+Highest-value next experiment: repeat the complete genesis-to-pin withdrawal, inner-target, proof-status, and code-chronology census for Ink, Soneium, and Unichain.
+
+Artifacts: [full report](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CATK-F-report.md), [live objects](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-F/LIVE-OBJECTS-CATK-F.md), [target matrix](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-F/ALL-GENERATION-TARGET-MATRIX.md), [fork test](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-F/test/CATK_F_UnsafeTargets.t.sol).
