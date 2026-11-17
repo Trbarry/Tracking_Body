@@ -1,0 +1,27 @@
+Completed Lane 30 independently. No candidate survived, so no `CAND-30xx` file or score was created.
+
+Files: [full report](/home/user/Tracking_Body/optimism-u21-novel-hunt/lanes/LANE-30-report.md), [state diff](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-30/N_MINUS_1_TO_N_STATE.md), [small-diff matrix](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-30/U21_SMALL_DIFF_MATRIX.md), [assumption audit](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-30/U21_ASSUMPTION_HITS.md), [test results](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-30/TEST_RESULTS.md), six `PRIM-30xx`, six `REJ-30xx`, and two fork tests.
+
+Primitives:
+
+- PRIM-3001: immutable game clones depend on mutable ASR/WETH proxies.
+- PRIM-3002: pause identity migrated from SystemConfig to ETHLockbox.
+- PRIM-3003: Lockbox call and Portal body execute before metering.
+- PRIM-3004: ProxyAdmin-owner sameness is spoofable but currently owner-gated.
+- PRIM-3005: Migrator and Validator share an incomplete game-type clearing list.
+- PRIM-3006: L1/L2 gas budgets diverge ahead of Amsterdam.
+
+Strongest negatives:
+
+- Of the 500-game tail, 84 were in progress and shared the upgraded singletons. A real pre-U21 game successfully resolved, closed, unlocked, and paid its full 0.08 ETH credit after U21.
+- Invalid deposits fully roll back the pre-meter Lockbox call; direct Lockbox entry is unauthorized.
+- Same-owner spoofing cannot reach authorization or liquidity migration without the real ProxyAdmin owner.
+- Only SafeCall and dispute `Types` contained runtime changes among the named small diffs.
+
+Verification: 5/5 fork tests pass.
+
+Follow-up compositions:
+
+1. Check Unichain registrations against PRIM-3005 before the planned shared migration.
+2. Search later code for permissionless uses of the same-owner predicate.
+3. Re-test PRIM-3006 under an actual EIP-8037/Amsterdam simulator.
