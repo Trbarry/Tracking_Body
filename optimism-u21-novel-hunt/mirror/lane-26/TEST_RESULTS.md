@@ -4,6 +4,8 @@ Harness: `/home/user/u21-work/codex-26/h`; RPC `l1n=http://127.0.0.1:8547`. No t
 
 ## Final runs
 
+Final aggregate run: **11 passed, 0 failed** (10 lane tests plus the template sanity test).
+
 * `forge test --match-path test/FeatureStateMachine.t.sol -vv`: **4 passed, 0 failed**.
   * rejects attacker and SystemConfig-owner feature writes;
   * proves ETH_LOCKBOX and INTEROP one-way;

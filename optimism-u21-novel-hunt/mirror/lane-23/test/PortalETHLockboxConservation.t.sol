@@ -110,6 +110,7 @@ contract PortalETHLockboxConservationTest is Test {
     ISystemConfigLane23 internal constant SYSTEM_CONFIG =
         ISystemConfigLane23(0x229047fed2591dbec1eF1118d64F7aF3dB9EB290);
     address internal constant PROXY_ADMIN_OWNER = 0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A;
+    address internal constant SUPERCHAIN_CONFIG = 0x95703e0982140D16f8ebA6d158FccEde42f04a4C;
     address internal constant DEFAULT_L2_SENDER = address(0xdead);
     bytes32 internal constant CUSTOM_GAS_TOKEN = bytes32("CUSTOM_GAS_TOKEN");
 
@@ -310,6 +311,18 @@ contract PortalETHLockboxConservationTest is Test {
         vm.prank(address(PORTAL));
         vm.expectRevert(bytes4(keccak256("ETHLockbox_NoWithdrawalTransactions()")));
         LOCKBOX.unlockETH(1);
+    }
+
+    function test_lockboxPauseGuardBlocksAuthorizedUnlock() public {
+        vm.mockCall(
+            SUPERCHAIN_CONFIG,
+            abi.encodeWithSignature("isLocalOrGlobalPaused(address)", address(LOCKBOX)),
+            abi.encode(true)
+        );
+
+        vm.prank(address(PORTAL));
+        vm.expectRevert(bytes4(keccak256("ETHLockbox_Paused()")));
+        LOCKBOX.unlockETH(0);
     }
 
     function test_pauseBlocksFinalizationButNotAdditionalLocking() public {

@@ -6,8 +6,8 @@ Independent reads at Ethereum blocks 26430858 (`l1pre`), 26430859 (`l1n`) and 26
 
 | Contract | Proxy | N-1 implementation/version | N implementation/version | Later state |
 |---|---|---|---|---|
-| OptimismPortal2 | `0xbEb5Fc579115071764c7423A4f12eDde41f106Ed` | `0x100521...`, 5.8.0 | `0xb20b23af6071405c37ddda0c0640e8ebb7899645`, 6.1.0 | same; ASR `0x23B2...D113`, lockbox `0x322b...4D43` |
-| AnchorStateRegistry | `0x23B2C62946350F4246f9f9D027e071f0264FD113` | `0x8f40...`, 3.9.0 | `0x2b27299c577d4720100e2735b652444dcea652d0`, 4.0.0 | respected type 9; retirement 1753379243 |
+| OptimismPortal2 | `0xbEb5Fc579115071764c7423A4f12eDde41f106Ed` | `0x1005217ad392dc64cef501fa1777a27d42166748`, 5.8.0 | `0xb20b23af6071405c37ddda0c0640e8ebb7899645`, 6.1.0 | same; ASR `0x23B2C62946350F4246f9f9D027e071f0264FD113`, lockbox `0x322b47Ff1FA8D5611F761e3E275C45B71b294D43` |
+| AnchorStateRegistry | `0x23B2C62946350F4246f9f9D027e071f0264FD113` | `0x8f40cc98d694ab986f026c5383a181fcc9b6b281`, 3.9.0 | `0x2b27299c577d4720100e2735b652444dcea652d0`, 4.0.0 | respected type 9; retirement 1753379243 |
 | DisputeGameFactory | `0xe5965Ab5962eDc7477C8520243A95517CD252fA9` | `0x72b971717e088b59f26d4236be222adb6acd393b`, 1.6.1 | unchanged | count 21389 at later block |
 | SystemConfig | `0x229047fed2591dbec1eF1118d64F7aF3dB9EB290` | — | `0xade27248542c0f3e89b49e4eb76155e267f14377`, 4.3.0 | chain ID 10; INTEROP false |
 

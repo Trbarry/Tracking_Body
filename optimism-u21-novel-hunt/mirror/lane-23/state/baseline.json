@@ -1,0 +1,56 @@
+{
+  "source": {
+    "v9_commit": "ba6fcadbc57eb99918c5b0f14f57c72527f531e3",
+    "v8_commit": "f45a5ccfebcdf6da3f5b09cbc512667c063730b7"
+  },
+  "blocks": {
+    "pre": 26430858,
+    "upgrade": 26430859,
+    "later": 26433900
+  },
+  "upgrade_tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+  "op_mainnet": {
+    "portal": "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+    "lockbox": "0x322b47Ff1FA8D5611F761e3E275C45B71b294D43",
+    "system_config": "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290",
+    "portal_versions": ["5.8.0", "6.1.0", "6.1.0"],
+    "portal_balances_wei": ["0", "0", "0"],
+    "lockbox_balances_wei": [
+      "182416306525160721816415",
+      "182420511216757812708529",
+      "182541068255115703234018"
+    ],
+    "portal_lockbox_unchanged": true,
+    "portal_authorized_unchanged": true,
+    "features_at_upgrade": {
+      "ETH_LOCKBOX": true,
+      "INTEROP": false,
+      "CUSTOM_GAS_TOKEN": false
+    },
+    "paused_at_upgrade": false,
+    "l2_sender_at_upgrade": "0x000000000000000000000000000000000000dEaD"
+  },
+  "ordinary_block_n_lock": {
+    "transaction_hash": "0x762e0faad7b2a2800bb7348e7444a4a0d76b7c5c1b43b84b6bc56c19326cfda2",
+    "transaction_index": 341,
+    "amount_wei": "4204691597090892114",
+    "before_upgrade_transaction_index": 358
+  },
+  "real_withdrawal_fixture": {
+    "withdrawal_hash": "0xb16e5fc2aab1c33e0426b1ad64aa82484b4fe2a637027d2854ad00677f7ed612",
+    "proof_transaction": "0x424a6ad7ef4500fb905359f319796f5b9396e1465e8ddffc8ff8152e4da3bae6",
+    "proof_block": 26382676,
+    "proof_submitter": "0x67E10B7764A99165665557B3E6cF24555bfC88c3",
+    "game": "0x90F9C9E91fc12E23d170fdeE06be3E00Db21B3F2",
+    "proof_timestamp": 1794291647,
+    "later_fork_timestamp": 1794908075,
+    "value_wei": "638177259920741319864",
+    "finalized_before_test": false,
+    "check_withdrawal_succeeded": true
+  },
+  "fork_tests": {
+    "passed": 15,
+    "failed": 0,
+    "skipped": 0
+  }
+}

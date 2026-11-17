@@ -6,16 +6,17 @@ Target described in the allowed develop notice: 2027-01-11, subject to governanc
 
 | property | OP Mainnet | Unichain | migrator consequence |
 |---|---|---|---|
-| SystemConfig | `0x229047...EB290` | `0xc40739...1bda6` | distinct chains |
+| SystemConfig | `0x229047fed2591dbec1eF1118d64F7aF3dB9EB290` | `0xc407398d063f942febbcc6f80a156b47f3f1bda6` | distinct chains |
 | l2ChainId | 10 | 130 | nonzero, distinct, ascending |
-| Portal | `0xbEb5...106Ed` | `0x0bd4...6A7a2` | currently separate proof domains |
-| ProxyAdmin | `0x543b...fB04` | `0x3B73...f2A4` | different PAs |
-| ProxyAdmin owner | `0x5a0A...3d2A` | same | satisfies common-owner check |
-| SuperchainConfig | `0x9570...4a4C` | same | satisfies common-SCC check |
-| last OPCM/version | `0x2d91...331f` / 9.0.3 | same | permitted migration sequence |
-| ASR | `0x23B2...D113` | `0x27Cf...AFF9` | separate today |
-| DGF | `0xe596...2fA9` | `0x2F12...dFe4` | separate today |
-| lockbox | `0x322b...4D43` | `0x08bA...f5C5` | separate today |
+| Portal | `0xbEb5Fc579115071764c7423A4f12eDde41f106Ed` | `0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2` | currently separate proof domains |
+| ProxyAdmin | `0x543bA4AADBAb8f9025686Bd03993043599c6fB04` | `0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4` | different PAs |
+| ProxyAdmin owner | `0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A` | same | satisfies common-owner check |
+| SuperchainConfig | `0x95703e0982140D16f8ebA6d158FccEde42f04a4C` | same | satisfies common-SCC check |
+| last OPCM/version | `0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f` / 9.0.3 | same | permitted migration sequence |
+| ASR | `0x23B2C62946350F4246f9f9D027e071f0264FD113` | `0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9` | separate today |
+| DGF | `0xe5965Ab5962eDc7477C8520243A95517CD252fA9` | `0x2F12d621a16e2d3285929C9996f478508951dFe4` | separate today |
+| lockbox | `0x322b47Ff1FA8D5611F761e3E275C45B71b294D43` | `0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5` | separate today |
+| DelayedWETH | `0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162` | `0x74ad145aC900F1DD5551F0C9E143314DC4022FCf` | migration reuses chain-0 WETH |
 | INTEROP | false | false | re-migration guard passes |
 | paused / CGT | false / false | false / false (state read during lane) | migration expects usable portals |
 

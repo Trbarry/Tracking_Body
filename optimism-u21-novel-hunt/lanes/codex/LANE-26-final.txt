@@ -1,0 +1,33 @@
+Completed Lane 26 with a negative result: no permissionless, production-reachable candidate survived, so no `CAND-26xx` or score was created. Ten lane-specific fork tests pass.
+
+Files:
+
+- [Full lane report](/home/user/Tracking_Body/optimism-u21-novel-hunt/lanes/LANE-26-report.md)
+- [Feature-state machine](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-26/FEATURE_STATE_MACHINE.md)
+- [Consumer inventory](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-26/CONSUMER_INVENTORY.md)
+- [Pause matrix](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-26/PAUSE_MATRIX.md)
+- [Four-chain state](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-26/ONCHAIN_SYSTEMCONFIG_STATE.md)
+- [U21 storage/implementation diff](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-26/U21_PROXY_IMPLEMENTATION_MAP.md)
+- [Test results](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-26/TEST_RESULTS.md)
+
+Primitives:
+
+- PRIM-2601 — privileged CGT transitions immediately alter treatment of pre-existing liquidity and withdrawals.
+- PRIM-2602 — lockbox pause is a directional outbound value-release cut; inbound paths remain live.
+- PRIM-2603 — expired pauses retain timestamps and require Guardian extend/unpause.
+- PRIM-2604 — interop migration atomically rewires legacy objects and makes pause scope shared.
+- PRIM-2605 — L1 and L2 feature maps are independent state machines.
+
+Strongest negatives:
+
+- All four chains use the same per-chain lockbox across Portal, SystemConfig, ASR, WETH, messenger, and bridges.
+- No old/global/lockbox pause timestamp existed at N-1, N, or block 26,433,900.
+- Every tested ETH-release path stopped. Closed legacy games can advance bookkeeping, but DelayedWETH still blocks ETH.
+- CGT/invalid INTEROP combinations require the fully trusted PA role.
+- `l2ChainId` and ResourceConfig have no permissionless mutation route.
+
+Further attention:
+
+1. Exact future OP+Unichain migration with all legacy game credits.
+2. L1 migration versus Lagoon L2 activation ordering.
+3. Any future delegation of feature writes below PA-owner authority.

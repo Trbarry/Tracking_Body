@@ -2,6 +2,8 @@
 
 Harness: `/home/user/u21-work/codex-27/h`; `l1n = http://127.0.0.1:8547`. No broadcast or shared-fork state mutation was used.
 
+Final complete run: `forge test -vv` — 4 suites, 8 tests passed, 0 failed, 0 skipped.
+
 ## Super-root primitives
 
 ```text

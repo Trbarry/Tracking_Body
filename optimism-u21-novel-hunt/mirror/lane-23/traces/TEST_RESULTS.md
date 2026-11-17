@@ -4,7 +4,7 @@ Command:
 
     forge test --match-path test/PortalETHLockboxConservation.t.sol -vvv
 
-Result: 14 passed, 0 failed, 0 skipped on 2026-11-17. Test source is
+Result: 15 passed, 0 failed, 0 skipped on 2026-11-17. Test source is
 `mirror/lane-23/test/PortalETHLockboxConservation.t.sol`.
 
 The harness was cloned from `/home/user/u21-work/template`; its `foundry.toml` adds:
@@ -25,7 +25,8 @@ The harness was cloned from `/home/user/u21-work/template`; its `foundry.toml` a
   lockbox by exactly that value, leaves portal zero, restores `l2Sender`, and rejects
   a second finalization with `OptimismPortal_AlreadyFinalized`.
 - Guard tests confirm deployed bad-target, authorization, CGT, interop, migration,
-  and proof-deletion reverts.
+  and proof-deletion reverts. A local SuperchainConfig response mock separately
+  confirms the lockbox's own `ETHLockbox_Paused` guard for an authorized portal.
 
 ## Modeled-only evidence (not production exploit proof)
 

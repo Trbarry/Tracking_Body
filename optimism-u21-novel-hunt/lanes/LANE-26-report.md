@@ -11,6 +11,7 @@ Research was blind and independent: only `LANE_CONTEXT.md`, allowed U21 transact
 ## Artifacts
 
 * `mirror/lane-26/FEATURE_STATE_MACHINE.md` — all 8 named-feature combinations, transitions, consumers, v7/v8 diff, L1/L2 split.
+* `mirror/lane-26/CONSUMER_INVENTORY.md` — exhaustive production readers, separated by runtime versus object-creation/management time.
 * `mirror/lane-26/PAUSE_MATRIX.md` — resolver graph, all four chains, value-entry matrix, expiry, CGT/shared-lockbox treatment.
 * `mirror/lane-26/ONCHAIN_SYSTEMCONFIG_STATE.md` — full address/owner/feature/gas/fee/resource state.
 * `mirror/lane-26/U21_PROXY_IMPLEMENTATION_MAP.md` — independent N-1/N proxy storage and implementation diff.
