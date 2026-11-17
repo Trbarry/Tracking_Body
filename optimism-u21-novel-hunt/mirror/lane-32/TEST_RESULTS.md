@@ -2,6 +2,8 @@
 
 Run from `/home/user/u21-work/codex-32/h` against the pinned local forks. No transaction was broadcast.
 
+Final aggregate run: `forge test --match-path 'test/*.t.sol' -vv` — 10 passed, 0 failed (eight NegativeSpace tests, one StateDiff test, and the template sanity test).
+
 Command: `forge test --match-path test/NegativeSpace.t.sol -vv`
 
 Result: 8 passed, 0 failed.

@@ -1,0 +1,8 @@
+[PASS] test_newAccountReserve() (gas: 12497070)
+Logs:
+  portal: 5.8.0
+  min gas, 1 ETH -> never-touched account (codehash 0), gasLimit 0: 208201
+  min gas, 1 ETH -> existing EOA, gasLimit 0: 208201
+  min gas, 0 ETH -> never-touched account, gasLimit 0: 178412
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 9.84s (9.80s CPU time)
+Ran 1 test suite in 9.85s (9.84s CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

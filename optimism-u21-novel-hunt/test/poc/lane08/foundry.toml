@@ -1,0 +1,16 @@
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.25"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+remappings = ["forge-std/=lib/forge-std/src/"]
+fs_permissions = [{ access = "read-write", path = "./" }]
+
+[rpc_endpoints]
+l1 = "http://127.0.0.1:8545"      # Ethereum mainnet, pinned block 26433900 (post-U21)
+l1pre = "http://127.0.0.1:8546"   # Ethereum mainnet, pinned block 26430858 (block before U21 tx)
+l2 = "http://127.0.0.1:9545"      # OP Mainnet, pinned block 159654093

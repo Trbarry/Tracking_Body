@@ -1,0 +1,349 @@
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/IETHLockbox.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/IETHLockbox.sol
+index 1af369b..d566583 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/IETHLockbox.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/IETHLockbox.sol
+@@ -2,7 +2,6 @@
+ pragma solidity ^0.8.0;
+ 
+ import { ISemver } from "interfaces/universal/ISemver.sol";
+-import { ISystemConfig } from "interfaces/L1/ISystemConfig.sol";
+ import { IProxyAdminOwnedBase } from "interfaces/universal/IProxyAdminOwnedBase.sol";
+ import { IOptimismPortal2 } from "interfaces/L1/IOptimismPortal2.sol";
+ import { ISuperchainConfig } from "interfaces/L1/ISuperchainConfig.sol";
+@@ -23,9 +22,9 @@ interface IETHLockbox is IProxyAdminOwnedBase, ISemver, IReinitializableBase {
+     event LiquidityMigrated(IETHLockbox indexed lockbox, uint256 amount);
+     event LiquidityReceived(IETHLockbox indexed lockbox, uint256 amount);
+ 
+-    function initialize(ISystemConfig _systemConfig, IOptimismPortal2[] calldata _portals) external;
+-    function systemConfig() external view returns (ISystemConfig);
++    function initialize(ISuperchainConfig _superchainConfig, IOptimismPortal2[] calldata _portals) external;
+     function paused() external view returns (bool);
++    function guardian() external view returns (address);
+     function authorizedPortals(IOptimismPortal2) external view returns (bool);
+     function authorizedLockboxes(IETHLockbox) external view returns (bool);
+     function receiveLiquidity() external payable;
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/IOptimismPortal2.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/IOptimismPortal2.sol
+index 5d8b388..6cf981e 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/IOptimismPortal2.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/IOptimismPortal2.sol
+@@ -30,15 +30,18 @@ interface IOptimismPortal2 is IProxyAdminOwnedBase {
+     error OptimismPortal_InvalidOutputRootProof();
+     error OptimismPortal_InvalidProofTimestamp();
+     error OptimismPortal_InvalidRootClaim();
++    error OptimismPortal_L1CDMCallFailed();
+     error OptimismPortal_MigratingToSameRegistry();
+     error OptimismPortal_NoReentrancy();
+     error OptimismPortal_NotUsingInterop();
++    error OptimismPortal_NotUsingLockbox();
+     error OptimismPortal_ProofNotOldEnough();
+     error OptimismPortal_Unproven();
+     error OptimismPortal_InvalidInteropState();
+     error OptimismPortal_InvalidLockboxState();
+     error OptimismPortal_ZeroAddress();
+     error OptimismPortal_LockboxNotAuthorizedForPortal();
++    error OptimismPortal_DisputeGameNotInvalidated();
+     error OutOfGas();
+     error UnexpectedList();
+     error UnexpectedString();
+@@ -53,6 +56,7 @@ interface IOptimismPortal2 is IProxyAdminOwnedBase {
+     );
+     event TransactionDeposited(address indexed from, address indexed to, uint256 indexed version, bytes opaqueData);
+     event WithdrawalFinalized(bytes32 indexed withdrawalHash, bool success);
++    event WithdrawalProofDeleted(bytes32 indexed withdrawalHash, address indexed proofSubmitter);
+     event WithdrawalProven(bytes32 indexed withdrawalHash, address indexed from, address indexed to);
+     event WithdrawalProvenExtension1(bytes32 indexed withdrawalHash, address indexed proofSubmitter);
+ 
+@@ -61,6 +65,7 @@ interface IOptimismPortal2 is IProxyAdminOwnedBase {
+     function anchorStateRegistry() external view returns (IAnchorStateRegistry);
+     function ethLockbox() external view returns (IETHLockbox);
+     function checkWithdrawal(bytes32 _withdrawalHash, address _proofSubmitter) external view;
++    function deleteProvenWithdrawal(bytes32 _withdrawalHash, address _proofSubmitter) external;
+     function depositTransaction(
+         address _to,
+         uint256 _value,
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/ISuperchainConfig.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/ISuperchainConfig.sol
+index 42a07fa..e71f6f4 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/ISuperchainConfig.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/ISuperchainConfig.sol
+@@ -25,6 +25,7 @@ interface ISuperchainConfig is IProxyAdminOwnedBase {
+     function pausable(address _identifier) external view returns (bool);
+     function paused() external view returns (bool);
+     function paused(address _identifier) external view returns (bool);
++    function isLocalOrGlobalPaused(address _identifier) external view returns (bool);
+     function expiration(address _identifier) external view returns (uint256);
+     function extend(address _identifier) external;
+     function version() external view returns (string memory);
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerMigrationValidator.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerMigrationValidator.sol
+index f6f00ec..48e0f10 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerMigrationValidator.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerMigrationValidator.sol
+@@ -3,17 +3,52 @@ pragma solidity ^0.8.0;
+ 
+ // Interfaces
+ import { IDisputeGameFactory } from "interfaces/dispute/IDisputeGameFactory.sol";
++import { IAnchorStateRegistry } from "interfaces/dispute/IAnchorStateRegistry.sol";
++import { IETHLockbox } from "interfaces/L1/IETHLockbox.sol";
++import { IDelayedWETH } from "interfaces/dispute/IDelayedWETH.sol";
++import { GameType, Proposal } from "src/dispute/lib/Types.sol";
+ import { IOPContractsManagerStandardValidator } from "interfaces/L1/IOPContractsManagerStandardValidator.sol";
+ import { IStandardValidatorUtils } from "interfaces/L1/opcm/IStandardValidatorUtils.sol";
+ import { ISystemConfig } from "interfaces/L1/ISystemConfig.sol";
++import { ISuperchainConfig } from "interfaces/L1/ISuperchainConfig.sol";
+ 
+ interface IOPContractsManagerMigrationValidator {
+     error InvalidGameArgsLength();
+ 
++    /// @notice A chain's pre-migration contracts.
++    struct LegacyChainContracts {
++        IDisputeGameFactory disputeGameFactory;
++        IETHLockbox ethLockbox;
++        IDelayedWETH delayedWETH;
++        IAnchorStateRegistry anchorStateRegistry;
++    }
++
++    /// @notice Addresses of the shared contracts the migration was meant to produce.
++    struct ExpectedSharedContracts {
++        IAnchorStateRegistry anchorStateRegistry;
++        IETHLockbox ethLockbox;
++        address delayedWETH;
++    }
++
++    /// @notice A game type's intended init bond on the shared DisputeGameFactory.
++    struct ExpectedInitBond {
++        GameType gameType;
++        uint256 initBond;
++    }
++
+     struct MigrationValidationInput {
++        /// @notice Should be sourced in the same way as expectedShared below.
+         IDisputeGameFactory dgf;
+         ISystemConfig[] chainSystemConfigs;
+-        bytes32 cannonPrestate;
++        /// @notice Each chain's pre-migration contracts, must be in the same order as chainSystemConfigs.
++        LegacyChainContracts[] legacyChainContracts;
++        /// @notice The caller MUST source these independently of the migration's resulting state,
++        ///         otherwise the validation is meaningless as it would validate the contracts
++        ///         against their own state.
++        ExpectedSharedContracts expectedShared;
++        ExpectedInitBond[] expectedInitBonds;
++        Proposal startingAnchorRoot;
++        GameType startingRespectedGameType;
+         bytes32 cannonKonaPrestate;
+         address proposer;
+     }
+@@ -34,8 +69,8 @@ interface IOPContractsManagerMigrationValidator {
+     /// @notice Shared roles and config values used during migration validation.
+     struct SharedConfig {
+         address l1PAOMultisig;
+-        address challenger;
+         uint256 withdrawalDelaySeconds;
++        ISuperchainConfig superchainConfig;
+     }
+ 
+     function validateMigration(
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerMigrator.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerMigrator.sol
+index dd07696..4b7fb82 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerMigrator.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerMigrator.sol
+@@ -34,12 +34,13 @@ interface IOPContractsManagerMigrator {
+     /// @notice Thrown when the chainSystemConfigs array is empty.
+     error OPContractsManagerMigrator_NoChains();
+ 
+-    /// @notice Thrown when the OPTIMISM_PORTAL_INTEROP dev feature is not enabled.
+-    error OPContractsManagerMigrator_InteropNotEnabled();
+-
+     /// @notice Thrown when a chain is paused before migration mutates its portal.
+     error OPContractsManagerMigrator_SystemPaused();
+ 
++    error OPContractsManagerMigrator_ChainAlreadyMigrated();
++
++    error OPContractsManagerMigrator_SuperchainConfigNeedsUpgrade();
++
+     /// @notice Thrown when a chain's SystemConfig reports an l2ChainId of zero.
+     error OPContractsManagerMigrator_ZeroL2ChainId();
+ 
+@@ -52,13 +53,28 @@ interface IOPContractsManagerMigrator {
+     /// @notice Thrown when the ZK_DISPUTE_GAME dev feature is not enabled.
+     error OPContractsManagerMigrator_ZKDisputeGameNotEnabled();
+ 
+-    /// @notice Thrown when the supplied chains do not all share the same AnchorStateRegistry, i.e.
+-    ///         they are not a single already-interop set.
+-    error OPContractsManagerMigrator_NotSharedInteropSet();
++    /// @notice Thrown when a dispute game config has an init bond that its game type does not
++    ///         allow: non-zero for SUPER_PERMISSIONED, which does not use bonds, or zero for any
++    ///         other game type.
++    error OPContractsManagerMigrator_InvalidInitBond();
++
++    /// @notice Thrown when a permissionless fault game config has a zero absolute prestate.
++    error OPContractsManagerMigrator_InvalidAbsolutePrestate();
++
++    /// @notice Thrown when a ZK_DISPUTE_GAME config has a zero absolute prestate, a zero or
++    ///         greater-than-uint32-max challenge or prove duration, or a zero challenger bond.
++    error OPContractsManagerMigrator_InvalidZKDisputeGameConfig();
+ 
+-    /// @notice Thrown when the new respected game type does not resolve to a registered
+-    ///         implementation on the shared DisputeGameFactory after the dispute games are swapped.
+-    error OPContractsManagerMigrator_RespectedGameTypeNotRegistered();
++    /// @notice Thrown when a dispute game config is for a game type that does not use super roots.
++    error OPContractsManagerMigrator_InvalidGameType();
++
++    /// @notice Thrown when a dispute game config is not enabled. Migration registers every config
++    ///         it is given, so a disabled config would be registered anyway.
++    error OPContractsManagerMigrator_DisputeGameNotEnabled();
++
++    error OPContractsManagerMigrator_InvalidStartingAnchorRoot();
++
++    error SemverComp_InvalidSemverParts();
+ 
+     /// @notice Returns the container of blueprint and implementation contract addresses.
+     function contractsContainer() external view returns (IOPContractsManagerContainer);
+@@ -71,10 +87,5 @@ interface IOPContractsManagerMigrator {
+     /// @param _input The input parameters for the migration.
+     function migrate(MigrateInput calldata _input) external;
+ 
+-    /// @notice Re-points the shared dispute games of an already-interop set to a new respected
+-    ///         super game.
+-    /// @param _input The input parameters for the dispute game re-point.
+-    function setInteropDisputeGames(MigrateInput calldata _input) external;
+-
+     function __constructor__(IOPContractsManagerUtils _utils) external;
+ }
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerUtils.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerUtils.sol
+index d43ca17..09522db 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerUtils.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerUtils.sol
+@@ -7,8 +7,8 @@ import { IAddressManager } from "interfaces/legacy/IAddressManager.sol";
+ import { IDisputeGame } from "interfaces/dispute/IDisputeGame.sol";
+ import { IAnchorStateRegistry } from "interfaces/dispute/IAnchorStateRegistry.sol";
+ import { IDelayedWETH } from "interfaces/dispute/IDelayedWETH.sol";
+-import { ISystemConfig } from "interfaces/L1/ISystemConfig.sol";
+ import { Claim, Duration, GameType } from "src/dispute/lib/Types.sol";
++import { ISystemConfig } from "interfaces/L1/ISystemConfig.sol";
+ 
+ interface IOPContractsManagerUtils {
+     struct ProxyDeployArgs {
+@@ -164,7 +164,9 @@ interface IOPContractsManagerUtils {
+         view
+         returns (bytes memory);
+ 
+-    function systemConfigFor(ISystemConfig _default, address _target) external view returns (ISystemConfig);
++    function isPermittedUpgradeSequence(ISystemConfig _systemConfig, address _opcm) external view returns (bool);
++
++    function isPermittedMigrateSequence(ISystemConfig _systemConfig, address _opcm) external view returns (bool);
+ 
+     function __constructor__(IOPContractsManagerContainer _contractsContainer) external;
+ }
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerV2.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerV2.sol
+index e61066d..3bd27d5 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerV2.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/L1/opcm/IOPContractsManagerV2.sol
+@@ -120,7 +120,7 @@ interface IOPContractsManagerV2 {
+     function version() external view returns (string memory);
+ 
+     /// @notice Upgrades Superchain-wide contracts.
+-    function upgradeSuperchain(SuperchainUpgradeInput memory _inp) external returns (SuperchainContracts memory);
++    function upgradeSuperchain(SuperchainUpgradeInput calldata _inp) external returns (SuperchainContracts memory);
+ 
+     /// @notice Deploys and wires a complete OP Chain per the provided configuration.
+     function deploy(FullConfig memory _cfg) external returns (ChainContracts memory);
+@@ -132,17 +132,14 @@ interface IOPContractsManagerV2 {
+     ///         dispute game contracts.
+     function migrate(IOPContractsManagerMigrator.MigrateInput calldata _input) external;
+ 
+-    /// @notice Re-points the shared dispute games of an already-interop set to a new respected
+-    ///         super game (general across super game types; current use case is the transition to a
+-    ///         shared super ZKDisputeGame).
+-    function setInteropDisputeGames(IOPContractsManagerMigrator.MigrateInput calldata _input) external;
+-
+     /// @notice Returns whether a development feature is enabled.
+     function isDevFeatureEnabled(bytes32 _feature) external view returns (bool);
+ 
+     /// @notice Checks if the upgrade sequence from the last used OPCM to this OPCM is permitted.
+     function isPermittedUpgradeSequence(ISystemConfig _systemConfig) external view returns (bool);
+ 
++    function isPermittedMigrateSequence(ISystemConfig _systemConfig) external view returns (bool);
++
+     /// @notice Returns the development feature bitmap.
+     function devFeatureBitmap() external view returns (bytes32);
+ }
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/dispute/IAnchorStateRegistry.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/dispute/IAnchorStateRegistry.sol
+index 8a02143..f378ad5 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/dispute/IAnchorStateRegistry.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/dispute/IAnchorStateRegistry.sol
+@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
+ 
+ import { IDisputeGame } from "interfaces/dispute/IDisputeGame.sol";
+ import { IDisputeGameFactory } from "interfaces/dispute/IDisputeGameFactory.sol";
+-import { ISystemConfig } from "interfaces/L1/ISystemConfig.sol";
++import { IETHLockbox } from "interfaces/L1/IETHLockbox.sol";
+ import { GameType, Hash, Proposal } from "src/dispute/lib/Types.sol";
+ import { ISuperchainConfig } from "interfaces/L1/ISuperchainConfig.sol";
+ import { IProxyAdminOwnedBase } from "interfaces/universal/IProxyAdminOwnedBase.sol";
+@@ -29,7 +29,7 @@ interface IAnchorStateRegistry is IProxyAdminOwnedBase {
+     function disputeGameFinalityDelaySeconds() external view returns (uint256);
+     function disputeGameFactory() external view returns (IDisputeGameFactory);
+     function initialize(
+-        ISystemConfig _systemConfig,
++        IETHLockbox _ethLockbox,
+         IDisputeGameFactory _disputeGameFactory,
+         Proposal memory _startingAnchorRoot,
+         GameType _startingRespectedGameType
+@@ -48,7 +48,7 @@ interface IAnchorStateRegistry is IProxyAdminOwnedBase {
+     function retirementTimestamp() external view returns (uint64);
+     function setAnchorState(IDisputeGame _game) external;
+     function setRespectedGameType(GameType _gameType) external;
+-    function systemConfig() external view returns (ISystemConfig);
++    function ethLockbox() external view returns (IETHLockbox);
+     function updateRetirementTimestamp() external;
+     function version() external view returns (string memory);
+     function superchainConfig() external view returns (ISuperchainConfig);
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/dispute/IDelayedWETH.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/dispute/IDelayedWETH.sol
+index 0e3c623..26d82c5 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/dispute/IDelayedWETH.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/dispute/IDelayedWETH.sol
+@@ -1,7 +1,7 @@
+ // SPDX-License-Identifier: MIT
+ pragma solidity ^0.8.0;
+ 
+-import { ISystemConfig } from "interfaces/L1/ISystemConfig.sol";
++import { IETHLockbox } from "interfaces/L1/IETHLockbox.sol";
+ import { ISuperchainConfig } from "interfaces/L1/ISuperchainConfig.sol";
+ import { IProxyAdminOwnedBase } from "interfaces/universal/IProxyAdminOwnedBase.sol";
+ 
+@@ -19,11 +19,11 @@ interface IDelayedWETH is IProxyAdminOwnedBase {
+     receive() external payable;
+ 
+     function initVersion() external view returns (uint8);
+-    function systemConfig() external view returns (ISystemConfig);
++    function ethLockbox() external view returns (IETHLockbox);
+     function delay() external view returns (uint256);
+     function hold(address _guy) external;
+     function hold(address _guy, uint256 _wad) external;
+-    function initialize(ISystemConfig _systemConfig) external;
++    function initialize(IETHLockbox _ethLockbox) external;
+     function recover(uint256 _wad) external;
+     function unlock(address _guy, uint256 _wad) external;
+     function withdraw(address _guy, uint256 _wad) external;
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/vendor/ISP1Verifier.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/vendor/ISP1Verifier.sol
+index 687e6c4..8533950 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/interfaces/vendor/ISP1Verifier.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/interfaces/vendor/ISP1Verifier.sol
+@@ -3,7 +3,8 @@ pragma solidity ^0.8.0;
+ 
+ /// @title ISP1Verifier
+ /// @notice Interface for Succinct's SP1 verifier.
+-///         Derived from https://github.com/succinctlabs/sp1-contracts/tree/v6.0.0.
++///         Derived from https://github.com/succinctlabs/sp1-contracts/tree/v6.1.0
++///         (`ISP1Verifier` and `ISP1VerifierWithHash`).
+ interface ISP1Verifier {
+     /// @notice Verifies a proof with given public values and vkey.
+     ///
+@@ -18,4 +19,8 @@ interface ISP1Verifier {
+ 
+     /// @notice The version string of the SP1 verifier (e.g. "v6.0.0").
+     function VERSION() external pure returns (string memory);
++
++    /// @notice The hash of the verifier's PLONK verification key. The first four bytes of every
++    ///         proof must equal the first four bytes of this value or verification reverts.
++    function VERIFIER_HASH() external pure returns (bytes32);
+ }

@@ -1,0 +1,411 @@
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/AnchorStateRegistry.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/AnchorStateRegistry.sol
+index 7f62e3b..f000fe5 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/AnchorStateRegistry.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/AnchorStateRegistry.sol
+@@ -13,7 +13,7 @@ import { GameType, Proposal, Claim, GameStatus, Hash } from "src/dispute/lib/Typ
+ import { ISemver } from "interfaces/universal/ISemver.sol";
+ import { IDisputeGame } from "interfaces/dispute/IDisputeGame.sol";
+ import { IDisputeGameFactory } from "interfaces/dispute/IDisputeGameFactory.sol";
+-import { ISystemConfig } from "interfaces/L1/ISystemConfig.sol";
++import { IETHLockbox } from "interfaces/L1/IETHLockbox.sol";
+ import { ISuperchainConfig } from "interfaces/L1/ISuperchainConfig.sol";
+ 
+ /// @custom:proxied true
+@@ -24,14 +24,16 @@ import { ISuperchainConfig } from "interfaces/L1/ISuperchainConfig.sol";
+ ///         be initialized with a more recent starting state which reduces the amount of required offchain computation.
+ contract AnchorStateRegistry is ProxyAdminOwnedBase, Initializable, ReinitializableBase, ISemver {
+     /// @notice Semantic version.
+-    /// @custom:semver 3.9.0
+-    string public constant version = "3.9.0";
++    /// @custom:semver 4.0.0
++    string public constant version = "4.0.0";
+ 
+     /// @notice The dispute game finality delay in seconds.
+     uint256 internal immutable DISPUTE_GAME_FINALITY_DELAY_SECONDS;
+ 
+-    /// @notice Address of the SystemConfig contract.
+-    ISystemConfig public systemConfig;
++    /// @custom:legacy
++    /// @custom:spacer systemConfig
++    /// @notice Spacer taking up the legacy `systemConfig` address slot.
++    address private spacer_0_2_20;
+ 
+     /// @notice Address of the DisputeGameFactory contract.
+     IDisputeGameFactory public disputeGameFactory;
+@@ -53,6 +55,9 @@ contract AnchorStateRegistry is ProxyAdminOwnedBase, Initializable, Reinitializa
+     ///         blanket invalidation mechanism if games resolve incorrectly.
+     uint64 public retirementTimestamp;
+ 
++    /// @notice The ETHLockbox used as the pause identifier.
++    IETHLockbox public ethLockbox;
++
+     /// @notice Emitted when an anchor state is updated.
+     /// @param game Game that was used as the new anchor game.
+     event AnchorUpdated(IDisputeGame indexed game);
+@@ -82,12 +87,12 @@ contract AnchorStateRegistry is ProxyAdminOwnedBase, Initializable, Reinitializa
+     }
+ 
+     /// @notice Initializes the contract.
+-    /// @param _systemConfig The address of the SystemConfig contract.
++    /// @param _ethLockbox The address of the ETHLockbox contract.
+     /// @param _disputeGameFactory The address of the DisputeGameFactory contract.
+     /// @param _startingAnchorRoot The starting anchor root.
+     /// @param _startingRespectedGameType The starting respected game type.
+     function initialize(
+-        ISystemConfig _systemConfig,
++        IETHLockbox _ethLockbox,
+         IDisputeGameFactory _disputeGameFactory,
+         Proposal memory _startingAnchorRoot,
+         GameType _startingRespectedGameType
+@@ -99,7 +104,7 @@ contract AnchorStateRegistry is ProxyAdminOwnedBase, Initializable, Reinitializa
+         _assertOnlyProxyAdminOrProxyAdminOwner();
+ 
+         // Now perform initialization logic.
+-        systemConfig = _systemConfig;
++        ethLockbox = _ethLockbox;
+         disputeGameFactory = _disputeGameFactory;
+         respectedGameType = _startingRespectedGameType;
+ 
+@@ -129,13 +134,13 @@ contract AnchorStateRegistry is ProxyAdminOwnedBase, Initializable, Reinitializa
+ 
+     /// @notice Returns whether the contract is paused.
+     function paused() public view returns (bool) {
+-        return systemConfig.paused();
++        return ethLockbox.paused();
+     }
+ 
+     /// @notice Returns the SuperchainConfig contract.
+     /// @return ISuperchainConfig The SuperchainConfig contract.
+     function superchainConfig() public view returns (ISuperchainConfig) {
+-        return systemConfig.superchainConfig();
++        return ethLockbox.superchainConfig();
+     }
+ 
+     /// @notice Returns the dispute game finality delay in seconds.
+@@ -185,7 +190,13 @@ contract AnchorStateRegistry is ProxyAdminOwnedBase, Initializable, Reinitializa
+     ///         be removed in a future release. Use getAnchorRoot() instead. Anchor roots are no
+     ///         longer stored per game type, so this function will return the same root for all
+     ///         game types.
+-    function anchors(GameType /* unused */ ) external view returns (Hash, uint256) {
++    function anchors(
++        GameType /* unused */
++    )
++        external
++        view
++        returns (Hash, uint256)
++    {
+         return getAnchorRoot();
+     }
+ 
+@@ -362,7 +373,7 @@ contract AnchorStateRegistry is ProxyAdminOwnedBase, Initializable, Reinitializa
+ 
+     /// @notice Asserts that the caller is the Guardian.
+     function _assertOnlyGuardian() internal view {
+-        if (msg.sender != systemConfig.guardian()) {
++        if (msg.sender != ethLockbox.guardian()) {
+             revert AnchorStateRegistry_Unauthorized();
+         }
+     }
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/DelayedWETH.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/DelayedWETH.sol
+index 0f20b22..f1870c7 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/DelayedWETH.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/DelayedWETH.sol
+@@ -9,7 +9,7 @@ import { ProxyAdminOwnedBase } from "src/universal/ProxyAdminOwnedBase.sol";
+ 
+ // Interfaces
+ import { ISemver } from "interfaces/universal/ISemver.sol";
+-import { ISystemConfig } from "interfaces/L1/ISystemConfig.sol";
++import { IETHLockbox } from "interfaces/L1/IETHLockbox.sol";
+ import { ISuperchainConfig } from "interfaces/L1/ISuperchainConfig.sol";
+ 
+ /// @custom:proxied true
+@@ -30,8 +30,8 @@ contract DelayedWETH is Initializable, ProxyAdminOwnedBase, ReinitializableBase,
+     }
+ 
+     /// @notice Semantic version.
+-    /// @custom:semver 1.5.1
+-    string public constant version = "1.5.1";
++    /// @custom:semver 2.0.0
++    string public constant version = "2.0.0";
+ 
+     /// @notice Returns a withdrawal request for the given address.
+     mapping(address => mapping(address => WithdrawalRequest)) public withdrawals;
+@@ -39,8 +39,13 @@ contract DelayedWETH is Initializable, ProxyAdminOwnedBase, ReinitializableBase,
+     /// @notice Withdrawal delay in seconds.
+     uint256 internal immutable DELAY_SECONDS;
+ 
+-    /// @notice Address of the SystemConfig contract.
+-    ISystemConfig public systemConfig;
++    /// @custom:legacy
++    /// @custom:spacer systemConfig
++    /// @notice Spacer taking up the legacy `systemConfig` address slot.
++    address private spacer_4_0_20;
++
++    /// @notice The ETHLockbox used as the pause identifier.
++    IETHLockbox public ethLockbox;
+ 
+     /// @param _delay The delay for withdrawals in seconds.
+     constructor(uint256 _delay) ReinitializableBase(1) {
+@@ -49,13 +54,13 @@ contract DelayedWETH is Initializable, ProxyAdminOwnedBase, ReinitializableBase,
+     }
+ 
+     /// @notice Initializes the contract.
+-    /// @param _systemConfig Address of the SystemConfig contract.
+-    function initialize(ISystemConfig _systemConfig) external reinitializer(initVersion()) {
++    /// @param _ethLockbox The address of the ETHLockbox contract.
++    function initialize(IETHLockbox _ethLockbox) external reinitializer(initVersion()) {
+         // Initialization transactions must come from the ProxyAdmin or its owner.
+         _assertOnlyProxyAdminOrProxyAdminOwner();
+ 
+         // Now perform initialization logic.
+-        systemConfig = _systemConfig;
++        ethLockbox = _ethLockbox;
+     }
+ 
+     /// @notice Returns the withdrawal delay in seconds.
+@@ -67,7 +72,7 @@ contract DelayedWETH is Initializable, ProxyAdminOwnedBase, ReinitializableBase,
+     /// @notice Returns the SuperchainConfig contract.
+     /// @return ISuperchainConfig The SuperchainConfig contract.
+     function config() public view returns (ISuperchainConfig) {
+-        return systemConfig.superchainConfig();
++        return ethLockbox.superchainConfig();
+     }
+ 
+     /// @notice Unlocks withdrawals for the sender's account, after a time delay.
+@@ -94,7 +99,7 @@ contract DelayedWETH is Initializable, ProxyAdminOwnedBase, ReinitializableBase,
+     /// @param _guy Sub-account to withdraw from.
+     /// @param _wad The amount of WETH to withdraw.
+     function withdraw(address _guy, uint256 _wad) public {
+-        require(!systemConfig.paused(), "DelayedWETH: contract is paused");
++        require(!ethLockbox.paused(), "DelayedWETH: contract is paused");
+         WithdrawalRequest storage wd = withdrawals[msg.sender][_guy];
+         require(wd.amount >= _wad, "DelayedWETH: insufficient unlocked withdrawal");
+         require(wd.timestamp > 0, "DelayedWETH: withdrawal not unlocked");
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/DisputeGameFactory.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/DisputeGameFactory.sol
+index a0a7c36..fdeb569 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/DisputeGameFactory.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/DisputeGameFactory.sol
+@@ -187,9 +187,10 @@ contract DisputeGameFactory is ProxyAdminOwnedBase, ReinitializableBase, Ownable
+             // │ [84, 84 + n)         │ Extra data (opaque)                 │
+             // └──────────────────────┴─────────────────────────────────────┘
+             proxy_ = IDisputeGame(
+-                address(impl).cloneDeterministic(
+-                    abi.encodePacked(msg.sender, _rootClaim, parentHash, _extraData), Hash.unwrap(uuid)
+-                )
++                address(impl)
++                    .cloneDeterministic(
++                        abi.encodePacked(msg.sender, _rootClaim, parentHash, _extraData), Hash.unwrap(uuid)
++                    )
+             );
+         } else {
+             // Clone the implementation contract and initialize it with the given parameters.
+@@ -206,10 +207,11 @@ contract DisputeGameFactory is ProxyAdminOwnedBase, ReinitializableBase, Ownable
+             // │ [88 + n, 88 + n + m) │ Implementation args (opaque)        │
+             // └──────────────────────┴─────────────────────────────────────┘
+             proxy_ = IDisputeGame(
+-                address(impl).cloneDeterministic(
+-                    abi.encodePacked(msg.sender, _rootClaim, parentHash, _gameType, _extraData, implArgs),
+-                    Hash.unwrap(uuid)
+-                )
++                address(impl)
++                    .cloneDeterministic(
++                        abi.encodePacked(msg.sender, _rootClaim, parentHash, _gameType, _extraData, implArgs),
++                        Hash.unwrap(uuid)
++                    )
+             );
+         }
+         proxy_.initialize{ value: msg.value }();
+@@ -282,11 +284,7 @@ contract DisputeGameFactory is ProxyAdminOwnedBase, ReinitializableBase, Ownable
+                 bytes memory extraData = IDisputeGame(proxy).extraData();
+                 Claim rootClaim = IDisputeGame(proxy).rootClaim();
+                 games_[games_.length - 1] = GameSearchResult({
+-                    index: i,
+-                    metadata: id,
+-                    timestamp: timestamp,
+-                    rootClaim: rootClaim,
+-                    extraData: extraData
++                    index: i, metadata: id, timestamp: timestamp, rootClaim: rootClaim, extraData: extraData
+                 });
+                 if (games_.length >= _n) break;
+             }
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/FaultDisputeGame.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/FaultDisputeGame.sol
+index 3289c43..b1335b9 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/FaultDisputeGame.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/FaultDisputeGame.sol
+@@ -652,12 +652,7 @@ contract FaultDisputeGame is Clone, ISemver {
+     ///         and showing that the committed L2 block number is incorrect relative to the claimed L2 block number.
+     /// @param _outputRootProof The output root proof.
+     /// @param _headerRLP The RLP-encoded L2 block header.
+-    function challengeRootL2Block(
+-        Types.OutputRootProof calldata _outputRootProof,
+-        bytes calldata _headerRLP
+-    )
+-        external
+-    {
++    function challengeRootL2Block(Types.OutputRootProof calldata _outputRootProof, bytes calldata _headerRLP) external {
+         // INVARIANT: Moves cannot be made unless the game is currently in progress.
+         if (status != GameStatus.IN_PROGRESS) revert GameNotInProgress();
+ 
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/SuperPermissionedDisputeGame.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/SuperPermissionedDisputeGame.sol
+index 9951377..104df4a 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/SuperPermissionedDisputeGame.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/SuperPermissionedDisputeGame.sol
+@@ -5,7 +5,11 @@ pragma solidity 0.8.15;
+ import { Clone } from "@solady/utils/Clone.sol";
+ import { Claim, GameStatus, GameType, Hash, Timestamp } from "src/dispute/lib/Types.sol";
+ import {
+-    AlreadyInitialized, BadAuth, BadExtraData, IncorrectBondAmount, UnknownChainId
++    AlreadyInitialized,
++    BadAuth,
++    BadExtraData,
++    IncorrectBondAmount,
++    UnknownChainId
+ } from "src/dispute/lib/Errors.sol";
+ import { Encoding } from "src/libraries/Encoding.sol";
+ import { Hashing } from "src/libraries/Hashing.sol";
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/lib/LibGameArgs.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/lib/LibGameArgs.sol
+index e362308..c3ac436 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/lib/LibGameArgs.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/lib/LibGameArgs.sol
+@@ -124,7 +124,9 @@ library LibGameArgs {
+         pure
+         returns (SuperPermissionedGameArgs memory args_)
+     {
+-        if (_args.length != SUPER_PERMISSIONED_ARGS_LENGTH) revert InvalidGameArgsLength();
++        if (_args.length != SUPER_PERMISSIONED_ARGS_LENGTH) {
++            revert InvalidGameArgsLength();
++        }
+         address asr;
+         address proposer;
+         assembly {
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/lib/LibPosition.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/lib/LibPosition.sol
+index 9cff271..52dcc7b 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/lib/LibPosition.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/lib/LibPosition.sol
+@@ -46,14 +46,13 @@ library LibPosition {
+             _position := or(_position, shr(8, _position))
+             _position := or(_position, shr(16, _position))
+ 
+-            depth_ :=
+-                or(
+-                    depth_,
+-                    byte(
+-                        shr(251, mul(_position, shl(224, 0x07c4acdd))),
+-                        0x0009010a0d15021d0b0e10121619031e080c141c0f111807131b17061a05041f
+-                    )
++            depth_ := or(
++                depth_,
++                byte(
++                    shr(251, mul(_position, shl(224, 0x07c4acdd))),
++                    0x0009010a0d15021d0b0e10121619031e080c141c0f111807131b17061a05041f
+                 )
++            )
+         }
+     }
+ 
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/lib/LibUDT.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/lib/LibUDT.sol
+index 780738a..53f1318 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/lib/LibUDT.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/lib/LibUDT.sol
+@@ -86,15 +86,7 @@ library LibGameId {
+     /// @param _timestamp The timestamp of the game's creation.
+     /// @param _gameProxy The game proxy address.
+     /// @return gameId_ The packed GameId.
+-    function pack(
+-        GameType _gameType,
+-        Timestamp _timestamp,
+-        address _gameProxy
+-    )
+-        internal
+-        pure
+-        returns (GameId gameId_)
+-    {
++    function pack(GameType _gameType, Timestamp _timestamp, address _gameProxy) internal pure returns (GameId gameId_) {
+         assembly {
+             gameId_ := or(or(shl(224, _gameType), shl(160, _timestamp)), _gameProxy)
+         }
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/lib/Types.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/lib/Types.sol
+index db18c25..7e3b870 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/lib/Types.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/lib/Types.sol
+@@ -48,8 +48,7 @@ struct Proposal {
+ 
+ /// @title GameTypes
+ /// @notice A library that defines the IDs of games that can be played.
+-///         When adding a new game type, the hardcoded game type lists in OPContractsManagerMigrator
+-///         and OPContractsManagerUtils must also be updated.
++///         When adding a new game type, it must be added to the list returned by clearedGameTypes().
+ library GameTypes {
+     /// @dev A dispute game type the uses the cannon vm.
+     GameType internal constant CANNON = GameType.wrap(0);
+@@ -95,6 +94,21 @@ library GameTypes {
+     /// @notice A dispute game type that uses RISC Zero's Kailua
+     GameType internal constant KAILUA = GameType.wrap(1337);
+ 
++    /// @notice The game types migration clears from a chain's pre-migration DisputeGameFactory.
++    ///         It might include other games than the valid game types an OPCM accepts as
++    ///         it also covers retired types, which are never valid config but may still be
++    ///         registered on an old factory.
++    function clearedGameTypes() internal pure returns (GameType[] memory types_) {
++        types_ = new GameType[](7);
++        types_[0] = CANNON;
++        types_[1] = PERMISSIONED_CANNON;
++        types_[2] = CANNON_KONA;
++        types_[3] = SUPER_CANNON;
++        types_[4] = SUPER_PERMISSIONED;
++        types_[5] = SUPER_CANNON_KONA;
++        types_[6] = ZK_DISPUTE_GAME;
++    }
++
+     /// @notice Returns true if the game type uses super roots.
+     function isSuperGame(GameType _gameType) internal pure returns (bool) {
+         uint32 raw = _gameType.raw();
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/zk/ZKDisputeGame.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/zk/ZKDisputeGame.sol
+index a82c716..52da42d 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/dispute/zk/ZKDisputeGame.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/dispute/zk/ZKDisputeGame.sol
+@@ -111,8 +111,8 @@ contract ZKDisputeGame is Clone, ISemver, IDisputeGame {
+     ////////////////////////////////////////////////////////////////
+ 
+     /// @notice Semantic version.
+-    /// @custom:semver 2.0.1
+-    string public constant version = "2.0.1";
++    /// @custom:semver 2.1.0
++    string public constant version = "2.1.0";
+ 
+     /// @notice The starting timestamp of the game.
+     Timestamp public createdAt;
+@@ -342,6 +342,10 @@ contract ZKDisputeGame is Clone, ISemver, IDisputeGame {
+         // Store the factory reference for parent game lookups.
+         disputeGameFactory = IDisputeGameFactory(msg.sender);
+ 
++        // Set whether the game type was respected when the game was created.
++        wasRespectedGameTypeWhenCreated =
++            GameType.unwrap(anchorStateRegistry().respectedGameType()) == GameType.unwrap(gameType());
++
+         // The first game is initialized with a parent index of uint32.max
+         if (parentIndex() != type(uint32).max) {
+             // For subsequent games, get the parent game's information
+@@ -355,6 +359,11 @@ contract ZKDisputeGame is Clone, ISemver, IDisputeGame {
+                 revert InvalidParentGame();
+             }
+ 
++            // INVARIANT: A respected game must build on a respected parent.
++            if (wasRespectedGameTypeWhenCreated && !parent.wasRespectedGameTypeWhenCreated()) {
++                revert InvalidParentGame();
++            }
++
+             // INVARIANT: The parent game must be of the same game type.
+             if (parent.gameType().raw() != gameType().raw()) {
+                 revert UnexpectedGameType();
+@@ -398,10 +407,6 @@ contract ZKDisputeGame is Clone, ISemver, IDisputeGame {
+ 
+         // Set the game's starting timestamp
+         createdAt = Timestamp.wrap(uint64(block.timestamp));
+-
+-        // Set whether the game type was respected when the game was created.
+-        wasRespectedGameTypeWhenCreated =
+-            GameType.unwrap(anchorStateRegistry().respectedGameType()) == GameType.unwrap(gameType());
+     }
+ 
+     /// @notice Validates the expected length of msg.data for the initialize() call.

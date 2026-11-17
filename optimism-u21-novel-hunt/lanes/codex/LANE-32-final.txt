@@ -1,0 +1,27 @@
+Completed lane 32 with no surviving vulnerability candidate.
+
+Files written: [full report](/home/user/Tracking_Body/optimism-u21-novel-hunt/lanes/LANE-32-report.md), 3 primitive files, 8 rejection files, and 12 [mirror artifacts](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-32/TEST_RESULTS.md), including raw diffs, fork tests, proxy map, and state reads.
+
+Primitives:
+
+- **PRIM-3201:** MigrationValidator zero-balance assertions can be invalidated permissionlessly by donation/forced ETH, but no custody or claim impact exists.
+- **PRIM-3202:** L1 v9 and live L2 expose asymmetric messenger gas budgets; failures remain retryable under current rules.
+- **PRIM-3203:** Historical withdrawal proofs are evaluated through the portal’s mutable current ASR; current migration invalidation/re-proof remains intended behavior.
+
+No `CAND-32xx` was created or scored.
+
+Strongest negative results:
+
+- Unauthorized lockbox, configuration, registry, bond, and migration sibling paths all reverted on deployed bytecode.
+- Failed L1 messenger withdrawals atomically roll back finalization, unlock, and nested target state.
+- All four upgraded chains have exact portal/lockbox/ASR/WETH/SuperchainConfig bindings.
+- The live proof-deletion bypass failed with `OptimismPortal_DisputeGameNotInvalidated`.
+- Exact N−1→N comparison found expected implementation/binding changes and unchanged admin slots.
+
+Verification: **10/10 tests passed**; no public transaction was broadcast.
+
+Compositions deserving follow-up:
+
+1. Planned OP+Unichain migration × current-registry evaluation of historical proofs × legacy pause routing.
+2. Future Amsterdam state gas × mixed L1/L2 budgets × portal retry semantics.
+3. Governance calldata freeze × permissionless anchor advancement × stale migration starting anchor.

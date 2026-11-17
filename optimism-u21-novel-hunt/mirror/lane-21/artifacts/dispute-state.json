@@ -1,0 +1,1208 @@
+{
+  "chains": [
+    {
+      "name": "OP Mainnet",
+      "factory": "0xe5965Ab5962eDc7477C8520243A95517CD252fA9",
+      "asr": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+      "respected": 9,
+      "gameCounts": {
+        "pre": 21378,
+        "post": 21378,
+        "later": 21389
+      },
+      "factoryConfigs": {
+        "pre": {
+          "0": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "1": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "4": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "5": {
+            "implementation": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+            "initBond": "0",
+            "gameArgs": "0x23b2c62946350f4246f9f9d027e071f0264fd113473300df21d047806a082244b417f96b32f13a33"
+          },
+          "8": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "9": {
+            "implementation": "0x19AF533Cc2A2A55786DCB8672aA5717e64213208",
+            "initBond": "80000000000000000",
+            "gameArgs": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1dfacc005dcd857b401e4732e6f7837135a22825cfa23b2c62946350f4246f9f9d027e071f0264fd1131b6dbf05eaf22d4e70dc993e8a19dd9f3dcb31620000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "10": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          }
+        },
+        "post": {
+          "0": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "1": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "4": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "5": {
+            "implementation": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+            "initBond": "0",
+            "gameArgs": "0x23b2c62946350f4246f9f9d027e071f0264fd113c27ba3e0fc01567a5e57ae0c391aa98cecba5be0"
+          },
+          "8": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "9": {
+            "implementation": "0x19AF533Cc2A2A55786DCB8672aA5717e64213208",
+            "initBond": "80000000000000000",
+            "gameArgs": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfa23b2c62946350f4246f9f9d027e071f0264fd1131b6dbf05eaf22d4e70dc993e8a19dd9f3dcb31620000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "10": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          }
+        },
+        "later": {
+          "0": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "1": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "4": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "5": {
+            "implementation": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+            "initBond": "0",
+            "gameArgs": "0x23b2c62946350f4246f9f9d027e071f0264fd113c27ba3e0fc01567a5e57ae0c391aa98cecba5be0"
+          },
+          "8": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "9": {
+            "implementation": "0x19AF533Cc2A2A55786DCB8672aA5717e64213208",
+            "initBond": "80000000000000000",
+            "gameArgs": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfa23b2c62946350f4246f9f9d027e071f0264fd1131b6dbf05eaf22d4e70dc993e8a19dd9f3dcb31620000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "10": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          }
+        }
+      },
+      "anchorStateRegistryState": {
+        "pre": {
+          "respectedGameType": "9",
+          "retirementTimestamp": "1753379243"
+        },
+        "post": {
+          "respectedGameType": "9",
+          "retirementTimestamp": "1753379243"
+        },
+        "later": {
+          "respectedGameType": "9",
+          "retirementTimestamp": "1753379243"
+        }
+      },
+      "lastPreUpgradeRespectedGame": {
+        "index": 21377,
+        "gameType": 9,
+        "timestamp": 1794870155,
+        "game": "0x675E956B1912Df79108408CA524fB37810500d10",
+        "state": {
+          "pre": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794870155",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+          },
+          "post": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794870155",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+          },
+          "later": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794870155",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+          }
+        }
+      },
+      "gamesCreatedAfterU21ThroughLaterBlock": [
+        {
+          "index": 21378,
+          "gameType": 9,
+          "timestamp": 1794871775,
+          "game": "0xc02e429475DA586b5458b3060fEc97b322dfD1B9",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794871775",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 21379,
+          "gameType": 9,
+          "timestamp": 1794873779,
+          "game": "0x5881439bc8DC7CB264a6FBDc9CFBEABC9Fe1F446",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794873779",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 21380,
+          "gameType": 9,
+          "timestamp": 1794877403,
+          "game": "0x45f3f1b43BA47610f7761f321818F5D4d736397E",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794877403",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 21381,
+          "gameType": 9,
+          "timestamp": 1794881015,
+          "game": "0xF216D5F2B40a27383963F57940B9Ee88bd9BfBd8",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794881015",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 21382,
+          "gameType": 9,
+          "timestamp": 1794884639,
+          "game": "0x07B29a1489CD24C09e8727d166f6131558E2Ed0C",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794884639",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 21383,
+          "gameType": 9,
+          "timestamp": 1794888263,
+          "game": "0x34BC4857431E91F104ea23296bAc771302173b41",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794888263",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 21384,
+          "gameType": 9,
+          "timestamp": 1794891875,
+          "game": "0xF56587A839DFdD3b1bC312f78Dcd9D94Fa492cCC",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794891875",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 21385,
+          "gameType": 9,
+          "timestamp": 1794895499,
+          "game": "0x76Ad5602f0c66724EA12Ce08Dd02F9550F069dDd",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794895499",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 21386,
+          "gameType": 9,
+          "timestamp": 1794899123,
+          "game": "0xAB58Fb2fa9B3e969B7077B9425c0E65125eEF4f7",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794899123",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 21387,
+          "gameType": 9,
+          "timestamp": 1794902735,
+          "game": "0x0C3953c5173c923670DbFd295C8C76b795955444",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794902735",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 21388,
+          "gameType": 9,
+          "timestamp": 1794906359,
+          "game": "0x668513Abb2B32A988f9F4AaDa89ca48A974F8b65",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794906359",
+            "anchorStateRegistry": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+            "weth": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ink",
+      "factory": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+      "asr": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+      "respected": 9,
+      "gameCounts": {
+        "pre": 2639,
+        "post": 2639,
+        "later": 2640
+      },
+      "factoryConfigs": {
+        "pre": {
+          "0": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "1": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "4": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "5": {
+            "implementation": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+            "initBond": "0",
+            "gameArgs": "0xee018baf058227872540ac60efbd38b023d9dae23832bfbef03173e4c49a00ec0dd178817a02d177"
+          },
+          "8": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "9": {
+            "implementation": "0x19AF533Cc2A2A55786DCB8672aA5717e64213208",
+            "initBond": "80000000000000000",
+            "gameArgs": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1dfacc005dcd857b401e4732e6f7837135a22825cfaee018baf058227872540ac60efbd38b023d9dae257b4c29daee99a28e6e86778b499361294c134ea0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "10": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          }
+        },
+        "post": {
+          "0": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "1": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "4": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "5": {
+            "implementation": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+            "initBond": "0",
+            "gameArgs": "0xee018baf058227872540ac60efbd38b023d9dae23832bfbef03173e4c49a00ec0dd178817a02d177"
+          },
+          "8": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "9": {
+            "implementation": "0x19AF533Cc2A2A55786DCB8672aA5717e64213208",
+            "initBond": "80000000000000000",
+            "gameArgs": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfaee018baf058227872540ac60efbd38b023d9dae257b4c29daee99a28e6e86778b499361294c134ea0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "10": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          }
+        },
+        "later": {
+          "0": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "1": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "4": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "5": {
+            "implementation": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+            "initBond": "0",
+            "gameArgs": "0xee018baf058227872540ac60efbd38b023d9dae23832bfbef03173e4c49a00ec0dd178817a02d177"
+          },
+          "8": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "9": {
+            "implementation": "0x19AF533Cc2A2A55786DCB8672aA5717e64213208",
+            "initBond": "80000000000000000",
+            "gameArgs": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfaee018baf058227872540ac60efbd38b023d9dae257b4c29daee99a28e6e86778b499361294c134ea0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "10": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          }
+        }
+      },
+      "anchorStateRegistryState": {
+        "pre": {
+          "respectedGameType": "9",
+          "retirementTimestamp": "1753379243"
+        },
+        "post": {
+          "respectedGameType": "9",
+          "retirementTimestamp": "1753379243"
+        },
+        "later": {
+          "respectedGameType": "9",
+          "retirementTimestamp": "1753379243"
+        }
+      },
+      "lastPreUpgradeRespectedGame": {
+        "index": 2638,
+        "gameType": 9,
+        "timestamp": 1794857603,
+        "game": "0x40beC00713A38EE5fD697764D50f0055bA4942cc",
+        "state": {
+          "pre": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794857603",
+            "anchorStateRegistry": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+            "weth": "0x57b4C29DAee99a28E6E86778b499361294c134eA",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+          },
+          "post": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794857603",
+            "anchorStateRegistry": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+            "weth": "0x57b4C29DAee99a28E6E86778b499361294c134eA",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+          },
+          "later": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794857603",
+            "anchorStateRegistry": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+            "weth": "0x57b4C29DAee99a28E6E86778b499361294c134eA",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+          }
+        }
+      },
+      "gamesCreatedAfterU21ThroughLaterBlock": [
+        {
+          "index": 2639,
+          "gameType": 9,
+          "timestamp": 1794894575,
+          "game": "0x4393946a3786936fC0435bdBE248fe1748D791b0",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794894575",
+            "anchorStateRegistry": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+            "weth": "0x57b4C29DAee99a28E6E86778b499361294c134eA",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Soneium",
+      "factory": "0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0",
+      "asr": "0x4890928941e62e273dA359374b105F803329F473",
+      "respected": 5,
+      "gameCounts": {
+        "pre": 8533,
+        "post": 8533,
+        "later": 8537
+      },
+      "factoryConfigs": {
+        "pre": {
+          "0": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "1": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "4": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "5": {
+            "implementation": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+            "initBond": "0",
+            "gameArgs": "0x4890928941e62e273da359374b105f803329f473400c164c4a8ca84385b70eed6eb03ea847c8e1b8"
+          },
+          "8": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "9": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "10": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          }
+        },
+        "post": {
+          "0": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "1": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "4": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "5": {
+            "implementation": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+            "initBond": "0",
+            "gameArgs": "0x4890928941e62e273da359374b105f803329f473400c164c4a8ca84385b70eed6eb03ea847c8e1b8"
+          },
+          "8": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "9": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "10": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          }
+        },
+        "later": {
+          "0": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "1": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "4": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "5": {
+            "implementation": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+            "initBond": "0",
+            "gameArgs": "0x4890928941e62e273da359374b105f803329f473400c164c4a8ca84385b70eed6eb03ea847c8e1b8"
+          },
+          "8": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "9": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "10": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          }
+        }
+      },
+      "anchorStateRegistryState": {
+        "pre": {
+          "respectedGameType": "5",
+          "retirementTimestamp": "1753380095"
+        },
+        "post": {
+          "respectedGameType": "5",
+          "retirementTimestamp": "1753380095"
+        },
+        "later": {
+          "respectedGameType": "5",
+          "retirementTimestamp": "1753380095"
+        }
+      },
+      "lastPreUpgradeRespectedGame": {
+        "index": 8532,
+        "gameType": 5,
+        "timestamp": 1794858959,
+        "game": "0xACe27C57c234E95D612d4E04233a367C3cE4E15e",
+        "state": {
+          "pre": {
+            "gameType": "5",
+            "status": "2",
+            "createdAt": "1794858959",
+            "anchorStateRegistry": "0x4890928941e62e273dA359374b105F803329F473",
+            "weth": "ERROR:",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "proposer": "0x400c164C4a8cA84385B70EEd6eB03ea847c8E1b8"
+          },
+          "post": {
+            "gameType": "5",
+            "status": "2",
+            "createdAt": "1794858959",
+            "anchorStateRegistry": "0x4890928941e62e273dA359374b105F803329F473",
+            "weth": "ERROR:",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "proposer": "0x400c164C4a8cA84385B70EEd6eB03ea847c8E1b8"
+          },
+          "later": {
+            "gameType": "5",
+            "status": "2",
+            "createdAt": "1794858959",
+            "anchorStateRegistry": "0x4890928941e62e273dA359374b105F803329F473",
+            "weth": "ERROR:",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "proposer": "0x400c164C4a8cA84385B70EEd6eB03ea847c8E1b8"
+          }
+        }
+      },
+      "gamesCreatedAfterU21ThroughLaterBlock": [
+        {
+          "index": 8533,
+          "gameType": 5,
+          "timestamp": 1794871559,
+          "game": "0xc85F8398F3a27B5AFd6b782e3879C69eF2D3b089",
+          "state": {
+            "gameType": "5",
+            "status": "2",
+            "createdAt": "1794871559",
+            "anchorStateRegistry": "0x4890928941e62e273dA359374b105F803329F473",
+            "weth": "ERROR:",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "proposer": "0x400c164C4a8cA84385B70EEd6eB03ea847c8E1b8"
+          }
+        },
+        {
+          "index": 8534,
+          "gameType": 5,
+          "timestamp": 1794878771,
+          "game": "0xd89C5bE95f9Ad7A1CEf12F083ee08329BE9D4b7e",
+          "state": {
+            "gameType": "5",
+            "status": "2",
+            "createdAt": "1794878771",
+            "anchorStateRegistry": "0x4890928941e62e273dA359374b105F803329F473",
+            "weth": "ERROR:",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "proposer": "0x400c164C4a8cA84385B70EEd6eB03ea847c8E1b8"
+          }
+        },
+        {
+          "index": 8535,
+          "gameType": 5,
+          "timestamp": 1794888443,
+          "game": "0x899E369E29639D7E4ceF603BA9B33C0eC87232Ca",
+          "state": {
+            "gameType": "5",
+            "status": "2",
+            "createdAt": "1794888443",
+            "anchorStateRegistry": "0x4890928941e62e273dA359374b105F803329F473",
+            "weth": "ERROR:",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "proposer": "0x400c164C4a8cA84385B70EEd6eB03ea847c8E1b8"
+          }
+        },
+        {
+          "index": 8536,
+          "gameType": 5,
+          "timestamp": 1794898055,
+          "game": "0x5f6a17298508f1994B10959d718F2d25dad9d2fF",
+          "state": {
+            "gameType": "5",
+            "status": "2",
+            "createdAt": "1794898055",
+            "anchorStateRegistry": "0x4890928941e62e273dA359374b105F803329F473",
+            "weth": "ERROR:",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "proposer": "0x400c164C4a8cA84385B70EEd6eB03ea847c8E1b8"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Unichain",
+      "factory": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+      "asr": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+      "respected": 9,
+      "gameCounts": {
+        "pre": 17681,
+        "post": 17681,
+        "later": 17691
+      },
+      "factoryConfigs": {
+        "pre": {
+          "0": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "1": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "4": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "5": {
+            "implementation": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+            "initBond": "0",
+            "gameArgs": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff986b392ca30ad7453c8d88b56eb5a04fd0e2175b7"
+          },
+          "8": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "9": {
+            "implementation": "0x19AF533Cc2A2A55786DCB8672aA5717e64213208",
+            "initBond": "80000000000000000",
+            "gameArgs": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1dfacc005dcd857b401e4732e6f7837135a22825cfa27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff974ad145ac900f1dd5551f0c9e143314dc4022fcf0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "10": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          }
+        },
+        "post": {
+          "0": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "1": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "4": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "5": {
+            "implementation": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+            "initBond": "0",
+            "gameArgs": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff986b392ca30ad7453c8d88b56eb5a04fd0e2175b7"
+          },
+          "8": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "9": {
+            "implementation": "0x19AF533Cc2A2A55786DCB8672aA5717e64213208",
+            "initBond": "80000000000000000",
+            "gameArgs": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfa27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff974ad145ac900f1dd5551f0c9e143314dc4022fcf0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "10": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          }
+        },
+        "later": {
+          "0": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "1": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "4": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "5": {
+            "implementation": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+            "initBond": "0",
+            "gameArgs": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff986b392ca30ad7453c8d88b56eb5a04fd0e2175b7"
+          },
+          "8": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          },
+          "9": {
+            "implementation": "0x19AF533Cc2A2A55786DCB8672aA5717e64213208",
+            "initBond": "80000000000000000",
+            "gameArgs": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfa27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff974ad145ac900f1dd5551f0c9e143314dc4022fcf0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "10": {
+            "implementation": "0x0000000000000000000000000000000000000000",
+            "initBond": "0",
+            "gameArgs": "0x"
+          }
+        }
+      },
+      "anchorStateRegistryState": {
+        "pre": {
+          "respectedGameType": "9",
+          "retirementTimestamp": "1753380731"
+        },
+        "post": {
+          "respectedGameType": "9",
+          "retirementTimestamp": "1753380731"
+        },
+        "later": {
+          "respectedGameType": "9",
+          "retirementTimestamp": "1753380731"
+        }
+      },
+      "lastPreUpgradeRespectedGame": {
+        "index": 17680,
+        "gameType": 9,
+        "timestamp": 1794870011,
+        "game": "0x3073a5f81798E353033Ba07cF19b49d6390a68d8",
+        "state": {
+          "pre": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794870011",
+            "anchorStateRegistry": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+            "weth": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+          },
+          "post": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794870011",
+            "anchorStateRegistry": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+            "weth": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+          },
+          "later": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794870011",
+            "anchorStateRegistry": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+            "weth": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+          }
+        }
+      },
+      "gamesCreatedAfterU21ThroughLaterBlock": [
+        {
+          "index": 17681,
+          "gameType": 9,
+          "timestamp": 1794873635,
+          "game": "0x53278636D07d6484Cefe9dF934012f037DC6f92C",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794873635",
+            "anchorStateRegistry": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+            "weth": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 17682,
+          "gameType": 9,
+          "timestamp": 1794877271,
+          "game": "0x4BB0e65d9199219F01d0326C6EbbAB1BcAA7e2b1",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794877271",
+            "anchorStateRegistry": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+            "weth": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 17683,
+          "gameType": 9,
+          "timestamp": 1794880895,
+          "game": "0xC7eC519E7b740837e95EF12B2A22A367E7e2DDD2",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794880895",
+            "anchorStateRegistry": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+            "weth": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 17684,
+          "gameType": 9,
+          "timestamp": 1794884519,
+          "game": "0x0b15E22eBC1A478c136586fe7E58924376ef2736",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794884519",
+            "anchorStateRegistry": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+            "weth": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 17685,
+          "gameType": 9,
+          "timestamp": 1794888131,
+          "game": "0x8Fe33455BDC4B27750C36805d549fDb132f370D1",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794888131",
+            "anchorStateRegistry": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+            "weth": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 17686,
+          "gameType": 9,
+          "timestamp": 1794891755,
+          "game": "0xfcdEE963428567cC1C977523A5A2783F44aCd89B",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794891755",
+            "anchorStateRegistry": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+            "weth": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 17687,
+          "gameType": 9,
+          "timestamp": 1794895379,
+          "game": "0x018171b0Dfd80065B4A664e231766684FAD8d3B7",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794895379",
+            "anchorStateRegistry": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+            "weth": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 17688,
+          "gameType": 9,
+          "timestamp": 1794898991,
+          "game": "0xC13ED3234A4793779CF97AEBE7f171a6c6658692",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794898991",
+            "anchorStateRegistry": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+            "weth": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 17689,
+          "gameType": 9,
+          "timestamp": 1794902615,
+          "game": "0x0A2C81a1f6c13357F48AB3688Af4BB9528c85615",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794902615",
+            "anchorStateRegistry": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+            "weth": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        },
+        {
+          "index": 17690,
+          "gameType": 9,
+          "timestamp": 1794906239,
+          "game": "0x870E9c5b06f447161b6d10cc716bb326DE108119",
+          "state": {
+            "gameType": "9",
+            "status": "0",
+            "createdAt": "1794906239",
+            "anchorStateRegistry": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+            "weth": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+            "isRegistered": "true",
+            "isRespected": "true",
+            "isRetired": "false",
+            "isProper": "true",
+            "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1284 @@
+[
+ {
+  "i": 0,
+  "label": "ETH bridge wd, m=0, existing EOA, live L2 baseGas (v2.2.1)",
+  "wd_gasLimit": 312784,
+  "minGasLimit": 0,
+  "dataLen": 420,
+  "value": 1000000000000000000,
+  "intrinsic_std": 25416,
+  "intrinsic_floor7623": 32040,
+  "g_min_pass": 516782,
+  "direct_tx_gas_min_pass": 542198,
+  "at_min": {
+   "g": 516782,
+   "used": 293576,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 516782,
+    "portal_gas_before_CALL": 357664,
+    "l1cdm_proxy_entry_gas": 345418,
+    "portal_gas_after_CALL": 221801,
+    "l1cdm_impl_entry_gas": 332640,
+    "impl_last_gas": 211276,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 304074,
+    "gas_at_sub": 298836,
+    "target_CALL_gas_before": 298718,
+    "target_CALL_requested": 163836,
+    "target_entry_gas": 166136,
+    "gas_after_target_call": 233108,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 114074,
+    "precheck_cost_from_proxy_entry": 41344,
+    "proxy_entry_minus_wd_gasLimit": 32634,
+    "postcall_cost": 21832,
+    "steps": 16016
+   }
+  },
+  "below_min": {
+   "g": 516781,
+   "used": 154202,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 516782,
+  "at_min_finalize": {
+   "g": 516782,
+   "used": 293576,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 516782,
+  "at_plus_2M": {
+   "g": 2516782,
+   "used": 293576,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 58000000,
+   "used": 293576,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 1,
+  "label": "ETH bridge wd, m=0, existing EOA, OLD L2 baseGas (285k+16*len)",
+  "wd_gasLimit": 287624,
+  "minGasLimit": 0,
+  "dataLen": 420,
+  "value": 1000000000000000000,
+  "intrinsic_std": 25416,
+  "intrinsic_floor7623": 32040,
+  "g_min_pass": 490818,
+  "direct_tx_gas_min_pass": 516234,
+  "at_min": {
+   "g": 490818,
+   "used": 293576,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 490818,
+    "portal_gas_before_CALL": 332105,
+    "l1cdm_proxy_entry_gas": 320259,
+    "portal_gas_after_CALL": 196242,
+    "l1cdm_impl_entry_gas": 307874,
+    "impl_last_gas": 186510,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 279308,
+    "gas_at_sub": 274070,
+    "target_CALL_gas_before": 273952,
+    "target_CALL_requested": 139070,
+    "target_entry_gas": 141370,
+    "gas_after_target_call": 208342,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 89308,
+    "precheck_cost_from_proxy_entry": 40951,
+    "proxy_entry_minus_wd_gasLimit": 32635,
+    "postcall_cost": 21832,
+    "steps": 16016
+   }
+  },
+  "below_min": {
+   "g": 490817,
+   "used": 154202,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 490818,
+  "at_min_finalize": {
+   "g": 490818,
+   "used": 293576,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 490818,
+  "at_plus_2M": {
+   "g": 2490818,
+   "used": 293576,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 58000000,
+   "used": 293576,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 2,
+  "label": "ETH bridge wd, m=200000, existing EOA, live",
+  "wd_gasLimit": 515958,
+  "minGasLimit": 200000,
+  "dataLen": 420,
+  "value": 1000000000000000000,
+  "intrinsic_std": 25452,
+  "intrinsic_floor7623": 32130,
+  "g_min_pass": 726457,
+  "direct_tx_gas_min_pass": 751909,
+  "at_min": {
+   "g": 726457,
+   "used": 293576,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 726457,
+    "portal_gas_before_CALL": 564063,
+    "l1cdm_proxy_entry_gas": 548592,
+    "portal_gas_after_CALL": 428200,
+    "l1cdm_impl_entry_gas": 532639,
+    "impl_last_gas": 411275,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 504073,
+    "gas_at_sub": 498835,
+    "target_CALL_gas_before": 498717,
+    "target_CALL_requested": 363835,
+    "target_entry_gas": 366135,
+    "gas_after_target_call": 433107,
+    "hasMinGas_threshold": 393175,
+    "hasMinGas_margin": 110898,
+    "precheck_cost_from_proxy_entry": 44519,
+    "proxy_entry_minus_wd_gasLimit": 32634,
+    "postcall_cost": 21832,
+    "steps": 16016
+   }
+  },
+  "below_min": {
+   "g": 726456,
+   "used": 154202,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 726457,
+  "at_min_finalize": {
+   "g": 726457,
+   "used": 293576,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 726457,
+  "at_plus_2M": {
+   "g": 2726457,
+   "used": 293576,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 58000000,
+   "used": 293576,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 3,
+  "label": "ETH bridge wd, m=0, FRESH account recipient, old",
+  "wd_gasLimit": 287624,
+  "minGasLimit": 0,
+  "dataLen": 420,
+  "value": 1000000000000000000,
+  "intrinsic_std": 25236,
+  "intrinsic_floor7623": 31590,
+  "g_min_pass": 490818,
+  "direct_tx_gas_min_pass": 516054,
+  "at_min": {
+   "g": 490818,
+   "used": 306616,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 490818,
+    "portal_gas_before_CALL": 332105,
+    "l1cdm_proxy_entry_gas": 320259,
+    "portal_gas_after_CALL": 183202,
+    "l1cdm_impl_entry_gas": 307874,
+    "impl_last_gas": 173470,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 279308,
+    "gas_at_sub": 274070,
+    "target_CALL_gas_before": 273952,
+    "target_CALL_requested": 139070,
+    "target_entry_gas": 141370,
+    "gas_after_target_call": 195302,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 89308,
+    "precheck_cost_from_proxy_entry": 40951,
+    "proxy_entry_minus_wd_gasLimit": 32635,
+    "postcall_cost": 21832,
+    "steps": 15995
+   }
+  },
+  "below_min": {
+   "g": 490817,
+   "used": 154202,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 490818,
+  "at_min_finalize": {
+   "g": 490818,
+   "used": 306616,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 490818,
+  "at_plus_2M": {
+   "g": 2490818,
+   "used": 306616,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 58000000,
+   "used": 306616,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 4,
+  "label": "USDC bridge wd, m=0, old",
+  "wd_gasLimit": 288648,
+  "minGasLimit": 0,
+  "dataLen": 484,
+  "value": 0,
+  "intrinsic_std": 25972,
+  "intrinsic_floor7623": 33430,
+  "g_min_pass": 473279,
+  "direct_tx_gas_min_pass": 499251,
+  "at_min": {
+   "g": 473279,
+   "used": 310781,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 473279,
+    "portal_gas_before_CALL": 333145,
+    "l1cdm_proxy_entry_gas": 325381,
+    "portal_gas_after_CALL": 161789,
+    "l1cdm_impl_entry_gas": 312916,
+    "impl_last_gas": 151859,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 284149,
+    "gas_at_sub": 278911,
+    "target_CALL_gas_before": 278793,
+    "target_CALL_requested": 143911,
+    "target_entry_gas": 143911,
+    "gas_after_target_call": 173691,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 94149,
+    "precheck_cost_from_proxy_entry": 41232,
+    "proxy_entry_minus_wd_gasLimit": 36733,
+    "postcall_cost": 21832,
+    "steps": 16793
+   }
+  },
+  "below_min": {
+   "g": 473278,
+   "used": 135910,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 473279,
+  "at_min_finalize": {
+   "g": 473279,
+   "used": 310781,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 473279,
+  "at_plus_2M": {
+   "g": 2473279,
+   "used": 310781,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 58000000,
+   "used": 310781,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 5,
+  "label": "Sink, empty msg, m=0, value 0, old",
+  "wd_gasLimit": 285000,
+  "minGasLimit": 0,
+  "dataLen": 228,
+  "value": 0,
+  "intrinsic_std": 23676,
+  "intrinsic_floor7623": 27690,
+  "g_min_pass": 468796,
+  "direct_tx_gas_min_pass": 492472,
+  "at_min": {
+   "g": 468796,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 468796,
+    "portal_gas_before_CALL": 329439,
+    "l1cdm_proxy_entry_gas": 321733,
+    "portal_gas_after_CALL": 261408,
+    "l1cdm_impl_entry_gas": 309325,
+    "impl_last_gas": 251592,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 281380,
+    "gas_at_sub": 276142,
+    "target_CALL_gas_before": 276024,
+    "target_CALL_requested": 141142,
+    "target_entry_gas": 141142,
+    "gas_after_target_call": 273424,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 91380,
+    "precheck_cost_from_proxy_entry": 40353,
+    "proxy_entry_minus_wd_gasLimit": 36733,
+    "postcall_cost": 21832,
+    "steps": 11858
+   }
+  },
+  "below_min": {
+   "g": 468795,
+   "used": 135154,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 468796,
+  "at_min_finalize": {
+   "g": 468796,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 468796,
+  "at_plus_2M": {
+   "g": 2468796,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 58000000,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 6,
+  "label": "1 ETH to FRESH EOA via messenger, empty msg, m=0, old",
+  "wd_gasLimit": 285000,
+  "minGasLimit": 0,
+  "dataLen": 228,
+  "value": 1000000000000000000,
+  "intrinsic_std": 23844,
+  "intrinsic_floor7623": 28110,
+  "g_min_pass": 487569,
+  "direct_tx_gas_min_pass": 511413,
+  "at_min": {
+   "g": 487569,
+   "used": 261076,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 487569,
+    "portal_gas_before_CALL": 329439,
+    "l1cdm_proxy_entry_gas": 317634,
+    "portal_gas_after_CALL": 225508,
+    "l1cdm_impl_entry_gas": 305290,
+    "impl_last_gas": 215857,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 277345,
+    "gas_at_sub": 272107,
+    "target_CALL_gas_before": 271989,
+    "target_CALL_requested": 137107,
+    "gas_after_target_call": 237689,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 87345,
+    "precheck_cost_from_proxy_entry": 40289,
+    "proxy_entry_minus_wd_gasLimit": 32634,
+    "postcall_cost": 21832,
+    "steps": 12919
+   }
+  },
+  "below_min": {
+   "g": 487568,
+   "used": 153634,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 487569,
+  "at_min_finalize": {
+   "g": 487569,
+   "used": 261076,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 487569,
+  "at_plus_2M": {
+   "g": 2487569,
+   "used": 261076,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 58000000,
+   "used": 261076,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 7,
+  "label": "Burner (uses all gas), 1 ETH, m=0, old",
+  "wd_gasLimit": 285000,
+  "minGasLimit": 0,
+  "dataLen": 228,
+  "value": 1000000000000000000,
+  "intrinsic_std": 23820,
+  "intrinsic_floor7623": 28050,
+  "g_min_pass": 487569,
+  "direct_tx_gas_min_pass": 511389,
+  "at_min": {
+   "g": 487569,
+   "used": 375302,
+   "out": "FINALIZED_FAILEDMSG",
+   "trace": {
+    "portal_frame_entry_gas": 487569,
+    "portal_gas_before_CALL": 329439,
+    "l1cdm_proxy_entry_gas": 317634,
+    "portal_gas_after_CALL": 111282,
+    "l1cdm_impl_entry_gas": 305290,
+    "impl_last_gas": 101631,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 277345,
+    "gas_at_sub": 272107,
+    "target_CALL_gas_before": 271989,
+    "target_CALL_requested": 137107,
+    "target_entry_gas": 139407,
+    "gas_after_target_call": 123282,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 87345,
+    "precheck_cost_from_proxy_entry": 40289,
+    "proxy_entry_minus_wd_gasLimit": 32634,
+    "postcall_cost": 21651,
+    "steps": 12907
+   }
+  },
+  "below_min": {
+   "g": 487568,
+   "used": 153634,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 487569,
+  "at_min_finalize": {
+   "g": 487569,
+   "used": 375302,
+   "out": "FINALIZED_FAILEDMSG"
+  },
+  "g_min_deliver": null,
+  "at_plus_2M": {
+   "g": 2487569,
+   "used": 2283009,
+   "out": "FINALIZED_FAILEDMSG"
+  },
+  "at_HI": {
+   "g": 58000000,
+   "used": 54495793,
+   "out": "FINALIZED_FAILEDMSG"
+  }
+ },
+ {
+  "i": 8,
+  "label": "Burner, m=1000000, old",
+  "wd_gasLimit": 1300873,
+  "minGasLimit": 1000000,
+  "dataLen": 228,
+  "value": 0,
+  "intrinsic_std": 23712,
+  "intrinsic_floor7623": 27780,
+  "g_min_pass": 1517175,
+  "direct_tx_gas_min_pass": 1540887,
+  "at_min": {
+   "g": 1517175,
+   "used": 1347660,
+   "out": "FINALIZED_FAILEDMSG",
+   "trace": {
+    "portal_frame_entry_gas": 1517175,
+    "portal_gas_before_CALL": 1361437,
+    "l1cdm_proxy_entry_gas": 1337606,
+    "portal_gas_after_CALL": 152445,
+    "l1cdm_impl_entry_gas": 1309325,
+    "impl_last_gas": 110631,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 1281380,
+    "gas_at_sub": 1276142,
+    "target_CALL_gas_before": 1276024,
+    "target_CALL_requested": 1141142,
+    "target_entry_gas": 1141142,
+    "gas_after_target_call": 132282,
+    "hasMinGas_threshold": 1205874,
+    "hasMinGas_margin": 75506,
+    "precheck_cost_from_proxy_entry": 56226,
+    "proxy_entry_minus_wd_gasLimit": 36733,
+    "postcall_cost": 21651,
+    "steps": 11845
+   }
+  },
+  "below_min": {
+   "g": 1517174,
+   "used": 135154,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 1517175,
+  "at_min_finalize": {
+   "g": 1517175,
+   "used": 1347660,
+   "out": "FINALIZED_FAILEDMSG"
+  },
+  "g_min_deliver": null,
+  "at_plus_2M": {
+   "g": 3517175,
+   "used": 3255367,
+   "out": "FINALIZED_FAILEDMSG"
+  },
+  "at_HI": {
+   "g": 58000000,
+   "used": 54494573,
+   "out": "FINALIZED_FAILEDMSG"
+  }
+ },
+ {
+  "i": 9,
+  "label": "Reverter, 1 ETH, m=0, old",
+  "wd_gasLimit": 285000,
+  "minGasLimit": 0,
+  "dataLen": 228,
+  "value": 1000000000000000000,
+  "intrinsic_std": 23820,
+  "intrinsic_floor7623": 28050,
+  "g_min_pass": 487569,
+  "direct_tx_gas_min_pass": 511389,
+  "at_min": {
+   "g": 487569,
+   "used": 235899,
+   "out": "FINALIZED_FAILEDMSG",
+   "trace": {
+    "portal_frame_entry_gas": 487569,
+    "portal_gas_before_CALL": 329439,
+    "l1cdm_proxy_entry_gas": 317634,
+    "portal_gas_after_CALL": 250685,
+    "l1cdm_impl_entry_gas": 305290,
+    "impl_last_gas": 241034,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 277345,
+    "gas_at_sub": 272107,
+    "target_CALL_gas_before": 271989,
+    "target_CALL_requested": 137107,
+    "target_entry_gas": 139407,
+    "gas_after_target_call": 262685,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 87345,
+    "precheck_cost_from_proxy_entry": 40289,
+    "proxy_entry_minus_wd_gasLimit": 32634,
+    "postcall_cost": 21651,
+    "steps": 12909
+   }
+  },
+  "below_min": {
+   "g": 487568,
+   "used": 153634,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 487569,
+  "at_min_finalize": {
+   "g": 487569,
+   "used": 235899,
+   "out": "FINALIZED_FAILEDMSG"
+  },
+  "g_min_deliver": null,
+  "at_plus_2M": {
+   "g": 2487569,
+   "used": 235899,
+   "out": "FINALIZED_FAILEDMSG"
+  },
+  "at_HI": {
+   "g": 58000000,
+   "used": 235899,
+   "out": "FINALIZED_FAILEDMSG"
+  }
+ },
+ {
+  "i": 10,
+  "label": "Sink, 10000 x 0xff, m=0, old",
+  "wd_gasLimit": 445000,
+  "minGasLimit": 0,
+  "dataLen": 10244,
+  "value": 0,
+  "intrinsic_std": 183776,
+  "intrinsic_floor7623": 427940,
+  "g_min_pass": 662965,
+  "direct_tx_gas_min_pass": 846741,
+  "at_min": {
+   "g": 662965,
+   "used": 269758,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 662965,
+    "portal_gas_before_CALL": 491979,
+    "l1cdm_proxy_entry_gas": 481733,
+    "portal_gas_after_CALL": 391616,
+    "l1cdm_impl_entry_gas": 466825,
+    "impl_last_gas": 376793,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 406581,
+    "gas_at_sub": 401343,
+    "target_CALL_gas_before": 401225,
+    "target_CALL_requested": 266343,
+    "target_entry_gas": 266343,
+    "gas_after_target_call": 398625,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 216581,
+    "precheck_cost_from_proxy_entry": 75152,
+    "proxy_entry_minus_wd_gasLimit": 36733,
+    "postcall_cost": 21832,
+    "steps": 25011
+   }
+  },
+  "below_min": {
+   "g": 662964,
+   "used": 165879,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 662965,
+  "at_min_finalize": {
+   "g": 662965,
+   "used": 269758,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 662965,
+  "at_plus_2M": {
+   "g": 2662965,
+   "used": 269758,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 58000000,
+   "used": 269758,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 11,
+  "label": "Sink, 10000 x 0xff, m=0, live",
+  "wd_gasLimit": 470160,
+  "minGasLimit": 0,
+  "dataLen": 10244,
+  "value": 0,
+  "intrinsic_std": 183776,
+  "intrinsic_floor7623": 427940,
+  "g_min_pass": 688930,
+  "direct_tx_gas_min_pass": 872706,
+  "at_min": {
+   "g": 688930,
+   "used": 269758,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 688930,
+    "portal_gas_before_CALL": 517538,
+    "l1cdm_proxy_entry_gas": 506893,
+    "portal_gas_after_CALL": 417175,
+    "l1cdm_impl_entry_gas": 491591,
+    "impl_last_gas": 401559,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 431347,
+    "gas_at_sub": 426109,
+    "target_CALL_gas_before": 425991,
+    "target_CALL_requested": 291109,
+    "target_entry_gas": 291109,
+    "gas_after_target_call": 423391,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 241347,
+    "precheck_cost_from_proxy_entry": 75546,
+    "proxy_entry_minus_wd_gasLimit": 36733,
+    "postcall_cost": 21832,
+    "steps": 25011
+   }
+  },
+  "below_min": {
+   "g": 688929,
+   "used": 165879,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 688930,
+  "at_min_finalize": {
+   "g": 688930,
+   "used": 269758,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 688930,
+  "at_plus_2M": {
+   "g": 2688930,
+   "used": 269758,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 58000000,
+   "used": 269758,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 12,
+  "label": "Sink, 100000 x 0xff, m=0, old",
+  "wd_gasLimit": 1885000,
+  "minGasLimit": 0,
+  "dataLen": 100228,
+  "value": 0,
+  "intrinsic_std": 1623736,
+  "intrinsic_floor7623": 4027840,
+  "g_min_pass": 2496925,
+  "direct_tx_gas_min_pass": 4120661,
+  "at_min": {
+   "g": 2496925,
+   "used": 1024869,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 2496925,
+    "portal_gas_before_CALL": 1954836,
+    "l1cdm_proxy_entry_gas": 1921733,
+    "portal_gas_after_CALL": 1478400,
+    "l1cdm_impl_entry_gas": 1884325,
+    "impl_last_gas": 1418780,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 1448568,
+    "gas_at_sub": 1443330,
+    "target_CALL_gas_before": 1443212,
+    "target_CALL_requested": 1308330,
+    "target_entry_gas": 1308330,
+    "gas_after_target_call": 1440612,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 1258568,
+    "precheck_cost_from_proxy_entry": 473165,
+    "proxy_entry_minus_wd_gasLimit": 36733,
+    "postcall_cost": 21832,
+    "steps": 143108
+   }
+  },
+  "below_min": {
+   "g": 2496924,
+   "used": 544895,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 2496925,
+  "at_min_finalize": {
+   "g": 2496925,
+   "used": 1024869,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 2496925,
+  "at_plus_2M": {
+   "g": 4496925,
+   "used": 1024869,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 45000000,
+   "used": 1024869,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 13,
+  "label": "Sink, 100000 x 0xff, m=0, live",
+  "wd_gasLimit": 4031400,
+  "minGasLimit": 0,
+  "dataLen": 100228,
+  "value": 0,
+  "intrinsic_std": 1623736,
+  "intrinsic_floor7623": 4027840,
+  "g_min_pass": 4712006,
+  "direct_tx_gas_min_pass": 6335742,
+  "at_min": {
+   "g": 4712006,
+   "used": 1024869,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 4712006,
+    "portal_gas_before_CALL": 4135306,
+    "l1cdm_proxy_entry_gas": 4068133,
+    "portal_gas_after_CALL": 3658870,
+    "l1cdm_impl_entry_gas": 3997187,
+    "impl_last_gas": 3531643,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 3561431,
+    "gas_at_sub": 3556193,
+    "target_CALL_gas_before": 3556075,
+    "target_CALL_requested": 3421193,
+    "target_entry_gas": 3421193,
+    "gas_after_target_call": 3553475,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 3371431,
+    "precheck_cost_from_proxy_entry": 506702,
+    "proxy_entry_minus_wd_gasLimit": 36733,
+    "postcall_cost": 21832,
+    "steps": 143108
+   }
+  },
+  "below_min": {
+   "g": 4712005,
+   "used": 544895,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 4712006,
+  "at_min_finalize": {
+   "g": 4712006,
+   "used": 1024869,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 4712006,
+  "at_plus_2M": {
+   "g": 6712006,
+   "used": 1024869,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 45000000,
+   "used": 1024869,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 14,
+  "label": "Burner, 100000 x 0xff, 1 ETH, m=0, old",
+  "wd_gasLimit": 1885000,
+  "minGasLimit": 0,
+  "dataLen": 100228,
+  "value": 1000000000000000000,
+  "intrinsic_std": 1623880,
+  "intrinsic_floor7623": 4028200,
+  "g_min_pass": 2515723,
+  "direct_tx_gas_min_pass": 4139603,
+  "at_min": {
+   "g": 2515723,
+   "used": 2360660,
+   "out": "FINALIZED_FAILEDMSG",
+   "trace": {
+    "portal_frame_entry_gas": 2515723,
+    "portal_gas_before_CALL": 1954836,
+    "l1cdm_proxy_entry_gas": 1917634,
+    "portal_gas_after_CALL": 161086,
+    "l1cdm_impl_entry_gas": 1880290,
+    "impl_last_gas": 101631,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 1444533,
+    "gas_at_sub": 1439295,
+    "target_CALL_gas_before": 1439177,
+    "target_CALL_requested": 1304295,
+    "target_entry_gas": 1306595,
+    "gas_after_target_call": 123282,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 1254533,
+    "precheck_cost_from_proxy_entry": 473101,
+    "proxy_entry_minus_wd_gasLimit": 32634,
+    "postcall_cost": 21651,
+    "steps": 144157
+   }
+  },
+  "below_min": {
+   "g": 2515722,
+   "used": 563399,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 2515723,
+  "at_min_finalize": {
+   "g": 2515723,
+   "used": 2360660,
+   "out": "FINALIZED_FAILEDMSG"
+  },
+  "g_min_deliver": null,
+  "at_plus_2M": {
+   "g": 4515723,
+   "used": 4268368,
+   "out": "FINALIZED_FAILEDMSG"
+  },
+  "at_HI": {
+   "g": 45000000,
+   "used": 42352235,
+   "out": "FINALIZED_FAILEDMSG"
+  }
+ },
+ {
+  "i": 15,
+  "label": "Sink, 300000 x 0x00, m=0, old",
+  "wd_gasLimit": 5085000,
+  "minGasLimit": 0,
+  "dataLen": 300228,
+  "value": 0,
+  "intrinsic_std": 1223736,
+  "intrinsic_floor7623": 3027840,
+  "g_min_pass": 7132654,
+  "direct_tx_gas_min_pass": 8356390,
+  "at_min": {
+   "g": 7132654,
+   "used": 3920059,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 7132654,
+    "portal_gas_before_CALL": 5205630,
+    "l1cdm_proxy_entry_gas": 5121733,
+    "portal_gas_after_CALL": 3340181,
+    "l1cdm_impl_entry_gas": 5034325,
+    "impl_last_gas": 3182742,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 3212530,
+    "gas_at_sub": 3207292,
+    "target_CALL_gas_before": 3207174,
+    "target_CALL_requested": 3072292,
+    "target_entry_gas": 3072292,
+    "gas_after_target_call": 3204574,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 3022530,
+    "precheck_cost_from_proxy_entry": 1909203,
+    "proxy_entry_minus_wd_gasLimit": 36733,
+    "postcall_cost": 21832,
+    "steps": 405608
+   }
+  },
+  "below_min": {
+   "g": 7132653,
+   "used": 2051023,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 7132654,
+  "at_min_finalize": {
+   "g": 7132654,
+   "used": 3920059,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 7132654,
+  "at_plus_2M": {
+   "g": 9132654,
+   "used": 3920059,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 45000000,
+   "used": 3920059,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 16,
+  "label": "Sink, 300000 x 0x00, m=0, live",
+  "wd_gasLimit": 12031400,
+  "minGasLimit": 0,
+  "dataLen": 300228,
+  "value": 0,
+  "intrinsic_std": 1223736,
+  "intrinsic_floor7623": 3027840,
+  "g_min_pass": 14301325,
+  "direct_tx_gas_min_pass": 15525061,
+  "at_min": {
+   "g": 14301325,
+   "used": 3920059,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 14301325,
+    "portal_gas_before_CALL": 12262290,
+    "l1cdm_proxy_entry_gas": 12068133,
+    "portal_gas_after_CALL": 10396841,
+    "l1cdm_impl_entry_gas": 11872187,
+    "impl_last_gas": 10020605,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 10050393,
+    "gas_at_sub": 10045155,
+    "target_CALL_gas_before": 10045037,
+    "target_CALL_requested": 9910155,
+    "target_entry_gas": 9885524,
+    "gas_after_target_call": 10042437,
+    "hasMinGas_threshold": 190000,
+    "hasMinGas_margin": 9860393,
+    "precheck_cost_from_proxy_entry": 2017740,
+    "proxy_entry_minus_wd_gasLimit": 36733,
+    "postcall_cost": 21832,
+    "steps": 405608
+   }
+  },
+  "below_min": {
+   "g": 14301324,
+   "used": 2051023,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 14301325,
+  "at_min_finalize": {
+   "g": 14301325,
+   "used": 3920059,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 14301325,
+  "at_plus_2M": {
+   "g": 16301325,
+   "used": 3920059,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 45000000,
+   "used": 3920059,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 17,
+  "label": "UNSAFE target = OptimismPortal, 1 ETH, m=0, old",
+  "wd_gasLimit": 285000,
+  "minGasLimit": 0,
+  "dataLen": 228,
+  "value": 1000000000000000000,
+  "intrinsic_std": 24024,
+  "intrinsic_floor7623": 28560,
+  "g_min_pass": 487569,
+  "direct_tx_gas_min_pass": 511593,
+  "at_min": {
+   "g": 487569,
+   "used": 194350,
+   "out": "REVERT_L1CDMCallFailed",
+   "trace": {
+    "portal_frame_entry_gas": 487569,
+    "portal_gas_before_CALL": 329439,
+    "l1cdm_proxy_entry_gas": 317634,
+    "portal_gas_after_CALL": 289131,
+    "l1cdm_impl_entry_gas": 305290,
+    "impl_last_gas": 279566,
+    "impl_last_op": "REVERT",
+    "steps": 12461
+   }
+  },
+  "below_min": {
+   "g": 487568,
+   "used": 153634,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": null,
+  "at_plus_2M": {
+   "g": 2487569,
+   "used": 194350,
+   "out": "REVERT_L1CDMCallFailed"
+  },
+  "at_HI": {
+   "g": 45000000,
+   "used": 194350,
+   "out": "REVERT_L1CDMCallFailed"
+  }
+ },
+ {
+  "i": 18,
+  "label": "Sink, m=5000000, live",
+  "wd_gasLimit": 5389525,
+  "minGasLimit": 5000000,
+  "dataLen": 228,
+  "value": 0,
+  "intrinsic_std": 23712,
+  "intrinsic_floor7623": 27780,
+  "g_min_pass": 5736656,
+  "direct_tx_gas_min_pass": 5760368,
+  "at_min": {
+   "g": 5736656,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 5736656,
+    "portal_gas_before_CALL": 5514989,
+    "l1cdm_proxy_entry_gas": 5426258,
+    "portal_gas_after_CALL": 5446958,
+    "l1cdm_impl_entry_gas": 5334091,
+    "impl_last_gas": 5276359,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 5306147,
+    "gas_at_sub": 5300909,
+    "target_CALL_gas_before": 5300791,
+    "target_CALL_requested": 5165909,
+    "target_entry_gas": 5165909,
+    "gas_after_target_call": 5298191,
+    "hasMinGas_threshold": 5269366,
+    "hasMinGas_margin": 36781,
+    "precheck_cost_from_proxy_entry": 120111,
+    "proxy_entry_minus_wd_gasLimit": 36733,
+    "postcall_cost": 21832,
+    "steps": 11858
+   }
+  },
+  "below_min": {
+   "g": 5736655,
+   "used": 135154,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 5736656,
+  "at_min_finalize": {
+   "g": 5736656,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "g_min_deliver": 5736656,
+  "at_plus_2M": {
+   "g": 7736656,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 45000000,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 19,
+  "label": "Sink, m=8000000, live",
+  "wd_gasLimit": 8437144,
+  "minGasLimit": 8000000,
+  "dataLen": 228,
+  "value": 0,
+  "intrinsic_std": 23700,
+  "intrinsic_floor7623": 27750,
+  "g_min_pass": 8881792,
+  "direct_tx_gas_min_pass": 8905492,
+  "at_min": {
+   "g": 8881792,
+   "used": 198370,
+   "out": "FINALIZED_FAILEDMSG",
+   "trace": {
+    "portal_frame_entry_gas": 8881792,
+    "portal_gas_before_CALL": 8610982,
+    "l1cdm_proxy_entry_gas": 8473877,
+    "portal_gas_after_CALL": 8551280,
+    "l1cdm_impl_entry_gas": 8334091,
+    "impl_last_gas": 8284688,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 8306147,
+    "hasMinGas_threshold": 8316985,
+    "hasMinGas_margin": -10838,
+    "precheck_cost_from_proxy_entry": 167730,
+    "proxy_entry_minus_wd_gasLimit": 36733,
+    "steps": 11757
+   }
+  },
+  "below_min": {
+   "g": 8881791,
+   "used": 135154,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 8881792,
+  "at_min_finalize": {
+   "g": 8881792,
+   "used": 198370,
+   "out": "FINALIZED_FAILEDMSG"
+  },
+  "g_min_deliver": 8893155,
+  "at_min_deliver": {
+   "g": 8893155,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 8893155,
+    "portal_gas_before_CALL": 8622167,
+    "l1cdm_proxy_entry_gas": 8484887,
+    "portal_gas_after_CALL": 8554136,
+    "l1cdm_impl_entry_gas": 8344929,
+    "impl_last_gas": 8287197,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 8316985,
+    "gas_at_sub": 8311747,
+    "target_CALL_gas_before": 8311629,
+    "target_CALL_requested": 8176747,
+    "target_entry_gas": 8176747,
+    "gas_after_target_call": 8309029,
+    "hasMinGas_threshold": 8316985,
+    "hasMinGas_margin": 0,
+    "precheck_cost_from_proxy_entry": 167902,
+    "proxy_entry_minus_wd_gasLimit": 47743,
+    "postcall_cost": 21832,
+    "steps": 11858
+   }
+  },
+  "at_plus_2M": {
+   "g": 10881792,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 45000000,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED"
+  }
+ },
+ {
+  "i": 20,
+  "label": "Sink, m=6000000, old",
+  "wd_gasLimit": 6380238,
+  "minGasLimit": 6000000,
+  "dataLen": 228,
+  "value": 0,
+  "intrinsic_std": 23712,
+  "intrinsic_floor7623": 27780,
+  "g_min_pass": 6759070,
+  "direct_tx_gas_min_pass": 6782782,
+  "at_min": {
+   "g": 6759070,
+   "used": 198370,
+   "out": "FINALIZED_FAILEDMSG",
+   "trace": {
+    "portal_frame_entry_gas": 6759070,
+    "portal_gas_before_CALL": 6521427,
+    "l1cdm_proxy_entry_gas": 6416971,
+    "portal_gas_after_CALL": 6461725,
+    "l1cdm_impl_entry_gas": 6309324,
+    "impl_last_gas": 6259921,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 6281380,
+    "hasMinGas_threshold": 6285239,
+    "hasMinGas_margin": -3859,
+    "precheck_cost_from_proxy_entry": 135591,
+    "proxy_entry_minus_wd_gasLimit": 36733,
+    "steps": 11757
+   }
+  },
+  "below_min": {
+   "g": 6759069,
+   "used": 135154,
+   "out": "REVERT_SafeCallNotEnoughGas"
+  },
+  "g_min_finalize": 6759070,
+  "at_min_finalize": {
+   "g": 6759070,
+   "used": 198370,
+   "out": "FINALIZED_FAILEDMSG"
+  },
+  "g_min_deliver": 6763115,
+  "at_min_deliver": {
+   "g": 6763115,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED",
+   "trace": {
+    "portal_frame_entry_gas": 6763115,
+    "portal_gas_before_CALL": 6525409,
+    "l1cdm_proxy_entry_gas": 6420891,
+    "portal_gas_after_CALL": 6457378,
+    "l1cdm_impl_entry_gas": 6313183,
+    "impl_last_gas": 6255451,
+    "impl_last_op": "STOP",
+    "gas_at_hasMinGas": 6285239,
+    "gas_at_sub": 6280001,
+    "target_CALL_gas_before": 6279883,
+    "target_CALL_requested": 6145001,
+    "target_entry_gas": 6145001,
+    "gas_after_target_call": 6277283,
+    "hasMinGas_threshold": 6285239,
+    "hasMinGas_margin": 0,
+    "precheck_cost_from_proxy_entry": 135652,
+    "proxy_entry_minus_wd_gasLimit": 40653,
+    "postcall_cost": 21832,
+    "steps": 11858
+   }
+  },
+  "at_plus_2M": {
+   "g": 8759070,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED"
+  },
+  "at_HI": {
+   "g": 45000000,
+   "used": 206699,
+   "out": "FINALIZED_DELIVERED"
+  }
+ }
+]

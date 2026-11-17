@@ -1,0 +1,12 @@
+14 | contract Griefer {
+23 |     fallback() external payable {
+29 | contract Counter {
+32 |     fallback() external payable {
+Ran 5 tests for test/Semantics08.t.sol:Semantics08Test
+[PASS] test_S1_unsafeTarget_neverFinalizes() (gas: 1321609)
+[PASS] test_S2_reentrantFinalize_marksVictimFailed_noDoubleDelivery() (gas: 2837686)
+[PASS] test_S3_bridgeFinalizeFailure_isFailedReplayable() (gas: 1337238)
+[PASS] test_S5_cannotPoisonVictimHash() (gas: 1949049)
+[PASS] test_S8_targetCannotReenterPortal() (gas: 2508799)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 27.38ms (9.96ms CPU time)
+Ran 1 test suite in 33.30ms (27.38ms CPU time): 5 tests passed, 0 failed, 0 skipped (5 total tests)

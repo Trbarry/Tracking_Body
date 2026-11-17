@@ -6,10 +6,10 @@ Values are passive `cast call` reads at L1 block 26,430,859 (`http://127.0.0.1:8
 
 | Chain | SystemConfig | L2 ID | owner | PA owner | init / semver | E / C / I |
 |---|---|---:|---|---|---|---|
-| OP | `0x229047fed2591dbec1eF1118d64F7aF3dB9EB290` | 10 | `0x847B...9D92` | `0x5a0A...d2A` | 3 / 4.3.0 | true / false / false |
-| Ink | `0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364` | 57073 | `0x847B...9D92` | `0x5a0A...d2A` | 3 / 4.3.0 | true / false / false |
-| Soneium | `0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3` | 1868 | `0x5091...3033` | `0x5a0A...d2A` | 3 / 4.3.0 | true / false / false |
-| Unichain | `0xc407398d063f942feBbcC6F80a156b47F3f1BDA6` | 130 | `0x847B...9D92` | `0x5a0A...d2A` | 3 / 4.3.0 | true / false / false |
+| OP | `0x229047fed2591dbec1eF1118d64F7aF3dB9EB290` | 10 | `0x847B5c174615B1B7fDF770882256e2D3E95b9D92` | `0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A` | 3 / 4.3.0 | true / false / false |
+| Ink | `0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364` | 57073 | `0x847B5c174615B1B7fDF770882256e2D3E95b9D92` | `0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A` | 3 / 4.3.0 | true / false / false |
+| Soneium | `0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3` | 1868 | `0x509182eC226b3B71D36A3255A80EF0b1A9D43033` | `0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A` | 3 / 4.3.0 | true / false / false |
+| Unichain | `0xc407398d063f942feBbcC6F80a156b47F3f1BDA6` | 130 | `0x847B5c174615B1B7fDF770882256e2D3E95b9D92` | `0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A` | 3 / 4.3.0 | true / false / false |
 
 All use SuperchainConfig `0x95703e0982140D16f8ebA6d158FccEde42f04a4C`, guardian `0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2`, v2.5.0. All report last-used OPCM `0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f`, v9.0.3. `SystemConfig` stores L2 ID, SuperchainConfig, and features at `src/L1/SystemConfig.sol:150-160`; initialization writes identity at `:203-248`.
 
@@ -33,13 +33,13 @@ systemTxMaxGas                  1,000,000
 maximumBaseFee       2^128 - 1
 ```
 
-Thus `minimumGasLimit()` is 21,000,000 and `maximumGasLimit()` is 500,000,000 on every chain. The SystemConfig owner can change gas limit only within those bounds (`SystemConfig.sol:250-265,398-409`). ResourceConfig has no external setter in v9; its initializer validates min/max base fees, denominator, gas-limit sum, elasticity, and exact divisibility (`:494-526`). Portal reads it per deposit (`src/L1/OptimismPortal2.sol:851-859`).
+Thus `minimumGasLimit()` is 21,000,000 and `maximumGasLimit()` is 500,000,000 on every chain. The SystemConfig owner can change gas limit only within those bounds (`src/L1/SystemConfig.sol:250-265,398-409`). ResourceConfig has no external setter in v9; its initializer validates min/max base fees, denominator, gas-limit sum, elasticity, and exact divisibility (`:494-526`). Portal reads it per deposit (`src/L1/OptimismPortal2.sol:851-859`).
 
-Ink's stored EIP-1559 `0/0` is the only visually surprising value. It was already `0/0` at N-1, so U21 did not introduce it. The ordinary owner setter rejects values below 1 (`SystemConfig.sol:415-431`). No permissionless route reaches any gas/config setter.
+Ink's stored EIP-1559 `0/0` is the only visually surprising value. It was already `0/0` at N-1, so U21 did not introduce it. The ordinary owner setter rejects values below 1 (`src/L1/SystemConfig.sol:415-431`). No permissionless route reaches any gas/config setter.
 
 ## Address map
 
-Each tuple is `(L1CDM, L1ERC721Bridge, L1StandardBridge, Portal, MintableERC20Factory, DelayedWETH, lastUsedOPCM)` from `getAddresses()` (`SystemConfig.sol:321-332`).
+Each tuple is `(L1CDM, L1ERC721Bridge, L1StandardBridge, Portal, MintableERC20Factory, DelayedWETH, lastUsedOPCM)` from `getAddresses()` (`src/L1/SystemConfig.sol:321-332`).
 
 * OP: `0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1`, `0x5a7749f83b81B301cAb5f48EB8516B986DAef23D`, `0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1`, `0xbEb5Fc579115071764c7423A4f12eDde41f106Ed`, `0x75505a97BD334E7BD3C476893285569C4136Fa0F`, `0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162`, `0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f`.
 * Ink: `0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f`, `0x661235a238B11191211fa95D4Dd9E423d521E0Be`, `0x88FF1e5b602916615391F55854588EFcBB7663f0`, `0x5d66C1782664115999C47c9fA5cd031f495D3e4F`, `0xA8B389A82e088b164cD03230e900980CcED34d29`, `0x57b4C29DAee99a28E6E86778b499361294c134eA`, common OPCM.

@@ -1,0 +1,4 @@
+{"case": 0, "label": "ETH bridge wd, m=0, existing EOA, live L2 baseGas (v2.2.1)", "predicted_direct_tx_gas": 542198, "real_min_tx_gas": 542109, "at_min(status,gasUsed,successful,failed)": [true, 310361, 1, 0], "below(status,gasUsed,...)": [false, 176498, 0, 0]}
+{"case": 7, "label": "Burner (uses all gas), 1 ETH, m=0, old", "predicted_direct_tx_gas": 511389, "real_min_tx_gas": 511300, "at_min(status,gasUsed,successful,failed)": [true, 390527, 0, 1], "below(status,gasUsed,...)": [false, 174370, 0, 0]}
+{"case": 5, "label": "Sink, empty msg, m=0, value 0, old", "predicted_direct_tx_gas": 492472, "real_min_tx_gas": 492382, "at_min(status,gasUsed,successful,failed)": [true, 221780, 1, 0], "below(status,gasUsed,...)": [false, 155746, 0, 0]}
+{"case": 20, "label": "Sink, m=6000000, old", "predicted_direct_tx_gas": 6782782, "real_min_tx_gas": 6782692, "at_min(status,gasUsed,successful,failed)": [true, 216287, 0, 1], "below(status,gasUsed,...)": [false, 155782, 0, 0]}

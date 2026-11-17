@@ -1,0 +1,373 @@
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/Burn.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/Burn.sol
+index 8e92a1b..dadec7a 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/Burn.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/Burn.sol
+@@ -26,6 +26,8 @@ library Burn {
+ ///         the contract from the circulating supply. Self-destructing is the only way to remove ETH
+ ///         from the circulating supply.
+ contract Burner {
++    // TODO(#22948): When Amsterdam activates, ETH will no longer be burned but it will still be
++    // stranded and inaccessible. Need to decide if that's OK.
+     constructor() payable {
+         selfdestruct(payable(address(this)));
+     }
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/Constants.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/Constants.sol
+index 5e5d5d1..33c9277 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/Constants.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/Constants.sol
+@@ -51,7 +51,7 @@ library Constants {
+     string internal constant PERMITTED_PROXY_DEPLOYMENT_KEY = "PermittedProxyDeployment";
+ 
+     /// @notice Special constant value for the PermittedProxyDeployment instruction to permit all
+-    ///         contracts to be deployed. Used for both initial deployments and migrations.
++    ///         contracts to be deployed. Used for initial deployments only.
+     bytes internal constant PERMIT_ALL_CONTRACTS_INSTRUCTION = bytes("ALL");
+ 
+     /// @notice Current bundle artifact path for Network Upgrade Transaction bundles.
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/DevFeatures.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/DevFeatures.sol
+index f3ff811..81f9d46 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/DevFeatures.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/DevFeatures.sol
+@@ -28,7 +28,8 @@ pragma solidity ^0.8.0;
+ ///      For the parallel SYSTEM feature checklist, see
+ ///      packages/contracts-bedrock/src/libraries/Features.sol.
+ library DevFeatures {
+-    /// @notice The feature that enables the Interop migration functions on the OptimismPortal2 contract.
++    /// @notice The feature that enables the interop predeploys on L2, at genesis and in
++    ///         L2ContractsManager upgrades.
+     bytes32 public constant OPTIMISM_PORTAL_INTEROP =
+         bytes32(0x0000000000000000000000000000000000000000000000000000000000000001);
+ 
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/Features.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/Features.sol
+index 3445c40..9e4341e 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/Features.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/Features.sol
+@@ -29,10 +29,7 @@ pragma solidity ^0.8.0;
+ ///      System features have no Go mirror. For the parallel DEV feature checklist, see
+ ///      packages/contracts-bedrock/src/libraries/DevFeatures.sol.
+ library Features {
+-    /// @notice The ETH_LOCKBOX feature determines if the system is configured to use the
+-    ///         ETHLockbox contract in the OptimismPortal. When the ETH_LOCKBOX feature is active
+-    ///         and the ETHLockbox contract has been configured, the OptimismPortal will use the
+-    ///         ETHLockbox to store ETH instead of storing ETH directly in the portal itself.
++    /// @notice The ETH_LOCKBOX feature determines whether the system uses an ETHLockbox.
+     bytes32 internal constant ETH_LOCKBOX = "ETH_LOCKBOX";
+ 
+     /// @notice The CUSTOM_GAS_TOKEN feature determines if the system is configured to use a custom
+diff --git a/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/GasConstants.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/GasConstants.sol
+new file mode 100644
+index 0000000..35732a1
+--- /dev/null
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/GasConstants.sol
+@@ -0,0 +1,78 @@
++// SPDX-License-Identifier: MIT
++pragma solidity ^0.8.0;
++
++// Gas budgets for `CrossDomainMessenger.relayMessage`, named for the chain the relay executes on. A
++// messenger uses its own chain's values in `relayMessage` and the other chain's values in `baseGas`,
++// so each value must cover the worst case on the chain it is named for. `RELAY_CALL_OVERHEAD` is
++// shared because `SafeCall.hasMinGas` is.
++// File-level rather than a library so that contract constants can be initialized from them. Import
++// as `import "src/libraries/GasConstants.sol" as GasConstants;`. NatSpec on file-level constants
++// accepts only `@dev`.
++
++////////////////////////////////////////////////////////////////
++//                     Constant overhead                      //
++////////////////////////////////////////////////////////////////
++
++// Covers `relayMessage` from entry up to the `hasMinGas` check: the pause check, version decode,
++// message hashing, cold reads of `successfulMessages` and `failedMessages`, the other-messenger
++// check (on L1, the portal's `l2Sender()` call) and the target checks. Used only by `baseGas`. Too
++// low, and a relay given exactly `baseGas` fails the check and is recorded as failed instead of
++// executing.
++// To set: measure that path on the chain's EVM with cold storage, and add margin.
++
++/// @dev Set empirically before Glamsterdam. The Amsterdam measurement under `RELAY_CALL_OVERHEAD`
++///      shows its slack also absorbs EIP-8037 state gas for value sent to a new account.
++uint64 constant L1_RELAY_CONSTANT_OVERHEAD = 200_000;
++
++/// @dev Set empirically.
++uint64 constant L2_RELAY_CONSTANT_OVERHEAD = 200_000;
++
++////////////////////////////////////////////////////////////////
++//                       Call overhead                        //
++////////////////////////////////////////////////////////////////
++
++// `SafeCall.hasMinGas` requires 40,000 gas above `minGasLimit * 64 / 63` for the CALL's dynamic
++// costs (cold access, value transfer, new account). Used only by `baseGas`, which must supply at
++// least that much. Shared by both chains because `SafeCall.hasMinGas` is.
++// To set: at least the allowance hardcoded in `SafeCall.hasMinGas`. Change them together.
++
++/// @dev On L1, sending value to a new account also costs EIP-8037 state gas (183,600), which this
++///      does not cover; `baseGas` absorbs it in the other budgets' slack. Measured under Amsterdam,
++///      an empty message needs 391,338 against a `baseGas` of 415,160.
++///      `test_relayMessage_valueToNewAccount_succeeds` covers it.
++uint64 constant RELAY_CALL_OVERHEAD = 40_000;
++
++////////////////////////////////////////////////////////////////
++//                        Reserved gas                        //
++////////////////////////////////////////////////////////////////
++
++// `relayMessage` forwards `gasleft()` minus this to the target, so it covers the CALL's own charges
++// (value transfer, cold target access, EIP-7702 delegate access) and everything after the call:
++// resetting `xDomainMsgSender`, writing `successfulMessages` or `failedMessages` (a fresh slot) and
++// emitting the event. Too low, and a target that uses all its gas makes the relay revert after the
++// call, so the message is recorded in neither mapping and cannot be replayed.
++// To set: on the chain's EVM, find the smallest reserve that still records a value-carrying message
++// to a cold EIP-7702 delegated target that burns all forwarded gas, and add margin.
++// `test_relayMessage_valueToColdDelegatedTarget_succeeds` covers this case on L1.
++
++/// @dev Includes EIP-8037 state gas for the fresh slot (97,920). Measured minimum under Amsterdam:
++///      127,089.
++uint64 constant L1_RELAY_RESERVED_GAS = 135_000;
++
++/// @dev Measured minimum under Prague: 35,969.
++uint64 constant L2_RELAY_RESERVED_GAS = 40_000;
++
++////////////////////////////////////////////////////////////////
++//                      Gas check buffer                      //
++////////////////////////////////////////////////////////////////
++
++// Covers the work between the `hasMinGas` check and the CALL: setting `xDomainMsgSender` (a warm,
++// nonzero-to-nonzero write, so no state gas) and preparing the call's arguments. Too low, and the
++// target can receive less than `minGasLimit`.
++// To set: the cost of that window on the chain's EVM, rounded up generously.
++
++/// @dev The `xDomainMsgSender` write alone costs 10,100 under Amsterdam.
++uint64 constant L1_RELAY_GAS_CHECK_BUFFER = 15_000;
++
++/// @dev The `xDomainMsgSender` write alone costs 2,900 under Prague.
++uint64 constant L2_RELAY_GAS_CHECK_BUFFER = 5_000;
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/GasPayingToken.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/GasPayingToken.sol
+index bf53367..eb127f2 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/GasPayingToken.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/GasPayingToken.sol
+@@ -30,7 +30,8 @@ library GasPayingToken {
+     bytes32 internal constant GAS_PAYING_TOKEN_SLOT = bytes32(uint256(keccak256("opstack.gaspayingtoken")) - 1);
+ 
+     /// @notice The storage slot that contains the ERC20 `name()` of the gas paying token
+-    bytes32 internal constant GAS_PAYING_TOKEN_NAME_SLOT = bytes32(uint256(keccak256("opstack.gaspayingtokenname")) - 1);
++    bytes32 internal constant GAS_PAYING_TOKEN_NAME_SLOT =
++        bytes32(uint256(keccak256("opstack.gaspayingtokenname")) - 1);
+ 
+     /// @notice the storage slot that contains the ERC20 `symbol()` of the gas paying token
+     bytes32 internal constant GAS_PAYING_TOKEN_SYMBOL_SLOT =
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/Predeploys.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/Predeploys.sol
+index 25abe2f..277a7e9 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/Predeploys.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/Predeploys.sol
+@@ -264,10 +264,13 @@ library Predeploys {
+     function getAllRecords() internal pure returns (PredeployRecord[] memory records_) {
+         records_ = new PredeployRecord[](28);
+ 
+-        // ── Core predeploys ────────────────────────────────────────────────────────────────
++        // ── Core predeploys
++        // ────────────────────────────────────────────────────────────────
+         records_[0] = PredeployRecord({
+             proxy: L2_CROSS_DOMAIN_MESSENGER,
+-            variants: _variants("L2CrossDomainMessenger", "L2CrossDomainMessenger.sol:L2CrossDomainMessenger", 3_129_000),
++            variants: _variants(
++                "L2CrossDomainMessenger", "L2CrossDomainMessenger.sol:L2CrossDomainMessenger", 3_129_000
++            ),
+             devFeatureGate: bytes32(0),
+             isCustomGasToken: false,
+             isInterop: false,
+@@ -304,7 +307,9 @@ library Predeploys {
+         records_[4] = PredeployRecord({
+             proxy: OPTIMISM_MINTABLE_ERC20_FACTORY,
+             variants: _variants(
+-                "OptimismMintableERC20Factory", "OptimismMintableERC20Factory.sol:OptimismMintableERC20Factory", 4_193_000
++                "OptimismMintableERC20Factory",
++                "OptimismMintableERC20Factory.sol:OptimismMintableERC20Factory",
++                4_193_000
+             ),
+             devFeatureGate: bytes32(0),
+             isCustomGasToken: false,
+@@ -416,7 +421,8 @@ library Predeploys {
+             isDeprecated: false
+         });
+ 
+-        // ── Interop predeploys ─────────────────────────────────────────────────────────────
++        // ── Interop predeploys
++        // ─────────────────────────────────────────────────────────────
+         // Interop requires both the INTEROP sys feature and the OPTIMISM_PORTAL_INTEROP dev
+         // feature. Both gates mirror the full condition checked in L2Genesis.
+         records_[15] = PredeployRecord({
+@@ -458,7 +464,8 @@ library Predeploys {
+             isDeprecated: false
+         });
+ 
+-        // ── CGT predeploys ─────────────────────────────────────────────────────────────────
++        // ── CGT predeploys
++        // ─────────────────────────────────────────────────────────────────
+         records_[19] = PredeployRecord({
+             proxy: NATIVE_ASSET_LIQUIDITY,
+             variants: _variants("NativeAssetLiquidity", "NativeAssetLiquidity.sol:NativeAssetLiquidity", 392_000),
+@@ -496,7 +503,8 @@ library Predeploys {
+             isDeprecated: false
+         });
+ 
+-        // ── Non-proxied predeploys ─────────────────────────────────────────────────────────
++        // ── Non-proxied predeploys
++        // ─────────────────────────────────────────────────────────
+         // These are etched directly (no Proxy wrapper, no implementation slot).
+         // Excluded from NUT bundles and proxy setup. deployGasLimit is unused.
+         records_[23] = PredeployRecord({
+@@ -518,7 +526,8 @@ library Predeploys {
+             isDeprecated: false
+         });
+ 
+-        // ── Deprecated predeploys ──────────────────────────────────────────────────────────
++        // ── Deprecated predeploys
++        // ──────────────────────────────────────────────────────────
+         // Present on-chain for backwards compatibility but excluded from proxy setup loops,
+         // NUT bundles, and upgrade checks. Handled by individual setters in L2Genesis.
+         records_[25] = PredeployRecord({
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/SafeCall.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/SafeCall.sol
+index a8ae9ec..a539135 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/SafeCall.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/SafeCall.sol
+@@ -4,6 +4,10 @@ pragma solidity ^0.8.0;
+ /// @title SafeCall
+ /// @notice Perform low level safe calls
+ library SafeCall {
++    /// @notice EIP-8037 state gas for a CALL that sends value to an empty account: 120 bytes at
++    ///         1,530 gas per byte. The CALL charges it before the 63/64 split.
++    uint256 internal constant NEW_ACCOUNT_STATE_GAS = 183_600;
++
+     /// @notice Performs a low level call without copying any returndata.
+     /// @dev Passes no calldata to the call context.
+     /// @param _target   Address to call
+@@ -11,16 +15,15 @@ library SafeCall {
+     /// @param _value    Amount of value to pass to the call
+     function send(address _target, uint256 _gas, uint256 _value) internal returns (bool success_) {
+         assembly {
+-            success_ :=
+-                call(
+-                    _gas, // gas
+-                    _target, // recipient
+-                    _value, // ether value
+-                    0, // inloc
+-                    0, // inlen
+-                    0, // outloc
+-                    0 // outlen
+-                )
++            success_ := call(
++                _gas, // gas
++                _target, // recipient
++                _value, // ether value
++                0, // inloc
++                0, // inlen
++                0, // outloc
++                0 // outlen
++            )
+         }
+     }
+ 
+@@ -46,16 +49,15 @@ library SafeCall {
+         returns (bool success_)
+     {
+         assembly {
+-            success_ :=
+-                call(
+-                    _gas, // gas
+-                    _target, // recipient
+-                    _value, // ether value
+-                    add(_calldata, 32), // inloc
+-                    mload(_calldata), // inlen
+-                    0, // outloc
+-                    0 // outlen
+-                )
++            success_ := call(
++                _gas, // gas
++                _target, // recipient
++                _value, // ether value
++                add(_calldata, 32), // inloc
++                mload(_calldata), // inlen
++                0, // outloc
++                0 // outlen
++            )
+         }
+     }
+ 
+@@ -89,7 +91,8 @@ library SafeCall {
+     ///          `value_to_empty_account_cost` factors with an added buffer of 5,700 gas. It is
+     ///          still possible to self-rekt by initiating a withdrawal with a minimum gas limit
+     ///          that does not account for the `memory_expansion_cost` & `code_execution_cost`
+-    ///          factors of the dynamic cost of the `CALL` opcode.
++    ///          factors of the dynamic cost of the `CALL` opcode. Under EIP-8037, value to an
++    ///          empty account also costs `NEW_ACCOUNT_STATE_GAS`, which callers must reserve.
+     ///      2.) This function should *directly* precede the external call if possible. There is an
+     ///          added buffer to account for gas consumed between this check and the call, but it
+     ///          is only 5,700 gas.
+@@ -113,6 +116,8 @@ library SafeCall {
+     /// @param _minGas   The minimum amount of gas that may be passed to the call
+     /// @param _value    Amount of value to pass to the call
+     /// @param _calldata Calldata to pass to the call
++    /// @dev Sending value to an account with no code, balance or nonce also requires
++    ///      `NEW_ACCOUNT_STATE_GAS`. `EXTCODEHASH` returns zero for exactly those accounts.
+     function callWithMinGas(
+         address _target,
+         uint256 _minGas,
+@@ -123,9 +128,10 @@ library SafeCall {
+         returns (bool)
+     {
+         bool _success;
+-        bool _hasMinGas = hasMinGas(_minGas, 0);
++        uint256 newAccountGas = _value != 0 && _target.codehash == bytes32(0) ? NEW_ACCOUNT_STATE_GAS : 0;
++        bool _hasMinGas = hasMinGas(_minGas, newAccountGas);
+         assembly {
+-            // Assertion: gasleft() >= (_minGas * 64) / 63 + 40_000
++            // Assertion: gasleft() >= (_minGas * 64) / 63 + 40_000 + newAccountGas
+             if iszero(_hasMinGas) {
+                 // Store the "Error(string)" selector in scratch space.
+                 mstore(0, 0x08c379a0)
+@@ -152,16 +158,15 @@ library SafeCall {
+             // `_minGas` does not account for the `memory_expansion_cost` and `code_execution_cost`
+             // factors of the dynamic cost of the `CALL` opcode), the call will receive at least
+             // the minimum amount of gas specified.
+-            _success :=
+-                call(
+-                    gas(), // gas
+-                    _target, // recipient
+-                    _value, // ether value
+-                    add(_calldata, 32), // inloc
+-                    mload(_calldata), // inlen
+-                    0x00, // outloc
+-                    0x00 // outlen
+-                )
++            _success := call(
++                gas(), // gas
++                _target, // recipient
++                _value, // ether value
++                add(_calldata, 32), // inloc
++                mload(_calldata), // inlen
++                0x00, // outloc
++                0x00 // outlen
++            )
+         }
+         return _success;
+     }
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/rlp/RLPReader.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/rlp/RLPReader.sol
+index f342658..2471a8b 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/libraries/rlp/RLPReader.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/libraries/rlp/RLPReader.sol
+@@ -74,14 +74,15 @@ library RLPReader {
+         uint256 offset = listOffset;
+         while (offset < _in.length) {
+             (uint256 itemOffset, uint256 itemLength,) = _decodeLength(
+-                RLPItem({ length: _in.length - offset, ptr: MemoryPointer.wrap(MemoryPointer.unwrap(_in.ptr) + offset) })
++                RLPItem({
++                    length: _in.length - offset, ptr: MemoryPointer.wrap(MemoryPointer.unwrap(_in.ptr) + offset)
++                })
+             );
+ 
+             // We don't need to check itemCount < out.length explicitly because Solidity already
+             // handles this check on our behalf, we'd just be wasting gas.
+             out_[itemCount] = RLPItem({
+-                length: itemLength + itemOffset,
+-                ptr: MemoryPointer.wrap(MemoryPointer.unwrap(_in.ptr) + offset)
++                length: itemLength + itemOffset, ptr: MemoryPointer.wrap(MemoryPointer.unwrap(_in.ptr) + offset)
+             });
+ 
+             itemCount += 1;

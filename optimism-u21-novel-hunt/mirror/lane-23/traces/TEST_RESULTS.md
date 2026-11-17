@@ -7,6 +7,10 @@ Command:
 Result: 13 passed, 0 failed, 0 skipped on 2026-11-17. Test source is
 `mirror/lane-23/test/PortalETHLockboxConservation.t.sol`.
 
+The harness was cloned from `/home/user/u21-work/template`; its `foundry.toml` adds:
+
+    l1n = "http://127.0.0.1:8547"
+
 ## Deployed-code evidence
 
 - `test_depositMovesValueDirectlyIntoLockbox`: portal stays zero; lockbox rises by

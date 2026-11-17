@@ -1,0 +1,23 @@
+No files changed, compilation skipped
+Ran 5 tests for test/L2Side08.t.sol:L2Side08Test
+[PASS] test_l2_baseGas_matches_formula() (gas: 19568515)
+Logs:
+  baseGas(len=164,m=0)  [ETH bridge wd]: 312784
+  baseGas(len=228,m=200000) [ERC20 bridge wd]: 516982
+[PASS] test_l2_cdm_cannot_be_made_to_withdraw_to_arbitrary_target() (gas: 38682)
+[PASS] test_l2_large_message_cost() (gas: 142419805)
+Logs:
+  L2 gas to send len=10000: 329695
+     withdrawal gasLimit (baseGas): 470160
+  L2 gas to send len=100000: 3032600
+     withdrawal gasLimit (baseGas): 4031400
+  L2 gas to send len=300000: 11757430
+     withdrawal gasLimit (baseGas): 12031400
+  L2 gas to send len=600000: 31711127
+     withdrawal gasLimit (baseGas): 24031400
+  L2 gas to send len=1000000: 71133443
+     withdrawal gasLimit (baseGas): 40031400
+[PASS] test_l2_relay_from_l1_with_l1_baseGas() (gas: 353269)
+[PASS] test_l2_sendMessage_registers_expected_withdrawal() (gas: 92490)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 1.88s (1.98s CPU time)
+Ran 1 test suite in 1.88s (1.88s CPU time): 5 tests passed, 0 failed, 0 skipped (5 total tests)

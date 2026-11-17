@@ -1,0 +1,9 @@
+Ran 1 test for test/NewAccount08.t.sol:NewAccount08Test
+[PASS] test_newAccountReserve() (gas: 14729836)
+Logs:
+  portal: 6.1.0
+  min gas, 1 ETH -> never-touched account (codehash 0), gasLimit 0: 380649
+  min gas, 1 ETH -> existing EOA, gasLimit 0: 194145
+  min gas, 0 ETH -> never-touched account, gasLimit 0: 175299
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 11.64s (11.64s CPU time)
+Ran 1 test suite in 11.65s (11.64s CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)

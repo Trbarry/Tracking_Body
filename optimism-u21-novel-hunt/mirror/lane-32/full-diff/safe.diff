@@ -1,0 +1,15 @@
+diff --git a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/safe/LivenessModule.sol b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/safe/LivenessModule.sol
+index 45c21cf..9620cf6 100644
+--- a/home/user/ethereum-optimism/op-v8.0.0/packages/contracts-bedrock/src/safe/LivenessModule.sol
++++ b/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/src/safe/LivenessModule.sol
+@@ -164,9 +164,7 @@ contract LivenessModule is ISemver {
+ 
+             // We now attempt remove the owner from the safe.
+             _removeOwner({
+-                _prevOwner: _previousOwners[i],
+-                _ownerToRemove: _ownersToRemove[i],
+-                _newOwnersCount: ownersCount
++                _prevOwner: _previousOwners[i], _ownerToRemove: _ownersToRemove[i], _newOwnersCount: ownersCount
+             });
+ 
+             // when all owners are removed and the sole owner is the fallback owner, the

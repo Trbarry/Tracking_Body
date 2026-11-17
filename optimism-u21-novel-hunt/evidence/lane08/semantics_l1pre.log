@@ -1,0 +1,9 @@
+No files changed, compilation skipped
+Ran 5 tests for test/Semantics08.t.sol:Semantics08Test
+[PASS] test_S1_unsafeTarget_neverFinalizes() (gas: 1518567)
+[PASS] test_S2_reentrantFinalize_marksVictimFailed_noDoubleDelivery() (gas: 2875852)
+[PASS] test_S3_bridgeFinalizeFailure_isFailedReplayable() (gas: 1364103)
+[PASS] test_S5_cannotPoisonVictimHash() (gas: 1965703)
+[PASS] test_S8_targetCannotReenterPortal() (gas: 2525730)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 27.33s (27.31s CPU time)
+Ran 1 test suite in 27.34s (27.33s CPU time): 5 tests passed, 0 failed, 0 skipped (5 total tests)
