@@ -11,6 +11,7 @@ I found no chain-history differential that gives an unprivileged actor unauthori
 - L1 archive: passive `http://127.0.0.1:7545`, through block **26,433,900**. `evidence/pinned-cast-reads.txt:1-153` contains reproducible `cast` reads. No transaction was sent.
 - Current code: `op-contracts/v9.0.0`, commit `ba6fcadbc57eb99918c5b0f14f57c72527f531e3`. PASS A independently confirms the same implementation set on all four chains at block N and 26,433,900 (`U21_PROXY_IMPLEMENTATION_MAP.md:44-117,127-143`).
 - Logs: every relevant current-proxy event from genesis; every factory implementation/args/bond event; and every anchor/blacklist/retirement/respected-type event for all 12 ASRs. The ASR scan contains **32,101 `AnchorUpdated` and zero blacklist events** (`evidence/historical-asr-events.json`).
+- Governance: Safe setup, owner add/remove, and threshold events through the pinned head for every current governing Safe and both nested L1PAO owner Safes (`evidence/safe-owner-history.json`).
 - Game census: every game at the pinned count for Ink (2,640), Soneium (8,537), and Unichain (17,691), Multicall3 batches of 20. OP's 21,389 games were additionally scanned to enumerate historical objects.
 - L2 headers: passive `https://rpc-gel.inkonchain.com`, `https://rpc.soneium.org`, `https://mainnet.unichain.org`, and local pinned OP RPC `:7546`. Formula: `keccak(bytes32(0) || stateRoot || withdrawalsRoot || blockHash)`.
 
@@ -44,6 +45,8 @@ Notable manual history:
 - U21 rotated OP's type-5 fallback proposer but did not change the respected-type split (`eth/084-U21-op-ink-soneium-uni/README.md:16-38`).
 
 Ownership event arrays include initializer emissions and temporary OPCM owner flips as well as durable changes; this avoids falsely interpreting an intra-transaction transfer as a governance epoch.
+
+The root L1PAO is a 2-of-2 Safe. Its owners are the 5-of-7 Foundation Safe (`0x847B…`, also OP/Ink/Unichain SystemConfig owner) and a 10-of-13 Safe (`0xc281…`). Soneium's distinct SystemConfig owner (`0x509182…`) is 3-of-5. Full membership rotations and threshold history are embedded per chain as `governanceSafeHistory`; no current owner is an EOA.
 
 ## Custody and pause history
 
@@ -126,6 +129,6 @@ This proves the thesis but not an exploit: the divergence is the documented perm
 
 ## Conclusion and next edges
 
-No bounty candidate survived falsification. The highest-value next wave is: (1) differential credit-withdrawal tests over every nonzero legacy DelayedWETH, especially owner-based v1.0/1.1 versus lockbox-based v2.0; (2) a transaction-boundary proof that every ASR replacement and DGF re-registration was atomic, not merely same-transaction; and (3) replay the first post-U20 type-5/type-9 game on each chain to test `wasRespectedGameTypeWhenCreated` across the exact policy transition.
+No bounty candidate survived falsification. The highest-value next wave is: (1) differential credit-withdrawal tests over every nonzero legacy DelayedWETH, especially owner-based v1.0/1.1 versus lockbox-based v2.0; (2) trace initializer/external-call ordering inside each ASR replacement transaction to rule out a reentrant transition window; and (3) replay the first post-U20 type-5/type-9 game on each chain to test `wasRespectedGameTypeWhenCreated` across the exact policy transition.
 
 Limits: balances are sampled at births/releases/current head, not every intervening block; only unexpected live roots were independently reconstructed; L2 endpoint availability and the pinned L1 head bound the census; no live transaction or shared-fork mutation occurred.

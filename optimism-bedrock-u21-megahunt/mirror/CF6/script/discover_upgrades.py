@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Discover OP Mainnet L1 implementation changes from read-only archive state.
 
-The scan never submits a transaction.  It samples each implementation locator at
+The scan never submits a transaction. It samples every implementation locator at
 most 10,000 blocks apart, then binary-searches every interval whose endpoint
-changes.  This intentionally reports block-end state: transient implementations
-installed and removed in one transaction are not separate fork points.
+changes. One-block log reads only enrich the resulting blocks with transaction
+hashes; logs are not the discovery mechanism. This intentionally reports block-end
+state: transient implementations installed and removed in one transaction are not
+separate fork points.
 
 Round trips A -> B -> A entirely inside one 10,000-block interval cannot be
 detected from endpoint state alone.  The output records that limitation.  OP
@@ -215,7 +217,9 @@ def find_first_change(
 def scan_target(
     rpc: Rpc, target: Target, deployment: int, head: int, step: int
 ) -> dict[str, Any]:
-    start = max(0, deployment - 1)
+    # Begin two blocks before proxy deployment. The resolved messenger's AddressManager entry was
+    # first set one block before the proxy itself was deployed on OP Mainnet.
+    start = max(0, deployment - 2)
     checkpoints = list(range(start, head, step))
     if not checkpoints or checkpoints[-1] != head:
         checkpoints.append(head)
@@ -287,6 +291,47 @@ def fetch_upgrade_logs(rpc: Rpc, head: int) -> list[dict[str, Any]]:
     return logs
 
 
+def fetch_upgrade_logs_at_blocks(rpc: Rpc, blocks: list[int]) -> list[dict[str, Any]]:
+    """Read only exact transition blocks, avoiding wide historical log ranges."""
+
+    eip1967_addresses = [
+        target.proxy
+        for target in TARGETS
+        if target.proxy_kind == "EIP-1967"
+    ]
+    messenger = next(target for target in TARGETS if target.name == "L1CrossDomainMessenger")
+    calls: list[tuple[str, list[Any]]] = []
+    for block in blocks:
+        tag = block_tag(block)
+        calls.append(
+            (
+                "eth_getLogs",
+                [
+                    {
+                        "fromBlock": tag,
+                        "toBlock": tag,
+                        "address": eip1967_addresses,
+                        "topics": [UPGRADED_TOPIC],
+                    }
+                ],
+            )
+        )
+        calls.append(
+            (
+                "eth_getLogs",
+                [
+                    {
+                        "fromBlock": tag,
+                        "toBlock": tag,
+                        "address": messenger.storage_address,
+                        "topics": [ADDRESS_SET_TOPIC, MESSENGER_NAME_TOPIC],
+                    }
+                ],
+            )
+        )
+    return [entry for result in rpc.batch(calls) for entry in result]
+
+
 def event_guided_target(
     rpc: Rpc,
     target: Target,
@@ -346,29 +391,32 @@ def main() -> None:
     rpc = Rpc(args.rpc_url)
     head = args.head if args.head is not None else int(rpc.call("eth_blockNumber", []), 16)
     deployments = find_deployments(rpc, TARGETS, head)
-    logs = fetch_upgrade_logs(rpc, head)
-    contracts: dict[str, Any] = {}
-    for target in TARGETS:
-        if target.name == "L1StandardBridge":
-            # L1ChugSplashProxy does not emit Upgraded. Its EIP-1967 slot is sampled every
-            # <=10k blocks and each changed interval is refined by binary search.
-            result = scan_target(rpc, target, deployments[target.name], head, args.step)
-            result["discovery"] = "<=10,000-block slot checkpoints plus binary search"
-            contracts[target.name] = result
-        else:
-            contracts[target.name] = event_guided_target(
-                rpc, target, deployments[target.name], logs
-            )
+    contracts: dict[str, Any] = {
+        target.name: scan_target(rpc, target, deployments[target.name], head, args.step)
+        for target in TARGETS
+    }
+    for result in contracts.values():
+        result["discovery"] = "<=10,000-block slot checkpoints plus binary search"
+
+    transition_blocks = sorted(
+        {
+            transition["afterBlock"]
+            for contract in contracts.values()
+            for transition in contract["transitions"]
+        }
+    )
+    logs = fetch_upgrade_logs_at_blocks(rpc, transition_blocks)
 
     transaction_hashes_by_block: dict[int, set[str]] = {}
     for entry in logs:
         transaction_hashes_by_block.setdefault(int(entry["blockNumber"], 16), set()).add(
             entry["transactionHash"]
         )
-    for transition in contracts["L1StandardBridge"]["transitions"]:
-        hashes = transaction_hashes_by_block.get(transition["afterBlock"])
-        if hashes:
-            transition["transactionHashes"] = sorted(hashes)
+    for contract in contracts.values():
+        for transition in contract["transitions"]:
+            hashes = transaction_hashes_by_block.get(transition["afterBlock"])
+            if hashes:
+                transition["transactionHashes"] = sorted(hashes)
 
     chronology = []
     for name, contract in contracts.items():
@@ -381,9 +429,8 @@ def main() -> None:
         "headBlock": head,
         "checkpointStep": args.step,
         "method": (
-            "EIP-1967 Upgraded and AddressManager AddressSet log blocks are verified against "
-            "block-end storage; the eventless ChugSplash bridge is sampled every <=10,000 "
-            "blocks and each changed interval is refined by binary search"
+            "every locator is sampled at <=10,000-block intervals and each changed interval is "
+            "refined by binary search; one-block event reads only attach transaction hashes"
         ),
         "limitation": (
             "an A->B->A round trip wholly inside one checkpoint interval is invisible; "

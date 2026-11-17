@@ -3,7 +3,7 @@
   "rpcUsed": "http://127.0.0.1:7545",
   "headBlock": 26430859,
   "checkpointStep": 10000,
-  "method": "EIP-1967 Upgraded and AddressManager AddressSet log blocks are verified against block-end storage; the eventless ChugSplash bridge is sampled every <=10,000 blocks and each changed interval is refined by binary search",
+  "method": "every locator is sampled at <=10,000-block intervals and each changed interval is refined by binary search; one-block event reads only attach transaction hashes",
   "limitation": "an A->B->A round trip wholly inside one checkpoint interval is invisible; same-transaction transient implementations are intentionally excluded",
   "contracts": {
     "OptimismPortal": {
@@ -12,7 +12,6 @@
       "storageAddress": "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
       "storageSlot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
       "proxyDeploymentBlock": 17365802,
-      "discovery": "upgrade-event blocks verified by storage at block-1 and block",
       "transitions": [
         {
           "beforeBlock": 17423157,
@@ -131,7 +130,8 @@
             "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
           ]
         }
-      ]
+      ],
+      "discovery": "<=10,000-block slot checkpoints plus binary search"
     },
     "SystemConfig": {
       "proxy": "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290",
@@ -139,7 +139,6 @@
       "storageAddress": "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290",
       "storageSlot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
       "proxyDeploymentBlock": 17365804,
-      "discovery": "upgrade-event blocks verified by storage at block-1 and block",
       "transitions": [
         {
           "beforeBlock": 17422443,
@@ -267,7 +266,8 @@
             "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
           ]
         }
-      ]
+      ],
+      "discovery": "<=10,000-block slot checkpoints plus binary search"
     },
     "L1CrossDomainMessenger": {
       "proxy": "0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1",
@@ -275,7 +275,6 @@
       "storageAddress": "0xdE1FCfB0851916CA5101820A69b13a4E276bd81F",
       "storageSlot": "0x515216935740e67dfdda5cf8e248ea32b3277787818ab59153061ac875c9385e",
       "proxyDeploymentBlock": 12686757,
-      "discovery": "upgrade-event blocks verified by storage at block-1 and block",
       "transitions": [
         {
           "beforeBlock": 12686755,
@@ -412,7 +411,8 @@
             "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
           ]
         }
-      ]
+      ],
+      "discovery": "<=10,000-block slot checkpoints plus binary search"
     },
     "L1StandardBridge": {
       "proxy": "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
@@ -523,7 +523,6 @@
       "storageAddress": "0xe5965Ab5962eDc7477C8520243A95517CD252fA9",
       "storageSlot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
       "proxyDeploymentBlock": 19884569,
-      "discovery": "upgrade-event blocks verified by storage at block-1 and block",
       "transitions": [
         {
           "beforeBlock": 19884569,
@@ -579,7 +578,8 @@
             "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15"
           ]
         }
-      ]
+      ],
+      "discovery": "<=10,000-block slot checkpoints plus binary search"
     },
     "AnchorStateRegistry": {
       "proxy": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
@@ -587,7 +587,6 @@
       "storageAddress": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
       "storageSlot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
       "proxyDeploymentBlock": 22990599,
-      "discovery": "upgrade-event blocks verified by storage at block-1 and block",
       "transitions": [
         {
           "beforeBlock": 22990598,
@@ -625,7 +624,8 @@
             "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
           ]
         }
-      ]
+      ],
+      "discovery": "<=10,000-block slot checkpoints plus binary search"
     },
     "ETHLockbox": {
       "proxy": "0x322b47Ff1FA8D5611F761e3E275C45B71b294D43",
@@ -633,7 +633,6 @@
       "storageAddress": "0x322b47Ff1FA8D5611F761e3E275C45B71b294D43",
       "storageSlot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
       "proxyDeploymentBlock": 22990599,
-      "discovery": "upgrade-event blocks verified by storage at block-1 and block",
       "transitions": [
         {
           "beforeBlock": 22990598,
@@ -662,7 +661,8 @@
             "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99"
           ]
         }
-      ]
+      ],
+      "discovery": "<=10,000-block slot checkpoints plus binary search"
     }
   },
   "chronology": [

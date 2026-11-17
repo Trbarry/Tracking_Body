@@ -1068,7 +1068,42 @@
      ]
     }
    ]
+  },
+  {
+   "name": "ConditionalDeployer?(2D)",
+   "address": "0x420000000000000000000000000000000000002D",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x420000000000000000000000000000000000002D",
+   "first_code_block": 105235063,
+   "history": [
+    {
+     "block": 105235063,
+     "timestamp": 1686068903,
+     "utc": "2023-06-06 16:28:23",
+     "slot_value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "implementation": "0x0000000000000000000000000000000000000000",
+     "version": null,
+     "txs_with_logs_from_target": []
+    },
+    {
+     "block": 153963812,
+     "timestamp": 1783526401,
+     "utc": "2026-07-08 16:00:01",
+     "slot_value": "0x000000000000000000000000e35b194efc4907f383b7e3b87f4c2c339ce239f6",
+     "implementation": "0xe35b194efc4907f383b7e3b87f4c2c339ce239f6",
+     "version": "1.0.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xd2e9eb2ba77098610e7dda134e70f741f7456f4ec49912d667860c40988dfd8e",
+       "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+       "to": "0x4200000000000000000000000000000000000018",
+       "selector": "0x7c36f37e"
+      }
+     ]
+    }
+   ]
   }
  ],
- "rpc_calls": 7524
+ "rpc_calls": 7823
 }

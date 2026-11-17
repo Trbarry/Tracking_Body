@@ -8,4 +8,4 @@ The policy epochs differ: OP/Ink/Unichain moved 0→8→9; Soneium moved 1→5. 
 
 ## Falsification so far
 
-The U16 ASR replacements and DGF re-registrations occurred atomically in their respective OPCM transactions; census index boundaries show no post-retirement game retaining an old ASR. All 12 ASRs emitted zero blacklist events through block 26,433,900. No stale-ASR acceptance candidate survived, but exact transition-boundary replay deserves the next wave.
+The U16 ASR replacements and DGF re-registrations share their respective OPCM transactions, and census index boundaries show no post-retirement game retaining an old ASR. All 12 ASRs emitted zero blacklist events through block 26,433,900. No stale-ASR acceptance candidate survived; trace-level initializer/callback ordering and exact transition-boundary replay deserve the next wave.

@@ -49983,6 +49983,836 @@
     },
     "unexpectedFlagsAfterRotationAdjustment": []
   },
+  "governanceSafeHistory": {
+    "proxyAdminAndDGFOwner": {
+      "address": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+      "currentOwners": [
+        "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+        "0xc2819dc788505aac350142a7a707bf9d03e3bd03"
+      ],
+      "currentThreshold": 2,
+      "firstCodeBlock": 19185554,
+      "membershipEvents": [
+        {
+          "block": 19185554,
+          "dateUTC": "2024-02-08T19:34:35+00:00",
+          "event": "SafeSetup",
+          "fallbackHandler": "0xf48f2b2d2a534e402487b3ee7c18c33aec0fe5e4",
+          "initializer": "0x0000000000000000000000000000000000000000",
+          "initiator": "0xa6b71e26c5e0845f74c812102ca7114b6a896ab2",
+          "logIndex": 197,
+          "owners": [
+            "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+            "0xc2819dc788505aac350142a7a707bf9d03e3bd03"
+          ],
+          "threshold": 2,
+          "timestamp": 1707420875,
+          "transactionHash": "0x463aa134daf0333dfc3e659735e1365173112992a32bbdf3a0683f00d3ac036e"
+        }
+      ],
+      "version": "1.3.0"
+    },
+    "proxyAdminAndDGFOwnerSafes": {
+      "foundation": {
+        "address": "0x847b5c174615b1b7fdf770882256e2d3e95b9d92",
+        "currentOwners": [
+          "0xf1efbdc2c0bdc4554e0f1639d7fe88cd870a4639",
+          "0x3041ba32f451f5850c147805f5521ac206421623",
+          "0xc2db495f5a1f91172a361aafa6fde47c41de6df5",
+          "0xa564c83958f7f9fa5a255a540ef5e49445873104",
+          "0x4d014f3c5f33aa9cd1dc29ce29618d07ae666d15",
+          "0x69acfe2096dfb8d5a041ef37693553c48d9bfd02",
+          "0xa2a58e31c03c59e34ab4d996d811da0c035bfdea"
+        ],
+        "currentThreshold": 5,
+        "firstCodeBlock": 19185544,
+        "membershipEvents": [
+          {
+            "block": 19185544,
+            "dateUTC": "2024-02-08T19:32:35+00:00",
+            "event": "SafeSetup",
+            "fallbackHandler": "0xf48f2b2d2a534e402487b3ee7c18c33aec0fe5e4",
+            "initializer": "0x0000000000000000000000000000000000000000",
+            "initiator": "0xa6b71e26c5e0845f74c812102ca7114b6a896ab2",
+            "logIndex": 411,
+            "owners": [
+              "0x42d27eea1ad6e22af6284f609847cb3cd56b9c64",
+              "0x3041ba32f451f5850c147805f5521ac206421623",
+              "0xe7dea1306d9f829ba469d1904c50903b46ebd02e",
+              "0xbf93d4d727f7ba1f753e1124c3e532dcb04ea2c8",
+              "0x4d014f3c5f33aa9cd1dc29ce29618d07ae666d15",
+              "0x7cb07fe039a92b3d784f284d919503a381bec54f",
+              "0x9bbfb9919062c29a5ee15acd93c9d7c3b14d31aa"
+            ],
+            "threshold": 5,
+            "timestamp": 1707420755,
+            "transactionHash": "0x11dd91ac50ba5645873e8fd7f2688e8f92de35e43d6e26cdbdb42488c206b38c"
+          },
+          {
+            "block": 23598809,
+            "dateUTC": "2025-10-17T17:14:47+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 446,
+            "owner": "0x7cb07fe039a92b3d784f284d919503a381bec54f",
+            "timestamp": 1760721287,
+            "transactionHash": "0xc77e3390fe7e322fa64ecc707690d18202e24d1611b1c6a748182f991eb75ea1"
+          },
+          {
+            "block": 23598809,
+            "dateUTC": "2025-10-17T17:14:47+00:00",
+            "event": "AddedOwner",
+            "logIndex": 447,
+            "owner": "0x69acfe2096dfb8d5a041ef37693553c48d9bfd02",
+            "timestamp": 1760721287,
+            "transactionHash": "0xc77e3390fe7e322fa64ecc707690d18202e24d1611b1c6a748182f991eb75ea1"
+          },
+          {
+            "block": 24669856,
+            "dateUTC": "2026-03-16T11:47:23+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 430,
+            "owner": "0xe7dea1306d9f829ba469d1904c50903b46ebd02e",
+            "timestamp": 1773661643,
+            "transactionHash": "0x30ce04ba3d67b9f3a832df79c3a465a0876ccfe193ccf606cf00a4d8ae6d27a0"
+          },
+          {
+            "block": 24669856,
+            "dateUTC": "2026-03-16T11:47:23+00:00",
+            "event": "AddedOwner",
+            "logIndex": 431,
+            "owner": "0xc2db495f5a1f91172a361aafa6fde47c41de6df5",
+            "timestamp": 1773661643,
+            "transactionHash": "0x30ce04ba3d67b9f3a832df79c3a465a0876ccfe193ccf606cf00a4d8ae6d27a0"
+          },
+          {
+            "block": 24669856,
+            "dateUTC": "2026-03-16T11:47:23+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 432,
+            "owner": "0x42d27eea1ad6e22af6284f609847cb3cd56b9c64",
+            "timestamp": 1773661643,
+            "transactionHash": "0x30ce04ba3d67b9f3a832df79c3a465a0876ccfe193ccf606cf00a4d8ae6d27a0"
+          },
+          {
+            "block": 24669856,
+            "dateUTC": "2026-03-16T11:47:23+00:00",
+            "event": "AddedOwner",
+            "logIndex": 433,
+            "owner": "0x6419f81580343df023e68715c6e269afb00a2cc7",
+            "timestamp": 1773661643,
+            "transactionHash": "0x30ce04ba3d67b9f3a832df79c3a465a0876ccfe193ccf606cf00a4d8ae6d27a0"
+          },
+          {
+            "block": 24669856,
+            "dateUTC": "2026-03-16T11:47:23+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 434,
+            "owner": "0x9bbfb9919062c29a5ee15acd93c9d7c3b14d31aa",
+            "timestamp": 1773661643,
+            "transactionHash": "0x30ce04ba3d67b9f3a832df79c3a465a0876ccfe193ccf606cf00a4d8ae6d27a0"
+          },
+          {
+            "block": 24669856,
+            "dateUTC": "2026-03-16T11:47:23+00:00",
+            "event": "AddedOwner",
+            "logIndex": 435,
+            "owner": "0xc222ab08333109243b1f4e2a80e3d0a190714ab5",
+            "timestamp": 1773661643,
+            "transactionHash": "0x30ce04ba3d67b9f3a832df79c3a465a0876ccfe193ccf606cf00a4d8ae6d27a0"
+          },
+          {
+            "block": 25080323,
+            "dateUTC": "2026-05-12T16:46:47+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 763,
+            "owner": "0xc222ab08333109243b1f4e2a80e3d0a190714ab5",
+            "timestamp": 1778604407,
+            "transactionHash": "0x9592d29403a878a9ad6041a8cac8f0789a160fe4ea7b5cf364aff4a08b5656ee"
+          },
+          {
+            "block": 25080323,
+            "dateUTC": "2026-05-12T16:46:47+00:00",
+            "event": "AddedOwner",
+            "logIndex": 764,
+            "owner": "0xa2a58e31c03c59e34ab4d996d811da0c035bfdea",
+            "timestamp": 1778604407,
+            "transactionHash": "0x9592d29403a878a9ad6041a8cac8f0789a160fe4ea7b5cf364aff4a08b5656ee"
+          },
+          {
+            "block": 25546763,
+            "dateUTC": "2026-07-16T17:36:23+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 732,
+            "owner": "0xbf93d4d727f7ba1f753e1124c3e532dcb04ea2c8",
+            "timestamp": 1784223383,
+            "transactionHash": "0xbb0cece7d5f45ce07894be038b83af893b894a3337a5dda22b79b46097c4ce96"
+          },
+          {
+            "block": 25546763,
+            "dateUTC": "2026-07-16T17:36:23+00:00",
+            "event": "AddedOwner",
+            "logIndex": 733,
+            "owner": "0x7f1d4fe689b73b628285454667b93cfd09409f27",
+            "timestamp": 1784223383,
+            "transactionHash": "0xbb0cece7d5f45ce07894be038b83af893b894a3337a5dda22b79b46097c4ce96"
+          },
+          {
+            "block": 25546776,
+            "dateUTC": "2026-07-16T17:38:59+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 750,
+            "owner": "0x6419f81580343df023e68715c6e269afb00a2cc7",
+            "timestamp": 1784223539,
+            "transactionHash": "0x087cbb21ebc9739c7afed878236a9cba9b1e129adc6a976fefe5571b88452ce8"
+          },
+          {
+            "block": 25546776,
+            "dateUTC": "2026-07-16T17:38:59+00:00",
+            "event": "AddedOwner",
+            "logIndex": 751,
+            "owner": "0xf1efbdc2c0bdc4554e0f1639d7fe88cd870a4639",
+            "timestamp": 1784223539,
+            "transactionHash": "0x087cbb21ebc9739c7afed878236a9cba9b1e129adc6a976fefe5571b88452ce8"
+          },
+          {
+            "block": 26235250,
+            "dateUTC": "2026-10-20T17:20:35+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 490,
+            "owner": "0x7f1d4fe689b73b628285454667b93cfd09409f27",
+            "timestamp": 1792516835,
+            "transactionHash": "0x2ff5d469ee07415929af357055995e88aeaa6d48b157c5b9d7434a4576c7b58f"
+          },
+          {
+            "block": 26235250,
+            "dateUTC": "2026-10-20T17:20:35+00:00",
+            "event": "AddedOwner",
+            "logIndex": 491,
+            "owner": "0xa564c83958f7f9fa5a255a540ef5e49445873104",
+            "timestamp": 1792516835,
+            "transactionHash": "0x2ff5d469ee07415929af357055995e88aeaa6d48b157c5b9d7434a4576c7b58f"
+          }
+        ],
+        "version": "1.4.1"
+      },
+      "secondOwner": {
+        "address": "0xc2819dc788505aac350142a7a707bf9d03e3bd03",
+        "currentOwners": [
+          "0xe61f12136ba47de67d15a1d59fe2f383ec5176ae",
+          "0x652bc529e171847e2ffddcea13567643c84ccb5f",
+          "0x5c1f9e9384ca9fe0499277f6a015a2ac0a317a81",
+          "0x4a7322258c9e690e4cb8cea6e5251443e956e61e",
+          "0x3a53b4b081eb7cb00c46497b16ea22e65e4faa94",
+          "0xef9a98511939eee6ec69af62082e3f2ff606877c",
+          "0x6323ef2b80030f3fbc508bfc321fc71fdb95c865",
+          "0xd5b735b676a043a53946c3b6f6be28c1ece6ac90",
+          "0x7ed8d9af9eaa194d1a75c67c1475579e42289e39",
+          "0xd91530db01c60c6b3b824707d33fb0771ab85930",
+          "0x0a8742365a7eb0a3698293ac54357b5ac04cefe6",
+          "0xbfa046b0bc5cea1596be62b8b3f79f9f41f1e0d9",
+          "0xcbc7dceb857f0b25523618cca0a03c419a6d7ea6"
+        ],
+        "currentThreshold": 10,
+        "firstCodeBlock": 19185517,
+        "membershipEvents": [
+          {
+            "block": 19185517,
+            "dateUTC": "2024-02-08T19:26:59+00:00",
+            "event": "SafeSetup",
+            "fallbackHandler": "0xf48f2b2d2a534e402487b3ee7c18c33aec0fe5e4",
+            "initializer": "0x0000000000000000000000000000000000000000",
+            "initiator": "0xa6b71e26c5e0845f74c812102ca7114b6a896ab2",
+            "logIndex": 229,
+            "owners": [
+              "0x07dc0893cafbf810e3e72505041f2865726fd073",
+              "0x0a122d8aa40758fbaff0360bfb391edffd9758b8",
+              "0x1822b35b09f5ce1c78ecbc06ac0a4e17885b925e",
+              "0x4a7322258c9e690e4cb8cea6e5251443e956e61e",
+              "0x51acb8e1205de850d1b512584fee9c29c3813dda",
+              "0x5c0f529d5b025540c54f71d2bcbb4c78f368c47e",
+              "0x6323ef2b80030f3fbc508bfc321fc71fdb95c865",
+              "0x74fae9a9fbe31d1f69b95f59caf12736a8b6b310",
+              "0x7ed8d9af9eaa194d1a75c67c1475579e42289e39",
+              "0x8afe777b5a4d1e156435ab44ad4b73a318ce0ea4",
+              "0x9eb11a55132c851b9991f148b3af791ca498fd7a",
+              "0xbfa046b0bc5cea1596be62b8b3f79f9f41f1e0d9",
+              "0xe895076cd050f1f042d1040e47b5929be989e514"
+            ],
+            "threshold": 4,
+            "timestamp": 1707420419,
+            "transactionHash": "0xc17cd06d947a5e1fd1b67bdeaeb22f824ff58dd35a70a87b7935a497793d862b"
+          },
+          {
+            "block": 20063319,
+            "dateUTC": "2024-06-10T18:48:23+00:00",
+            "event": "ChangedThreshold",
+            "logIndex": 197,
+            "threshold": 10,
+            "timestamp": 1718045303,
+            "transactionHash": "0x50db9c1b9f5a8616f982022429a1d75c35986bcfb67bd1e3358d97ddbe751144"
+          },
+          {
+            "block": 21784391,
+            "dateUTC": "2025-02-06T02:10:47+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 374,
+            "owner": "0x8afe777b5a4d1e156435ab44ad4b73a318ce0ea4",
+            "timestamp": 1738807847,
+            "transactionHash": "0x6d60e7d62bf89d83b76ae05fe366974f027f769f9221bd2f2a92365f0c0d675c"
+          },
+          {
+            "block": 21784391,
+            "dateUTC": "2025-02-06T02:10:47+00:00",
+            "event": "AddedOwner",
+            "logIndex": 375,
+            "owner": "0x0aa384eb2fedd2741277a0f72909a0d7275575d7",
+            "timestamp": 1738807847,
+            "transactionHash": "0x6d60e7d62bf89d83b76ae05fe366974f027f769f9221bd2f2a92365f0c0d675c"
+          },
+          {
+            "block": 21795754,
+            "dateUTC": "2025-02-07T16:13:59+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 146,
+            "owner": "0x0a122d8aa40758fbaff0360bfb391edffd9758b8",
+            "timestamp": 1738944839,
+            "transactionHash": "0x8fb48b5dd0b06e236534dce431c212dd9d8ea2cefe3b042736c2364d2058c28a"
+          },
+          {
+            "block": 21795754,
+            "dateUTC": "2025-02-07T16:13:59+00:00",
+            "event": "AddedOwner",
+            "logIndex": 147,
+            "owner": "0x652bc529e171847e2ffddcea13567643c84ccb5f",
+            "timestamp": 1738944839,
+            "transactionHash": "0x8fb48b5dd0b06e236534dce431c212dd9d8ea2cefe3b042736c2364d2058c28a"
+          },
+          {
+            "block": 21795754,
+            "dateUTC": "2025-02-07T16:13:59+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 159,
+            "owner": "0xe895076cd050f1f042d1040e47b5929be989e514",
+            "timestamp": 1738944839,
+            "transactionHash": "0x8fb48b5dd0b06e236534dce431c212dd9d8ea2cefe3b042736c2364d2058c28a"
+          },
+          {
+            "block": 21795754,
+            "dateUTC": "2025-02-07T16:13:59+00:00",
+            "event": "AddedOwner",
+            "logIndex": 160,
+            "owner": "0x92827223f6b397ce9f208ee352baca710765cacb",
+            "timestamp": 1738944839,
+            "transactionHash": "0x8fb48b5dd0b06e236534dce431c212dd9d8ea2cefe3b042736c2364d2058c28a"
+          },
+          {
+            "block": 21814365,
+            "dateUTC": "2025-02-10T06:35:47+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 337,
+            "owner": "0x74fae9a9fbe31d1f69b95f59caf12736a8b6b310",
+            "timestamp": 1739169347,
+            "transactionHash": "0x2b3d57329e530349ff8bdedb56d5ccb50d96435f8b487e3da7edcd5ca2e62ff7"
+          },
+          {
+            "block": 21814365,
+            "dateUTC": "2025-02-10T06:35:47+00:00",
+            "event": "AddedOwner",
+            "logIndex": 338,
+            "owner": "0xd5b735b676a043a53946c3b6f6be28c1ece6ac90",
+            "timestamp": 1739169347,
+            "transactionHash": "0x2b3d57329e530349ff8bdedb56d5ccb50d96435f8b487e3da7edcd5ca2e62ff7"
+          },
+          {
+            "block": 21816783,
+            "dateUTC": "2025-02-10T14:41:59+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 133,
+            "owner": "0x5c0f529d5b025540c54f71d2bcbb4c78f368c47e",
+            "timestamp": 1739198519,
+            "transactionHash": "0xdd9f207b7c14600e297f2df93efbfed933049c16b839d13a4698d4032376664f"
+          },
+          {
+            "block": 21816783,
+            "dateUTC": "2025-02-10T14:41:59+00:00",
+            "event": "AddedOwner",
+            "logIndex": 134,
+            "owner": "0xef9a98511939eee6ec69af62082e3f2ff606877c",
+            "timestamp": 1739198519,
+            "transactionHash": "0xdd9f207b7c14600e297f2df93efbfed933049c16b839d13a4698d4032376664f"
+          },
+          {
+            "block": 23148066,
+            "dateUTC": "2025-08-15T17:55:47+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 433,
+            "owner": "0x51acb8e1205de850d1b512584fee9c29c3813dda",
+            "timestamp": 1755280547,
+            "transactionHash": "0xbc2b5c49f0053478beb9328a089b4336c2c4fee4d84d625e60e967c8c8a5b735"
+          },
+          {
+            "block": 23148066,
+            "dateUTC": "2025-08-15T17:55:47+00:00",
+            "event": "AddedOwner",
+            "logIndex": 434,
+            "owner": "0x3a53b4b081eb7cb00c46497b16ea22e65e4faa94",
+            "timestamp": 1755280547,
+            "transactionHash": "0xbc2b5c49f0053478beb9328a089b4336c2c4fee4d84d625e60e967c8c8a5b735"
+          },
+          {
+            "block": 23148126,
+            "dateUTC": "2025-08-15T18:07:59+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 428,
+            "owner": "0x9eb11a55132c851b9991f148b3af791ca498fd7a",
+            "timestamp": 1755281279,
+            "transactionHash": "0x690bec4034069f02564e732fded33ef2930b210fe97f1a01c5a5e3113be5b30a"
+          },
+          {
+            "block": 23148126,
+            "dateUTC": "2025-08-15T18:07:59+00:00",
+            "event": "AddedOwner",
+            "logIndex": 429,
+            "owner": "0x0a8742365a7eb0a3698293ac54357b5ac04cefe6",
+            "timestamp": 1755281279,
+            "transactionHash": "0x690bec4034069f02564e732fded33ef2930b210fe97f1a01c5a5e3113be5b30a"
+          },
+          {
+            "block": 24543121,
+            "dateUTC": "2026-02-26T19:15:59+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 219,
+            "owner": "0x1822b35b09f5ce1c78ecbc06ac0a4e17885b925e",
+            "timestamp": 1772133359,
+            "transactionHash": "0xc733667295b222484b12e8e54e66320121ff9f10903eac01769f98a3432c424b"
+          },
+          {
+            "block": 24543121,
+            "dateUTC": "2026-02-26T19:15:59+00:00",
+            "event": "AddedOwner",
+            "logIndex": 220,
+            "owner": "0x5c1f9e9384ca9fe0499277f6a015a2ac0a317a81",
+            "timestamp": 1772133359,
+            "transactionHash": "0xc733667295b222484b12e8e54e66320121ff9f10903eac01769f98a3432c424b"
+          },
+          {
+            "block": 24543131,
+            "dateUTC": "2026-02-26T19:17:59+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 272,
+            "owner": "0x07dc0893cafbf810e3e72505041f2865726fd073",
+            "timestamp": 1772133479,
+            "transactionHash": "0x184a3a4e941bf722e3f2fcd4c359fa84b9a0ecdb717e2c15b9acc0b6c9692848"
+          },
+          {
+            "block": 24543131,
+            "dateUTC": "2026-02-26T19:17:59+00:00",
+            "event": "AddedOwner",
+            "logIndex": 273,
+            "owner": "0xe61f12136ba47de67d15a1d59fe2f383ec5176ae",
+            "timestamp": 1772133479,
+            "transactionHash": "0x184a3a4e941bf722e3f2fcd4c359fa84b9a0ecdb717e2c15b9acc0b6c9692848"
+          },
+          {
+            "block": 25027270,
+            "dateUTC": "2026-05-05T07:20:35+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 591,
+            "owner": "0x92827223f6b397ce9f208ee352baca710765cacb",
+            "timestamp": 1777965635,
+            "transactionHash": "0x3805faf99ec936bda93f4e32adbb7844f03d749b09de596872b7859eea7638eb"
+          },
+          {
+            "block": 25027270,
+            "dateUTC": "2026-05-05T07:20:35+00:00",
+            "event": "AddedOwner",
+            "logIndex": 592,
+            "owner": "0xcbc7dceb857f0b25523618cca0a03c419a6d7ea6",
+            "timestamp": 1777965635,
+            "transactionHash": "0x3805faf99ec936bda93f4e32adbb7844f03d749b09de596872b7859eea7638eb"
+          },
+          {
+            "block": 25935419,
+            "dateUTC": "2026-09-08T21:45:23+00:00",
+            "event": "RemovedOwner",
+            "logIndex": 567,
+            "owner": "0x0aa384eb2fedd2741277a0f72909a0d7275575d7",
+            "timestamp": 1788903923,
+            "transactionHash": "0xef9051e4692d97a04ec70ba033915a8e304989ee504da1e5b14674c6f9e3770a"
+          },
+          {
+            "block": 25935419,
+            "dateUTC": "2026-09-08T21:45:23+00:00",
+            "event": "AddedOwner",
+            "logIndex": 568,
+            "owner": "0xd91530db01c60c6b3b824707d33fb0771ab85930",
+            "timestamp": 1788903923,
+            "transactionHash": "0xef9051e4692d97a04ec70ba033915a8e304989ee504da1e5b14674c6f9e3770a"
+          }
+        ],
+        "version": "1.3.0"
+      }
+    },
+    "systemConfigOwner": {
+      "address": "0x509182ec226b3b71d36a3255a80ef0b1a9d43033",
+      "currentOwners": [
+        "0x0e22018d5d2e676ad5f72f0ac435b001eb6d07e0",
+        "0x9c60ee40a77f76e59d92c0f860fe22b581b70587",
+        "0x989a65ffbe51b22987c08f722ba09cb3784e7dad",
+        "0xefe58621c63620cf4d7f6027fd867455e2e8dbdd",
+        "0x08968f6ebf7bfd3987410d5dafd45d59b5537a0e"
+      ],
+      "currentThreshold": 3,
+      "firstCodeBlock": 21278117,
+      "membershipEvents": [
+        {
+          "block": 21278117,
+          "dateUTC": "2024-11-27T09:12:47+00:00",
+          "event": "SafeSetup",
+          "fallbackHandler": "0xfd0732dc9e303f09fcef3a7388ad10a83459ec99",
+          "initializer": "0xbd89a1ce4dde368ffab0ec35506eece0b1ffdc54",
+          "initiator": "0x4e1dcf7ad4e460cfd30791ccc4f9c8a4f820ec67",
+          "logIndex": 84,
+          "owners": [
+            "0xa0d84361a79fffcd42c9a422441b9179a4826b3e",
+            "0x2b3aa0dc0622efb9426f5a44015ae9151bd8224c",
+            "0xec33045fa66cf43e9b5b9f332dc124dbc71c0917",
+            "0x83cc8195856b0463ded5f052021009b7985fda2c",
+            "0x127bae6fc751dc92111a359500ae91eb437f3dcb",
+            "0x48ff760e582c3740336656349684b4fd4c6ed88f"
+          ],
+          "threshold": 2,
+          "timestamp": 1732698767,
+          "transactionHash": "0x3e9bc3f22b5f7b7efb8a2da9533e767a35063159aa6548f73b86dbc5a6658cfd"
+        },
+        {
+          "block": 21278277,
+          "dateUTC": "2024-11-27T09:44:59+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 265,
+          "owner": "0xa0d84361a79fffcd42c9a422441b9179a4826b3e",
+          "timestamp": 1732700699,
+          "transactionHash": "0x57f21a971ff441bca05f74f5beb131d90e019b536fba69b1177fc29e52dba1e4"
+        },
+        {
+          "block": 21672780,
+          "dateUTC": "2025-01-21T12:11:35+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 131,
+          "owner": "0x2b3aa0dc0622efb9426f5a44015ae9151bd8224c",
+          "timestamp": 1737461495,
+          "transactionHash": "0x6645ccec845832d935d39f3fc13ad25cedf102456ba3f4a800bbf01165d837a0"
+        },
+        {
+          "block": 21672780,
+          "dateUTC": "2025-01-21T12:11:35+00:00",
+          "event": "AddedOwner",
+          "logIndex": 132,
+          "owner": "0x94e9ef16a9ef6c37164a7bca6cfb03b52d23af7e",
+          "timestamp": 1737461495,
+          "transactionHash": "0x6645ccec845832d935d39f3fc13ad25cedf102456ba3f4a800bbf01165d837a0"
+        },
+        {
+          "block": 21672780,
+          "dateUTC": "2025-01-21T12:11:35+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 133,
+          "owner": "0xec33045fa66cf43e9b5b9f332dc124dbc71c0917",
+          "timestamp": 1737461495,
+          "transactionHash": "0x6645ccec845832d935d39f3fc13ad25cedf102456ba3f4a800bbf01165d837a0"
+        },
+        {
+          "block": 21672780,
+          "dateUTC": "2025-01-21T12:11:35+00:00",
+          "event": "AddedOwner",
+          "logIndex": 134,
+          "owner": "0x420537ec5e82cde86f04f3d61f3ad56f7c7dd32b",
+          "timestamp": 1737461495,
+          "transactionHash": "0x6645ccec845832d935d39f3fc13ad25cedf102456ba3f4a800bbf01165d837a0"
+        },
+        {
+          "block": 21672780,
+          "dateUTC": "2025-01-21T12:11:35+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 135,
+          "owner": "0x83cc8195856b0463ded5f052021009b7985fda2c",
+          "timestamp": 1737461495,
+          "transactionHash": "0x6645ccec845832d935d39f3fc13ad25cedf102456ba3f4a800bbf01165d837a0"
+        },
+        {
+          "block": 21672780,
+          "dateUTC": "2025-01-21T12:11:35+00:00",
+          "event": "AddedOwner",
+          "logIndex": 136,
+          "owner": "0xb9269f274e7edc73bf3d923e347d0784e4a5e452",
+          "timestamp": 1737461495,
+          "transactionHash": "0x6645ccec845832d935d39f3fc13ad25cedf102456ba3f4a800bbf01165d837a0"
+        },
+        {
+          "block": 21672780,
+          "dateUTC": "2025-01-21T12:11:35+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 137,
+          "owner": "0x127bae6fc751dc92111a359500ae91eb437f3dcb",
+          "timestamp": 1737461495,
+          "transactionHash": "0x6645ccec845832d935d39f3fc13ad25cedf102456ba3f4a800bbf01165d837a0"
+        },
+        {
+          "block": 21672780,
+          "dateUTC": "2025-01-21T12:11:35+00:00",
+          "event": "AddedOwner",
+          "logIndex": 138,
+          "owner": "0xd6db4b8ad9b8bd4665b968fab017ffeab546f94a",
+          "timestamp": 1737461495,
+          "transactionHash": "0x6645ccec845832d935d39f3fc13ad25cedf102456ba3f4a800bbf01165d837a0"
+        },
+        {
+          "block": 21672780,
+          "dateUTC": "2025-01-21T12:11:35+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 139,
+          "owner": "0x48ff760e582c3740336656349684b4fd4c6ed88f",
+          "timestamp": 1737461495,
+          "transactionHash": "0x6645ccec845832d935d39f3fc13ad25cedf102456ba3f4a800bbf01165d837a0"
+        },
+        {
+          "block": 21672780,
+          "dateUTC": "2025-01-21T12:11:35+00:00",
+          "event": "AddedOwner",
+          "logIndex": 140,
+          "owner": "0xba1a565d2bf6d27f451a459308f423219478c5cb",
+          "timestamp": 1737461495,
+          "transactionHash": "0x6645ccec845832d935d39f3fc13ad25cedf102456ba3f4a800bbf01165d837a0"
+        },
+        {
+          "block": 21672780,
+          "dateUTC": "2025-01-21T12:11:35+00:00",
+          "event": "ChangedThreshold",
+          "logIndex": 141,
+          "threshold": 3,
+          "timestamp": 1737461495,
+          "transactionHash": "0x6645ccec845832d935d39f3fc13ad25cedf102456ba3f4a800bbf01165d837a0"
+        },
+        {
+          "block": 21986584,
+          "dateUTC": "2025-03-06T08:14:11+00:00",
+          "event": "AddedOwner",
+          "logIndex": 659,
+          "owner": "0xd45f9f3990c48afa5c90404c7a748b4c23fb2cba",
+          "timestamp": 1741248851,
+          "transactionHash": "0x6be47d00f450fd2bd95e97876423b55195488123ae1b3a3f5858435b8f8fe81a"
+        },
+        {
+          "block": 23937835,
+          "dateUTC": "2025-12-04T05:54:35+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 445,
+          "owner": "0x420537ec5e82cde86f04f3d61f3ad56f7c7dd32b",
+          "timestamp": 1764827675,
+          "transactionHash": "0x962f37b1871c78075663a10fe1b57e2ce8cdce08f6c4ff4b64824c0d5145f42d"
+        },
+        {
+          "block": 23937835,
+          "dateUTC": "2025-12-04T05:54:35+00:00",
+          "event": "AddedOwner",
+          "logIndex": 446,
+          "owner": "0x556eb1b888ef0a02be4360e960824fc5ac197d65",
+          "timestamp": 1764827675,
+          "transactionHash": "0x962f37b1871c78075663a10fe1b57e2ce8cdce08f6c4ff4b64824c0d5145f42d"
+        },
+        {
+          "block": 23937835,
+          "dateUTC": "2025-12-04T05:54:35+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 447,
+          "owner": "0xba1a565d2bf6d27f451a459308f423219478c5cb",
+          "timestamp": 1764827675,
+          "transactionHash": "0x962f37b1871c78075663a10fe1b57e2ce8cdce08f6c4ff4b64824c0d5145f42d"
+        },
+        {
+          "block": 23937835,
+          "dateUTC": "2025-12-04T05:54:35+00:00",
+          "event": "AddedOwner",
+          "logIndex": 448,
+          "owner": "0x1edae2a7c9ecf37319d4e113588d946e9901f5ea",
+          "timestamp": 1764827675,
+          "transactionHash": "0x962f37b1871c78075663a10fe1b57e2ce8cdce08f6c4ff4b64824c0d5145f42d"
+        },
+        {
+          "block": 26077012,
+          "dateUTC": "2026-09-28T16:00:59+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 293,
+          "owner": "0x94e9ef16a9ef6c37164a7bca6cfb03b52d23af7e",
+          "timestamp": 1790611259,
+          "transactionHash": "0xa0c6a7bf6ecf002d43c5f14be4518861d084528e85c21c05b2974e147205578a"
+        },
+        {
+          "block": 26077012,
+          "dateUTC": "2026-09-28T16:00:59+00:00",
+          "event": "AddedOwner",
+          "logIndex": 294,
+          "owner": "0x424f9d86da7884a92ca8c31a314331e6a37b83c1",
+          "timestamp": 1790611259,
+          "transactionHash": "0xa0c6a7bf6ecf002d43c5f14be4518861d084528e85c21c05b2974e147205578a"
+        },
+        {
+          "block": 26077012,
+          "dateUTC": "2026-09-28T16:00:59+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 295,
+          "owner": "0xb9269f274e7edc73bf3d923e347d0784e4a5e452",
+          "timestamp": 1790611259,
+          "transactionHash": "0xa0c6a7bf6ecf002d43c5f14be4518861d084528e85c21c05b2974e147205578a"
+        },
+        {
+          "block": 26077012,
+          "dateUTC": "2026-09-28T16:00:59+00:00",
+          "event": "AddedOwner",
+          "logIndex": 296,
+          "owner": "0x855cc2b6d97197a2d2d322b0539024f63f5f4bff",
+          "timestamp": 1790611259,
+          "transactionHash": "0xa0c6a7bf6ecf002d43c5f14be4518861d084528e85c21c05b2974e147205578a"
+        },
+        {
+          "block": 26077012,
+          "dateUTC": "2026-09-28T16:00:59+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 297,
+          "owner": "0x1edae2a7c9ecf37319d4e113588d946e9901f5ea",
+          "timestamp": 1790611259,
+          "transactionHash": "0xa0c6a7bf6ecf002d43c5f14be4518861d084528e85c21c05b2974e147205578a"
+        },
+        {
+          "block": 26077012,
+          "dateUTC": "2026-09-28T16:00:59+00:00",
+          "event": "AddedOwner",
+          "logIndex": 298,
+          "owner": "0x9b168f4c6c7fe69d3af1a0984eace3e5ae128a0b",
+          "timestamp": 1790611259,
+          "transactionHash": "0xa0c6a7bf6ecf002d43c5f14be4518861d084528e85c21c05b2974e147205578a"
+        },
+        {
+          "block": 26077315,
+          "dateUTC": "2026-09-28T17:02:11+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 631,
+          "owner": "0xd45f9f3990c48afa5c90404c7a748b4c23fb2cba",
+          "timestamp": 1790614931,
+          "transactionHash": "0x7838543bb0399672561804b724f086a0fb91ef007444ebbe5aafc23d180274e5"
+        },
+        {
+          "block": 26077315,
+          "dateUTC": "2026-09-28T17:02:11+00:00",
+          "event": "ChangedThreshold",
+          "logIndex": 632,
+          "threshold": 2,
+          "timestamp": 1790614931,
+          "transactionHash": "0x7838543bb0399672561804b724f086a0fb91ef007444ebbe5aafc23d180274e5"
+        },
+        {
+          "block": 26077315,
+          "dateUTC": "2026-09-28T17:02:11+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 633,
+          "owner": "0x556eb1b888ef0a02be4360e960824fc5ac197d65",
+          "timestamp": 1790614931,
+          "transactionHash": "0x7838543bb0399672561804b724f086a0fb91ef007444ebbe5aafc23d180274e5"
+        },
+        {
+          "block": 26077315,
+          "dateUTC": "2026-09-28T17:02:11+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 634,
+          "owner": "0xd6db4b8ad9b8bd4665b968fab017ffeab546f94a",
+          "timestamp": 1790614931,
+          "transactionHash": "0x7838543bb0399672561804b724f086a0fb91ef007444ebbe5aafc23d180274e5"
+        },
+        {
+          "block": 26080277,
+          "dateUTC": "2026-09-29T02:56:59+00:00",
+          "event": "AddedOwner",
+          "logIndex": 540,
+          "owner": "0x9c60ee40a77f76e59d92c0f860fe22b581b70587",
+          "timestamp": 1790650619,
+          "transactionHash": "0x8f00ea4dc35c7c8872944af01f4f61baec7d0c8a860ea6d36a242c465d5a103e"
+        },
+        {
+          "block": 26080277,
+          "dateUTC": "2026-09-29T02:56:59+00:00",
+          "event": "AddedOwner",
+          "logIndex": 541,
+          "owner": "0x0e22018d5d2e676ad5f72f0ac435b001eb6d07e0",
+          "timestamp": 1790650619,
+          "transactionHash": "0x8f00ea4dc35c7c8872944af01f4f61baec7d0c8a860ea6d36a242c465d5a103e"
+        },
+        {
+          "block": 26080297,
+          "dateUTC": "2026-09-29T03:00:59+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 666,
+          "owner": "0x855cc2b6d97197a2d2d322b0539024f63f5f4bff",
+          "timestamp": 1790650859,
+          "transactionHash": "0xc017d6a0b25527a07883907ecb571dfc9fad72d877f8b25028c9ce696be8edb1"
+        },
+        {
+          "block": 26080297,
+          "dateUTC": "2026-09-29T03:00:59+00:00",
+          "event": "AddedOwner",
+          "logIndex": 667,
+          "owner": "0xefe58621c63620cf4d7f6027fd867455e2e8dbdd",
+          "timestamp": 1790650859,
+          "transactionHash": "0xc017d6a0b25527a07883907ecb571dfc9fad72d877f8b25028c9ce696be8edb1"
+        },
+        {
+          "block": 26080314,
+          "dateUTC": "2026-09-29T03:04:23+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 234,
+          "owner": "0x424f9d86da7884a92ca8c31a314331e6a37b83c1",
+          "timestamp": 1790651063,
+          "transactionHash": "0x7414a3e589b070cb65e64da2c3ba5829d5f768de025f3c450ebb38594840b07d"
+        },
+        {
+          "block": 26080314,
+          "dateUTC": "2026-09-29T03:04:23+00:00",
+          "event": "AddedOwner",
+          "logIndex": 235,
+          "owner": "0x989a65ffbe51b22987c08f722ba09cb3784e7dad",
+          "timestamp": 1790651063,
+          "transactionHash": "0x7414a3e589b070cb65e64da2c3ba5829d5f768de025f3c450ebb38594840b07d"
+        },
+        {
+          "block": 26080334,
+          "dateUTC": "2026-09-29T03:08:23+00:00",
+          "event": "RemovedOwner",
+          "logIndex": 549,
+          "owner": "0x9b168f4c6c7fe69d3af1a0984eace3e5ae128a0b",
+          "timestamp": 1790651303,
+          "transactionHash": "0xefe6d487f007a0a071a9d4e84c51aa9430f269fe6cd69f84704e05a42d989ffd"
+        },
+        {
+          "block": 26080334,
+          "dateUTC": "2026-09-29T03:08:23+00:00",
+          "event": "AddedOwner",
+          "logIndex": 550,
+          "owner": "0x08968f6ebf7bfd3987410d5dafd45d59b5537a0e",
+          "timestamp": 1790651303,
+          "transactionHash": "0xefe6d487f007a0a071a9d4e84c51aa9430f269fe6cd69f84704e05a42d989ffd"
+        },
+        {
+          "block": 26080350,
+          "dateUTC": "2026-09-29T03:11:35+00:00",
+          "event": "ChangedThreshold",
+          "logIndex": 411,
+          "threshold": 3,
+          "timestamp": 1790651495,
+          "transactionHash": "0xfc36e206fe748e953bc68ae42fc661e96fce4165ba5e0af03ad7139eea7d68d4"
+        }
+      ],
+      "version": "1.5.0"
+    }
+  },
   "historicalGameObjects": {
     "anchorStateRegistries": [
       {

@@ -78,9 +78,9 @@ Upgrade blocks and transaction hashes independently fixed by archive state:
 
 Six targets use the EIP-1967 implementation slot. The legacy messenger resolves its implementation
 from the AddressManager mapping; the eventless ChugSplash bridge stores its implementation in the
-same EIP-1967 slot. The bridge history is sampled at no more than 10,000-block intervals and each
-changed interval is refined by binary search. EIP-1967/AddressManager event blocks are independently
-checked against storage at `block - 1` and `block`.
+same EIP-1967 slot. Every locator is sampled at no more than 10,000-block intervals and every
+changed interval is refined by binary search. One-block EIP-1967/AddressManager event reads only
+attach transaction hashes after state discovery.
 
 `op-upgrade-blocks.json` reports selectable block-end state. A StorageSetter installed and removed
 inside one transaction is not a separate fork point because no Ethereum block exposes that state.

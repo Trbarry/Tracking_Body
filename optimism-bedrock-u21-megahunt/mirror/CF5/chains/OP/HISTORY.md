@@ -25,6 +25,7 @@ All listed release transactions are marked EXECUTED in `superchain-ops/src/tasks
 ## Ownership, features, and chain-specific parameters at U21
 
 - ProxyAdmin owner: `0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A`; DGF owner: `0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A`; SystemConfig owner: `0x847B5c174615B1B7fDF770882256e2D3E95b9D92`.
+- The ProxyAdmin/DGF owner is a 2-of-2 Safe; its owner Safes are 5-of-7 and 10-of-13. The SystemConfig owner is a 5-of-7 Safe. Setup and every `AddedOwner`, `RemovedOwner`, and `ChangedThreshold` event through the pinned block are in `governanceSafeHistory`.
 - Guardian: `0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2` through shared SuperchainConfig `0x95703e…`; `lastUsedOPCM=0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f`.
 - ETH lockbox feature `true`, interop `false`, custom gas token `false`.
 - `gasLimit=40000000 [4e7]`, EIP-1559 denominator/elasticity `250/2`, `minBaseFee=0`. These are operator/governance inputs, not hidden implementation differences.
