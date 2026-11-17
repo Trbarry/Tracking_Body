@@ -1,0 +1,21 @@
+{
+ "sums": {
+  "legacy_success": {
+   "n": 1613,
+   "wei": "7044882649839026326673"
+  },
+  "bedrock_success": {
+   "n": 24383,
+   "wei": "1249728952160103263942833"
+  },
+  "legacy_failed": {
+   "n": 4,
+   "wei": "2131618022881612551"
+  }
+ },
+ "unknown_finalized_hashes": [],
+ "duplicates": [],
+ "bedrock_initiated_wei": "1255981957789961336879992",
+ "bedrock_pending_wei": "6253005629858072937159",
+ "paid_success_wei": "1256773834809942290269506"
+}
