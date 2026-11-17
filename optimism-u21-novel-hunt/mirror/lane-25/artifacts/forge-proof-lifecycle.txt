@@ -1,0 +1,21 @@
+$ forge test --match-path test/ProofLifecycle.t.sol -vv
+No files changed, compilation skipped
+
+Ran 14 tests for test/ProofLifecycle.t.sol:ProofLifecycleTest
+[PASS] test_badSubmitterProofDoesNotBlockGoodSubmitterProof() (gas: 261689)
+[PASS] test_blacklistedProofCanBeDeletedByAnotherUserWhilePaused() (gas: 117697)
+[PASS] test_challengerWinsDeletionIsPermissionlessAndLeavesArrayStale() (gas: 35276)
+[PASS] test_crossVersionProofFinalizedUnderV9() (gas: 35564)
+[PASS] test_defenderWinsCannotBeDeleted() (gas: 33035)
+[PASS] test_deleteFrontRunCannotChangeAnInvalidProofIntoAValidOne() (gas: 120253)
+[PASS] test_deletingAlreadyFinalizedProofDoesNotClearReplayProtection() (gas: 43192)
+[PASS] test_exactNPreservesV8ProofAndInProgressCannotBeDeleted() (gas: 56330)
+[PASS] test_noCodeStoredGameRevertsEvenIfBlacklisted() (gas: 76101)
+[PASS] test_notRespectedBoundaryCannotDeleteWithoutPermanentInvalidation() (gas: 41679)
+[PASS] test_plannedMigrationMechanismRejectsAllOldFactoryProofsButDoesNotDeleteThem() (gas: 190296)
+[PASS] test_realProofPackingMatchesSlot57Layout() (gas: 4300)
+[PASS] test_retirementAloneDoesNotAuthorizeDeletion() (gas: 66271)
+[PASS] test_unregisteredSyntheticEntryOnlyDeletesIfStatusIsChallengerWins() (gas: 185630)
+Suite result: ok. 14 passed; 0 failed; 0 skipped; finished in 69.62ms (264.39ms CPU time)
+
+Ran 1 test suite in 82.70ms (69.62ms CPU time): 14 tests passed, 0 failed, 0 skipped (14 total tests)

@@ -1,0 +1,128 @@
+No files changed, compilation skipped
+Ran 29 tests for test/Lane12.t.sol:Lane12Test
+[PASS] test_R05_checkKeysOnSenderOnly() (gas: 236647)
+[PASS] test_R05_checkedPath_unsafeTarget_reverts_L1CDMCallFailed() (gas: 235031)
+Logs:
+  R05 checked path stays unfinalized, hash: 0x935621f158d610fce4150d368858c5d267e3ca05a1794e2cf4a11d75fec617ae
+[PASS] test_R05_sibling_otherSender_failure_isFinalizedAsFailed() (gas: 273519)
+[PASS] test_R05_sibling_replayReentrancy_finalizesVictimAsFailedButReplayable() (gas: 1325621)
+[PASS] test_R06_delete_afterBlacklist_permissionless_evenWhenPaused() (gas: 168194)
+[PASS] test_R06_delete_challengerWinsGame_permissionless() (gas: 29232)
+[PASS] test_R06_delete_doesNotAffectOtherSubmitters() (gas: 343862)
+[PASS] test_R06_delete_inProgressGame_reverts_NotInvalidated() (gas: 52019)
+[PASS] test_R06_delete_validGame_reverts_NotInvalidated() (gas: 125042)
+[PASS] test_R17_frame_100kb_minGas200k() (gas: 40764465)
+Logs:
+  minGasLimit: 200000
+  message bytes: 100000
+  L2 budget for the frame (withdrawal gasLimit): 4031400
+  frame gas: lowest that does not revert: 495003
+    outcome there (1 delivered, 2 parked failed): 2
+  outcome with exactly the L2 budget: 1
+  frame gas: lowest that delivers: 872619
+  margin (budget - needed): 3158781
+[PASS] test_R17_frame_20kb_minGas200k() (gas: 11925554)
+Logs:
+  minGasLimit: 200000
+  message bytes: 20000
+  L2 budget for the frame (withdrawal gasLimit): 833334
+  frame gas: lowest that does not revert: 148122
+    outcome there (1 delivered, 2 parked failed): 2
+  outcome with exactly the L2 budget: 1
+  frame gas: lowest that delivers: 525738
+  margin (budget - needed): 307596
+[PASS] test_R17_frame_empty_minGas0() (gas: 6558155)
+Logs:
+  minGasLimit: 0
+  message bytes: 0
+  L2 budget for the frame (withdrawal gasLimit): 310160
+  frame gas: lowest that does not revert: 80718
+    outcome there (1 delivered, 2 parked failed): 2
+  outcome with exactly the L2 budget: 1
+  frame gas: lowest that delivers: 273137
+  margin (budget - needed): 37023
+[PASS] test_R17_frame_empty_minGas100k_value() (gas: 6527838)
+Logs:
+  minGasLimit: 100000
+  message bytes: 0
+  L2 budget for the frame (withdrawal gasLimit): 411747
+  frame gas: lowest that does not revert: 78418
+    outcome there (1 delivered, 2 parked failed): 2
+  outcome with exactly the L2 budget: 1
+  frame gas: lowest that delivers: 352835
+  margin (budget - needed): 58912
+[PASS] test_R17_gasWindow_20kbMessage_minGas200k() (gas: 168089181)
+Logs:
+  scan: finalize-succeeds-but-not-delivered samples: 0
+  minGasLimit: 200000
+  message bytes: 20000
+  withdrawal gasLimit (L2 baseGas, old constants): 833334
+  lowest portal gas that does not revert: 1032205
+  outcome at that gas (1=delivered,2=parked failed): 1
+  lowest portal gas that delivers: 1032205
+[PASS] test_R17_gasWindow_2kbMessage_minGas200k() (gas: 103743709)
+Logs:
+  scan: finalize-succeeds-but-not-delivered samples: 0
+  minGasLimit: 200000
+  message bytes: 2048
+  withdrawal gasLimit (L2 baseGas, old constants): 546102
+  lowest portal gas that does not revert: 681632
+  outcome at that gas (1=delivered,2=parked failed): 1
+  lowest portal gas that delivers: 681632
+[PASS] test_R17_gasWindow_emptyMessage_minGas0() (gas: 97202539)
+Logs:
+  scan: finalize-succeeds-but-not-delivered samples: 0
+  minGasLimit: 0
+  message bytes: 0
+  withdrawal gasLimit (L2 baseGas, old constants): 310160
+  lowest portal gas that does not revert: 432357
+  outcome at that gas (1=delivered,2=parked failed): 1
+  lowest portal gas that delivers: 432357
+[PASS] test_R17_gasWindow_emptyMessage_minGas100k_value() (gas: 113445190)
+Logs:
+  scan: finalize-succeeds-but-not-delivered samples: 0
+  minGasLimit: 100000
+  message bytes: 0
+  withdrawal gasLimit (L2 baseGas, old constants): 411747
+  lowest portal gas that does not revert: 553428
+  outcome at that gas (1=delivered,2=parked failed): 1
+  lowest portal gas that delivers: 553428
+[PASS] test_R18_frame_burner_minGas100k_value() (gas: 20963276)
+Logs:
+  minGasLimit: 100000
+  message bytes: 0
+  L2 budget for the frame (withdrawal gasLimit): 411747
+  frame gas: lowest that does not revert: 78418
+    outcome there (1 delivered, 2 parked failed): 2
+  outcome with exactly the L2 budget: 2
+[PASS] test_R18_gasBurningTarget_isRecordedNotReverted() (gas: 42169392)
+Logs:
+  scan: finalize-succeeds-but-not-delivered samples: 0
+  minGasLimit: 100000
+  message bytes: 0
+  withdrawal gasLimit (L2 baseGas, old constants): 411747
+  lowest portal gas that does not revert: 553428
+  outcome at that gas (1=delivered,2=parked failed): 2
+  lowest portal gas that delivers: 0
+[PASS] test_R21_newAccountStateGas_reservation() (gas: 6133072)
+Logs:
+  min portal gas, value -> empty account: 314286
+  min portal gas, value -> funded EOA: 127782
+  min portal gas, zero value -> empty account: 111548
+  delta empty vs funded: 186504
+[PASS] test_auth_siblings() (gas: 532492)
+[PASS] test_pause_globalIdentifier_pausesEverything() (gas: 161221)
+[PASS] test_pause_legacyDelayedWETH_onlyGlobalPauseReachesThem() (gas: 166099)
+[PASS] test_pause_lockboxIdentifier_pausesEverything() (gas: 182616)
+[PASS] test_pause_portalOrSystemConfigIdentifier_pausesNothing() (gas: 262919)
+[PASS] test_pause_scope() (gas: 259458)
+[PASS] test_unlockETH_duringWithdrawal_blocked() (gas: 810444)
+[PASS] test_validator_PORTAL80_isTransientlyFalse() (gas: 291249)
+[PASS] test_validator_allFourChains() (gas: 2198079)
+Logs:
+  OP Mainnet : 
+  Ink        : 
+  Soneium    : SCKDG-SHAPE,SCKDG-10
+  Unichain   : 
+Suite result: ok. 29 passed; 0 failed; 0 skipped; finished in 1.89s (3.24s CPU time)
+Ran 1 test suite in 1.90s (1.89s CPU time): 29 tests passed, 0 failed, 0 skipped (29 total tests)

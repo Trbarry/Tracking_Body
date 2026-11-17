@@ -1,0 +1,271 @@
+{
+  "transaction": {
+    "hash": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+    "blockNumber": 26430859,
+    "transactionIndex": 358,
+    "from": "0xe10a25d4ec17a94ca455f3cda84137189843b4f2",
+    "to": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "value": 0,
+    "status": 1,
+    "gasUsed": 6534939,
+    "logCount": 307
+  },
+  "safeExecTransaction": {
+    "selector": "0x6a761202",
+    "signature": "execTransaction(address,uint256,bytes,uint8,uint256,uint256,uint256,address,address,bytes)",
+    "to": "0x93dc480940585D9961bfcEab58124fFD3d60f76a",
+    "value": 0,
+    "operation": 1,
+    "operationName": "DELEGATECALL",
+    "safeTxGas": 0,
+    "baseGas": 0,
+    "gasPrice": 0,
+    "gasToken": "0x0000000000000000000000000000000000000000",
+    "refundReceiver": "0x0000000000000000000000000000000000000000",
+    "signatures": "0x000000000000000000000000847b5c174615b1b7fdf770882256e2d3e95b9d92000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000c2819dc788505aac350142a7a707bf9d03e3bd03000000000000000000000000000000000000000000000000000000000000000001"
+  },
+  "aggregate3": {
+    "selector": "0x82ad56cb",
+    "signature": "aggregate3((address,bool,bytes)[])",
+    "callCount": 5,
+    "calls": [
+      {
+        "index": 0,
+        "target": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+        "allowFailure": false,
+        "selector": "0x86fe1c66",
+        "signature": "upgradeSuperchain((address,(string,bytes)[]))",
+        "superchainConfig": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "extraInstructions": []
+      },
+      {
+        "index": 1,
+        "chain": "OP Mainnet",
+        "target": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+        "allowFailure": false,
+        "selector": "0x8a847e2e",
+        "signature": "upgrade((address,(bool,uint256,uint32,bytes)[],(string,bytes)[]))",
+        "systemConfig": "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290",
+        "disputeGameConfigs": [
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 0,
+            "gameArgs": "0x"
+          },
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 1,
+            "gameArgs": "0x"
+          },
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 8,
+            "gameArgs": "0x"
+          },
+          {
+            "enabled": true,
+            "initBondWei": 0,
+            "gameType": 5,
+            "gameArgs": "0x000000000000000000000000c27ba3e0fc01567a5e57ae0c391aa98cecba5be0"
+          },
+          {
+            "enabled": true,
+            "initBondWei": 80000000000000000,
+            "gameType": 9,
+            "gameArgs": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          },
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 10,
+            "gameArgs": "0x"
+          }
+        ],
+        "extraInstructions": [
+          {
+            "key": "overrides.cfg.startingRespectedGameType",
+            "data": "0x0000000000000000000000000000000000000000000000000000000000000009"
+          },
+          {
+            "key": "PermittedProxyDeployment",
+            "data": "0x4554484c6f636b626f78"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "chain": "Ink",
+        "target": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+        "allowFailure": false,
+        "selector": "0x8a847e2e",
+        "signature": "upgrade((address,(bool,uint256,uint32,bytes)[],(string,bytes)[]))",
+        "systemConfig": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+        "disputeGameConfigs": [
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 0,
+            "gameArgs": "0x"
+          },
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 1,
+            "gameArgs": "0x"
+          },
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 8,
+            "gameArgs": "0x"
+          },
+          {
+            "enabled": true,
+            "initBondWei": 0,
+            "gameType": 5,
+            "gameArgs": "0x0000000000000000000000003832bfbef03173e4c49a00ec0dd178817a02d177"
+          },
+          {
+            "enabled": true,
+            "initBondWei": 80000000000000000,
+            "gameType": 9,
+            "gameArgs": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          },
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 10,
+            "gameArgs": "0x"
+          }
+        ],
+        "extraInstructions": [
+          {
+            "key": "overrides.cfg.startingRespectedGameType",
+            "data": "0x0000000000000000000000000000000000000000000000000000000000000009"
+          },
+          {
+            "key": "PermittedProxyDeployment",
+            "data": "0x4554484c6f636b626f78"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "chain": "Soneium",
+        "target": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+        "allowFailure": false,
+        "selector": "0x8a847e2e",
+        "signature": "upgrade((address,(bool,uint256,uint32,bytes)[],(string,bytes)[]))",
+        "systemConfig": "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+        "disputeGameConfigs": [
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 0,
+            "gameArgs": "0x"
+          },
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 1,
+            "gameArgs": "0x"
+          },
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 8,
+            "gameArgs": "0x"
+          },
+          {
+            "enabled": true,
+            "initBondWei": 0,
+            "gameType": 5,
+            "gameArgs": "0x000000000000000000000000400c164c4a8ca84385b70eed6eb03ea847c8e1b8"
+          },
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 9,
+            "gameArgs": "0x"
+          },
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 10,
+            "gameArgs": "0x"
+          }
+        ],
+        "extraInstructions": [
+          {
+            "key": "overrides.cfg.startingRespectedGameType",
+            "data": "0x0000000000000000000000000000000000000000000000000000000000000005"
+          },
+          {
+            "key": "PermittedProxyDeployment",
+            "data": "0x4554484c6f636b626f78"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "chain": "Unichain",
+        "target": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+        "allowFailure": false,
+        "selector": "0x8a847e2e",
+        "signature": "upgrade((address,(bool,uint256,uint32,bytes)[],(string,bytes)[]))",
+        "systemConfig": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+        "disputeGameConfigs": [
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 0,
+            "gameArgs": "0x"
+          },
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 1,
+            "gameArgs": "0x"
+          },
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 8,
+            "gameArgs": "0x"
+          },
+          {
+            "enabled": true,
+            "initBondWei": 0,
+            "gameType": 5,
+            "gameArgs": "0x00000000000000000000000086b392ca30ad7453c8d88b56eb5a04fd0e2175b7"
+          },
+          {
+            "enabled": true,
+            "initBondWei": 80000000000000000,
+            "gameType": 9,
+            "gameArgs": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+          },
+          {
+            "enabled": false,
+            "initBondWei": 0,
+            "gameType": 10,
+            "gameArgs": "0x"
+          }
+        ],
+        "extraInstructions": [
+          {
+            "key": "overrides.cfg.startingRespectedGameType",
+            "data": "0x0000000000000000000000000000000000000000000000000000000000000009"
+          },
+          {
+            "key": "PermittedProxyDeployment",
+            "data": "0x4554484c6f636b626f78"
+          }
+        ]
+      }
+    ]
+  }
+}

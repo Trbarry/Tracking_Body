@@ -1,0 +1,1369 @@
+{
+  "blocks": {
+    "pre": 26430858,
+    "post": 26430859,
+    "later": 26433900
+  },
+  "proxies": [
+    {
+      "chain": "Superchain",
+      "contract": "SuperchainConfig",
+      "proxy": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+      "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x5570b1f2b97B1E35b5C6f9Ee76f6cf02c9917504",
+        "proxy_version": "\"2.4.3\"",
+        "slot0": "0x0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20002",
+        "initialized_version": 2
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xA303a644cfbC0c34f6a9dBEaFdebA4C967EA01e7",
+        "proxy_version": "\"2.5.0\"",
+        "slot0": "0x0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20002",
+        "initialized_version": 2
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xA303a644cfbC0c34f6a9dBEaFdebA4C967EA01e7",
+        "proxy_version": "\"2.5.0\"",
+        "slot0": "0x0000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf20002",
+        "initialized_version": 2
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "OP Mainnet",
+      "contract": "SystemConfig",
+      "proxy": "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290",
+      "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x670b850A235A6fA98cD7a195eB139D0277E471fA",
+        "proxy_version": "\"4.0.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+        "proxy_version": "\"4.3.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+        "proxy_version": "\"4.3.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "OP Mainnet",
+      "contract": "OptimismPortal2",
+      "proxy": "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+      "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x1005217ad392DC64CEf501FA1777A27D42166748",
+        "proxy_version": "\"5.8.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+        "proxy_version": "\"6.1.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+        "proxy_version": "\"6.1.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "OP Mainnet",
+      "contract": "ETHLockbox",
+      "proxy": "0x322b47Ff1FA8D5611F761e3E275C45B71b294D43",
+      "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xb3A24DB07038b51962026329B62E7a965d56A6ad",
+        "proxy_version": "\"1.3.1\"",
+        "slot0": "0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "OP Mainnet",
+      "contract": "L1CrossDomainMessenger",
+      "proxy": "0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1",
+      "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+      "proxy_type": "RESOLVED",
+      "initializer_byte_offset": 20,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x59D497530b00062f40950ba8EaB88868bf7F86f0",
+        "proxy_version": "\"2.11.1\"",
+        "slot0": "0x0000000000000000000000030000000000000000000000000000000000000000",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+        "proxy_version": "\"2.13.0\"",
+        "slot0": "0x0000000000000000000000030000000000000000000000000000000000000000",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+        "proxy_version": "\"2.13.0\"",
+        "slot0": "0x0000000000000000000000030000000000000000000000000000000000000000",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x0000000000000000000000ff0000000000000000000000000000000000000000",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "OP Mainnet",
+      "contract": "L1StandardBridge",
+      "proxy": "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
+      "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+      "proxy_type": "CHUGSPLASH",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+        "proxy_version": "\"2.8.2\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+        "proxy_version": "\"2.8.2\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+        "proxy_version": "\"2.8.2\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "OP Mainnet",
+      "contract": "L1ERC721Bridge",
+      "proxy": "0x5a7749f83b81B301cAb5f48EB8516B986DAef23D",
+      "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+        "proxy_version": "\"2.9.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+        "proxy_version": "\"2.9.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+        "proxy_version": "\"2.9.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "OP Mainnet",
+      "contract": "OptimismMintableERC20Factory",
+      "proxy": "0x75505a97BD334E7BD3C476893285569C4136Fa0F",
+      "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+        "proxy_version": "\"1.11.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+        "proxy_version": "\"1.11.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+        "proxy_version": "\"1.11.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "OP Mainnet",
+      "contract": "DisputeGameFactory",
+      "proxy": "0xe5965Ab5962eDc7477C8520243A95517CD252fA9",
+      "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+        "proxy_version": "\"1.6.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+        "proxy_version": "\"1.6.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+        "proxy_version": "\"1.6.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "OP Mainnet",
+      "contract": "DelayedWETH",
+      "proxy": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+      "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xE440CC08A71694C8229323803F59024E3144630e",
+        "proxy_version": "\"1.5.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "OP Mainnet",
+      "contract": "AnchorStateRegistry",
+      "proxy": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+      "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x8F40Cc98D694AB986F026C5383A181FCc9B6B281",
+        "proxy_version": "\"3.9.0\"",
+        "slot0": "0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+        "proxy_version": "\"4.0.0\"",
+        "slot0": "0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+        "proxy_version": "\"4.0.0\"",
+        "slot0": "0x00000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb2900001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Ink",
+      "contract": "SystemConfig",
+      "proxy": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+      "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x670b850A235A6fA98cD7a195eB139D0277E471fA",
+        "proxy_version": "\"4.0.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+        "proxy_version": "\"4.3.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+        "proxy_version": "\"4.3.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Ink",
+      "contract": "OptimismPortal2",
+      "proxy": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+      "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x1005217ad392DC64CEf501FA1777A27D42166748",
+        "proxy_version": "\"5.8.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+        "proxy_version": "\"6.1.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+        "proxy_version": "\"6.1.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Ink",
+      "contract": "ETHLockbox",
+      "proxy": "0xbd4AbB321138e8Eddc399cE64E66451294325a14",
+      "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xb3A24DB07038b51962026329B62E7a965d56A6ad",
+        "proxy_version": "\"1.3.1\"",
+        "slot0": "0x0000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x0000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x0000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Ink",
+      "contract": "L1CrossDomainMessenger",
+      "proxy": "0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f",
+      "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+      "proxy_type": "RESOLVED",
+      "initializer_byte_offset": 20,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x59D497530b00062f40950ba8EaB88868bf7F86f0",
+        "proxy_version": "\"2.11.1\"",
+        "slot0": "0x0000000000000000000000030000000000000000000000000000000000000000",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+        "proxy_version": "\"2.13.0\"",
+        "slot0": "0x0000000000000000000000030000000000000000000000000000000000000000",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+        "proxy_version": "\"2.13.0\"",
+        "slot0": "0x0000000000000000000000030000000000000000000000000000000000000000",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x0000000000000000000000ff0000000000000000000000000000000000000000",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Ink",
+      "contract": "L1StandardBridge",
+      "proxy": "0x88FF1e5b602916615391F55854588EFcBB7663f0",
+      "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+      "proxy_type": "CHUGSPLASH",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+        "proxy_version": "\"2.8.2\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+        "proxy_version": "\"2.8.2\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+        "proxy_version": "\"2.8.2\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Ink",
+      "contract": "L1ERC721Bridge",
+      "proxy": "0x661235a238B11191211fa95D4Dd9E423d521E0Be",
+      "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+        "proxy_version": "\"2.9.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+        "proxy_version": "\"2.9.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+        "proxy_version": "\"2.9.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Ink",
+      "contract": "OptimismMintableERC20Factory",
+      "proxy": "0xA8B389A82e088b164cD03230e900980CcED34d29",
+      "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+        "proxy_version": "\"1.11.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+        "proxy_version": "\"1.11.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+        "proxy_version": "\"1.11.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Ink",
+      "contract": "DisputeGameFactory",
+      "proxy": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+      "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+        "proxy_version": "\"1.6.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+        "proxy_version": "\"1.6.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+        "proxy_version": "\"1.6.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Ink",
+      "contract": "DelayedWETH",
+      "proxy": "0x57b4C29DAee99a28E6E86778b499361294c134eA",
+      "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xE440CC08A71694C8229323803F59024E3144630e",
+        "proxy_version": "\"1.5.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Ink",
+      "contract": "AnchorStateRegistry",
+      "proxy": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+      "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x8F40Cc98D694AB986F026C5383A181FCc9B6B281",
+        "proxy_version": "\"3.9.0\"",
+        "slot0": "0x0000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+        "proxy_version": "\"4.0.0\"",
+        "slot0": "0x0000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+        "proxy_version": "\"4.0.0\"",
+        "slot0": "0x0000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Soneium",
+      "contract": "SystemConfig",
+      "proxy": "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+      "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x670b850A235A6fA98cD7a195eB139D0277E471fA",
+        "proxy_version": "\"4.0.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+        "proxy_version": "\"4.3.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+        "proxy_version": "\"4.3.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Soneium",
+      "contract": "OptimismPortal2",
+      "proxy": "0x88e529A6ccd302c948689Cd5156C83D4614FAE92",
+      "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x1005217ad392DC64CEf501FA1777A27D42166748",
+        "proxy_version": "\"5.8.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+        "proxy_version": "\"6.1.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+        "proxy_version": "\"6.1.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Soneium",
+      "contract": "ETHLockbox",
+      "proxy": "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31",
+      "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xb3A24DB07038b51962026329B62E7a965d56A6ad",
+        "proxy_version": "\"1.3.1\"",
+        "slot0": "0x000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Soneium",
+      "contract": "L1CrossDomainMessenger",
+      "proxy": "0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f",
+      "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+      "proxy_type": "RESOLVED",
+      "initializer_byte_offset": 20,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x59D497530b00062f40950ba8EaB88868bf7F86f0",
+        "proxy_version": "\"2.11.1\"",
+        "slot0": "0x0000000000000000000000030000000000000000000000000000000000000000",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+        "proxy_version": "\"2.13.0\"",
+        "slot0": "0x0000000000000000000000030000000000000000000000000000000000000000",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+        "proxy_version": "\"2.13.0\"",
+        "slot0": "0x0000000000000000000000030000000000000000000000000000000000000000",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x0000000000000000000000ff0000000000000000000000000000000000000000",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Soneium",
+      "contract": "L1StandardBridge",
+      "proxy": "0xeb9bf100225c214Efc3E7C651ebbaDcF85177607",
+      "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+      "proxy_type": "CHUGSPLASH",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+        "proxy_version": "\"2.8.2\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+        "proxy_version": "\"2.8.2\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+        "proxy_version": "\"2.8.2\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Soneium",
+      "contract": "L1ERC721Bridge",
+      "proxy": "0x5933e323bE8896DfaCd1cD671442F27dAA10a053",
+      "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+        "proxy_version": "\"2.9.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+        "proxy_version": "\"2.9.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+        "proxy_version": "\"2.9.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Soneium",
+      "contract": "OptimismMintableERC20Factory",
+      "proxy": "0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F",
+      "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+        "proxy_version": "\"1.11.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+        "proxy_version": "\"1.11.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+        "proxy_version": "\"1.11.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Soneium",
+      "contract": "DisputeGameFactory",
+      "proxy": "0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0",
+      "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+        "proxy_version": "\"1.6.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+        "proxy_version": "\"1.6.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+        "proxy_version": "\"1.6.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Soneium",
+      "contract": "DelayedWETH",
+      "proxy": "0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47",
+      "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xE440CC08A71694C8229323803F59024E3144630e",
+        "proxy_version": "\"1.5.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Soneium",
+      "contract": "AnchorStateRegistry",
+      "proxy": "0x4890928941e62e273dA359374b105F803329F473",
+      "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x8F40Cc98D694AB986F026C5383A181FCc9B6B281",
+        "proxy_version": "\"3.9.0\"",
+        "slot0": "0x000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+        "proxy_version": "\"4.0.0\"",
+        "slot0": "0x000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+        "proxy_version": "\"4.0.0\"",
+        "slot0": "0x000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Unichain",
+      "contract": "SystemConfig",
+      "proxy": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+      "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x670b850A235A6fA98cD7a195eB139D0277E471fA",
+        "proxy_version": "\"4.0.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+        "proxy_version": "\"4.3.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+        "proxy_version": "\"4.3.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Unichain",
+      "contract": "OptimismPortal2",
+      "proxy": "0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2",
+      "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x1005217ad392DC64CEf501FA1777A27D42166748",
+        "proxy_version": "\"5.8.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+        "proxy_version": "\"6.1.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+        "proxy_version": "\"6.1.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Unichain",
+      "contract": "ETHLockbox",
+      "proxy": "0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5",
+      "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xb3A24DB07038b51962026329B62E7a965d56A6ad",
+        "proxy_version": "\"1.3.1\"",
+        "slot0": "0x00000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda60001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x00000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda60001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x00000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda60001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Unichain",
+      "contract": "L1CrossDomainMessenger",
+      "proxy": "0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6",
+      "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+      "proxy_type": "RESOLVED",
+      "initializer_byte_offset": 20,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x59D497530b00062f40950ba8EaB88868bf7F86f0",
+        "proxy_version": "\"2.11.1\"",
+        "slot0": "0x0000000000000000000000030000000000000000000000000000000000000000",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+        "proxy_version": "\"2.13.0\"",
+        "slot0": "0x0000000000000000000000030000000000000000000000000000000000000000",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+        "proxy_version": "\"2.13.0\"",
+        "slot0": "0x0000000000000000000000030000000000000000000000000000000000000000",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x0000000000000000000000ff0000000000000000000000000000000000000000",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Unichain",
+      "contract": "L1StandardBridge",
+      "proxy": "0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA",
+      "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+      "proxy_type": "CHUGSPLASH",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+        "proxy_version": "\"2.8.2\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+        "proxy_version": "\"2.8.2\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+        "proxy_version": "\"2.8.2\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Unichain",
+      "contract": "L1ERC721Bridge",
+      "proxy": "0xD04D0D87E0bd4D2E50286760a3EF323FeA6849Cf",
+      "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+        "proxy_version": "\"2.9.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+        "proxy_version": "\"2.9.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+        "proxy_version": "\"2.9.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+        "initialized_version": 3
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Unichain",
+      "contract": "OptimismMintableERC20Factory",
+      "proxy": "0xA2B597EaeAcb6F627e088cbEaD319e934ED5edad",
+      "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+        "proxy_version": "\"1.11.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+        "proxy_version": "\"1.11.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+        "proxy_version": "\"1.11.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Unichain",
+      "contract": "DisputeGameFactory",
+      "proxy": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+      "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+        "proxy_version": "\"1.6.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+        "proxy_version": "\"1.6.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+        "proxy_version": "\"1.6.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": false,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Unichain",
+      "contract": "DelayedWETH",
+      "proxy": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+      "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0xE440CC08A71694C8229323803F59024E3144630e",
+        "proxy_version": "\"1.5.1\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+        "proxy_version": "\"2.0.0\"",
+        "slot0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    },
+    {
+      "chain": "Unichain",
+      "contract": "AnchorStateRegistry",
+      "proxy": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+      "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+      "proxy_type": "ERC1967",
+      "initializer_byte_offset": 0,
+      "pre": {
+        "block": 26430858,
+        "implementation": "0x8F40Cc98D694AB986F026C5383A181FCc9B6B281",
+        "proxy_version": "\"3.9.0\"",
+        "slot0": "0x00000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda60001",
+        "initialized_version": 1
+      },
+      "post": {
+        "block": 26430859,
+        "implementation": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+        "proxy_version": "\"4.0.0\"",
+        "slot0": "0x00000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda60001",
+        "initialized_version": 1
+      },
+      "later": {
+        "block": 26433900,
+        "implementation": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+        "proxy_version": "\"4.0.0\"",
+        "slot0": "0x00000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda60001",
+        "initialized_version": 1
+      },
+      "post_implementation_slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "post_implementation_initialized_version": 255,
+      "implementation_changed": true,
+      "stable_to_later": true
+    }
+  ],
+  "summary": {
+    "count": 41,
+    "implementation_changes": 25,
+    "initializer_version_changes": [],
+    "unlocked_post_implementations": [],
+    "not_stable_to_later": []
+  }
+}

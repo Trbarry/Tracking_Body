@@ -294,3 +294,15 @@ LATER POST BLOCK   = 26433900               -> rpc alias `l1`     http://127.0.0
 - Per the scope lane, DisputeGameFactory, L1StandardBridge, L1ERC721Bridge, OptimismMintableERC20Factory
   and both registered game implementations are the SAME deployed implementation contracts as before
   U21: a v8 -> v9 source diff in those files may not be live. Always confirm against deployed bytecode.
+
+## 11. Addendum 4 (orchestrator) — RPC failover proxy
+
+The shared forks were hitting HTTP 429 from their single archive upstream. They now sit behind a
+local READ-ONLY failover proxy that rotates over several public archive endpoints and refuses
+`eth_sendRawTransaction`-style methods:
+
+- L1 archive (any block): `http://127.0.0.1:7545`  — OP Mainnet archive: `http://127.0.0.1:7546`
+- Shared forks unchanged: `:8545` (26433900), `:8546` (26430858), `:8547` (26430859), `:9545` (OP 159654093).
+
+If you need a private anvil or a different block, fork from `http://127.0.0.1:7545` / `:7546`
+(or from a shared fork), never directly from a single public endpoint.

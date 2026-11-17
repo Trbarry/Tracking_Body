@@ -6,6 +6,10 @@ RPC = {"pre": "http://127.0.0.1:8546", "n": "http://127.0.0.1:8547", "post": "ht
 TAG = {"pre": "op-v8.0.0", "n": "op-v9.0.0", "post": "op-v9.0.0"}
 which, out = sys.argv[1], sys.argv[2]
 rpc = RPC[which]
+PIN = {"pre": 26430858, "n": 26430859, "post": 26433900}[which]
+ARCHIVE = "https://eth.drpc.org"
+PIN_HEX = hex(PIN)
+import time
 SNAP = f"/home/user/ethereum-optimism/{TAG[which]}/packages/contracts-bedrock/snapshots/storageLayout/"
 
 def batch(calls):
@@ -25,15 +29,17 @@ def batch(calls):
     for i in range(len(calls)):
         v = res[i]
         tries = 0
-        while isinstance(v, dict) and tries < 20:
+        while isinstance(v, dict) and tries < 12:
             tries += 1
-            import time; time.sleep(min(25, 3 * tries))
-            body = json.dumps({"jsonrpc": "2.0", "id": 1, "method": calls[i][0], "params": calls[i][1]}).encode()
+            # fall back to the archive upstream directly, pinned to this fork's block (passive read)
+            params = [PIN_HEX if x == "latest" else x for x in calls[i][1]]
+            body = json.dumps({"jsonrpc": "2.0", "id": 1, "method": calls[i][0], "params": params}).encode()
             try:
-                x = json.loads(urllib.request.urlopen(urllib.request.Request(rpc, data=body, headers={"Content-Type": "application/json"}), timeout=180).read())
+                x = json.loads(urllib.request.urlopen(urllib.request.Request(ARCHIVE, data=body, headers={"Content-Type": "application/json", "User-Agent": "research-client"}), timeout=120).read())
                 v = x.get("result", {"error": x.get("error")})
             except Exception as e:
                 v = {"error": str(e)}
+            time.sleep(0.4 if not isinstance(v, dict) else min(20, 2 * tries))
         if isinstance(v, dict): raise RuntimeError("rpc failed for %r: %r" % (calls[i], v))
         out_.append(v)
     return out_
@@ -119,7 +125,14 @@ def cast_call(to, s):
     parts = s.split(" ")
     try:
         o = subprocess.run(["cast", "call", to, *parts, "--rpc-url", rpc], capture_output=True, text=True, timeout=120)
-        return o.stdout.strip() if o.returncode == 0 else "REVERT: " + o.stderr.strip().splitlines()[-1][:200]
+        if o.returncode == 0: return o.stdout.strip()
+        if "429" in o.stderr or "failed to get" in o.stderr or "Fork Error" in o.stderr:
+            for t in range(8):
+                time.sleep(1 + 2 * t)
+                o = subprocess.run(["cast", "call", to, *parts, "--rpc-url", ARCHIVE, "--block", str(PIN)], capture_output=True, text=True, timeout=120)
+                if o.returncode == 0: return o.stdout.strip()
+                if "429" not in o.stderr and "rate limit" not in o.stderr.lower(): break
+        return "REVERT: " + o.stderr.strip().splitlines()[-1][:200]
     except Exception as e:
         return "ERR: " + str(e)[:100]
 
@@ -134,7 +147,7 @@ def decode(entry, raw):
     if t.startswith("bytes"): return "0x" + ("%x" % val).rjust(2*n, "0")
     return val
 
-result = {"_meta": {"rpc": rpc, "which": which, "layoutTag": TAG[which], "block": int(batch([("eth_blockNumber", [])])[0], 16)}}
+result = {"_meta": {"rpc": rpc, "which": which, "layoutTag": TAG[which], "block": int(batch([("eth_blockNumber", [])])[0], 16), "pinnedBlock": PIN}}
 for chain, cts in CHAINS.items():
     result[chain] = {}
     for name, addr in cts.items():

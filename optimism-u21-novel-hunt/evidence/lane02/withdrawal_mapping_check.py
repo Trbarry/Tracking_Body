@@ -12,38 +12,24 @@ logs = json.load(open("evidence/lane02/portal_withdrawal_logs.json"))
 def batch(calls):
     out = [None] * len(calls)
     todo = list(range(len(calls)))
-    for attempt in range(12):
-        if not todo: break
-        chunk = todo[:40]
+    fails = 0
+    while todo:
+        chunk = todo[:3]
         body = json.dumps([{"jsonrpc": "2.0", "id": i, "method": calls[i][0], "params": calls[i][1]} for i in chunk]).encode()
         try:
             r = json.loads(urllib.request.urlopen(urllib.request.Request(U, data=body, headers={"Content-Type": "application/json", "User-Agent": "research-client"}), timeout=120).read())
             if isinstance(r, dict): raise RuntimeError(str(r)[:200])
+            progressed = False
             for x in r:
-                if "result" in x: out[x["id"]] = x["result"]; todo.remove(x["id"])
+                if "result" in x: out[x["id"]] = x["result"]; todo.remove(x["id"]); progressed = True
                 elif "error" in x and ("revert" in json.dumps(x["error"]).lower()):
-                    out[x["id"]] = {"revert": x["error"].get("data") or x["error"].get("message")}; todo.remove(x["id"])
+                    out[x["id"]] = {"revert": x["error"].get("data") or x["error"].get("message")}; todo.remove(x["id"]); progressed = True
+            if not progressed: raise RuntimeError(str(r)[:200])
+            fails = 0; time.sleep(0.35)
         except Exception as e:
-            print("retry", attempt, str(e)[:120], file=sys.stderr)
-        time.sleep(2 + 3 * attempt if todo else 0.5)
-        if todo and attempt < 11: continue
-    while todo:  # continue remaining chunks
-        chunk = todo[:40]
-        body = json.dumps([{"jsonrpc": "2.0", "id": i, "method": calls[i][0], "params": calls[i][1]} for i in chunk]).encode()
-        ok = False
-        for attempt in range(12):
-            try:
-                r = json.loads(urllib.request.urlopen(urllib.request.Request(U, data=body, headers={"Content-Type": "application/json", "User-Agent": "research-client"}), timeout=120).read())
-                if isinstance(r, dict): raise RuntimeError(str(r)[:200])
-                for x in r:
-                    if "result" in x: out[x["id"]] = x["result"]; todo.remove(x["id"])
-                    elif "error" in x and ("revert" in json.dumps(x["error"]).lower()):
-                        out[x["id"]] = {"revert": x["error"].get("data") or x["error"].get("message")}; todo.remove(x["id"])
-                ok = True; break
-            except Exception as e:
-                print("retry", attempt, str(e)[:120], file=sys.stderr); time.sleep(3 + 3 * attempt)
-        if not ok: raise RuntimeError("batch failed")
-        time.sleep(1.0)
+            fails += 1
+            if fails > 25: raise
+            print("retry", fails, str(e)[:120], file=sys.stderr); time.sleep(min(30, 2 * fails))
     return out
 def keccak(h): return subprocess.check_output(["cast", "keccak", h]).decode().strip()
 def pad(x): return x.lower().replace("0x", "").rjust(64, "0")
