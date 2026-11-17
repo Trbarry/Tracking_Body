@@ -32,9 +32,9 @@ def fail(message: str) -> None:
 
 
 records = json.loads((OUT / "PRIMITIVES.json").read_text())
-if len(records) != 84:
-    fail(f"expected 84 conservatively deduplicated records, got {len(records)}")
-if [r["id"] for r in records] != [f"A-{i:03d}" for i in range(1, 85)]:
+if len(records) != 89:
+    fail(f"expected 89 conservatively deduplicated records, got {len(records)}")
+if [r["id"] for r in records] != [f"A-{i:03d}" for i in range(1, 90)]:
     fail("A identifiers are not unique/sequential")
 for record in records:
     if set(record) != REQUIRED_PRIMITIVE:

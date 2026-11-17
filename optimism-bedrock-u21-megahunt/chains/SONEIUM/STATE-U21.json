@@ -1,0 +1,700 @@
+{
+ "chain": "SONEIUM",
+ "pinnedBlock": 26433900,
+ "sources": [
+  "PASS A POST_UPGRADE_STATE_26433900.json (getters, raw slots)",
+  "F5 census / stage2 / root verification"
+ ],
+ "contracts": {
+  "SystemConfig": {
+   "proxy": "0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3",
+   "implementation": "0xade27248542c0f3e89b49e4eb76155e267f14377",
+   "version": "\"4.3.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"4.3.0\"",
+    "owner()(address)": "0x509182eC226b3B71D36A3255A80EF0b1A9D43033",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "overhead()(uint256)": "0",
+    "scalar()(uint256)": "452312848583266388373324160190187140051835877600158453279137802119848928776 [4.523e74]",
+    "batcherHash()(bytes32)": "0x0000000000000000000000006776be80dbada6a02b5f2095cf13734ac303b8d1",
+    "gasLimit()(uint64)": "40000000 [4e7]",
+    "basefeeScalar()(uint32)": "9736",
+    "blobbasefeeScalar()(uint32)": "1540079 [1.54e6]",
+    "eip1559Denominator()(uint32)": "250",
+    "eip1559Elasticity()(uint32)": "10",
+    "operatorFeeScalar()(uint32)": "0",
+    "operatorFeeConstant()(uint64)": "0",
+    "daFootprintGasScalar()(uint16)": "0",
+    "minBaseFee()(uint64)": "12000000 [1.2e7]",
+    "l2ChainId()(uint256)": "1868",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "unsafeBlockSigner()(address)": "0x7c2Bd59ee2a2C7391c9A240132f26071e9546262",
+    "l1CrossDomainMessenger()(address)": "0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f",
+    "l1ERC721Bridge()(address)": "0x5933e323bE8896DfaCd1cD671442F27dAA10a053",
+    "l1StandardBridge()(address)": "0xeb9bf100225c214Efc3E7C651ebbaDcF85177607",
+    "optimismPortal()(address)": "0x88e529A6ccd302c948689Cd5156C83D4614FAE92",
+    "optimismMintableERC20Factory()(address)": "0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F",
+    "delayedWETH()(address)": "0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47",
+    "disputeGameFactory()(address)": "0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0",
+    "lastUsedOPCM()(address)": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+    "lastUsedOPCMVersion()(string)": "\"9.0.3\"",
+    "startBlock()(uint256)": "21314185 [2.131e7]",
+    "paused()(bool)": "false",
+    "guardian()(address)": "0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2",
+    "isCustomGasToken()(bool)": "false",
+    "resourceConfig()((uint32,uint8,uint8,uint32,uint32,uint128))": "(20000000 [2e7], 10, 8, 1000000000 [1e9], 1000000 [1e6], 340282366920938463463374607431768211455 [3.402e38])",
+    "minimumGasLimit()(uint64)": "21000000 [2.1e7]",
+    "batchInbox()(address)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+    "isFeatureEnabled(bytes32)(bool) 0x4554485f4c4f434b424f58000000000000000000000000000000000000000000": "true",
+    "isFeatureEnabled(bytes32)(bool) 0x494e5445524f5000000000000000000000000000000000000000000000000000": "false",
+    "isFeatureEnabled(bytes32)(bool) 0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000": "false"
+   }
+  },
+  "OptimismPortal2": {
+   "proxy": "0x88e529A6ccd302c948689Cd5156C83D4614FAE92",
+   "implementation": "0xb20b23af6071405c37ddda0c0640e8ebb7899645",
+   "version": "\"6.1.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"6.1.0\"",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "l2Sender()(address)": "0x000000000000000000000000000000000000dEaD",
+    "systemConfig()(address)": "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+    "anchorStateRegistry()(address)": "0x4890928941e62e273dA359374b105F803329F473",
+    "ethLockbox()(address)": "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31",
+    "disputeGameFactory()(address)": "0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "guardian()(address)": "0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2",
+    "paused()(bool)": "false",
+    "proofMaturityDelaySeconds()(uint256)": "604800 [6.048e5]",
+    "disputeGameFinalityDelaySeconds()(uint256)": "302400 [3.024e5]",
+    "respectedGameType()(uint32)": "5",
+    "respectedGameTypeUpdatedAt()(uint64)": "1753380095 [1.753e9]",
+    "params()(uint128,uint64,uint64)": "1000000000 [1e9]\n514422 [5.144e5]\n26433755 [2.643e7]"
+   }
+  },
+  "ETHLockbox": {
+   "proxy": "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31",
+   "implementation": "0xdf75e6b07e98873e36ba5c05508f80c1454e0afe",
+   "version": "\"2.0.0\"",
+   "ethBalanceEther": 2195.5601526061064,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.0.0\"",
+    "initVersion()(uint8)": "1",
+    "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "systemConfig()(address)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "guardian()(address)": "0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2",
+    "paused()(bool)": "false",
+    "authorizedPortals(address)(bool) 0x88e529A6ccd302c948689Cd5156C83D4614FAE92": "true",
+    "authorizedLockboxes(address)(bool) 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31": "false"
+   }
+  },
+  "AnchorStateRegistry": {
+   "proxy": "0x4890928941e62e273dA359374b105F803329F473",
+   "implementation": "0x2b27299c577d4720100e2735b652444dcea652d0",
+   "version": "\"4.0.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"4.0.0\"",
+    "initVersion()(uint8)": "1",
+    "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "systemConfig()(address)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+    "ethLockbox()(address)": "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "paused()(bool)": "false",
+    "disputeGameFactory()(address)": "0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0",
+    "anchorGame()(address)": "0x5dFB50E0E35005a0d302799bAaFf6E99134eC454",
+    "getStartingAnchorRoot()((bytes32,uint256))": "(0x08a53686fd0b1671ff7b89c3a994582503f15f7be00f0f2e7c9f0d3b187ab124, 1788848425 [1.788e9])",
+    "getAnchorRoot()(bytes32,uint256)": "0x615306abb7962b8ec4384bf6c5df146783da03b9248467af05e36dfb02b3b271\n1794596679 [1.794e9]",
+    "respectedGameType()(uint32)": "5",
+    "retirementTimestamp()(uint64)": "1753380095 [1.753e9]",
+    "disputeGameFinalityDelaySeconds()(uint256)": "302400 [3.024e5]"
+   }
+  },
+  "DisputeGameFactory": {
+   "proxy": "0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0",
+   "implementation": "0x72b971717e088b59f26d4236be222adb6acd393b",
+   "version": "\"1.6.1\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"1.6.1\"",
+    "owner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "initVersion()(uint8)": "1",
+    "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "gameCount()(uint256)": "8537",
+    "gameImpls(uint32)(address) 0": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 1": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 2": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 3": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 4": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 5": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+    "gameImpls(uint32)(address) 6": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 7": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 8": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 9": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 10": "0x0000000000000000000000000000000000000000",
+    "initBonds(uint32)(uint256) 0": "0",
+    "initBonds(uint32)(uint256) 1": "0",
+    "initBonds(uint32)(uint256) 2": "0",
+    "initBonds(uint32)(uint256) 3": "0",
+    "initBonds(uint32)(uint256) 4": "0",
+    "initBonds(uint32)(uint256) 5": "0",
+    "initBonds(uint32)(uint256) 6": "0",
+    "initBonds(uint32)(uint256) 7": "0",
+    "initBonds(uint32)(uint256) 8": "0",
+    "initBonds(uint32)(uint256) 9": "0",
+    "initBonds(uint32)(uint256) 10": "0",
+    "gameArgs(uint32)(bytes) 0": "0x",
+    "gameArgs(uint32)(bytes) 1": "0x",
+    "gameArgs(uint32)(bytes) 2": "0x",
+    "gameArgs(uint32)(bytes) 3": "0x",
+    "gameArgs(uint32)(bytes) 4": "0x",
+    "gameArgs(uint32)(bytes) 5": "0x4890928941e62e273da359374b105f803329f473400c164c4a8ca84385b70eed6eb03ea847c8e1b8",
+    "gameArgs(uint32)(bytes) 6": "0x",
+    "gameArgs(uint32)(bytes) 7": "0x",
+    "gameArgs(uint32)(bytes) 8": "0x",
+    "gameArgs(uint32)(bytes) 9": "0x",
+    "gameArgs(uint32)(bytes) 10": "0x"
+   }
+  },
+  "DelayedWETH": {
+   "proxy": "0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47",
+   "implementation": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+   "version": "\"2.0.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.0.0\"",
+    "initVersion()(uint8)": "1",
+    "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "systemConfig()(address)": "REVERT: - ABI decoding failed: buffer overrun while deserializing",
+    "ethLockbox()(address)": "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31",
+    "config()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "delay()(uint256)": "302400 [3.024e5]",
+    "totalSupply()(uint256)": "0"
+   }
+  },
+  "L1CrossDomainMessenger": {
+   "proxy": "0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f",
+   "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+   "version": "\"2.13.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.13.0\"",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "portal()(address)": "0x88e529A6ccd302c948689Cd5156C83D4614FAE92",
+    "PORTAL()(address)": "0x88e529A6ccd302c948689Cd5156C83D4614FAE92",
+    "systemConfig()(address)": "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "otherMessenger()(address)": "0x4200000000000000000000000000000000000007",
+    "OTHER_MESSENGER()(address)": "0x4200000000000000000000000000000000000007",
+    "messageNonce()(uint256)": "1766847064778384329583297500742918515827483896875618958121606201292698661 [1.766e72]",
+    "paused()(bool)": "false"
+   }
+  },
+  "L1StandardBridge": {
+   "proxy": "0xeb9bf100225c214Efc3E7C651ebbaDcF85177607",
+   "implementation": "0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891",
+   "version": "\"2.8.2\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.8.2\"",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "messenger()(address)": "0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f",
+    "otherBridge()(address)": "0x4200000000000000000000000000000000000010",
+    "systemConfig()(address)": "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "paused()(bool)": "false"
+   }
+  },
+  "L1ERC721Bridge": {
+   "proxy": "0x5933e323bE8896DfaCd1cD671442F27dAA10a053",
+   "implementation": "0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e",
+   "version": "\"2.9.1\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.9.1\"",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "messenger()(address)": "0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f",
+    "otherBridge()(address)": "0x4200000000000000000000000000000000000014",
+    "systemConfig()(address)": "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "paused()(bool)": "false"
+   }
+  },
+  "OptimismMintableERC20Factory": {
+   "proxy": "0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F",
+   "implementation": "0xaabea75da509fa518fd8a91eae4be5813b829b12",
+   "version": "\"1.11.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"1.11.0\"",
+    "initVersion()(uint8)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+    "bridge()(address)": "0xeb9bf100225c214Efc3E7C651ebbaDcF85177607",
+    "BRIDGE()(address)": "0xeb9bf100225c214Efc3E7C651ebbaDcF85177607"
+   }
+  },
+  "ProxyAdmin": {
+   "proxy": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+   "implementation": "0x0000000000000000000000000000000000000000",
+   "version": null,
+   "ethBalanceEther": 0.0,
+   "initializedVersion": null,
+   "getters": {
+    "owner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "addressManager()(address)": "0xB24bFEeCE1B3b7A44559F4Cbc21BeD312b130b70",
+    "isUpgrading()(bool)": "false",
+    "proxyType(address)(uint8) 0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3": "0",
+    "proxyType(address)(uint8) 0x88e529A6ccd302c948689Cd5156C83D4614FAE92": "0",
+    "proxyType(address)(uint8) 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31": "0",
+    "proxyType(address)(uint8) 0x4890928941e62e273dA359374b105F803329F473": "0",
+    "proxyType(address)(uint8) 0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0": "0",
+    "proxyType(address)(uint8) 0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47": "0",
+    "proxyType(address)(uint8) 0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f": "2",
+    "proxyType(address)(uint8) 0xeb9bf100225c214Efc3E7C651ebbaDcF85177607": "1",
+    "proxyType(address)(uint8) 0x5933e323bE8896DfaCd1cD671442F27dAA10a053": "0",
+    "proxyType(address)(uint8) 0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F": "0",
+    "getProxyImplementation(address)(address) 0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+    "getProxyImplementation(address)(address) 0x88e529A6ccd302c948689Cd5156C83D4614FAE92": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+    "getProxyImplementation(address)(address) 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+    "getProxyImplementation(address)(address) 0x4890928941e62e273dA359374b105F803329F473": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+    "getProxyImplementation(address)(address) 0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+    "getProxyImplementation(address)(address) 0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+    "getProxyImplementation(address)(address) 0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+    "getProxyImplementation(address)(address) 0xeb9bf100225c214Efc3E7C651ebbaDcF85177607": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+    "getProxyImplementation(address)(address) 0x5933e323bE8896DfaCd1cD671442F27dAA10a053": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+    "getProxyImplementation(address)(address) 0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+    "getProxyAdmin(address)(address) 0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "getProxyAdmin(address)(address) 0x88e529A6ccd302c948689Cd5156C83D4614FAE92": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "getProxyAdmin(address)(address) 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "getProxyAdmin(address)(address) 0x4890928941e62e273dA359374b105F803329F473": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "getProxyAdmin(address)(address) 0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "getProxyAdmin(address)(address) 0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "getProxyAdmin(address)(address) 0xeb9bf100225c214Efc3E7C651ebbaDcF85177607": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "getProxyAdmin(address)(address) 0x5933e323bE8896DfaCd1cD671442F27dAA10a053": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "getProxyAdmin(address)(address) 0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+    "implementationName(address)(string) 0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f": "\"OVM_L1CrossDomainMessenger\""
+   }
+  }
+ },
+ "legacySlots": {
+  "OptimismPortal2.slot53 (legacy paused byte | superchainConfig)": "0x000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c00",
+  "OptimismPortal2.slot54 (legacy l2Oracle)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "OptimismPortal2.slot56 (legacy disputeGameFactory)": "0x000000000000000000000000512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+  "OptimismPortal2.slot59 (legacy respectedGameType | respectedGameTypeUpdatedAt)": "0x000000000000000000000000000000000000000000000000674d899f00000001",
+  "OptimismPortal2.slot63 (ethLockbox | legacy superRootsActive byte)": "0x00000000000000000000000067b4de6ffa66ef201ea6099a89ca397d56622e31",
+  "L1CrossDomainMessenger.slot51 (legacy OVM owner)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "L1CrossDomainMessenger.slot151 (legacy reentrancy status)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "L1CrossDomainMessenger.slot251 (legacy superchainConfig)": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+  "L1StandardBridge.slot1 (legacy l2TokenBridge)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "L1StandardBridge.slot50 (legacy superchainConfig)": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+  "SystemConfig.slot106 (eip1559Denominator | eip1559Elasticity | operatorFee*)": "0x0000000000000000000000000000000000000000000000000000000a000000fa",
+  "SystemConfig.slot108 (superchainConfig | minBaseFee)": "0x000000000000000000b71b0095703e0982140d16f8eba6d158fccede42f04a4c",
+  "DelayedWETH.slot4 (legacy config/systemConfig spacer)": "0x0000000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c3"
+ },
+ "disputeInfra": {
+  "anchorStateRegistries": [
+   {
+    "address": "0x61f89a381e0be13bd8ab356cf4b7301bc97d7522",
+    "bornBlock": 21314185,
+    "bornTime": "2024-12-02 10:19:11",
+    "version": "2.0.1-beta.3",
+    "games": 1486,
+    "firstGame": 0,
+    "lastGame": 1485,
+    "isCurrent": false,
+    "ethBalance": 0,
+    "respectedGameType": null,
+    "retirementTimestamp": null,
+    "anchorGame": null,
+    "paused": null,
+    "portal": null,
+    "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "disputeGameFactory": "0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+    "implSlot": "0x2749920b02cf0911264ede2bd455860b46d042ea",
+    "adminSlot": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a"
+   },
+   {
+    "address": "0x190b6ecee5a2ddf39669288b9b8daea4641ae8b1",
+    "bornBlock": 22182531,
+    "bornTime": "2025-04-02 16:50:23",
+    "version": "2.2.2",
+    "games": 1355,
+    "firstGame": 1486,
+    "lastGame": 2840,
+    "isCurrent": false,
+    "ethBalance": 0,
+    "respectedGameType": 5,
+    "retirementTimestamp": null,
+    "anchorGame": "0x0000000000000000000000000000000000000000",
+    "paused": null,
+    "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92",
+    "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "disputeGameFactory": "0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+    "implSlot": "0x7b465370bb7a333f99edd19599eb7fb1c2d3f8d2",
+    "adminSlot": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a"
+   },
+   {
+    "address": "0x4890928941e62e273da359374b105f803329f473",
+    "bornBlock": 22990670,
+    "bornTime": "2025-07-24 18:01:35",
+    "version": "4.0.0",
+    "games": 5696,
+    "firstGame": 2841,
+    "lastGame": 8536,
+    "isCurrent": true,
+    "ethBalance": 0,
+    "respectedGameType": 5,
+    "retirementTimestamp": 1753380095,
+    "anchorGame": "0x5dfb50e0e35005a0d302799baaff6e99134ec454",
+    "paused": 0,
+    "portal": null,
+    "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "disputeGameFactory": "0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+    "implSlot": "0x2b27299c577d4720100e2735b652444dcea652d0",
+    "adminSlot": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a"
+   }
+  ],
+  "delayedWETH": [
+   {
+    "address": "0x9aea1fd851b63d57ba4fc556b0e0c170126c9eaf",
+    "bornBlock": 21314185,
+    "bornTime": "2024-12-02 10:19:11",
+    "version": "1.3.0",
+    "games": 2841,
+    "firstGame": 0,
+    "lastGame": 2840,
+    "isSystemConfigWeth": false,
+    "ethBalanceWei": 0,
+    "ethBalance": 0.0,
+    "totalSupply": 0,
+    "delay": 302400,
+    "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": null,
+    "proxyAdminOwner": null,
+    "implSlot": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
+    "adminSlot": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "implVersionNow": "1.3.0"
+   },
+   {
+    "address": "0x372dc0b87b790d6e1308cf9e7f73f0f1fcbd3754",
+    "bornBlock": 22990670,
+    "bornTime": "2025-07-24 18:01:35",
+    "version": "1.5.0",
+    "games": 838,
+    "firstGame": 2841,
+    "lastGame": 3678,
+    "isSystemConfigWeth": false,
+    "ethBalanceWei": 0,
+    "ethBalance": 0.0,
+    "totalSupply": 0,
+    "delay": 302400,
+    "owner": null,
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": "0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3",
+    "proxyAdminOwner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "implSlot": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+    "adminSlot": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "implVersionNow": "1.5.0"
+   },
+   {
+    "address": "0x70277624cde90492231eb23309e1251beb18dff5",
+    "bornBlock": 23491328,
+    "bornTime": "2025-10-02 16:35:23",
+    "version": "1.5.0",
+    "games": 3188,
+    "firstGame": 3679,
+    "lastGame": 6866,
+    "isSystemConfigWeth": false,
+    "ethBalanceWei": 0,
+    "ethBalance": 0.0,
+    "totalSupply": 0,
+    "delay": 302400,
+    "owner": null,
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": "0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3",
+    "proxyAdminOwner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "implSlot": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+    "adminSlot": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "implVersionNow": "1.5.0"
+   },
+   {
+    "address": "0x18fbb58c366e21f395ddec7cba0510a2d9116b47",
+    "bornBlock": 25397811,
+    "bornTime": "2026-06-25 23:05:47",
+    "version": "2.0.0",
+    "games": 1088,
+    "firstGame": 6867,
+    "lastGame": 7954,
+    "isSystemConfigWeth": true,
+    "ethBalanceWei": 0,
+    "ethBalance": 0.0,
+    "totalSupply": 0,
+    "delay": 302400,
+    "owner": null,
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": null,
+    "proxyAdminOwner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "implSlot": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+    "adminSlot": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "implVersionNow": "2.0.0"
+   }
+  ]
+ },
+ "custodyAtPin": {
+  "block": 26433900,
+  "time": "2026-11-17 09:34:35",
+  "OptimismPortal_before": 0.0,
+  "OptimismPortal_after": 0.0,
+  "L1CrossDomainMessenger_before": 0.0,
+  "L1CrossDomainMessenger_after": 0.0,
+  "L1StandardBridge_before": 0.0,
+  "L1StandardBridge_after": 0.0,
+  "ETHLockbox_before": 2195.5601526061064,
+  "ETHLockbox_after": 2195.5601526061064
+ },
+ "gameCensus": {
+  "gameCount": 8537,
+  "lineageClasses": [
+   {
+    "type": 1,
+    "gameVersion": "1.3.1-beta.3",
+    "gameASR": "0x61f89a381e0be13bd8ab356cf4b7301bc97d7522",
+    "weth": "0x9aea1fd851b63d57ba4fc556b0e0c170126c9eaf",
+    "absolutePrestate": "0x038512e02c4c3f7bdaec27d00edf55b7155e0905301e1a88083e4e0a6764d54c",
+    "n": 1486,
+    "firstIndex": 0,
+    "lastIndex": 1485,
+    "firstCreated": "2024-12-02 15:41:47",
+    "lastCreated": "2025-04-02 15:19:23",
+    "creators": {
+     "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8": 1486
+    }
+   },
+   {
+    "type": 1,
+    "gameVersion": "1.4.1",
+    "gameASR": "0x190b6ecee5a2ddf39669288b9b8daea4641ae8b1",
+    "weth": "0x9aea1fd851b63d57ba4fc556b0e0c170126c9eaf",
+    "absolutePrestate": "0x039facea52b20c605c05efb0a33560a92de7074218998f75bcdf61e8989cb5d9",
+    "n": 264,
+    "firstIndex": 1486,
+    "lastIndex": 1749,
+    "firstCreated": "2025-04-02 17:19:23",
+    "lastCreated": "2025-04-24 16:07:35",
+    "creators": {
+     "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8": 264
+    }
+   },
+   {
+    "type": 1,
+    "gameVersion": "1.4.1",
+    "gameASR": "0x190b6ecee5a2ddf39669288b9b8daea4641ae8b1",
+    "weth": "0x9aea1fd851b63d57ba4fc556b0e0c170126c9eaf",
+    "absolutePrestate": "0x03ee2917da962ec266b091f4b62121dc9682bb0db534633707325339f99ee405",
+    "n": 1091,
+    "firstIndex": 1750,
+    "lastIndex": 2840,
+    "firstCreated": "2025-04-24 18:07:47",
+    "lastCreated": "2025-07-24 17:39:23",
+    "creators": {
+     "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8": 1091
+    }
+   },
+   {
+    "type": 1,
+    "gameVersion": "1.7.0",
+    "gameASR": "0x4890928941e62e273da359374b105f803329f473",
+    "weth": "0x372dc0b87b790d6e1308cf9e7f73f0f1fcbd3754",
+    "absolutePrestate": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
+    "n": 838,
+    "firstIndex": 2841,
+    "lastIndex": 3678,
+    "firstCreated": "2025-07-24 19:39:35",
+    "lastCreated": "2025-10-02 16:06:23",
+    "creators": {
+     "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8": 838
+    }
+   },
+   {
+    "type": 1,
+    "gameVersion": "1.7.0",
+    "gameASR": "0x4890928941e62e273da359374b105f803329f473",
+    "weth": "0x70277624cde90492231eb23309e1251beb18dff5",
+    "absolutePrestate": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
+    "n": 647,
+    "firstIndex": 3679,
+    "lastIndex": 4325,
+    "firstCreated": "2025-10-02 18:06:35",
+    "lastCreated": "2025-11-25 16:08:47",
+    "creators": {
+     "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8": 647
+    }
+   },
+   {
+    "type": 1,
+    "gameVersion": "1.8.0",
+    "gameASR": "0x4890928941e62e273da359374b105f803329f473",
+    "weth": "0x70277624cde90492231eb23309e1251beb18dff5",
+    "absolutePrestate": "0x03caa1871bb9fe7f9b11217c245c16e4ded33367df5b3ccb2c6d0a847a217d1b",
+    "n": 1006,
+    "firstIndex": 4326,
+    "lastIndex": 5331,
+    "firstCreated": "2025-11-25 18:08:47",
+    "lastCreated": "2026-02-17 18:27:47",
+    "creators": {
+     "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8": 1006
+    }
+   },
+   {
+    "type": 1,
+    "gameVersion": "2.2.0",
+    "gameASR": "0x4890928941e62e273da359374b105f803329f473",
+    "weth": "0x70277624cde90492231eb23309e1251beb18dff5",
+    "absolutePrestate": "0x033c000916b4a88cfffeceddd6cf0f4be3897a89195941e5a7c3f8209b4dbb6e",
+    "n": 1535,
+    "firstIndex": 5332,
+    "lastIndex": 6866,
+    "firstCreated": "2026-02-17 20:27:59",
+    "lastCreated": "2026-06-25 21:08:47",
+    "creators": {
+     "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8": 1535
+    }
+   },
+   {
+    "type": 1,
+    "gameVersion": "2.4.0",
+    "gameASR": "0x4890928941e62e273da359374b105f803329f473",
+    "weth": "0x18fbb58c366e21f395ddec7cba0510a2d9116b47",
+    "absolutePrestate": "0xdead000000000000000000000000000000000000000000000000000000000000",
+    "n": 1088,
+    "firstIndex": 6867,
+    "lastIndex": 7954,
+    "firstCreated": "2026-06-25 23:08:59",
+    "lastCreated": "2026-09-24 15:59:23",
+    "creators": {
+     "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8": 1088
+    }
+   },
+   {
+    "type": 5,
+    "gameVersion": "1.1.0",
+    "gameASR": "0x4890928941e62e273da359374b105f803329f473",
+    "weth": null,
+    "absolutePrestate": null,
+    "n": 582,
+    "firstIndex": 7955,
+    "lastIndex": 8536,
+    "firstCreated": "2026-09-24 16:56:59",
+    "lastCreated": "2026-11-17 06:47:35",
+    "creators": {
+     "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8": 582
+    }
+   }
+  ],
+  "byTypeCreatorStatus": [
+   {
+    "type": 1,
+    "creator": "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8",
+    "status": "DEFENDER_WINS",
+    "claimValid": true,
+    "retired": false,
+    "n": 5114
+   },
+   {
+    "type": 1,
+    "creator": "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8",
+    "status": "DEFENDER_WINS",
+    "claimValid": false,
+    "retired": true,
+    "n": 2841
+   },
+   {
+    "type": 5,
+    "creator": "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8",
+    "status": "DEFENDER_WINS",
+    "claimValid": true,
+    "retired": false,
+    "n": 554
+   },
+   {
+    "type": 5,
+    "creator": "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8",
+    "status": "DEFENDER_WINS",
+    "claimValid": false,
+    "retired": false,
+    "n": 28
+   }
+  ],
+  "blacklisted": [],
+  "nonRetiredWithForeignASR": [],
+  "claimValid": 5668,
+  "retired": 2841,
+  "inProgress": []
+ },
+ "rootVerification": {
+  "method": "output root recomputed from the L2 block header (post-Isthmus withdrawalsRoot); super games: extraData decoded, single-entry check, block = genesis + (timestamp-genesisTime)/blockTime",
+  "table": {
+   "(1, 'DEFENDER_WINS', True, True)": 5114,
+   "(5, 'DEFENDER_WINS', True, True)": 554,
+   "(5, 'DEFENDER_WINS', False, True)": 28
+  },
+  "anomalies": []
+ }
+}

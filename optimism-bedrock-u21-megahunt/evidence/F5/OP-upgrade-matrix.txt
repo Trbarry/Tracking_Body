@@ -1,0 +1,25 @@
+12686756 2021-06-22 0xd19d40f11c L1CrossDomainMessenger=<none>
+12686787 2021-06-22 None L1StandardBridge=<no version(); codeSize 5525>
+12706528 2021-06-26 0x98a05fb521 L1CrossDomainMessenger=<none>
+13596294 2021-11-11 0x2625aa2013 L1CrossDomainMessenger=<none>
+13596781 2021-11-11 0xbabb37235b L1CrossDomainMessenger=<none>
+13596915 2021-11-11 None L1StandardBridge=<no version(); codeSize 6558>
+15677648 2022-10-04 0xe8f632050c L1ERC721Bridge=1.0.0
+17422444 2023-06-06 0x76bceccd7d SystemConfig=1.3.0, L1CrossDomainMessenger=<none>
+17423158 2023-06-06 0xe2ff41f9bd OptimismPortal=1.6.0, L1ERC721Bridge=1.0.0, OptimismMintableERC20Factory=1.1.0, L1CrossDomainMessenger=1.4.0, L1StandardBridge=1.1.0
+19314493 2024-02-26 0x3f7c36a1d6 SystemConfig=1.11.0*, OptimismPortal=2.4.0*, L1ERC721Bridge=2.0.0*, OptimismMintableERC20Factory=1.8.0*, L1CrossDomainMessenger=2.2.0*, L1StandardBridge=2.0.0
+19634866 2024-04-11 0x4758bd6235 SystemConfig=1.12.0*, OptimismPortal=2.5.0*, L1ERC721Bridge=2.1.0*, OptimismMintableERC20Factory=1.9.0*, L1CrossDomainMessenger=2.3.0*, L1StandardBridge=2.1.0
+19884570 2024-05-16 0x2c16c813ff DisputeGameFactory=1.0.0
+20062696 2024-06-10 0xbe810ed6e1 SystemConfig=2.2.0*, OptimismPortal=3.10.0*
+21695024 2025-01-24 0x86da7386a2 SystemConfig=2.3.0*
+22182531 2025-04-02 0x5f3530e593 SystemConfig=2.4.0, OptimismPortal=3.13.0, DisputeGameFactory=1.0.1, L1ERC721Bridge=2.3.1, OptimismMintableERC20Factory=1.10.1, L1CrossDomainMessenger=2.5.0, L1StandardBridge=2.2.2
+22339996 2025-04-24 0xbe44244e35 SystemConfig=2.5.0, OptimismPortal=3.14.0, L1ERC721Bridge=2.4.0, L1CrossDomainMessenger=2.6.0, L1StandardBridge=2.3.0
+22990599 2025-07-24 0x46acdce174 SystemConfig=3.4.0, OptimismPortal=4.6.0, ETHLockbox=1.2.0, AnchorStateRegistry=3.5.0, DisputeGameFactory=1.2.0, L1ERC721Bridge=2.7.0, L1CrossDomainMessenger=2.9.0, L1StandardBridge=2.6.0
+23491328 2025-10-02 0x744cf7d283 SystemConfig=3.7.0, OptimismPortal=5.0.0, AnchorStateRegistry=3.5.0, DisputeGameFactory=1.2.0, L1ERC721Bridge=2.8.0, L1CrossDomainMessenger=2.10.0, L1StandardBridge=2.7.0
+23877377 2025-11-25 0xf556934cb4 SystemConfig=3.11.0, OptimismPortal=5.1.1, DisputeGameFactory=1.3.0, L1ERC721Bridge=2.9.0, OptimismMintableERC20Factory=1.10.2, L1CrossDomainMessenger=2.11.0, L1StandardBridge=2.8.0
+24421512 2026-02-09 0x8808cd5311 SystemConfig=3.13.1, OptimismPortal=5.2.0, AnchorStateRegistry=3.7.0, DisputeGameFactory=1.4.0, L1ERC721Bridge=2.9.0, OptimismMintableERC20Factory=1.10.2, L1CrossDomainMessenger=2.11.0
+25397811 2026-06-25 0xbfdac60c96 SystemConfig=3.14.2*, OptimismPortal=5.6.1*, ETHLockbox=1.3.1*, AnchorStateRegistry=3.9.0*, DisputeGameFactory=1.6.1*, DelayedWETH=1.5.1*, L1ERC721Bridge=2.9.1*, OptimismMintableERC20Factory=1.11.0*, L1CrossDomainMessenger=2.11.1*, L1StandardBridge=2.8.2
+26048619 2026-09-24 0x0a0fe86f7b SystemConfig=4.0.0*, OptimismPortal=5.8.0*, ETHLockbox=1.3.1*, AnchorStateRegistry=3.9.0*, DisputeGameFactory=1.6.1*, DelayedWETH=1.5.1*, L1ERC721Bridge=2.9.1*, OptimismMintableERC20Factory=1.11.0*, L1CrossDomainMessenger=2.11.1*
+26309074 2026-10-31 0xd80476b3ec OptimismPortal=5.8.0
+26430859 2026-11-16 0x024770b5fb SystemConfig=4.3.0*, OptimismPortal=6.1.0*, ETHLockbox=2.0.0*, AnchorStateRegistry=4.0.0*, DisputeGameFactory=1.6.1*, DelayedWETH=2.0.0*, L1ERC721Bridge=2.9.1*, OptimismMintableERC20Factory=1.11.0*, L1CrossDomainMessenger=2.13.0*
+

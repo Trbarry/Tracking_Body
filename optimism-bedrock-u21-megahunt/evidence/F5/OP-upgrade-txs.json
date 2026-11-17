@@ -1,232 +1,11 @@
 [
  {
-  "block": 12686688,
-  "time": "2021-06-22 22:13:57",
-  "tx": "0x6e04936c9c8eb3846e41eb56ce3ce9b7b6d68dbda81a30def50d3aa171e98c7d",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x4200000000000000000000000000000000000007",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686691,
-  "time": "2021-06-22 22:14:16",
-  "tx": "0x9d981fac03305c041122f94f8331d87053717333b8ec75b508d93921144910d4",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x4200000000000000000000000000000000000005",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686694,
-  "time": "2021-06-22 22:15:00",
-  "tx": "0xcae114c0c2e08b575dabdbd6c355e2105943337bf6627f0e0cf77867e5d8fd70",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x6887246668a3b87f54deb3b94ba47a6f63f32985",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686696,
-  "time": "2021-06-22 22:15:10",
-  "tx": "0x6b8c081822cb5da0b9440f5961f3fccb7db2071d6437d7007f17a0bc7b3cb544",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x473300df21d047806a082244b417f96b32f13a33",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686720,
-  "time": "2021-06-22 22:22:35",
-  "tx": "0x1520528c118c84316412213c9e0d2a5d07154a8c7e13496427b773e9779f0c2c",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x3ea1a3839d8ca9a7ff3c567a9f36f4c4dbecc3ee",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686727,
-  "time": "2021-06-22 22:24:12",
-  "tx": "0x571fc10df9987eca6f44d969ed8bb00b1e6766b637c3e38db1cf66a99b42cdf5",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0xa0b912b3ea71a04065ff82d3936d518ed6e38039",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686736,
-  "time": "2021-06-22 22:26:00",
-  "tx": "0x449191eead2556acefa9e2b78ae3878bf665bb95c57cbe8bd8f832df41067039",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x77ebfdfcc906ddcda0c42b866f26a8d5a2bb0572",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686742,
-  "time": "2021-06-22 22:26:39",
-  "tx": "0xbac1c2f9aa756d75abf367f136654173a40259510e9d714566c1bcd7d6eea24e",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x4bf681894abec828b212c906082b444ceb2f6cf6",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686748,
-  "time": "2021-06-22 22:28:07",
-  "tx": "0xaa817bcb936ee2c1bdc9202228f2fafc841698a0d6563625737d79631a3a7bd6",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0xe969c2724d2448f1d1a6189d3e2aa1f37d5998c1",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686752,
-  "time": "2021-06-22 22:28:50",
-  "tx": "0xafed3dbf2268c650c772ea86ad1e5408a8f53ffa6e3e50c3188f509bd44b31a7",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0xcd76de5c57004d47d0216ec7dabd3c72d8c49057",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
   "block": 12686756,
   "time": "2021-06-22 22:29:27",
   "tx": "0xd19d40f11c375feeea5fe47576ce98a3a08caac68b2a8a52fb95dd1a76dd205a",
   "proxies": {
    "L1CrossDomainMessenger(AddressManager)": {
     "impl": "0x16393737d09d2722ad13dca3ca8c3db957699f1d",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686761,
-  "time": "2021-06-22 22:31:18",
-  "tx": "0x4dd36f01f8c5ca754ff64df5fdabed3338039235accc64c23b83a67d8fe8a55d",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
-    "version": "2.13.0",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686764,
-  "time": "2021-06-22 22:32:15",
-  "tx": "0x2be1b5b621ce7ac6cbd752c30bce0b10840225774ad976690e334663e291d628",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x2745c24822f542bbffb41c6cb20edf766b5619f5",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686767,
-  "time": "2021-06-22 22:33:42",
-  "tx": "0xfe635e0c5da9292aaff57078f13d92f09f34b76fd826fddd131b517afe4d61d5",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x042065416c5c665dc196076745326af3cd840d15",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686771,
-  "time": "2021-06-22 22:34:30",
-  "tx": "0x6fd32b9130e8ce17491f704d8379893c5d3e386a52447d8f16fd99d23d71fd5f",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0xd0e3e318154716bd9d007e1e6b021eab246ff98d",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686774,
-  "time": "2021-06-22 22:35:15",
-  "tx": "0x03e1bf0e135b735480f0620d2a5507b2ceb19900db59d890424ed4affac330a1",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x38a6ed6fd76035684cadef38cf49a2fffa782b67",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686778,
-  "time": "2021-06-22 22:35:52",
-  "tx": "0xdb654114cef1a171bb6507d703e0cd4176eeb989c24bfcf866216e1c69ee29f1",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0xfe1f9cf28ecdb12110aa8086e6fd343ea06035cc",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12686784,
-  "time": "2021-06-22 22:37:33",
-  "tx": "0x205fecd0172798e116bdf0206d7fef6f47f652af667a9d7f15c276f500783d17",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0xf26391fbb1f77481f80a7d646ac08ba3817ea891",
     "version": "<none>",
     "storageSetterCycle": false,
     "upgradedEvents": 1
@@ -247,51 +26,12 @@
   }
  },
  {
-  "block": 12686793,
-  "time": "2021-06-22 22:39:15",
-  "tx": "0x5fe73adb2da599a4825f64427c9fa3839fafd318998ba04e5a8b20502b8bef2f",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
-    "version": "2.8.2",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
   "block": 12706528,
   "time": "2021-06-26 00:52:47",
   "tx": "0x98a05fb521b3349dd92cff2e104d78c6c318add003bb501c0d416b2b4d75df8a",
   "proxies": {
    "L1CrossDomainMessenger(AddressManager)": {
     "impl": "0xbfba066b5ca610fe70adce45fcb622f945891bb0",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 12751539,
-  "time": "2021-07-03 00:51:53",
-  "tx": "0x26e7946fe64beead923dd5f695b26069d38e96bb49a290f45aad82c65019a67d",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x6b7c001f4af36a576baba2af3b5251fc326ab09a",
-    "version": "<none>",
-    "storageSetterCycle": false,
-    "upgradedEvents": 1
-   }
-  }
- },
- {
-  "block": 13596224,
-  "time": "2021-11-11 17:22:15",
-  "tx": "0x49d584fb24f39d84b236a423f76669c5642ad984c79565a60fe70b069765b943",
-  "proxies": {
-   "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x0000000000000000000000000000000000000000",
     "version": "<none>",
     "storageSetterCycle": false,
     "upgradedEvents": 1
@@ -317,10 +57,10 @@
   "tx": "0xbabb37235bd38ae5a29717590eedfd9b02f84a12b890b2126feac68f223d7448",
   "proxies": {
    "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x4200000000000000000000000000000000000007",
+    "impl": "0xd9166833ff12a5f900ccfbf2c8b62a90f1ca1fd5",
     "version": "<none>",
     "storageSetterCycle": false,
-    "upgradedEvents": 7
+    "upgradedEvents": 1
    }
   }
  },
@@ -362,10 +102,10 @@
     "upgradedEvents": 1
    },
    "L1CrossDomainMessenger(AddressManager)": {
-    "impl": "0x000000000000000000000000000000000109d86c",
+    "impl": "0x0000000000000000000000000000000000000000",
     "version": "<none>",
     "storageSetterCycle": false,
-    "upgradedEvents": 2
+    "upgradedEvents": 1
    }
   }
  },
@@ -396,7 +136,7 @@
     "impl": "0x2150bc3c64cbfddbac9815ef615d6ab8671bfe43",
     "version": "1.4.0",
     "storageSetterCycle": false,
-    "upgradedEvents": 18
+    "upgradedEvents": 1
    },
    "L1StandardBridge(slot)": {
     "impl": "0xbfb731cd36d26c2a7287716de857e4380c73a64a",

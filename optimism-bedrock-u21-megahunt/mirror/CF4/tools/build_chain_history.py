@@ -143,9 +143,18 @@ def dump_slots(address: str, name: str, block: int) -> dict:
     numbered = slot_numbers(name)
     special_keys = [IMPL_SLOT, ADMIN_SLOT, OZV5_INIT_SLOT]
     keys = ["0x" + slot.to_bytes(32, "big").hex() for slot in numbered] + special_keys
-    proof = rpc("eth_getProof", [address, keys, hex(block)])
-    values = {int(item["key"], 16): "0x" + int(item["value"], 16).to_bytes(32, "big").hex()
-              for item in proof["storageProof"]}
+    try:
+        proof = rpc("eth_getProof", [address, keys, hex(block)])
+        values = {int(item["key"], 16): "0x" + int(item["value"], 16).to_bytes(32, "big").hex()
+                  for item in proof["storageProof"]}
+        proof_method = "eth_getProof"
+    except RuntimeError as error:
+        # Some failover backends expose archive storage but cap historical
+        # Merkle proofs. Storage reads remain available at the same block.
+        calls = [("eth_getStorageAt", [address, key, hex(block)]) for key in keys]
+        raw_values = rpc_batch(calls)
+        values = {int(key, 16): value for key, value in zip(keys, raw_values)}
+        proof_method = f"eth_getStorageAt fallback ({error})"
     all_slots = {str(slot): values[slot] for slot in numbered}
     specials = {
         "eip1967.implementation": values[int(IMPL_SLOT, 16)],
@@ -159,6 +168,7 @@ def dump_slots(address: str, name: str, block: int) -> dict:
         "special_slots": specials,
         "initializer_bytes": initializer_bytes(all_slots["0"]),
         "version": version_at(address, block),
+        "read_method": proof_method,
     }
 
 

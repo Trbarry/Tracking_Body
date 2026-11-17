@@ -46,8 +46,8 @@ def clean_title(path: Path) -> str:
 # These are mechanism-identical duplicate reports, not merely related observations.
 DEDUP_GROUPS = [
     ["0104", "0705"],
-    ["0203", "0501", "2501"],
-    ["0301", "0402", "2401"],
+    ["0402", "2401"],
+    ["0501", "2501"],
     ["0303", "2304"],
     ["0304", "0401", "0803", "1102", "1202"],
     ["0305", "2307", "2602", "3102"],
@@ -56,12 +56,11 @@ DEDUP_GROUPS = [
     ["2404", "3203"],
     ["0603", "2603"],
     ["0606", "0903"],
-    ["0804", "1002", "2405", "3104"],
+    ["2405", "3104"],
     ["0902", "3201"],
     ["1003", "3001"],
     ["2402", "3101"],
     ["2303", "2901"],
-    ["2406", "2504"],
     ["2505", "2705"],
 ]
 
@@ -87,14 +86,14 @@ FAMILY_FACTS = {
         "ancestor": "first: v1.0.0:contracts/L1/OptimismPortal.sol:325-420 (withdrawal value and finalize-before-call); current form: v4.0.0:src/L1/ETHLockbox.sol:132-219 (separate pooled custody), with U21 pause/identity source at v9.0.0:src/L1/ETHLockbox.sol:112-235",
         "consumer": "v9.0.0:src/L1/OptimismPortal2.sol:577-666,741-795 and v9.0.0:src/L1/ETHLockbox.sol:133-235",
         "state": "ETH in a portal/ETHLockbox/L1 messenger plus monotonic portal/lockbox authorizations",
-        "branches": ["v1.0.0 portal custody — contracts/L1/OptimismPortal.sol:325-490", "v1.6.0 custom-gas-token branch — src/L1/OptimismPortal2.sol:362-440,504-573", "v4.0.0 per-chain ETHLockbox — src/L1/ETHLockbox.sol:67-219", "v7.0.0 shared-lockbox migration — src/L1/OptimismPortal2.sol:502-572", "v9.0.0 lockbox-sourced pause — src/L1/ETHLockbox.sol:112-119"],
+        "branches": ["v1.0.0 portal custody — contracts/L1/OptimismPortal.sol:325-490", "v1.6.0 custom-gas-token branch — src/L1/OptimismPortal2.sol:362-440,504-573", "v4.0.0 per-chain ETHLockbox — src/L1/ETHLockbox.sol:67-219", "v7.0.0 shared-lockbox migration — src/L1/OptimismPortal2.sol:503-537", "v9.0.0 lockbox-sourced pause — src/L1/ETHLockbox.sol:112-119"],
         "edge": "create ETH liability or authorization before the v4/v7 custody split; consume it after pooling, re-pointing, or a failed current finalization",
     },
     "proof-lifecycle": {
         "ancestor": "first: v1.0.0:contracts/L1/OptimismPortal.sol:242-420 (one proof and hash-global finalization); current form: v1.4.0:src/L1/OptimismPortal2.sol:254-387,461-522 (per-submitter fault proofs), with U21 cleanup at v9.0.0:src/L1/OptimismPortal2.sol:671-728",
         "consumer": "v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
         "state": "provenWithdrawals[withdrawalHash][submitter], proofSubmitters[], finalizedWithdrawals[withdrawalHash], and referenced game clone",
-        "branches": ["v1.0.0 L2OO proof — contracts/L1/OptimismPortal.sol:242-420", "v1.4.0 fault-game/per-submitter proof — src/L1/OptimismPortal2.sol:254-522", "v2.0.0 respect-at-creation — src/L1/OptimismPortal2.sol:292-378", "v4.0.0 ASR-owned validity — src/dispute/AnchorStateRegistry.sol:182-340", "v7.0.0 super-game branch — src/L1/OptimismPortal2.sol:390-492", "v9.0.0 deletion — src/L1/OptimismPortal2.sol:711-728"],
+        "branches": ["v1.0.0 L2OO proof — contracts/L1/OptimismPortal.sol:242-420", "v1.4.0 fault-game/per-submitter proof — src/L1/OptimismPortal2.sol:254-522", "v2.0.0 respect-at-creation — src/L1/OptimismPortal2.sol:292-378", "v4.0.0 ASR-owned validity — src/dispute/AnchorStateRegistry.sol:182-340", "v7.0.0 super-game branch — src/L1/OptimismPortal2.sol:368-471", "v9.0.0 deletion — src/L1/OptimismPortal2.sol:711-728"],
         "edge": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     },
     "messenger-replay": {
@@ -108,7 +107,7 @@ FAMILY_FACTS = {
         "ancestor": "first: v1.0.0:contracts/L1/OptimismPortal.sol:83,174-187 (portal-local guardian flag); current form: v9.0.0:src/L1/SuperchainConfig.sol:79-153 plus v9.0.0:src/L1/ETHLockbox.sol:112-119",
         "consumer": "v9.0.0:src/L1/ETHLockbox.sol:112-119,157-174; v9.0.0:src/L1/OptimismPortal2.sol:306-330",
         "state": "pause timestamp keyed by global/portal/SystemConfig/ETHLockbox identifier and cached dependency pointers",
-        "branches": ["v1.0.0 portal-local bool — contracts/L1/OptimismPortal.sol:83,174-187", "v1.2.0 global SuperchainConfig — src/L1/SuperchainConfig.sol:19-81", "v4.0.0 expiring scoped timestamp — src/L1/SuperchainConfig.sol:40-171", "v4.1.0 SystemConfig-selected key — src/L1/SystemConfig.sol:503-534", "v9.0.0 lockbox key — src/L1/ETHLockbox.sol:112-119"],
+        "branches": ["v1.0.0 portal-local bool — contracts/L1/OptimismPortal.sol:83,174-187", "v1.2.0 global SuperchainConfig — src/L1/SuperchainConfig.sol:19-81", "v4.0.0 expiring scoped timestamp — src/L1/SuperchainConfig.sol:40-182", "v4.1.0 SystemConfig-selected key — src/L1/SystemConfig.sol:503-534", "v9.0.0 lockbox key — src/L1/ETHLockbox.sol:112-119"],
         "edge": "create a scoped pause or store a dependency pointer under an earlier identifier generation; consume it after the v9 lockbox-key pivot",
     },
     "storage-init": {
@@ -126,17 +125,17 @@ FAMILY_FACTS = {
         "edge": "create proxy/version state under the first OPCM V2 bundle; consume it in a later same-version replay or migration with changed initializer metadata",
     },
     "identity-binding": {
-        "ancestor": "first game identity: v1.4.0:src/dispute/AnchorStateRegistry.sol:59-87 and src/dispute/DisputeGameFactory.sol:84-134; current super-root form: v7.0.0:src/L1/OptimismPortal2.sol:390-570 and v9.0.0:src/dispute/AnchorStateRegistry.sol:215-352",
+        "ancestor": "first game identity: v1.4.0:src/dispute/AnchorStateRegistry.sol:59-87 and src/dispute/DisputeGameFactory.sol:84-134; current super-root form: v7.0.0:src/L1/OptimismPortal2.sol:368-471 and v9.0.0:src/dispute/AnchorStateRegistry.sol:215-352",
         "consumer": "v9.0.0:src/L1/OptimismPortal2.sol:390-492 and src/dispute/AnchorStateRegistry.sol:227-370",
         "state": "factory UUID, immutable clone args, root claim/preimage, chain ID source, ASR/factory pointer, and proxy-admin owner identity",
-        "branches": ["v1.4.0 factory/address identity — src/dispute/AnchorStateRegistry.sol:59-87", "v2.0.0 single anchor and snapshot respect — src/dispute/AnchorStateRegistry.sol:39-239", "v4.0.0 super-root portal — src/L1/OptimismPortal2.sol:396-570", "v7.0.0 unified super-game branch — src/L1/OptimismPortal2.sol:390-492", "v9.0.0 lockbox identity source — src/dispute/AnchorStateRegistry.sol:33-59,136-143"],
+        "branches": ["v1.4.0 factory/address identity — src/dispute/AnchorStateRegistry.sol:59-87", "v2.0.0 single anchor and snapshot respect — src/dispute/AnchorStateRegistry.sol:39-239", "v4.0.0 super-root portal — src/L1/OptimismPortal2.sol:396-570", "v7.0.0 unified super-game branch — src/L1/OptimismPortal2.sol:368-471", "v9.0.0 lockbox identity source — src/dispute/AnchorStateRegistry.sol:33-59,136-143"],
         "edge": "create an immutable game under old factory/ASR/chain-binding inputs; consume it after a mutable singleton or identity source is re-pointed",
     },
     "dispute-game": {
         "ancestor": "first factory clone: v1.0.0:contracts/dispute/DisputeGameFactory.sol:78-162; fault-proof registry form: v1.4.0:src/dispute/AnchorStateRegistry.sol:20-87; current form: v9.0.0:src/dispute/DisputeGameFactory.sol:147-245 and src/dispute/AnchorStateRegistry.sol:227-370",
         "consumer": "v9.0.0:src/dispute/AnchorStateRegistry.sol:227-370 and src/L1/OptimismPortal2.sol:390-492",
         "state": "immutable game clone, DGF UUID/list entry, snapshotted respect, l1Head/prestate, terminal status, and shared anchorGame",
-        "branches": ["v1.0.0 factory clone — contracts/dispute/DisputeGameFactory.sol:78-162", "v1.4.0 per-type anchor — src/dispute/AnchorStateRegistry.sol:20-87", "v2.0.0 single anchor/snapshot respect — src/dispute/AnchorStateRegistry.sol:39-239", "v5.0.0 gameArgs — src/dispute/DisputeGameFactory.sol:70-190", "v7.0.0 CREATE2 and super games — src/dispute/DisputeGameFactory.sol:147-225", "v9.0.0 current validity — src/dispute/AnchorStateRegistry.sol:227-352"],
+        "branches": ["v1.0.0 factory clone — contracts/dispute/DisputeGameFactory.sol:78-162", "v1.4.0 per-type anchor — src/dispute/AnchorStateRegistry.sol:20-87", "v2.0.0 single anchor/snapshot respect — src/dispute/AnchorStateRegistry.sol:39-239", "v5.0.0 gameArgs — src/dispute/DisputeGameFactory.sol:70-190,278-292", "v7.0.0 CREATE2 and super games — src/dispute/DisputeGameFactory.sol:147-225", "v9.0.0 current validity — src/dispute/AnchorStateRegistry.sol:227-352"],
         "edge": "create a game clone under an older implementation/gameArgs/prestate; consume it through today's mutable ASR predicates or shared anchor",
     },
     "bond-credit": {
@@ -157,7 +156,7 @@ FAMILY_FACTS = {
         "ancestor": "first shared migration engine: v7.0.0:src/L1/opcm/OPContractsManagerMigrator.sol:89-316 and src/L1/OptimismPortal2.sol:502-572; U21 form: v9.0.0:src/L1/opcm/OPContractsManagerMigrator.sol:129-520",
         "consumer": "v9.0.0:src/L1/opcm/OPContractsManagerMigrator.sol:129-520; src/L1/OptimismPortal2.sol:502-572; src/L1/ETHLockbox.sol:180-235",
         "state": "old proof/game/anchor, per-chain lockbox balance, sticky authorization, cached singleton pointer, and feature flag",
-        "branches": ["v4.0.0 portal liquidity/super-root migration — src/L1/OptimismPortal2.sol:374-429", "v7.0.0 shared-game migration — src/L1/opcm/OPContractsManagerMigrator.sol:89-316", "v8.0.0 validation hardening — src/L1/OptimismPortal2.sol:528-572", "v9.0.0 U21 state — src/L1/opcm/OPContractsManagerMigrator.sol:129-520"],
+        "branches": ["v4.0.0 portal liquidity/super-root migration — src/L1/OptimismPortal2.sol:374-429", "v7.0.0 shared-game migration — src/L1/opcm/OPContractsManagerMigrator.sol:89-316", "v8.0.0 validation hardening — src/L1/OptimismPortal2.sol:510-554", "v9.0.0 U21 state — src/L1/opcm/OPContractsManagerMigrator.sol:129-520"],
         "edge": "create proof, authorization, liquidity, or game before migration; consume it after fresh DGF/ASR and shared-lockbox cutover",
     },
     "tooling": {
@@ -171,7 +170,7 @@ FAMILY_FACTS = {
 
 
 P0 = set("0102 0104 0204 0304 0404 0503 0704 0801 0805 0904 1001 1101 1103 1201 2303 2305 2505 2604 2704 2901 2903 3005 3006 3105 3202".split())
-P1 = set("0101 0103 0201 0203 0301 0302 0303 0306 0403 0405 0406 0502 0504 0505 0601 0602 0605 0606 0701 0702 0703 0802 0804 0902 1003 1203 2101 2102 2103 2201 2202 2203 2204 2205 2301 2302 2306 2308 2402 2403 2404 2406 2503 2506 2605 2701 2702 2703 2902 3001 3002 3003 3004 3101 3106 3203".split())
+P1 = set("0101 0103 0201 0203 0301 0302 0303 0306 0402 0403 0405 0406 0501 0502 0504 0505 0601 0602 0605 0606 0701 0702 0703 0802 0804 0902 1002 1003 1203 2101 2102 2103 2201 2202 2203 2204 2205 2301 2302 2306 2308 2402 2403 2404 2405 2406 2503 2504 2506 2605 2701 2702 2703 2902 3001 3002 3003 3004 3101 3106 3203".split())
 
 
 # Per-mechanism ancestry overrides keep the mandatory "earliest" field narrower than the family history.
@@ -225,13 +224,13 @@ override(
     "nonzero preserved proxy words under fields now declared as legacy spacers",
 )
 override(
-    "0203",
+    "0203 0501",
     "array/cell split first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; delete-without-prune current form first: v9.0.0:src/L1/OptimismPortal2.sol:711-728",
     "v9.0.0:src/L1/OptimismPortal2.sol:671-728",
     "one per-submitter proof cell, an append-only submitter array entry and the hash-global finalized bit",
 )
 override(
-    "0301",
+    "0301 0402",
     "first: v1.4.0:src/L1/OptimismPortal2.sol:339-387 (external proof submitter and permissionless finalize); current form: v9.0.0:src/L1/OptimismPortal2.sol:577-666 (lockbox custody plus L1CDM-specific atomic revert)",
     "v9.0.0:src/L1/OptimismPortal2.sol:577-666 and src/libraries/SafeCall.sol:121-171",
     "mature per-submitter proof and its unfinalized hash-global replay bit",
@@ -262,7 +261,7 @@ override(
 )
 override(
     "0306 2902",
-    "first relevant migration/lockbox topology: v7.0.0:src/L1/OptimismPortal2.sol:502-572 and src/L1/ETHLockbox.sol:180-232; current unsafe-target predicate: v9.0.0:src/L1/OptimismPortal2.sol:846-849",
+    "first relevant migration/lockbox topology: v7.0.0:src/L1/OptimismPortal2.sol:503-537 and src/L1/ETHLockbox.sol:180-232; current unsafe-target predicate: v9.0.0:src/L1/OptimismPortal2.sol:846-849",
     "v9.0.0:src/L1/OptimismPortal2.sol:577-666,741-795,846-849",
     "retired/sibling portal or lockbox address left authorized and not equal to the current unsafe target",
 )
@@ -274,7 +273,7 @@ override(
     "create a messenger withdrawal under pre-v9 outcome semantics, then finalize through the sender-only v9 guard where L1CDM returns normally but its mappings encode failure",
 )
 override(
-    "0404 0801 0804 1001 1103 1201 3006 3202",
+    "0404 0801 0804 1001 1002 1103 1201 2405 3006 3202",
     "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
     "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
     "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
@@ -293,7 +292,7 @@ override(
 )
 override(
     "0503 1101",
-    "super-root proof first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified game-type branch: v7.0.0:src/L1/OptimismPortal2.sol:390-492, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
+    "super-root proof first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified game-type branch: v7.0.0:src/L1/OptimismPortal2.sol:368-471, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
     "v9.0.0:src/L1/OptimismPortal2.sol:390-492 and src/dispute/AnchorStateRegistry.sol:286-352",
     "attacker-created super-game/root claim and a genuine per-chain output-root inclusion proof",
 )
@@ -305,7 +304,7 @@ override(
 )
 override(
     "0603 0604",
-    "first scoped/expiring timestamp model: v4.0.0:src/L1/SuperchainConfig.sol:40-171; current form: v9.0.0:src/L1/SuperchainConfig.sol:39-40,79-162",
+    "first scoped/expiring timestamp model: v4.0.0:src/L1/SuperchainConfig.sol:40-182; current form: v9.0.0:src/L1/SuperchainConfig.sol:39-40,79-162",
     "v9.0.0:src/L1/SuperchainConfig.sol:79-162 and src/L1/ETHLockbox.sol:112-113",
     "pauseTimestamps[identifier], including expired or currently unconsumed identifiers",
 )
@@ -318,7 +317,7 @@ override(
 )
 override(
     "0606 0701 0703 2701 2702",
-    "super-root chain selection first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified binding: v7.0.0:src/L1/OptimismPortal2.sol:390-492, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
+    "super-root chain selection first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified binding: v7.0.0:src/L1/OptimismPortal2.sol:368-471, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
     "v9.0.0:src/L1/OptimismPortal2.sol:390-492, src/dispute/DisputeGameFactory.sol:147-245, and src/dispute/AnchorStateRegistry.sol:227-352",
     "super-game UUID/root/preimage, immutable l1Head/extraData and SystemConfig.l2ChainId selected at proof time",
 )
@@ -357,7 +356,7 @@ override(
 )
 override(
     "2103 2204",
-    "implementation mapping first: v1.0.0:contracts/dispute/DisputeGameFactory.sol:30-37,78-162; dynamic gameArgs first: v5.0.0:src/dispute/DisputeGameFactory.sol:70-190; current dual layout: v9.0.0:src/dispute/DisputeGameFactory.sol:147-225,312-318",
+    "implementation mapping first: v1.0.0:contracts/dispute/DisputeGameFactory.sol:30-37,78-162; dynamic gameArgs first: v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292; current dual layout: v9.0.0:src/dispute/DisputeGameFactory.sol:147-225,312-318",
     "v9.0.0:src/dispute/DisputeGameFactory.sol:147-245,302-329 and src/dispute/AnchorStateRegistry.sol:227-352",
     "old and new immutable game clones sharing a UUID schema but embedding different implementation arguments/prestates",
 )
@@ -392,7 +391,7 @@ override(
     "multiple submitter proof cells converging on finalizedWithdrawals[withdrawalHash]",
 )
 override(
-    "2406",
+    "2406 2504",
     "current proof storage form first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; v8-to-v9 consumer remains at v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
     "v9.0.0:src/L1/OptimismPortal2.sol:577-728 and src/universal/CrossDomainMessenger.sol:212-302",
     "pre-U21 provenWithdrawal cells, submitter list, finalized bit and messenger replay mappings",
@@ -445,7 +444,7 @@ override(
 )
 override(
     "3105",
-    "first/current regression boundary: v9.0.0:src/L1/OptimismPortal2.sol:741-795; predecessor comparison: v8.0.0:src/L1/OptimismPortal2.sol:741-790",
+    "first/current regression boundary: v9.0.0:src/L1/OptimismPortal2.sol:741-795; predecessor comparison: v8.0.0:src/L1/OptimismPortal2.sol:684-738",
     "v9.0.0:src/L1/OptimismPortal2.sol:741-795",
     "user-selected deposit calldata length and gasLimit at the v8→v9 implementation boundary",
     "construct a relayer/deposit envelope that fit the v8 implementation, then consume the same maximum-size calldata immediately after v9 under transaction/block gas caps",
@@ -628,8 +627,8 @@ def build_lineage() -> list[dict]:
            "v1.2.0:src/L1/OptimismPortal.sol:147-149 — pause/guardian route through SuperchainConfig.",
            "v1.4.0:src/L1/OptimismPortal2.sol:163-190 — initializer adds DGF and game-validity state.",
            "v4.0.0:src/L1/OptimismPortal2.sol:250-273,294-318 — dependencies reinitialized; pause/guardian route through SystemConfig.",
-           "v4.1.0:src/L1/OptimismPortal2.sol:250-300 — lockbox feature branch replaces always-on lockbox form.",
-           "v7.0.0:src/L1/OptimismPortal2.sol:273-303 — initializer accepts lockbox and interop config.",
+           "v4.1.0:src/L1/OptimismPortal2.sol:222-260,446-514,566-616 — lockbox use becomes feature-gated.",
+           "v7.0.0:src/L1/OptimismPortal2.sol:251-281 — initializer accepts lockbox and interop config.",
            "v9.0.0:src/L1/OptimismPortal2.sol:273-330 — pause, guardian, and SuperchainConfig now route through ETHLockbox."],
           [], ["v9.0.0:src/L1/OptimismPortal2.sol:273-303 — initializer rejects invalid interop/lockbox combinations."],
           ["v1.0.0 local guardian → v1.2.0 SuperchainConfig → v4.0.0 SystemConfig → v9.0.0 ETHLockbox: v9.0.0:src/L1/OptimismPortal2.sol:306-330."],
@@ -648,7 +647,7 @@ def build_lineage() -> list[dict]:
            "v2.0.0:src/L1/OptimismPortal2.sol:292-378 — respect is snapshotted at game creation and creation must be after cutoff.",
            "v4.0.0:src/L1/OptimismPortal2.sol:439-570,693-727 — validity governance moves into ASR; super-root proof branch added.",
            "v4.1.0:src/L1/OptimismPortal2.sol:430-570 — output-root Portal2 and interop Portal split.",
-           "v7.0.0:src/L1/OptimismPortal2.sol:390-492 — one function branches on registered game type and extracts per-chain root from super games.",
+           "v7.0.0:src/L1/OptimismPortal2.sol:368-471 — one function branches on registered game type and extracts per-chain root from super games.",
            "v9.0.0:src/L1/OptimismPortal2.sol:390-492,671-705 — current ASR proper/respected checks and current-registry revalidation."],
           ["v1.4.0 proves game identity before MPT inclusion and writes last; v4.0.0 delegates current validity to ASR before root-format branch."],
           ["v1.4.0 allowed reprove after root change; v2.0.0 rejects games not respected at creation; v4.0.0 returns InvalidRootClaim through ASR result."],
@@ -683,8 +682,8 @@ def build_lineage() -> list[dict]:
           ["v1.6.0:src/L1/OptimismPortal2.sol:362-440,504-573 — custom-gas-token mode separates native balance accounting.",
            "v4.0.0:src/L1/OptimismPortal2.sol:374-429,740-788 — deposits lock ETH in ETHLockbox; portal liquidity and super-root migrations added.",
            "v4.1.0:src/L1/OptimismPortal2.sol:222-260,446-514,566-616 — lockbox use becomes feature-gated.",
-           "v7.0.0:src/L1/OptimismPortal2.sol:502-572 — shared-dispute-game migration repoints lockbox and ASR.",
-           "v8.0.0:src/L1/OptimismPortal2.sol:528-572 — nonzero/new-lockbox authorization checks hardened.",
+           "v7.0.0:src/L1/OptimismPortal2.sol:503-537 — shared-dispute-game migration repoints lockbox and ASR.",
+           "v8.0.0:src/L1/OptimismPortal2.sol:510-554 — nonzero/new-lockbox authorization checks hardened.",
            "v9.0.0:src/L1/OptimismPortal2.sol:502-572,741-795 — CGT guard and current shared migration."],
           ["v4.0.0 deposit body locks ETH before ResourceMetering modifier completes: v9.0.0:src/L1/OptimismPortal2.sol:741-795."],
           ["Lockbox authorization/balance failures now revert deposit; CGT rejects positive ETH liability paths: v9.0.0:src/L1/OptimismPortal2.sol:741-759."],
@@ -808,7 +807,7 @@ def build_lineage() -> list[dict]:
           "v1.2.0:src/L1/SuperchainConfig.sol:19-23,49-81",
           "One guardian controls one global unstructured paused bit.",
           "A global pause consistently blocks security-critical exits until guardian unpauses.",
-          ["v4.0.0:src/L1/SuperchainConfig.sol:40-171 — pause becomes expiring timestamp mapping keyed by identifier; initializer migrates old guardian/global pause.",
+          ["v4.0.0:src/L1/SuperchainConfig.sol:40-182 — pause becomes expiring timestamp mapping keyed by identifier; initializer migrates old guardian/global pause.",
            "v9.0.0:src/L1/SuperchainConfig.sol:30-40,79-153 — local paused(address) excludes global; new isLocalOrGlobalPaused explicitly ORs both."],
           ["pause refuses any nonzero historical timestamp, even expired; extend refreshes a nonzero timestamp: v9 lines 79-120."],
           ["Expired pause reads false but still makes pause() revert AlreadyPaused; guardian must unpause/extend."],
@@ -880,7 +879,7 @@ def build_lineage() -> list[dict]:
           ["v1.1.0:src/dispute/DisputeGameFactory.sol:30-115 — append-only GameId list/timestamp and upgradeability added.",
            "v1.2.0:src/dispute/DisputeGameFactory.sol:87-134 — init bonds and abi.encode UUID form established.",
            "v1.4.0:src/dispute/DisputeGameFactory.sol:84-132 — creator/root/parentHash/extraData immutable layout.",
-           "v5.0.0:src/dispute/DisputeGameFactory.sol:70-190 — mutable per-type gameArgs appended to future clones.",
+           "v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292 — mutable per-type gameArgs appended to future clones.",
            "v6.0.0:src/dispute/DisputeGameFactory.sol:140-220 — empty legacy args and explicit-gameType new layout bifurcate clone decoding.",
            "v7.0.0:src/dispute/DisputeGameFactory.sol:147-225 — collision check precedes deterministic CREATE2 clone.",
            "v9.0.0:src/dispute/DisputeGameFactory.sol:147-245,312-318 — current dual-layout create and dynamic gameArgs setter."],
@@ -986,10 +985,10 @@ def build_lineage() -> list[dict]:
         "| v3.0.1 | No indexed target semantic delta | `SOURCE-FUNCTION-INDEX.json` |",
         "| v4.0.0 | ETHLockbox custody; scoped expiring pauses; ASR owns invalidation; super-root Portal | `v4.0.0:src/L1/ETHLockbox.sol:67-219`; `src/dispute/AnchorStateRegistry.sol:34-340` |",
         "| v4.1.0 | Output-root/interoperability Portal split; runtime features/pause-key selection | `v4.1.0:src/L1/SystemConfig.sol:139,503-534` |",
-        "| v5.0.0 | DGF gameArgs becomes persistent future-clone configuration | `v5.0.0:src/dispute/DisputeGameFactory.sol:70-190` |",
+        "| v5.0.0 | DGF gameArgs becomes persistent future-clone configuration | `v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292` |",
         "| v6.0.0 | ASR retirement preserved across reinitialization; dual clone-arg layout | `v6.0.0:src/dispute/AnchorStateRegistry.sol:107-115`; `src/dispute/DisputeGameFactory.sol:140-220` |",
-        "| v7.0.0 | Unified super-game proving, shared-game migration, deterministic DGF clones, OPCM V2 | `v7.0.0:src/L1/OptimismPortal2.sol:390-572`; `src/L1/opcm/OPContractsManagerV2.sol:229-290` |",
-        "| v8.0.0 | Shared migration validation hardening | `v8.0.0:src/L1/OptimismPortal2.sol:528-572` |",
+        "| v7.0.0 | Unified super-game proving, shared-game migration, deterministic DGF clones, OPCM V2 | `v7.0.0:src/L1/OptimismPortal2.sol:368-537`; `src/L1/opcm/OPContractsManagerV2.sol:229-290` |",
+        "| v8.0.0 | Shared migration validation hardening | `v8.0.0:src/L1/OptimismPortal2.sol:510-554` |",
         "| v9.0.0 | Lockbox-sourced pause/guardian, delete proof, split gas budgets, atomic failed-L1CDM withdrawal | `v9.0.0:src/L1/OptimismPortal2.sol:273-330,577-728`; `src/L1/L1CrossDomainMessenger.sol:43-153` |",
         "",
         "## Per-function/field records",

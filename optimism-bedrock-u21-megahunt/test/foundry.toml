@@ -32,3 +32,6 @@ l1 = "http://127.0.0.1:8545"       # Ethereum mainnet pinned @ 26433900 (post-U2
 l1pre = "http://127.0.0.1:8546"    # Ethereum mainnet pinned @ 26430858 (block before U21)
 l1n = "http://127.0.0.1:8547"      # Ethereum mainnet pinned @ 26430859 (U21 block)
 l2 = "http://127.0.0.1:9545"       # OP Mainnet pinned @ 159654093
+
+[lint]
+lint_on_build = false

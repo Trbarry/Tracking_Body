@@ -7,7 +7,7 @@ chain access was limited to passive `cast call` reads on the local fork `:8545` 
 
 | File | Content |
 |---|---|
-| `AUDIT-FINDINGS.json` | 348 finding records (21 fields + page reference) from 39 reports, per-report metadata (commit, scope, exclusions, pages, items not recorded), vocabulary, counts for 11 non-mandatory reports, list of sources not retrieved |
+| `AUDIT-FINDINGS.json` | 348 finding records (21 fields + page reference) from 37 reports, metadata for 41 reports (commit, scope, exclusions, pages, items not recorded), vocabulary, counts for 11 non-mandatory reports, list of sources not retrieved |
 | `AUDIT-COVERAGE-MATRIX.csv` | 44 components x 21 release columns; cell = reports (with audited commit) that reviewed the component at that release |
 | `AUDIT-EDGE-GRAPH.md` | 19 release edges with auditor, commit, scope, exclusions; 15 transitive paths (T1–T15) that no single report covers; ranked gap list |
 | `KNOWN-FINDINGS-BLACKLIST.md` | 9 root-cause families with exploit condition and fix; 18 items live by design at v9; note on unvalidated public submissions |
@@ -176,8 +176,8 @@ Medium) plus `None`. It classifies the impact of the finding as reported; all of
 
 - Fix commits are recorded only where a report prints them; for the 2023 Sherlock issues the fix is what the
   v1.0.0 tree shows.
-- "Not fixed at v9" statements were verified for seven items (listed in the JSON with the word VERIFIED); other
-  acknowledged items were not re-checked line by line.
+- Code at later tags was checked for 20 records (marked VERIFIED in the JSON, with file:line); other acknowledged
+  items were not re-checked line by line.
 - Upgrade numbers before U13 and for the v3.x line are not established by the corpus; the matrix uses tags.
 - The mapping of a report to a release column follows the README "Subsequent Release" column or, where empty, the
   first tag after the audited commit date; F2's DAG should replace it.

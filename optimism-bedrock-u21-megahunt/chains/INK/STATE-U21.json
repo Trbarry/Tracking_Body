@@ -1,0 +1,995 @@
+{
+ "chain": "INK",
+ "pinnedBlock": 26433900,
+ "sources": [
+  "PASS A POST_UPGRADE_STATE_26433900.json (getters, raw slots)",
+  "F5 census / stage2 / root verification"
+ ],
+ "contracts": {
+  "SystemConfig": {
+   "proxy": "0x62c0a111929fa32cec2f76adba54c16afb6e8364",
+   "implementation": "0xade27248542c0f3e89b49e4eb76155e267f14377",
+   "version": "\"4.3.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"4.3.0\"",
+    "owner()(address)": "0x847B5c174615B1B7fDF770882256e2D3E95b9D92",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "overhead()(uint256)": "0",
+    "scalar()(uint256)": "452312848583266388373324160190187140051835877600158453279134670023538250056 [4.523e74]",
+    "batcherHash()(bytes32)": "0x0000000000000000000000006db6161fc5662450e801398bad62dd9921216b98",
+    "gasLimit()(uint64)": "30000000 [3e7]",
+    "basefeeScalar()(uint32)": "4424",
+    "blobbasefeeScalar()(uint32)": "810831 [8.108e5]",
+    "eip1559Denominator()(uint32)": "0",
+    "eip1559Elasticity()(uint32)": "0",
+    "operatorFeeScalar()(uint32)": "0",
+    "operatorFeeConstant()(uint64)": "0",
+    "daFootprintGasScalar()(uint16)": "0",
+    "minBaseFee()(uint64)": "0",
+    "l2ChainId()(uint256)": "57073 [5.707e4]",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "unsafeBlockSigner()(address)": "0x7b322282DF45E537E5de76D60E1432Db3cF3F8E1",
+    "l1CrossDomainMessenger()(address)": "0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f",
+    "l1ERC721Bridge()(address)": "0x661235a238B11191211fa95D4Dd9E423d521E0Be",
+    "l1StandardBridge()(address)": "0x88FF1e5b602916615391F55854588EFcBB7663f0",
+    "optimismPortal()(address)": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+    "optimismMintableERC20Factory()(address)": "0xA8B389A82e088b164cD03230e900980CcED34d29",
+    "delayedWETH()(address)": "0x57b4C29DAee99a28E6E86778b499361294c134eA",
+    "disputeGameFactory()(address)": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+    "lastUsedOPCM()(address)": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+    "lastUsedOPCMVersion()(string)": "\"9.0.3\"",
+    "startBlock()(uint256)": "21344310 [2.134e7]",
+    "paused()(bool)": "false",
+    "guardian()(address)": "0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2",
+    "isCustomGasToken()(bool)": "false",
+    "resourceConfig()((uint32,uint8,uint8,uint32,uint32,uint128))": "(20000000 [2e7], 10, 8, 1000000000 [1e9], 1000000 [1e6], 340282366920938463463374607431768211455 [3.402e38])",
+    "minimumGasLimit()(uint64)": "21000000 [2.1e7]",
+    "batchInbox()(address)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+    "isFeatureEnabled(bytes32)(bool) 0x4554485f4c4f434b424f58000000000000000000000000000000000000000000": "true",
+    "isFeatureEnabled(bytes32)(bool) 0x494e5445524f5000000000000000000000000000000000000000000000000000": "false",
+    "isFeatureEnabled(bytes32)(bool) 0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000": "false"
+   }
+  },
+  "OptimismPortal2": {
+   "proxy": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+   "implementation": "0xb20b23af6071405c37ddda0c0640e8ebb7899645",
+   "version": "\"6.1.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"6.1.0\"",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "l2Sender()(address)": "0x000000000000000000000000000000000000dEaD",
+    "systemConfig()(address)": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+    "anchorStateRegistry()(address)": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+    "ethLockbox()(address)": "0xbd4AbB321138e8Eddc399cE64E66451294325a14",
+    "disputeGameFactory()(address)": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "guardian()(address)": "0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2",
+    "paused()(bool)": "false",
+    "proofMaturityDelaySeconds()(uint256)": "604800 [6.048e5]",
+    "disputeGameFinalityDelaySeconds()(uint256)": "302400 [3.024e5]",
+    "respectedGameType()(uint32)": "9",
+    "respectedGameTypeUpdatedAt()(uint64)": "1753379243 [1.753e9]",
+    "params()(uint128,uint64,uint64)": "1000000000 [1e9]\n514422 [5.144e5]\n26433755 [2.643e7]"
+   }
+  },
+  "ETHLockbox": {
+   "proxy": "0xbd4AbB321138e8Eddc399cE64E66451294325a14",
+   "implementation": "0xdf75e6b07e98873e36ba5c05508f80c1454e0afe",
+   "version": "\"2.0.0\"",
+   "ethBalanceEther": 23088.758336628212,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.0.0\"",
+    "initVersion()(uint8)": "1",
+    "proxyAdmin()(address)": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "systemConfig()(address)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "guardian()(address)": "0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2",
+    "paused()(bool)": "false",
+    "authorizedPortals(address)(bool) 0x5d66C1782664115999C47c9fA5cd031f495D3e4F": "true",
+    "authorizedLockboxes(address)(bool) 0xbd4AbB321138e8Eddc399cE64E66451294325a14": "false"
+   }
+  },
+  "AnchorStateRegistry": {
+   "proxy": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+   "implementation": "0x2b27299c577d4720100e2735b652444dcea652d0",
+   "version": "\"4.0.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"4.0.0\"",
+    "initVersion()(uint8)": "1",
+    "proxyAdmin()(address)": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "systemConfig()(address)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+    "ethLockbox()(address)": "0xbd4AbB321138e8Eddc399cE64E66451294325a14",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "paused()(bool)": "false",
+    "disputeGameFactory()(address)": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+    "anchorGame()(address)": "0x38925ef2ec5451E7280CC7bBe08E73E74ebf8945",
+    "getStartingAnchorRoot()((bytes32,uint256))": "(0x25b22a0c711fa1d01b3cdb95fb98c0e7ff003b00909bfe8fade3507a6e62d44e, 1788848282 [1.788e9])",
+    "getAnchorRoot()(bytes32,uint256)": "0xf2045b079293aaf86f438a6b8ef8c11b2e61e164ebf18374b0b10b70f848176e\n1794288067 [1.794e9]",
+    "respectedGameType()(uint32)": "9",
+    "retirementTimestamp()(uint64)": "1753379243 [1.753e9]",
+    "disputeGameFinalityDelaySeconds()(uint256)": "302400 [3.024e5]"
+   }
+  },
+  "DisputeGameFactory": {
+   "proxy": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+   "implementation": "0x72b971717e088b59f26d4236be222adb6acd393b",
+   "version": "\"1.6.1\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"1.6.1\"",
+    "owner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "initVersion()(uint8)": "1",
+    "proxyAdmin()(address)": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "gameCount()(uint256)": "2640",
+    "gameImpls(uint32)(address) 0": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 1": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 2": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 3": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 4": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 5": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+    "gameImpls(uint32)(address) 6": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 7": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 8": "0x0000000000000000000000000000000000000000",
+    "gameImpls(uint32)(address) 9": "0x19AF533Cc2A2A55786DCB8672aA5717e64213208",
+    "gameImpls(uint32)(address) 10": "0x0000000000000000000000000000000000000000",
+    "initBonds(uint32)(uint256) 0": "0",
+    "initBonds(uint32)(uint256) 1": "0",
+    "initBonds(uint32)(uint256) 2": "0",
+    "initBonds(uint32)(uint256) 3": "0",
+    "initBonds(uint32)(uint256) 4": "0",
+    "initBonds(uint32)(uint256) 5": "0",
+    "initBonds(uint32)(uint256) 6": "0",
+    "initBonds(uint32)(uint256) 7": "0",
+    "initBonds(uint32)(uint256) 8": "0",
+    "initBonds(uint32)(uint256) 9": "80000000000000000 [8e16]",
+    "initBonds(uint32)(uint256) 10": "0",
+    "gameArgs(uint32)(bytes) 0": "0x",
+    "gameArgs(uint32)(bytes) 1": "0x",
+    "gameArgs(uint32)(bytes) 2": "0x",
+    "gameArgs(uint32)(bytes) 3": "0x",
+    "gameArgs(uint32)(bytes) 4": "0x",
+    "gameArgs(uint32)(bytes) 5": "0xee018baf058227872540ac60efbd38b023d9dae23832bfbef03173e4c49a00ec0dd178817a02d177",
+    "gameArgs(uint32)(bytes) 6": "0x",
+    "gameArgs(uint32)(bytes) 7": "0x",
+    "gameArgs(uint32)(bytes) 8": "0x",
+    "gameArgs(uint32)(bytes) 9": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9acc005dcd857b401e4732e6f7837135a22825cfaee018baf058227872540ac60efbd38b023d9dae257b4c29daee99a28e6e86778b499361294c134ea0000000000000000000000000000000000000000000000000000000000000000",
+    "gameArgs(uint32)(bytes) 10": "0x"
+   }
+  },
+  "DelayedWETH": {
+   "proxy": "0x57b4C29DAee99a28E6E86778b499361294c134eA",
+   "implementation": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+   "version": "\"2.0.0\"",
+   "ethBalanceEther": 5.710376,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.0.0\"",
+    "initVersion()(uint8)": "1",
+    "proxyAdmin()(address)": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "systemConfig()(address)": "REVERT: - ABI decoding failed: buffer overrun while deserializing",
+    "ethLockbox()(address)": "0xbd4AbB321138e8Eddc399cE64E66451294325a14",
+    "config()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "delay()(uint256)": "302400 [3.024e5]",
+    "totalSupply()(uint256)": "5710376000000000000 [5.71e18]"
+   }
+  },
+  "L1CrossDomainMessenger": {
+   "proxy": "0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f",
+   "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+   "version": "\"2.13.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.13.0\"",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "portal()(address)": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+    "PORTAL()(address)": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+    "systemConfig()(address)": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "otherMessenger()(address)": "0x4200000000000000000000000000000000000007",
+    "OTHER_MESSENGER()(address)": "0x4200000000000000000000000000000000000007",
+    "messageNonce()(uint256)": "1766847064778384329583297500742918515827483896875618958121606201292653668 [1.766e72]",
+    "paused()(bool)": "false"
+   }
+  },
+  "L1StandardBridge": {
+   "proxy": "0x88FF1e5b602916615391F55854588EFcBB7663f0",
+   "implementation": "0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891",
+   "version": "\"2.8.2\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.8.2\"",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "messenger()(address)": "0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f",
+    "otherBridge()(address)": "0x4200000000000000000000000000000000000010",
+    "systemConfig()(address)": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "paused()(bool)": "false"
+   }
+  },
+  "L1ERC721Bridge": {
+   "proxy": "0x661235a238B11191211fa95D4Dd9E423d521E0Be",
+   "implementation": "0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e",
+   "version": "\"2.9.1\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 3,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"2.9.1\"",
+    "initVersion()(uint8)": "3",
+    "proxyAdmin()(address)": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "messenger()(address)": "0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f",
+    "otherBridge()(address)": "0x4200000000000000000000000000000000000014",
+    "systemConfig()(address)": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+    "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "paused()(bool)": "false"
+   }
+  },
+  "OptimismMintableERC20Factory": {
+   "proxy": "0xA8B389A82e088b164cD03230e900980CcED34d29",
+   "implementation": "0xaabea75da509fa518fd8a91eae4be5813b829b12",
+   "version": "\"1.11.0\"",
+   "ethBalanceEther": 0.0,
+   "initializedVersion": {
+    "_initialized": 1,
+    "_initializing": false
+   },
+   "getters": {
+    "version()(string)": "\"1.11.0\"",
+    "initVersion()(uint8)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+    "bridge()(address)": "0x88FF1e5b602916615391F55854588EFcBB7663f0",
+    "BRIDGE()(address)": "0x88FF1e5b602916615391F55854588EFcBB7663f0"
+   }
+  },
+  "ProxyAdmin": {
+   "proxy": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+   "implementation": "0x0000000000000000000000000000000000000000",
+   "version": null,
+   "ethBalanceEther": 0.0,
+   "initializedVersion": null,
+   "getters": {
+    "owner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+    "addressManager()(address)": "0x9b7C9BbD6d540A8A4dEDd935819fC4408Ba71153",
+    "isUpgrading()(bool)": "false",
+    "proxyType(address)(uint8) 0x62c0a111929fa32cec2f76adba54c16afb6e8364": "0",
+    "proxyType(address)(uint8) 0x5d66C1782664115999C47c9fA5cd031f495D3e4F": "0",
+    "proxyType(address)(uint8) 0xbd4AbB321138e8Eddc399cE64E66451294325a14": "0",
+    "proxyType(address)(uint8) 0xEe018bAf058227872540AC60eFbd38b023d9dAe2": "0",
+    "proxyType(address)(uint8) 0x10d7B35078d3baabB96Dd45a9143B94be65b12CD": "0",
+    "proxyType(address)(uint8) 0x57b4C29DAee99a28E6E86778b499361294c134eA": "0",
+    "proxyType(address)(uint8) 0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f": "2",
+    "proxyType(address)(uint8) 0x88FF1e5b602916615391F55854588EFcBB7663f0": "1",
+    "proxyType(address)(uint8) 0x661235a238B11191211fa95D4Dd9E423d521E0Be": "0",
+    "proxyType(address)(uint8) 0xA8B389A82e088b164cD03230e900980CcED34d29": "0",
+    "getProxyImplementation(address)(address) 0x62c0a111929fa32cec2f76adba54c16afb6e8364": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+    "getProxyImplementation(address)(address) 0x5d66C1782664115999C47c9fA5cd031f495D3e4F": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+    "getProxyImplementation(address)(address) 0xbd4AbB321138e8Eddc399cE64E66451294325a14": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+    "getProxyImplementation(address)(address) 0xEe018bAf058227872540AC60eFbd38b023d9dAe2": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+    "getProxyImplementation(address)(address) 0x10d7B35078d3baabB96Dd45a9143B94be65b12CD": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+    "getProxyImplementation(address)(address) 0x57b4C29DAee99a28E6E86778b499361294c134eA": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+    "getProxyImplementation(address)(address) 0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+    "getProxyImplementation(address)(address) 0x88FF1e5b602916615391F55854588EFcBB7663f0": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+    "getProxyImplementation(address)(address) 0x661235a238B11191211fa95D4Dd9E423d521E0Be": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+    "getProxyImplementation(address)(address) 0xA8B389A82e088b164cD03230e900980CcED34d29": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+    "getProxyAdmin(address)(address) 0x62c0a111929fa32cec2f76adba54c16afb6e8364": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "getProxyAdmin(address)(address) 0x5d66C1782664115999C47c9fA5cd031f495D3e4F": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "getProxyAdmin(address)(address) 0xbd4AbB321138e8Eddc399cE64E66451294325a14": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "getProxyAdmin(address)(address) 0xEe018bAf058227872540AC60eFbd38b023d9dAe2": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "getProxyAdmin(address)(address) 0x10d7B35078d3baabB96Dd45a9143B94be65b12CD": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "getProxyAdmin(address)(address) 0x57b4C29DAee99a28E6E86778b499361294c134eA": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "getProxyAdmin(address)(address) 0x88FF1e5b602916615391F55854588EFcBB7663f0": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "getProxyAdmin(address)(address) 0x661235a238B11191211fa95D4Dd9E423d521E0Be": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "getProxyAdmin(address)(address) 0xA8B389A82e088b164cD03230e900980CcED34d29": "0xd56045E68956FCe2576E680c95a4750cf8241f79",
+    "implementationName(address)(string) 0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f": "\"OVM_L1CrossDomainMessenger\""
+   }
+  }
+ },
+ "legacySlots": {
+  "OptimismPortal2.slot53 (legacy paused byte | superchainConfig)": "0x000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c00",
+  "OptimismPortal2.slot54 (legacy l2Oracle)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "OptimismPortal2.slot56 (legacy disputeGameFactory)": "0x00000000000000000000000010d7b35078d3baabb96dd45a9143b94be65b12cd",
+  "OptimismPortal2.slot59 (legacy respectedGameType | respectedGameTypeUpdatedAt)": "0x000000000000000000000000000000000000000000000000679150bb00000000",
+  "OptimismPortal2.slot63 (ethLockbox | legacy superRootsActive byte)": "0x000000000000000000000000bd4abb321138e8eddc399ce64e66451294325a14",
+  "L1CrossDomainMessenger.slot51 (legacy OVM owner)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "L1CrossDomainMessenger.slot151 (legacy reentrancy status)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "L1CrossDomainMessenger.slot251 (legacy superchainConfig)": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+  "L1StandardBridge.slot1 (legacy l2TokenBridge)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "L1StandardBridge.slot50 (legacy superchainConfig)": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+  "SystemConfig.slot106 (eip1559Denominator | eip1559Elasticity | operatorFee*)": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "SystemConfig.slot108 (superchainConfig | minBaseFee)": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+  "DelayedWETH.slot4 (legacy config/systemConfig spacer)": "0x00000000000000000000000062c0a111929fa32cec2f76adba54c16afb6e8364"
+ },
+ "disputeInfra": {
+  "anchorStateRegistries": [
+   {
+    "address": "0xde744491bcf6b2dd2f32146364ea1487d75e2509",
+    "bornBlock": 21344310,
+    "bornTime": "2024-12-06 15:20:11",
+    "version": "2.0.1-beta.3",
+    "games": 470,
+    "firstGame": 0,
+    "lastGame": 469,
+    "isCurrent": false,
+    "ethBalance": 0,
+    "respectedGameType": null,
+    "retirementTimestamp": null,
+    "anchorGame": null,
+    "paused": null,
+    "portal": null,
+    "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "disputeGameFactory": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+    "implSlot": "0x7a78aa7d5dec2f8b368ca13f00df2fa4e5de3c3f",
+    "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79"
+   },
+   {
+    "address": "0x2fc99fd16d8d3f6f66d164aa84e244c567e58a3d",
+    "bornBlock": 22182531,
+    "bornTime": "2025-04-02 16:50:23",
+    "version": "2.2.2",
+    "games": 452,
+    "firstGame": 470,
+    "lastGame": 921,
+    "isCurrent": false,
+    "ethBalance": 0,
+    "respectedGameType": 9,
+    "retirementTimestamp": null,
+    "anchorGame": "0x6009f05360bf8db7ed2c6b16ce4724bbcca2ee01",
+    "paused": null,
+    "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f",
+    "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "disputeGameFactory": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+    "implSlot": "0x7b465370bb7a333f99edd19599eb7fb1c2d3f8d2",
+    "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79"
+   },
+   {
+    "address": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "bornBlock": 22990599,
+    "bornTime": "2025-07-24 17:47:23",
+    "version": "4.0.0",
+    "games": 1718,
+    "firstGame": 922,
+    "lastGame": 2639,
+    "isCurrent": true,
+    "ethBalance": 0,
+    "respectedGameType": 9,
+    "retirementTimestamp": 1753379243,
+    "anchorGame": "0x38925ef2ec5451e7280cc7bbe08e73e74ebf8945",
+    "paused": 0,
+    "portal": null,
+    "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "disputeGameFactory": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+    "implSlot": "0x2b27299c577d4720100e2735b652444dcea652d0",
+    "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79"
+   }
+  ],
+  "delayedWETH": [
+   {
+    "address": "0x14773a8040ff22e3dcbb0c83ec8e33be7d920d38",
+    "bornBlock": 21344310,
+    "bornTime": "2024-12-06 15:20:11",
+    "version": "1.1.0",
+    "games": 190,
+    "firstGame": 0,
+    "lastGame": 191,
+    "isSystemConfigWeth": false,
+    "ethBalanceWei": 0,
+    "ethBalance": 0.0,
+    "totalSupply": 0,
+    "delay": 604800,
+    "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": null,
+    "proxyAdminOwner": null,
+    "implSlot": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+    "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "implVersionNow": "1.1.0"
+   },
+   {
+    "address": "0x3beaca17eae5643fb1479aa5f4b1ff75cc4b9b50",
+    "bornBlock": 21387926,
+    "bornTime": "2024-12-12 17:29:35",
+    "version": "1.1.0",
+    "games": 216,
+    "firstGame": 155,
+    "lastGame": 405,
+    "isSystemConfigWeth": false,
+    "ethBalanceWei": 80000000000000000,
+    "ethBalance": 0.08,
+    "totalSupply": 80000000000000000,
+    "delay": 604800,
+    "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": null,
+    "proxyAdminOwner": null,
+    "implSlot": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+    "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "implVersionNow": "1.1.0"
+   },
+   {
+    "address": "0xf6b1554f483c391414d3830927e3600c105aae6e",
+    "bornBlock": 21995971,
+    "bornTime": "2025-03-07 15:43:35",
+    "version": "1.3.0",
+    "games": 516,
+    "firstGame": 406,
+    "lastGame": 921,
+    "isSystemConfigWeth": false,
+    "ethBalanceWei": 0,
+    "ethBalance": 0.0,
+    "totalSupply": 0,
+    "delay": 302400,
+    "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": null,
+    "proxyAdminOwner": null,
+    "implSlot": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
+    "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "implVersionNow": "1.3.0"
+   },
+   {
+    "address": "0x3f7b07a5d638024a37a776fa228fe90b317af6de",
+    "bornBlock": 22990599,
+    "bornTime": "2025-07-24 17:47:23",
+    "version": "1.5.0",
+    "games": 280,
+    "firstGame": 922,
+    "lastGame": 1201,
+    "isSystemConfigWeth": false,
+    "ethBalanceWei": 0,
+    "ethBalance": 0.0,
+    "totalSupply": 0,
+    "delay": 302400,
+    "owner": null,
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": "0x62c0a111929fa32cec2f76adba54c16afb6e8364",
+    "proxyAdminOwner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "implSlot": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+    "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "implVersionNow": "1.5.0"
+   },
+   {
+    "address": "0x6cbd14da021e39a7895ae151ac72ecc9023e87f6",
+    "bornBlock": 23491328,
+    "bornTime": "2025-10-02 16:35:23",
+    "version": "1.5.0",
+    "games": 1064,
+    "firstGame": 1202,
+    "lastGame": 2265,
+    "isSystemConfigWeth": false,
+    "ethBalanceWei": 0,
+    "ethBalance": 0.0,
+    "totalSupply": 0,
+    "delay": 302400,
+    "owner": null,
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": "0x62c0a111929fa32cec2f76adba54c16afb6e8364",
+    "proxyAdminOwner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "implSlot": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+    "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "implVersionNow": "1.5.0"
+   },
+   {
+    "address": "0x57b4c29daee99a28e6e86778b499361294c134ea",
+    "bornBlock": 25397811,
+    "bornTime": "2026-06-25 23:05:47",
+    "version": "2.0.0",
+    "games": 374,
+    "firstGame": 2266,
+    "lastGame": 2639,
+    "isSystemConfigWeth": true,
+    "ethBalanceWei": 5710376000000000000,
+    "ethBalance": 5.710376,
+    "totalSupply": 5710376000000000000,
+    "delay": 302400,
+    "owner": null,
+    "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+    "systemConfig": null,
+    "proxyAdminOwner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+    "implSlot": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+    "adminSlot": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "implVersionNow": "2.0.0"
+   }
+  ]
+ },
+ "custodyAtPin": {
+  "block": 26433900,
+  "time": "2026-11-17 09:34:35",
+  "OptimismPortal_before": 0.0,
+  "OptimismPortal_after": 0.0,
+  "L1CrossDomainMessenger_before": 0.0,
+  "L1CrossDomainMessenger_after": 0.0,
+  "L1StandardBridge_before": 0.0,
+  "L1StandardBridge_after": 0.0,
+  "ETHLockbox_before": 23088.758336628212,
+  "ETHLockbox_after": 23088.758336628212
+ },
+ "gameCensus": {
+  "gameCount": 2640,
+  "lineageClasses": [
+   {
+    "type": 1,
+    "gameVersion": "1.3.1-beta.3",
+    "gameASR": "0xde744491bcf6b2dd2f32146364ea1487d75e2509",
+    "weth": "0x14773a8040ff22e3dcbb0c83ec8e33be7d920d38",
+    "absolutePrestate": "0x038512e02c4c3f7bdaec27d00edf55b7155e0905301e1a88083e4e0a6764d54c",
+    "n": 152,
+    "firstIndex": 0,
+    "lastIndex": 151,
+    "firstCreated": "2024-12-06 20:25:47",
+    "lastCreated": "2025-01-13 15:41:35",
+    "creators": {
+     "0x65436ddcbc026f34118954f229f7f132b696b3b4": 152
+    }
+   },
+   {
+    "type": 1,
+    "gameVersion": "1.3.0",
+    "gameASR": "0xde744491bcf6b2dd2f32146364ea1487d75e2509",
+    "weth": "0x14773a8040ff22e3dcbb0c83ec8e33be7d920d38",
+    "absolutePrestate": "0x03c50b9fd04bdadc228205f340767bbf2d01a030aec39903120d3559d94bb8cc",
+    "n": 38,
+    "firstIndex": 152,
+    "lastIndex": 191,
+    "firstCreated": "2025-01-13 21:41:59",
+    "lastCreated": "2025-01-23 03:56:59",
+    "creators": {
+     "0x65436ddcbc026f34118954f229f7f132b696b3b4": 38
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.3.0",
+    "gameASR": "0xde744491bcf6b2dd2f32146364ea1487d75e2509",
+    "weth": "0x3beaca17eae5643fb1479aa5f4b1ff75cc4b9b50",
+    "absolutePrestate": "0x03c50b9fd04bdadc228205f340767bbf2d01a030aec39903120d3559d94bb8cc",
+    "n": 216,
+    "firstIndex": 155,
+    "lastIndex": 405,
+    "firstCreated": "2025-01-14 11:58:47",
+    "lastCreated": "2025-03-17 14:59:11",
+    "creators": {
+     "0x65436ddcbc026f34118954f229f7f132b696b3b4": 214,
+     "0x21d6658c6430021a6b5c2bdb245910fd633e6d08": 2
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.3.1",
+    "gameASR": "0xde744491bcf6b2dd2f32146364ea1487d75e2509",
+    "weth": "0xf6b1554f483c391414d3830927e3600c105aae6e",
+    "absolutePrestate": "0x039facea52b20c605c05efb0a33560a92de7074218998f75bcdf61e8989cb5d9",
+    "n": 64,
+    "firstIndex": 406,
+    "lastIndex": 469,
+    "firstCreated": "2025-03-17 20:59:11",
+    "lastCreated": "2025-04-02 15:01:59",
+    "creators": {
+     "0x65436ddcbc026f34118954f229f7f132b696b3b4": 64
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.4.1",
+    "gameASR": "0x2fc99fd16d8d3f6f66d164aa84e244c567e58a3d",
+    "weth": "0xf6b1554f483c391414d3830927e3600c105aae6e",
+    "absolutePrestate": "0x039facea52b20c605c05efb0a33560a92de7074218998f75bcdf61e8989cb5d9",
+    "n": 88,
+    "firstIndex": 470,
+    "lastIndex": 557,
+    "firstCreated": "2025-04-02 21:01:59",
+    "lastCreated": "2025-04-24 15:06:59",
+    "creators": {
+     "0x65436ddcbc026f34118954f229f7f132b696b3b4": 88
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.4.1",
+    "gameASR": "0x2fc99fd16d8d3f6f66d164aa84e244c567e58a3d",
+    "weth": "0xf6b1554f483c391414d3830927e3600c105aae6e",
+    "absolutePrestate": "0x03ee2917da962ec266b091f4b62121dc9682bb0db534633707325339f99ee405",
+    "n": 51,
+    "firstIndex": 558,
+    "lastIndex": 608,
+    "firstCreated": "2025-04-24 21:07:11",
+    "lastCreated": "2025-05-07 09:09:23",
+    "creators": {
+     "0x65436ddcbc026f34118954f229f7f132b696b3b4": 51
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.4.1",
+    "gameASR": "0x2fc99fd16d8d3f6f66d164aa84e244c567e58a3d",
+    "weth": "0xf6b1554f483c391414d3830927e3600c105aae6e",
+    "absolutePrestate": "0x03682932cec7ce0a3874b19675a6bbc923054a7b321efc7d3835187b172494b6",
+    "n": 313,
+    "firstIndex": 609,
+    "lastIndex": 921,
+    "firstCreated": "2025-05-07 15:09:23",
+    "lastCreated": "2025-07-24 15:25:59",
+    "creators": {
+     "0x65436ddcbc026f34118954f229f7f132b696b3b4": 313
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.7.0",
+    "gameASR": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "weth": "0x3f7b07a5d638024a37a776fa228fe90b317af6de",
+    "absolutePrestate": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
+    "n": 280,
+    "firstIndex": 922,
+    "lastIndex": 1201,
+    "firstCreated": "2025-07-24 21:26:11",
+    "lastCreated": "2025-10-02 16:13:47",
+    "creators": {
+     "0x65436ddcbc026f34118954f229f7f132b696b3b4": 280
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.7.0",
+    "gameASR": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "weth": "0x6cbd14da021e39a7895ae151ac72ecc9023e87f6",
+    "absolutePrestate": "0x03eb07101fbdeaf3f04d9fb76526362c1eea2824e4c6e970bdb19675b72e4fc8",
+    "n": 216,
+    "firstIndex": 1202,
+    "lastIndex": 1417,
+    "firstCreated": "2025-10-02 22:13:59",
+    "lastCreated": "2025-11-25 16:52:35",
+    "creators": {
+     "0x65436ddcbc026f34118954f229f7f132b696b3b4": 216
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "1.8.0",
+    "gameASR": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "weth": "0x6cbd14da021e39a7895ae151ac72ecc9023e87f6",
+    "absolutePrestate": "0x03caa1871bb9fe7f9b11217c245c16e4ded33367df5b3ccb2c6d0a847a217d1b",
+    "n": 304,
+    "firstIndex": 1418,
+    "lastIndex": 1721,
+    "firstCreated": "2025-11-25 22:52:47",
+    "lastCreated": "2026-02-09 17:53:59",
+    "creators": {
+     "0x65436ddcbc026f34118954f229f7f132b696b3b4": 304
+    }
+   },
+   {
+    "type": 0,
+    "gameVersion": "2.2.0",
+    "gameASR": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "weth": "0x6cbd14da021e39a7895ae151ac72ecc9023e87f6",
+    "absolutePrestate": "0x033c000916b4a88cfffeceddd6cf0f4be3897a89195941e5a7c3f8209b4dbb6e",
+    "n": 544,
+    "firstIndex": 1722,
+    "lastIndex": 2265,
+    "firstCreated": "2026-02-09 23:54:11",
+    "lastCreated": "2026-06-25 19:50:35",
+    "creators": {
+     "0x65436ddcbc026f34118954f229f7f132b696b3b4": 544
+    }
+   },
+   {
+    "type": 8,
+    "gameVersion": "2.4.2",
+    "gameASR": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "weth": "0x57b4c29daee99a28e6e86778b499361294c134ea",
+    "absolutePrestate": "0x0337ecb3604c0b40c352e0c7711beb17a212d583f4fe956fd8d66e29ad5f9025",
+    "n": 256,
+    "firstIndex": 2266,
+    "lastIndex": 2521,
+    "firstCreated": "2026-06-26 04:15:35",
+    "lastCreated": "2026-09-24 15:01:23",
+    "creators": {
+     "0x65436ddcbc026f34118954f229f7f132b696b3b4": 130,
+     "0x3832bfbef03173e4c49a00ec0dd178817a02d177": 117,
+     "0x0976d8e6f4c6d7e4be101988c680ba7736b6e294": 9
+    }
+   },
+   {
+    "type": 9,
+    "gameVersion": "0.8.0",
+    "gameASR": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "weth": "0x57b4c29daee99a28e6e86778b499361294c134ea",
+    "absolutePrestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df",
+    "n": 117,
+    "firstIndex": 2522,
+    "lastIndex": 2638,
+    "firstCreated": "2026-09-24 17:18:11",
+    "lastCreated": "2026-11-16 19:33:23",
+    "creators": {
+     "0x3832bfbef03173e4c49a00ec0dd178817a02d177": 107,
+     "0x0976d8e6f4c6d7e4be101988c680ba7736b6e294": 7,
+     "0x1d0519eed308bcd49e4ebc149284f83ebc275284": 1,
+     "0xe3b96e6847fa570690d89937ddc0ef4a71537e89": 1,
+     "0x05f97bc048711287e912a72f4dbaa8faa7599eb5": 1
+    }
+   },
+   {
+    "type": 9,
+    "gameVersion": "0.8.0",
+    "gameASR": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "weth": "0x57b4c29daee99a28e6e86778b499361294c134ea",
+    "absolutePrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9",
+    "n": 1,
+    "firstIndex": 2639,
+    "lastIndex": 2639,
+    "firstCreated": "2026-11-17 05:49:35",
+    "lastCreated": "2026-11-17 05:49:35",
+    "creators": {
+     "0x3832bfbef03173e4c49a00ec0dd178817a02d177": 1
+    }
+   }
+  ],
+  "byTypeCreatorStatus": [
+   {
+    "type": 0,
+    "creator": "0x65436ddcbc026f34118954f229f7f132b696b3b4",
+    "status": "DEFENDER_WINS",
+    "claimValid": true,
+    "retired": false,
+    "n": 1344
+   },
+   {
+    "type": 0,
+    "creator": "0x65436ddcbc026f34118954f229f7f132b696b3b4",
+    "status": "DEFENDER_WINS",
+    "claimValid": false,
+    "retired": true,
+    "n": 730
+   },
+   {
+    "type": 1,
+    "creator": "0x65436ddcbc026f34118954f229f7f132b696b3b4",
+    "status": "DEFENDER_WINS",
+    "claimValid": false,
+    "retired": true,
+    "n": 190
+   },
+   {
+    "type": 8,
+    "creator": "0x65436ddcbc026f34118954f229f7f132b696b3b4",
+    "status": "DEFENDER_WINS",
+    "claimValid": true,
+    "retired": false,
+    "n": 130
+   },
+   {
+    "type": 8,
+    "creator": "0x3832bfbef03173e4c49a00ec0dd178817a02d177",
+    "status": "DEFENDER_WINS",
+    "claimValid": true,
+    "retired": false,
+    "n": 117
+   },
+   {
+    "type": 9,
+    "creator": "0x3832bfbef03173e4c49a00ec0dd178817a02d177",
+    "status": "DEFENDER_WINS",
+    "claimValid": true,
+    "retired": false,
+    "n": 94
+   },
+   {
+    "type": 8,
+    "creator": "0x0976d8e6f4c6d7e4be101988c680ba7736b6e294",
+    "status": "CHALLENGER_WINS",
+    "claimValid": false,
+    "retired": false,
+    "n": 9
+   },
+   {
+    "type": 9,
+    "creator": "0x0976d8e6f4c6d7e4be101988c680ba7736b6e294",
+    "status": "CHALLENGER_WINS",
+    "claimValid": false,
+    "retired": false,
+    "n": 7
+   },
+   {
+    "type": 9,
+    "creator": "0x3832bfbef03173e4c49a00ec0dd178817a02d177",
+    "status": "DEFENDER_WINS",
+    "claimValid": false,
+    "retired": false,
+    "n": 7
+   },
+   {
+    "type": 9,
+    "creator": "0x3832bfbef03173e4c49a00ec0dd178817a02d177",
+    "status": "IN_PROGRESS",
+    "claimValid": false,
+    "retired": false,
+    "n": 7
+   },
+   {
+    "type": 0,
+    "creator": "0x21d6658c6430021a6b5c2bdb245910fd633e6d08",
+    "status": "DEFENDER_WINS",
+    "claimValid": false,
+    "retired": true,
+    "n": 1
+   },
+   {
+    "type": 0,
+    "creator": "0x21d6658c6430021a6b5c2bdb245910fd633e6d08",
+    "status": "CHALLENGER_WINS",
+    "claimValid": false,
+    "retired": true,
+    "n": 1
+   },
+   {
+    "type": 9,
+    "creator": "0x1d0519eed308bcd49e4ebc149284f83ebc275284",
+    "status": "CHALLENGER_WINS",
+    "claimValid": false,
+    "retired": false,
+    "n": 1
+   },
+   {
+    "type": 9,
+    "creator": "0xe3b96e6847fa570690d89937ddc0ef4a71537e89",
+    "status": "CHALLENGER_WINS",
+    "claimValid": false,
+    "retired": false,
+    "n": 1
+   },
+   {
+    "type": 9,
+    "creator": "0x05f97bc048711287e912a72f4dbaa8faa7599eb5",
+    "status": "IN_PROGRESS",
+    "claimValid": false,
+    "retired": false,
+    "n": 1
+   }
+  ],
+  "blacklisted": [],
+  "nonRetiredWithForeignASR": [],
+  "claimValid": 1685,
+  "retired": 922,
+  "inProgress": [
+   {
+    "index": 2632,
+    "type": 9,
+    "game": "0x744f0c04b36dae6ede21df1b8e15828f053d54cf",
+    "creator": "0x3832bfbef03173e4c49a00ec0dd178817a02d177",
+    "createdAt": "2026-11-14 05:47:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 2633,
+    "type": 9,
+    "game": "0x0ee6062e27037cb177187a20ef50f40aad907274",
+    "creator": "0x3832bfbef03173e4c49a00ec0dd178817a02d177",
+    "createdAt": "2026-11-14 17:48:11",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 2634,
+    "type": 9,
+    "game": "0xa820eae432e3459c19008ef7b586272db65e2018",
+    "creator": "0x3832bfbef03173e4c49a00ec0dd178817a02d177",
+    "createdAt": "2026-11-15 05:48:35",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 2635,
+    "type": 9,
+    "game": "0xefe72925d429386949834b780b99a8d13f4e92d7",
+    "creator": "0x3832bfbef03173e4c49a00ec0dd178817a02d177",
+    "createdAt": "2026-11-15 17:48:59",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 2636,
+    "type": 9,
+    "game": "0x51918a4ebe8440bd9b0f1d29ce4a326c15c47c7f",
+    "creator": "0x3832bfbef03173e4c49a00ec0dd178817a02d177",
+    "createdAt": "2026-11-16 05:49:11",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 2637,
+    "type": 9,
+    "game": "0x73f3a9ed6671553e2bd51c80dd5792cb16914a0d",
+    "creator": "0x3832bfbef03173e4c49a00ec0dd178817a02d177",
+    "createdAt": "2026-11-16 17:49:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 2638,
+    "type": 9,
+    "game": "0x40bec00713a38ee5fd697764d50f0055ba4942cc",
+    "creator": "0x05f97bc048711287e912a72f4dbaa8faa7599eb5",
+    "createdAt": "2026-11-16 19:33:23",
+    "prestate": "0x031ac6f15c19010da258f5cb633ef6ca9318c2d0f244bea6b2045ce6b790e1df"
+   },
+   {
+    "index": 2639,
+    "type": 9,
+    "game": "0x4393946a3786936fc0435bdbe248fe1748d791b0",
+    "creator": "0x3832bfbef03173e4c49a00ec0dd178817a02d177",
+    "createdAt": "2026-11-17 05:49:35",
+    "prestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9"
+   }
+  ]
+ },
+ "rootVerification": {
+  "method": "output root recomputed from the L2 block header (post-Isthmus withdrawalsRoot); super games: extraData decoded, single-entry check, block = genesis + (timestamp-genesisTime)/blockTime",
+  "table": {
+   "(0, 'DEFENDER_WINS', True, True)": 1344,
+   "(8, 'DEFENDER_WINS', True, True)": 247,
+   "(8, 'CHALLENGER_WINS', False, 'NO_SUCH_L2_BLOCK')": 9,
+   "(9, 'DEFENDER_WINS', True, True)": 94,
+   "(9, 'CHALLENGER_WINS', False, False)": 9,
+   "(9, 'DEFENDER_WINS', False, True)": 7,
+   "(9, 'IN_PROGRESS', False, True)": 7,
+   "(9, 'IN_PROGRESS', False, False)": 1
+  },
+  "anomalies": [
+   {
+    "index": 2638,
+    "type": 9,
+    "game": "0x40bec00713a38ee5fd697764d50f0055ba4942cc",
+    "creator": "0x05f97bc048711287e912a72f4dbaa8faa7599eb5",
+    "status": 0,
+    "claimValid": false,
+    "l2Block": 61359179,
+    "claimedOutput": "0x4bf7a459f2a916c09923fe3d8290e223d982d7d4a4c1f7839952b596ddb6f493",
+    "computedOutput": "0xaf30eecb2fb746b58c5ab9f302e25f16d7118aa05aec7454b869263b7a8aeadb",
+    "match": false
+   }
+  ]
+ }
+}

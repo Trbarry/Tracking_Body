@@ -28,7 +28,7 @@ for chain in sys.argv[1:]:
             n = e["event"].split("(")[0]
             if n == "Upgraded":
                 add(e["block"], e["tx"], name, "0x" + e["topics"][0][-40:])
-            if name == "AddressManager" and n == "AddressSet":
+            if name == "AddressManager" and n == "AddressSet" and e["topics"][0] == "0x3b4a6791a6879d27c0ceeea3f78f8ebe66a01905f4a1290a8c6aff3e85f4665a":  # keccak("OVM_L1CrossDomainMessenger")
                 add(e["block"], e["tx"], "L1CrossDomainMessenger(AddressManager)", "0x" + e["data"][26:66])
         if "implSlotHistory" in r:
             for b, a in r["implSlotHistory"]:

@@ -1293,8 +1293,8 @@
    "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
    "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
    "UNREVIEWED_CROSS-UPGRADE_EDGE": "the registry-binding check existed v4.0.0..v6.0.0 and was removed at v7.0.0: from then on only retirementTimestamp separates previous-registry games from the current registry (W0: current registry returns isGameRegistered = true for game 9827, which is bound to 0x1c68ECfb\u2026). A game created after the retirement but bound to an old registry would be accepted. See PRIM-W0-01.",
-   "NEXT_EXPERIMENT": "Exhaustive scan: for every non-retired game on OP/Ink/Soneium/Unichain read anchorStateRegistry() and compare with the chain registry (evidence/W0/games-registry-binding-*.json); plus ImplementationSet history for types that were not replaced at the registry switch.",
-   "priority": "P0",
+   "NEXT_EXPERIMENT": "closed: C11 for OP/Ink/Unichain/Soneium by W0 \u2014 complete ImplementationSet history of the four factories (250 logs, evidence/W0/dgf-implementation-registry-binding.json): every implementation active at or after each current registry's retirement is bound to that registry, so no post-retirement game can carry an older registry; mechanism reproduced in test/W0/W0Lineage.t.sol. Repeat the scan after any future registry replacement (migrate).",
+   "priority": "P1",
    "pass_a_status": "benign",
    "same_mechanism_as": [
     "A-031",
@@ -1761,8 +1761,8 @@
    "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
    "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
    "UNREVIEWED_CROSS-UPGRADE_EDGE": "clone-argument layout differs between v5.0.0 (no game type in clone data) and v6.0.0+ (uint32 game type inserted before extraData): an implementation + args registered under one factory version and used under the next is mis-parsed. OP Mainnet first used gameArgs at FDG 2.2.0 (v6 layout); other chains and non-OPCM game types unchecked.",
-   "NEXT_EXPERIMENT": "Read ImplementationArgsSet logs on the four factories and, for each (type, impl), confirm the implementation version reads the layout of the factory version live at that time.",
-   "priority": "P1",
+   "NEXT_EXPERIMENT": "closed: C11 for OP/Ink/Unichain/Soneium by W0 \u2014 the first ImplementationArgsSet on every chain is the FaultDisputeGame 2.2.0 registration (L1 blocks 24421512 / 24421512 / 24427874 / 24478557), i.e. already the v6.0.0 layout; no v5-layout arguments were ever stored (evidence/W0/dgf-implementation-set-logs-19800000-26433900.json).",
+   "priority": "P2",
    "pass_a_status": "benign",
    "same_mechanism_as": [
     "A-008"
@@ -2270,7 +2270,7 @@
    "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
    "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
    "UNREVIEWED_CROSS-UPGRADE_EDGE": "same as PRIM-0903 (A-044) (canonical).",
-   "NEXT_EXPERIMENT": "same experiment as A-044: Exhaustive scan: for every non-retired game on OP/Ink/Soneium/Unichain read anchorStateRegistry() and compare with the chain registry (evidence/W0/games-registry-binding-*.json); plus ImplementationSet history for types that were not replaced at the registry switch.",
+   "NEXT_EXPERIMENT": "same experiment as A-044: closed: C11 for OP/Ink/Unichain/Soneium by W0 \u2014 complete ImplementationSet history of the four factories (250 logs, evidence/W0/dgf-implementation-registry-binding.json): every implementation active at or after each current registry's retirement is bound to that registry, so no post-retirement game can carry an older registry; mechanism reproduced in test/W0/W0Lineage.t.sol. Repeat the scan after any future registry replacement (migrate).",
    "priority": "P2",
    "pass_a_status": "benign",
    "same_mechanism_as": [
@@ -2433,8 +2433,8 @@
    "HISTORICAL_BRANCHES": "OP Mainnet factory 0xe5965Ab5\u2026 (never replaced): FDG 1.4.1 bound to registry 0x1c68ECfb\u2026 up to index 9827; FDG 1.7.0 from 9828 (U16), 1.8.0 from 12805, 2.2.0 from 14633, type 8 FDG 2.4.2 from 17905, type 9 SFDG 0.8.0 from 20095; retirementTimestamp unchanged since U16. Soneium respects type 5. Ink/Soneium/Unichain histories not reconstructed here.",
    "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
    "UNREVIEWED_CROSS-UPGRADE_EDGE": "implementations registered under ANY earlier release for an omitted type stay creatable in the legacy factory after migrate; PASS A read gameImpls for types 0..10 only.",
-   "NEXT_EXPERIMENT": "Read gameImpls(t) for t in {2,3,6,7,254,255,1337} on the OP Mainnet and Unichain factories at N and ImplementationSet logs for those topics since deployment.",
-   "priority": "P1",
+   "NEXT_EXPERIMENT": "closed: C10 for OP/Ink/Unichain/Soneium by W0 \u2014 no ImplementationSet log for game types 2,3,6,7,254,255,1337 on any of the four factories since their deployment (only types 0,1,8,5,9 were ever set; 4 and 10 only cleared): evidence/W0/dgf-implementation-set-logs-19800000-26433900.json.",
+   "priority": "P2",
    "pass_a_status": "benign",
    "same_mechanism_as": []
   },

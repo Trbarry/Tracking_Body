@@ -1,0 +1,353 @@
+{
+ "meta": {
+  "head": 26434571,
+  "window": 10000,
+  "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed",
+  "l1cdm": "0x25ace71c97b33cc4729cf772ae268934f7ab5fa1",
+  "note": "era i = blocks [blockOf(i), blockOf(i+1)-1]; proves are taken from the last <=10k blocks of the era"
+ },
+ "eras": [
+  {
+   "era": "BEDROCK_STEP1",
+   "eraStart": 17422444,
+   "eraEnd": 17423157,
+   "scan": {
+    "from": 17422444,
+    "to": 17423157,
+    "withdrawalProvenLogs": 0,
+    "distinctHashes": 0,
+    "unfinalizedAtHead": 0
+   },
+   "proves": 0,
+   "provesUnfinalizedAtHead": 0,
+   "failedMessages": 0,
+   "failedStillFailedAtHead": 0,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "BEDROCK",
+   "eraStart": 17423158,
+   "eraEnd": 18367319,
+   "scan": {
+    "from": 18357320,
+    "to": 18367319,
+    "withdrawalProvenLogs": 43,
+    "distinctHashes": 43,
+    "unfinalizedAtHead": 17
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 1,
+   "failedMessages": 2,
+   "failedStillFailedAtHead": 2,
+   "undecodableProveTxs": 16,
+   "limits": []
+  },
+  {
+   "era": "PROTOCOL_VERSIONS_INIT",
+   "eraStart": 18367320,
+   "eraEnd": 19064588,
+   "scan": {
+    "from": 19054589,
+    "to": 19064588,
+    "withdrawalProvenLogs": 28,
+    "distinctHashes": 28,
+    "unfinalizedAtHead": 3
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 3,
+   "failedMessages": 1,
+   "failedStillFailedAtHead": 1,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "SUPERCHAIN_CONFIG_INIT",
+   "eraStart": 19064589,
+   "eraEnd": 19314492,
+   "scan": {
+    "from": 19304493,
+    "to": 19314492,
+    "withdrawalProvenLogs": 41,
+    "distinctHashes": 41,
+    "unfinalizedAtHead": 2
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 1,
+   "failedMessages": 0,
+   "failedStillFailedAtHead": 0,
+   "undecodableProveTxs": 1,
+   "limits": []
+  },
+  {
+   "era": "V1_2_0",
+   "eraStart": 19314493,
+   "eraEnd": 19634865,
+   "scan": {
+    "from": 19624866,
+    "to": 19634865,
+    "withdrawalProvenLogs": 42,
+    "distinctHashes": 42,
+    "unfinalizedAtHead": 2
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 1,
+   "failedMessages": 0,
+   "failedStillFailedAtHead": 0,
+   "undecodableProveTxs": 1,
+   "limits": []
+  },
+  {
+   "era": "V1_3_0",
+   "eraStart": 19634866,
+   "eraEnd": 19884569,
+   "scan": {
+    "from": 19874570,
+    "to": 19884569,
+    "withdrawalProvenLogs": 47,
+    "distinctHashes": 47,
+    "unfinalizedAtHead": 0
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 0,
+   "failedMessages": 0,
+   "failedStillFailedAtHead": 0,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "FP_PROXIES_INIT",
+   "eraStart": 19884570,
+   "eraEnd": 20062695,
+   "scan": {
+    "from": 20052696,
+    "to": 20062695,
+    "withdrawalProvenLogs": 8,
+    "distinctHashes": 8,
+    "unfinalizedAtHead": 2
+   },
+   "proves": 8,
+   "provesUnfinalizedAtHead": 2,
+   "failedMessages": 0,
+   "failedStillFailedAtHead": 0,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "V1_4_0_FP",
+   "eraStart": 20062696,
+   "eraEnd": 20723923,
+   "scan": {
+    "from": 20713924,
+    "to": 20723923,
+    "withdrawalProvenLogs": 19,
+    "distinctHashes": 19,
+    "unfinalizedAtHead": 1
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 1,
+   "failedMessages": 1,
+   "failedStillFailedAtHead": 1,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "V1_6_0_ASR",
+   "eraStart": 20723924,
+   "eraEnd": 21695023,
+   "scan": {
+    "from": 21685024,
+    "to": 21695023,
+    "withdrawalProvenLogs": 44,
+    "distinctHashes": 44,
+    "unfinalizedAtHead": 0
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 0,
+   "failedMessages": 0,
+   "failedStillFailedAtHead": 0,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "V1_8_0",
+   "eraStart": 21695024,
+   "eraEnd": 22182530,
+   "scan": {
+    "from": 22172531,
+    "to": 22182530,
+    "withdrawalProvenLogs": 8,
+    "distinctHashes": 7,
+    "unfinalizedAtHead": 1
+   },
+   "proves": 7,
+   "provesUnfinalizedAtHead": 1,
+   "failedMessages": 1,
+   "failedStillFailedAtHead": 1,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "U13_V2",
+   "eraStart": 22182531,
+   "eraEnd": 22339995,
+   "scan": {
+    "from": 22329996,
+    "to": 22339995,
+    "withdrawalProvenLogs": 38,
+    "distinctHashes": 38,
+    "unfinalizedAtHead": 5
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 5,
+   "failedMessages": 0,
+   "failedStillFailedAtHead": 0,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "U14_V3",
+   "eraStart": 22339996,
+   "eraEnd": 22990598,
+   "scan": {
+    "from": 22980599,
+    "to": 22990598,
+    "withdrawalProvenLogs": 43,
+    "distinctHashes": 42,
+    "unfinalizedAtHead": 2
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 2,
+   "failedMessages": 6,
+   "failedStillFailedAtHead": 3,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "U16_V4",
+   "eraStart": 22990599,
+   "eraEnd": 23491327,
+   "scan": {
+    "from": 23481328,
+    "to": 23491327,
+    "withdrawalProvenLogs": 23,
+    "distinctHashes": 23,
+    "unfinalizedAtHead": 1
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 1,
+   "failedMessages": 2,
+   "failedStillFailedAtHead": 0,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "U16A_V4_1",
+   "eraStart": 23491328,
+   "eraEnd": 23877376,
+   "scan": {
+    "from": 23867377,
+    "to": 23877376,
+    "withdrawalProvenLogs": 24,
+    "distinctHashes": 23,
+    "unfinalizedAtHead": 3
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 3,
+   "failedMessages": 2,
+   "failedStillFailedAtHead": 0,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "U17_V5",
+   "eraStart": 23877377,
+   "eraEnd": 24421511,
+   "scan": {
+    "from": 24411512,
+    "to": 24421511,
+    "withdrawalProvenLogs": 40,
+    "distinctHashes": 40,
+    "unfinalizedAtHead": 2
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 2,
+   "failedMessages": 0,
+   "failedStillFailedAtHead": 0,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "U18_V6",
+   "eraStart": 24421512,
+   "eraEnd": 25397810,
+   "scan": {
+    "from": 25387811,
+    "to": 25397810,
+    "withdrawalProvenLogs": 26,
+    "distinctHashes": 26,
+    "unfinalizedAtHead": 0
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 0,
+   "failedMessages": 3,
+   "failedStillFailedAtHead": 3,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "U19_V7",
+   "eraStart": 25397811,
+   "eraEnd": 26048618,
+   "scan": {
+    "from": 26038619,
+    "to": 26048618,
+    "withdrawalProvenLogs": 24,
+    "distinctHashes": 24,
+    "unfinalizedAtHead": 0
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 0,
+   "failedMessages": 1,
+   "failedStillFailedAtHead": 1,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "U20_V8",
+   "eraStart": 26048619,
+   "eraEnd": 26430858,
+   "scan": {
+    "from": 26420859,
+    "to": 26430858,
+    "withdrawalProvenLogs": 42,
+    "distinctHashes": 42,
+    "unfinalizedAtHead": 42
+   },
+   "proves": 14,
+   "provesUnfinalizedAtHead": 14,
+   "failedMessages": 4,
+   "failedStillFailedAtHead": 3,
+   "undecodableProveTxs": 0,
+   "limits": []
+  },
+  {
+   "era": "U21_V9",
+   "eraStart": 26430859,
+   "eraEnd": 26434571,
+   "scan": {
+    "from": 26430859,
+    "to": 26434571,
+    "withdrawalProvenLogs": 4,
+    "distinctHashes": 4,
+    "unfinalizedAtHead": 4
+   },
+   "proves": 4,
+   "provesUnfinalizedAtHead": 4,
+   "failedMessages": 0,
+   "failedStillFailedAtHead": 0,
+   "undecodableProveTxs": 0,
+   "limits": []
+  }
+ ]
+}

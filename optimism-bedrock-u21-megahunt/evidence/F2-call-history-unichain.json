@@ -562,7 +562,495 @@
      "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
     }
    ]
+  },
+  {
+   "name": "dgf.gameImpls(7)",
+   "to": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    7
+   ],
+   "calldata": "0x1b685b9e0000000000000000000000000000000000000000000000000000000000000007",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 21116372,
+     "timestamp": 1730748467,
+     "utc": "2024-11-04 19:27:47",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(8)",
+   "to": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    8
+   ],
+   "calldata": "0x1b685b9e0000000000000000000000000000000000000000000000000000000000000008",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 21116372,
+     "timestamp": 1730748467,
+     "utc": "2024-11-04 19:27:47",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+     "block": 24427874,
+     "timestamp": 1770744623,
+     "utc": "2026-02-10 17:30:23",
+     "value": "0x0000000000000000000000006ddba09bc4ccb0d6ca9fc5350580f74165707499"
+    },
+    {
+     "block": 25475307,
+     "timestamp": 1783362755,
+     "utc": "2026-07-06 18:32:35",
+     "value": "0x0000000000000000000000002dda3584b51ef5236f7726dea5a0fb6b3ca94aec"
+    },
+    {
+     "block": 26048619,
+     "timestamp": 1790268683,
+     "utc": "2026-09-24 16:51:23",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(9)",
+   "to": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    9
+   ],
+   "calldata": "0x1b685b9e0000000000000000000000000000000000000000000000000000000000000009",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 21116372,
+     "timestamp": 1730748467,
+     "utc": "2024-11-04 19:27:47",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+     "block": 26048619,
+     "timestamp": 1790268683,
+     "utc": "2026-09-24 16:51:23",
+     "value": "0x00000000000000000000000019af533cc2a2a55786dcb8672aa5717e64213208"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(10)",
+   "to": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    10
+   ],
+   "calldata": "0x1b685b9e000000000000000000000000000000000000000000000000000000000000000a",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 21116372,
+     "timestamp": 1730748467,
+     "utc": "2024-11-04 19:27:47",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(254)",
+   "to": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    254
+   ],
+   "calldata": "0x1b685b9e00000000000000000000000000000000000000000000000000000000000000fe",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 21116372,
+     "timestamp": 1730748467,
+     "utc": "2024-11-04 19:27:47",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.gameImpls(255)",
+   "to": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+   "sig": "gameImpls(uint32)",
+   "args": [
+    255
+   ],
+   "calldata": "0x1b685b9e00000000000000000000000000000000000000000000000000000000000000ff",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 21116372,
+     "timestamp": 1730748467,
+     "utc": "2024-11-04 19:27:47",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    }
+   ]
+  },
+  {
+   "name": "dgf.owner()",
+   "to": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+   "sig": "owner()",
+   "args": [],
+   "calldata": "0x8da5cb5b",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 21116372,
+     "timestamp": 1730748467,
+     "utc": "2024-11-04 19:27:47",
+     "value": "0x000000000000000000000000fff2f7417be1a4e2ad1f26f538ad6f67d0fe11f2"
+    },
+    {
+     "block": 21116378,
+     "timestamp": 1730748539,
+     "utc": "2024-11-04 19:28:59",
+     "value": "0x0000000000000000000000006d5b183f538abb8572f5cd17109c617b994d5833"
+    },
+    {
+     "block": 25976344,
+     "timestamp": 1789396679,
+     "utc": "2026-09-14 14:37:59",
+     "value": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a"
+    }
+   ]
+  },
+  {
+   "name": "proxyAdmin.owner()",
+   "to": "0x3B73Fa8d82f511A3caE17B5a26E4E1a2d5E2f2A4",
+   "sig": "owner()",
+   "args": [],
+   "calldata": "0x8da5cb5b",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": "0x000000000000000000000000fff2f7417be1a4e2ad1f26f538ad6f67d0fe11f2"
+    },
+    {
+     "block": 21116381,
+     "timestamp": 1730748575,
+     "utc": "2024-11-04 19:29:35",
+     "value": "0x0000000000000000000000006d5b183f538abb8572f5cd17109c617b994d5833"
+    },
+    {
+     "block": 25976344,
+     "timestamp": 1789396679,
+     "utc": "2026-09-14 14:37:59",
+     "value": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.owner()",
+   "to": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+   "sig": "owner()",
+   "args": [],
+   "calldata": "0x8da5cb5b",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": "0x0000000000000000000000009245d5d10aa8a842b31530de71ea86c0760ca1b1"
+    },
+    {
+     "block": 26286838,
+     "timestamp": 1793137691,
+     "utc": "2026-10-27 21:48:11",
+     "value": "0x000000000000000000000000847b5c174615b1b7fdf770882256e2d3e95b9d92"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.gasLimit()",
+   "to": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+   "sig": "gasLimit()",
+   "args": [],
+   "calldata": "0xf68016b7",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": "0x0000000000000000000000000000000000000000000000000000000001c9c380"
+    },
+    {
+     "block": 24193131,
+     "timestamp": 1767913583,
+     "utc": "2026-01-08 23:06:23",
+     "value": "0x0000000000000000000000000000000000000000000000000000000003938700"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.unsafeBlockSigner()",
+   "to": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+   "sig": "unsafeBlockSigner()",
+   "args": [],
+   "calldata": "0x1fd19ee1",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": "0x000000000000000000000000833c6f278474a78658af91ae8edc926fe33a230e"
+    },
+    {
+     "block": 26299498,
+     "timestamp": 1793290139,
+     "utc": "2026-10-29 16:08:59",
+     "value": "0x000000000000000000000000faaca0a10e4a23c5e01485de07767547d4d8056d"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.batcherHash()",
+   "to": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+   "sig": "batcherHash()",
+   "args": [],
+   "calldata": "0xe81b2c6d",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": "0x0000000000000000000000002f60a5184c63ca94f82a27100643dbabe4f3f7fd"
+    },
+    {
+     "block": 26299498,
+     "timestamp": 1793290139,
+     "utc": "2026-10-29 16:08:59",
+     "value": "0x0000000000000000000000009ef649e8746cc47a17708a5e86b2d66c7f6c00d1"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.disputeGameFactory()",
+   "to": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+   "sig": "disputeGameFactory()",
+   "args": [],
+   "calldata": "0xf2b4e617",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": "0x0000000000000000000000002f12d621a16e2d3285929c9996f478508951dfe4"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.l2OutputOracle()",
+   "to": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+   "sig": "l2OutputOracle()",
+   "args": [],
+   "calldata": "0x4d9f1559",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.superchainConfig()",
+   "to": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+   "sig": "superchainConfig()",
+   "args": [],
+   "calldata": "0x35e80ab3",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 22990722,
+     "timestamp": 1753380731,
+     "utc": "2025-07-24 18:12:11",
+     "value": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c"
+    }
+   ]
+  },
+  {
+   "name": "systemConfig.proxyAdmin()",
+   "to": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+   "sig": "proxyAdmin()",
+   "args": [],
+   "calldata": "0x3e47158c",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 22990722,
+     "timestamp": 1753380731,
+     "utc": "2025-07-24 18:12:11",
+     "value": "0x0000000000000000000000003b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4"
+    }
+   ]
+  },
+  {
+   "name": "asrCurrent.respectedGameType()",
+   "to": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+   "sig": "respectedGameType()",
+   "args": [],
+   "calldata": "0x3c9f397c",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 22990722,
+     "timestamp": 1753380731,
+     "utc": "2025-07-24 18:12:11",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+     "block": 25475307,
+     "timestamp": 1783362755,
+     "utc": "2026-07-06 18:32:35",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000008"
+    },
+    {
+     "block": 26048619,
+     "timestamp": 1790268683,
+     "utc": "2026-09-24 16:51:23",
+     "value": "0x0000000000000000000000000000000000000000000000000000000000000009"
+    }
+   ]
+  },
+  {
+   "name": "asrCurrent.retirementTimestamp()",
+   "to": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+   "sig": "retirementTimestamp()",
+   "args": [],
+   "calldata": "0x4086d183",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 22990722,
+     "timestamp": 1753380731,
+     "utc": "2025-07-24 18:12:11",
+     "value": "0x000000000000000000000000000000000000000000000000000000006882777b"
+    }
+   ]
+  },
+  {
+   "name": "asrCurrent.portal()",
+   "to": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+   "sig": "portal()",
+   "args": [],
+   "calldata": "0x6425666b",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    }
+   ]
+  },
+  {
+   "name": "asrCurrent.superchainConfig()",
+   "to": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+   "sig": "superchainConfig()",
+   "args": [],
+   "calldata": "0x35e80ab3",
+   "start": 21116363,
+   "history": [
+    {
+     "block": 21116363,
+     "timestamp": 1730748359,
+     "utc": "2024-11-04 19:25:59",
+     "value": null
+    },
+    {
+     "block": 22990722,
+     "timestamp": 1753380731,
+     "utc": "2025-07-24 18:12:11",
+     "value": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c"
+    }
+   ]
   }
  ],
- "rpc_calls": 6120
+ "rpc_calls": 11834
 }

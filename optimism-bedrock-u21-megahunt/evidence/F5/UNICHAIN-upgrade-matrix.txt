@@ -1,0 +1,18 @@
+21116362 2024-11-04 0x1623e586fa OptimismPortal=3.10.0
+21116363 2024-11-04 0xb9a9cca69c SystemConfig=2.2.0
+21116366 2024-11-04 None L1StandardBridge=2.1.0
+21116367 2024-11-04 0xb432a9b2f5 L1ERC721Bridge=2.1.0
+21116368 2024-11-04 0x14bd9cb3f3 OptimismMintableERC20Factory=1.9.0
+21116371 2024-11-04 0x9efd53c7ec L1CrossDomainMessenger=2.3.0
+21116372 2024-11-04 0x742808a336 DisputeGameFactory=1.0.0
+22081789 2025-03-19 0x191505a1bf SystemConfig=2.3.0*
+22254924 2025-04-12 0x7e5e478caf SystemConfig=2.4.0, OptimismPortal=3.13.0, DisputeGameFactory=1.0.1, L1ERC721Bridge=2.3.1, OptimismMintableERC20Factory=1.10.1, L1CrossDomainMessenger=2.5.0, L1StandardBridge=2.2.2
+22342667 2025-04-25 0xc74c5e0ddd SystemConfig=2.5.0, OptimismPortal=3.14.0, L1ERC721Bridge=2.4.0, L1CrossDomainMessenger=2.6.0, L1StandardBridge=2.3.0
+22990722 2025-07-24 0x1f1f283ad7 SystemConfig=3.4.0, OptimismPortal=4.6.0, ETHLockbox=1.2.0, AnchorStateRegistry=3.5.0, DisputeGameFactory=1.2.0, L1ERC721Bridge=2.7.0, L1CrossDomainMessenger=2.9.0, L1StandardBridge=2.6.0
+23492571 2025-10-02 0xc98240172f SystemConfig=3.7.0, OptimismPortal=5.0.0, AnchorStateRegistry=3.5.0, DisputeGameFactory=1.2.0, L1ERC721Bridge=2.8.0, L1CrossDomainMessenger=2.10.0, L1StandardBridge=2.7.0
+23878509 2025-11-25 0x7c9e6b6525 SystemConfig=3.11.0, OptimismPortal=5.1.1, DisputeGameFactory=1.3.0, L1ERC721Bridge=2.9.0, OptimismMintableERC20Factory=1.10.2, L1CrossDomainMessenger=2.11.0, L1StandardBridge=2.8.0
+24427874 2026-02-10 0x5672a02ba8 SystemConfig=3.13.1, OptimismPortal=5.2.0, AnchorStateRegistry=3.7.0, DisputeGameFactory=1.4.0, L1ERC721Bridge=2.9.0, OptimismMintableERC20Factory=1.10.2, L1CrossDomainMessenger=2.11.0
+25475307 2026-07-06 0xb3c65cbf62 SystemConfig=3.14.2*, OptimismPortal=5.6.1*, ETHLockbox=1.3.1*, AnchorStateRegistry=3.9.0*, DisputeGameFactory=1.6.1*, DelayedWETH=1.5.1*, L1ERC721Bridge=2.9.1*, OptimismMintableERC20Factory=1.11.0*, L1CrossDomainMessenger=2.11.1*, L1StandardBridge=2.8.2
+26048619 2026-09-24 0x0a0fe86f7b SystemConfig=4.0.0*, OptimismPortal=5.8.0*, ETHLockbox=1.3.1*, AnchorStateRegistry=3.9.0*, DisputeGameFactory=1.6.1*, DelayedWETH=1.5.1*, L1ERC721Bridge=2.9.1*, OptimismMintableERC20Factory=1.11.0*, L1CrossDomainMessenger=2.11.1*
+26430859 2026-11-16 0x024770b5fb SystemConfig=4.3.0*, OptimismPortal=6.1.0*, ETHLockbox=2.0.0*, AnchorStateRegistry=4.0.0*, DisputeGameFactory=1.6.1*, DelayedWETH=2.0.0*, L1ERC721Bridge=2.9.1*, OptimismMintableERC20Factory=1.11.0*, L1CrossDomainMessenger=2.13.0*
+

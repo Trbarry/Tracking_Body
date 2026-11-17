@@ -1,0 +1,441 @@
+[
+ {
+  "block": 19314493,
+  "tx": "0x3f7c36a1d636cdb23bf4f9171c27ebe58b73f4c0e6a33dbaac2c2f3c142faf50",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ },
+ {
+  "block": 19634866,
+  "tx": "0x4758bd62359bc69d7e8a0faaf5308d826379c23258d689a7430d5c0ad0361ad2",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ },
+ {
+  "block": 20062696,
+  "tx": "0xbe810ed6e1e827930bd46cde42c4883662ddb6d244a26af2f0409cc2782bee61",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ },
+ {
+  "block": 20063224,
+  "tx": "0xe361c0d4ae3aebc94b3f281ee372fbb1cbdb0c33ca8b1b35e7f3b009b2fcbdb0",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {
+   "SuperchainConfig": {
+    "0xd30e835d3f35624761057ff5b27d558f97bd5be034621e62240e5c0b784abe68": [
+     "0x0000000000000000000000009ba6e03d8b90de867373db8cf1a58d2f7f006b3a",
+     "0x00000000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf2"
+    ]
+   }
+  },
+  "other_accounts_in_diff": 3
+ },
+ {
+  "block": 20270847,
+  "tx": "0x7abecacd8b1a54db8f0835a5c82edfab96ff922a41d2faa914c339e3e9319b43",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {
+   "DGF": {
+    "0xffdfc1249c027f9191656349feb0761381bb32c9f557e01f419fd08754bf5a1b": [
+     "0x0000000000000000000000004146df64d83acb0dcb0c1a4884a16f090165e122",
+     "0x000000000000000000000000f691f8a6d908b58c534b624cf16495b491e633ba"
+    ],
+    "0x4d5a9bd2e41301728d41c8e705190becb4e74abe869f75bdb405b63716a35f9e": [
+     "0x000000000000000000000000e9dad167ef4de8812c1abd013ac9570c616599a0",
+     "0x000000000000000000000000c307e93a7c530a184c98eade4545a412b857b62f"
+    ]
+   }
+  },
+  "other_accounts_in_diff": 3
+ },
+ {
+  "block": 20723924,
+  "tx": "0x3bd2d811d0298313e6fb75f0e69fb54280c9b4f2e60f8f04472aaa166c285641",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {
+   "ASR-old": {
+    "0x0000000000000000000000000000000000000000000000000000000000000002": [
+     "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c"
+    ],
+    "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc": [
+     "0x0000000000000000000000006b7da1647aa9684f54b2beeb699f91f31cd35fb9",
+     "0x0000000000000000000000001b5cc028a4276597c607907f24e1ac05d3852cfc"
+    ]
+   },
+   "DGF": {
+    "0xffdfc1249c027f9191656349feb0761381bb32c9f557e01f419fd08754bf5a1b": [
+     "0x000000000000000000000000f691f8a6d908b58c534b624cf16495b491e633ba",
+     "0x000000000000000000000000a6f3dfdbf4855a43c529bc42ede96797252879af"
+    ],
+    "0x4d5a9bd2e41301728d41c8e705190becb4e74abe869f75bdb405b63716a35f9e": [
+     "0x000000000000000000000000c307e93a7c530a184c98eade4545a412b857b62f",
+     "0x000000000000000000000000050ed6f6273c7d836a111e42153bc00d0380b87d"
+    ]
+   }
+  },
+  "other_accounts_in_diff": 3
+ },
+ {
+  "block": 21580854,
+  "tx": "0x22ab07b0bb1bc8504256835d555307ff522b78651dca33c9cd5b05591ca5b4f7",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {
+   "DGF": {
+    "0xffdfc1249c027f9191656349feb0761381bb32c9f557e01f419fd08754bf5a1b": [
+     "0x000000000000000000000000a6f3dfdbf4855a43c529bc42ede96797252879af",
+     "0x00000000000000000000000027b81db41f586016694632193b99e45b1a27b8f8"
+    ],
+    "0x4d5a9bd2e41301728d41c8e705190becb4e74abe869f75bdb405b63716a35f9e": [
+     "0x000000000000000000000000050ed6f6273c7d836a111e42153bc00d0380b87d",
+     "0x00000000000000000000000091a661891248d8c4916fb4a1508492a5e2cbcb87"
+    ]
+   }
+  },
+  "other_accounts_in_diff": 3
+ },
+ {
+  "block": 21618223,
+  "tx": "0x71234ec9d3df32360383a0091277b0facbeb21456f1a29accb110fa43a6b5441",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 5
+ },
+ {
+  "block": 21695024,
+  "tx": "0x86da7386a26978c3db89e97c1f4feee613a8a0c07bbe4640624b05276f49c350",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ },
+ {
+  "block": 21945575,
+  "tx": "0x9c6af2cb2b4fcde9e351662342f15b60f004108b575dddd05d0caa4f50220966",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 4
+ },
+ {
+  "block": 22069032,
+  "tx": "0xd80b96282ad4d71aeb29b25e0ceee2bdf0840b258fccffedc951ce0553b6800b",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 4
+ },
+ {
+  "block": 22182531,
+  "tx": "0x5f3530e593bbac37c61dc5b7755b6a40c06c20c1a3a1b13fca5b7d00cde65c29",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ },
+ {
+  "block": 22339580,
+  "tx": "0x557cab0b43928b8382105655a8bef75c3bd925d8ff3ecd157b9cee57361fd0bd",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 5
+ },
+ {
+  "block": 22339996,
+  "tx": "0xbe44244e352a9ffa67ad7f7133e9ed014b380e4b1bd789419e6d33aaad780d12",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ },
+ {
+  "block": 22432368,
+  "tx": "0xc4a7089a92c96b83475a7c20e40b4c888a277a90208d649c81df243ecdceb587",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {
+   "DGF": {
+    "0xffdfc1249c027f9191656349feb0761381bb32c9f557e01f419fd08754bf5a1b": [
+     "0x0000000000000000000000005738a876359b48a65d35482c93b43e2c1147b32b",
+     "0x00000000000000000000000089d68b1d63aaa0db4af1163e81f56b76934292f8"
+    ],
+    "0x4d5a9bd2e41301728d41c8e705190becb4e74abe869f75bdb405b63716a35f9e": [
+     "0x0000000000000000000000001ae178ebfeecd51709432ea5f37845da0414edfe",
+     "0x000000000000000000000000a1e0bacde89d899b3f24eef3d179cc335a24e777"
+    ]
+   }
+  },
+  "other_accounts_in_diff": 8
+ },
+ {
+  "block": 22488574,
+  "tx": "0x470902836f69cbd6eb541c310d5f2858d581d996643c883f39a0266c331e4905",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 4
+ },
+ {
+  "block": 22488823,
+  "tx": "0x1ca79cf47edc2fa5d6feb1bfcbb81704d0709900a0fede8314d8b071300a6fee",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 4
+ },
+ {
+  "block": 22696221,
+  "tx": "0xc43aa8d8362bf9b97a23818fd8eb62452543057ba81c2b803be18e0ff36610f5",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 5
+ },
+ {
+  "block": 22696252,
+  "tx": "0xd8fd08e0a66a0f5c0e5aed4e078e77bf8c3e50c27d09db458e2b04e7c6b2f5e7",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 5
+ },
+ {
+  "block": 22782703,
+  "tx": "0x7d2a05b891c480b91a472a135e867e6a94ba196439e47e76cc08954401a9b224",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 5
+ },
+ {
+  "block": 22990599,
+  "tx": "0x46acdce174c8d83ebe2f208d8c76c867e75617483d64c3e407f69ae2f9868716",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ },
+ {
+  "block": 22990670,
+  "tx": "0xdd89a3933dea0f44e1a461441f3c78e341702e9a4148784780644cdac90148c2",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 14
+ },
+ {
+  "block": 23491328,
+  "tx": "0x744cf7d28324729cace731ac736872da669439a0d380f1f52b8d31af203f7329",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ },
+ {
+  "block": 23542337,
+  "tx": "0x3c9df2c9f2502ed27df838f21bf474be0544246f8c0c3513a698d81e0c2890ae",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 20
+ },
+ {
+  "block": 23542433,
+  "tx": "0x9c091d94c0f98efb21730224c89e59e50d344b74e677ee6de2b91d2a16f565d2",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 19
+ },
+ {
+  "block": 23542497,
+  "tx": "0x3ac45d51da454abfba887b5ab1dae831a78e068615893fb62d8034437bb17063",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 19
+ },
+ {
+  "block": 23577216,
+  "tx": "0x38010d19d63d834b95936728d49e38dbf71ae7b3a44f555b235b890cd2f40eaf",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 19
+ },
+ {
+  "block": 23577231,
+  "tx": "0x6e9cfd7c22acaf263f9a5afaaa701934c77fa2015b9a65262fe29dee108b092c",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 19
+ },
+ {
+  "block": 23877377,
+  "tx": "0xf556934cb4de1ab40a4cfba17856cd601cbc8b875b96a9ccd8ee32bcd363abf5",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ },
+ {
+  "block": 23878010,
+  "tx": "0x2061f73a8062dbd181576eb95c13749cf82e3a401a013d152230766e9039cd0f",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 27
+ },
+ {
+  "block": 23878150,
+  "tx": "0xc1c52a6b223c21ad02f12e115b3b872ca858298de141528c019401811fbb822a",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 19
+ },
+ {
+  "block": 24421512,
+  "tx": "0x8808cd53114e4cf07bfde30daf24f2984d4a40ab09c5ca67bd171ac29d6dbf37",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ },
+ {
+  "block": 24478557,
+  "tx": "0xeba2fc77f814ea5de7fc0e3b1496926483d14cf8541633c04aec9d1fec8eaf9c",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 7
+ },
+ {
+  "block": 24776353,
+  "tx": "0xfbcdd181c245cc3e628bb5ba45b5a3d3c07039b0f1a3a5a99b2e9925ff9d5efc",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 4
+ },
+ {
+  "block": 24776372,
+  "tx": "0x95b7d66aaee99219a8e90b9669d7067c6e69d58692c9efc93d4197c13af84126",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 4
+ },
+ {
+  "block": 25397811,
+  "tx": "0xbfdac60c9687a2e469159bf2458e73de2915a0a5eb53c4991a7ecde2b1fb3f15",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ },
+ {
+  "block": 25674914,
+  "tx": "0x6065d3a2decf0b16953bc586a209c01b4336dc2ff59bcb050eaf436659ad61fe",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 4
+ },
+ {
+  "block": 25674961,
+  "tx": "0xe3f20296d95ff92411cb62a242f84a1eb1bcc2e38af7a2f955bc4b44a25c5561",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 4
+ },
+ {
+  "block": 25731698,
+  "tx": "0xc9051994cae6cd1aa668e73f4b768a6135da4f6504aca1d7740f460841ab6dcb",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 5
+ },
+ {
+  "block": 25731713,
+  "tx": "0x99ed59760859782943f3598836a35b100fe93acd24fe7370bce174eccb38f50d",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 4
+ },
+ {
+  "block": 25976232,
+  "tx": "0xa5888be651d314fc0de435d6bef7f2c934c2c9f0328cb6af7b86210d966ac551",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 11
+ },
+ {
+  "block": 25976279,
+  "tx": "0xf1609a0ce7f11e663dcbd2232b23471580ac344265e15ecd0ecab91549fbb71a",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 7
+ },
+ {
+  "block": 26048619,
+  "tx": "0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ },
+ {
+  "block": 26077684,
+  "tx": "0x677b799289e2ea11d2b4f835533008f454b183301afcc6a0a1e0488c350a96b7",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 4
+ },
+ {
+  "block": 26299517,
+  "tx": "0x626a5b99524a4602fdb8e373f2148e88fb9e7bf48740a804c35542bfc532de2f",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 4
+ },
+ {
+  "block": 26299689,
+  "tx": "0xafae3ba7862db7cfa3e74842cab6b35e67b30e0fcf3afff30916d3ca0d100372",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 4
+ },
+ {
+  "block": 26299707,
+  "tx": "0x2a2755b35a2cceb0f142a264c81df0e28de1608ab1f4ed90be3fbeddc0d7ff81",
+  "success": true,
+  "known_upgrade": false,
+  "touched": {},
+  "other_accounts_in_diff": 4
+ },
+ {
+  "block": 26309074,
+  "tx": "0xd80476b3ec56283723804cf7bc2d96f800c81d3ebd0fea843555396ffe94f28f",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ },
+ {
+  "block": 26430859,
+  "tx": "0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99",
+  "success": true,
+  "known_upgrade": true,
+  "touched": {}
+ }
+]

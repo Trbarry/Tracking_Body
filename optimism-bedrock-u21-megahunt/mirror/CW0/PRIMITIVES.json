@@ -142,11 +142,9 @@
   {
     "id": "A-007",
     "source_files": [
-      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0203.md",
-      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0501.md",
-      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2501.md"
+      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0203.md"
     ],
-    "title": "`deleteProvenWithdrawal` (new in v9) clears `provenWithdrawals[h][s]` but leaves `s` in `proofSubmitters[h]` [exact PASS-A duplicates: PRIM-0203, PRIM-0501, PRIM-2501]",
+    "title": "`deleteProvenWithdrawal` (new in v9) clears `provenWithdrawals[h][s]` but leaves `s` in `proofSubmitters[h]`",
     "family": "proof-lifecycle",
     "EARLIEST_SEMANTIC_ANCESTOR": "array/cell split first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; delete-without-prune current form first: v9.0.0:src/L1/OptimismPortal2.sol:711-728",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:671-728",
@@ -192,11 +190,9 @@
   {
     "id": "A-009",
     "source_files": [
-      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0301.md",
-      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0402.md",
-      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2401.md"
+      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0301.md"
     ],
-    "title": "Third-party finalization with attacker-chosen gas and call context [exact PASS-A duplicates: PRIM-0301, PRIM-0402, PRIM-2401]",
+    "title": "Third-party finalization with attacker-chosen gas and call context",
     "family": "messenger-replay",
     "EARLIEST_SEMANTIC_ANCESTOR": "first: v1.4.0:src/L1/OptimismPortal2.sol:339-387 (external proof submitter and permissionless finalize); current form: v9.0.0:src/L1/OptimismPortal2.sol:577-666 (lockbox custody plus L1CDM-specific atomic revert)",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:577-666 and src/libraries/SafeCall.sol:121-171",
@@ -338,6 +334,31 @@
   {
     "id": "A-015",
     "source_files": [
+      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0402.md",
+      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2401.md"
+    ],
+    "title": "forced \"finalized-and-undelivered\" for NON-messenger withdrawals: exact window [exact PASS-A duplicates: PRIM-0402, PRIM-2401]",
+    "family": "proof-lifecycle",
+    "EARLIEST_SEMANTIC_ANCESTOR": "first: v1.4.0:src/L1/OptimismPortal2.sol:339-387 (external proof submitter and permissionless finalize); current form: v9.0.0:src/L1/OptimismPortal2.sol:577-666 (lockbox custody plus L1CDM-specific atomic revert)",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:577-666 and src/libraries/SafeCall.sol:121-171",
+    "PERSISTENT_STATE_OR_OBJECT": "mature per-submitter proof and its unfinalized hash-global replay bit",
+    "HISTORICAL_BRANCHES": [
+      "v1.0.0 L2OO proof \u2014 contracts/L1/OptimismPortal.sol:242-420",
+      "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
+      "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
+      "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
+    ],
+    "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+    "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
+    "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
+    "priority": "P1",
+    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+  },
+  {
+    "id": "A-016",
+    "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0403.md"
     ],
     "title": "`OptimismPortal_L1CDMCallFailed` is keyed on the SENDER only; exact trigger table",
@@ -358,7 +379,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-016",
+    "id": "A-017",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0404.md"
     ],
@@ -379,7 +400,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-017",
+    "id": "A-018",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0405.md"
     ],
@@ -400,7 +421,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-018",
+    "id": "A-019",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0406.md"
     ],
@@ -424,7 +445,32 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-019",
+    "id": "A-020",
+    "source_files": [
+      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0501.md",
+      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2501.md"
+    ],
+    "title": "exact semantics of the permissionless proof deletion [exact PASS-A duplicates: PRIM-0501, PRIM-2501]",
+    "family": "proof-lifecycle",
+    "EARLIEST_SEMANTIC_ANCESTOR": "array/cell split first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; delete-without-prune current form first: v9.0.0:src/L1/OptimismPortal2.sol:711-728",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:671-728",
+    "PERSISTENT_STATE_OR_OBJECT": "one per-submitter proof cell, an append-only submitter array entry and the hash-global finalized bit",
+    "HISTORICAL_BRANCHES": [
+      "v1.0.0 L2OO proof \u2014 contracts/L1/OptimismPortal.sol:242-420",
+      "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
+      "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
+      "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
+    ],
+    "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+    "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
+    "NEXT_EXPERIMENT": "closed: C4/C5 unless a pre-fault-proof non-game proof record is found.",
+    "priority": "P1",
+    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+  },
+  {
+    "id": "A-021",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0502.md",
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2502.md",
@@ -450,7 +496,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-020",
+    "id": "A-022",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0503.md"
     ],
@@ -474,7 +520,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-021",
+    "id": "A-023",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0504.md"
     ],
@@ -498,7 +544,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-022",
+    "id": "A-024",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0505.md"
     ],
@@ -522,7 +568,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-023",
+    "id": "A-025",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0601.md"
     ],
@@ -545,7 +591,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-024",
+    "id": "A-026",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0602.md"
     ],
@@ -566,7 +612,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-025",
+    "id": "A-027",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0603.md",
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2603.md"
@@ -590,7 +636,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-026",
+    "id": "A-028",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0604.md"
     ],
@@ -613,7 +659,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-027",
+    "id": "A-029",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0605.md"
     ],
@@ -636,7 +682,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-028",
+    "id": "A-030",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0606.md",
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0903.md"
@@ -660,7 +706,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-029",
+    "id": "A-031",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0701.md"
     ],
@@ -683,7 +729,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-030",
+    "id": "A-032",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0702.md"
     ],
@@ -707,7 +753,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-031",
+    "id": "A-033",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0703.md"
     ],
@@ -730,7 +776,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-032",
+    "id": "A-034",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0704.md"
     ],
@@ -752,7 +798,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-033",
+    "id": "A-035",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0801.md"
     ],
@@ -773,7 +819,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-034",
+    "id": "A-036",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0802.md"
     ],
@@ -795,14 +841,11 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-035",
+    "id": "A-037",
     "source_files": [
-      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0804.md",
-      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-1002.md",
-      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2405.md",
-      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3104.md"
+      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0804.md"
     ],
-    "title": "Amsterdam gas reserves are enforced today (183,600 new-account, 135,000 relay reserve) [exact PASS-A duplicates: PRIM-0804, PRIM-1002, PRIM-2405, PRIM-3104]",
+    "title": "Amsterdam gas reserves are enforced today (183,600 new-account, 135,000 relay reserve)",
     "family": "gas-budget",
     "EARLIEST_SEMANTIC_ANCESTOR": "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
@@ -819,7 +862,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-036",
+    "id": "A-038",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0805.md"
     ],
@@ -841,7 +884,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-037",
+    "id": "A-039",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0902.md",
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3201.md"
@@ -864,7 +907,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-038",
+    "id": "A-040",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-0904.md"
     ],
@@ -886,7 +929,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-039",
+    "id": "A-041",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-1001.md"
     ],
@@ -907,7 +950,28 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-040",
+    "id": "A-042",
+    "source_files": [
+      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-1002.md"
+    ],
+    "title": "`SafeCall.callWithMinGas` floor is now state-dependent (+183,600 for value to a zero-codehash target) and still multiplies a user-supplied uint256 `gasLimit` unchecked",
+    "family": "gas-budget",
+    "EARLIEST_SEMANTIC_ANCESTOR": "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+    "PERSISTENT_STATE_OR_OBJECT": "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
+    "HISTORICAL_BRANCHES": [
+      "v1.0.0 EIP-150 reserve \u2014 contracts/libraries/SafeCall.sol:91-159",
+      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
+      "v9.0.0 local/remote budget split and codehash-zero reserve \u2014 src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"
+    ],
+    "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+    "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a message using the old L2 budget; consume it on L1 after U21 or a future Amsterdam cost activation",
+    "NEXT_EXPERIMENT": "closed: C6 for current rules; reopen on Amsterdam activation or L5 cap arithmetic.",
+    "priority": "P1",
+    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+  },
+  {
+    "id": "A-043",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-1003.md",
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3001.md"
@@ -931,7 +995,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-041",
+    "id": "A-044",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-1101.md"
     ],
@@ -955,7 +1019,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-042",
+    "id": "A-045",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-1103.md"
     ],
@@ -976,7 +1040,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-043",
+    "id": "A-046",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-1201.md"
     ],
@@ -997,7 +1061,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-044",
+    "id": "A-047",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-1203.md"
     ],
@@ -1020,7 +1084,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-045",
+    "id": "A-048",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-1204.md"
     ],
@@ -1043,7 +1107,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-046",
+    "id": "A-049",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2101.md"
     ],
@@ -1064,7 +1128,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-047",
+    "id": "A-050",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2102.md"
     ],
@@ -1087,7 +1151,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-048",
+    "id": "A-051",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2103.md"
     ],
@@ -1111,7 +1175,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-049",
+    "id": "A-052",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2104.md"
     ],
@@ -1132,7 +1196,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-050",
+    "id": "A-053",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2201.md"
     ],
@@ -1155,7 +1219,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-051",
+    "id": "A-054",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2202.md"
     ],
@@ -1178,7 +1242,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-052",
+    "id": "A-055",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2203.md"
     ],
@@ -1201,7 +1265,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-053",
+    "id": "A-056",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2204.md"
     ],
@@ -1225,7 +1289,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-054",
+    "id": "A-057",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2205.md"
     ],
@@ -1248,7 +1312,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-055",
+    "id": "A-058",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2301.md"
     ],
@@ -1271,7 +1335,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-056",
+    "id": "A-059",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2302.md"
     ],
@@ -1294,7 +1358,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-057",
+    "id": "A-060",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2303.md",
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2901.md"
@@ -1318,7 +1382,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-058",
+    "id": "A-061",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2305.md"
     ],
@@ -1340,7 +1404,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-059",
+    "id": "A-062",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2306.md"
     ],
@@ -1362,7 +1426,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-060",
+    "id": "A-063",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2308.md"
     ],
@@ -1385,7 +1449,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-061",
+    "id": "A-064",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2402.md",
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3101.md"
@@ -1408,7 +1472,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-062",
+    "id": "A-065",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2403.md"
     ],
@@ -1432,7 +1496,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-063",
+    "id": "A-066",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2404.md",
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3203.md"
@@ -1457,12 +1521,33 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-064",
+    "id": "A-067",
     "source_files": [
-      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2406.md",
-      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2504.md"
+      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2405.md",
+      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3104.md"
     ],
-    "title": "v8 proof and messenger replay state survive U21 unchanged [exact PASS-A duplicates: PRIM-2406, PRIM-2504]",
+    "title": "Conservative pre-Amsterdam new-account reserve [exact PASS-A duplicates: PRIM-2405, PRIM-3104]",
+    "family": "gas-budget",
+    "EARLIEST_SEMANTIC_ANCESTOR": "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+    "PERSISTENT_STATE_OR_OBJECT": "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
+    "HISTORICAL_BRANCHES": [
+      "v1.0.0 EIP-150 reserve \u2014 contracts/libraries/SafeCall.sol:91-159",
+      "v3.0.0 calldata-floor baseGas \u2014 src/universal/CrossDomainMessenger.sol:354-390",
+      "v9.0.0 local/remote budget split and codehash-zero reserve \u2014 src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"
+    ],
+    "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+    "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a message using the old L2 budget; consume it on L1 after U21 or a future Amsterdam cost activation",
+    "NEXT_EXPERIMENT": "closed: C6 for current rules; reopen on Amsterdam activation or L5 cap arithmetic.",
+    "priority": "P1",
+    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+  },
+  {
+    "id": "A-068",
+    "source_files": [
+      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2406.md"
+    ],
+    "title": "v8 proof and messenger replay state survive U21 unchanged",
     "family": "proof-lifecycle",
     "EARLIEST_SEMANTIC_ANCESTOR": "current proof storage form first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; v8-to-v9 consumer remains at v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
     "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:577-728 and src/universal/CrossDomainMessenger.sol:212-302",
@@ -1482,7 +1567,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-065",
+    "id": "A-069",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2503.md"
     ],
@@ -1506,7 +1591,31 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-066",
+    "id": "A-070",
+    "source_files": [
+      "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2504.md"
+    ],
+    "title": "v8 proofs survive the v9 implementation upgrade",
+    "family": "proof-lifecycle",
+    "EARLIEST_SEMANTIC_ANCESTOR": "current proof storage form first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; v8-to-v9 consumer remains at v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
+    "CURRENT_U21_CONSUMER": "v9.0.0:src/L1/OptimismPortal2.sol:577-728 and src/universal/CrossDomainMessenger.sol:212-302",
+    "PERSISTENT_STATE_OR_OBJECT": "pre-U21 provenWithdrawal cells, submitter list, finalized bit and messenger replay mappings",
+    "HISTORICAL_BRANCHES": [
+      "v1.0.0 L2OO proof \u2014 contracts/L1/OptimismPortal.sol:242-420",
+      "v1.4.0 fault-game/per-submitter proof \u2014 src/L1/OptimismPortal2.sol:254-522",
+      "v2.0.0 respect-at-creation \u2014 src/L1/OptimismPortal2.sol:292-378",
+      "v4.0.0 ASR-owned validity \u2014 src/dispute/AnchorStateRegistry.sol:182-340",
+      "v7.0.0 super-game branch \u2014 src/L1/OptimismPortal2.sol:390-492",
+      "v9.0.0 deletion \u2014 src/L1/OptimismPortal2.sol:711-728"
+    ],
+    "AUDIT_COVERAGE_ALREADY_DONE": "TRACK-B",
+    "UNREVIEWED_CROSS_UPGRADE_EDGE": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
+    "NEXT_EXPERIMENT": "Historical fork: create the object at its earliest semantic ancestor, upgrade release-by-release, then invoke the U21 consumer.",
+    "priority": "P1",
+    "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
+  },
+  {
+    "id": "A-071",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2505.md",
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2705.md"
@@ -1529,7 +1638,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-067",
+    "id": "A-072",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2506.md"
     ],
@@ -1553,7 +1662,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-068",
+    "id": "A-073",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2601.md"
     ],
@@ -1575,7 +1684,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-069",
+    "id": "A-074",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2604.md"
     ],
@@ -1597,7 +1706,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-070",
+    "id": "A-075",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2605.md"
     ],
@@ -1619,7 +1728,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-071",
+    "id": "A-076",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2701.md"
     ],
@@ -1642,7 +1751,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-072",
+    "id": "A-077",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2702.md"
     ],
@@ -1665,7 +1774,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-073",
+    "id": "A-078",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2703.md"
     ],
@@ -1689,7 +1798,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-074",
+    "id": "A-079",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2704.md"
     ],
@@ -1712,7 +1821,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-075",
+    "id": "A-080",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2902.md"
     ],
@@ -1735,7 +1844,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-076",
+    "id": "A-081",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2903.md"
     ],
@@ -1757,7 +1866,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-077",
+    "id": "A-082",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3002.md"
     ],
@@ -1780,7 +1889,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-078",
+    "id": "A-083",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3003.md"
     ],
@@ -1803,7 +1912,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-079",
+    "id": "A-084",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3004.md"
     ],
@@ -1826,7 +1935,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-080",
+    "id": "A-085",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3005.md"
     ],
@@ -1847,7 +1956,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-081",
+    "id": "A-086",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3006.md"
     ],
@@ -1868,7 +1977,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-082",
+    "id": "A-087",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3105.md"
     ],
@@ -1889,7 +1998,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-083",
+    "id": "A-088",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3106.md"
     ],
@@ -1911,7 +2020,7 @@
     "pass_a_status": "primitive/negative retained; PASS A did not establish a permissionless bounty impact"
   },
   {
-    "id": "A-084",
+    "id": "A-089",
     "source_files": [
       "/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-3202.md"
     ],
