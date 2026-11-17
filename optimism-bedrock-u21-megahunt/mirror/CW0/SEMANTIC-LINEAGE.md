@@ -6,25 +6,25 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 
 | Release | Security-surface pivot | Evidence |
 |---|---|---|
-| v1.0.0 | Portal custody/L2OO proofs; v0/v1 messenger replay; SafeCall; StandardBridge; DGF; ProxyAdmin | `v1.0.0:contracts/L1/OptimismPortal.sol:50-490`; `contracts/universal/CrossDomainMessenger.sol:123-413` |
-| v1.1.0 | Initialized dependency storage; structured SystemConfig addresses; append-only DGF list | `v1.1.0:src/L1/OptimismPortal.sol:120-135`; `src/L1/SystemConfig.sol:30-73,155-191` |
-| v1.2.0 | Global SuperchainConfig pause; messenger/bridge pause; DGF bonds/UUID form | `v1.2.0:src/L1/SuperchainConfig.sol:19-81`; `src/L1/L1CrossDomainMessenger.sol:63-64` |
-| v1.3.0 | Structured SystemConfig restored; messenger otherMessenger becomes storage | `v1.3.0:src/L1/SystemConfig.sol:150-210`; `src/universal/CrossDomainMessenger.sol:80-110` |
-| v1.4.0 | Portal2 per-submitter game proofs; ASR per-type anchors; DelayedWETH | `v1.4.0:src/L1/OptimismPortal2.sol:51-522`; `src/dispute/AnchorStateRegistry.sol:20-87` |
-| v1.5.0 | Legacy Portal/messenger/bridge gain custom-gas-token branches | `v1.5.0:src/L1/OptimismPortal.sol:165-215,232-585`; `src/universal/CrossDomainMessenger.sol:176-195` |
-| v1.6.0 | Custom-gas-token custody branch; guardian anchor override; safer recover call | `v1.6.0:src/L1/OptimismPortal2.sol:362-440,504-573`; `src/dispute/AnchorStateRegistry.sol:99-119` |
-| v1.8.0 | Typed-interface migration and Ecotone fee/EIP-1559 initializer arguments | `v1.8.0:src/L1/SystemConfig.sol:192-230,383-438`; `src/L1/OptimismPortal2.sol:208-240` |
-| v2.0.0 | Snapshot-respect games, single anchorGame, full ASR predicates; super games/type-5 | `v2.0.0:src/dispute/AnchorStateRegistry.sol:39-262`; `src/dispute/SuperPermissionedDisputeGame.sol:89-108` |
+| v1.0.0 | Portal custody/L2OO proofs; v0/v1 messenger replay; SafeCall; StandardBridge; DGF; ProxyAdmin | `v1.0.0:contracts/L1/OptimismPortal.sol:50-490`; `v1.0.0:contracts/universal/CrossDomainMessenger.sol:123-413` |
+| v1.1.0 | Initialized dependency storage; structured SystemConfig addresses; append-only DGF list | `v1.1.0:src/L1/OptimismPortal.sol:120-135`; `v1.1.0:src/L1/SystemConfig.sol:30-73,155-191` |
+| v1.2.0 | Global SuperchainConfig pause; messenger/bridge pause; DGF bonds/UUID form | `v1.2.0:src/L1/SuperchainConfig.sol:19-81`; `v1.2.0:src/L1/L1CrossDomainMessenger.sol:63-64` |
+| v1.3.0 | Structured SystemConfig restored; messenger otherMessenger becomes storage | `v1.3.0:src/L1/SystemConfig.sol:150-210`; `v1.3.0:src/universal/CrossDomainMessenger.sol:80-110` |
+| v1.4.0 | Portal2 per-submitter game proofs; ASR per-type anchors; DelayedWETH | `v1.4.0:src/L1/OptimismPortal2.sol:51-522`; `v1.4.0:src/dispute/AnchorStateRegistry.sol:20-87` |
+| v1.5.0 | Legacy Portal/messenger/bridge gain custom-gas-token branches | `v1.5.0:src/L1/OptimismPortal.sol:165-215,232-585`; `v1.5.0:src/universal/CrossDomainMessenger.sol:176-195` |
+| v1.6.0 | Custom-gas-token custody branch; guardian anchor override; safer recover call | `v1.6.0:src/L1/OptimismPortal2.sol:362-440,504-573`; `v1.6.0:src/dispute/AnchorStateRegistry.sol:99-119` |
+| v1.8.0 | Typed-interface migration and Ecotone fee/EIP-1559 initializer arguments | `v1.8.0:src/L1/SystemConfig.sol:192-230,383-438`; `v1.8.0:src/L1/OptimismPortal2.sol:208-240` |
+| v2.0.0 | Snapshot-respect games, single anchorGame, full ASR predicates; super games/type-5 | `v2.0.0:src/dispute/AnchorStateRegistry.sol:39-262`; `v2.0.0:src/dispute/SuperPermissionedDisputeGame.sol:89-108` |
 | v2.1/v2.2 | No indexed target semantic delta | `SOURCE-FUNCTION-INDEX.json` |
 | v3.0.0 | EIP-7623-aware messenger baseGas | `v3.0.0:src/universal/CrossDomainMessenger.sol:357-396` |
 | v3.0.1 | No indexed target semantic delta | `SOURCE-FUNCTION-INDEX.json` |
-| v4.0.0 | ETHLockbox custody; scoped expiring pauses; ASR owns invalidation; super-root Portal | `v4.0.0:src/L1/ETHLockbox.sol:67-232`; `src/dispute/AnchorStateRegistry.sol:34-340` |
+| v4.0.0 | ETHLockbox custody; scoped expiring pauses; ASR owns invalidation; super-root Portal | `v4.0.0:src/L1/ETHLockbox.sol:67-232`; `v4.0.0:src/dispute/AnchorStateRegistry.sol:34-340` |
 | v4.1.0 | Output-root/interoperability Portal split; runtime features/pause-key selection | `v4.1.0:src/L1/SystemConfig.sol:139,503-534` |
 | v5.0.0 | DGF gameArgs becomes persistent future-clone configuration | `v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292` |
-| v6.0.0 | ASR retirement preserved across reinitialization; dual clone-arg layout | `v6.0.0:src/dispute/AnchorStateRegistry.sol:107-115`; `src/dispute/DisputeGameFactory.sol:140-220` |
-| v7.0.0 | Unified super-game proving, shared-game migration, deterministic DGF clones, OPCM V2 | `v7.0.0:src/L1/OptimismPortal2.sol:368-537`; `src/L1/opcm/OPContractsManagerV2.sol:229-290` |
-| v8.0.0 | Shared migration validation hardening; type-5 becomes a born-resolved proposer-gated game | `v8.0.0:src/L1/OptimismPortal2.sol:510-554`; `src/dispute/SuperPermissionedDisputeGame.sol:48-73` |
-| v9.0.0 | Lockbox-sourced pause/guardian, delete proof, split gas budgets, atomic failed-L1CDM withdrawal | `v9.0.0:src/L1/OptimismPortal2.sol:273-330,577-728`; `src/L1/L1CrossDomainMessenger.sol:43-153` |
+| v6.0.0 | ASR retirement preserved; dual clone-arg layout; feature-gated Portal CGT behavior returns | `v6.0.0:src/dispute/AnchorStateRegistry.sol:107-115`; `v6.0.0:src/dispute/DisputeGameFactory.sol:140-220`; `v6.0.0:src/L1/OptimismPortal2.sol:337-369,636-640` |
+| v7.0.0 | Unified super-game proving, shared-game migration, deterministic DGF clones, OPCM V2 | `v7.0.0:src/L1/OptimismPortal2.sol:368-537`; `v7.0.0:src/L1/opcm/OPContractsManagerV2.sol:229-290` |
+| v8.0.0 | Shared migration validation hardening; type-5 becomes a born-resolved proposer-gated game | `v8.0.0:src/L1/OptimismPortal2.sol:510-554`; `v8.0.0:src/dispute/SuperPermissionedDisputeGame.sol:48-73` |
+| v9.0.0 | Lockbox-sourced pause/guardian, delete proof, split gas budgets, atomic failed-L1CDM withdrawal | `v9.0.0:src/L1/OptimismPortal2.sol:273-330,577-728`; `v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-153` |
 
 ## Per-function/field records
 
@@ -118,7 +118,7 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 - **MIGRATION_OR_INVALIDATION_EVENTS:**
   - Fresh-ASR migration retires old games; current initializer retains an already nonzero retirement timestamp: v9.0.0:src/dispute/AnchorStateRegistry.sol:124-132.
 - **CURRENT_CONSUMERS:**
-  - v9.0.0:src/L1/OptimismPortal2.sol:390-492,671-705; src/dispute/AnchorStateRegistry.sol:227-352
+  - v9.0.0:src/L1/OptimismPortal2.sol:390-492,671-705; v9.0.0:src/dispute/AnchorStateRegistry.sol:227-352
 - **UNREVIEWED_TRANSITIVE_PATHS:**
   - L1: pre-v1.9 kona prestate game consumed by current ASR; L8: old game/proof after shared-registry migration.
 
@@ -158,8 +158,10 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 - **ALL_SEMANTIC_CHANGES:**
   - v1.5.0:src/L1/OptimismPortal.sol:165-215,232-585 — the legacy Portal first adds custom-gas-token balance, prove/finalize and split mint/value deposit branches.
   - v1.6.0:src/L1/OptimismPortal2.sol:362-440,504-573 — custom-gas-token mode separates native balance accounting.
+  - v2.0.0:src/L1/OptimismPortal2.sol:135-136,292-490 — Portal2 removes custom-gas-token execution and turns `_balance` into a spacer.
   - v4.0.0:src/L1/OptimismPortal2.sol:374-429,740-788 — deposits lock ETH in ETHLockbox; portal liquidity and super-root migrations added.
   - v4.1.0:src/L1/OptimismPortal2.sol:222-260,446-514,566-616 — lockbox use becomes feature-gated.
+  - v6.0.0:src/L1/OptimismPortal2.sol:337-369,440-465,565-588,636-640 — custom-gas-token behavior returns behind the SystemConfig feature map.
   - v7.0.0:src/L1/OptimismPortal2.sol:503-537 — shared-dispute-game migration repoints lockbox and ASR.
   - v8.0.0:src/L1/OptimismPortal2.sol:510-554 — nonzero/new-lockbox authorization checks hardened.
   - v9.0.0:src/L1/OptimismPortal2.sol:502-572,741-795 — CGT guard and current shared migration.
@@ -178,7 +180,7 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 - **MIGRATION_OR_INVALIDATION_EVENTS:**
   - migrateLiquidity drains portal to lockbox; shared migration authorizes/repoints and separately migrates old lockbox liquidity.
 - **CURRENT_CONSUMERS:**
-  - v9.0.0:src/L1/ETHLockbox.sol:124-235; src/L1/OptimismPortal2.sol:502-572,741-795
+  - v9.0.0:src/L1/ETHLockbox.sol:124-235; v9.0.0:src/L1/OptimismPortal2.sol:502-572,741-795
 - **UNREVIEWED_TRANSITIVE_PATHS:**
   - L8/L9: pre-pooling L2 ETH liability vs each lockbox; orphaned per-chain lockbox and portal surplus after cutover.
 
@@ -312,7 +314,7 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 - **ALL_AUTHORIZATION_CHANGES:**
   - onlyOtherBridge resolves xDomainMessageSender through messenger: v9.0.0:src/universal/StandardBridge.sol:111-117.
 - **ALL_PAUSE_SOURCE_CHANGES:**
-  - v1.2 virtual pause; current L1 bridge reads SystemConfig.paused at v9.0.0:src/L1/L1StandardBridge.sol:122-124, which reaches the ETHLockbox key via src/L1/SystemConfig.sol:574-576.
+  - v1.2 virtual pause; current L1 bridge reads SystemConfig.paused at v9.0.0:src/L1/L1StandardBridge.sol:122-124, which reaches the ETHLockbox key via v9.0.0:src/L1/SystemConfig.sol:574-576.
 - **OBJECTS_CREATED_UNDER_OLD_MEANING:**
   - Legacy v0 bridge messages, escrowed ERC20 balances, failedMessages.
 - **MIGRATION_OR_INVALIDATION_EVENTS:**
@@ -530,7 +532,7 @@ Scope: pinned Bedrock `v1.0.0` through `op-contracts/v9.0.0`. `v2.1.0`, `v2.2.0`
 
 ### DelayedWETH — `fallback deposit; unlock/withdraw/recover; pause/guardian dependency`
 
-- **FIRST_INTRODUCED:** v1.4.0:src/dispute/weth/DelayedWETH.sol:20-92 and src/dispute/weth/WETH98.sol:28-42
+- **FIRST_INTRODUCED:** v1.4.0:src/dispute/weth/DelayedWETH.sol:20-92 and v1.4.0:src/dispute/weth/WETH98.sol:28-42
 - **ORIGINAL_MEANING:** WETH receive/fallback deposits mint; unlock starts a delay; withdraw burns/transfers after delay and global SC pause check; guardian recovers excess.
 - **ORIGINAL_INVARIANT:** Recorded bond credit is redeemable once after delay, subject only to emergency pause, and recover cannot consume backed credit.
 - **ALL_SEMANTIC_CHANGES:**

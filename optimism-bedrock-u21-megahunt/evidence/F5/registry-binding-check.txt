@@ -8,16 +8,16 @@
    23491328 2025-10-02 ImplSet type 0 impl 0x22f2afb837156246187cd2652ad281ee08ebbb9d v1.7.0 immutableASR 0x23b2c62946350f4246f9f9d027e071f0264fd113 bound True
    23877377 2025-11-25 ImplSet type 1 impl 0x8081fab7cc5d0e56122bb6651928e0bcf94b95bf v1.8.0 immutableASR 0x23b2c62946350f4246f9f9d027e071f0264fd113 bound True
    23877377 2025-11-25 ImplSet type 0 impl 0x478c26109b169a840d61e95b19512ff0b5f19c87 v1.8.0 immutableASR 0x23b2c62946350f4246f9f9d027e071f0264fd113 bound True
-   24421512 2026-02-09 ImplSet type 1 impl 0x58bf355c5d4edfc723ef89d99582eccfd143266a v2.2.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   24421512 2026-02-09 ImplSet type 1 impl 0x58bf355c5d4edfc723ef89d99582eccfd143266a v2.2.0 immutableASR None bound None
    24421512 2026-02-09 ArgsSet type 1 len 164 argsASR 0x23b2c62946350f4246f9f9d027e071f0264fd113 bound True weth 0xe03f4d1d0e6b8b18b97198598b3f792e57ba17d4 prestate 0x033c000916b4
-   24421512 2026-02-09 ImplSet type 0 impl 0x6ddba09bc4ccb0d6ca9fc5350580f74165707499 v2.2.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   24421512 2026-02-09 ImplSet type 0 impl 0x6ddba09bc4ccb0d6ca9fc5350580f74165707499 v2.2.0 immutableASR None bound None
    24421512 2026-02-09 ArgsSet type 0 len 124 argsASR 0x23b2c62946350f4246f9f9d027e071f0264fd113 bound True weth 0xd061ab95069987868768818cc1248705351e2d0e prestate 0x033c000916b4
-   24421512 2026-02-09 ImplSet type 8 impl 0x6ddba09bc4ccb0d6ca9fc5350580f74165707499 v2.2.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   24421512 2026-02-09 ImplSet type 8 impl 0x6ddba09bc4ccb0d6ca9fc5350580f74165707499 v2.2.0 immutableASR None bound None
    24421512 2026-02-09 ArgsSet type 8 len 124 argsASR 0x23b2c62946350f4246f9f9d027e071f0264fd113 bound True weth 0xd061ab95069987868768818cc1248705351e2d0e prestate 0x0323914d3050
    25397811 2026-06-25 ImplSet type 0 impl None vNone immutableASR None bound None
-   25397811 2026-06-25 ImplSet type 1 impl 0xe1dffcbe4e22b813f26d2106d943c102e7cab87e v2.4.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   25397811 2026-06-25 ImplSet type 1 impl 0xe1dffcbe4e22b813f26d2106d943c102e7cab87e v2.4.0 immutableASR None bound None
    25397811 2026-06-25 ArgsSet type 1 len 164 argsASR 0x23b2c62946350f4246f9f9d027e071f0264fd113 bound True weth 0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162 prestate 0xdead00000000
-   25397811 2026-06-25 ImplSet type 8 impl 0x2dda3584b51ef5236f7726dea5a0fb6b3ca94aec v2.4.2 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   25397811 2026-06-25 ImplSet type 8 impl 0x2dda3584b51ef5236f7726dea5a0fb6b3ca94aec v2.4.2 immutableASR None bound None
    25397811 2026-06-25 ArgsSet type 8 len 124 argsASR 0x23b2c62946350f4246f9f9d027e071f0264fd113 bound True weth 0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162 prestate 0x0337ecb3604c
    25397811 2026-06-25 ImplSet type 4 impl None vNone immutableASR None bound None
    25397811 2026-06-25 ImplSet type 5 impl None vNone immutableASR None bound None
@@ -41,7 +41,7 @@
    26430859 2026-11-16 ArgsSet type 9 len 124 argsASR 0x23b2c62946350f4246f9f9d027e071f0264fd113 bound True weth 0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162 prestate 0x03e5a54835d3
    26430859 2026-11-16 ImplSet type 10 impl None vNone immutableASR None bound None
    26430859 2026-11-16 ImplSet type 4 impl None vNone immutableASR None bound None
-   AFTER-CUT registrations bound to another registry: 5 | after-cut impls without immutable registry (args-based): 4
+   AFTER-CUT registrations bound to another registry: 0 | after-cut args-based impls: 9 | of which NOT paired with same-tx args bound to current: 0 | types created after cut: [0, 8, 9]
 
 == INK: registry 0xee018baf058227872540ac60efbd38b023d9dae2 retirement 1753379243 (2025-07-24 17:47:23) games 2640/2640 non-retired 1718 (first idx 922) bound to current 1718 FOREIGN 0 getter-failed 0
    registry of retired games: {'0xde744491bcf6b2dd2f32146364ea1487d75e2509': 470, '0x2fc99fd16d8d3f6f66d164aa84e244c567e58a3d': 452}
@@ -52,22 +52,22 @@
    23491328 2025-10-02 ImplSet type 0 impl 0x5f5bea598fdf8df30d56808e8b793da8fc7f3028 v1.7.0 immutableASR 0xee018baf058227872540ac60efbd38b023d9dae2 bound True
    23877377 2025-11-25 ImplSet type 1 impl 0x467e6a8d6916e7394f9715b4de9339ee36887382 v1.8.0 immutableASR 0xee018baf058227872540ac60efbd38b023d9dae2 bound True
    23877377 2025-11-25 ImplSet type 0 impl 0x4cbfba0afeb3a36878eb52fae78335751076250c v1.8.0 immutableASR 0xee018baf058227872540ac60efbd38b023d9dae2 bound True
-   24421512 2026-02-09 ImplSet type 1 impl 0x58bf355c5d4edfc723ef89d99582eccfd143266a v2.2.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   24421512 2026-02-09 ImplSet type 1 impl 0x58bf355c5d4edfc723ef89d99582eccfd143266a v2.2.0 immutableASR None bound None
    24421512 2026-02-09 ArgsSet type 1 len 164 argsASR 0xee018baf058227872540ac60efbd38b023d9dae2 bound True weth 0x71cc5e57ce659e8e2cc78f86b14bddcb626691fd prestate 0x033c000916b4
-   24421512 2026-02-09 ImplSet type 0 impl 0x6ddba09bc4ccb0d6ca9fc5350580f74165707499 v2.2.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   24421512 2026-02-09 ImplSet type 0 impl 0x6ddba09bc4ccb0d6ca9fc5350580f74165707499 v2.2.0 immutableASR None bound None
    24421512 2026-02-09 ArgsSet type 0 len 124 argsASR 0xee018baf058227872540ac60efbd38b023d9dae2 bound True weth 0x6cbd14da021e39a7895ae151ac72ecc9023e87f6 prestate 0x033c000916b4
-   24421512 2026-02-09 ImplSet type 8 impl 0x6ddba09bc4ccb0d6ca9fc5350580f74165707499 v2.2.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   24421512 2026-02-09 ImplSet type 8 impl 0x6ddba09bc4ccb0d6ca9fc5350580f74165707499 v2.2.0 immutableASR None bound None
    24421512 2026-02-09 ArgsSet type 8 len 124 argsASR 0xee018baf058227872540ac60efbd38b023d9dae2 bound True weth 0x6cbd14da021e39a7895ae151ac72ecc9023e87f6 prestate 0x0323914d3050
    25397811 2026-06-25 ImplSet type 0 impl None vNone immutableASR None bound None
-   25397811 2026-06-25 ImplSet type 1 impl 0xe1dffcbe4e22b813f26d2106d943c102e7cab87e v2.4.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   25397811 2026-06-25 ImplSet type 1 impl 0xe1dffcbe4e22b813f26d2106d943c102e7cab87e v2.4.0 immutableASR None bound None
    25397811 2026-06-25 ArgsSet type 1 len 164 argsASR 0xee018baf058227872540ac60efbd38b023d9dae2 bound True weth 0x57b4c29daee99a28e6e86778b499361294c134ea prestate 0xdead00000000
-   25397811 2026-06-25 ImplSet type 8 impl 0x2dda3584b51ef5236f7726dea5a0fb6b3ca94aec v2.4.2 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   25397811 2026-06-25 ImplSet type 8 impl 0x2dda3584b51ef5236f7726dea5a0fb6b3ca94aec v2.4.2 immutableASR None bound None
    25397811 2026-06-25 ArgsSet type 8 len 124 argsASR 0xee018baf058227872540ac60efbd38b023d9dae2 bound True weth 0x57b4c29daee99a28e6e86778b499361294c134ea prestate 0x0337ecb3604c
    25397811 2026-06-25 ImplSet type 4 impl None vNone immutableASR None bound None
    25397811 2026-06-25 ImplSet type 5 impl None vNone immutableASR None bound None
    25397811 2026-06-25 ImplSet type 9 impl None vNone immutableASR None bound None
    25397811 2026-06-25 ImplSet type 10 impl None vNone immutableASR None bound None
-   25674914 2026-08-03 ImplSet type 1 impl 0xe1dffcbe4e22b813f26d2106d943c102e7cab87e v2.4.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   25674914 2026-08-03 ImplSet type 1 impl 0xe1dffcbe4e22b813f26d2106d943c102e7cab87e v2.4.0 immutableASR None bound None
    25674914 2026-08-03 ArgsSet type 1 len 164 argsASR 0xee018baf058227872540ac60efbd38b023d9dae2 bound True weth 0x57b4c29daee99a28e6e86778b499361294c134ea prestate 0xdead00000000
    26048619 2026-09-24 ImplSet type 0 impl None vNone immutableASR None bound None
    26048619 2026-09-24 ImplSet type 1 impl None vNone immutableASR None bound None
@@ -87,7 +87,7 @@
    26430859 2026-11-16 ArgsSet type 9 len 124 argsASR 0xee018baf058227872540ac60efbd38b023d9dae2 bound True weth 0x57b4c29daee99a28e6e86778b499361294c134ea prestate 0x03e5a54835d3
    26430859 2026-11-16 ImplSet type 10 impl None vNone immutableASR None bound None
    26430859 2026-11-16 ImplSet type 4 impl None vNone immutableASR None bound None
-   AFTER-CUT registrations bound to another registry: 6 | after-cut impls without immutable registry (args-based): 4
+   AFTER-CUT registrations bound to another registry: 0 | after-cut args-based impls: 10 | of which NOT paired with same-tx args bound to current: 0 | types created after cut: [0, 8, 9]
 
 == SONEIUM: registry 0x4890928941e62e273da359374b105f803329f473 retirement 1753380095 (2025-07-24 18:01:35) games 8537/8537 non-retired 5696 (first idx 2841) bound to current 5696 FOREIGN 0 getter-failed 0
    registry of retired games: {'0x61f89a381e0be13bd8ab356cf4b7301bc97d7522': 1486, '0x190b6ecee5a2ddf39669288b9b8daea4641ae8b1': 1355}
@@ -95,10 +95,10 @@
    22990670 2025-07-24 ImplSet type 1 impl 0x3c12f1f4f0702cb7fc83e2e5594331c10b9e39b4 v1.7.0 immutableASR 0x4890928941e62e273da359374b105f803329f473 bound True
    23491328 2025-10-02 ImplSet type 1 impl 0xb4343238bfc15aa0104276c00f88b54d2de3d6f1 v1.7.0 immutableASR 0x4890928941e62e273da359374b105f803329f473 bound True
    23877377 2025-11-25 ImplSet type 1 impl 0x0ddf929eeda8949cfe77b7e7e46e426e15a2d8f1 v1.8.0 immutableASR 0x4890928941e62e273da359374b105f803329f473 bound True
-   24478557 2026-02-17 ImplSet type 1 impl 0x58bf355c5d4edfc723ef89d99582eccfd143266a v2.2.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   24478557 2026-02-17 ImplSet type 1 impl 0x58bf355c5d4edfc723ef89d99582eccfd143266a v2.2.0 immutableASR None bound None
    24478557 2026-02-17 ArgsSet type 1 len 164 argsASR 0x4890928941e62e273da359374b105f803329f473 bound True weth 0x70277624cde90492231eb23309e1251beb18dff5 prestate 0x033c000916b4
    25397811 2026-06-25 ImplSet type 0 impl None vNone immutableASR None bound None
-   25397811 2026-06-25 ImplSet type 1 impl 0xe1dffcbe4e22b813f26d2106d943c102e7cab87e v2.4.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   25397811 2026-06-25 ImplSet type 1 impl 0xe1dffcbe4e22b813f26d2106d943c102e7cab87e v2.4.0 immutableASR None bound None
    25397811 2026-06-25 ArgsSet type 1 len 164 argsASR 0x4890928941e62e273da359374b105f803329f473 bound True weth 0x18fbb58c366e21f395ddec7cba0510a2d9116b47 prestate 0xdead00000000
    25397811 2026-06-25 ImplSet type 8 impl None vNone immutableASR None bound None
    25397811 2026-06-25 ImplSet type 4 impl None vNone immutableASR None bound None
@@ -121,7 +121,7 @@
    26430859 2026-11-16 ImplSet type 9 impl None vNone immutableASR None bound None
    26430859 2026-11-16 ImplSet type 10 impl None vNone immutableASR None bound None
    26430859 2026-11-16 ImplSet type 4 impl None vNone immutableASR None bound None
-   AFTER-CUT registrations bound to another registry: 2 | after-cut impls without immutable registry (args-based): 2
+   AFTER-CUT registrations bound to another registry: 0 | after-cut args-based impls: 4 | of which NOT paired with same-tx args bound to current: 0 | types created after cut: [1, 5]
 
 == UNICHAIN: registry 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 retirement 1753380731 (2025-07-24 18:12:11) games 17691/17691 non-retired 11505 (first idx 6186) bound to current 11505 FOREIGN 0 getter-failed 0
    registry of retired games: {'0x318a642db9e24a85318b8bf18efd5287ba38643b': 3731, '0xd5d0e176be44e61eab3cf1fa8153758df603376f': 2455}
@@ -132,16 +132,16 @@
    23492571 2025-10-02 ImplSet type 0 impl 0x42891199e6abd6a346e26b7d187ef5657fdff603 v1.7.0 immutableASR 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 bound True
    23878509 2025-11-25 ImplSet type 1 impl 0xfc38ce38042f7ea61001de8815ef8825e277fe02 v1.8.0 immutableASR 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 bound True
    23878509 2025-11-25 ImplSet type 0 impl 0x6d0462850f7b87403660cc9f4f89346483108512 v1.8.0 immutableASR 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 bound True
-   24427874 2026-02-10 ImplSet type 1 impl 0x58bf355c5d4edfc723ef89d99582eccfd143266a v2.2.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   24427874 2026-02-10 ImplSet type 1 impl 0x58bf355c5d4edfc723ef89d99582eccfd143266a v2.2.0 immutableASR None bound None
    24427874 2026-02-10 ArgsSet type 1 len 164 argsASR 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 bound True weth 0xe62b0279f6a466c5e1676f3ea955086300bcd0ac prestate 0x033c000916b4
-   24427874 2026-02-10 ImplSet type 0 impl 0x6ddba09bc4ccb0d6ca9fc5350580f74165707499 v2.2.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   24427874 2026-02-10 ImplSet type 0 impl 0x6ddba09bc4ccb0d6ca9fc5350580f74165707499 v2.2.0 immutableASR None bound None
    24427874 2026-02-10 ArgsSet type 0 len 124 argsASR 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 bound True weth 0x0bdbec6bd35571f97f96f3ed21822a4f2e071a3c prestate 0x033c000916b4
-   24427874 2026-02-10 ImplSet type 8 impl 0x6ddba09bc4ccb0d6ca9fc5350580f74165707499 v2.2.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   24427874 2026-02-10 ImplSet type 8 impl 0x6ddba09bc4ccb0d6ca9fc5350580f74165707499 v2.2.0 immutableASR None bound None
    24427874 2026-02-10 ArgsSet type 8 len 124 argsASR 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 bound True weth 0x0bdbec6bd35571f97f96f3ed21822a4f2e071a3c prestate 0x0323914d3050
    25475307 2026-07-06 ImplSet type 0 impl None vNone immutableASR None bound None
-   25475307 2026-07-06 ImplSet type 1 impl 0xe1dffcbe4e22b813f26d2106d943c102e7cab87e v2.4.0 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   25475307 2026-07-06 ImplSet type 1 impl 0xe1dffcbe4e22b813f26d2106d943c102e7cab87e v2.4.0 immutableASR None bound None
    25475307 2026-07-06 ArgsSet type 1 len 164 argsASR 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 bound True weth 0x74ad145ac900f1dd5551f0c9e143314dc4022fcf prestate 0xdead00000000
-   25475307 2026-07-06 ImplSet type 8 impl 0x2dda3584b51ef5236f7726dea5a0fb6b3ca94aec v2.4.2 immutableASR 0x0000000000000000000000000000000000000000 bound False
+   25475307 2026-07-06 ImplSet type 8 impl 0x2dda3584b51ef5236f7726dea5a0fb6b3ca94aec v2.4.2 immutableASR None bound None
    25475307 2026-07-06 ArgsSet type 8 len 124 argsASR 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 bound True weth 0x74ad145ac900f1dd5551f0c9e143314dc4022fcf prestate 0x0337ecb3604c
    25475307 2026-07-06 ImplSet type 4 impl None vNone immutableASR None bound None
    25475307 2026-07-06 ImplSet type 5 impl None vNone immutableASR None bound None
@@ -167,4 +167,4 @@
    26430859 2026-11-16 ArgsSet type 9 len 124 argsASR 0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9 bound True weth 0x74ad145ac900f1dd5551f0c9e143314dc4022fcf prestate 0x03e5a54835d3
    26430859 2026-11-16 ImplSet type 10 impl None vNone immutableASR None bound None
    26430859 2026-11-16 ImplSet type 4 impl None vNone immutableASR None bound None
-   AFTER-CUT registrations bound to another registry: 5 | after-cut impls without immutable registry (args-based): 5
+   AFTER-CUT registrations bound to another registry: 0 | after-cut args-based impls: 10 | of which NOT paired with same-tx args bound to current: 0 | types created after cut: [0, 8, 9]

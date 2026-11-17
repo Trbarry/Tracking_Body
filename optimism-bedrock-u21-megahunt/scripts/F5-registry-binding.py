@@ -48,6 +48,8 @@ for chain, c in CHAINS.items():
                 regs.append(dict(block=e["block"], time=d(ts), tx=e["tx"], kind="ImplementationSet", gameType=gt, implementation=None, note="type unset", afterCut=ts >= retire))
                 continue
             a, v, wv = impl_asr(impl)
+            if a and int(a, 16) == 0:
+                a = None  # CWIA implementation (FDG >= 2.2.0): bare impl reads empty args; registry comes from ImplementationArgsSet
             regs.append(dict(block=e["block"], time=d(ts), tx=e["tx"], kind="ImplementationSet", gameType=gt, implementation=impl, implVersion=v,
                              implImmutableRegistry=a, implImmutableWeth=wv, afterCut=ts >= retire,
                              boundToCurrent=(a.lower() == asr) if a else None))
@@ -70,6 +72,22 @@ for chain, c in CHAINS.items():
     res["implementationRegistrations"] = regs
     bad = [r for r in regs if r["afterCut"] and r.get("boundToCurrent") is False]
     unk = [r for r in regs if r["afterCut"] and r["kind"] == "ImplementationSet" and r.get("implementation") and r.get("boundToCurrent") is None]
+    # pair every after-cut args-based ImplementationSet with the ImplementationArgsSet of the same type in the same tx
+    unpaired = []
+    for r in unk:
+        m = [x for x in regs if x["kind"] == "ImplementationArgsSet" and x["tx"] == r["tx"] and x["gameType"] == r["gameType"]]
+        r["pairedArgsRegistry"] = m[-1].get("argsRegistry") if m else None
+        r["pairedBoundToCurrent"] = m[-1].get("boundToCurrent") if m else None
+        if not m or m[-1].get("boundToCurrent") is not True:
+            unpaired.append(r)
+    res["afterCutArgsBasedImplsNotPairedWithCurrentRegistryArgs"] = unpaired
+    # implementation live for each type at the retirement cut (last ImplementationSet with ts < cut)
+    live_at_cut = {}
+    for e in evs:
+        if e["event"].startswith("ImplementationSet") and block_ts(e["block"]) < retire:
+            live_at_cut[int(e["topics"][1], 16)] = "0x" + e["topics"][0][-40:]
+    res["implLiveJustBeforeCut"] = live_at_cut
+    res["typesCreatedAfterCut"] = sorted({g["type"] for g in nonret})
     res["registrationsAfterCutBoundToOtherRegistry"] = bad
     res["registrationsAfterCutWithNoImmutableRegistry"] = unk  # CWIA-args implementations: registry comes from the args set in the same tx
     out[chain] = res
@@ -83,5 +101,6 @@ for chain, c in CHAINS.items():
             print(f"   {r['block']} {r['time'][:10]} ImplSet type {r['gameType']} impl {r.get('implementation')} v{r.get('implVersion')} immutableASR {r.get('implImmutableRegistry')} bound {r.get('boundToCurrent')}")
         elif r["argsLength"]:
             print(f"   {r['block']} {r['time'][:10]} ArgsSet type {r['gameType']} len {r['argsLength']} argsASR {r.get('argsRegistry')} bound {r.get('boundToCurrent')} weth {r.get('weth')} prestate {str(r.get('prestate'))[:14]}")
-    print("   AFTER-CUT registrations bound to another registry:", len(bad), "| after-cut impls without immutable registry (args-based):", len(unk))
+    print("   AFTER-CUT registrations bound to another registry:", len(bad), "| after-cut args-based impls:", len(unk),
+          "| of which NOT paired with same-tx args bound to current:", len(unpaired), "| types created after cut:", res["typesCreatedAfterCut"])
 json.dump(out, open("evidence/F5/registry-binding-check.json", "w"), indent=1)

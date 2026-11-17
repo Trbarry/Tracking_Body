@@ -297,10 +297,12 @@
     "gameType": 1,
     "implementation": "0x58bf355c5d4edfc723ef89d99582eccfd143266a",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24421512,
@@ -327,10 +329,12 @@
     "gameType": 0,
     "implementation": "0x6ddba09bc4ccb0d6ca9fc5350580f74165707499",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24421512,
@@ -355,10 +359,12 @@
     "gameType": 8,
     "implementation": "0x6ddba09bc4ccb0d6ca9fc5350580f74165707499",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24421512,
@@ -403,10 +409,12 @@
     "gameType": 1,
     "implementation": "0xe1dffcbe4e22b813f26d2106d943c102e7cab87e",
     "implVersion": "2.4.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25397811,
@@ -433,10 +441,12 @@
     "gameType": 8,
     "implementation": "0x2dda3584b51ef5236f7726dea5a0fb6b3ca94aec",
     "implVersion": "2.4.2",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25397811,
@@ -604,7 +614,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26048619,
@@ -629,7 +641,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26048619,
@@ -757,7 +771,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -782,7 +798,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -840,7 +858,18 @@
     "note": "empty args"
    }
   ],
-  "registrationsAfterCutBoundToOtherRegistry": [
+  "afterCutArgsBasedImplsNotPairedWithCurrentRegistryArgs": [],
+  "implLiveJustBeforeCut": {
+   "0": "0x89d68b1d63aaa0db4af1163e81f56b76934292f8",
+   "1": "0xa1e0bacde89d899b3f24eef3d179cc335a24e777"
+  },
+  "typesCreatedAfterCut": [
+   0,
+   8,
+   9
+  ],
+  "registrationsAfterCutBoundToOtherRegistry": [],
+  "registrationsAfterCutWithNoImmutableRegistry": [
    {
     "block": 24421512,
     "time": "2026-02-09 20:10:59",
@@ -849,10 +878,12 @@
     "gameType": 1,
     "implementation": "0x58bf355c5d4edfc723ef89d99582eccfd143266a",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24421512,
@@ -862,10 +893,12 @@
     "gameType": 0,
     "implementation": "0x6ddba09bc4ccb0d6ca9fc5350580f74165707499",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24421512,
@@ -875,10 +908,12 @@
     "gameType": 8,
     "implementation": "0x6ddba09bc4ccb0d6ca9fc5350580f74165707499",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25397811,
@@ -888,10 +923,12 @@
     "gameType": 1,
     "implementation": "0xe1dffcbe4e22b813f26d2106d943c102e7cab87e",
     "implVersion": "2.4.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25397811,
@@ -901,13 +938,13 @@
     "gameType": 8,
     "implementation": "0x2dda3584b51ef5236f7726dea5a0fb6b3ca94aec",
     "implVersion": "2.4.2",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
-   }
-  ],
-  "registrationsAfterCutWithNoImmutableRegistry": [
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
+   },
    {
     "block": 26048619,
     "time": "2026-09-24 16:51:23",
@@ -919,7 +956,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26048619,
@@ -932,7 +971,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -945,7 +986,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -958,7 +1001,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+    "pairedBoundToCurrent": true
    }
   ]
  },
@@ -1220,10 +1265,12 @@
     "gameType": 1,
     "implementation": "0x58bf355c5d4edfc723ef89d99582eccfd143266a",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24421512,
@@ -1250,10 +1297,12 @@
     "gameType": 0,
     "implementation": "0x6ddba09bc4ccb0d6ca9fc5350580f74165707499",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24421512,
@@ -1278,10 +1327,12 @@
     "gameType": 8,
     "implementation": "0x6ddba09bc4ccb0d6ca9fc5350580f74165707499",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24421512,
@@ -1326,10 +1377,12 @@
     "gameType": 1,
     "implementation": "0xe1dffcbe4e22b813f26d2106d943c102e7cab87e",
     "implVersion": "2.4.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25397811,
@@ -1356,10 +1409,12 @@
     "gameType": 8,
     "implementation": "0x2dda3584b51ef5236f7726dea5a0fb6b3ca94aec",
     "implVersion": "2.4.2",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25397811,
@@ -1464,10 +1519,12 @@
     "gameType": 1,
     "implementation": "0xe1dffcbe4e22b813f26d2106d943c102e7cab87e",
     "implVersion": "2.4.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25674914,
@@ -1557,7 +1614,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26048619,
@@ -1582,7 +1641,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26048619,
@@ -1710,7 +1771,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -1735,7 +1798,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -1793,7 +1858,18 @@
     "note": "empty args"
    }
   ],
-  "registrationsAfterCutBoundToOtherRegistry": [
+  "afterCutArgsBasedImplsNotPairedWithCurrentRegistryArgs": [],
+  "implLiveJustBeforeCut": {
+   "1": "0x40641a4023f0f4c66d7f8ade16497f4c947a7163",
+   "0": "0x3ccf7c31a3a8c1b8aaa9a18fc2d010dde4262342"
+  },
+  "typesCreatedAfterCut": [
+   0,
+   8,
+   9
+  ],
+  "registrationsAfterCutBoundToOtherRegistry": [],
+  "registrationsAfterCutWithNoImmutableRegistry": [
    {
     "block": 24421512,
     "time": "2026-02-09 20:10:59",
@@ -1802,10 +1878,12 @@
     "gameType": 1,
     "implementation": "0x58bf355c5d4edfc723ef89d99582eccfd143266a",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24421512,
@@ -1815,10 +1893,12 @@
     "gameType": 0,
     "implementation": "0x6ddba09bc4ccb0d6ca9fc5350580f74165707499",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24421512,
@@ -1828,10 +1908,12 @@
     "gameType": 8,
     "implementation": "0x6ddba09bc4ccb0d6ca9fc5350580f74165707499",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25397811,
@@ -1841,10 +1923,12 @@
     "gameType": 1,
     "implementation": "0xe1dffcbe4e22b813f26d2106d943c102e7cab87e",
     "implVersion": "2.4.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25397811,
@@ -1854,10 +1938,12 @@
     "gameType": 8,
     "implementation": "0x2dda3584b51ef5236f7726dea5a0fb6b3ca94aec",
     "implVersion": "2.4.2",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25674914,
@@ -1867,13 +1953,13 @@
     "gameType": 1,
     "implementation": "0xe1dffcbe4e22b813f26d2106d943c102e7cab87e",
     "implVersion": "2.4.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
-   }
-  ],
-  "registrationsAfterCutWithNoImmutableRegistry": [
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
+   },
    {
     "block": 26048619,
     "time": "2026-09-24 16:51:23",
@@ -1885,7 +1971,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26048619,
@@ -1898,7 +1986,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -1911,7 +2001,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -1924,7 +2016,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0xee018baf058227872540ac60efbd38b023d9dae2",
+    "pairedBoundToCurrent": true
    }
   ]
  },
@@ -2039,10 +2133,12 @@
     "gameType": 1,
     "implementation": "0x58bf355c5d4edfc723ef89d99582eccfd143266a",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x4890928941e62e273da359374b105f803329f473",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24478557,
@@ -2089,10 +2185,12 @@
     "gameType": 1,
     "implementation": "0xe1dffcbe4e22b813f26d2106d943c102e7cab87e",
     "implVersion": "2.4.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x4890928941e62e273da359374b105f803329f473",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25397811,
@@ -2282,7 +2380,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x4890928941e62e273da359374b105f803329f473",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26048619,
@@ -2427,7 +2527,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x4890928941e62e273da359374b105f803329f473",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -2502,7 +2604,16 @@
     "note": "empty args"
    }
   ],
-  "registrationsAfterCutBoundToOtherRegistry": [
+  "afterCutArgsBasedImplsNotPairedWithCurrentRegistryArgs": [],
+  "implLiveJustBeforeCut": {
+   "1": "0x3d56d47b9e7e34a46612badc70377f74051e6b17"
+  },
+  "typesCreatedAfterCut": [
+   1,
+   5
+  ],
+  "registrationsAfterCutBoundToOtherRegistry": [],
+  "registrationsAfterCutWithNoImmutableRegistry": [
    {
     "block": 24478557,
     "time": "2026-02-17 19:11:11",
@@ -2511,10 +2622,12 @@
     "gameType": 1,
     "implementation": "0x58bf355c5d4edfc723ef89d99582eccfd143266a",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x4890928941e62e273da359374b105f803329f473",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25397811,
@@ -2524,13 +2637,13 @@
     "gameType": 1,
     "implementation": "0xe1dffcbe4e22b813f26d2106d943c102e7cab87e",
     "implVersion": "2.4.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
-   }
-  ],
-  "registrationsAfterCutWithNoImmutableRegistry": [
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x4890928941e62e273da359374b105f803329f473",
+    "pairedBoundToCurrent": true
+   },
    {
     "block": 26048619,
     "time": "2026-09-24 16:51:23",
@@ -2542,7 +2655,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x4890928941e62e273da359374b105f803329f473",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -2555,7 +2670,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x4890928941e62e273da359374b105f803329f473",
+    "pairedBoundToCurrent": true
    }
   ]
  },
@@ -2791,10 +2908,12 @@
     "gameType": 1,
     "implementation": "0x58bf355c5d4edfc723ef89d99582eccfd143266a",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24427874,
@@ -2821,10 +2940,12 @@
     "gameType": 0,
     "implementation": "0x6ddba09bc4ccb0d6ca9fc5350580f74165707499",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24427874,
@@ -2849,10 +2970,12 @@
     "gameType": 8,
     "implementation": "0x6ddba09bc4ccb0d6ca9fc5350580f74165707499",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24427874,
@@ -2897,10 +3020,12 @@
     "gameType": 1,
     "implementation": "0xe1dffcbe4e22b813f26d2106d943c102e7cab87e",
     "implVersion": "2.4.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25475307,
@@ -2927,10 +3052,12 @@
     "gameType": 8,
     "implementation": "0x2dda3584b51ef5236f7726dea5a0fb6b3ca94aec",
     "implVersion": "2.4.2",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25475307,
@@ -3098,7 +3225,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26048619,
@@ -3123,7 +3252,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26048619,
@@ -3191,7 +3322,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26299517,
@@ -3276,7 +3409,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -3301,7 +3436,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -3359,7 +3496,18 @@
     "note": "empty args"
    }
   ],
-  "registrationsAfterCutBoundToOtherRegistry": [
+  "afterCutArgsBasedImplsNotPairedWithCurrentRegistryArgs": [],
+  "implLiveJustBeforeCut": {
+   "1": "0x485272c0703020e1354328a1aba3ca767997bed3",
+   "0": "0x57a3b42698dc1e4fb905c9ab970154e178296991"
+  },
+  "typesCreatedAfterCut": [
+   0,
+   8,
+   9
+  ],
+  "registrationsAfterCutBoundToOtherRegistry": [],
+  "registrationsAfterCutWithNoImmutableRegistry": [
    {
     "block": 24427874,
     "time": "2026-02-10 17:30:23",
@@ -3368,10 +3516,12 @@
     "gameType": 1,
     "implementation": "0x58bf355c5d4edfc723ef89d99582eccfd143266a",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24427874,
@@ -3381,10 +3531,12 @@
     "gameType": 0,
     "implementation": "0x6ddba09bc4ccb0d6ca9fc5350580f74165707499",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 24427874,
@@ -3394,10 +3546,12 @@
     "gameType": 8,
     "implementation": "0x6ddba09bc4ccb0d6ca9fc5350580f74165707499",
     "implVersion": "2.2.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25475307,
@@ -3407,10 +3561,12 @@
     "gameType": 1,
     "implementation": "0xe1dffcbe4e22b813f26d2106d943c102e7cab87e",
     "implVersion": "2.4.0",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 25475307,
@@ -3420,13 +3576,13 @@
     "gameType": 8,
     "implementation": "0x2dda3584b51ef5236f7726dea5a0fb6b3ca94aec",
     "implVersion": "2.4.2",
-    "implImmutableRegistry": "0x0000000000000000000000000000000000000000",
+    "implImmutableRegistry": null,
     "implImmutableWeth": "0x0000000000000000000000000000000000000000",
     "afterCut": true,
-    "boundToCurrent": false
-   }
-  ],
-  "registrationsAfterCutWithNoImmutableRegistry": [
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
+   },
    {
     "block": 26048619,
     "time": "2026-09-24 16:51:23",
@@ -3438,7 +3594,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26048619,
@@ -3451,7 +3609,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26299517,
@@ -3464,7 +3624,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -3477,7 +3639,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    },
    {
     "block": 26430859,
@@ -3490,7 +3654,9 @@
     "implImmutableRegistry": null,
     "implImmutableWeth": null,
     "afterCut": true,
-    "boundToCurrent": null
+    "boundToCurrent": null,
+    "pairedArgsRegistry": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+    "pairedBoundToCurrent": true
    }
   ]
  }

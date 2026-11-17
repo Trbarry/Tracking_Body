@@ -125,7 +125,7 @@
         "Fresh-ASR migration retires old games; current initializer retains an already nonzero retirement timestamp: v9.0.0:src/dispute/AnchorStateRegistry.sol:124-132."
       ],
       "CURRENT_CONSUMERS": [
-        "v9.0.0:src/L1/OptimismPortal2.sol:390-492,671-705; src/dispute/AnchorStateRegistry.sol:227-352"
+        "v9.0.0:src/L1/OptimismPortal2.sol:390-492,671-705; v9.0.0:src/dispute/AnchorStateRegistry.sol:227-352"
       ],
       "UNREVIEWED_TRANSITIVE_PATHS": [
         "L1: pre-v1.9 kona prestate game consumed by current ASR; L8: old game/proof after shared-registry migration."
@@ -177,8 +177,10 @@
       "ALL_SEMANTIC_CHANGES": [
         "v1.5.0:src/L1/OptimismPortal.sol:165-215,232-585 \u2014 the legacy Portal first adds custom-gas-token balance, prove/finalize and split mint/value deposit branches.",
         "v1.6.0:src/L1/OptimismPortal2.sol:362-440,504-573 \u2014 custom-gas-token mode separates native balance accounting.",
+        "v2.0.0:src/L1/OptimismPortal2.sol:135-136,292-490 \u2014 Portal2 removes custom-gas-token execution and turns `_balance` into a spacer.",
         "v4.0.0:src/L1/OptimismPortal2.sol:374-429,740-788 \u2014 deposits lock ETH in ETHLockbox; portal liquidity and super-root migrations added.",
         "v4.1.0:src/L1/OptimismPortal2.sol:222-260,446-514,566-616 \u2014 lockbox use becomes feature-gated.",
+        "v6.0.0:src/L1/OptimismPortal2.sol:337-369,440-465,565-588,636-640 \u2014 custom-gas-token behavior returns behind the SystemConfig feature map.",
         "v7.0.0:src/L1/OptimismPortal2.sol:503-537 \u2014 shared-dispute-game migration repoints lockbox and ASR.",
         "v8.0.0:src/L1/OptimismPortal2.sol:510-554 \u2014 nonzero/new-lockbox authorization checks hardened.",
         "v9.0.0:src/L1/OptimismPortal2.sol:502-572,741-795 \u2014 CGT guard and current shared migration."
@@ -205,7 +207,7 @@
         "migrateLiquidity drains portal to lockbox; shared migration authorizes/repoints and separately migrates old lockbox liquidity."
       ],
       "CURRENT_CONSUMERS": [
-        "v9.0.0:src/L1/ETHLockbox.sol:124-235; src/L1/OptimismPortal2.sol:502-572,741-795"
+        "v9.0.0:src/L1/ETHLockbox.sol:124-235; v9.0.0:src/L1/OptimismPortal2.sol:502-572,741-795"
       ],
       "UNREVIEWED_TRANSITIVE_PATHS": [
         "L8/L9: pre-pooling L2 ETH liability vs each lockbox; orphaned per-chain lockbox and portal surplus after cutover."
@@ -375,7 +377,7 @@
         "onlyOtherBridge resolves xDomainMessageSender through messenger: v9.0.0:src/universal/StandardBridge.sol:111-117."
       ],
       "ALL_PAUSE_SOURCE_CHANGES": [
-        "v1.2 virtual pause; current L1 bridge reads SystemConfig.paused at v9.0.0:src/L1/L1StandardBridge.sol:122-124, which reaches the ETHLockbox key via src/L1/SystemConfig.sol:574-576."
+        "v1.2 virtual pause; current L1 bridge reads SystemConfig.paused at v9.0.0:src/L1/L1StandardBridge.sol:122-124, which reaches the ETHLockbox key via v9.0.0:src/L1/SystemConfig.sol:574-576."
       ],
       "OBJECTS_CREATED_UNDER_OLD_MEANING": [
         "Legacy v0 bridge messages, escrowed ERC20 balances, failedMessages."
@@ -666,7 +668,7 @@
     {
       "SURFACE": "DelayedWETH",
       "FUNCTION_OR_FIELD": "fallback deposit; unlock/withdraw/recover; pause/guardian dependency",
-      "FIRST_INTRODUCED": "v1.4.0:src/dispute/weth/DelayedWETH.sol:20-92 and src/dispute/weth/WETH98.sol:28-42",
+      "FIRST_INTRODUCED": "v1.4.0:src/dispute/weth/DelayedWETH.sol:20-92 and v1.4.0:src/dispute/weth/WETH98.sol:28-42",
       "ORIGINAL_MEANING": "WETH receive/fallback deposits mint; unlock starts a delay; withdraw burns/transfers after delay and global SC pause check; guardian recovers excess.",
       "ORIGINAL_INVARIANT": "Recorded bond credit is redeemable once after delay, subject only to emergency pause, and recover cannot consume backed credit.",
       "ALL_SEMANTIC_CHANGES": [

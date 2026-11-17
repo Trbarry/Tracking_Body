@@ -13,6 +13,27 @@ OUT = Path("/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CW0")
 PASS_A = Path("/home/user/Tracking_Body/optimism-u21-novel-hunt")
 
 
+def qualify_solidity_refs(value):
+    """Make every Solidity file:line reference carry its nearest release tag."""
+    if isinstance(value, dict):
+        return {key: qualify_solidity_refs(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [qualify_solidity_refs(item) for item in value]
+    if not isinstance(value, str):
+        return value
+
+    # A negative lookbehind keeps already-qualified ``vX.Y.Z:src/...`` references
+    # unchanged.  Historical-branch prose often names the release just before an
+    # em dash, so use the nearest preceding full tag for the following bare path.
+    bare_path = re.compile(r"(?<![:\w/])((?:contracts|src)/[^` ;|]+?\.sol:\d+(?:-\d+)?(?:,\d+(?:-\d+)?)*)")
+
+    def add_tag(match: re.Match[str]) -> str:
+        tags = re.findall(r"v\d+\.\d+\.\d+", value[:match.start()])
+        return f"{tags[-1]}:{match.group(1)}" if tags else match.group(1)
+
+    return bare_path.sub(add_tag, value)
+
+
 def clean_title(path: Path) -> str:
     text = path.read_text()
     for line in text.splitlines()[:12]:
@@ -86,7 +107,7 @@ FAMILY_FACTS = {
         "ancestor": "first: v1.0.0:contracts/L1/OptimismPortal.sol:325-420 (withdrawal value and finalize-before-call); current form: v4.0.0:src/L1/ETHLockbox.sol:132-232 (separate pooled custody), with U21 pause/identity source at v9.0.0:src/L1/ETHLockbox.sol:112-235",
         "consumer": "v9.0.0:src/L1/OptimismPortal2.sol:577-666,741-795 and v9.0.0:src/L1/ETHLockbox.sol:133-235",
         "state": "ETH in a portal/ETHLockbox/L1 messenger plus monotonic portal/lockbox authorizations",
-        "branches": ["v1.0.0 portal custody — contracts/L1/OptimismPortal.sol:325-490", "v1.6.0 custom-gas-token branch — src/L1/OptimismPortal2.sol:362-440,504-573", "v4.0.0 per-chain ETHLockbox — src/L1/ETHLockbox.sol:67-219", "v7.0.0 shared-lockbox migration — src/L1/OptimismPortal2.sol:503-537", "v9.0.0 lockbox-sourced pause — src/L1/ETHLockbox.sol:112-119"],
+        "branches": ["v1.0.0 portal custody — contracts/L1/OptimismPortal.sol:325-490", "v1.6.0 custom-gas-token branch — src/L1/OptimismPortal2.sol:362-440,504-573", "v2.0.0 custom-gas-token branch removed — src/L1/OptimismPortal2.sol:135-136,292-490", "v4.0.0 per-chain ETHLockbox — src/L1/ETHLockbox.sol:67-219", "v6.0.0 feature-gated custom-gas-token branch returns — src/L1/OptimismPortal2.sol:337-369,440-465,565-588,636-640", "v7.0.0 shared-lockbox migration — src/L1/OptimismPortal2.sol:503-537", "v9.0.0 lockbox-sourced pause — src/L1/ETHLockbox.sol:112-119"],
         "edge": "create ETH liability or authorization before the v4/v7 custody split; consume it after pooling, re-pointing, or a failed current finalization",
     },
     "proof-lifecycle": {
@@ -142,7 +163,7 @@ FAMILY_FACTS = {
         "ancestor": "first/current recognizable credit: v1.4.0:src/dispute/weth/DelayedWETH.sol:20-92 and src/dispute/weth/WETH98.sol:28-42; U21 form: v9.0.0:src/dispute/DelayedWETH.sol:37-129",
         "consumer": "v9.0.0:src/dispute/DelayedWETH.sol:74-129",
         "state": "WETH balance, delayed withdrawal timestamp/amount, and the pause/guardian dependency pointer",
-        "branches": ["v1.4.0 SuperchainConfig-backed DelayedWETH — src/dispute/weth/DelayedWETH.sol:20-92", "v1.6.0 recover via call — src/dispute/weth/DelayedWETH.sol:85-105", "v9.0.0 ETHLockbox-backed pause/guardian — src/dispute/DelayedWETH.sol:37-129"],
+        "branches": ["v1.4.0 SuperchainConfig-backed DelayedWETH — src/dispute/weth/DelayedWETH.sol:20-92", "v1.6.0 recover via call — src/dispute/weth/DelayedWETH.sol:85-90", "v9.0.0 ETHLockbox-backed pause/guardian — src/dispute/DelayedWETH.sol:37-129"],
         "edge": "create bond credit in a legacy DelayedWETH or via payable fallback; consume/recover it after pause-source or singleton re-pointing",
     },
     "gas-budget": {
@@ -195,7 +216,7 @@ override(
 )
 override(
     "0102",
-    "first: v2.0.0:src/dispute/SuperFaultDisputeGame.sol:257-284,1083-1084 (fixed absolute prestate in a super game); immutable-arg form first: v6.0.0:src/dispute/SuperFaultDisputeGame.sol:793-823; current offset form first: v8.0.0:src/dispute/SuperFaultDisputeGame.sol:838-875, preserved at v9.0.0:src/dispute/SuperFaultDisputeGame.sol:823-874",
+    "first: v2.0.0:src/dispute/SuperFaultDisputeGame.sol:257-284,1083-1084 (fixed absolute prestate in the predecessor game); immutable-arg form first: v6.0.0:src/dispute/SuperFaultDisputeGame.sol:793-823; current super-root-preimage form first: v7.0.0:src/dispute/SuperFaultDisputeGame.sol:234-262,829-894; current offsets: v9.0.0:src/dispute/SuperFaultDisputeGame.sol:251-279,809-874",
     "v9.0.0:src/dispute/SuperFaultDisputeGame.sol:251-340,823-887 and src/dispute/AnchorStateRegistry.sol:227-352",
     "already-created type-9 clone embedding the earlier absolute prestate and mutable singleton addresses",
 )
@@ -219,8 +240,8 @@ override(
 )
 override(
     "0202",
-    "first live words: v1.0.0:contracts/L1/OptimismPortal.sol:50-83; current dead form: v9.0.0:src/L1/OptimismPortal2.sol:64-120 (explicit legacy spacers)",
-    "no runtime consumer found; layout preservation is visible at v9.0.0:src/L1/OptimismPortal2.sol:64-120",
+    "first live ancestors include v1.0.0:contracts/L1/OptimismPortal.sol:50-83 and messenger/bridge legacy storage; v4 adds SystemConfig pointers to ETHLockbox/ASR/DelayedWETH; current dead declarations: v9.0.0:src/L1/OptimismPortal2.sol:64-120, src/L1/ETHLockbox.sol:66-78, src/dispute/AnchorStateRegistry.sol:33-59, src/dispute/DelayedWETH.sol:37-48, src/L1/L1CrossDomainMessenger.sol:25-37, src/L1/L1StandardBridge.sol:83-94, and src/L1/L1ERC721Bridge.sol:30-40",
+    "no runtime consumer found; explicit v9 spacer declarations are at src/L1/OptimismPortal2.sol:64-120, src/L1/ETHLockbox.sol:66-78, src/dispute/AnchorStateRegistry.sol:33-59, src/dispute/DelayedWETH.sol:37-48, src/L1/L1CrossDomainMessenger.sol:25-37, src/L1/L1StandardBridge.sol:83-94, and src/L1/L1ERC721Bridge.sol:30-40",
     "nonzero preserved proxy words under fields now declared as legacy spacers",
 )
 override(
@@ -317,7 +338,7 @@ override(
 )
 override(
     "2308",
-    "custom-gas-token liability split first: v1.5.0:src/L1/OptimismPortal.sol:165-215,232-585; runtime feature-map form first: v4.1.0:src/L1/SystemConfig.sol:139,503-534; current zero-value/CGT branches: v9.0.0:src/L1/OptimismPortal2.sol:500-589,741-759",
+    "custom-gas-token liability split first: v1.5.0:src/L1/OptimismPortal.sol:165-215,232-585; Portal2 removes it at v2.0.0:src/L1/OptimismPortal2.sol:135-136,292-490; current feature-gated form first: v6.0.0:src/L1/OptimismPortal2.sol:337-369,440-465,565-588,636-640 and remains at v9.0.0:src/L1/OptimismPortal2.sol:500-589,741-759",
     "v9.0.0:src/L1/OptimismPortal2.sol:500-589,741-759 and src/L1/SystemConfig.sol:532-568",
     "feature bit plus Portal/lockbox ETH surplus and zero-value deposit/withdrawal message objects",
     "create ETH/surplus or a zero-value cross-domain object under an older CGT mode, flip the runtime feature, then consume it through U21's liability guards",
@@ -327,6 +348,20 @@ override(
     "super-root chain selection first: v4.0.0:src/L1/OptimismPortal2.sol:396-570; current unified binding: v7.0.0:src/L1/OptimismPortal2.sol:368-471, preserved at v9.0.0:src/L1/OptimismPortal2.sol:390-492",
     "v9.0.0:src/L1/OptimismPortal2.sol:390-492, src/dispute/DisputeGameFactory.sol:147-245, and src/dispute/AnchorStateRegistry.sol:227-352",
     "super-game UUID/root/preimage, immutable l1Head/extraData and SystemConfig.l2ChainId selected at proof time",
+)
+override(
+    "0703",
+    "one-game-per-UUID first: v1.0.0:contracts/dispute/DisputeGameFactory.sol:78-162; creator/root/parentHash/extraData clone layout: v1.4.0:src/dispute/DisputeGameFactory.sol:84-153; current deterministic create/UUID form: v7.0.0:src/dispute/DisputeGameFactory.sol:147-243 with l1Head at src/dispute/SuperFaultDisputeGame.sol:841-845",
+    "v9.0.0:src/dispute/DisputeGameFactory.sol:147-245 and src/dispute/AnchorStateRegistry.sol:227-352",
+    "DGF UUID/list timestamp plus immutable creator, root, parent L1 hash and opaque extraData",
+    "create a game under an earlier implementation/prestate at a chosen l1Head, then consume it after mutable factory/ASR config changes while UUID and creation timestamp persist",
+)
+override(
+    "2701 2702",
+    "current hash-consistent multi-chain super-root preimage first: v7.0.0:src/dispute/SuperFaultDisputeGame.sol:234-262,826-839; current form: v9.0.0:src/dispute/SuperFaultDisputeGame.sol:251-279,807-820",
+    "v9.0.0:src/dispute/SuperFaultDisputeGame.sol:251-279,807-820 and src/L1/OptimismPortal2.sol:390-492",
+    "immutable super-root preimage/output-root list and DGF UUID; duplicate chain IDs retain first-match lookup order",
+    "create a structurally hash-consistent duplicate/unsorted list under the first super-root game, then consume it through a later Portal/fault-proof-program version",
 )
 override(
     "0704 0904 2305 2505 2604 2903",
@@ -543,6 +578,7 @@ def build_primitives() -> tuple[list[dict], dict[str, str]]:
     flattened = [Path(p).stem.split("-")[1] for r in records for p in r["source_files"]]
     assert sorted(flattened) == sorted(ids)
     assert not ({"3301", "3302", "3303"} & set(flattened))
+    records = qualify_solidity_refs(records)
     (OUT / "PRIMITIVES.json").write_text(json.dumps(records, indent=2) + "\n")
     return records, source_to_a
 
@@ -570,7 +606,7 @@ def build_matrix(records: list[dict], source_to_a: dict[str, str]) -> None:
     edge("2301", "2305", "per-chain lockbox liquidity")
     edge("0303", "2305", "portal surplus ETH")
     for c in ["0305", "0602", "2203"]: edge("0603", c, "pauseTimestamps[identifier]")
-    edge("0602", "0103", "legacy DelayedWETH credit")
+    edge("0103", "0602", "WETH balance/withdrawal credit created through payable fallback")
     edge("2305", "2303", "sticky authorizedPortals/authorizedLockboxes")
     edge("2305", "2902", "shared-lockbox authorization")
     edge("0605", "2308", "runtime feature bit over existing ETH/liability")
@@ -689,8 +725,10 @@ def build_lineage() -> list[dict]:
           "Deposit value is exactly escrowed once; migration cannot strand the active withdrawal backing.",
           ["v1.5.0:src/L1/OptimismPortal.sol:165-215,232-585 — the legacy Portal first adds custom-gas-token balance, prove/finalize and split mint/value deposit branches.",
            "v1.6.0:src/L1/OptimismPortal2.sol:362-440,504-573 — custom-gas-token mode separates native balance accounting.",
+           "v2.0.0:src/L1/OptimismPortal2.sol:135-136,292-490 — Portal2 removes custom-gas-token execution and turns `_balance` into a spacer.",
            "v4.0.0:src/L1/OptimismPortal2.sol:374-429,740-788 — deposits lock ETH in ETHLockbox; portal liquidity and super-root migrations added.",
            "v4.1.0:src/L1/OptimismPortal2.sol:222-260,446-514,566-616 — lockbox use becomes feature-gated.",
+           "v6.0.0:src/L1/OptimismPortal2.sol:337-369,440-465,565-588,636-640 — custom-gas-token behavior returns behind the SystemConfig feature map.",
            "v7.0.0:src/L1/OptimismPortal2.sol:503-537 — shared-dispute-game migration repoints lockbox and ASR.",
            "v8.0.0:src/L1/OptimismPortal2.sol:510-554 — nonzero/new-lockbox authorization checks hardened.",
            "v9.0.0:src/L1/OptimismPortal2.sol:502-572,741-795 — CGT guard and current shared migration."],
@@ -974,6 +1012,8 @@ def build_lineage() -> list[dict]:
         "FACT": "No indexed security-surface semantic delta from v2.0.0/v3.0.0 respectively.",
         "EVIDENCE": "mirror/CW0/SOURCE-FUNCTION-INDEX.json and SOURCE-FUNCTION-CHANGES.md, generated from pinned source trees; representative bodies: v2.0.0/v2.1.0/v2.2.0:src/L1/OptimismPortal2.sol and v3.0.0/v3.0.1:src/universal/CrossDomainMessenger.sol.",
     }
+    data = qualify_solidity_refs(data)
+    maintenance = qualify_solidity_refs(maintenance)
     payload = {"scope": "Bedrock v1.0.0 through op-contracts/v9.0.0", "maintenance_no_semantic_delta": maintenance, "records": data}
     (OUT / "SEMANTIC-LINEAGE.json").write_text(json.dumps(payload, indent=2) + "\n")
 
@@ -1001,7 +1041,7 @@ def build_lineage() -> list[dict]:
         "| v4.0.0 | ETHLockbox custody; scoped expiring pauses; ASR owns invalidation; super-root Portal | `v4.0.0:src/L1/ETHLockbox.sol:67-232`; `src/dispute/AnchorStateRegistry.sol:34-340` |",
         "| v4.1.0 | Output-root/interoperability Portal split; runtime features/pause-key selection | `v4.1.0:src/L1/SystemConfig.sol:139,503-534` |",
         "| v5.0.0 | DGF gameArgs becomes persistent future-clone configuration | `v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292` |",
-        "| v6.0.0 | ASR retirement preserved across reinitialization; dual clone-arg layout | `v6.0.0:src/dispute/AnchorStateRegistry.sol:107-115`; `src/dispute/DisputeGameFactory.sol:140-220` |",
+        "| v6.0.0 | ASR retirement preserved; dual clone-arg layout; feature-gated Portal CGT behavior returns | `v6.0.0:src/dispute/AnchorStateRegistry.sol:107-115`; `src/dispute/DisputeGameFactory.sol:140-220`; `src/L1/OptimismPortal2.sol:337-369,636-640` |",
         "| v7.0.0 | Unified super-game proving, shared-game migration, deterministic DGF clones, OPCM V2 | `v7.0.0:src/L1/OptimismPortal2.sol:368-537`; `src/L1/opcm/OPContractsManagerV2.sol:229-290` |",
         "| v8.0.0 | Shared migration validation hardening; type-5 becomes a born-resolved proposer-gated game | `v8.0.0:src/L1/OptimismPortal2.sol:510-554`; `src/dispute/SuperPermissionedDisputeGame.sol:48-73` |",
         "| v9.0.0 | Lockbox-sourced pause/guardian, delete proof, split gas budgets, atomic failed-L1CDM withdrawal | `v9.0.0:src/L1/OptimismPortal2.sol:273-330,577-728`; `src/L1/L1CrossDomainMessenger.sol:43-153` |",
@@ -1021,7 +1061,7 @@ def build_lineage() -> list[dict]:
             else:
                 md.append("  - None identified in the pinned releases.")
         md.append("")
-    (OUT / "SEMANTIC-LINEAGE.md").write_text("\n".join(md).rstrip() + "\n")
+    (OUT / "SEMANTIC-LINEAGE.md").write_text(qualify_solidity_refs("\n".join(md).rstrip()) + "\n")
     return data
 
 
@@ -1041,7 +1081,7 @@ def build_dead_ends() -> None:
         ("Pause misses a current value exit", "Current ETH/ERC20/ERC721 release paths resolve to the lockbox key and revert while it is paused; deposits/locks remaining open is deliberate directional semantics.", "yes — historic pointer/key divergence", f"{rej}/REJ-0601.md; {rej}/REJ-1204.md; {rej}/REJ-2602.md; {rej}/REJ-3102.md"),
         ("Expired/arbitrary pause as permissionless freeze", "Only Guardian mutates timestamps; arbitrary identifiers are inert unless a consumer points to them, and expiry returns false although operational reset is awkward.", "yes — current-state-only pointer premise", f"{rej}/REJ-0603.md; {rej}/REJ-0604.md; {rej}/REJ-2603.md"),
         ("Malformed/noncanonical super root directly wins", "Structural acceptance does not bypass the respected game, challenge window, and fault-proof soundness; duplicate/unsorted entries still need a defender win.", "yes — pre-v1.9 kona soundness is L1", f"{rej}/REJ-0701.md; {rej}/REJ-2701.md; {rej}/REJ-2702.md"),
-        ("Legacy game on OP is already invalid", "The full OP census found the tested third-party defender-win root canonical; current validity alone does not establish a bad historical root.", "yes — other chains and un-recomputed official roots", f"{rej}/REJ-0101.md; {rej}/REJ-0702.md; {rej}/REJ-2703.md"),
+        ("Invalid-legacy-game hypothesis on OP", "The full OP census found the tested third-party defender-win root canonical; current validity alone does not establish a bad historical root.", "yes — other chains and un-recomputed official roots", f"{rej}/REJ-0101.md; {rej}/REJ-0702.md; {rej}/REJ-2703.md"),
         ("CREATE2 pre-positioning of governed migration", "Standalone Utils and legitimate delegatecall contexts have different CREATE2 deployers; the actual migration salt includes timestamp and governed flow context.", "no unless a future flow CALLs Utils", f"{rej}/REJ-2104.md; {rej}/REJ-2704.md; {rej}/REJ-3004.md"),
         ("Gas boundary is permanent loss under current rules", "Current v9 tests found retryable failure rather than finalized-neither; users can add gas and Portal reverts failed messenger subcalls.", "yes — future Amsterdam/EIP-7825 or L2 still-old messenger", f"{rej}/REJ-0804.md; {rej}/REJ-1001.md; {rej}/REJ-3006.md; {rej}/REJ-3202.md"),
         ("Migration validator observations are onchain invariants", "Zero-balance and finite game-type checks are mutable snapshots/operational validation, not authorization or conservation invariants.", "yes — live balances/game types at the eventual migration block", f"{rej}/REJ-0902.md; {rej}/REJ-3005.md; {rej}/REJ-3201.md"),

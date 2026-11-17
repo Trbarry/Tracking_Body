@@ -1,0 +1,1378 @@
+{
+  "chains": {
+    "INK": {
+      "anchorStateRegistries": [
+        {
+          "address": "0x2fc99fd16d8d3f6f66d164aa84e244c567e58a3d",
+          "anchorRoot": {
+            "l2SequenceNumber": 19265297,
+            "root": "0x10c839264195b6b897892b2d8949004bcb6005a9c712b41651aaf1a68c004d21"
+          },
+          "codeSize": 2059,
+          "disputeGameFactory": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+          "eip1967Admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+          "eip1967Implementation": "0x7b465370bb7a333f99edd19599eb7fb1c2d3f8d2",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 22182531,
+          "firstCodeTimestamp": 1743612623,
+          "kind": "AnchorStateRegistry",
+          "rawCalls": {
+            "config": null,
+            "delay": null,
+            "disputeGameFactory": "0x00000000000000000000000010d7b35078d3baabb96dd45a9143b94be65b12cd",
+            "ethLockbox": null,
+            "getAnchorRoot": "0x10c839264195b6b897892b2d8949004bcb6005a9c712b41651aaf1a68c004d21000000000000000000000000000000000000000000000000000000000125f711",
+            "getStartingAnchorRoot": null,
+            "owner": null,
+            "respectedGameType": "0x0000000000000000000000000000000000000000000000000000000000000009",
+            "retirementTimestamp": null,
+            "superchainConfig": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005322e322e32000000000000000000000000000000000000000000000000000000"
+          },
+          "respectedGameType": 9,
+          "retirementTimestamp": null,
+          "startingAnchorRoot": null,
+          "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "usage": {
+            "firstIndex": 470,
+            "gameCount": 452,
+            "lastIndex": 921,
+            "types": [
+              0
+            ]
+          },
+          "version": "2.2.2"
+        },
+        {
+          "address": "0xde744491bcf6b2dd2f32146364ea1487d75e2509",
+          "anchorRoot": null,
+          "codeSize": 2059,
+          "disputeGameFactory": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+          "eip1967Admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+          "eip1967Implementation": "0x7a78aa7d5dec2f8b368ca13f00df2fa4e5de3c3f",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 21344310,
+          "firstCodeTimestamp": 1733498411,
+          "kind": "AnchorStateRegistry",
+          "rawCalls": {
+            "config": null,
+            "delay": null,
+            "disputeGameFactory": "0x00000000000000000000000010d7b35078d3baabb96dd45a9143b94be65b12cd",
+            "ethLockbox": null,
+            "getAnchorRoot": null,
+            "getStartingAnchorRoot": null,
+            "owner": null,
+            "respectedGameType": null,
+            "retirementTimestamp": null,
+            "superchainConfig": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "version": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000c322e302e312d626574612e330000000000000000000000000000000000000000"
+          },
+          "respectedGameType": null,
+          "retirementTimestamp": null,
+          "startingAnchorRoot": null,
+          "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "usage": {
+            "firstIndex": 0,
+            "gameCount": 470,
+            "lastIndex": 469,
+            "types": [
+              0,
+              1
+            ]
+          },
+          "version": "2.0.1-beta.3"
+        },
+        {
+          "address": "0xee018baf058227872540ac60efbd38b023d9dae2",
+          "anchorRoot": {
+            "l2SequenceNumber": 1794288067,
+            "root": "0xf2045b079293aaf86f438a6b8ef8c11b2e61e164ebf18374b0b10b70f848176e"
+          },
+          "codeSize": 2059,
+          "disputeGameFactory": "0x10d7b35078d3baabb96dd45a9143b94be65b12cd",
+          "eip1967Admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+          "eip1967Implementation": "0x2b27299c577d4720100e2735b652444dcea652d0",
+          "ethBalanceWei": 0,
+          "ethLockbox": "0xbd4abb321138e8eddc399ce64e66451294325a14",
+          "firstCodeBlock": 22990599,
+          "firstCodeTimestamp": 1753379243,
+          "kind": "AnchorStateRegistry",
+          "rawCalls": {
+            "config": null,
+            "delay": null,
+            "disputeGameFactory": "0x00000000000000000000000010d7b35078d3baabb96dd45a9143b94be65b12cd",
+            "ethLockbox": "0x000000000000000000000000bd4abb321138e8eddc399ce64e66451294325a14",
+            "getAnchorRoot": "0xf2045b079293aaf86f438a6b8ef8c11b2e61e164ebf18374b0b10b70f848176e000000000000000000000000000000000000000000000000000000006af2a9c3",
+            "getStartingAnchorRoot": "0x25b22a0c711fa1d01b3cdb95fb98c0e7ff003b00909bfe8fade3507a6e62d44e000000000000000000000000000000000000000000000000000000006a9fa89a",
+            "owner": null,
+            "respectedGameType": "0x0000000000000000000000000000000000000000000000000000000000000009",
+            "retirementTimestamp": "0x00000000000000000000000000000000000000000000000000000000688271ab",
+            "superchainConfig": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005342e302e30000000000000000000000000000000000000000000000000000000"
+          },
+          "respectedGameType": 9,
+          "retirementTimestamp": 1753379243,
+          "startingAnchorRoot": {
+            "l2SequenceNumber": 1788848282,
+            "root": "0x25b22a0c711fa1d01b3cdb95fb98c0e7ff003b00909bfe8fade3507a6e62d44e"
+          },
+          "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "usage": {
+            "firstIndex": 922,
+            "gameCount": 1718,
+            "lastIndex": 2639,
+            "types": [
+              0,
+              8,
+              9
+            ]
+          },
+          "version": "4.0.0"
+        }
+      ],
+      "delayedWETHs": [
+        {
+          "address": "0x14773a8040ff22e3dcbb0c83ec8e33be7d920d38",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 604800,
+          "eip1967Admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+          "eip1967Implementation": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 21344310,
+          "firstCodeTimestamp": 1733498411,
+          "kind": "DelayedWETH",
+          "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000093a80",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e312e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 0,
+            "gameCount": 190,
+            "lastIndex": 191,
+            "types": [
+              1
+            ]
+          },
+          "version": "1.1.0"
+        },
+        {
+          "address": "0x3beaca17eae5643fb1479aa5f4b1ff75cc4b9b50",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 604800,
+          "eip1967Admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+          "eip1967Implementation": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+          "ethBalanceWei": 80000000000000000,
+          "ethLockbox": null,
+          "firstCodeBlock": 21387926,
+          "firstCodeTimestamp": 1734024575,
+          "kind": "DelayedWETH",
+          "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000093a80",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e312e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 155,
+            "gameCount": 216,
+            "lastIndex": 405,
+            "types": [
+              0
+            ]
+          },
+          "version": "1.1.0"
+        },
+        {
+          "address": "0x3f7b07a5d638024a37a776fa228fe90b317af6de",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+          "eip1967Implementation": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 22990599,
+          "firstCodeTimestamp": 1753379243,
+          "kind": "DelayedWETH",
+          "owner": null,
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e352e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 922,
+            "gameCount": 280,
+            "lastIndex": 1201,
+            "types": [
+              0
+            ]
+          },
+          "version": "1.5.0"
+        },
+        {
+          "address": "0x57b4c29daee99a28e6e86778b499361294c134ea",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+          "eip1967Implementation": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+          "ethBalanceWei": 5710376000000000000,
+          "ethLockbox": "0xbd4abb321138e8eddc399ce64e66451294325a14",
+          "firstCodeBlock": 25397811,
+          "firstCodeTimestamp": 1782428747,
+          "kind": "DelayedWETH",
+          "owner": null,
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x000000000000000000000000bd4abb321138e8eddc399ce64e66451294325a14",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005322e302e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 2266,
+            "gameCount": 374,
+            "lastIndex": 2639,
+            "types": [
+              8,
+              9
+            ]
+          },
+          "version": "2.0.0"
+        },
+        {
+          "address": "0x6cbd14da021e39a7895ae151ac72ecc9023e87f6",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+          "eip1967Implementation": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 23491328,
+          "firstCodeTimestamp": 1759422923,
+          "kind": "DelayedWETH",
+          "owner": null,
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e352e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 1202,
+            "gameCount": 1064,
+            "lastIndex": 2265,
+            "types": [
+              0
+            ]
+          },
+          "version": "1.5.0"
+        },
+        {
+          "address": "0xf6b1554f483c391414d3830927e3600c105aae6e",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+          "eip1967Implementation": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 21995971,
+          "firstCodeTimestamp": 1741362215,
+          "kind": "DelayedWETH",
+          "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e332e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 406,
+            "gameCount": 516,
+            "lastIndex": 921,
+            "types": [
+              0
+            ]
+          },
+          "version": "1.3.0"
+        }
+      ]
+    },
+    "OP": {
+      "anchorStateRegistries": [
+        {
+          "address": "0x18dac71c228d1c32c99489b7323d441e1175e443",
+          "anchorRoot": null,
+          "codeSize": 2059,
+          "disputeGameFactory": "0xe5965ab5962edc7477c8520243a95517cd252fa9",
+          "eip1967Admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+          "eip1967Implementation": "0x1b5cc028a4276597c607907f24e1ac05d3852cfc",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 19884569,
+          "firstCodeTimestamp": 1715887043,
+          "kind": "AnchorStateRegistry",
+          "rawCalls": {
+            "config": null,
+            "delay": null,
+            "disputeGameFactory": "0x000000000000000000000000e5965ab5962edc7477c8520243a95517cd252fa9",
+            "ethLockbox": null,
+            "getAnchorRoot": null,
+            "getStartingAnchorRoot": null,
+            "owner": null,
+            "respectedGameType": null,
+            "retirementTimestamp": null,
+            "superchainConfig": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005322e302e30000000000000000000000000000000000000000000000000000000"
+          },
+          "respectedGameType": null,
+          "retirementTimestamp": null,
+          "startingAnchorRoot": null,
+          "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "usage": {
+            "firstIndex": 0,
+            "gameCount": 7110,
+            "lastIndex": 7109,
+            "types": [
+              0,
+              1
+            ]
+          },
+          "version": "2.0.0"
+        },
+        {
+          "address": "0x1c68ecfbf9c8b1e6c0677965b3b9ecf9a104305b",
+          "anchorRoot": {
+            "l2SequenceNumber": 138585637,
+            "root": "0xfce6d556d11e1662f316ed1408782a3227b1c1dcd8f643c1f563043298822e62"
+          },
+          "codeSize": 2059,
+          "disputeGameFactory": "0xe5965ab5962edc7477c8520243a95517cd252fa9",
+          "eip1967Admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+          "eip1967Implementation": "0x7b465370bb7a333f99edd19599eb7fb1c2d3f8d2",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 22182531,
+          "firstCodeTimestamp": 1743612623,
+          "kind": "AnchorStateRegistry",
+          "rawCalls": {
+            "config": null,
+            "delay": null,
+            "disputeGameFactory": "0x000000000000000000000000e5965ab5962edc7477c8520243a95517cd252fa9",
+            "ethLockbox": null,
+            "getAnchorRoot": "0xfce6d556d11e1662f316ed1408782a3227b1c1dcd8f643c1f563043298822e62000000000000000000000000000000000000000000000000000000000842a625",
+            "getStartingAnchorRoot": null,
+            "owner": null,
+            "respectedGameType": "0x0000000000000000000000000000000000000000000000000000000000000009",
+            "retirementTimestamp": null,
+            "superchainConfig": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005322e322e32000000000000000000000000000000000000000000000000000000"
+          },
+          "respectedGameType": 9,
+          "retirementTimestamp": null,
+          "startingAnchorRoot": null,
+          "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "usage": {
+            "firstIndex": 7110,
+            "gameCount": 2718,
+            "lastIndex": 9827,
+            "types": [
+              0
+            ]
+          },
+          "version": "2.2.2"
+        },
+        {
+          "address": "0x23b2c62946350f4246f9f9d027e071f0264fd113",
+          "anchorRoot": {
+            "l2SequenceNumber": 1794298459,
+            "root": "0xca640c8db165091618e7edc23995b250d4b3e6dfbe918bded900a38efbf76fbc"
+          },
+          "codeSize": 2059,
+          "disputeGameFactory": "0xe5965ab5962edc7477c8520243a95517cd252fa9",
+          "eip1967Admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+          "eip1967Implementation": "0x2b27299c577d4720100e2735b652444dcea652d0",
+          "ethBalanceWei": 0,
+          "ethLockbox": "0x322b47ff1fa8d5611f761e3e275c45b71b294d43",
+          "firstCodeBlock": 22990599,
+          "firstCodeTimestamp": 1753379243,
+          "kind": "AnchorStateRegistry",
+          "rawCalls": {
+            "config": null,
+            "delay": null,
+            "disputeGameFactory": "0x000000000000000000000000e5965ab5962edc7477c8520243a95517cd252fa9",
+            "ethLockbox": "0x000000000000000000000000322b47ff1fa8d5611f761e3e275c45b71b294d43",
+            "getAnchorRoot": "0xca640c8db165091618e7edc23995b250d4b3e6dfbe918bded900a38efbf76fbc000000000000000000000000000000000000000000000000000000006af2d25b",
+            "getStartingAnchorRoot": "0xbd4aeba96e33ef5582e14257fb776b3223ad45934ccd368c2f3084c8b75c1d68000000000000000000000000000000000000000000000000000000006a9f9367",
+            "owner": null,
+            "respectedGameType": "0x0000000000000000000000000000000000000000000000000000000000000009",
+            "retirementTimestamp": "0x00000000000000000000000000000000000000000000000000000000688271ab",
+            "superchainConfig": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005342e302e30000000000000000000000000000000000000000000000000000000"
+          },
+          "respectedGameType": 9,
+          "retirementTimestamp": 1753379243,
+          "startingAnchorRoot": {
+            "l2SequenceNumber": 1788842855,
+            "root": "0xbd4aeba96e33ef5582e14257fb776b3223ad45934ccd368c2f3084c8b75c1d68"
+          },
+          "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "usage": {
+            "firstIndex": 9828,
+            "gameCount": 11561,
+            "lastIndex": 21388,
+            "types": [
+              0,
+              8,
+              9
+            ]
+          },
+          "version": "4.0.0"
+        }
+      ],
+      "delayedWETHs": [
+        {
+          "address": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+          "eip1967Implementation": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+          "ethBalanceWei": 20662782000000000000,
+          "ethLockbox": "0x322b47ff1fa8d5611f761e3e275c45b71b294d43",
+          "firstCodeBlock": 25397811,
+          "firstCodeTimestamp": 1782428747,
+          "kind": "DelayedWETH",
+          "owner": null,
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x000000000000000000000000322b47ff1fa8d5611f761e3e275c45b71b294d43",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005322e302e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 17905,
+            "gameCount": 3484,
+            "lastIndex": 21388,
+            "types": [
+              8,
+              9
+            ]
+          },
+          "version": "2.0.0"
+        },
+        {
+          "address": "0x323dfc63c9b83cb83f40325aab74b245937cbdf0",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+          "eip1967Implementation": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
+          "ethBalanceWei": 80000000000000000,
+          "ethLockbox": null,
+          "firstCodeBlock": 21379271,
+          "firstCodeTimestamp": 1733920199,
+          "kind": "DelayedWETH",
+          "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e332e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 5098,
+            "gameCount": 4730,
+            "lastIndex": 9827,
+            "types": [
+              0
+            ]
+          },
+          "version": "1.3.0"
+        },
+        {
+          "address": "0x82511d494b5c942be57498a70fdd7184ee33b975",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 604800,
+          "eip1967Admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+          "eip1967Implementation": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+          "ethBalanceWei": 80000000000000000,
+          "ethLockbox": null,
+          "firstCodeBlock": 20637593,
+          "firstCodeTimestamp": 1724975003,
+          "kind": "DelayedWETH",
+          "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000093a80",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e312e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 2253,
+            "gameCount": 2845,
+            "lastIndex": 5097,
+            "types": [
+              0
+            ]
+          },
+          "version": "1.1.0"
+        },
+        {
+          "address": "0x9f9b897e37de5052cd70db6d08474550ddb07f39",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 604800,
+          "eip1967Admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+          "eip1967Implementation": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 20637594,
+          "firstCodeTimestamp": 1724975015,
+          "kind": "DelayedWETH",
+          "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000093a80",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e312e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 2237,
+            "gameCount": 16,
+            "lastIndex": 2252,
+            "types": [
+              1
+            ]
+          },
+          "version": "1.1.0"
+        },
+        {
+          "address": "0xd061ab95069987868768818cc1248705351e2d0e",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+          "eip1967Implementation": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 23491328,
+          "firstCodeTimestamp": 1759422923,
+          "kind": "DelayedWETH",
+          "owner": null,
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e352e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 11507,
+            "gameCount": 6398,
+            "lastIndex": 17904,
+            "types": [
+              0
+            ]
+          },
+          "version": "1.5.0"
+        },
+        {
+          "address": "0xe214879ad573693a4c49f7654449caa455cde34f",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+          "eip1967Implementation": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 22990599,
+          "firstCodeTimestamp": 1753379243,
+          "kind": "DelayedWETH",
+          "owner": null,
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e352e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 9828,
+            "gameCount": 1679,
+            "lastIndex": 11506,
+            "types": [
+              0
+            ]
+          },
+          "version": "1.5.0"
+        },
+        {
+          "address": "0xe497b094d6dbb3d5e4caac9a14696d7572588d14",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 604800,
+          "eip1967Admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+          "eip1967Implementation": "0x97988d5624f1ba266e1da305117bcf20713bee08",
+          "ethBalanceWei": 160000000000000000,
+          "ethLockbox": null,
+          "firstCodeBlock": 19884569,
+          "firstCodeTimestamp": 1715887043,
+          "kind": "DelayedWETH",
+          "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000093a80",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e302e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 0,
+            "gameCount": 2237,
+            "lastIndex": 2236,
+            "types": [
+              0,
+              1
+            ]
+          },
+          "version": "1.0.0"
+        }
+      ]
+    },
+    "SONEIUM": {
+      "anchorStateRegistries": [
+        {
+          "address": "0x190b6ecee5a2ddf39669288b9b8daea4641ae8b1",
+          "anchorRoot": {
+            "l2SequenceNumber": 5084269,
+            "root": "0x17ce11194e3dd58b940485ebc70141f3654183ceb2700d590a6bc57c4cc7f68c"
+          },
+          "codeSize": 2059,
+          "disputeGameFactory": "0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+          "eip1967Admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "eip1967Implementation": "0x7b465370bb7a333f99edd19599eb7fb1c2d3f8d2",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 22182531,
+          "firstCodeTimestamp": 1743612623,
+          "kind": "AnchorStateRegistry",
+          "rawCalls": {
+            "config": null,
+            "delay": null,
+            "disputeGameFactory": "0x000000000000000000000000512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+            "ethLockbox": null,
+            "getAnchorRoot": "0x17ce11194e3dd58b940485ebc70141f3654183ceb2700d590a6bc57c4cc7f68c00000000000000000000000000000000000000000000000000000000004d946d",
+            "getStartingAnchorRoot": null,
+            "owner": null,
+            "respectedGameType": "0x0000000000000000000000000000000000000000000000000000000000000005",
+            "retirementTimestamp": null,
+            "superchainConfig": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005322e322e32000000000000000000000000000000000000000000000000000000"
+          },
+          "respectedGameType": 5,
+          "retirementTimestamp": null,
+          "startingAnchorRoot": null,
+          "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "usage": {
+            "firstIndex": 1486,
+            "gameCount": 1355,
+            "lastIndex": 2840,
+            "types": [
+              1
+            ]
+          },
+          "version": "2.2.2"
+        },
+        {
+          "address": "0x4890928941e62e273da359374b105f803329f473",
+          "anchorRoot": {
+            "l2SequenceNumber": 1794596679,
+            "root": "0x615306abb7962b8ec4384bf6c5df146783da03b9248467af05e36dfb02b3b271"
+          },
+          "codeSize": 2059,
+          "disputeGameFactory": "0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+          "eip1967Admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "eip1967Implementation": "0x2b27299c577d4720100e2735b652444dcea652d0",
+          "ethBalanceWei": 0,
+          "ethLockbox": "0x67b4de6ffa66ef201ea6099a89ca397d56622e31",
+          "firstCodeBlock": 22990670,
+          "firstCodeTimestamp": 1753380095,
+          "kind": "AnchorStateRegistry",
+          "rawCalls": {
+            "config": null,
+            "delay": null,
+            "disputeGameFactory": "0x000000000000000000000000512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+            "ethLockbox": "0x00000000000000000000000067b4de6ffa66ef201ea6099a89ca397d56622e31",
+            "getAnchorRoot": "0x615306abb7962b8ec4384bf6c5df146783da03b9248467af05e36dfb02b3b271000000000000000000000000000000000000000000000000000000006af75f47",
+            "getStartingAnchorRoot": "0x08a53686fd0b1671ff7b89c3a994582503f15f7be00f0f2e7c9f0d3b187ab124000000000000000000000000000000000000000000000000000000006a9fa929",
+            "owner": null,
+            "respectedGameType": "0x0000000000000000000000000000000000000000000000000000000000000005",
+            "retirementTimestamp": "0x00000000000000000000000000000000000000000000000000000000688274ff",
+            "superchainConfig": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005342e302e30000000000000000000000000000000000000000000000000000000"
+          },
+          "respectedGameType": 5,
+          "retirementTimestamp": 1753380095,
+          "startingAnchorRoot": {
+            "l2SequenceNumber": 1788848425,
+            "root": "0x08a53686fd0b1671ff7b89c3a994582503f15f7be00f0f2e7c9f0d3b187ab124"
+          },
+          "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "usage": {
+            "firstIndex": 2841,
+            "gameCount": 5696,
+            "lastIndex": 8536,
+            "types": [
+              1,
+              5
+            ]
+          },
+          "version": "4.0.0"
+        },
+        {
+          "address": "0x61f89a381e0be13bd8ab356cf4b7301bc97d7522",
+          "anchorRoot": null,
+          "codeSize": 2059,
+          "disputeGameFactory": "0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+          "eip1967Admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "eip1967Implementation": "0x2749920b02cf0911264ede2bd455860b46d042ea",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 21314185,
+          "firstCodeTimestamp": 1733134751,
+          "kind": "AnchorStateRegistry",
+          "rawCalls": {
+            "config": null,
+            "delay": null,
+            "disputeGameFactory": "0x000000000000000000000000512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+            "ethLockbox": null,
+            "getAnchorRoot": null,
+            "getStartingAnchorRoot": null,
+            "owner": null,
+            "respectedGameType": null,
+            "retirementTimestamp": null,
+            "superchainConfig": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "version": "0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000c322e302e312d626574612e330000000000000000000000000000000000000000"
+          },
+          "respectedGameType": null,
+          "retirementTimestamp": null,
+          "startingAnchorRoot": null,
+          "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "usage": {
+            "firstIndex": 0,
+            "gameCount": 1486,
+            "lastIndex": 1485,
+            "types": [
+              1
+            ]
+          },
+          "version": "2.0.1-beta.3"
+        }
+      ],
+      "delayedWETHs": [
+        {
+          "address": "0x18fbb58c366e21f395ddec7cba0510a2d9116b47",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "eip1967Implementation": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+          "ethBalanceWei": 0,
+          "ethLockbox": "0x67b4de6ffa66ef201ea6099a89ca397d56622e31",
+          "firstCodeBlock": 25397811,
+          "firstCodeTimestamp": 1782428747,
+          "kind": "DelayedWETH",
+          "owner": null,
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x00000000000000000000000067b4de6ffa66ef201ea6099a89ca397d56622e31",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005322e302e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 6867,
+            "gameCount": 1088,
+            "lastIndex": 7954,
+            "types": [
+              1
+            ]
+          },
+          "version": "2.0.0"
+        },
+        {
+          "address": "0x372dc0b87b790d6e1308cf9e7f73f0f1fcbd3754",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "eip1967Implementation": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 22990670,
+          "firstCodeTimestamp": 1753380095,
+          "kind": "DelayedWETH",
+          "owner": null,
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e352e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 2841,
+            "gameCount": 838,
+            "lastIndex": 3678,
+            "types": [
+              1
+            ]
+          },
+          "version": "1.5.0"
+        },
+        {
+          "address": "0x70277624cde90492231eb23309e1251beb18dff5",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "eip1967Implementation": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 23491328,
+          "firstCodeTimestamp": 1759422923,
+          "kind": "DelayedWETH",
+          "owner": null,
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e352e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 3679,
+            "gameCount": 3188,
+            "lastIndex": 6866,
+            "types": [
+              1
+            ]
+          },
+          "version": "1.5.0"
+        },
+        {
+          "address": "0x9aea1fd851b63d57ba4fc556b0e0c170126c9eaf",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "eip1967Implementation": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 21314185,
+          "firstCodeTimestamp": 1733134751,
+          "kind": "DelayedWETH",
+          "owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e332e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 0,
+            "gameCount": 2841,
+            "lastIndex": 2840,
+            "types": [
+              1
+            ]
+          },
+          "version": "1.3.0"
+        }
+      ]
+    },
+    "UNICHAIN": {
+      "anchorStateRegistries": [
+        {
+          "address": "0x27cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff9",
+          "anchorRoot": {
+            "l2SequenceNumber": 1794300387,
+            "root": "0xcbdfd78473ee1cf5dba9afd8a6b1c9163084cee7cc9baf35dcbe99d8a92dfd31"
+          },
+          "codeSize": 2059,
+          "disputeGameFactory": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
+          "eip1967Admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+          "eip1967Implementation": "0x2b27299c577d4720100e2735b652444dcea652d0",
+          "ethBalanceWei": 0,
+          "ethLockbox": "0x08ba0023ed60c7bd040716dd13c45fa0062df5c5",
+          "firstCodeBlock": 22990722,
+          "firstCodeTimestamp": 1753380731,
+          "kind": "AnchorStateRegistry",
+          "rawCalls": {
+            "config": null,
+            "delay": null,
+            "disputeGameFactory": "0x0000000000000000000000002f12d621a16e2d3285929c9996f478508951dfe4",
+            "ethLockbox": "0x00000000000000000000000008ba0023ed60c7bd040716dd13c45fa0062df5c5",
+            "getAnchorRoot": "0xcbdfd78473ee1cf5dba9afd8a6b1c9163084cee7cc9baf35dcbe99d8a92dfd31000000000000000000000000000000000000000000000000000000006af2d9e3",
+            "getStartingAnchorRoot": "0xaf64a866304eb17696278d26290bb172aa941eac3370d9bc8bd313d492beb7d3000000000000000000000000000000000000000000000000000000006a9faa0b",
+            "owner": null,
+            "respectedGameType": "0x0000000000000000000000000000000000000000000000000000000000000009",
+            "retirementTimestamp": "0x000000000000000000000000000000000000000000000000000000006882777b",
+            "superchainConfig": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005342e302e30000000000000000000000000000000000000000000000000000000"
+          },
+          "respectedGameType": 9,
+          "retirementTimestamp": 1753380731,
+          "startingAnchorRoot": {
+            "l2SequenceNumber": 1788848651,
+            "root": "0xaf64a866304eb17696278d26290bb172aa941eac3370d9bc8bd313d492beb7d3"
+          },
+          "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "usage": {
+            "firstIndex": 6186,
+            "gameCount": 11505,
+            "lastIndex": 17690,
+            "types": [
+              0,
+              8,
+              9
+            ]
+          },
+          "version": "4.0.0"
+        },
+        {
+          "address": "0x318a642db9e24a85318b8bf18efd5287ba38643b",
+          "anchorRoot": null,
+          "codeSize": 2059,
+          "disputeGameFactory": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
+          "eip1967Admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+          "eip1967Implementation": "0x43491a8ca2ea77e9af35878409303743facf95a8",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 21116359,
+          "firstCodeTimestamp": 1730748311,
+          "kind": "AnchorStateRegistry",
+          "rawCalls": {
+            "config": null,
+            "delay": null,
+            "disputeGameFactory": "0x0000000000000000000000002f12d621a16e2d3285929c9996f478508951dfe4",
+            "ethLockbox": null,
+            "getAnchorRoot": null,
+            "getStartingAnchorRoot": null,
+            "owner": null,
+            "respectedGameType": null,
+            "retirementTimestamp": null,
+            "superchainConfig": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005322e302e30000000000000000000000000000000000000000000000000000000"
+          },
+          "respectedGameType": null,
+          "retirementTimestamp": null,
+          "startingAnchorRoot": null,
+          "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "usage": {
+            "firstIndex": 0,
+            "gameCount": 3731,
+            "lastIndex": 3730,
+            "types": [
+              0,
+              1
+            ]
+          },
+          "version": "2.0.0"
+        },
+        {
+          "address": "0xd5d0e176be44e61eab3cf1fa8153758df603376f",
+          "anchorRoot": {
+            "l2SequenceNumber": 22024228,
+            "root": "0x193781a056643321a32aacffcb9087a6e54a0f858d5ee06f29cd920ada6eeea9"
+          },
+          "codeSize": 2059,
+          "disputeGameFactory": "0x2f12d621a16e2d3285929c9996f478508951dfe4",
+          "eip1967Admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+          "eip1967Implementation": "0x7b465370bb7a333f99edd19599eb7fb1c2d3f8d2",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 22254924,
+          "firstCodeTimestamp": 1744485539,
+          "kind": "AnchorStateRegistry",
+          "rawCalls": {
+            "config": null,
+            "delay": null,
+            "disputeGameFactory": "0x0000000000000000000000002f12d621a16e2d3285929c9996f478508951dfe4",
+            "ethLockbox": null,
+            "getAnchorRoot": "0x193781a056643321a32aacffcb9087a6e54a0f858d5ee06f29cd920ada6eeea90000000000000000000000000000000000000000000000000000000001501024",
+            "getStartingAnchorRoot": null,
+            "owner": null,
+            "respectedGameType": "0x0000000000000000000000000000000000000000000000000000000000000009",
+            "retirementTimestamp": null,
+            "superchainConfig": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005322e322e32000000000000000000000000000000000000000000000000000000"
+          },
+          "respectedGameType": 9,
+          "retirementTimestamp": null,
+          "startingAnchorRoot": null,
+          "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "usage": {
+            "firstIndex": 3731,
+            "gameCount": 2455,
+            "lastIndex": 6185,
+            "types": [
+              0
+            ]
+          },
+          "version": "2.2.2"
+        }
+      ],
+      "delayedWETHs": [
+        {
+          "address": "0x0bdbec6bd35571f97f96f3ed21822a4f2e071a3c",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+          "eip1967Implementation": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 23492571,
+          "firstCodeTimestamp": 1759437959,
+          "kind": "DelayedWETH",
+          "owner": null,
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e352e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 7865,
+            "gameCount": 6616,
+            "lastIndex": 14480,
+            "types": [
+              0
+            ]
+          },
+          "version": "1.5.0"
+        },
+        {
+          "address": "0x74ad145ac900f1dd5551f0c9e143314dc4022fcf",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+          "eip1967Implementation": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+          "ethBalanceWei": 21419797000000000000,
+          "ethLockbox": "0x08ba0023ed60c7bd040716dd13c45fa0062df5c5",
+          "firstCodeBlock": 25475307,
+          "firstCodeTimestamp": 1783362755,
+          "kind": "DelayedWETH",
+          "owner": null,
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x00000000000000000000000008ba0023ed60c7bd040716dd13c45fa0062df5c5",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005322e302e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 14481,
+            "gameCount": 3210,
+            "lastIndex": 17690,
+            "types": [
+              8,
+              9
+            ]
+          },
+          "version": "2.0.0"
+        },
+        {
+          "address": "0x7d8ea656d7417229f420b0c87f6428baa8499d70",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 604800,
+          "eip1967Admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+          "eip1967Implementation": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 21116358,
+          "firstCodeTimestamp": 1730748299,
+          "kind": "DelayedWETH",
+          "owner": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000093a80",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x0000000000000000000000006d5b183f538abb8572f5cd17109c617b994d5833",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e312e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 0,
+            "gameCount": 1740,
+            "lastIndex": 1739,
+            "types": [
+              1
+            ]
+          },
+          "version": "1.1.0"
+        },
+        {
+          "address": "0x84b268a4101a8c8e3ccb33004f81ed08202ba124",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+          "eip1967Implementation": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 21582222,
+          "firstCodeTimestamp": 1736368991,
+          "kind": "DelayedWETH",
+          "owner": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x0000000000000000000000006d5b183f538abb8572f5cd17109c617b994d5833",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e332e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 1740,
+            "gameCount": 125,
+            "lastIndex": 1867,
+            "types": [
+              1
+            ]
+          },
+          "version": "1.3.0"
+        },
+        {
+          "address": "0xa0157f0730dea8d1a5c358dc1d340a05d8796c23",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+          "eip1967Implementation": "0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998",
+          "ethBalanceWei": 0,
+          "ethLockbox": null,
+          "firstCodeBlock": 22990722,
+          "firstCodeTimestamp": 1753380731,
+          "kind": "DelayedWETH",
+          "owner": null,
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e352e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 6186,
+            "gameCount": 1679,
+            "lastIndex": 7864,
+            "types": [
+              0
+            ]
+          },
+          "version": "1.5.0"
+        },
+        {
+          "address": "0xc9edb4e340f4e9683b4557bd9db8f9d932177c86",
+          "codeSize": 2059,
+          "config": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+          "delaySeconds": 302400,
+          "eip1967Admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+          "eip1967Implementation": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
+          "ethBalanceWei": 80000000000000000,
+          "ethLockbox": null,
+          "firstCodeBlock": 21431684,
+          "firstCodeTimestamp": 1734552299,
+          "kind": "DelayedWETH",
+          "owner": "0x6d5b183f538abb8572f5cd17109c617b994d5833",
+          "rawCalls": {
+            "config": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+            "delay": "0x0000000000000000000000000000000000000000000000000000000000049d40",
+            "disputeGameFactory": "0x",
+            "ethLockbox": "0x",
+            "getAnchorRoot": "0x",
+            "getStartingAnchorRoot": "0x",
+            "owner": "0x0000000000000000000000006d5b183f538abb8572f5cd17109c617b994d5833",
+            "respectedGameType": "0x",
+            "retirementTimestamp": "0x",
+            "superchainConfig": "0x",
+            "version": "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000005312e332e30000000000000000000000000000000000000000000000000000000"
+          },
+          "usage": {
+            "firstIndex": 1822,
+            "gameCount": 4321,
+            "lastIndex": 6185,
+            "types": [
+              0
+            ]
+          },
+          "version": "1.3.0"
+        }
+      ]
+    }
+  },
+  "meta": {
+    "block": 26433900,
+    "rpc": "http://127.0.0.1:7545"
+  }
+}

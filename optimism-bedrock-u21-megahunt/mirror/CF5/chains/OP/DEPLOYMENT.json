@@ -1,0 +1,297 @@
+{
+  "deployments": [
+    {
+      "birthState": {
+        "admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e"
+      },
+      "bornVersion": "3.5.0",
+      "contract": "ASR",
+      "firstCode": {
+        "block": 22990599,
+        "dateUTC": "2025-07-24T17:47:23+00:00",
+        "hash": "0x08995bf3db72fc399abfdcf79c5c0596acc128def5216ac318a40baa27f1e717",
+        "timestamp": 1753379243
+      },
+      "firstImplementation": {
+        "admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e"
+      },
+      "firstImplementationBlock": 22990599,
+      "firstImplementationDateUTC": "2025-07-24T17:47:23+00:00",
+      "proxy": "0x23B2C62946350F4246f9f9D027e071f0264FD113"
+    },
+    {
+      "birthState": {
+        "admin": "0x0000000000000000000000000000000000000000",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0x0000000000000000000000000000000000000000"
+      },
+      "bornVersion": null,
+      "contract": "AddressManager",
+      "firstCode": {
+        "block": 12686687,
+        "dateUTC": "2021-06-22T22:13:53+00:00",
+        "hash": "0x6eeca8dcaa51370f0048dcc0569ebb0c62ba9841e5414b362aa15915c29428d1",
+        "timestamp": 1624400033
+      },
+      "firstImplementation": null,
+      "firstImplementationBlock": null,
+      "firstImplementationDateUTC": null,
+      "proxy": "0xdE1FCfB0851916CA5101820A69b13a4E276bd81F"
+    },
+    {
+      "birthState": {
+        "admin": "0xf2fbae9b080ae2ac24a56cf456636804fa54db29",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0x0000000000000000000000000000000000000000"
+      },
+      "bornVersion": "1.0.0",
+      "contract": "DGF",
+      "firstCode": {
+        "block": 19884569,
+        "dateUTC": "2024-05-16T19:17:23+00:00",
+        "hash": "0x36e151edc1750bf97840d8bf21de1997133bb26a2250a1febab2f1851385786c",
+        "timestamp": 1715887043
+      },
+      "firstImplementation": {
+        "admin": "0xf2fbae9b080ae2ac24a56cf456636804fa54db29",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0xc641a33cab81c559f2bd4b21ea34c290e2440c2b"
+      },
+      "firstImplementationBlock": 19884570,
+      "firstImplementationDateUTC": "2024-05-16T19:17:35+00:00",
+      "proxy": "0xe5965Ab5962eDc7477C8520243A95517CD252fA9"
+    },
+    {
+      "birthState": {
+        "admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0xe440cc08a71694c8229323803f59024e3144630e"
+      },
+      "bornVersion": "1.5.1",
+      "contract": "DelayedWETH",
+      "firstCode": {
+        "block": 25397811,
+        "dateUTC": "2026-06-25T23:05:47+00:00",
+        "hash": "0x6cedac8f1eb07872c1f5a9ab6249c2b4b6018e42226fb9e3c1d6798f057515ad",
+        "timestamp": 1782428747
+      },
+      "firstImplementation": {
+        "admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0xe440cc08a71694c8229323803f59024e3144630e"
+      },
+      "firstImplementationBlock": 25397811,
+      "firstImplementationDateUTC": "2026-06-25T23:05:47+00:00",
+      "proxy": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162"
+    },
+    {
+      "birthState": {
+        "admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0x0000000000000000000000000000000000000000"
+      },
+      "bornVersion": "1.1.0",
+      "contract": "ERC20Factory",
+      "firstCode": {
+        "block": 17365803,
+        "dateUTC": "2023-05-29T16:23:11+00:00",
+        "hash": "0x21734904e880a46f858627a4ac837db2f58e61c30a3669e001ff6fdde604ccf5",
+        "timestamp": 1685377391
+      },
+      "firstImplementation": {
+        "admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0xae849efa4bcfc419593420e14707996936e365e2"
+      },
+      "firstImplementationBlock": 17423158,
+      "firstImplementationDateUTC": "2023-06-06T18:24:11+00:00",
+      "proxy": "0x75505a97BD334E7BD3C476893285569C4136Fa0F"
+    },
+    {
+      "birthState": {
+        "admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+        "balanceWei": 236752243071584240518225,
+        "code": true,
+        "implementation": "0x784d2f03593a42a6e4676a012762f18775ecbbe6"
+      },
+      "bornVersion": "1.2.0",
+      "contract": "ETHLockbox",
+      "firstCode": {
+        "block": 22990599,
+        "dateUTC": "2025-07-24T17:47:23+00:00",
+        "hash": "0x08995bf3db72fc399abfdcf79c5c0596acc128def5216ac318a40baa27f1e717",
+        "timestamp": 1753379243
+      },
+      "firstImplementation": {
+        "admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+        "balanceWei": 236752243071584240518225,
+        "code": true,
+        "implementation": "0x784d2f03593a42a6e4676a012762f18775ecbbe6"
+      },
+      "firstImplementationBlock": 22990599,
+      "firstImplementationDateUTC": "2025-07-24T17:47:23+00:00",
+      "proxy": "0x322b47Ff1FA8D5611F761e3E275C45B71b294D43"
+    },
+    {
+      "birthState": {
+        "admin": "0x53a6eecc2dd4795fcc68940ddc6b4d53bd88bd9e",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0x0000000000000000000000000000000000000000"
+      },
+      "bornVersion": "1.0.0",
+      "contract": "L1ERC721Bridge",
+      "firstCode": {
+        "block": 15677422,
+        "dateUTC": "2022-10-04T21:23:11+00:00",
+        "hash": "0xa5c98ae09c1db0857551a9eaca6d88e1bff5f8103814795c0ed1e7863e16a6d5",
+        "timestamp": 1664918591
+      },
+      "firstImplementation": {
+        "admin": "0x53a6eecc2dd4795fcc68940ddc6b4d53bd88bd9e",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0x3268ed09f76e619331528270b6267d4d2c5ab5c2"
+      },
+      "firstImplementationBlock": 15677648,
+      "firstImplementationDateUTC": "2022-10-04T22:08:59+00:00",
+      "proxy": "0x5a7749f83b81B301cAb5f48EB8516B986DAef23D"
+    },
+    {
+      "birthState": {
+        "admin": "0x9996571372066a1545d3435c6935e3f9593a7ef5",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0x0000000000000000000000000000000000000000"
+      },
+      "bornVersion": null,
+      "contract": "L1StandardBridge",
+      "firstCode": {
+        "block": 12686786,
+        "dateUTC": "2021-06-22T22:37:44+00:00",
+        "hash": "0xb6578d9e60cce4713437b5cf0898dd7040c9284e178aadfb7dfbb590f4f083af",
+        "timestamp": 1624401464
+      },
+      "firstImplementation": {
+        "admin": "0x9996571372066a1545d3435c6935e3f9593a7ef5",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0x9091dda480b232133a7d2e4cb23336b4f0293196"
+      },
+      "firstImplementationBlock": 12686787,
+      "firstImplementationDateUTC": "2021-06-22T22:37:53+00:00",
+      "proxy": "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1"
+    },
+    {
+      "birthState": {
+        "admin": "0x0000000000000000000000000000000000000000",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0x0000000000000000000000000000000000000000"
+      },
+      "bornVersion": null,
+      "contract": "L1XDM",
+      "firstCode": {
+        "block": 12686757,
+        "dateUTC": "2021-06-22T22:29:57+00:00",
+        "hash": "0xd4ac3db2a7b6711dabac13ef84b398e86c647e5a24f0ffdd3458b3c66ab6cef1",
+        "timestamp": 1624400997
+      },
+      "firstImplementation": null,
+      "firstImplementationBlock": null,
+      "firstImplementationDateUTC": null,
+      "proxy": "0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1"
+    },
+    {
+      "birthState": {
+        "admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0x0000000000000000000000000000000000000000"
+      },
+      "bornVersion": "1.6.0",
+      "contract": "Portal",
+      "firstCode": {
+        "block": 17365802,
+        "dateUTC": "2023-05-29T16:22:59+00:00",
+        "hash": "0x46d5b502bf0b4473d984d51e838c2fe8221d19ed75adcab17844d6e746e3643b",
+        "timestamp": 1685377379
+      },
+      "firstImplementation": {
+        "admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+        "balanceWei": 293288256836040170934313,
+        "code": true,
+        "implementation": "0x28a55488fef40005309e2da0040dbe9d300a64ab"
+      },
+      "firstImplementationBlock": 17423158,
+      "firstImplementationDateUTC": "2023-06-06T18:24:11+00:00",
+      "proxy": "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed"
+    },
+    {
+      "birthState": {
+        "admin": "0x0000000000000000000000000000000000000000",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0x0000000000000000000000000000000000000000"
+      },
+      "bornVersion": null,
+      "contract": "ProxyAdmin",
+      "firstCode": {
+        "block": 17365800,
+        "dateUTC": "2023-05-29T16:22:35+00:00",
+        "hash": "0x5767112801dab6286e5971d21c61a4861a61fe193604f117bef04a32144cd230",
+        "timestamp": 1685377355
+      },
+      "firstImplementation": null,
+      "firstImplementationBlock": null,
+      "firstImplementationDateUTC": null,
+      "proxy": "0x543bA4AADBAb8f9025686Bd03993043599c6fB04"
+    },
+    {
+      "birthState": {
+        "admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0x0000000000000000000000000000000000000000"
+      },
+      "bornVersion": "1.3.0",
+      "contract": "SystemConfig",
+      "firstCode": {
+        "block": 17365804,
+        "dateUTC": "2023-05-29T16:23:23+00:00",
+        "hash": "0xb2f954f82f28e496964b136b4d99833bccc1b9f51e53e85170ff4afaffdd7ed2",
+        "timestamp": 1685377403
+      },
+      "firstImplementation": {
+        "admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+        "balanceWei": 0,
+        "code": true,
+        "implementation": "0x5efa852e92800d1c982711761e45c3fe39a2b6d8"
+      },
+      "firstImplementationBlock": 17422444,
+      "firstImplementationDateUTC": "2023-06-06T15:58:47+00:00",
+      "proxy": "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290"
+    }
+  ],
+  "meta": {
+    "archiveHead": 26433900,
+    "chain": "OP",
+    "chainId": 10,
+    "method": "eth_getCode binary search plus EIP-1967/AddressManager resolution",
+    "rpc": "http://127.0.0.1:7545"
+  },
+  "registrySource": "superchain/configs/mainnet/op.toml"
+}

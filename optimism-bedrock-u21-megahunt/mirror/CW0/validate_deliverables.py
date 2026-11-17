@@ -79,14 +79,18 @@ texts = [(OUT / name).read_text() for name in ["PRIMITIVES.json", "SEMANTIC-LINE
 refs = set()
 for text in texts:
     refs.update(re.findall(r"(v\d+\.\d+\.\d+):((?:contracts|src)/[^` ;,]+?\.sol):(\d+)(?:-(\d+))?", text))
+bad_refs = []
 for tag, rel, start, end in sorted(refs):
     release = "op-" + tag if tag in {"v7.0.0", "v8.0.0", "v9.0.0"} else "hist/" + tag
     path = Path("/home/user/ethereum-optimism") / release / "packages/contracts-bedrock" / rel
     if not path.is_file():
-        fail(f"missing pinned source: {tag}:{rel}")
+        bad_refs.append(f"missing pinned source: {tag}:{rel}")
+        continue
     line_count = sum(1 for _ in path.open(errors="ignore"))
     if int(end or start) > line_count:
-        fail(f"citation beyond EOF: {tag}:{rel}:{end or start}>{line_count}")
+        bad_refs.append(f"citation beyond EOF: {tag}:{rel}:{end or start}>{line_count}")
+if bad_refs:
+    fail("invalid pinned citations:\n" + "\n".join(bad_refs))
 
 for required in ["PRIMITIVES.json", "PRIMITIVE-COMPATIBILITY-MATRIX.csv", "DEAD-ENDS-NO-REDO.md", "SEMANTIC-LINEAGE.md", "SEMANTIC-LINEAGE.json"]:
     if not (OUT / required).is_file() or (OUT / required).stat().st_size == 0:

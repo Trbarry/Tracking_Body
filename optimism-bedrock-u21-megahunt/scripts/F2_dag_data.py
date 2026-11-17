@@ -54,9 +54,10 @@ BLOCK_TO_NODE = {
     },
 }
 
-AUDIT_INDEX_NOTE = ("Titles are the rows of the index table in optimism@e5423ae6 docs/security-reviews/README.md "
-                    "(Date | Reviewer | Focus and Scope). The table has no commit column, so audited commits are "
-                    "recorded only where a governance proposal states them. Reports themselves were NOT opened (Track A).")
+AUDIT_INDEX_NOTE = ("Titles, audited commits and 'Subsequent Release' are the Date | Reviewer | Focus and Scope | Commit | Subsequent Release "
+                    "columns of the index table in optimism@e5423ae6 docs/security-reviews/README.md (extracted to evidence/F2-audit-index.json; "
+                    "the Report Link column was not followed). Audited commits were mapped to op-contracts tags with `git ls-remote --tags origin 'op-contracts/*'`. "
+                    "Reports themselves were NOT opened (Track A). [Corrected on resume: an earlier draft of this note said the table had no commit column; it has one.]")
 
 NODES = []
 

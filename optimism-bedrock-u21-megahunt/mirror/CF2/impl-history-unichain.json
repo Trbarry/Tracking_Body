@@ -1,0 +1,35 @@
+{
+  "schema":"cf2.impl-history.v1",
+  "chain":{"name":"Unichain","l2_chain_id":130,"l1_chain_id":1,"genesis_l1_block":21116363,"genesis_l2_time":1730748359},
+  "pinned_l1_block":26430859,
+  "rpc":"http://127.0.0.1:7545 (passive reads only)",
+  "method":{"slot":"0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc","rule":"Binary-searched end-of-block slot changes, version() and final Upgraded event in the receipt. OPCMv2 StorageSetter hops are transient."},
+  "proxies":[
+    {"name":"OptimismPortalProxy","address":"0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2","history":[
+      {"block":21116362,"timestamp":"2024-11-04T19:25:47Z","implementation":"0xe2f826324b2faf99e513d16d266c3f80ae87832b","version":"3.10.0","tx":"0x1623e586faeda506c832de15a948fd9c9d34da18c0ed5bbfc095dc1c0621f936","release":"genesis/U7-era"},
+      {"block":22254924,"timestamp":"2025-04-12T19:18:59Z","implementation":"0x2d7e764a0d9919e16983a46595cfa81fc34fa7cd","version":"3.13.0","tx":"0x7e5e478cafbe30293645e6972a477f77dcfdc006c4cf1dd248a94e6386d04159","release":"U13"},
+      {"block":22342667,"timestamp":"2025-04-25T01:12:11Z","implementation":"0xb443da3e07052204a02d630a8933dac05a0d6fb4","version":"3.14.0","tx":"0xc74c5e0dddfa9e2d0fd5d902fb7b1aa4cc28ba034ebed7bf3a0aa3a8b8d21b20","release":"U14"},
+      {"block":22990722,"timestamp":"2025-07-24T18:12:11Z","implementation":"0xefed7f38bb9be74bba583a1a5b7d0fe7c9d5787a","version":"4.6.0","tx":"0x1f1f283ad793a901a94e11241d46b87cd264b2e276a690b9554148ba56c57959","release":"U16"},
+      {"block":23492571,"timestamp":"2025-10-02T20:45:59Z","implementation":"0x381e729ff983fa4bced820e7b922d79bf653b999","version":"5.0.0","tx":"0xc98240172fa3950ec9c62f32cc09d0eb0ed21684b02f1b2677357674cda64ca5","release":"U16a"},
+      {"block":23878509,"timestamp":"2025-11-25T21:35:35Z","implementation":"0x7cf803296662e8c72a6c1d6450572209acf7f202","version":"5.1.1","tx":"0x7c9e6b65258838fb38bc0bf584cb0c0802bc0dfbbe877a8639880e2ed88b3aa6","release":"U17"},
+      {"block":24427874,"timestamp":"2026-02-10T17:30:23Z","implementation":"0x97cebbf8959e2a5476fbe9b98a21806ec234609b","version":"5.2.0","tx":"0x5672a02ba8c40bd35c87787ceddff5181c588e697a1924be6ea061af71cbb4ca","release":"U18"},
+      {"block":25475307,"timestamp":"2026-07-06T18:32:35Z","implementation":"0xe89f13c5ee4033b2d3cd76c9d6958efbfe26d3c2","version":"5.6.1","tx":"0xb3c65cbf6285d4b32d576c866fffced1c77747c53163b604e20feb6aad121421","release":"U19"},
+      {"block":26048619,"timestamp":"2026-09-24T16:51:23Z","implementation":"0x1005217ad392dc64cef501fa1777a27d42166748","version":"5.8.0","tx":"0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a","release":"U20"},
+      {"block":26430859,"timestamp":"2026-11-16T23:23:59Z","implementation":"0xb20b23af6071405c37ddda0c0640e8ebb7899645","version":"6.1.0","tx":"0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99","release":"U21"}
+    ]},
+    {"name":"SystemConfigProxy","address":"0xc407398d063f942feBbcC6F80a156b47F3f1BDA6","history":[
+      {"block":21116363,"timestamp":"2024-11-04T19:25:59Z","implementation":"0xf56d96b2535b932656d3c04ebf51babff241d886","version":"2.2.0","tx":"0xb9a9cca69cc08ba53aeb94e99695bbaec8c54a6431b258d2bca5d73a51663df9","release":"genesis/U7-era"},
+      {"block":22081789,"timestamp":"2025-03-19T15:24:11Z","implementation":"0xab9d6cb7a427c0765163a7f45bb91cafe5f2d375","version":"2.3.0","tx":"0x191505a1bff29cc42fe5a1eb1888170c5241d552d7028d26ec3e54980980cf16","release":"U11 Holocene post-activation contract step"},
+      {"block":22254924,"timestamp":"2025-04-12T19:18:59Z","implementation":"0x760c48c62a85045a6b69f07f4a9f22868659cbcc","version":"2.4.0","tx":"0x7e5e478cafbe30293645e6972a477f77dcfdc006c4cf1dd248a94e6386d04159","release":"U13"},
+      {"block":22342667,"timestamp":"2025-04-25T01:12:11Z","implementation":"0x340f923e5c7cbb2171146f64169ec9d5a9ffe647","version":"2.5.0","tx":"0xc74c5e0dddfa9e2d0fd5d902fb7b1aa4cc28ba034ebed7bf3a0aa3a8b8d21b20","release":"U14"},
+      {"block":22990722,"timestamp":"2025-07-24T18:12:11Z","implementation":"0xfaa660bf783cbaa55e1b7f3475c20db74a53b9fa","version":"3.4.0","tx":"0x1f1f283ad793a901a94e11241d46b87cd264b2e276a690b9554148ba56c57959","release":"U16"},
+      {"block":23492571,"timestamp":"2025-10-02T20:45:59Z","implementation":"0x2bfe4a5bd5a41e9d848d843ebcdfa15954e9a557","version":"3.7.0","tx":"0xc98240172fa3950ec9c62f32cc09d0eb0ed21684b02f1b2677357674cda64ca5","release":"U16a"},
+      {"block":23878509,"timestamp":"2025-11-25T21:35:35Z","implementation":"0x2fa28989fc559836e9d66dff3010c7f7f41c65ed","version":"3.11.0","tx":"0x7c9e6b65258838fb38bc0bf584cb0c0802bc0dfbbe877a8639880e2ed88b3aa6","release":"U17"},
+      {"block":24427874,"timestamp":"2026-02-10T17:30:23Z","implementation":"0xd392c27b84b1ca776528f2704bc67b82a62132d2","version":"3.13.1","tx":"0x5672a02ba8c40bd35c87787ceddff5181c588e697a1924be6ea061af71cbb4ca","release":"U18"},
+      {"block":25475307,"timestamp":"2026-07-06T18:32:35Z","implementation":"0x42ad0173051225ac784100e9acd43349707f4db9","version":"3.14.2","tx":"0xb3c65cbf6285d4b32d576c866fffced1c77747c53163b604e20feb6aad121421","release":"U19"},
+      {"block":26048619,"timestamp":"2026-09-24T16:51:23Z","implementation":"0x670b850a235a6fa98cd7a195eb139d0277e471fa","version":"4.0.0","tx":"0x0a0fe86f7b1a3d3d2d0be990e3f8b15628b885363ae527fa9548cb2c2375741a","release":"U20"},
+      {"block":26430859,"timestamp":"2026-11-16T23:23:59Z","implementation":"0xade27248542c0f3e89b49e4eb76155e267f14377","version":"4.3.0","tx":"0x024770b5fba87683ee1466562eefb1bcb408c29c764e24abd07c7d4050a82a99","release":"U21"}
+    ]}
+  ],
+  "authorization_branch":"U13-U19 used Unichain's separate ProxyAdminOwner; U20 followed the eth/069 ownership transfer and joined the standard 2-of-2 L1PAO bundle."
+}
