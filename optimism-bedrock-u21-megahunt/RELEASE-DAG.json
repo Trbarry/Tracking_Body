@@ -1,5 +1,5 @@
 {
- "generated_by": "scripts/F2_build_dag.py (F2, Track A, resumed on Opus 5.5 at the user's explicit instruction relayed by the orchestrator)",
+ "generated_by": "scripts/F2_build_dag.py (F2, Track A, resumed on Opus 5.5 under the user-approved CLAUDE.md exception of 2026-11-17)",
  "sources": {
   "node_data": "scripts/F2_dag_data.py",
   "audit_index": "Titles, audited commits and 'Subsequent Release' are the Date | Reviewer | Focus and Scope | Commit | Subsequent Release columns of the index table in optimism@e5423ae6 docs/security-reviews/README.md (extracted to evidence/F2-audit-index.json; the Report Link column was not followed). Audited commits were mapped to op-contracts tags with `git ls-remote --tags origin 'op-contracts/*'`. Reports themselves were NOT opened (Track A). [Corrected on resume: an earlier draft of this note said the table had no commit column; it has one.]",
