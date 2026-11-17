@@ -16,6 +16,8 @@ Companion artifacts: `U21_PROXY_IMPLEMENTATION_MAP.md`, `U21_INITIALIZER_CALLS.m
 6. Ran the on-chain v9 `OPContractsManagerStandardValidator` against each chain.
 7. Fork tests for the permissionless surface (`Lane01_Negatives.t.sol`, 5 tests, all pass).
 
+To re-run: copy `test/poc/lane01/*.t.sol` and the four data files next to them into `<harness>/test/` of a copy of `/home/user/u21-work/template` (working copy: `/home/user/u21-work/lane01`), then `forge test --match-path test/Lane01Negatives.t.sol -vv` and `forge test --match-path test/Replay.t.sol -vv`. The tests read `test/u21-input.hex`, `test/u21-call0.hex`, `test/u21-call1.hex`, `test/u21-inits.csv`. Local forks only; nothing is broadcast.
+
 Not done / limits: legacy contracts of Ink, Soneium and Unichain (old DelayedWETH/ASR proxies) were not enumerated; the kona prestate change was not analysed; the Safe nonce at 26433900 could not be read (upstream 429) - the absence of follow-up governance activity is inferred from unchanged state, not from the nonce.
 
 ## 2. What the tx did (state machine)
