@@ -115,6 +115,16 @@ getters_for() {
       getters=$(add_getter "$getters" owner "$proxy" 'owner()(address)')
       getters=$(add_getter "$getters" l2ChainId "$proxy" 'l2ChainId()(uint256)')
       getters=$(add_getter "$getters" superchainConfig "$proxy" 'superchainConfig()(address)')
+      getters=$(add_getter "$getters" unsafeBlockSigner "$proxy" 'unsafeBlockSigner()(address)')
+      getters=$(add_getter "$getters" l1CrossDomainMessenger "$proxy" 'l1CrossDomainMessenger()(address)')
+      getters=$(add_getter "$getters" l1ERC721Bridge "$proxy" 'l1ERC721Bridge()(address)')
+      getters=$(add_getter "$getters" l1StandardBridge "$proxy" 'l1StandardBridge()(address)')
+      getters=$(add_getter "$getters" optimismPortal "$proxy" 'optimismPortal()(address)')
+      getters=$(add_getter "$getters" optimismMintableERC20Factory "$proxy" 'optimismMintableERC20Factory()(address)')
+      getters=$(add_getter "$getters" delayedWETH "$proxy" 'delayedWETH()(address)')
+      getters=$(add_getter "$getters" lastUsedOPCM "$proxy" 'lastUsedOPCM()(address)')
+      getters=$(add_getter "$getters" lastUsedOPCMVersion "$proxy" 'lastUsedOPCMVersion()(string)')
+      getters=$(add_getter "$getters" startBlock "$proxy" 'startBlock()(uint256)')
       getters=$(add_getter "$getters" paused "$proxy" 'paused()(bool)')
       getters=$(add_getter "$getters" feature_ETH_LOCKBOX "$proxy" 'isFeatureEnabled(bytes32)(bool)' "$eth_lockbox_feature")
       getters=$(add_getter "$getters" feature_INTEROP "$proxy" 'isFeatureEnabled(bytes32)(bool)' "$interop_feature")
@@ -152,6 +162,11 @@ getters_for() {
     DisputeGameFactory)
       getters=$(add_getter "$getters" owner "$proxy" 'owner()(address)')
       getters=$(add_getter "$getters" gameCount "$proxy" 'gameCount()(uint256)')
+      for game_type in $(seq 0 10); do
+        getters=$(add_getter "$getters" "gameImpls_$game_type" "$proxy" 'gameImpls(uint32)(address)' "$game_type")
+        getters=$(add_getter "$getters" "initBonds_$game_type" "$proxy" 'initBonds(uint32)(uint256)' "$game_type")
+        getters=$(add_getter "$getters" "gameArgs_$game_type" "$proxy" 'gameArgs(uint32)(bytes)' "$game_type")
+      done
       ;;
     DelayedWETH)
       getters=$(add_getter "$getters" legacySystemConfig "$proxy" 'systemConfig()(address)')
@@ -218,6 +233,45 @@ while IFS='|' read -r chain name proxy proxy_admin portal; do
   version=$(safe_call "$proxy" 'version()(string)')
   eth_balance=$(cast balance "$proxy" --rpc-url "$rpc_url")
   getters=$(getters_for "$name" "$proxy" "$portal")
+  extra_slots='{}'
+
+  if [[ "$name" == SystemConfig ]]; then
+    opcm_storage_slot=$(safe_call "$proxy" 'OPCM_SLOT()(bytes32)')
+    opcm_raw=$(cast storage "$proxy" "$opcm_storage_slot" --rpc-url "$rpc_url")
+    opcm_decoded=$(jq -r '.lastUsedOPCM' <<< "$getters")
+    extra_slots=$(jq -c --arg slot "$opcm_storage_slot" --arg raw "$opcm_raw" --arg decoded "$opcm_decoded" '
+      . + {($slot):{label:"OPCM_SLOT/lastUsedOPCM",type:"address",raw:$raw,decoded:$decoded}}
+    ' <<< "$extra_slots")
+    for feature_row in \
+      "ETH_LOCKBOX|$eth_lockbox_feature" \
+      "INTEROP|$interop_feature" \
+      "CUSTOM_GAS_TOKEN|$custom_gas_token_feature"; do
+      IFS='|' read -r feature_name feature_key <<< "$feature_row"
+      feature_slot=$(cast index bytes32 "$feature_key" 109)
+      feature_raw=$(cast storage "$proxy" "$feature_slot" --rpc-url "$rpc_url")
+      feature_decoded=$(jq -r ".feature_$feature_name" <<< "$getters")
+      extra_slots=$(jq -c --arg slot "$feature_slot" --arg name "$feature_name" --arg raw "$feature_raw" \
+        --arg decoded "$feature_decoded" '
+          . + {($slot):{label:("isFeatureEnabled["+$name+"]"),type:"bool",raw:$raw,decoded:$decoded}}
+        ' <<< "$extra_slots")
+    done
+  elif [[ "$name" == DisputeGameFactory ]]; then
+    for game_type in $(seq 0 10); do
+      for mapping_row in 'gameImpls|101|address' 'initBonds|102|uint256' 'gameArgs|105|bytes-dynamic-head'; do
+        IFS='|' read -r mapping_name mapping_base mapping_type <<< "$mapping_row"
+        mapping_slot=$(cast index uint32 "$game_type" "$mapping_base")
+        mapping_raw=$(cast storage "$proxy" "$mapping_slot" --rpc-url "$rpc_url")
+        mapping_decoded=$(jq -r ".${mapping_name}_${game_type}" <<< "$getters")
+        extra_slots=$(jq -c --arg slot "$mapping_slot" --arg name "$mapping_name" \
+          --arg gameType "$game_type" --arg type "$mapping_type" --arg raw "$mapping_raw" \
+          --arg decoded "$mapping_decoded" '
+            . + {($slot):{
+              label:($name+"["+$gameType+"]"),type:$type,raw:$raw,decoded:$decoded
+            }}
+          ' <<< "$extra_slots")
+      done
+    done
+  fi
 
   jq -n \
     --arg chain "$chain" \
@@ -230,6 +284,7 @@ while IFS='|' read -r chain name proxy proxy_admin portal; do
     --argjson initializedVersion "$initialized_version" \
     --arg ethBalanceWei "$eth_balance" \
     --argjson getters "$getters" \
+    --argjson extraSlots "$extra_slots" \
     --slurpfile response "$response_file" \
     --slurpfile layout "$layout_root/$name.json" '
       ($layout[0] | group_by(.slot) | map({
@@ -239,11 +294,11 @@ while IFS='|' read -r chain name proxy proxy_admin portal; do
           type: (map(.type) | join(", "))
         }
       }) | from_entries) as $layoutMap |
-      ($response[0] | map({
+      (($response[0] | map({
         key: (.id | tostring),
         value: (($layoutMap[(.id|tostring)] // {label: "<unused-or-unstructured>", type: "bytes32"})
           + {raw: .result, decoded: null})
-      }) | from_entries) as $slots |
+      }) | from_entries) + $extraSlots) as $slots |
       {
         chain: $chain,
         name: $name,
