@@ -35,3 +35,4 @@ retry 4 HTTP Error 429: Too Many Requests
 retry 5 HTTP Error 429: Too Many Requests
 retry 6 HTTP Error 429: Too Many Requests
 retry 7 HTTP Error 429: Too Many Requests
+retry 1 HTTP Error 429: Too Many Requests

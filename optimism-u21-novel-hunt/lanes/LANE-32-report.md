@@ -126,4 +126,102 @@ Each row explicitly covers the requested negative-space questions. “Sibling/al
 | R48 | Standard upgrade changed lockbox from optional/feature-dependent to mandatory nonzero (`v9:OPContractsManagerV2.sol:456-470,860-897`; old conditional at `v8:461-485,860-889`). | CGT only skips the liquidity move, not binding/initialization. Portal, ASR, and WETH all receive the exact loaded lockbox. | Nonzero check and feature enablement precede portal initialization; lockbox is initialized before conditional migration call completes. All atomic. | Current pre-upgrade feature/pointer is snapshotted in `wasUsingEthLockbox`; exact object later used. N-state confirms all four bindings. |
 | R49 | Removed `systemConfigFor`'s try/catch/fallback (`v8:OPContractsManagerUtils.sol:404-424`) and directly binds lockbox/ASR/WETH through exact SuperchainConfig/ETHLockbox (`v9:OPContractsManagerV2.sol:884-897,944-962`). | No fallback sibling remains; migration explicitly preserves shared bindings for historical contracts. | Typed reads/writes fail loud before completing upgrade rather than silently select caller default. | Eliminates mutable-current-config ambiguity and swallowed call failures. Any bypass requires privileged replacement code. |
 
+## StandardValidator-only changed checks
+
+These functions are read-only postcondition checks: they run **after** upgrade mutation, make no protected external call, and do not themselves constrain on-chain state. Thus every row can be bypassed by an upgrade workflow that simply does not invoke the validator. The concrete question is whether a permissionless actor can violate the condition after a successful validation; that answer is given per row. Runtime/OPCM enforcement, where present, is the sibling path.
+
+| ID | Validator check (v9 line; v8 replacement where relevant) and reason | Sibling/runtime, exact object, and post-validation mutability |
+|---|---|---|
+| V01 | `LOCKBOX-00`: ETH_LOCKBOX must be enabled (`L1/OPContractsManagerStandardValidator.sol:444-446`); v8 skipped the entire lockbox validator when false (`v8:444-446`). | Runtime Portal initializer now requires the same flag (R16) and SystemConfig cannot disable it (R08). Exact chain SystemConfig; attacker setter reverted on fork. |
+| V02 | `LOCKBOX-05`: portal lockbox must be nonzero (`:446-449`) to avoid later validator calls reverting and to make custody usable. | OPCMv2 rejects zero and Portal initializer checks it. Exact current portal pointer; only upgrade authority can change it. |
+| V03 | `LOCKBOX-10`: version check is no longer skippable via a false feature (`:451-453`). | OPCM selects implementation; no runtime version guard. Exact current proxy; only ProxyAdmin can upgrade. |
+| V04 | `LOCKBOX-20`: exact implementation is no longer skippable (`:454-455`). | ProxyAdmin `_upgrade` writes it. Exact EIP-1967 implementation; privileged mutable only. |
+| V05 | `LOCKBOX-30`: exact shared/chain ProxyAdmin is no longer skippable (`:456`). | Proxy itself enforces admin; no permissionless admin-slot write. Exact lockbox proxy. |
+| V06 | `LOCKBOX-40`: binding changed from lockbox→SystemConfig to lockbox→the chain's SuperchainConfig (`:457`; v8 lockbox stored SystemConfig). | Runtime pause uses this binding and portal authorization checks portal SystemConfig→same SC. Exact current objects; only reinitializer/upgrade can alter. All four live values match. |
+| V07 | `LOCKBOX-50`: exact portal authorization is no longer skippable (`:458`). | `lockETH`/`unlockETH` enforce the mapping at runtime. PA owner mutates it; attacker admin call reverted. |
+| V08 | Permissionless game init bond must be nonzero (`:636-640`) to prevent free root-claim spam; permissioned game validator is the sibling exception. | OPCM config validation enforces before registration. Exact factory/type; only DGF owner can alter. Types 9 have 0.08 ETH live; Soneium type 5 zero is intentional. |
+| V09 | Shared factory ProxyAdmin owner must be expected PAO (`:947-953`) because interop member chains retain distinct ProxyAdmins. | Migration enforces common chain PA owner and initializes shared proxies under the first. Exact current factory admin owner; ownership is privileged mutable only. |
+| V10 | `ASR-RGT`: current respected type must be a type the selected validator branch actually validates (`:958-964`, predicate `:862-890`). | ASR guardian controls type; game registration is DGF-owner-only. Exact current ASR/factory. Attacker type change reverted. ZK counts only with feature+implementation. |
+| V11 | `ZKDG-NOSHAPE`: when ZK dev feature is off, type 10 must be unregistered (`:1014-1024`). | OPCM prevents enabling ZK configs without feature. Exact current factory; DGF owner can later violate, not permissionless. All four production factories have type 10 unset. |
+| V12 | ZK game-args length/shape must decode (`:1062-1089`, ZK branch `:1074-1077`). | OPCM/migrator validate args before registration. Exact factory bytes; privileged DGF owner only. |
+| V13 | ZK absolute prestate/verifier key nonzero (`:1105-1108`). | Same check in `_isValidZKDisputeGameConfig`; exact registered args. Privileged mutable only. |
+| V14 | ZK verifier must equal expected adapter **and have code** (`:1108-1112`), closing nonzero-EOA/missing-code negative space. | ZK runtime calls that exact verifier. Adapter code can disappear only through unusual privileged/protocol-level action; no permissionless configuration setter. |
+| V15 | Challenge duration in `(0,uint32.max]` (`:1113-1119`) prevents an overflowed uint64 deadline/past deadline. | OPCM/migrator prevalidate exact args. Privileged mutable only. |
+| V16 | Prove duration in `(0,uint32.max]` (`:1120-1124`) for the same deadline reason. | Same sibling enforcement and object identity as V15. |
+| V17 | Challenger bond nonzero (`:1125`) prevents free challenges. | OPCM/migrator exact-args checks; privileged mutable only. |
+| V18 | Current ASR anchor root nonzero (`:1126-1127`) ensures a playable ZK anchor. | Migrator checks supplied starting root; ASR can advance permissionlessly only through a valid respected game, which cannot create a zero accepted root under normal game semantics. |
+| V19 | ZK implementation address must equal expected implementation (`:1179-1186`, `ZKDG-150`) in addition to semantic version. | Proxy-less DGF implementation mapping is set by owner; no permissionless setter. Exact registered address used for clones. |
+| V20 | ZK init bond nonzero (`:1187-1190`) because ZK creation is permissionless. | OPCM/migrator bond rules enforce before registration. Exact type 10 bond; owner-only later mutation. |
+| V21 | Removed direct portal→DGF equality `PORTAL-30` (`v8:L1/opcm/StandardValidatorUtils.sol:296-298`; absent `v9:297-307`). | Replacement is transitive: portal→ASR is checked at `v9:412-415`, ASR→DGF at `:399-401`, and SystemConfig's DGF is validated. This covers the exact proof path and shared interop architecture. Privileged pointers only; no gap found. |
+| V22 | DelayedWETH binding changed SystemConfig equality (`v8:358`) to exact expected ETHLockbox (`v9:364-366`) for migrated historical games. | Runtime WETH pause calls that exact lockbox. Privileged reinitializer only; all four live bindings match. |
+| V23 | Added DelayedWETH address must equal `SystemConfig.delayedWETH()` (`v9:370`) because V22 no longer proves the chain points back to that WETH. | Standard games decode WETH from DGF args, also validated; exact current chain pointer. Privileged only. |
+| V24 | ASR binding changed SystemConfig equality (`v8:393`) to exact expected ETHLockbox (`v9:402-404`) for pause/guardian continuity. | Runtime ASR reads that lockbox; portal→ASR exact check remains `:412-415`. Privileged reinitializer only; all live values match. |
+| V25 | Mode selection changed from dev-feature alone to current ASR respected type plus feature (`v9:958-990`), with V10 ensuring the selected type is actually covered. | Runtime portal always asks current ASR. Exact current config; guardian can change type, but validation must be rerun and permissionless caller cannot. |
+| V26 | ZK validator deliberately returns early when type 10 is unregistered even if its dev feature is on (`:1161-1171`); this is an explicit per-chain opt-in negative space, not a new require. | V10 refuses ZK as respected unless registered; other respected super types are still validated. It cannot skip validation of the object later used for withdrawals. |
+
+## MigrationValidator-only postconditions
+
+The v9 diff substantially rewired/expanded this validator. The following is one row per literal added or materially changed `internalRequire` (a looped require is one source row). All execute **after** migration and are read-only; the validator result is not an on-chain capability. Skipping the validator is always possible for the privileged upgrade executor, so these are not runtime enforcement. The sibling runtime/OPCM check and permissionless stability are stated per row.
+
+| ID | Postcondition and purpose (v9 `OPContractsManagerMigrationValidator.sol`) | Runtime sibling / exact object / can permissionless state violate later? |
+|---|---|---|
+| M01 | `MIG-SASR-RGT`: shared ASR respected type is a super type (`:123-130`). | Migrator prevalidates starting type and writes that exact ASR. Guardian can later change type; attacker cannot. |
+| M02 | `MIG-DGF-10`: SUPER_PERMISSIONED registered (`:222-224`). | Migrator registers exact supplied configs and requires enabled; DGF owner only can remove. |
+| M03 | `MIG-DGF-20`: SUPER_CANNON_KONA registered (`:224-225`). | Same exact shared DGF; owner-only later mutation. |
+| M04 | `MIG-DGF-30`: legacy CANNON absent (`:226`). | Migrator creates a fresh shared DGF; owner-only later registration. |
+| M05 | `MIG-DGF-40`: PERMISSIONED_CANNON absent (`:227-229`). | Same; no permissionless mapping setter. |
+| M06 | `MIG-DGF-50`: CANNON_KONA absent (`:230`). | Same. |
+| M07 | `MIG-DGF-60`: retired SUPER_CANNON absent (`:231`). | Same. ZK is intentionally not constrained by this fixed shape; ZK config has separate feature checks. |
+| M08 | `MIG-SDGF-10`: shared DGF semantic version matches expected (`:247-251`). | OPCM selects implementation; only ProxyAdmin can change. Exact DGF discovered from input. |
+| M09 | `MIG-SDGF-20`: exact DGF implementation (`:252-254`). | Runtime proxy admin controls it; permissionless stable. |
+| M10 | `MIG-SDGF-30`: DGF owner equals PAO (`:255`). | Migrator initializes exact DGF with first PA owner. Ownership can change only by owner. |
+| M11 | `MIG-SDGF-40`: DGF names discovered shared ProxyAdmin (`:256-258`). | Exact proxy slot, privileged stable. |
+| M12 | `MIG-SPDG-GARGS-10`: shared permissioned args have exact decodable shape (`:272-279`). | Migrator encodes them; DGF owner-only later mutation. |
+| M13 | `MIG-SCKDG-GARGS-10`: shared permissionless args have exact decodable shape (`:303-310`). | Same exact factory bytes; owner-only. |
+| M14 | `MIG-SCKDG-GARGS-30`: super permissionless game's WETH equals chain-0/shared WETH (`:314-318`). | Migrator reuses chain 0 WETH and encodes it into the exact game args. Owner-only later mutation. |
+| M15 | `MIG-SLOCKBOX-10`: lockbox version matches expected (`:440-444`). | OPCM writes exact implementation; privileged stable. |
+| M16 | `MIG-SLOCKBOX-20`: exact lockbox implementation (`:445-447`). | ProxyAdmin-only later change. |
+| M17 | `MIG-SLOCKBOX-30`: lockbox exact ProxyAdmin (`:448-452`). | Created under first chain PA; permissionless stable. |
+| M18 | `MIG-SLOCKBOX-40`: lockbox exact intended SuperchainConfig (`:453-455`). | Migrator initializes with chain 0 SC after all-chain equality check. Privileged reinitializer only. |
+| M19 | `MIG-CHAIN-EMPTY`: chain array nonempty (`:471-473`). | Migrator runtime rejects zero chains at `OPContractsManagerMigrator.sol:130-133`; calldata immutable within call. |
+| M20 | `MIG-CHAIN-LEGACY-MISMATCH`: chain/legacy arrays same length (`:475-477`). | This is chiefly validator input integrity; migrator operates only on chain list and cannot enforce a later-supplied validator array. Caller-controlled, not an on-chain invariant. |
+| M21 | `MIG-LOCKBOX-MISSING`: discovered portal lockbox nonzero (`:485-488`). | Portal initializer and migrator enforce exact nonzero lockbox. Privileged pointer only. |
+| M22 | Per chain `-10`: portal names common ASR (`:495-497`). | Migrator writes the same exact new ASR into each portal; PA-owner only later change. |
+| M23 | Per chain `-80`: shared lockbox authorizes portal (`:501-503`). | `lockETH`/`unlockETH` enforce exact mapping; lockbox PA owner only mutates. |
+| M24 | Per chain `-90`: portal names exact shared lockbox (`:505-507`). | Portal uses that exact object for custody/pause; PA-owner only mutation. |
+| M25 | Per chain `-100`: INTEROP feature on (`:509-513`). | Migrator sets it and SystemConfig forbids disabling; permissionless stable. |
+| M26 | Per chain `-110`: ETH_LOCKBOX feature on (`:514-518`). | Migrator/standard upgrade set it and SystemConfig forbids disabling; stable. |
+| M27 | Per chain `-120`: every SystemConfig points to common WETH (`:520-522`). | Migrator rewrites exact pointer to chain-0 WETH; only SystemConfig upgrade can alter. |
+| M28 | Per chain `-130`: every SystemConfig names expected SC (`:523-527`). | Runtime precheck required equality before migration; privileged pointer only. |
+| M29 | Per chain cleared-game loop (`:499`, implementation `:719-735`): all seven old types, including ZK, are zero in each legacy DGF. | Migrator clears the same centralized seven-type list before portal swap. DGF owner can re-register later; attacker cannot. |
+| M30 | Per chain `-150`: retired portal balance zero (`:559`). | Migrator calls exact portal `migrateLiquidity`, but `donateETH` or forced ETH can violate immediately and permissionlessly. This is PRIM-3201; no custody impact found. |
+| M31 | Per chain `-160`: retired old lockbox balance zero if distinct (`:563-567`). | Migrator authorizes/sweeps exact old lockbox. Forced ETH can later violate permissionlessly; PRIM-3201. |
+| M32 | Per chain `-170`: retired portal identifier unpaused (`:569-571`). | Guardian controls current SC pause. Not permissionless; runtime now keys the new shared lockbox, so this only detects stale retired-state policy. |
+| M33 | Per chain `-180`: retired lockbox identifier unpaused (`:572-575`). | Same guardian-only mutability; no current runtime path trusts old identifier after exact legacy rebinding. |
+| M34 | `MIG-SHARED-10`: discovered ASR equals caller's expected ASR (`:596-598`). | Input-attestation check; portal runtime uses discovered/current pointer. Caller can lie only to make validation fail, not alter state. |
+| M35 | `MIG-SHARED-20`: discovered lockbox equals expected (`:599-601`). | Same input-integrity role; runtime portal/authorization checks exact discovered object. |
+| M36 | `MIG-SHARED-30`: discovered WETH equals expected (`:602`). | Same; SystemConfig/game-args exact checks independently bind it. |
+| M37 | `MIG-SHARED-40`: input DGF equals shared ASR's DGF (`:603-607`). | Portal proof path reaches ASR→that exact DGF. Privileged ASR reinitializer only. |
+| M38 | Legacy WETH `-190`: present and rebound to shared lockbox (`:633-642`). | Migrator upgrades exact chain WETH before portal migration. Privileged proxy upgrade only. |
+| M39 | Legacy WETH `-200`: still under the chain's actual ProxyAdmin (`:643-647`). | Migrator uses that exact PA to upgrade it. Admin slot permissionless stable. |
+| M40 | Legacy ASR `-210`: present and rebound to shared lockbox (`:649-654`). | Migrator upgrades exact old ASR after portal migration. Privileged only. |
+| M41 | Legacy ASR `-220`: still under chain's actual ProxyAdmin (`:655-659`). | Exact admin slot; permissionless stable. |
+| M42 | `MIG-SASR-10`: starting anchor root bytes equal intended (`:678-680`). | Migrator prevalidates nonzero and writes exact initializer value. `getStartingAnchorRoot` is not the permissionlessly advancing current anchor. |
+| M43 | `MIG-SASR-20`: starting sequence equals intended (`:680-682`). | Same exact immutable starting proposal; permissionless current anchor advancement does not violate it. |
+| M44 | `MIG-SASR-30`: starting respected type equals intended (`:683-685`). | Initializer exact; guardian can later change current respected type, so postvalidation is privileged mutable. |
+| M45 | `MIG-BOND-i`: every caller-specified expected type/bond equals shared DGF (`:694-709`). | Migrator writes exact validated bond pairs. DGF owner can later change; attacker cannot. Expected list completeness is caller policy, so omitted types are negative space but mandatory permissionless type is separately validated. |
+
+### Four-chain validator state at block 26433900
+
+| Chain | ETH_LOCKBOX / INTEROP | portal→lockbox / ASR | WETH→lockbox / ASR→lockbox | respected type / implementation / bond | pause |
+|---|---|---|---|---|---|
+| OP | true / false | exact / exact | exact / exact | 9 / `0x19AF…` / 0.08 ETH | false |
+| Ink | true / false | exact / exact | exact / exact | 9 / `0x19AF…` / 0.08 ETH | false |
+| Soneium | true / false | exact / exact | exact / exact | 5 / `0x5C3e…` / 0 (permissioned exception) | false |
+| Unichain | true / false | exact / exact | exact / exact | 9 / `0x19AF…` / 0.08 ETH | false |
+
+All four lockboxes name the shared SuperchainConfig; all four portals are authorized; portal/lockbox/ASR ProxyAdmin-owner relationships tested equal. The only handful of validator conditions a permissionless actor can later falsify are the two raw-balance assertions. Current anchor games can advance permissionlessly, but the validator compares the stored **starting** anchor proposal, so ordinary advancement does not falsify M42/M43.
+
+
+
 

@@ -1,0 +1,27 @@
+No bounty-grade candidate survived. All six fork tests pass against deployed v9 bytecode.
+
+Full report: [LANE-29-report.md](/home/user/Tracking_Body/optimism-u21-novel-hunt/lanes/LANE-29-report.md)
+
+Primitives:
+
+- [PRIM-2901](/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2901.md): an authorized portal may debit any shared-lockbox amount; safety depends entirely on portal integrity and `l2Sender`.
+- [PRIM-2902](/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2902.md): a withdrawal may target a sibling portal and create an independent-value deposit from the source portal’s L2 alias.
+- [PRIM-2903](/home/user/Tracking_Body/optimism-u21-novel-hunt/primitives/PRIM-2903.md): portal/lockbox authorization is sticky and snapshots common ownership without later revalidation or revocation.
+
+Candidate score: none promoted; N/A.
+
+Strongest negative results:
+
+- Current shared-lockbox targeting is blocked; targeting a retired lockbox cannot unlock ETH because the portal’s non-default `l2Sender` fails the guard.
+- Sibling-portal deposits are reachable, but all 16 relevant portal aliases currently have zero code, balance, and nonce, and no v9 core L2 authorization trusts them.
+- Migration is owner-only and atomic; donations are swept rather than equality-checked, CREATE2 front-running is unavailable, repeat migration is blocked, and old lockboxes cannot independently drain the shared pool.
+- OP Mainnet and Unichain have the same ProxyAdmin owner and SuperchainConfig, so the planned migration’s compatibility checks currently pass.
+
+Artifacts:
+
+- [Live state and event scan](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-29/LIVE_STATE.md)
+- [Test results](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-29/TEST_RESULTS.md)
+- [Fork harness](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-29/LockboxLane29.t.sol)
+- Rejections: [2901](/home/user/Tracking_Body/optimism-u21-novel-hunt/rejected/REJ-2901.md), [2902](/home/user/Tracking_Body/optimism-u21-novel-hunt/rejected/REJ-2902.md), [2903](/home/user/Tracking_Body/optimism-u21-novel-hunt/rejected/REJ-2903.md), [2904](/home/user/Tracking_Body/optimism-u21-novel-hunt/rejected/REJ-2904.md), [2905](/home/user/Tracking_Body/optimism-u21-novel-hunt/rejected/REJ-2905.md), [2906](/home/user/Tracking_Body/optimism-u21-novel-hunt/rejected/REJ-2906.md)
+
+Best follow-ups: independently reconcile total OP/Unichain L2 ETH liabilities; examine sibling-portal aliases against non-core applications; model post-migration ownership divergence with sticky authorization.
