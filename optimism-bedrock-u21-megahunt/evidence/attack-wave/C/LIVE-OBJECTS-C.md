@@ -7,8 +7,9 @@ Population scanned (passive reads, local archive proxies):
 | OP Mainnet `MessagePassed` (L2ToL1MessagePasser 0x42…16), every Bedrock-era withdrawal | L2 105,235,063 .. 159,654,093 | 35,579 (== `messageNonce` delta at the two blocks, complete) | 8,415,632 | 644 B | `messagepassed-scan-op.json`, `scan-op.log` |
 | OP Mainnet legacy OVM-2 `SentMessage` (L2CDM) → migrated version-0 withdrawals | L2 0 .. 105,235,062 | 39,885 logs (legacy `messageNonce` = 139,885; the 100,000 offset predates the Nov-2021 regenesis and is not visible as logs) | migrated `B0 = 16·len + 1,300,873` → max ≈ 1.31 M (largest message 356 B) | 356 B | `legacy-sentmessage-scan-op.json` |
 
-Edge of the deliverable region (measured, see `results.jsonl`): no OP Mainnet withdrawal ever created
-comes within 2x of it. The objects nearest to the edge are the only ones with `gasLimit > 8M`:
+Edge of the deliverable region (measured at exactly 2^24, `edge-at-cap.jsonl`): withdrawal gasLimit ~16.06M
+(m ~15.51M live budget) or ~264 KB nonzero message. The highest gasLimit of any OP Mainnet withdrawal ever
+created is 8,415,632 (52% of the edge); the largest payload is 644 B. The objects nearest to the edge are the only ones with `gasLimit > 8M`:
 
 | L2 block | withdrawalHash | kind | minGasLimit | gasLimit | value | status @ L1 26433900 | why it matches |
 |---|---|---|---|---|---|---|---|

@@ -18,6 +18,6 @@ data > ~1.48 MB would even reach it; edge crossing needs data > ~0.93 MB.
   Nov-2021 regenesis and has no logs on this chain — not scanned (OVM-1 messages; their bound is the same formula,
   and OVM-1 per-tx gas limits (~11M) make a > 0.93 MB message implausible, not proven).
 
-**Barrier.** No existing object within 2x of the edge on OP Mainnet. Ink/Soneium/Unichain were born on Bedrock-era
+**Barrier.** No existing object above 52% of the edge (gasLimit) or 0.25% (payload) on OP Mainnet. Ink/Soneium/Unichain were born on Bedrock-era
 contracts with the same formulas; not scanned (lower priority: the edge is formula-determined, sender-chosen).
 KILLED (OP Mainnet, deterministic scan).

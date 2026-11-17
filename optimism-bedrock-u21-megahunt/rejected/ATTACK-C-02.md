@@ -30,4 +30,4 @@ message hash; no third-party lever (ATTACK-C-09). Same root cause and impact as 
 "gas ceiling of withdrawals" and the suppressed class "specific-gas message griefing". Funds stay in the lockbox
 (not lost to anyone else); a future L1 fork raising the cap would make them deliverable.
 **Live objects:** none — the highest gasLimit of all 35,579 OP Mainnet withdrawals ever is 8,415,632
-(`LIVE-OBJECTS-C.md`), < 52% of the edge. Score: permissionless 0 (sender-only) — < 7. KILLED.
+(`LIVE-OBJECTS-C.md`), 52% of the edge. Score: permissionless 0 (sender-only) — < 7. KILLED.
