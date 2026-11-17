@@ -1,0 +1,10 @@
+Compiling 20 files with Solc 0.8.25
+Solc 0.8.25 finished in 644.71ms
+Compiler run successful!
+
+Ran 2 tests for test/OldPrestateLive.t.sol:OldPrestateLiveTest
+[PASS] test_oldPrestateGamesStillLiveAndRespected() (gas: 201582)
+[PASS] test_unprivilegedAttackMoveOnOldGame() (gas: 274370)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 34.88s (33.37s CPU time)
+
+Ran 1 test suite in 34.88s (34.88s CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

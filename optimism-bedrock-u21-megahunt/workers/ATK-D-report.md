@@ -21,6 +21,7 @@ Result: **0 candidates, 5 deterministic kills** (ATTACK-D-01..05). PoC: `test/po
 | D-E5 | overwrite relayer's proof | inside D-E1 (isolation asserts) | relayer slot unchanged, delete reverts DisputeGameNotInvalidated | ATTACK-D-02 kill |
 | D-E6 | live tooling fingerprint / relayers | `evidence/attack-wave/D/scanproofs.py`, `enrich.py` on :7545 | 242 proofs/7d, 78% lag ≤ 1; auto-prover 0x431f…ddf5 = 135 proofs for 74 users | LIVE-OBJECTS-D.md |
 | D-E7 | OP+Unichain migration composition | source + C10/D14 fixtures | future-only, same mechanism | ATTACK-D-05 kill |
+| D-E8 | production prover CONTRACT (reopen condition of D-01/D-02) | `cast codesize` over the 39 submitters | 11 with code are all EIP-7702 delegated EOAs (23 bytes); no prover contract | reopen condition absent |
 
 ## Quantification (task 4)
 Bond 0.08 ETH plus a same-tx counter bond of 0.087594 ETH. Both are fully recovered by the attacker's own counter-claimant (NORMAL mode,
@@ -30,7 +31,8 @@ into one wasted 7-day cycle per proof. Docs-default viem-random users are hit wi
 The delay can always be avoided by proving against any honest game index. **Not** freezing.
 
 ## Single highest-value next experiment
-None in this lane: the mechanism is known (CC25 3.1.6). The only reopen is a production prover CONTRACT (not an EOA) whose
-permissionless prove entry point is the only proof slot its payout path accepts. Scan the proof submitters in
-`op-proofs-selection-scan.json` for code (`eth_getCode`) and check for that pattern. All 39 submitters in the window sent
-direct EOA calls except one (tx_to 0xd445f50d…), which is the place to start.
+Executed the reopen check: all 39 submitters in the window are EOAs. The 11 with code are EIP-7702 delegated EOAs (code size 23,
+`0xef0100…`). The one indirect proof (tx 0xd88baff9…, to 0xd445f50d…) is a 7702 batch from the same EOA. So no production prover
+contract exists whose proof slot could be the only payout path. Lane closed. Remaining value elsewhere: an off-chain report
+to viem / op-node selectors that they should reject non-canonical super roots (unsorted, duplicate or extra chain ids) or prefer
+resolved / official-proposer games. This is not a bounty impact.

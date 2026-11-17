@@ -182,7 +182,6 @@ contract CATKEMigrationTest is Test {
     address constant ATTACKER = address(0xA77AC4E2);
     address constant SPENDER = address(0x5EED);
     address constant RECEIVER = address(0xBEEF);
-    address constant PERMISSIONED_PROPOSER = 0xc27ba3E0Fc01567a5E57Ae0c391AA98cECBA5bE0;
     bytes32 constant ABSOLUTE_PRESTATE = 0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9;
     bytes32 constant INTEROP = "INTEROP";
 
@@ -227,13 +226,10 @@ contract CATKEMigrationTest is Test {
         chains[0] = address(OP_SC);
         chains[1] = address(UNI_SC);
 
-        DisputeGameConfig[] memory configs = new DisputeGameConfig[](2);
+        DisputeGameConfig[] memory configs = new DisputeGameConfig[](1);
         configs[0] = DisputeGameConfig({
             enabled: true, initBond: 0.08 ether, gameType: 9, gameArgs: abi.encode(ABSOLUTE_PRESTATE)
         });
-        configs[1] =
-            DisputeGameConfig({enabled: true, initBond: 0, gameType: 5, gameArgs: abi.encode(PERMISSIONED_PROPOSER)});
-
         uint64 timestamp = uint64(block.timestamp - 600);
         bytes memory encodedRoot =
             _twoChainSuperRoot(timestamp, keccak256("CATK-E OP start"), keccak256("CATK-E UNI start"));
@@ -247,9 +243,12 @@ contract CATKEMigrationTest is Test {
 
     function _malformedLateFailureInput() internal view returns (MigrateInput memory input) {
         input = _validInput();
+        DisputeGameConfig[] memory configs = new DisputeGameConfig[](2);
+        configs[0] = input.disputeGameConfigs[0];
         // Type 5's empty args pass the migrator's preflight validation, then fail abi.decode in
         // _makeGameArgs only after both chains have apparently been migrated.
-        input.disputeGameConfigs[1].gameArgs = hex"";
+        configs[1] = DisputeGameConfig({enabled: true, initBond: 0, gameType: 5, gameArgs: hex""});
+        input.disputeGameConfigs = configs;
     }
 
     function _installSafeDelegateHarness() internal {
