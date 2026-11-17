@@ -14,27 +14,45 @@
     "target_tag": "op-contracts/v9.0.0",
     "target_commit": "ba6fcadbc57eb99918c5b0f14f57c72527f531e3",
     "opcm": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
-    "chains_in_upgrade_tx": [10, 57073, 1868, 130]
+    "chains_in_upgrade_tx": [
+      10,
+      57073,
+      1868,
+      130
+    ]
   },
   "passes": {
     "A_recent_cross_upgrade": {
-      "status": "LANES_DONE_EXCEPT_ONE",
+      "status": "ALL_LANES_DONE",
       "range": "v8.0.0 -> v9.0.0 plus mainnet N-1 -> N",
-      "lanes_returned": 24,
-      "lanes_running": ["LANE-11 invariant and differential fuzzing"],
+      "lanes_returned": 25,
+      "lanes_running": [],
       "primitives": 115,
       "rejections": 180,
       "candidates": 0,
       "composition": "BRIEF_WRITTEN_NOT_RUN",
       "novelty_phase": "NOT_STARTED"
     },
-    "B_historical_backtrace": { "status": "WAVE_0_STARTING", "range": "Bedrock -> v7.0.0" },
-    "C_global_composition": { "status": "NOT_STARTED" },
-    "D_reachability_poc_triage": { "status": "NOT_STARTED" }
+    "B_historical_backtrace": {
+      "status": "WAVE_0_STARTING",
+      "range": "Bedrock -> v7.0.0"
+    },
+    "C_global_composition": {
+      "status": "NOT_STARTED"
+    },
+    "D_reachability_poc_triage": {
+      "status": "NOT_STARTED"
+    }
   },
   "tracks": {
-    "A_blind_archaeology": { "primitive_registry_frozen": false },
-    "B_audit_miner": { "status": "STARTING", "isolated_dir": "audit/", "merge_allowed": false }
+    "A_blind_archaeology": {
+      "primitive_registry_frozen": false
+    },
+    "B_audit_miner": {
+      "status": "STARTING",
+      "isolated_dir": "audit/",
+      "merge_allowed": false
+    }
   },
   "wave_0": {
     "F1_scope_and_deployment": "DONE_IN_PASS_A (SCOPE.md, U21_PROXY_IMPLEMENTATION_MAP.md, PRE/POST_U21_STATE.json)",
@@ -42,9 +60,10 @@
     "F3_audit_corpus_miner": "RUNNING",
     "F4_storage_initializer_historian": "RUNNING",
     "F5_chain_history_differential": "RUNNING",
-    "F6_historical_harness": "QUEUED",
+    "F6_historical_harness": "RUNNING",
     "F7_duplicate_researcher": "QUEUED (after blind registry freeze)",
-    "W0_ingest_primitives": "RUNNING"
+    "W0_ingest_primitives": "RUNNING",
+    "codex_mirrors": "RUNNING (CF2, CF3, CF4, CF5, CF6, CW0 \u2014 user request)"
   },
   "facts_locked": 10,
   "candidates_open": 0,
