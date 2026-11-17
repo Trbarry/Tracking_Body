@@ -1,0 +1,44 @@
+No files changed, compilation skipped
+
+Ran 4 tests for test/ATKF_UnsafeTargets.t.sol:ATKF_UnsafeTargets
+[PASS] test_F01_targetMatrix() (gas: 18534608)
+Logs:
+    call failed    : sibling lockbox unlockETH #1
+    call failed    : sibling lockbox lockETH #1
+    call failed    : sibling lockbox unlockETH #2
+    call failed    : sibling lockbox lockETH #2
+    call failed    : sibling lockbox unlockETH #3
+    call failed    : sibling lockbox lockETH #3
+    call failed    : OP lockbox implementation unlockETH
+    call failed    : lockbox receiveLiquidity (Ink)
+    call failed    : L1CDM forged relayMessage #0
+    call failed    : L1CDM forged relayMessage #1
+    call failed    : L1CDM forged relayMessage #2
+    call failed    : L1CDM forged relayMessage #3
+    call failed    : L1StandardBridge finalizeBridgeETH
+    call failed    : L1StandardBridge finalizeBridgeERC20
+    call failed    : L1ERC721Bridge finalizeBridgeERC721
+    call failed    : SystemConfig setGasLimit
+    call failed    : SystemConfig setFeature
+    call failed    : ProxyAdmin upgrade(portal)
+    call failed    : ProxyAdmin transferOwnership
+    call failed    : AddressManager setAddress
+    call failed    : SuperchainConfig pause(lockbox)
+    call failed    : ASR v4 setRespectedGameType
+    call failed    : ASR v4 blacklistDisputeGame(anchor)
+    call failed    : old ASR 2.0.0 updateRetirementTimestamp
+    call failed    : old ASR 2.2.2 setRespectedGameType
+    call failed    : DelayedWETH v2 recover
+    call failed    : DelayedWETH g1 hold
+    call failed    : DGF setImplementation
+    call failed    : L2OutputOracle deleteL2Outputs
+    call failed    : OPCMv2 upgrade (direct call)
+    call succeeded : sibling portal depositTransaction (Ink)
+    call succeeded : own L1CDM sendMessage (xDomainMessageSender = portal on L2)
+
+[PASS] test_F07_currentLockboxBlocked() (gas: 608207)
+[PASS] test_F08_deadSenderVsSiblingLockboxes() (gas: 12394982)
+[PASS] test_F09_liveAllowanceToMessenger() (gas: 377107)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 162.36ms (161.25ms CPU time)
+
+Ran 1 test suite in 171.87ms (162.36ms CPU time): 4 tests passed, 0 failed, 0 skipped (4 total tests)

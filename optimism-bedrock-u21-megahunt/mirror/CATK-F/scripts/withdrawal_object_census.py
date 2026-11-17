@@ -125,7 +125,7 @@ def decode_message(log):
     }
 
 
-def l1_event_census(broad):
+def l1_event_census(broad, curated):
     proven = {}
     proof_events = 0
     proof_event_targets = Counter()
@@ -154,7 +154,13 @@ def l1_event_census(broad):
                 finalized.add(topics[0].lower())
     unfinalized = {h: item for h, item in proven.items() if h not in finalized}
     noncanonical = [
-        {"withdrawal_hash": h, **item, "finalized": h in finalized, "broad_system_match": item["target"] in broad}
+        {
+            "withdrawal_hash": h,
+            **item,
+            "finalized": h in finalized,
+            "curated_system_match": item["target"] in curated,
+            "broad_system_match": item["target"] in broad,
+        }
         for h, item in proven.items()
         if item["target"] != OP_L1_MESSENGER
     ]
@@ -166,6 +172,7 @@ def l1_event_census(broad):
         "canonical_messenger_proof_events": proof_event_targets[OP_L1_MESSENGER],
         "noncanonical_proof_events": proof_events - proof_event_targets[OP_L1_MESSENGER],
         "noncanonical_distinct": len(noncanonical),
+        "noncanonical_curated_system_matches": sum(1 for item in noncanonical if item["curated_system_match"]),
         "noncanonical_broad_system_matches": sum(1 for item in noncanonical if item["broad_system_match"]),
         "unfinalized_by_target": dict(Counter(item["target"] for item in unfinalized.values()).most_common()),
         "noncanonical_withdrawals": sorted(noncanonical, key=lambda item: (item["first_proof_block"], item["withdrawal_hash"])),
@@ -219,7 +226,7 @@ def code_chronology(l1, l2, direct):
 def main():
     curated, broad, origins = inventory()
     print(f"inventory curated={len(curated)} broad={len(broad)}", flush=True)
-    l1_events = l1_event_census(broad)
+    l1_events = l1_event_census(broad, curated)
     print(
         "L1 events "
         f"proven={l1_events['distinct_proven']} "
@@ -243,6 +250,7 @@ def main():
     messages = [decode_message(log) for log in logs]
     direct = [item for item in messages if item["target"] != OP_L1_MESSENGER]
     canonical = [item for item in messages if item["target"] == OP_L1_MESSENGER]
+    canonical_wrong_sender = [item for item in canonical if item["sender"] != L2_MESSENGER]
     proven = l1_events.pop("_proven")
     finalized = l1_events.pop("_finalized")
     for item in direct:
@@ -253,7 +261,17 @@ def main():
         if item["broad_system_match"]:
             item["inventory_origins"] = origins[item["target"]]
 
-    chronology = code_chronology(l1, l2, direct)
+    chronology = None
+    if OUT.exists():
+        try:
+            cached = json.loads(OUT.read_text())["target_code_chronology"]["rows"]
+            if {item["target"] for item in cached} == {item["target"] for item in direct}:
+                chronology = cached
+                print(f"reused {len(cached)} pinned target-code chronology rows", flush=True)
+        except (KeyError, TypeError, json.JSONDecodeError):
+            pass
+    if chronology is None:
+        chronology = code_chronology(l1, l2, direct)
     code_later = [item for item in chronology if item["became_code_later"]]
     result = {
         "method": {
@@ -271,12 +289,15 @@ def main():
         "inventory": {
             "curated_address_count": len(curated),
             "broad_address_count": len(broad),
+            "curated_addresses": sorted(curated),
+            "broad_addresses": sorted(broad),
         },
         "l1_portal_events": l1_events,
         "l2_message_passed": {
             "total": len(messages),
             "canonical_l1_messenger_target": len(canonical),
-            "canonical_target_wrong_sender": sum(1 for item in canonical if item["sender"] != L2_MESSENGER),
+            "canonical_target_wrong_sender": len(canonical_wrong_sender),
+            "canonical_wrong_sender_messages": canonical_wrong_sender,
             "direct_nonmessenger": len(direct),
             "direct_distinct_targets": len({item["target"] for item in direct}),
             "direct_proven_on_l1": sum(1 for item in direct if item["proven_on_l1"]),

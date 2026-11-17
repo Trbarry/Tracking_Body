@@ -1,15 +1,20 @@
 No files changed, compilation skipped
 
-Ran 3 tests for test/AtkD_Trojan.t.sol:AtkDTrojanTest
+Ran 4 tests for test/AtkD_Trojan.t.sol:AtkDTrojanTest
 [PASS] test_duplicate_variant() (gas: 2163970)
-[PASS] test_negative_controls() (gas: 2113626)
-[PASS] test_trojan_vs_default_tooling_end_to_end() (gas: 5543503)
+[PASS] test_flood_viem_random_pool_all_trojans() (gas: 71256069)
+Logs:
+  flood capital locked (wei, recoverable if counters are honest) 16759400000000000000
+
+[PASS] test_negative_controls() (gas: 2113648)
+[PASS] test_trojan_vs_default_tooling_end_to_end() (gas: 6326644)
 Logs:
   strike gas (create + same-tx counter) 715171
   attacker capital locked (wei) 167594000000000000
+  viem random pool size for fresh withdrawal (p_trojan = 1/size) 3
   victim extra delay (s) 604802
   attacker recovered (wei) 167594000000000000
 
-Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 65.74ms (36.96ms CPU time)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 162.97ms (140.08ms CPU time)
 
-Ran 1 test suite in 83.47ms (65.74ms CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)
+Ran 1 test suite in 175.15ms (162.97ms CPU time): 4 tests passed, 0 failed, 0 skipped (4 total tests)

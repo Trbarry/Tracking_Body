@@ -1,0 +1,19 @@
+{
+ "range": [
+  26400000,
+  26400900
+ ],
+ "stats": {
+  "ink:batch_type_1": 1083,
+  "ink:channels": 47,
+  "ink:frames": 202,
+  "op:batch_type_1": 32,
+  "op:channels": 32,
+  "op:frames": 160,
+  "unichain:batch_type_1": 1065,
+  "unichain:channels": 20,
+  "unichain:frames": 22
+ },
+ "singular_batches": [],
+ "incomplete_channels": 0
+}

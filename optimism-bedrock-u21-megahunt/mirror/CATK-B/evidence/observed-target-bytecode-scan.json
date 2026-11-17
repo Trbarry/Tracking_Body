@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "rpc": "http://127.0.0.1:7545",
+    "passive_reads_only": true,
+    "block": 26433900,
+    "note": "Literal bytecode scan is a heuristic; absence is not a proof of no indirect call."
+  },
+  "targets": [
+    {
+      "address": "0x0f703cf76e95c37017cffecf9a49ecaf8a87d0e1",
+      "code_bytes": 1107,
+      "eip1967_implementation": "0x8cba27a4d797e106e23802f1a2ea9b7e273cfb78",
+      "implementation_code_bytes": 2500,
+      "contains": {
+        "l2Sender_selector": false,
+        "xDomainMessageSender_selector": true,
+        "portal_address": false,
+        "messenger_address": false
+      },
+      "context_opcodes": {
+        "BLOCKHASH": 0,
+        "TIMESTAMP": 0,
+        "NUMBER": 0
+      }
+    },
+    {
+      "address": "0x23ca5e5300d3b35a47dfef6a36ecba5ac0a96e03",
+      "code_bytes": 756,
+      "eip1967_implementation": "0xc25b0d51cd9fd89f00b73f7b27ff9c91421fe5d8",
+      "implementation_code_bytes": 2240,
+      "contains": {
+        "l2Sender_selector": false,
+        "xDomainMessageSender_selector": true,
+        "portal_address": false,
+        "messenger_address": false
+      },
+      "context_opcodes": {
+        "BLOCKHASH": 0,
+        "TIMESTAMP": 0,
+        "NUMBER": 0
+      }
+    },
+    {
+      "address": "0x39ea01a0298c315d149a490e34b59dbf2ec7e48f",
+      "code_bytes": 14102,
+      "eip1967_implementation": null,
+      "implementation_code_bytes": 0,
+      "contains": {
+        "l2Sender_selector": false,
+        "xDomainMessageSender_selector": true,
+        "portal_address": false,
+        "messenger_address": false
+      },
+      "context_opcodes": {
+        "BLOCKHASH": 0,
+        "TIMESTAMP": 0,
+        "NUMBER": 0
+      }
+    },
+    {
+      "address": "0x3d25b7d486cae1810374d37a48bcf0963c9b8057",
+      "code_bytes": 163,
+      "eip1967_implementation": "0xa50adbad34c1e9786979bd44220f8fd46e43a6b0",
+      "implementation_code_bytes": 5938,
+      "contains": {
+        "l2Sender_selector": false,
+        "xDomainMessageSender_selector": true,
+        "portal_address": false,
+        "messenger_address": true
+      },
+      "context_opcodes": {
+        "BLOCKHASH": 0,
+        "TIMESTAMP": 0,
+        "NUMBER": 0
+      }
+    },
+    {
+      "address": "0x9175746e1fb611843cec72ae4d6fa13c6184c9d0",
+      "code_bytes": 7697,
+      "eip1967_implementation": null,
+      "implementation_code_bytes": 0,
+      "contains": {
+        "l2Sender_selector": false,
+        "xDomainMessageSender_selector": false,
+        "portal_address": false,
+        "messenger_address": false
+      },
+      "context_opcodes": {
+        "BLOCKHASH": 0,
+        "TIMESTAMP": 1,
+        "NUMBER": 1
+      }
+    },
+    {
+      "address": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+      "code_bytes": 1825,
+      "eip1967_implementation": "0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891",
+      "implementation_code_bytes": 12620,
+      "contains": {
+        "l2Sender_selector": false,
+        "xDomainMessageSender_selector": true,
+        "portal_address": false,
+        "messenger_address": false
+      },
+      "context_opcodes": {
+        "BLOCKHASH": 0,
+        "TIMESTAMP": 0,
+        "NUMBER": 1
+      }
+    },
+    {
+      "address": "0xa3d596eafab6b13ab18d40fae1a962700c84adea",
+      "code_bytes": 45,
+      "eip1967_implementation": null,
+      "implementation_code_bytes": 0,
+      "contains": {
+        "l2Sender_selector": false,
+        "xDomainMessageSender_selector": false,
+        "portal_address": false,
+        "messenger_address": false
+      },
+      "context_opcodes": {
+        "BLOCKHASH": 0,
+        "TIMESTAMP": 0,
+        "NUMBER": 0
+      }
+    },
+    {
+      "address": "0xaba2c5f108f7e820c049d5af70b16ac266c8f128",
+      "code_bytes": 680,
+      "eip1967_implementation": "0x14c1bc7859fed4f49659c29231ad06adbfc638d7",
+      "implementation_code_bytes": 5779,
+      "contains": {
+        "l2Sender_selector": false,
+        "xDomainMessageSender_selector": true,
+        "portal_address": false,
+        "messenger_address": false
+      },
+      "context_opcodes": {
+        "BLOCKHASH": 0,
+        "TIMESTAMP": 0,
+        "NUMBER": 0
+      }
+    },
+    {
+      "address": "0xb8901acb165ed027e32754e0ffe830802919727f",
+      "code_bytes": 18447,
+      "eip1967_implementation": null,
+      "implementation_code_bytes": 0,
+      "contains": {
+        "l2Sender_selector": false,
+        "xDomainMessageSender_selector": false,
+        "portal_address": false,
+        "messenger_address": false
+      },
+      "context_opcodes": {
+        "BLOCKHASH": 0,
+        "TIMESTAMP": 9,
+        "NUMBER": 0
+      }
+    },
+    {
+      "address": "0xdcdd23bda7d553c447423440c1f7d386773e3a39",
+      "code_bytes": 2718,
+      "eip1967_implementation": null,
+      "implementation_code_bytes": 0,
+      "contains": {
+        "l2Sender_selector": false,
+        "xDomainMessageSender_selector": true,
+        "portal_address": false,
+        "messenger_address": true
+      },
+      "context_opcodes": {
+        "BLOCKHASH": 0,
+        "TIMESTAMP": 0,
+        "NUMBER": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "approval_events_to_portals": [],
+  "delayed_weth_contracts": [
+    {
+      "address": "0x18fbb58c366e21f395ddec7cba0510a2d9116b47",
+      "source": "hist-soneium-DelayedWETH.json"
+    },
+    {
+      "address": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162",
+      "source": "hist-DelayedWETH.json"
+    },
+    {
+      "address": "0x21429af66058bc3e4ae4a8f2ec4531aac433ecbc",
+      "source": "hist-DelayedWETH-g3b-0x21429aF6.json"
+    },
+    {
+      "address": "0x323dfc63c9b83cb83f40325aab74b245937cbdf0",
+      "source": "hist-DelayedWETH-g3a-0x323dFC63.json"
+    },
+    {
+      "address": "0x57b4c29daee99a28e6e86778b499361294c134ea",
+      "source": "hist-ink-DelayedWETH.json"
+    },
+    {
+      "address": "0x74ad145ac900f1dd5551f0c9e143314dc4022fcf",
+      "source": "hist-unichain-DelayedWETH.json"
+    },
+    {
+      "address": "0x82511d494b5c942be57498a70fdd7184ee33b975",
+      "source": "hist-DelayedWETH-g2a-0x82511d49.json"
+    },
+    {
+      "address": "0x9f9b897e37de5052cd70db6d08474550ddb07f39",
+      "source": "hist-DelayedWETH-g2b-0x9F9b897e.json"
+    },
+    {
+      "address": "0xc5f54f934075677fba99b5e43468439cbde88ca7",
+      "source": "hist-DelayedWETH-g4b-0xc5f54F93.json"
+    },
+    {
+      "address": "0xd061ab95069987868768818cc1248705351e2d0e",
+      "source": "hist-DelayedWETH-g5a-0xD061AB95.json"
+    },
+    {
+      "address": "0xe03f4d1d0e6b8b18b97198598b3f792e57ba17d4",
+      "source": "hist-DelayedWETH-g5b-0xe03F4d1D.json"
+    },
+    {
+      "address": "0xe214879ad573693a4c49f7654449caa455cde34f",
+      "source": "hist-DelayedWETH-g4a-0xe214879a.json"
+    },
+    {
+      "address": "0xe497b094d6dbb3d5e4caac9a14696d7572588d14",
+      "source": "hist-DelayedWETH-g1-0xE497B094.json"
+    }
+  ],
+  "method": {
+    "delayed_weth_source": "evidence/F4/hist-*DelayedWETH*.json",
+    "event_range_inclusive": [
+      17000000,
+      26433900
+    ],
+    "pin": 26433900,
+    "rpc": "http://127.0.0.1:7545",
+    "rpc_calls": 64,
+    "safety": "read-only eth_call and eth_getLogs at explicit L1 pin"
+  },
+  "nonzero_allowances_at_pin": [],
+  "nonzero_portal_balances": [],
+  "portal_balances": [
+    {
+      "balance": 0,
+      "chain_identity": "OP",
+      "delayed_weth": "0x18fbb58c366e21f395ddec7cba0510a2d9116b47",
+      "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "OP",
+      "delayed_weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162",
+      "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "OP",
+      "delayed_weth": "0x21429af66058bc3e4ae4a8f2ec4531aac433ecbc",
+      "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "OP",
+      "delayed_weth": "0x323dfc63c9b83cb83f40325aab74b245937cbdf0",
+      "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "OP",
+      "delayed_weth": "0x57b4c29daee99a28e6e86778b499361294c134ea",
+      "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "OP",
+      "delayed_weth": "0x74ad145ac900f1dd5551f0c9e143314dc4022fcf",
+      "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "OP",
+      "delayed_weth": "0x82511d494b5c942be57498a70fdd7184ee33b975",
+      "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "OP",
+      "delayed_weth": "0x9f9b897e37de5052cd70db6d08474550ddb07f39",
+      "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "OP",
+      "delayed_weth": "0xc5f54f934075677fba99b5e43468439cbde88ca7",
+      "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "OP",
+      "delayed_weth": "0xd061ab95069987868768818cc1248705351e2d0e",
+      "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "OP",
+      "delayed_weth": "0xe03f4d1d0e6b8b18b97198598b3f792e57ba17d4",
+      "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "OP",
+      "delayed_weth": "0xe214879ad573693a4c49f7654449caa455cde34f",
+      "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "OP",
+      "delayed_weth": "0xe497b094d6dbb3d5e4caac9a14696d7572588d14",
+      "portal": "0xbeb5fc579115071764c7423a4f12edde41f106ed"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "INK",
+      "delayed_weth": "0x18fbb58c366e21f395ddec7cba0510a2d9116b47",
+      "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "INK",
+      "delayed_weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162",
+      "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "INK",
+      "delayed_weth": "0x21429af66058bc3e4ae4a8f2ec4531aac433ecbc",
+      "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "INK",
+      "delayed_weth": "0x323dfc63c9b83cb83f40325aab74b245937cbdf0",
+      "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "INK",
+      "delayed_weth": "0x57b4c29daee99a28e6e86778b499361294c134ea",
+      "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "INK",
+      "delayed_weth": "0x74ad145ac900f1dd5551f0c9e143314dc4022fcf",
+      "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "INK",
+      "delayed_weth": "0x82511d494b5c942be57498a70fdd7184ee33b975",
+      "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "INK",
+      "delayed_weth": "0x9f9b897e37de5052cd70db6d08474550ddb07f39",
+      "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "INK",
+      "delayed_weth": "0xc5f54f934075677fba99b5e43468439cbde88ca7",
+      "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "INK",
+      "delayed_weth": "0xd061ab95069987868768818cc1248705351e2d0e",
+      "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "INK",
+      "delayed_weth": "0xe03f4d1d0e6b8b18b97198598b3f792e57ba17d4",
+      "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "INK",
+      "delayed_weth": "0xe214879ad573693a4c49f7654449caa455cde34f",
+      "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "INK",
+      "delayed_weth": "0xe497b094d6dbb3d5e4caac9a14696d7572588d14",
+      "portal": "0x5d66c1782664115999c47c9fa5cd031f495d3e4f"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "SONEIUM",
+      "delayed_weth": "0x18fbb58c366e21f395ddec7cba0510a2d9116b47",
+      "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "SONEIUM",
+      "delayed_weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162",
+      "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "SONEIUM",
+      "delayed_weth": "0x21429af66058bc3e4ae4a8f2ec4531aac433ecbc",
+      "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "SONEIUM",
+      "delayed_weth": "0x323dfc63c9b83cb83f40325aab74b245937cbdf0",
+      "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "SONEIUM",
+      "delayed_weth": "0x57b4c29daee99a28e6e86778b499361294c134ea",
+      "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "SONEIUM",
+      "delayed_weth": "0x74ad145ac900f1dd5551f0c9e143314dc4022fcf",
+      "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "SONEIUM",
+      "delayed_weth": "0x82511d494b5c942be57498a70fdd7184ee33b975",
+      "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "SONEIUM",
+      "delayed_weth": "0x9f9b897e37de5052cd70db6d08474550ddb07f39",
+      "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "SONEIUM",
+      "delayed_weth": "0xc5f54f934075677fba99b5e43468439cbde88ca7",
+      "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "SONEIUM",
+      "delayed_weth": "0xd061ab95069987868768818cc1248705351e2d0e",
+      "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "SONEIUM",
+      "delayed_weth": "0xe03f4d1d0e6b8b18b97198598b3f792e57ba17d4",
+      "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "SONEIUM",
+      "delayed_weth": "0xe214879ad573693a4c49f7654449caa455cde34f",
+      "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "SONEIUM",
+      "delayed_weth": "0xe497b094d6dbb3d5e4caac9a14696d7572588d14",
+      "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "UNICHAIN",
+      "delayed_weth": "0x18fbb58c366e21f395ddec7cba0510a2d9116b47",
+      "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "UNICHAIN",
+      "delayed_weth": "0x1b6dbf05eaf22d4e70dc993e8a19dd9f3dcb3162",
+      "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "UNICHAIN",
+      "delayed_weth": "0x21429af66058bc3e4ae4a8f2ec4531aac433ecbc",
+      "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "UNICHAIN",
+      "delayed_weth": "0x323dfc63c9b83cb83f40325aab74b245937cbdf0",
+      "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "UNICHAIN",
+      "delayed_weth": "0x57b4c29daee99a28e6e86778b499361294c134ea",
+      "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "UNICHAIN",
+      "delayed_weth": "0x74ad145ac900f1dd5551f0c9e143314dc4022fcf",
+      "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "UNICHAIN",
+      "delayed_weth": "0x82511d494b5c942be57498a70fdd7184ee33b975",
+      "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "UNICHAIN",
+      "delayed_weth": "0x9f9b897e37de5052cd70db6d08474550ddb07f39",
+      "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "UNICHAIN",
+      "delayed_weth": "0xc5f54f934075677fba99b5e43468439cbde88ca7",
+      "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "UNICHAIN",
+      "delayed_weth": "0xd061ab95069987868768818cc1248705351e2d0e",
+      "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "UNICHAIN",
+      "delayed_weth": "0xe03f4d1d0e6b8b18b97198598b3f792e57ba17d4",
+      "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "UNICHAIN",
+      "delayed_weth": "0xe214879ad573693a4c49f7654449caa455cde34f",
+      "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+    },
+    {
+      "balance": 0,
+      "chain_identity": "UNICHAIN",
+      "delayed_weth": "0xe497b094d6dbb3d5e4caac9a14696d7572588d14",
+      "portal": "0x0bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+    }
+  ],
+  "transfer_events_from_portals": [],
+  "transfer_events_to_portals": []
+}
