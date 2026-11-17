@@ -241,7 +241,7 @@ override(
 override(
     "0202",
     "first live ancestors include v1.0.0:contracts/L1/OptimismPortal.sol:50-83 and messenger/bridge legacy storage; v4 adds SystemConfig pointers to ETHLockbox/ASR/DelayedWETH; current dead declarations: v9.0.0:src/L1/OptimismPortal2.sol:64-120, src/L1/ETHLockbox.sol:66-78, src/dispute/AnchorStateRegistry.sol:33-59, src/dispute/DelayedWETH.sol:37-48, src/L1/L1CrossDomainMessenger.sol:25-37, src/L1/L1StandardBridge.sol:83-94, and src/L1/L1ERC721Bridge.sol:30-40",
-    "no runtime consumer found; explicit v9 spacer declarations are at src/L1/OptimismPortal2.sol:64-120, src/L1/ETHLockbox.sol:66-78, src/dispute/AnchorStateRegistry.sol:33-59, src/dispute/DelayedWETH.sol:37-48, src/L1/L1CrossDomainMessenger.sol:25-37, src/L1/L1StandardBridge.sol:83-94, and src/L1/L1ERC721Bridge.sol:30-40",
+    "no runtime consumer found; explicit v9 spacer declarations are at v9.0.0:src/L1/OptimismPortal2.sol:64-120, src/L1/ETHLockbox.sol:66-78, src/dispute/AnchorStateRegistry.sol:33-59, src/dispute/DelayedWETH.sol:37-48, src/L1/L1CrossDomainMessenger.sol:25-37, src/L1/L1StandardBridge.sol:83-94, and src/L1/L1ERC721Bridge.sol:30-40",
     "nonzero preserved proxy words under fields now declared as legacy spacers",
 )
 override(

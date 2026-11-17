@@ -1,0 +1,1702 @@
+{
+  "_meta": {
+    "additionalPinnedBalanceBlock": 26433900,
+    "block": 26430859,
+    "chain": "SONEIUM",
+    "generator": "evidence/lane02/dump_state.py (read-only eth_getStorageAt / eth_call / eth_getBalance / eth_getCode)",
+    "labels": "op-contracts/v9.0.0 labels (state at END of the upgrade block N)",
+    "lane": "02",
+    "layoutTag": "op-v9.0.0",
+    "note": "SuperchainConfig is shared by the four chains and listed under op-mainnet-10. L1CrossDomainMessenger implementation is resolved through ProxyAdmin/AddressManager (ResolvedDelegateProxy has no EIP-1967 slot).",
+    "pinnedBlock": 26430859,
+    "rpc": "http://127.0.0.1:8547",
+    "scannedSlotRanges": {
+      "AnchorStateRegistry": "0..69",
+      "DelayedWETH": "0..69",
+      "DisputeGameFactory": "0..107",
+      "ETHLockbox": "0..69",
+      "L1CrossDomainMessenger": "0..257",
+      "L1ERC721Bridge": "0..69",
+      "L1StandardBridge": "0..69",
+      "OptimismMintableERC20Factory": "0..69",
+      "OptimismPortal2": "0..71",
+      "ProxyAdmin": "0..69",
+      "SuperchainConfig": "0..69",
+      "SystemConfig": "0..111"
+    },
+    "schema": "chain -> contract -> {proxy, implementation, implementationInfo{slot0,codeSize,codeHash,ethBalance}, version, initializedVersion{_initialized,_initializing}, proxyCodeSize, slots{slot:{label,type,raw,decoded}} (every labelled slot + every non-zero unlabelled slot in the scanned range), namedSlots{name:{slot,raw}} (EIP-1967, hashed SystemConfig slots, mapping entries), getters{signature [args]: value | 'REVERT: ..'}, ethBalance (wei, string), ethBalanceEther}",
+    "stateBlock": 26430859,
+    "which": "n"
+  },
+  "balancesAt26433900": {
+    "ASR": 0,
+    "AddressManager": 0,
+    "DGF": 0,
+    "DelayedWETH": 0,
+    "ERC20Factory": 0,
+    "ETHLockbox": 2195560152606106316659,
+    "L1ERC721Bridge": 0,
+    "L1StandardBridge": 0,
+    "L1XDM": 0,
+    "Portal": 0,
+    "ProxyAdmin": 0,
+    "SystemConfig": 0
+  },
+  "state": {
+    "AnchorStateRegistry": {
+      "ethBalance": "0",
+      "ethBalanceEther": 0.0,
+      "getters": {
+        "anchorGame()(address)": "0xa64e0DAf4A8b918811369C856897f4d6ee8b3FED",
+        "disputeGameFactory()(address)": "0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0",
+        "disputeGameFinalityDelaySeconds()(uint256)": "302400 [3.024e5]",
+        "ethLockbox()(address)": "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31",
+        "getAnchorRoot()(bytes32,uint256)": "0x50c1c95b0ebce6c4f928ad428f7dc55ada152471e31e0e78c1fae1f34a60a717\n1794559147 [1.794e9]",
+        "getStartingAnchorRoot()((bytes32,uint256))": "(0x08a53686fd0b1671ff7b89c3a994582503f15f7be00f0f2e7c9f0d3b187ab124, 1788848425 [1.788e9])",
+        "initVersion()(uint8)": "1",
+        "paused()(bool)": "false",
+        "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+        "respectedGameType()(uint32)": "5",
+        "retirementTimestamp()(uint64)": "1753380095 [1.753e9]",
+        "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "systemConfig()(address)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+        "version()(string)": "\"4.0.0\""
+      },
+      "implementation": "0x2b27299c577d4720100e2735b652444dcea652d0",
+      "implementationInfo": {
+        "codeHash": "0x99f6d056478643ac36ec9bb019f10a46c0169ddc698c257b00530cd8b8e0444c",
+        "codeSize": 7311,
+        "ethBalance": 0,
+        "slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff"
+      },
+      "initializedVersion": {
+        "_initialized": 1,
+        "_initializing": false
+      },
+      "namedSlots": {
+        "EIP1967_ADMIN": {
+          "raw": "0x00000000000000000000000089889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103"
+        },
+        "EIP1967_IMPLEMENTATION": {
+          "raw": "0x0000000000000000000000002b27299c577d4720100e2735b652444dcea652d0",
+          "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
+        },
+        "OZ_V5_INITIALIZABLE": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xf0c57e16840df040f15088dc2f81fe391c3923bec73e23a9662efc9c229c6a00"
+        }
+      },
+      "proxy": "0x4890928941e62e273dA359374b105F803329F473",
+      "proxyCodeSize": 2059,
+      "slots": {
+        "0": {
+          "decoded": {
+            "_initialized": 1,
+            "_initializing": false,
+            "spacer_0_2_20": "0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3"
+          },
+          "label": "_initialized | _initializing | spacer_0_2_20",
+          "raw": "0x000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30001",
+          "type": "uint8 | bool | address"
+        },
+        "1": {
+          "decoded": {
+            "disputeGameFactory": "0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0"
+          },
+          "label": "disputeGameFactory",
+          "raw": "0x000000000000000000000000512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+          "type": "contract IDisputeGameFactory"
+        },
+        "2": {
+          "decoded": {
+            "anchorGame": "0xa64e0daf4a8b918811369c856897f4d6ee8b3fed"
+          },
+          "label": "anchorGame",
+          "raw": "0x000000000000000000000000a64e0daf4a8b918811369c856897f4d6ee8b3fed",
+          "type": "contract IDisputeGame"
+        },
+        "3": {
+          "decoded": {
+            "startingAnchorRoot": null
+          },
+          "label": "startingAnchorRoot",
+          "raw": "0x08a53686fd0b1671ff7b89c3a994582503f15f7be00f0f2e7c9f0d3b187ab124",
+          "type": "struct Proposal"
+        },
+        "4": {
+          "decoded": "0x000000000000000000000000000000000000000000000000000000006a9fa929",
+          "label": "(inside startingAnchorRoot)",
+          "raw": "0x000000000000000000000000000000000000000000000000000000006a9fa929",
+          "type": "struct Proposal"
+        },
+        "5": {
+          "decoded": {
+            "disputeGameBlacklist": "(mapping/array base: 0)"
+          },
+          "label": "disputeGameBlacklist",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(contract IDisputeGame => bool)"
+        },
+        "6": {
+          "decoded": {
+            "ethLockbox": "0x67b4de6ffa66ef201ea6099a89ca397d56622e31",
+            "respectedGameType": 5,
+            "retirementTimestamp": 1753380095
+          },
+          "label": "respectedGameType | retirementTimestamp | ethLockbox",
+          "raw": "0x67b4de6ffa66ef201ea6099a89ca397d56622e3100000000688274ff00000005",
+          "type": "GameType | uint64 | contract IETHLockbox"
+        }
+      },
+      "version": "\"4.0.0\""
+    },
+    "DelayedWETH": {
+      "ethBalance": "0",
+      "ethBalanceEther": 0.0,
+      "getters": {
+        "config()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "delay()(uint256)": "302400 [3.024e5]",
+        "ethLockbox()(address)": "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31",
+        "initVersion()(uint8)": "1",
+        "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+        "systemConfig()(address)": "REVERT: - ABI decoding failed: buffer overrun while deserializing",
+        "totalSupply()(uint256)": "0",
+        "version()(string)": "\"2.0.0\""
+      },
+      "implementation": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+      "implementationInfo": {
+        "codeHash": "0xb16e472c198fb7b340521815e75006c1d7be2a2fcfaa5c65eca1d1a0ea94b3a7",
+        "codeSize": 5922,
+        "ethBalance": 0,
+        "slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff"
+      },
+      "initializedVersion": {
+        "_initialized": 1,
+        "_initializing": false
+      },
+      "namedSlots": {
+        "EIP1967_ADMIN": {
+          "raw": "0x00000000000000000000000089889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103"
+        },
+        "EIP1967_IMPLEMENTATION": {
+          "raw": "0x000000000000000000000000f024e96317907c3b8d8cb346b9fd9034c8640e15",
+          "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
+        },
+        "OZ_V5_INITIALIZABLE": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xf0c57e16840df040f15088dc2f81fe391c3923bec73e23a9662efc9c229c6a00"
+        }
+      },
+      "proxy": "0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47",
+      "proxyCodeSize": 2059,
+      "slots": {
+        "0": {
+          "decoded": {
+            "_initialized": 1,
+            "_initializing": false
+          },
+          "label": "_initialized | _initializing",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+          "type": "uint8 | bool"
+        },
+        "1": {
+          "decoded": {
+            "_balanceOf": "(mapping/array base: 0)"
+          },
+          "label": "_balanceOf",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(address => uint256)"
+        },
+        "2": {
+          "decoded": {
+            "_allowance": "(mapping/array base: 0)"
+          },
+          "label": "_allowance",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(address => mapping(address => uint256))"
+        },
+        "3": {
+          "decoded": {
+            "withdrawals": "(mapping/array base: 0)"
+          },
+          "label": "withdrawals",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(address => mapping(address => struct DelayedWETH.WithdrawalRequest))"
+        },
+        "4": {
+          "decoded": {
+            "spacer_4_0_20": "0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3"
+          },
+          "label": "spacer_4_0_20",
+          "raw": "0x0000000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c3",
+          "type": "address"
+        },
+        "5": {
+          "decoded": {
+            "ethLockbox": "0x67b4de6ffa66ef201ea6099a89ca397d56622e31"
+          },
+          "label": "ethLockbox",
+          "raw": "0x00000000000000000000000067b4de6ffa66ef201ea6099a89ca397d56622e31",
+          "type": "contract IETHLockbox"
+        }
+      },
+      "version": "\"2.0.0\""
+    },
+    "DisputeGameFactory": {
+      "ethBalance": "0",
+      "ethBalanceEther": 0.0,
+      "getters": {
+        "gameArgs(uint32)(bytes) 0": "0x",
+        "gameArgs(uint32)(bytes) 1": "0x",
+        "gameArgs(uint32)(bytes) 10": "0x",
+        "gameArgs(uint32)(bytes) 2": "0x",
+        "gameArgs(uint32)(bytes) 3": "0x",
+        "gameArgs(uint32)(bytes) 4": "0x",
+        "gameArgs(uint32)(bytes) 5": "0x4890928941e62e273da359374b105f803329f473400c164c4a8ca84385b70eed6eb03ea847c8e1b8",
+        "gameArgs(uint32)(bytes) 6": "0x",
+        "gameArgs(uint32)(bytes) 7": "0x",
+        "gameArgs(uint32)(bytes) 8": "0x",
+        "gameArgs(uint32)(bytes) 9": "0x",
+        "gameCount()(uint256)": "8533",
+        "gameImpls(uint32)(address) 0": "0x0000000000000000000000000000000000000000",
+        "gameImpls(uint32)(address) 1": "0x0000000000000000000000000000000000000000",
+        "gameImpls(uint32)(address) 10": "0x0000000000000000000000000000000000000000",
+        "gameImpls(uint32)(address) 2": "0x0000000000000000000000000000000000000000",
+        "gameImpls(uint32)(address) 3": "0x0000000000000000000000000000000000000000",
+        "gameImpls(uint32)(address) 4": "0x0000000000000000000000000000000000000000",
+        "gameImpls(uint32)(address) 5": "0x5C3eb47cB0174aea522a2a9Ae79487139A53D691",
+        "gameImpls(uint32)(address) 6": "0x0000000000000000000000000000000000000000",
+        "gameImpls(uint32)(address) 7": "0x0000000000000000000000000000000000000000",
+        "gameImpls(uint32)(address) 8": "0x0000000000000000000000000000000000000000",
+        "gameImpls(uint32)(address) 9": "0x0000000000000000000000000000000000000000",
+        "initBonds(uint32)(uint256) 0": "0",
+        "initBonds(uint32)(uint256) 1": "0",
+        "initBonds(uint32)(uint256) 10": "0",
+        "initBonds(uint32)(uint256) 2": "0",
+        "initBonds(uint32)(uint256) 3": "0",
+        "initBonds(uint32)(uint256) 4": "0",
+        "initBonds(uint32)(uint256) 5": "0",
+        "initBonds(uint32)(uint256) 6": "0",
+        "initBonds(uint32)(uint256) 7": "0",
+        "initBonds(uint32)(uint256) 8": "0",
+        "initBonds(uint32)(uint256) 9": "0",
+        "initVersion()(uint8)": "1",
+        "owner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+        "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+        "version()(string)": "\"1.6.1\""
+      },
+      "implementation": "0x72b971717e088b59f26d4236be222adb6acd393b",
+      "implementationInfo": {
+        "codeHash": "0x5af8d2112a3e0338ed753cc34a4c5d71d04512848f04d76bd6f15a8b378c89a4",
+        "codeSize": 8032,
+        "ethBalance": 0,
+        "slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff"
+      },
+      "initializedVersion": {
+        "_initialized": 1,
+        "_initializing": false
+      },
+      "namedSlots": {
+        "EIP1967_ADMIN": {
+          "raw": "0x00000000000000000000000089889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103"
+        },
+        "EIP1967_IMPLEMENTATION": {
+          "raw": "0x00000000000000000000000072b971717e088b59f26d4236be222adb6acd393b",
+          "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
+        },
+        "OZ_V5_INITIALIZABLE": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xf0c57e16840df040f15088dc2f81fe391c3923bec73e23a9662efc9c229c6a00"
+        },
+        "gameArgs[0]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x5843af22e99e7c98370145a5056245c244ce8ee852f4ef5e6d6a8e410a18cf41"
+        },
+        "gameArgs[10]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x9d9c791c65eec946a96f27e2cba142c68944ee11d8d5ec7c4fbac1de71b6a4f6"
+        },
+        "gameArgs[1]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xc073f36c05b6a60b24c30a48974b549770d8fa354751fb3170c9dfd8ca536add"
+        },
+        "gameArgs[2]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x0e06b3a0ac1d519392f9d33f9b92cd5a527ceb8ad2859e7bfebef5dd54cfca91"
+        },
+        "gameArgs[3]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x56d594188730cd2db4f97166f7e9b0b9d5caa8ac32e0506fd5faeb5b224f8813"
+        },
+        "gameArgs[4]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x361dc51dab091026a1c79fd9b05565dd28a0361cae60a90e9f335322175f94eb"
+        },
+        "gameArgs[5]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000051",
+          "slot": "0x58181d40e37140de35f3c83afb1757dd4cd983e09859bd6c5adeab622970d979"
+        },
+        "gameArgs[6]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xbca3f838d730ae2728eba81f5806986786f6f12f7baa90e2f78e0fabd83e6bfa"
+        },
+        "gameArgs[7]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x880910d893c5e82a2d71e83422d2272290593214e6f6a6f31d7c1259f8f1bf32"
+        },
+        "gameArgs[8]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x9960260aaa22d230a3b999f6243d727fef99faebfaa949c961ad27031f2529b8"
+        },
+        "gameArgs[9]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xd59adc5430ca4ad4d45faeae512b6e90e35d7c0c6967e4f84eaa44b3fe28f134"
+        },
+        "gameImpls[0]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xffdfc1249c027f9191656349feb0761381bb32c9f557e01f419fd08754bf5a1b"
+        },
+        "gameImpls[10]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xc63fe4891d9173cdfe54359706402882ee710874aa4ecec0af869be95621e5b4"
+        },
+        "gameImpls[1]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x4d5a9bd2e41301728d41c8e705190becb4e74abe869f75bdb405b63716a35f9e"
+        },
+        "gameImpls[2]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x2336b9432076a604ce9991266add6a78e7a0892d327c1598093d6435659e56fc"
+        },
+        "gameImpls[3]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xf08cf23b9096e47c93681aae499ab9bfe983e27d836cc8ef3d90a528deceea0c"
+        },
+        "gameImpls[4]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xfe5763447401b7824374db37a18d1b70c48b3096356db8b084cc5f29ca9debf7"
+        },
+        "gameImpls[5]": {
+          "raw": "0x0000000000000000000000005c3eb47cb0174aea522a2a9ae79487139a53d691",
+          "slot": "0xa658daa5290735f9f8eb96735ff19e7edf66e9fa2410847039992283ea5ce9b2"
+        },
+        "gameImpls[6]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x04a5731ce8ad6be395c578c475212c2c17a7a79e2d18742d54199a610648d251"
+        },
+        "gameImpls[7]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xb04664816ed18805f9f76c183dfc790ae2199deac78ef4875d3977c4556d8aa9"
+        },
+        "gameImpls[8]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x057a7f241532c73b242fd6e74e7fbd8cbc283dbc44ad194f17d900d9ac2e9251"
+        },
+        "gameImpls[9]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x9e7d1aa1e6d4593233af4a90cea95145c94fb7535f6cae65b047adb6bbec59be"
+        },
+        "initBonds[0]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x6f48904484b35701cf1f41ad9068b394adf7e2f8a59d2309a04d10a155eaa72b"
+        },
+        "initBonds[10]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x2830c2119f2e11f33460d3e0b4b2ebc414f50ee70053df9750ee5f1d6cef2f89"
+        },
+        "initBonds[1]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xe34b8b74e1cdcaa1b90aa77af7dd89e496ad9a4ae4a4d4759712101c7da2dce6"
+        },
+        "initBonds[2]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x8a9614ba8c677ead4620d2169d8ea794c0a1c3b5c9b380bc9dc10aaa393fb419"
+        },
+        "initBonds[3]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xab85c4cd4478c33dd554873cedded4adcfce323c02b7f45103bdac1e0ee0d7ce"
+        },
+        "initBonds[4]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x754f4c762c979bf934b93bab847b259ce6c00c441fc6e34fd0aa1c248f374e9b"
+        },
+        "initBonds[5]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xbb6269964462fa5be032fdd20e35661fa36f97bc87450c693076d6a2885fc1ee"
+        },
+        "initBonds[6]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x4350714e0cfa2f727f7a96a8e1a67ab996076b28c8f9f92d8875bf61aff7cb66"
+        },
+        "initBonds[7]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x0fe918e201771355cd42cf31d04a9c3e45403ccf49379acff0ed137284a7d253"
+        },
+        "initBonds[8]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x4702e508fba4ecc1593cbc19e848c196ab454e49b730050083694dc1976387d5"
+        },
+        "initBonds[9]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xa495b722657ff2bf91864300a6699828f8bfb905a15df21c5d28900cfeee0f15"
+        }
+      },
+      "proxy": "0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0",
+      "proxyCodeSize": 2059,
+      "slots": {
+        "0": {
+          "decoded": {
+            "_initialized": 1,
+            "_initializing": false
+          },
+          "label": "_initialized | _initializing",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+          "type": "uint8 | bool"
+        },
+        "1": {
+          "decoded": {
+            "__gap": null
+          },
+          "label": "__gap",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256[50]"
+        },
+        "101": {
+          "decoded": {
+            "gameImpls": "(mapping/array base: 0)"
+          },
+          "label": "gameImpls",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(GameType => contract IDisputeGame)"
+        },
+        "102": {
+          "decoded": {
+            "initBonds": "(mapping/array base: 0)"
+          },
+          "label": "initBonds",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(GameType => uint256)"
+        },
+        "103": {
+          "decoded": {
+            "_disputeGames": "(mapping/array base: 0)"
+          },
+          "label": "_disputeGames",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(Hash => GameId)"
+        },
+        "104": {
+          "decoded": {
+            "_disputeGameList": "(mapping/array base: 8533)"
+          },
+          "label": "_disputeGameList",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000002155",
+          "type": "GameId[]"
+        },
+        "105": {
+          "decoded": {
+            "gameArgs": "(mapping/array base: 0)"
+          },
+          "label": "gameArgs",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(GameType => bytes)"
+        },
+        "51": {
+          "decoded": {
+            "_owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a"
+          },
+          "label": "_owner",
+          "raw": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+          "type": "address"
+        },
+        "52": {
+          "decoded": {
+            "__gap": null
+          },
+          "label": "__gap",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256[49]"
+        }
+      },
+      "version": "\"1.6.1\""
+    },
+    "ETHLockbox": {
+      "ethBalance": "2195560152606106316659",
+      "ethBalanceEther": 2195.5601526061064,
+      "getters": {
+        "authorizedLockboxes(address)(bool) 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31": "false",
+        "authorizedPortals(address)(bool) 0x88e529A6ccd302c948689Cd5156C83D4614FAE92": "true",
+        "guardian()(address)": "0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2",
+        "initVersion()(uint8)": "1",
+        "paused()(bool)": "false",
+        "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+        "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "systemConfig()(address)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+        "version()(string)": "\"2.0.0\""
+      },
+      "implementation": "0xdf75e6b07e98873e36ba5c05508f80c1454e0afe",
+      "implementationInfo": {
+        "codeHash": "0xccd3ca72b4aa8413a2a76143a32c92e1f0f3503e82c177767dffbb8ee79ba362",
+        "codeSize": 5006,
+        "ethBalance": 0,
+        "slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff"
+      },
+      "initializedVersion": {
+        "_initialized": 1,
+        "_initializing": false
+      },
+      "namedSlots": {
+        "EIP1967_ADMIN": {
+          "raw": "0x00000000000000000000000089889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103"
+        },
+        "EIP1967_IMPLEMENTATION": {
+          "raw": "0x000000000000000000000000df75e6b07e98873e36ba5c05508f80c1454e0afe",
+          "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
+        },
+        "OZ_V5_INITIALIZABLE": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xf0c57e16840df040f15088dc2f81fe391c3923bec73e23a9662efc9c229c6a00"
+        },
+        "authorizedLockboxes[self]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x7f46e39e9588e570c452b9e7f849f31436c6e3b4ef18d9c35a0c4c02b912075d"
+        },
+        "authorizedPortals[portal]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+          "slot": "0x58321ae9f41f6a103febd5c3a9a0fcce07f40d75e877fda01183207281661d60"
+        }
+      },
+      "proxy": "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31",
+      "proxyCodeSize": 2059,
+      "slots": {
+        "0": {
+          "decoded": {
+            "_initialized": 1,
+            "_initializing": false,
+            "spacer_0_2_20": "0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3"
+          },
+          "label": "_initialized | _initializing | spacer_0_2_20",
+          "raw": "0x000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30001",
+          "type": "uint8 | bool | address"
+        },
+        "1": {
+          "decoded": {
+            "authorizedPortals": "(mapping/array base: 0)"
+          },
+          "label": "authorizedPortals",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(contract IOptimismPortal2 => bool)"
+        },
+        "2": {
+          "decoded": {
+            "authorizedLockboxes": "(mapping/array base: 0)"
+          },
+          "label": "authorizedLockboxes",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(contract IETHLockbox => bool)"
+        },
+        "3": {
+          "decoded": {
+            "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c"
+          },
+          "label": "superchainConfig",
+          "raw": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+          "type": "contract ISuperchainConfig"
+        }
+      },
+      "version": "\"2.0.0\""
+    },
+    "L1CrossDomainMessenger": {
+      "ethBalance": "0",
+      "ethBalanceEther": 0.0,
+      "getters": {
+        "OTHER_MESSENGER()(address)": "0x4200000000000000000000000000000000000007",
+        "PORTAL()(address)": "0x88e529A6ccd302c948689Cd5156C83D4614FAE92",
+        "initVersion()(uint8)": "3",
+        "messageNonce()(uint256)": "1766847064778384329583297500742918515827483896875618958121606201292698641 [1.766e72]",
+        "otherMessenger()(address)": "0x4200000000000000000000000000000000000007",
+        "paused()(bool)": "false",
+        "portal()(address)": "0x88e529A6ccd302c948689Cd5156C83D4614FAE92",
+        "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+        "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "systemConfig()(address)": "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+        "version()(string)": "\"2.13.0\""
+      },
+      "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+      "implementationInfo": {
+        "codeHash": "0x249d14f5f61132812ad2d4229d182fbab820491698126d18f0b526c9bf6cf073",
+        "codeSize": 9454,
+        "ethBalance": 0,
+        "slot0": "0x0000000000000000000000ff0000000000000000000000000000000000000000"
+      },
+      "initializedVersion": {
+        "_initialized": 3,
+        "_initializing": false
+      },
+      "namedSlots": {
+        "EIP1967_ADMIN": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103"
+        },
+        "EIP1967_IMPLEMENTATION": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
+        },
+        "OZ_V5_INITIALIZABLE": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xf0c57e16840df040f15088dc2f81fe391c3923bec73e23a9662efc9c229c6a00"
+        },
+        "RDP.addressManager[self] (keccak(self,1))": {
+          "raw": "0x000000000000000000000000b24bfeece1b3b7a44559f4cbc21bed312b130b70",
+          "slot": "0x8c869c58de3ce4faebbb060540807fb6360ec9b879d987a1042e53b15779f3f1"
+        },
+        "RDP.implementationName[self] (keccak(self,0))": {
+          "raw": "0x4f564d5f4c3143726f7373446f6d61696e4d657373656e676572000000000034",
+          "slot": "0xee829abf4942664c44655fb7caa26b33a31e1d724df60afafe7770a514908bd4"
+        }
+      },
+      "proxy": "0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f",
+      "proxyCodeSize": 799,
+      "slots": {
+        "0": {
+          "decoded": {
+            "_initialized": 3,
+            "_initializing": false,
+            "spacer_0_0_20": "0x0000000000000000000000000000000000000000"
+          },
+          "label": "spacer_0_0_20 | _initialized | _initializing",
+          "raw": "0x0000000000000000000000030000000000000000000000000000000000000000",
+          "type": "address | uint8 | bool"
+        },
+        "1": {
+          "decoded": {
+            "spacer_1_0_1600": null
+          },
+          "label": "spacer_1_0_1600",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256[50]"
+        },
+        "101": {
+          "decoded": {
+            "spacer_101_0_1": false
+          },
+          "label": "spacer_101_0_1",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "bool"
+        },
+        "102": {
+          "decoded": {
+            "spacer_102_0_1568": null
+          },
+          "label": "spacer_102_0_1568",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256[49]"
+        },
+        "151": {
+          "decoded": {
+            "spacer_151_0_32": 0
+          },
+          "label": "spacer_151_0_32",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256"
+        },
+        "152": {
+          "decoded": {
+            "spacer_152_0_1568": null
+          },
+          "label": "spacer_152_0_1568",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256[49]"
+        },
+        "201": {
+          "decoded": {
+            "spacer_201_0_32": "(mapping/array base: 0)"
+          },
+          "label": "spacer_201_0_32",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(bytes32 => bool)"
+        },
+        "202": {
+          "decoded": {
+            "spacer_202_0_32": "(mapping/array base: 0)"
+          },
+          "label": "spacer_202_0_32",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(bytes32 => bool)"
+        },
+        "203": {
+          "decoded": {
+            "successfulMessages": "(mapping/array base: 0)"
+          },
+          "label": "successfulMessages",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(bytes32 => bool)"
+        },
+        "204": {
+          "decoded": {
+            "xDomainMsgSender": "0x000000000000000000000000000000000000dead"
+          },
+          "label": "xDomainMsgSender",
+          "raw": "0x000000000000000000000000000000000000000000000000000000000000dead",
+          "type": "address"
+        },
+        "205": {
+          "decoded": {
+            "msgNonce": 78865
+          },
+          "label": "msgNonce",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000013411",
+          "type": "uint240"
+        },
+        "206": {
+          "decoded": {
+            "failedMessages": "(mapping/array base: 0)"
+          },
+          "label": "failedMessages",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(bytes32 => bool)"
+        },
+        "207": {
+          "decoded": {
+            "otherMessenger": "0x4200000000000000000000000000000000000007"
+          },
+          "label": "otherMessenger",
+          "raw": "0x0000000000000000000000004200000000000000000000000000000000000007",
+          "type": "contract CrossDomainMessenger"
+        },
+        "208": {
+          "decoded": {
+            "__gap": null
+          },
+          "label": "__gap",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256[43]"
+        },
+        "251": {
+          "decoded": {
+            "spacer_251_0_20": "0x95703e0982140d16f8eba6d158fccede42f04a4c"
+          },
+          "label": "spacer_251_0_20",
+          "raw": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+          "type": "address"
+        },
+        "252": {
+          "decoded": {
+            "portal": "0x88e529a6ccd302c948689cd5156c83d4614fae92"
+          },
+          "label": "portal",
+          "raw": "0x00000000000000000000000088e529a6ccd302c948689cd5156c83d4614fae92",
+          "type": "contract IOptimismPortal2"
+        },
+        "253": {
+          "decoded": {
+            "spacer_253_0_20": "0x0000000000000000000000000000000000000000"
+          },
+          "label": "spacer_253_0_20",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "address"
+        },
+        "254": {
+          "decoded": {
+            "systemConfig": "0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3"
+          },
+          "label": "systemConfig",
+          "raw": "0x0000000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c3",
+          "type": "contract ISystemConfig"
+        },
+        "51": {
+          "decoded": {
+            "spacer_51_0_20": "0x0000000000000000000000000000000000000000"
+          },
+          "label": "spacer_51_0_20",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "address"
+        },
+        "52": {
+          "decoded": {
+            "spacer_52_0_1568": null
+          },
+          "label": "spacer_52_0_1568",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256[49]"
+        }
+      },
+      "version": "\"2.13.0\""
+    },
+    "L1ERC721Bridge": {
+      "ethBalance": "0",
+      "ethBalanceEther": 0.0,
+      "getters": {
+        "initVersion()(uint8)": "3",
+        "messenger()(address)": "0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f",
+        "otherBridge()(address)": "0x4200000000000000000000000000000000000014",
+        "paused()(bool)": "false",
+        "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+        "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "systemConfig()(address)": "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+        "version()(string)": "\"2.9.1\""
+      },
+      "implementation": "0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e",
+      "implementationInfo": {
+        "codeHash": "0x1b2d9ea6494cc185ef0d02f4334824849d188c17bb89bc437c31e7c765df0865",
+        "codeSize": 6186,
+        "ethBalance": 0,
+        "slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff"
+      },
+      "initializedVersion": {
+        "_initialized": 3,
+        "_initializing": false
+      },
+      "namedSlots": {
+        "EIP1967_ADMIN": {
+          "raw": "0x00000000000000000000000089889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103"
+        },
+        "EIP1967_IMPLEMENTATION": {
+          "raw": "0x0000000000000000000000009f164f1d02a81e06d639e55f65a87f0070e3cb2e",
+          "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
+        },
+        "OZ_V5_INITIALIZABLE": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xf0c57e16840df040f15088dc2f81fe391c3923bec73e23a9662efc9c229c6a00"
+        }
+      },
+      "proxy": "0x5933e323bE8896DfaCd1cD671442F27dAA10a053",
+      "proxyCodeSize": 2059,
+      "slots": {
+        "0": {
+          "decoded": {
+            "_initialized": 3,
+            "_initializing": false,
+            "spacer_0_2_30": "0x000000000000000000000000000000000000000000000000000000000000"
+          },
+          "label": "_initialized | _initializing | spacer_0_2_30",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000003",
+          "type": "uint8 | bool | bytes30"
+        },
+        "1": {
+          "decoded": {
+            "messenger": "0x9cf951e3f74b644e621b36ca9cea147a78d4c39f"
+          },
+          "label": "messenger",
+          "raw": "0x0000000000000000000000009cf951e3f74b644e621b36ca9cea147a78d4c39f",
+          "type": "contract ICrossDomainMessenger"
+        },
+        "2": {
+          "decoded": {
+            "otherBridge": "0x4200000000000000000000000000000000000014"
+          },
+          "label": "otherBridge",
+          "raw": "0x0000000000000000000000004200000000000000000000000000000000000014",
+          "type": "contract ERC721Bridge"
+        },
+        "3": {
+          "decoded": {
+            "__gap": null
+          },
+          "label": "__gap",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256[46]"
+        },
+        "49": {
+          "decoded": {
+            "deposits": "(mapping/array base: 0)"
+          },
+          "label": "deposits",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(address => mapping(address => mapping(uint256 => bool)))"
+        },
+        "50": {
+          "decoded": {
+            "spacer_50_0_20": "0x95703e0982140d16f8eba6d158fccede42f04a4c"
+          },
+          "label": "spacer_50_0_20",
+          "raw": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+          "type": "address"
+        },
+        "51": {
+          "decoded": {
+            "systemConfig": "0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3"
+          },
+          "label": "systemConfig",
+          "raw": "0x0000000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c3",
+          "type": "contract ISystemConfig"
+        }
+      },
+      "version": "\"2.9.1\""
+    },
+    "L1StandardBridge": {
+      "ethBalance": "0",
+      "ethBalanceEther": 0.0,
+      "getters": {
+        "initVersion()(uint8)": "3",
+        "messenger()(address)": "0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f",
+        "otherBridge()(address)": "0x4200000000000000000000000000000000000010",
+        "paused()(bool)": "false",
+        "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+        "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "systemConfig()(address)": "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+        "version()(string)": "\"2.8.2\""
+      },
+      "implementation": "0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891",
+      "implementationInfo": {
+        "codeHash": "0xc58661e10e86c9d205930f350f79f2009251b6a6b71c9fcd760fd860f6c7f86f",
+        "codeSize": 12620,
+        "ethBalance": 0,
+        "slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff"
+      },
+      "initializedVersion": {
+        "_initialized": 3,
+        "_initializing": false
+      },
+      "namedSlots": {
+        "EIP1967_ADMIN": {
+          "raw": "0x00000000000000000000000089889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103"
+        },
+        "EIP1967_IMPLEMENTATION": {
+          "raw": "0x000000000000000000000000b37a11aadf167b2f0b8dd85372de4bc66cd4a891",
+          "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
+        },
+        "OZ_V5_INITIALIZABLE": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xf0c57e16840df040f15088dc2f81fe391c3923bec73e23a9662efc9c229c6a00"
+        }
+      },
+      "proxy": "0xeb9bf100225c214Efc3E7C651ebbaDcF85177607",
+      "proxyCodeSize": 2472,
+      "slots": {
+        "0": {
+          "decoded": {
+            "_initialized": 3,
+            "_initializing": false,
+            "spacer_0_2_30": "0x000000000000000000000000000000000000000000000000000000000000"
+          },
+          "label": "_initialized | _initializing | spacer_0_2_30",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000003",
+          "type": "uint8 | bool | bytes30"
+        },
+        "1": {
+          "decoded": {
+            "spacer_1_0_20": "0x0000000000000000000000000000000000000000"
+          },
+          "label": "spacer_1_0_20",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "address"
+        },
+        "2": {
+          "decoded": {
+            "deposits": "(mapping/array base: 0)"
+          },
+          "label": "deposits",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(address => mapping(address => uint256))"
+        },
+        "3": {
+          "decoded": {
+            "messenger": "0x9cf951e3f74b644e621b36ca9cea147a78d4c39f"
+          },
+          "label": "messenger",
+          "raw": "0x0000000000000000000000009cf951e3f74b644e621b36ca9cea147a78d4c39f",
+          "type": "contract ICrossDomainMessenger"
+        },
+        "4": {
+          "decoded": {
+            "otherBridge": "0x4200000000000000000000000000000000000010"
+          },
+          "label": "otherBridge",
+          "raw": "0x0000000000000000000000004200000000000000000000000000000000000010",
+          "type": "contract StandardBridge"
+        },
+        "5": {
+          "decoded": {
+            "__gap": null
+          },
+          "label": "__gap",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256[45]"
+        },
+        "50": {
+          "decoded": {
+            "spacer_50_0_20": "0x95703e0982140d16f8eba6d158fccede42f04a4c"
+          },
+          "label": "spacer_50_0_20",
+          "raw": "0x00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c",
+          "type": "address"
+        },
+        "51": {
+          "decoded": {
+            "spacer_51_0_20": "0x0000000000000000000000000000000000000000"
+          },
+          "label": "spacer_51_0_20",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "address"
+        },
+        "52": {
+          "decoded": {
+            "systemConfig": "0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3"
+          },
+          "label": "systemConfig",
+          "raw": "0x0000000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c3",
+          "type": "contract ISystemConfig"
+        }
+      },
+      "version": "\"2.8.2\""
+    },
+    "OptimismMintableERC20Factory": {
+      "ethBalance": "0",
+      "ethBalanceEther": 0.0,
+      "getters": {
+        "BRIDGE()(address)": "0xeb9bf100225c214Efc3E7C651ebbaDcF85177607",
+        "bridge()(address)": "0xeb9bf100225c214Efc3E7C651ebbaDcF85177607",
+        "initVersion()(uint8)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+        "version()(string)": "\"1.11.0\""
+      },
+      "implementation": "0xaabea75da509fa518fd8a91eae4be5813b829b12",
+      "implementationInfo": {
+        "codeHash": "0x326b258c79ca99d7f2a8858a634fc2d658ef8cb462e1ea578fa012fea2a68ea0",
+        "codeSize": 11905,
+        "ethBalance": 0,
+        "slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff"
+      },
+      "initializedVersion": {
+        "_initialized": 1,
+        "_initializing": false
+      },
+      "namedSlots": {
+        "EIP1967_ADMIN": {
+          "raw": "0x00000000000000000000000089889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103"
+        },
+        "EIP1967_IMPLEMENTATION": {
+          "raw": "0x000000000000000000000000aabea75da509fa518fd8a91eae4be5813b829b12",
+          "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
+        },
+        "OZ_V5_INITIALIZABLE": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xf0c57e16840df040f15088dc2f81fe391c3923bec73e23a9662efc9c229c6a00"
+        }
+      },
+      "proxy": "0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F",
+      "proxyCodeSize": 2059,
+      "slots": {
+        "0": {
+          "decoded": {
+            "_initialized": 1,
+            "_initializing": false,
+            "spacer_0_2_30": "0x000000000000000000000000000000000000000000000000000000000000"
+          },
+          "label": "_initialized | _initializing | spacer_0_2_30",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+          "type": "uint8 | bool | bytes30"
+        },
+        "1": {
+          "decoded": {
+            "bridge": "0xeb9bf100225c214efc3e7c651ebbadcf85177607"
+          },
+          "label": "bridge",
+          "raw": "0x000000000000000000000000eb9bf100225c214efc3e7c651ebbadcf85177607",
+          "type": "address"
+        },
+        "2": {
+          "decoded": {
+            "deployments": "(mapping/array base: 0)"
+          },
+          "label": "deployments",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(address => address)"
+        },
+        "3": {
+          "decoded": {
+            "__gap": null
+          },
+          "label": "__gap",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256[48]"
+        }
+      },
+      "version": "\"1.11.0\""
+    },
+    "OptimismPortal2": {
+      "ethBalance": "0",
+      "ethBalanceEther": 0.0,
+      "getters": {
+        "anchorStateRegistry()(address)": "0x4890928941e62e273dA359374b105F803329F473",
+        "disputeGameFactory()(address)": "0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0",
+        "disputeGameFinalityDelaySeconds()(uint256)": "302400 [3.024e5]",
+        "ethLockbox()(address)": "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31",
+        "guardian()(address)": "0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2",
+        "initVersion()(uint8)": "3",
+        "l2Sender()(address)": "0x000000000000000000000000000000000000dEaD",
+        "params()(uint128,uint64,uint64)": "1000000000 [1e9]\n514422 [5.144e5]\n26430747 [2.643e7]",
+        "paused()(bool)": "false",
+        "proofMaturityDelaySeconds()(uint256)": "604800 [6.048e5]",
+        "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+        "respectedGameType()(uint32)": "5",
+        "respectedGameTypeUpdatedAt()(uint64)": "1753380095 [1.753e9]",
+        "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "systemConfig()(address)": "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+        "version()(string)": "\"6.1.0\""
+      },
+      "implementation": "0xb20b23af6071405c37ddda0c0640e8ebb7899645",
+      "implementationInfo": {
+        "codeHash": "0xfa4b463e4752a7ba51c244c04e3574e796f023c361bf0a6f8673e53bdbd03f6e",
+        "codeSize": 23173,
+        "ethBalance": 0,
+        "slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff"
+      },
+      "initializedVersion": {
+        "_initialized": 3,
+        "_initializing": false
+      },
+      "namedSlots": {
+        "EIP1967_ADMIN": {
+          "raw": "0x00000000000000000000000089889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103"
+        },
+        "EIP1967_IMPLEMENTATION": {
+          "raw": "0x000000000000000000000000b20b23af6071405c37ddda0c0640e8ebb7899645",
+          "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
+        },
+        "OZ_V5_INITIALIZABLE": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xf0c57e16840df040f15088dc2f81fe391c3923bec73e23a9662efc9c229c6a00"
+        }
+      },
+      "proxy": "0x88e529A6ccd302c948689Cd5156C83D4614FAE92",
+      "proxyCodeSize": 2059,
+      "slots": {
+        "0": {
+          "decoded": {
+            "_initialized": 3,
+            "_initializing": false
+          },
+          "label": "_initialized | _initializing",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000003",
+          "type": "uint8 | bool"
+        },
+        "1": {
+          "decoded": {
+            "params": 165908487861266306438885548525833962510649838949005711877496031744
+          },
+          "label": "params",
+          "raw": "0x0000000001934d1b000000000007d9760000000000000000000000003b9aca00",
+          "type": "struct ResourceMetering.ResourceParams"
+        },
+        "2": {
+          "decoded": {
+            "__gap": null
+          },
+          "label": "__gap",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256[48]"
+        },
+        "50": {
+          "decoded": {
+            "l2Sender": "0x000000000000000000000000000000000000dead"
+          },
+          "label": "l2Sender",
+          "raw": "0x000000000000000000000000000000000000000000000000000000000000dead",
+          "type": "address"
+        },
+        "51": {
+          "decoded": {
+            "finalizedWithdrawals": "(mapping/array base: 0)"
+          },
+          "label": "finalizedWithdrawals",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(bytes32 => bool)"
+        },
+        "52": {
+          "decoded": {
+            "spacer_52_0_32": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "label": "spacer_52_0_32",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "bytes32"
+        },
+        "53": {
+          "decoded": {
+            "spacer_53_0_1": false,
+            "spacer_53_1_20": "0x95703e0982140d16f8eba6d158fccede42f04a4c"
+          },
+          "label": "spacer_53_0_1 | spacer_53_1_20",
+          "raw": "0x000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c00",
+          "type": "bool | address"
+        },
+        "54": {
+          "decoded": {
+            "spacer_54_0_20": "0x0000000000000000000000000000000000000000"
+          },
+          "label": "spacer_54_0_20",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "address"
+        },
+        "55": {
+          "decoded": {
+            "systemConfig": "0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3"
+          },
+          "label": "systemConfig",
+          "raw": "0x0000000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c3",
+          "type": "contract ISystemConfig"
+        },
+        "56": {
+          "decoded": {
+            "spacer_56_0_20": "0x512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0"
+          },
+          "label": "spacer_56_0_20",
+          "raw": "0x000000000000000000000000512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c0",
+          "type": "address"
+        },
+        "57": {
+          "decoded": {
+            "provenWithdrawals": "(mapping/array base: 0)"
+          },
+          "label": "provenWithdrawals",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(bytes32 => mapping(address => struct OptimismPortal2.ProvenWithdrawal))"
+        },
+        "58": {
+          "decoded": {
+            "spacer_58_0_32": "0x0000000000000000000000000000000000000000000000000000000000000000"
+          },
+          "label": "spacer_58_0_32",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "bytes32"
+        },
+        "59": {
+          "decoded": {
+            "spacer_59_0_4": 1,
+            "spacer_59_4_8": 1733134751
+          },
+          "label": "spacer_59_0_4 | spacer_59_4_8",
+          "raw": "0x000000000000000000000000000000000000000000000000674d899f00000001",
+          "type": "GameType | uint64"
+        },
+        "60": {
+          "decoded": {
+            "proofSubmitters": "(mapping/array base: 0)"
+          },
+          "label": "proofSubmitters",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(bytes32 => address[])"
+        },
+        "61": {
+          "decoded": {
+            "spacer_61_0_32": 0
+          },
+          "label": "spacer_61_0_32",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256"
+        },
+        "62": {
+          "decoded": {
+            "anchorStateRegistry": "0x4890928941e62e273da359374b105f803329f473"
+          },
+          "label": "anchorStateRegistry",
+          "raw": "0x0000000000000000000000004890928941e62e273da359374b105f803329f473",
+          "type": "contract IAnchorStateRegistry"
+        },
+        "63": {
+          "decoded": {
+            "ethLockbox": "0x67b4de6ffa66ef201ea6099a89ca397d56622e31",
+            "spacer_63_20_1": false
+          },
+          "label": "ethLockbox | spacer_63_20_1",
+          "raw": "0x00000000000000000000000067b4de6ffa66ef201ea6099a89ca397d56622e31",
+          "type": "contract IETHLockbox | bool"
+        }
+      },
+      "version": "\"6.1.0\""
+    },
+    "ProxyAdmin": {
+      "ethBalance": "0",
+      "ethBalanceEther": 0.0,
+      "getters": {
+        "addressManager()(address)": "0xB24bFEeCE1B3b7A44559F4Cbc21BeD312b130b70",
+        "getProxyAdmin(address)(address) 0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "getProxyAdmin(address)(address) 0x4890928941e62e273dA359374b105F803329F473": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "getProxyAdmin(address)(address) 0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "getProxyAdmin(address)(address) 0x5933e323bE8896DfaCd1cD671442F27dAA10a053": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "getProxyAdmin(address)(address) 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "getProxyAdmin(address)(address) 0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "getProxyAdmin(address)(address) 0x88e529A6ccd302c948689Cd5156C83D4614FAE92": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "getProxyAdmin(address)(address) 0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "getProxyAdmin(address)(address) 0xeb9bf100225c214Efc3E7C651ebbaDcF85177607": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "getProxyImplementation(address)(address) 0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+        "getProxyImplementation(address)(address) 0x4890928941e62e273dA359374b105F803329F473": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+        "getProxyImplementation(address)(address) 0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+        "getProxyImplementation(address)(address) 0x5933e323bE8896DfaCd1cD671442F27dAA10a053": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+        "getProxyImplementation(address)(address) 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+        "getProxyImplementation(address)(address) 0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+        "getProxyImplementation(address)(address) 0x88e529A6ccd302c948689Cd5156C83D4614FAE92": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+        "getProxyImplementation(address)(address) 0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+        "getProxyImplementation(address)(address) 0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+        "getProxyImplementation(address)(address) 0xeb9bf100225c214Efc3E7C651ebbaDcF85177607": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+        "implementationName(address)(string) 0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f": "\"OVM_L1CrossDomainMessenger\"",
+        "isUpgrading()(bool)": "false",
+        "owner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+        "proxyType(address)(uint8) 0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47": "0",
+        "proxyType(address)(uint8) 0x4890928941e62e273dA359374b105F803329F473": "0",
+        "proxyType(address)(uint8) 0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0": "0",
+        "proxyType(address)(uint8) 0x5933e323bE8896DfaCd1cD671442F27dAA10a053": "0",
+        "proxyType(address)(uint8) 0x67B4de6FfA66EF201Ea6099A89cA397D56622E31": "0",
+        "proxyType(address)(uint8) 0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3": "0",
+        "proxyType(address)(uint8) 0x88e529A6ccd302c948689Cd5156C83D4614FAE92": "0",
+        "proxyType(address)(uint8) 0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f": "2",
+        "proxyType(address)(uint8) 0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F": "0",
+        "proxyType(address)(uint8) 0xeb9bf100225c214Efc3E7C651ebbaDcF85177607": "1"
+      },
+      "implementation": "0x0000000000000000000000000000000000000000",
+      "implementationInfo": {},
+      "initializedVersion": null,
+      "namedSlots": {
+        "EIP1967_ADMIN": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103"
+        },
+        "EIP1967_IMPLEMENTATION": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
+        },
+        "OZ_V5_INITIALIZABLE": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xf0c57e16840df040f15088dc2f81fe391c3923bec73e23a9662efc9c229c6a00"
+        },
+        "implementationName[L1CrossDomainMessenger]": {
+          "raw": "0x4f564d5f4c3143726f7373446f6d61696e4d657373656e676572000000000034",
+          "slot": "0x9a308ebd79cb8ebc79e0ec79189102882a541b045ba6df0ca56a1d150aa160fa"
+        },
+        "proxyType[ETHLockbox]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x184f1f5db7be287cacc25d279416aa3cb95cfbaa3c4c529437ec2fb6714183ba"
+        },
+        "proxyType[L1CrossDomainMessenger]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000002",
+          "slot": "0x8c869c58de3ce4faebbb060540807fb6360ec9b879d987a1042e53b15779f3f1"
+        },
+        "proxyType[L1StandardBridge]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+          "slot": "0x27e0c1fc2c02badcbd41a779f9556526c53bd357e759124e2c661094e7b86bce"
+        },
+        "proxyType[OptimismPortal2]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x58321ae9f41f6a103febd5c3a9a0fcce07f40d75e877fda01183207281661d60"
+        },
+        "proxyType[SystemConfig]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xb599d9a2064f6c2fced5246dd59ac4e56c4afae983d313521b72a37da059dba4"
+        }
+      },
+      "proxy": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+      "proxyCodeSize": 6524,
+      "slots": {
+        "0": {
+          "decoded": {
+            "_owner": "0x5a0aae59d09fccbddb6c6cceb07b7279367c3d2a"
+          },
+          "label": "_owner",
+          "raw": "0x0000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a",
+          "type": "address"
+        },
+        "1": {
+          "decoded": {
+            "proxyType": "(mapping/array base: 0)"
+          },
+          "label": "proxyType",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(address => enum ProxyAdmin.ProxyType)"
+        },
+        "2": {
+          "decoded": {
+            "implementationName": "(mapping/array base: 0)"
+          },
+          "label": "implementationName",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(address => string)"
+        },
+        "3": {
+          "decoded": {
+            "addressManager": "0xb24bfeece1b3b7a44559f4cbc21bed312b130b70",
+            "upgrading": false
+          },
+          "label": "addressManager | upgrading",
+          "raw": "0x000000000000000000000000b24bfeece1b3b7a44559f4cbc21bed312b130b70",
+          "type": "contract IAddressManager | bool"
+        }
+      },
+      "version": null
+    },
+    "SystemConfig": {
+      "ethBalance": "0",
+      "ethBalanceEther": 0.0,
+      "getters": {
+        "basefeeScalar()(uint32)": "9736",
+        "batchInbox()(address)": "REVERT: Error: server returned an error response: error code 3: execution reverted, data: \"0x\"",
+        "batcherHash()(bytes32)": "0x0000000000000000000000006776be80dbada6a02b5f2095cf13734ac303b8d1",
+        "blobbasefeeScalar()(uint32)": "1540079 [1.54e6]",
+        "daFootprintGasScalar()(uint16)": "0",
+        "delayedWETH()(address)": "0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47",
+        "disputeGameFactory()(address)": "0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0",
+        "eip1559Denominator()(uint32)": "250",
+        "eip1559Elasticity()(uint32)": "10",
+        "gasLimit()(uint64)": "40000000 [4e7]",
+        "guardian()(address)": "0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2",
+        "initVersion()(uint8)": "3",
+        "isCustomGasToken()(bool)": "false",
+        "isFeatureEnabled(bytes32)(bool) 0x435553544f4d5f4741535f544f4b454e00000000000000000000000000000000": "false",
+        "isFeatureEnabled(bytes32)(bool) 0x4554485f4c4f434b424f58000000000000000000000000000000000000000000": "true",
+        "isFeatureEnabled(bytes32)(bool) 0x494e5445524f5000000000000000000000000000000000000000000000000000": "false",
+        "l1CrossDomainMessenger()(address)": "0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f",
+        "l1ERC721Bridge()(address)": "0x5933e323bE8896DfaCd1cD671442F27dAA10a053",
+        "l1StandardBridge()(address)": "0xeb9bf100225c214Efc3E7C651ebbaDcF85177607",
+        "l2ChainId()(uint256)": "1868",
+        "lastUsedOPCM()(address)": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+        "lastUsedOPCMVersion()(string)": "\"9.0.3\"",
+        "minBaseFee()(uint64)": "12000000 [1.2e7]",
+        "minimumGasLimit()(uint64)": "21000000 [2.1e7]",
+        "operatorFeeConstant()(uint64)": "0",
+        "operatorFeeScalar()(uint32)": "0",
+        "optimismMintableERC20Factory()(address)": "0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F",
+        "optimismPortal()(address)": "0x88e529A6ccd302c948689Cd5156C83D4614FAE92",
+        "overhead()(uint256)": "0",
+        "owner()(address)": "0x509182eC226b3B71D36A3255A80EF0b1A9D43033",
+        "paused()(bool)": "false",
+        "proxyAdmin()(address)": "0x89889B569c3a505f3640ee1Bd0ac1D557f436D2a",
+        "proxyAdminOwner()(address)": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
+        "resourceConfig()((uint32,uint8,uint8,uint32,uint32,uint128))": "(20000000 [2e7], 10, 8, 1000000000 [1e9], 1000000 [1e6], 340282366920938463463374607431768211455 [3.402e38])",
+        "scalar()(uint256)": "452312848583266388373324160190187140051835877600158453279137802119848928776 [4.523e74]",
+        "startBlock()(uint256)": "21314185 [2.131e7]",
+        "superchainConfig()(address)": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "unsafeBlockSigner()(address)": "0x7c2Bd59ee2a2C7391c9A240132f26071e9546262",
+        "version()(string)": "\"4.3.0\""
+      },
+      "implementation": "0xade27248542c0f3e89b49e4eb76155e267f14377",
+      "implementationInfo": {
+        "codeHash": "0xbbdfcdc98278949febb0882c5352ab3f589ad519ea5a91a3db9daeea67b9445e",
+        "codeSize": 12482,
+        "ethBalance": 0,
+        "slot0": "0x00000000000000000000000000000000000000000000000000000000000000ff"
+      },
+      "initializedVersion": {
+        "_initialized": 3,
+        "_initializing": false
+      },
+      "namedSlots": {
+        "DELAYED_WETH_SLOT": {
+          "raw": "0x00000000000000000000000018fbb58c366e21f395ddec7cba0510a2d9116b47",
+          "slot": "0x51547f31a231e1007dca33017faa3da20d959b95087c588a7768bfb922fd58ff"
+        },
+        "EIP1967_ADMIN": {
+          "raw": "0x00000000000000000000000089889b569c3a505f3640ee1bd0ac1d557f436d2a",
+          "slot": "0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103"
+        },
+        "EIP1967_IMPLEMENTATION": {
+          "raw": "0x000000000000000000000000ade27248542c0f3e89b49e4eb76155e267f14377",
+          "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
+        },
+        "FEATURE[CUSTOM_GAS_TOKEN]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x3ec9a18bd22a834e2a13465cc2aa2a9aebb161ffdebf39cdb0028dbb1b5394b4"
+        },
+        "FEATURE[ETH_LOCKBOX]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+          "slot": "0x58e88e949bd180ff86d6c072735c3d8d5a05a543c16130176ec0bc0adf3fd806"
+        },
+        "FEATURE[INTEROP]": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x252630ff969d59d68f549a020f5a95de1229566c4ecda0b4de628fdba9eecdc7"
+        },
+        "L1_CROSS_DOMAIN_MESSENGER_SLOT": {
+          "raw": "0x0000000000000000000000009cf951e3f74b644e621b36ca9cea147a78d4c39f",
+          "slot": "0x383f291819e6d54073bc9a648251d97421076bdd101933c0c022219ce9580636"
+        },
+        "L1_ERC_721_BRIDGE_SLOT": {
+          "raw": "0x0000000000000000000000005933e323be8896dfacd1cd671442f27daa10a053",
+          "slot": "0x46adcbebc6be8ce551740c29c47c8798210f23f7f4086c41752944352568d5a7"
+        },
+        "L1_STANDARD_BRIDGE_SLOT": {
+          "raw": "0x000000000000000000000000eb9bf100225c214efc3e7c651ebbadcf85177607",
+          "slot": "0x9904ba90dde5696cda05c9e0dab5cbaa0fea005ace4d11218a02ac668dad6376"
+        },
+        "LEGACY_BATCH_INBOX_SLOT": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x71ac12829d66ee73d8d95bff50b3589745ce57edae70a3fb111a2342464dc597"
+        },
+        "LEGACY_DISPUTE_GAME_FACTORY_SLOT": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x52322a25d9f59ea17656545543306b7aef62bc0cc53a0e65ccfa0c75b97aa906"
+        },
+        "LEGACY_GAS_PAYING_TOKEN_NAME_SLOT": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x657c3582c29b3176614e3a33ddd1ec48352696a04e92b3c0566d72010fa8863c"
+        },
+        "LEGACY_GAS_PAYING_TOKEN_SLOT": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0x4adb1412b2ddc16fcc0d4538d5c8f07cf9c83abecc6b41f6f69037b708fbceb"
+        },
+        "LEGACY_GAS_PAYING_TOKEN_SYMBOL_SLOT": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xa48b38a4b44951360fbdcbfaaeae5ed6ae92585412e9841b70ec72ed8cd05763"
+        },
+        "LEGACY_L2_OUTPUT_ORACLE_SLOT": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xe52a667f71ec761b9b381c7b76ca9b852adf7e8905da0e0ad49986a0a6871815"
+        },
+        "OPCM_SLOT": {
+          "raw": "0x0000000000000000000000002d91e6f2bcf6cd1df90e1faf9714e18705ea331f",
+          "slot": "0x99f45962df4bc30de8d4c3c6d1ffc0f100edce16e80c7a5768b6d55ca463ff42"
+        },
+        "OPTIMISM_MINTABLE_ERC20_FACTORY_SLOT": {
+          "raw": "0x000000000000000000000000c1047e30efc9e172cfe7aa0219895b6a43fc415f",
+          "slot": "0xa04c5bb938ca6fc46d95553abf0a76345ce3e722a30bf4f74928b8e7d852320c"
+        },
+        "OPTIMISM_PORTAL_SLOT": {
+          "raw": "0x00000000000000000000000088e529a6ccd302c948689cd5156c83d4614fae92",
+          "slot": "0x4b6c74f9e688cb39801f2112c14a8c57232a3fc5202e1444126d4bce86eb19ac"
+        },
+        "OZ_V5_INITIALIZABLE": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "slot": "0xf0c57e16840df040f15088dc2f81fe391c3923bec73e23a9662efc9c229c6a00"
+        },
+        "START_BLOCK_SLOT": {
+          "raw": "0x0000000000000000000000000000000000000000000000000000000001453a89",
+          "slot": "0xa11ee3ab75b40e88a0105e935d17cd36c8faee0138320d776c411291bdbbb19f"
+        },
+        "UNSAFE_BLOCK_SIGNER_SLOT": {
+          "raw": "0x0000000000000000000000007c2bd59ee2a2c7391c9a240132f26071e9546262",
+          "slot": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08"
+        }
+      },
+      "proxy": "0x7a8ed66b319911a0f3e7288bddab30d9c0c875c3",
+      "proxyCodeSize": 2059,
+      "slots": {
+        "0": {
+          "decoded": {
+            "_initialized": 3,
+            "_initializing": false
+          },
+          "label": "_initialized | _initializing",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000003",
+          "type": "uint8 | bool"
+        },
+        "1": {
+          "decoded": {
+            "__gap": null
+          },
+          "label": "__gap",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256[50]"
+        },
+        "101": {
+          "decoded": {
+            "overhead": 0
+          },
+          "label": "overhead",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256"
+        },
+        "102": {
+          "decoded": {
+            "scalar": 452312848583266388373324160190187140051835877600158453279137802119848928776
+          },
+          "label": "scalar",
+          "raw": "0x01000000000000000000000000000000000000000000000000177fef00002608",
+          "type": "uint256"
+        },
+        "103": {
+          "decoded": {
+            "batcherHash": "0x0000000000000000000000006776be80dbada6a02b5f2095cf13734ac303b8d1"
+          },
+          "label": "batcherHash",
+          "raw": "0x0000000000000000000000006776be80dbada6a02b5f2095cf13734ac303b8d1",
+          "type": "bytes32"
+        },
+        "104": {
+          "decoded": {
+            "basefeeScalar": 9736,
+            "blobbasefeeScalar": 1540079,
+            "gasLimit": 40000000
+          },
+          "label": "gasLimit | basefeeScalar | blobbasefeeScalar",
+          "raw": "0x0000000000000000000000000000000000177fef000026080000000002625a00",
+          "type": "uint64 | uint32 | uint32"
+        },
+        "105": {
+          "decoded": {
+            "_resourceConfig": 1766847064778384329583297500742918515822292808943185220098969906202094848
+          },
+          "label": "_resourceConfig",
+          "raw": "0x0000ffffffffffffffffffffffffffffffff000f42403b9aca00080a01312d00",
+          "type": "struct IResourceMetering.ResourceConfig"
+        },
+        "106": {
+          "decoded": {
+            "daFootprintGasScalar": 0,
+            "eip1559Denominator": 250,
+            "eip1559Elasticity": 10,
+            "operatorFeeConstant": 0,
+            "operatorFeeScalar": 0
+          },
+          "label": "eip1559Denominator | eip1559Elasticity | operatorFeeScalar | operatorFeeConstant | daFootprintGasScalar",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000a000000fa",
+          "type": "uint32 | uint32 | uint32 | uint64 | uint16"
+        },
+        "107": {
+          "decoded": {
+            "l2ChainId": 1868
+          },
+          "label": "l2ChainId",
+          "raw": "0x000000000000000000000000000000000000000000000000000000000000074c",
+          "type": "uint256"
+        },
+        "108": {
+          "decoded": {
+            "minBaseFee": 12000000,
+            "superchainConfig": "0x95703e0982140d16f8eba6d158fccede42f04a4c"
+          },
+          "label": "superchainConfig | minBaseFee",
+          "raw": "0x000000000000000000b71b0095703e0982140d16f8eba6d158fccede42f04a4c",
+          "type": "contract ISuperchainConfig | uint64"
+        },
+        "109": {
+          "decoded": {
+            "isFeatureEnabled": "(mapping/array base: 0)"
+          },
+          "label": "isFeatureEnabled",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "mapping(bytes32 => bool)"
+        },
+        "51": {
+          "decoded": {
+            "_owner": "0x509182ec226b3b71d36a3255a80ef0b1a9d43033"
+          },
+          "label": "_owner",
+          "raw": "0x000000000000000000000000509182ec226b3b71d36a3255a80ef0b1a9d43033",
+          "type": "address"
+        },
+        "52": {
+          "decoded": {
+            "__gap": null
+          },
+          "label": "__gap",
+          "raw": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "type": "uint256[49]"
+        }
+      },
+      "version": "\"4.3.0\""
+    }
+  }
+}

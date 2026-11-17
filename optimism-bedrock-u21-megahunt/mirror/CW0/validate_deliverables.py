@@ -78,17 +78,21 @@ for required in ["OptimismPortal", "CrossDomainMessenger", "SafeCall", "Standard
 texts = [(OUT / name).read_text() for name in ["PRIMITIVES.json", "SEMANTIC-LINEAGE.json", "SEMANTIC-LINEAGE.md"]]
 refs = set()
 for text in texts:
-    refs.update(re.findall(r"(v\d+\.\d+\.\d+):((?:contracts|src)/[^` ;,]+?\.sol):(\d+)(?:-(\d+))?", text))
+    bare = re.findall(r"(?<![:\w/])(?:contracts|src)/[^` ;|]+?\.sol:\d+", text)
+    if bare:
+        fail(f"untagged Solidity citations remain: {sorted(set(bare))[:5]}")
+    refs.update(re.findall(r"(v\d+\.\d+\.\d+):((?:contracts|src)/[^` ;,]+?\.sol):(\d+(?:-\d+)?(?:,\d+(?:-\d+)?)*)", text))
 bad_refs = []
-for tag, rel, start, end in sorted(refs):
+for tag, rel, line_spec in sorted(refs):
     release = "op-" + tag if tag in {"v7.0.0", "v8.0.0", "v9.0.0"} else "hist/" + tag
     path = Path("/home/user/ethereum-optimism") / release / "packages/contracts-bedrock" / rel
     if not path.is_file():
         bad_refs.append(f"missing pinned source: {tag}:{rel}")
         continue
     line_count = sum(1 for _ in path.open(errors="ignore"))
-    if int(end or start) > line_count:
-        bad_refs.append(f"citation beyond EOF: {tag}:{rel}:{end or start}>{line_count}")
+    cited_max = max(map(int, re.findall(r"\d+", line_spec)))
+    if cited_max > line_count:
+        bad_refs.append(f"citation beyond EOF: {tag}:{rel}:{cited_max}>{line_count}")
 if bad_refs:
     fail("invalid pinned citations:\n" + "\n".join(bad_refs))
 
