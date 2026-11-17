@@ -1,0 +1,32 @@
+Completed lane 21. No `CAND-21xx` survived, so no candidate score is reported.
+
+Files:
+
+- [Full lane report](/home/user/Tracking_Body/optimism-u21-novel-hunt/lanes/LANE-21-report.md)
+- [Proxy implementation map](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-21/U21_PROXY_IMPLEMENTATION_MAP.md)
+- [Initializer calls](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-21/U21_INITIALIZER_CALLS.md)
+- [Evidence, traces, and decoders](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-21/)
+- [Fork PoC tests](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-21/tests/U21ExecutionGuards.t.sol)
+- `PRIM-2101`–`PRIM-2104` and `REJ-2101`–`REJ-2108` in their authorized directories.
+
+Primitives:
+
+- **PRIM-2101:** Nested delegatecalls preserve Safe authority for ProxyAdmin calls; direct OPCM calls do not.
+- **PRIM-2102:** Every proxy follows an atomic `StorageSetter → real → StorageSetter → real` reinitialization cycle.
+- **PRIM-2103:** Existing dispute games retain the old immutable prestate while new games use the updated prestate.
+- **PRIM-2104:** Standalone Utils can permissionlessly occupy a predictable normal-proxy CREATE2 address, but no current eligible U21 impact was found.
+
+Strongest negatives:
+
+- All 307 logs and 47 final storage changes were attributed; none were unexpected.
+- All 283 address-getter wiring checks passed across four chains.
+- All 12 relevant runtimes match v9, excluding declared immutable ranges.
+- Every proxy remained initialized and every implementation singleton was locked.
+- In-flight games were not retroactively reinterpreted.
+- Six N-fork guard/PoC tests pass, including direct-call authority and salt-occupancy tests.
+
+Compositions deserving follow-up:
+
+1. A permissionless Safe module/fallback delegatecall path combined with Safe-owned ProxyAdmins.
+2. PRIM-2104 combined with a future mandatory fixed-salt proxy deployment.
+3. A concrete defect in the old type-9 prestate combined with preserved pre-U21 games.

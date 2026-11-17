@@ -1,0 +1,11 @@
+No files changed, compilation skipped
+
+Ran 5 tests for test/StorageBoundary.t.sol:StorageBoundaryTest
+[PASS] test_expectedDependencySlotsOnly() (gas: 14250)
+[PASS] test_historicalWithdrawalMappingsAreBitExact() (gas: 20456)
+[PASS] test_implementationInitializersAreDisabled() (gas: 13693)
+[PASS] test_postUpgradeDependenciesAreLiveAndNonzero() (gas: 68438)
+[PASS] test_publicReinitializersAreClosedToUnprivilegedCaller() (gas: 151392)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 24.45ms (10.03ms CPU time)
+
+Ran 1 test suite in 34.86ms (24.45ms CPU time): 5 tests passed, 0 failed, 0 skipped (5 total tests)
