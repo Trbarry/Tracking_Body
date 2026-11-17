@@ -1,0 +1,33 @@
+Completed the independent CF4 storage/initializer archaeology. No reportable vulnerability survived; candidate score **0/10**, so no candidate was filed.
+
+### Deliverables
+
+- [CF4 report](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CF4-report.md)
+- [STORAGE-ARCHAEOLOGY.md](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF4/STORAGE-ARCHAEOLOGY.md)
+- [storage-lineage.json](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF4/storage-lineage.json)
+- [Fork tests](/home/user/u21-work/codex-CF4/h/test/CF4StorageArchaeology.t.sol)
+- Supporting chain history, mapping census, initializer locks, sibling births, generation samples, and reproducible tools are under `mirror/CF4/evidence/` and `mirror/CF4/tools/`.
+
+All JSON validates. Fork suite: **2 passed, 0 failed**.
+
+### Facts locked
+
+- Normalized 18 contract families across all 20 releases, v1.0.0–v9.0.0.
+- Reconstructed 101 persistent implementation transitions through block 26,433,900.
+- Full ≤10,000-block event census covered blocks 12,600,000–26,433,900 and 1,217,983 matching logs.
+- Real legacy Portal proof words remain at base slot 52, but v9 uses nested base 57. Exact junking of both legacy words could not reach the v9 getter or `deleteProvenWithdrawal`.
+- Messenger legacy bases 201/202 remain disjoint from successful/failed mappings at 203/206.
+- Every observed non-zero word whose old meaning disappeared remains a spacer; no v9 OPCM, validator, migrator, or typed path reads it.
+- Initializer transitions and temporary StorageSetter resets were atomic at block granularity. No material implementation remained externally initializable.
+- ASR/DelayedWETH reorderings are isolated across three proxy generations; live games pin their corresponding generation.
+- Ink, Soneium, and Unichain were born on Portal 3.10.0 and never used the legacy slot-52 proof layout.
+
+### Primitives
+
+- [PRIM-CF4-01](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/primitives/PRIM-CF4-01.md): Live slot-52 proof tombstones, presently namespace-isolated.
+- [PRIM-CF4-02](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/primitives/PRIM-CF4-02.md): Atomic privileged initializer-reset critical section.
+- [PRIM-CF4-03](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/primitives/PRIM-CF4-03.md): Live games pin three ASR/WETH generations.
+
+Limits: eventless mapping keys and intra-block write/clear cycles cannot be enumerated retrospectively.
+
+Next wave: future raw migrators touching slot 52; callbacks during StorageSetter execution; retirement/bond/lockbox flows across all three game generations.
