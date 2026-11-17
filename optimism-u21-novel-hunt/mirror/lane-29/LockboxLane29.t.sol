@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.25;
 
-import { Test } from "forge-std/Test.sol";
+import {Test} from "forge-std/Test.sol";
 
 interface ILockbox29 {
     error ETHLockbox_Unauthorized();
@@ -99,12 +99,7 @@ contract LockboxLane29Test is Test {
     function test_realPortalBlocksOnlyItselfAndItsCurrentLockbox() external {
         IPortal29 portal = IPortal29(portals[0]);
         IPortal29.WithdrawalTransaction memory withdrawal = IPortal29.WithdrawalTransaction({
-            nonce: 0,
-            sender: address(1),
-            target: portals[0],
-            value: 0,
-            gasLimit: 0,
-            data: hex""
+            nonce: 0, sender: address(1), target: portals[0], value: 0, gasLimit: 0, data: hex""
         });
 
         vm.expectRevert(IPortal29.OptimismPortal_BadTarget.selector);
@@ -130,16 +125,11 @@ contract LockboxLane29Test is Test {
         address l2Recipient = address(0xCAFE);
         uint256 l2CallValue = 7 ether;
         uint64 gasLimit = 100_000;
-        address aliasedSourcePortal = address(
-            uint160(portals[0]) + uint160(0x1111000000000000000000000000000000001111)
-        );
+        address aliasedSourcePortal = address(uint160(portals[0]) + uint160(0x1111000000000000000000000000000000001111));
 
         vm.expectEmit(true, true, true, true, portals[3]);
         emit IPortal29.TransactionDeposited(
-            aliasedSourcePortal,
-            l2Recipient,
-            0,
-            abi.encodePacked(uint256(0), l2CallValue, gasLimit, false, bytes(""))
+            aliasedSourcePortal, l2Recipient, 0, abi.encodePacked(uint256(0), l2CallValue, gasLimit, false, bytes(""))
         );
 
         // Primitive only: a finalized withdrawal supplies this source-portal call context. The
