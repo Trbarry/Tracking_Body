@@ -1,0 +1,27 @@
+Completed CF5 independently. No bounty candidate survived falsification; candidate score: N/A.
+
+Key deliverables:
+
+- [Chain-history differential report](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF5/CHAIN-HISTORY-DIFFERENTIAL.md)
+- Chain packets: [OP](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF5/chains/OP/HISTORY.md), [Ink](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF5/chains/INK/HISTORY.md), [Soneium](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF5/chains/SONEIUM/HISTORY.md), [Unichain](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CF5/chains/UNICHAIN/HISTORY.md), each with `DEPLOYMENT.json`, `STATE-U21.json`, and `UPGRADE-PATH.json`
+- [Worker handoff](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CF5-report.md)
+- [Named differential test](/home/user/u21-work/codex-CF5/h/test/ChainHistoryDifferential.t.sol:14), passing 1/1
+
+Facts locked:
+
+- Identical v9 DGF code behaves differently from historical storage: byte-identical type-9 creation succeeds on OP but Soneium reverts `NoImplementation(uint32)`. U20/U21 evidence proves this is intentional policy.
+- All chains executed U2, U3, U16, U16a, U17–U21; no post-birth release was skipped.
+- Complete Safe hierarchy/history, custody snapshots, pause logs, 12 ASRs, 23 DelayedWETHs, prestates, anchors, and game registrations are recorded.
+- Full censuses covered Ink 2,640, Soneium 8,537, and Unichain 17,691 games. The two unexpected live games have invalid reconstructed L2 roots; an OP third-party control matched exactly.
+
+Primitives:
+
+- `PRIM-CF5-01`: historical registration changes permissionless reachability.
+- `PRIM-CF5-02`: legacy game lineages retain version-specific bond custody.
+- `PRIM-CF5-03`: validity depends on respected-at-creation historical state.
+
+Strongest negatives: no custody residue, target pause drift, blacklist anomaly, exploitable legacy-slot reader, or valid hostile game.
+
+Limits: balances sampled at releases/head; root reconstruction targeted flagged games plus one control.
+
+Next edges: legacy DelayedWETH credit withdrawals; ASR initializer/callback trace ordering; first post-U20 respected-type boundary replay. No public transaction or shared-fork mutation occurred.

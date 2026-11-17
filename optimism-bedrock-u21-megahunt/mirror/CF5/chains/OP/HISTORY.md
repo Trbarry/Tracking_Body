@@ -61,7 +61,7 @@ The U16 `ETHMigrated` event is decoded in `UPGRADE-PATH.json`. At 26433900, bala
 | DelayedWETH | `0xe214879ad573693a4c49f7654449caa455cde34f` | 22990599 | 9828–11506 (1679) | 0 | `1.5.0` |
 | DelayedWETH | `0xe497b094d6dbb3d5e4caac9a14696d7572588d14` | 19884569 | 0–2236 (2237) | 160000000000000000 | `1.0.0` |
 
-Current respected type is **9**, retirement timestamp `1753379243`, anchor `0x1780727e85b9a6a2f265739802b24afdeb1d3f86b6f8b0bdd762c7b0c6ff0846 at L2 timestamp 1794262423`. Every `ImplementationSet`, bond, args, absolute-prestate observation, anchor update, retirement, and blacklist event is retained in `UPGRADE-PATH.json`. v9 accepts a factory-registered game only after blacklist/retirement/finality checks (`AnchorStateRegistry.sol:256-262,286-325,331-352`) and records respect at creation (`SuperFaultDisputeGame.sol:338-340`).
+At the U21 state block 26430859, respected type is **9**, retirement timestamp `1753379243`, and anchor snapshot `0x1780727e85b9a6a2f265739802b24afdeb1d3f86b6f8b0bdd762c7b0c6ff0846 at L2 timestamp 1794262423`. Subsequent anchor updates through the pinned head are retained. Every `ImplementationSet`, bond, args, absolute-prestate observation, anchor update, retirement, and blacklist event is in `UPGRADE-PATH.json`. v9 accepts a factory-registered game only after blacklist/retirement/finality checks (`AnchorStateRegistry.sol:256-262,286-325,331-352`) and records respect at creation (`SuperFaultDisputeGame.sol:338-340`).
 
 ## Game census
 

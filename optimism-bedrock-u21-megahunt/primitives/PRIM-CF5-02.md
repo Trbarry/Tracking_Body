@@ -10,4 +10,4 @@ Old games still use their embedded WETH for credit/refund settlement. This makes
 
 ## Falsification so far
 
-Every retained balance observed is consistent with game bonds/refund credits. No tested path mutates another game's credit or withdraws another claimant's balance; there is no Portal/L1XDM/bridge residue. Bond-only loss is also below the programme's stated direct-loss floor. Retain for cross-version credit testing, not as a candidate.
+Every retained balance observed is consistent with game bonds/refund credits. No tested path mutates another game's credit or withdraws another claimant's balance; there is no Portal/L1XDM/bridge residue. Retain for cross-version credit testing, not as a candidate.

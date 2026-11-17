@@ -1,0 +1,1 @@
+label=BEDROCK_STEP1 block=17422444 mode=prank txs=1 rawWrites=27 distinctSlots=22 accounts=7 mismatchesVsRealEndOfBlock=0

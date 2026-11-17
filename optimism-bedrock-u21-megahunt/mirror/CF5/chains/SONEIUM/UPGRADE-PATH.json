@@ -51090,6 +51090,15 @@
       }
     ]
   },
+  "implementationHistoryMethod": {
+    "birthDiscovery": "archive binary search for first code and first nonzero EIP-1967 implementation slot; results in DEPLOYMENT.json",
+    "rawEvidence": [
+      "evidence/archive-probe.json",
+      "evidence/events-current.json"
+    ],
+    "releaseValidation": "archive EIP-1967 slot snapshots at every executed release block in releasePath.contractState",
+    "transitionDiscovery": "all EIP-1967 Upgraded logs from genesis through the pinned block for every current proxy address; preserves multiple intra-block transitions that block-level binary search cannot distinguish"
+  },
   "lastUsedOPCMHistory": [
     {
       "block": 22182531,
@@ -51413,6 +51422,21 @@
         "logIndex": 570,
         "timestamp": 1747234895,
         "transactionHash": "0x758b4196114928b4e43c2f3b6d65e0737dde9f1ed6f346eac16843f5fd3fac74"
+      }
+    ],
+    "identifierEpochs": [
+      {
+        "fromBlock": 21314185,
+        "mode": "global SuperchainConfig pause; v3 Portal paused() had no chain-local address identifier",
+        "source": "op-contracts/v3.0.0 OptimismPortal2.sol:235-238",
+        "throughBlock": 22990669
+      },
+      {
+        "fromBlock": 22990670,
+        "identifier": "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31",
+        "mode": "global OR chain-local ETHLockbox address identifier",
+        "source": "op-contracts/v9.0.0 OptimismPortal2.sol:305-308; ETHLockbox.sol:111-114",
+        "throughBlock": 26433900
       }
     ],
     "identifierPaused": [

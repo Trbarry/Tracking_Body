@@ -73,7 +73,7 @@ The complete shared-SuperchainConfig log history contains:
 
 Each chain has one persistent DGF proxy and exactly three ASRs ever referenced by a game. DelayedWETH lineages are OP 7, Ink 6, Soneium 4, Unichain 6. Current/past object addresses, first-code blocks, game-index ranges, versions, owner or lockbox, and balances are in `evidence/historical-game-objects.json` and each `HISTORY.md`.
 
-Pinned DelayedWETH ETH totals are OP 20.982782, Ink 5.790376, Soneium 0, and Unichain 21.499797 ETH. These are per-game bond/refund custody; old nonzero objects remain callable by their games. I found no cross-game credit mutation or permissionless withdrawal of another claimant's credit. Economic impact confined to bonds is below the programme's direct-loss threshold.
+Pinned DelayedWETH ETH totals are OP 20.982782, Ink 5.790376, Soneium 0, and Unichain 21.499797 ETH. These are per-game bond/refund custody; old nonzero objects remain callable by their games. I found no cross-game credit mutation or permissionless withdrawal of another claimant's credit.
 
 Effective prestate epochs are explicitly normalized in `absolutePrestatePolicyHistory`:
 
@@ -84,7 +84,7 @@ Effective prestate epochs are explicitly normalized in `absolutePrestatePolicyHi
 | U16 | types 0/1 `0x03eb0710…` |
 | U17 | types 0/1 `0x03caa187…` |
 | U18 | 0/1 `0x033c0009…`; type 8 `0x0323914d…` where enabled |
-| U19 | type 0 disabled; type 8 `0x0337ecb3…` on OP/Ink/Uni; Soneium stays type 1 |
+| U19 | type 0 disabled; type 1 rewired with `0xdead…` emergency-fallback prestate; type 8 `0x0337ecb3…` on OP/Ink/Uni; Soneium respects type 1 and has no type 8 |
 | U20 | types 5/9 `0x031ac6f1…`; Soneium type 5 only |
 | U21 | types 5/9 `0x03e5a548…`; Soneium type 5 only |
 
