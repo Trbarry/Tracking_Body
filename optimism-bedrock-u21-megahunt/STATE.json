@@ -56,16 +56,16 @@
   },
   "wave_0": {
     "F1_scope_and_deployment": "DONE_IN_PASS_A (SCOPE.md, U21_PROXY_IMPLEMENTATION_MAP.md, PRE/POST_U21_STATE.json)",
-    "F2_release_dag": "RUNNING",
-    "F3_audit_corpus_miner": "RUNNING",
-    "F4_storage_initializer_historian": "RUNNING",
-    "F5_chain_history_differential": "RUNNING",
-    "F6_historical_harness": "RUNNING",
+    "F2_release_dag": "RESUMED_ON_OPUS",
+    "F3_audit_corpus_miner": "DONE (Mythos) + CF3 Codex mirror DONE",
+    "F4_storage_initializer_historian": "RESUMED_ON_OPUS",
+    "F5_chain_history_differential": "RESUMED_ON_OPUS",
+    "F6_historical_harness": "RESUMED_ON_OPUS",
     "F7_duplicate_researcher": "QUEUED (after blind registry freeze)",
-    "W0_ingest_primitives": "RUNNING",
+    "W0_ingest_primitives": "DONE (deliverables written; final message lost to rate limit)",
     "codex_mirrors": "RUNNING (CF2, CF3, CF4, CF5, CF6, CW0 \u2014 user request)"
   },
-  "facts_locked": 10,
+  "facts_locked": 12,
   "candidates_open": 0,
   "candidates_killed": 0,
   "mythos_escalations_used": 0,
@@ -73,5 +73,6 @@
   "concurrency_limit": 6,
   "top_root_cause": null,
   "current_blocker": "no candidate; historical lineage not yet reconstructed",
-  "next_experiment": "Wave 0: release DAG, storage/initializer history, chain-history differential, audit corpus (isolated)"
+  "next_experiment": "Wave 0: release DAG, storage/initializer history, chain-history differential, audit corpus (isolated)",
+  "model_note": "2026-11-17 ~12:00 UTC: Mythos 5.2 quota exhausted (resets 2026-11-22 00:00 UTC). User switched the session to Opus 5.5 and asked to continue on it; F2/F4/F5/F6 resumed on Opus 5.5 from their saved work. Codex mirrors unaffected."
 }

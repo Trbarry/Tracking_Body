@@ -43,6 +43,10 @@ All `file:line` references are relative to `packages/contracts-bedrock/` at the 
 - game 9828 (1753381655): FaultDisputeGame 1.7.0, anchorStateRegistry() = 0x23B2C62946350F4246f9f9D027e071f0264FD113 (current)
 - respected implementation boundaries (bisection over indices 9828..21388): 12805 -> FDG 1.8.0 (1764096407, 2025-11-25); 14633 -> FDG 2.2.0 (1770668867, 2026-02-09, first gameArgs-based clone); 17905 -> type 8, FDG 2.4.2 (1782429263, 2026-06-26); 20095 -> type 9, SuperFaultDisputeGame 0.8.0 (1790269415, 2026-09-25)
 - legacy registries still deployed: 0x18DAc71c228D1C32c99489B7323d441E1175e443 version() "2.0.0" (impl 0x1b5cc028…); 0x1c68ECfb… version() "2.2.2" (impl 0x7b465370…), portal() = 0xbEb5Fc57…, disputeGameFactory() = 0xe5965Ab5…, respectedGameType() = 9 (live value, resolved through the v9 portal getter), anchorGame() = 0x9C9ac0A342D68040fe44d61de897E30Ad1c57bC3
+- ImplementationSet/ImplementationArgsSet history of the four factories, L1 blocks 19,800,000..26,433,900 (250 logs, 0 errors; evidence/W0/dgf-implementation-set-logs-19800000-26433900.json). OP Mainnet factory transactions (block, respected implementation version, registry the implementation is bound to): 19884592 FDG 1.2.0 -> 0x18DAc71c…; 20270847 1.2.0; 20723924 1.3.0; 21580854 1.3.1; 22182531 1.4.1 -> 0x1c68ECfb… (registry #2); 22339996 1.4.1; 22432368 1.4.1; 22990599 1.7.0 -> 0x23B2C629… (registry #3, the v4.0.0 "…-U16" proxies); 23491328 1.7.0; 23877377 1.8.0; 24421512 2.2.0 with gameArgs, type 8 first registered; 25397811 type 0 unset, type 8 FDG 2.4.2; 26048619 types 0/1/8 unset, type 5 SuperPermissioned 1.1.0 + type 9 SuperFault 0.8.0; 26430859 (U21) types 5 and 9 re-registered
+- registry generations per chain (first implementation bound to each): Ink 0xde744491… -> 0x2fc99fd1… (22182531) -> 0xEe018bAf… (22990599); Unichain 0x318A642d… -> 0xD5D0e176… (22254924) -> 0x27Cf508E… (22990722); Soneium 0x61f89A38… -> 0x190B6ecE… (22182531) -> 0x48909289… (22990670). Only game types 0, 1, 8, 5, 9 were ever given an implementation on any of the four factories; implementations active at or after each current registry's retirement that are bound to another registry: 0 (evidence/W0/dgf-implementation-registry-binding.json)
+- chain-specific extra transactions: Ink re-registered type 1 alone at block 25674914; Unichain re-registered type 5 alone at 26299517; Soneium never registered types 0, 8 or 9 (type 1 until 26048619, then type 5)
+- fork test test/W0/W0Lineage.t.sol (deployed bytecode, block 26433900, no privileged prank): current registry isGameRegistered(game 9827 bound to 0x1c68ECfb…) == true; an arbitrary EOA moves the superseded registry's anchorGame with a current type-8 game
 - eth_getLogs for MessageBlocked(bytes32) / MessageAllowed(bytes32) on 0x25ace71c… over L1 blocks 12,686,000..17,430,000 (475 calls of 10k blocks, positive control: 42 RelayedMessage logs in 14,000,000..14,009,999): 0 logs, 0 errors (evidence/W0/l1cdm-messageblocked-scan-12686000-17430000.json)
 
 ## 4. Same selector / same storage type, different meaning (priority list)
@@ -921,7 +925,7 @@ All `file:line` references are relative to `packages/contracts-bedrock/` at the 
 - every game clone (anchor root, respected type, paused, isGameFinalized, isGameProper, setAnchorState)
 
 **UNREVIEWED_TRANSITIVE_PATHS**
-- since v7.0.0 a factory game created after the current registry's retirementTimestamp but bound to ANOTHER registry is "registered" again — see PRIM-W0-01
+- since v7.0.0 a factory game created after the current registry's retirementTimestamp but bound to ANOTHER registry is "registered" again — PRIM-W0-01; W0 closed it historically for OP/Ink/Unichain/Soneium (no such implementation was ever live), it stays a trap for future registry replacements
 - legacy registries are live mirrors of current portal getters: legacy games closing through them use today's retirement/blacklist/delay
 
 ### DisputeGameFactory
@@ -970,7 +974,7 @@ All `file:line` references are relative to `packages/contracts-bedrock/` at the 
 - OptimismPortal2.proveWithdrawalTransaction (gameAtIndex)
 
 **UNREVIEWED_TRANSITIVE_PATHS**
-- gameImpls/gameArgs entries for game types not managed by the OPCM on any chain when the factory crossed v5 -> v6 (argument layout shift)
+- gameImpls/gameArgs entries registered under the v5.0.0 clone layout and used under v6.0.0+: none on the four chains (first ImplementationArgsSet is the FDG 2.2.0 registration); open only for other OP Stack chains
 - ImplementationSet history per chain: which implementation (hence which registry) each type pointed at after each registry replacement
 
 ### DelayedWETH

@@ -395,7 +395,93 @@
      ]
     }
    ]
+  },
+  {
+   "name": "OperatorFeeVault",
+   "address": "0x420000000000000000000000000000000000001B",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x420000000000000000000000000000000000001B",
+   "first_code_block": 105235063,
+   "history": [
+    {
+     "block": 105235063,
+     "timestamp": 1686068903,
+     "utc": "2023-06-06 16:28:23",
+     "slot_value": "0x0000000000000000000000000000000000000000000000000000000000000000",
+     "implementation": "0x0000000000000000000000000000000000000000",
+     "version": null,
+     "txs_with_logs_from_target": []
+    },
+    {
+     "block": 135603812,
+     "timestamp": 1746806401,
+     "utc": "2025-05-09 16:00:01",
+     "slot_value": "0x0000000000000000000000004fa2be8cd41504037f1838bce3bcc93bc68ff537",
+     "implementation": "0x4fa2be8cd41504037f1838bce3bcc93bc68ff537",
+     "version": "1.0.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xf162acc8ebbaf9237755736b62331a4817fe27bbbe3712f473ecfa8fee499f7c",
+       "from": "0x0000000000000000000000000000000000000000",
+       "to": "0x420000000000000000000000000000000000001b",
+       "selector": "0x3659cfe6"
+      }
+     ]
+    },
+    {
+     "block": 153963812,
+     "timestamp": 1783526401,
+     "utc": "2026-07-08 16:00:01",
+     "slot_value": "0x000000000000000000000000eddf416c7159387cc6df3015700f79cfb8911373",
+     "implementation": "0xeddf416c7159387cc6df3015700f79cfb8911373",
+     "version": "1.1.1",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xd2e9eb2ba77098610e7dda134e70f741f7456f4ec49912d667860c40988dfd8e",
+       "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+       "to": "0x4200000000000000000000000000000000000018",
+       "selector": "0x7c36f37e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "OptimismMintableERC20Factory",
+   "address": "0x4200000000000000000000000000000000000012",
+   "slot": "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+   "kind": "eip1967",
+   "version_read_from": "0x4200000000000000000000000000000000000012",
+   "first_code_block": 105235063,
+   "history": [
+    {
+     "block": 105235063,
+     "timestamp": 1686068903,
+     "utc": "2023-06-06 16:28:23",
+     "slot_value": "0x000000000000000000000000c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d30012",
+     "implementation": "0xc0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d3c0d30012",
+     "version": "1.1.0",
+     "txs_with_logs_from_target": []
+    },
+    {
+     "block": 153963812,
+     "timestamp": 1783526401,
+     "utc": "2026-07-08 16:00:01",
+     "slot_value": "0x000000000000000000000000af87f2fd347acb94656f9f715b4f2409b98e75b9",
+     "implementation": "0xaf87f2fd347acb94656f9f715b4f2409b98e75b9",
+     "version": "1.11.0",
+     "txs_with_logs_from_target": [
+      {
+       "hash": "0xd2e9eb2ba77098610e7dda134e70f741f7456f4ec49912d667860c40988dfd8e",
+       "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+       "to": "0x4200000000000000000000000000000000000018",
+       "selector": "0x7c36f37e"
+      }
+     ]
+    }
+   ]
   }
  ],
- "rpc_calls": 2546
+ "rpc_calls": 3166
 }

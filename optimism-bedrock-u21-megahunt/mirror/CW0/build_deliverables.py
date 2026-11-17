@@ -97,10 +97,10 @@ FAMILY_FACTS = {
         "edge": "create a proof under an earlier registry/game-validity meaning; consume or delete it after registry, retirement, root-format, or cleanup semantics change",
     },
     "messenger-replay": {
-        "ancestor": "first: v1.0.0:contracts/universal/CrossDomainMessenger.sol:303-413 (v0/v1 hash, replay, reentrancy and success/failure mappings); current form: v9.0.0:src/universal/CrossDomainMessenger.sol:212-302 (split local/remote gas budgets)",
-        "consumer": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302 and v9.0.0:src/L1/OptimismPortal2.sol:620-653",
+        "ancestor": "first: v1.0.0:contracts/universal/CrossDomainMessenger.sol:303-413 (v0/v1 hash, replay, reentrancy and success/failure mappings); current form: v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 (split local/remote gas budgets)",
+        "consumer": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310 and v9.0.0:src/L1/OptimismPortal2.sol:620-653",
         "state": "successfulMessages/failedMessages keyed by versioned message hash, xDomainMsgSender sentinel, and a proven messenger withdrawal",
-        "branches": ["v1.0.0 v0/v1 replay — contracts/universal/CrossDomainMessenger.sol:303-413", "v1.2.0 paused relay — src/universal/CrossDomainMessenger.sol:219-330", "v3.0.0 EIP-7623 baseGas — src/universal/CrossDomainMessenger.sol:354-390", "v9.0.0 local/remote reserve split and portal L1CDM revert — src/universal/CrossDomainMessenger.sol:212-373; src/L1/OptimismPortal2.sol:639-653"],
+        "branches": ["v1.0.0 v0/v1 replay — contracts/universal/CrossDomainMessenger.sol:303-413", "v1.2.0 paused relay — src/universal/CrossDomainMessenger.sol:211-314", "v3.0.0 EIP-7623 baseGas — src/universal/CrossDomainMessenger.sol:357-396", "v9.0.0 local/remote reserve split and portal L1CDM revert — src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466; src/L1/OptimismPortal2.sol:639-653"],
         "edge": "create a legacy hash, failedMessages entry, or old-budget withdrawal before U21; consume it through the current replay and portal atomicity branches",
     },
     "pause": {
@@ -147,9 +147,9 @@ FAMILY_FACTS = {
     },
     "gas-budget": {
         "ancestor": "first: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159,303-413; current form: v9.0.0:src/libraries/SafeCall.sol:7-9,103-171 and src/L1/L1CrossDomainMessenger.sol:43-74,117-153",
-        "consumer": "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+        "consumer": "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 and src/libraries/SafeCall.sol:103-171",
         "state": "persisted withdrawal/message gasLimit encoded under an older remote baseGas schedule",
-        "branches": ["v1.0.0 EIP-150 reserve — contracts/libraries/SafeCall.sol:91-159", "v3.0.0 calldata-floor baseGas — src/universal/CrossDomainMessenger.sol:354-390", "v9.0.0 local/remote budget split and codehash-zero reserve — src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"],
+        "branches": ["v1.0.0 EIP-150 reserve — contracts/libraries/SafeCall.sol:91-159", "v3.0.0 calldata-floor baseGas — src/universal/CrossDomainMessenger.sol:357-396", "v9.0.0 local/remote budget split and codehash-zero reserve — src/L1/L1CrossDomainMessenger.sol:43-153; src/libraries/SafeCall.sol:103-171"],
         "edge": "create a message using the old L2 budget; consume it on L1 after U21 or a future Amsterdam cost activation",
     },
     "migration": {
@@ -195,7 +195,7 @@ override(
 )
 override(
     "0102",
-    "first: v2.0.0:src/dispute/SuperFaultDisputeGame.sol:257-284,1083-1084 (fixed absolute prestate in a super game); current form: v9.0.0:src/dispute/SuperFaultDisputeGame.sol:251-278,823-874 (prestate and singleton addresses in immutable clone args)",
+    "first: v2.0.0:src/dispute/SuperFaultDisputeGame.sol:257-284,1083-1084 (fixed absolute prestate in a super game); immutable-arg form first: v6.0.0:src/dispute/SuperFaultDisputeGame.sol:793-823; current offset form first: v8.0.0:src/dispute/SuperFaultDisputeGame.sol:838-875, preserved at v9.0.0:src/dispute/SuperFaultDisputeGame.sol:823-874",
     "v9.0.0:src/dispute/SuperFaultDisputeGame.sol:251-340,823-887 and src/dispute/AnchorStateRegistry.sol:227-352",
     "already-created type-9 clone embedding the earlier absolute prestate and mutable singleton addresses",
 )
@@ -207,7 +207,7 @@ override(
 )
 override(
     "0104 0204",
-    "first: v2.0.0:src/dispute/SuperPermissionedDisputeGame.sol:42-52,89-108 (immutable proposer/challenger and tx.origin creation gate); current form: v9.0.0:src/dispute/SuperPermissionedDisputeGame.sol:52-78,133-135 (born-resolved immutable-arg game)",
+    "first: v2.0.0:src/dispute/SuperPermissionedDisputeGame.sol:42-52,89-108 (immutable proposer/challenger and tx.origin creation gate); current born-resolved form first: v8.0.0:src/dispute/SuperPermissionedDisputeGame.sol:48-73, preserved at v9.0.0:src/dispute/SuperPermissionedDisputeGame.sol:52-78,133-135",
     "v9.0.0:src/dispute/SuperPermissionedDisputeGame.sol:52-78,133-135 and src/dispute/AnchorStateRegistry.sol:331-370",
     "type-5 clone, snapshotted respect, proposer immutable arg and possible shared-anchor position",
 )
@@ -225,7 +225,7 @@ override(
 )
 override(
     "0203 0501",
-    "array/cell split first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; delete-without-prune current form first: v9.0.0:src/L1/OptimismPortal2.sol:711-728",
+    "array/cell split first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,315-328; delete-without-prune current form first: v9.0.0:src/L1/OptimismPortal2.sol:711-728",
     "v9.0.0:src/L1/OptimismPortal2.sol:671-728",
     "one per-submitter proof cell, an append-only submitter array entry and the hash-global finalized bit",
 )
@@ -249,8 +249,8 @@ override(
 )
 override(
     "0304",
-    "components first coexist at v1.4.0:src/L1/OptimismPortal2.sol:339-387 and src/universal/CrossDomainMessenger.sol:219-330; current nested-replay outcome: v9.0.0:src/universal/CrossDomainMessenger.sol:212-302 with src/L1/OptimismPortal2.sol:620-653",
-    "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302 and src/L1/OptimismPortal2.sol:620-653",
+    "components first coexist at v1.4.0:src/L1/OptimismPortal2.sol:339-387 and src/universal/CrossDomainMessenger.sol:207-310; current nested-replay outcome: v9.0.0:src/universal/CrossDomainMessenger.sol:209-310 with src/L1/OptimismPortal2.sol:620-653",
+    "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310 and src/L1/OptimismPortal2.sol:620-653",
     "a proven messenger withdrawal, outer failedMessages replay context and ETH parked in L1CrossDomainMessenger",
 )
 override(
@@ -275,7 +275,7 @@ override(
 override(
     "0404 0801 0804 1001 1002 1103 1201 2405 3006 3202",
     "first reserve model: v1.0.0:contracts/libraries/SafeCall.sol:91-159 and contracts/universal/CrossDomainMessenger.sol:123-159; current split/reserve form: v9.0.0:src/L1/L1CrossDomainMessenger.sol:43-74,117-153 and src/libraries/SafeCall.sol:7-9,103-171",
-    "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 and src/libraries/SafeCall.sol:103-171",
+    "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 and src/libraries/SafeCall.sol:103-171",
     "persisted message/withdrawal gasLimit encoded under an earlier remote budget and target code-presence state",
 )
 override(
@@ -286,7 +286,7 @@ override(
 )
 override(
     "0406 0502",
-    "per-submitter cell/list first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; current deletion and hash-global finalization: v9.0.0:src/L1/OptimismPortal2.sol:577-728",
+    "per-submitter cell/list first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,315-328; current deletion and hash-global finalization: v9.0.0:src/L1/OptimismPortal2.sol:577-728",
     "v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
     "per-submitter proof cells, duplicate/stale proofSubmitters entries and one finalizedWithdrawals bit",
 )
@@ -329,8 +329,8 @@ override(
 )
 override(
     "0805",
-    "legacy hash objects first: v1.0.0:contracts/universal/CrossDomainMessenger.sol:303-413; unchanged mapping consumers with U21 budgets: v9.0.0:src/universal/CrossDomainMessenger.sol:212-302",
-    "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302 and src/L1/OptimismPortal2.sol:577-666",
+    "legacy hash objects first: v1.0.0:contracts/universal/CrossDomainMessenger.sol:303-413; unchanged mapping consumers with U21 budgets: v9.0.0:src/universal/CrossDomainMessenger.sol:209-310",
+    "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310 and src/L1/OptimismPortal2.sol:577-666",
     "live version-0/old-budget withdrawal, legacy/canonical message hashes and persistent messenger mappings",
 )
 override(
@@ -386,19 +386,19 @@ override(
 )
 override(
     "2403",
-    "hash-global finalization first: v1.0.0:contracts/L1/OptimismPortal.sol:72,383-409; per-submitter proof cells first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; current form: v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
+    "hash-global finalization first: v1.0.0:contracts/L1/OptimismPortal.sol:72,383-409; per-submitter proof cells first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,315-328; current form: v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
     "v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
     "multiple submitter proof cells converging on finalizedWithdrawals[withdrawalHash]",
 )
 override(
     "2406 2504",
-    "current proof storage form first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; v8-to-v9 consumer remains at v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
+    "current proof storage form first: v1.4.0:src/L1/OptimismPortal2.sol:83-95,315-328; v8-to-v9 consumer remains at v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-728",
     "v9.0.0:src/L1/OptimismPortal2.sol:577-728 and src/universal/CrossDomainMessenger.sol:212-302",
     "pre-U21 provenWithdrawal cells, submitter list, finalized bit and messenger replay mappings",
 )
 override(
     "2503",
-    "per-submitter isolation first/current storage shape: v1.4.0:src/L1/OptimismPortal2.sol:83-95,423-430; current consumer: v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-705",
+    "per-submitter isolation first/current storage shape: v1.4.0:src/L1/OptimismPortal2.sol:83-95,315-328; current consumer: v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-705",
     "v9.0.0:src/L1/OptimismPortal2.sol:390-492,577-705",
     "two disjoint provenWithdrawals[hash][submitter] cells and one hash-global finalization bit",
 )
@@ -679,7 +679,8 @@ def build_lineage() -> list[dict]:
           "deposit/donate: v1.0.0:contracts/L1/OptimismPortal.sol:196-215,434-490; migrations: v4.0.0:src/L1/OptimismPortal2.sol:374-429",
           "Deposits escrow msg.value in Portal and emit an opaque L2 mint/call-value transaction; donate accepts unaccounted ETH.",
           "Deposit value is exactly escrowed once; migration cannot strand the active withdrawal backing.",
-          ["v1.6.0:src/L1/OptimismPortal2.sol:362-440,504-573 — custom-gas-token mode separates native balance accounting.",
+          ["v1.5.0:src/L1/OptimismPortal.sol:165-215,232-585 — the legacy Portal first adds custom-gas-token balance, prove/finalize and split mint/value deposit branches.",
+           "v1.6.0:src/L1/OptimismPortal2.sol:362-440,504-573 — custom-gas-token mode separates native balance accounting.",
            "v4.0.0:src/L1/OptimismPortal2.sol:374-429,740-788 — deposits lock ETH in ETHLockbox; portal liquidity and super-root migrations added.",
            "v4.1.0:src/L1/OptimismPortal2.sol:222-260,446-514,566-616 — lockbox use becomes feature-gated.",
            "v7.0.0:src/L1/OptimismPortal2.sol:503-537 — shared-dispute-game migration repoints lockbox and ASR.",
@@ -711,10 +712,11 @@ def build_lineage() -> list[dict]:
           "v1.0.0:contracts/universal/CrossDomainMessenger.sol:123-193,303-413",
           "Accept v0 legacy and v1 canonical hashes; initial relay authenticates other messenger, replay requires failedMessages; sentinel blocks reentrancy; every nonreverting call writes success or failure.",
           "One economic message cannot succeed twice, and failed messages remain permissionlessly retryable.",
-          ["v1.2.0:src/universal/CrossDomainMessenger.sol:219-330 — relay becomes pause-aware and asserts success mapping consistency.",
+          ["v1.2.0:src/universal/CrossDomainMessenger.sol:211-314 — relay becomes pause-aware and asserts success mapping consistency.",
            "v1.3.0:src/universal/CrossDomainMessenger.sol:80-110 — otherMessenger changes immutable→storage without changing hash.",
-           "v3.0.0:src/universal/CrossDomainMessenger.sol:354-390 — baseGas accounts for EIP-7623 calldata floor.",
-           "v9.0.0:src/universal/CrossDomainMessenger.sol:212-302,334-373 — local reserve/check split from advertised remote budget."],
+           "v1.5.0:src/universal/CrossDomainMessenger.sol:176-195,346-371 — custom-gas-token mode forbids value-message creation and changes base-gas support; v2.0.0:src/universal/CrossDomainMessenger.sol:177-195 removes that send-time branch.",
+           "v3.0.0:src/universal/CrossDomainMessenger.sol:357-396 — baseGas accounts for EIP-7623 calldata floor.",
+           "v9.0.0:src/universal/CrossDomainMessenger.sol:209-310,339-420,461-466 — local reserve/check split from advertised remote budget."],
           ["Initial/replay branch precedes unsafe-target and success checks; gas/reentrant failure is recorded before target call; target call then selects success vs failed mapping."],
           ["Low local gas or reentrant sentinel returns after marking failed, rather than reverting; current Portal wraps a failed L1CDM low-level call with a withdrawal-level revert."],
           ["v0 uses legacy hash; v1+ canonical hash includes value/minGas/nonce; replay identity remains canonical message hash."],
@@ -757,14 +759,15 @@ def build_lineage() -> list[dict]:
           "v1.0.0:contracts/universal/StandardBridge.sol:294-348",
           "Only the counterpart bridge may finalize; ETH requires exact msg.value and successful recipient call; ERC20 mints native token or decrements escrow then transfers.",
           "Exactly one messenger-authenticated finalize releases/mints exactly the encoded amount.",
-          ["v1.2.0:src/universal/StandardBridge.sol:250-340 — both finalize paths become pause-aware.",
+          ["v1.2.0:src/universal/StandardBridge.sol:139-141,227-299 — both finalize paths become pause-aware.",
+           "v1.5.0:src/universal/StandardBridge.sol:244-266 — ETH finalization rejects custom-gas-token mode; v2.0.0:src/universal/StandardBridge.sol:239-260 removes that extra rejection.",
            "v2.0.0:src/universal/StandardBridge.sol:230-310 — naming/interface refactor; custody invariant unchanged.",
            "v9.0.0:src/universal/StandardBridge.sol:239-299 — current exact-value and escrow/mint split."],
           ["ETH external call follows messenger authentication, pause, value and unsafe recipient checks; ERC20 escrow decrement precedes transfer."],
           ["ETH recipient failure reverts bridge call; messenger records failure/replay rather than partial release."],
           ["Native-vs-remote token pair selects mint vs escrow branch."],
           ["onlyOtherBridge resolves xDomainMessageSender through messenger: v9.0.0:src/universal/StandardBridge.sol:111-117."],
-          ["v1.2 virtual pause; current L1 bridge ultimately consumes ETHLockbox-key pause through SystemConfig."],
+          ["v1.2 virtual pause; current L1 bridge reads SystemConfig.paused at v9.0.0:src/L1/L1StandardBridge.sol:122-124, which reaches the ETHLockbox key via src/L1/SystemConfig.sol:574-576."],
           ["Legacy v0 bridge messages, escrowed ERC20 balances, failedMessages."], [],
           ["L1/L2 CrossDomainMessenger and token contracts."],
           ["Legacy hash-domain change describing the same bridge release (C5 reopen); L3 replay target composition."]),
@@ -776,6 +779,8 @@ def build_lineage() -> list[dict]:
           ["v1.1.0:src/L1/SystemConfig.sol:30-73,155-191 — Addresses struct moves dependencies into fixed unstructured slots and adds startBlock/batchInbox.",
            "v1.2.0:src/L1/SystemConfig.sol:109-150 — maintenance branch temporarily retains lean initializer shape.",
            "v1.3.0:src/L1/SystemConfig.sol:150-210 — structured address scheme restored with automatic startBlock.",
+           "v1.5.0:src/L1/SystemConfig.sol:168-305 — gas-paying-token state/getters enter initialization-era configuration.",
+           "v1.8.0:src/L1/SystemConfig.sol:192-230,383-438 — initializer uses Ecotone basefee/blob scalars and EIP-1559 parameters are added.",
            "v4.0.0:src/L1/SystemConfig.sol:133-200 — l2ChainId and SuperchainConfig added.",
            "v4.1.0:src/L1/SystemConfig.sol:139-226 — features mapping enters initializer state.",
            "v9.0.0:src/L1/SystemConfig.sol:49-99,203-248 — Addresses includes DelayedWETH/OPCM; no batch-inbox initializer argument."],
@@ -978,17 +983,19 @@ def build_lineage() -> list[dict]:
         "| v1.2.0 | Global SuperchainConfig pause; messenger/bridge pause; DGF bonds/UUID form | `v1.2.0:src/L1/SuperchainConfig.sol:19-81`; `src/L1/L1CrossDomainMessenger.sol:63-64` |",
         "| v1.3.0 | Structured SystemConfig restored; messenger otherMessenger becomes storage | `v1.3.0:src/L1/SystemConfig.sol:150-210`; `src/universal/CrossDomainMessenger.sol:80-110` |",
         "| v1.4.0 | Portal2 per-submitter game proofs; ASR per-type anchors; DelayedWETH | `v1.4.0:src/L1/OptimismPortal2.sol:51-522`; `src/dispute/AnchorStateRegistry.sol:20-87` |",
+        "| v1.5.0 | Legacy Portal/messenger/bridge gain custom-gas-token branches | `v1.5.0:src/L1/OptimismPortal.sol:165-215,232-585`; `src/universal/CrossDomainMessenger.sol:176-195` |",
         "| v1.6.0 | Custom-gas-token custody branch; guardian anchor override; safer recover call | `v1.6.0:src/L1/OptimismPortal2.sol:362-440,504-573`; `src/dispute/AnchorStateRegistry.sol:99-119` |",
+        "| v1.8.0 | Typed-interface migration and Ecotone fee/EIP-1559 initializer arguments | `v1.8.0:src/L1/SystemConfig.sol:192-230,383-438`; `src/L1/OptimismPortal2.sol:208-240` |",
         "| v2.0.0 | Snapshot-respect games, single anchorGame, full ASR predicates; super games/type-5 | `v2.0.0:src/dispute/AnchorStateRegistry.sol:39-262`; `src/dispute/SuperPermissionedDisputeGame.sol:89-108` |",
         "| v2.1/v2.2 | No indexed target semantic delta | `SOURCE-FUNCTION-INDEX.json` |",
-        "| v3.0.0 | EIP-7623-aware messenger baseGas | `v3.0.0:src/universal/CrossDomainMessenger.sol:354-390` |",
+        "| v3.0.0 | EIP-7623-aware messenger baseGas | `v3.0.0:src/universal/CrossDomainMessenger.sol:357-396` |",
         "| v3.0.1 | No indexed target semantic delta | `SOURCE-FUNCTION-INDEX.json` |",
         "| v4.0.0 | ETHLockbox custody; scoped expiring pauses; ASR owns invalidation; super-root Portal | `v4.0.0:src/L1/ETHLockbox.sol:67-232`; `src/dispute/AnchorStateRegistry.sol:34-340` |",
         "| v4.1.0 | Output-root/interoperability Portal split; runtime features/pause-key selection | `v4.1.0:src/L1/SystemConfig.sol:139,503-534` |",
         "| v5.0.0 | DGF gameArgs becomes persistent future-clone configuration | `v5.0.0:src/dispute/DisputeGameFactory.sol:70-190,278-292` |",
         "| v6.0.0 | ASR retirement preserved across reinitialization; dual clone-arg layout | `v6.0.0:src/dispute/AnchorStateRegistry.sol:107-115`; `src/dispute/DisputeGameFactory.sol:140-220` |",
         "| v7.0.0 | Unified super-game proving, shared-game migration, deterministic DGF clones, OPCM V2 | `v7.0.0:src/L1/OptimismPortal2.sol:368-537`; `src/L1/opcm/OPContractsManagerV2.sol:229-290` |",
-        "| v8.0.0 | Shared migration validation hardening | `v8.0.0:src/L1/OptimismPortal2.sol:510-554` |",
+        "| v8.0.0 | Shared migration validation hardening; type-5 becomes a born-resolved proposer-gated game | `v8.0.0:src/L1/OptimismPortal2.sol:510-554`; `src/dispute/SuperPermissionedDisputeGame.sol:48-73` |",
         "| v9.0.0 | Lockbox-sourced pause/guardian, delete proof, split gas budgets, atomic failed-L1CDM withdrawal | `v9.0.0:src/L1/OptimismPortal2.sol:273-330,577-728`; `src/L1/L1CrossDomainMessenger.sol:43-153` |",
         "",
         "## Per-function/field records",

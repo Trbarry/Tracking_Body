@@ -12,3 +12,29 @@ headers 4500/11561
 headers 5000/11561
 headers 5500/11561
 headers 6000/11561
+headers 6500/11561
+headers 7000/11561
+headers 7500/11561
+headers 8000/11561
+headers 8500/11561
+headers 9000/11561
+headers 9500/11561
+headers 10000/11561
+headers 10500/11561
+headers 11000/11561
+headers 11500/11561
+
+(type, status, claimValid, headerMatch) -> count
+  (0, 'DEFENDER_WINS', True, True) 8029
+  (8, 'DEFENDER_WINS', True, True) 2168
+  (9, 'DEFENDER_WINS', True, True) 1115
+  (9, 'IN_PROGRESS', False, True) 85
+  (9, 'DEFENDER_WINS', False, True) 84
+  (0, 'CHALLENGER_WINS', False, 'NO_SUCH_L2_BLOCK') 48
+  (8, 'CHALLENGER_WINS', False, 'NO_SUCH_L2_BLOCK') 16
+  (9, 'CHALLENGER_WINS', False, False) 8
+  (8, 'CHALLENGER_WINS', False, False) 6
+  (9, 'CHALLENGER_WINS', False, 'NO_SUCH_L2_BLOCK') 2
+
+ANOMALIES (non-matching root that is claim-valid / not CHALLENGER_WINS, or matching root that lost): 0
+EXIT 0

@@ -174,7 +174,7 @@ Worker W0. Source: the 180 files in `/home/user/Tracking_Body/optimism-u21-novel
 
 **State dependence:** CURRENT-STATE-ONLY (0704, 2703, 2704, 2706); rest INVARIANT
 
-**What it does not cover / reopen edge:** "Today's factory args point at the same registry" and "sampled roots match" are reads of the present OP Mainnet state. W0 shows why history matters here: the registry-binding check was removed at v7.0.0 and the OP factory holds games of three registries (PRIM-W0-01); Ink/Soneium/Unichain were never censused; ~10.2k official roots were not recomputed. Closures C11, C12, C13.
+**What it does not cover / reopen edge:** "Today's factory args point at the same registry" and "sampled roots match" are reads of the present OP Mainnet state. History matters here: the registry-binding check was removed at v7.0.0 and every factory holds games of three registries (PRIM-W0-01). W0 closed that half for OP/Ink/Unichain/Soneium (implementation history: no implementation bound to a superseded registry was live after the current registry's retirement). Still open: game census of Ink/Soneium/Unichain and recomputation of the ~10.2k official claim-valid roots per implementation generation (PRIMITIVES A-001, A-002). Closures C11, C12, C13.
 
 ## D14 — Pre-positioning against the planned migrate (CREATE2 squatting, pre-registered games, surviving proofs, ETH donations, non-atomic or permissionless migration, missing code-length check)
 

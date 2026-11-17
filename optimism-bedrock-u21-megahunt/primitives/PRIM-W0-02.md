@@ -13,8 +13,10 @@ Current consumer: every FaultDisputeGame 1.4.1 clone created between the U13 and
 Releases crossed: v2.0.0 (object created) -> v4.0.0 (portal getters re-pointed; new registry proxy
   "AnchorStateRegistry-U16", src/L1/OPContractsManager.sol:671-689) -> v9.0.0 (portal getters unchanged in shape,
   src/L1/OptimismPortal2.sol:306-359).
-Chains affected: OP Mainnet verified. Any chain that ran a v2.x/v3.x registry and then took U16/U16a has the same
-  shape (not read for Ink / Soneium / Unichain).
+Chains affected: OP Mainnet verified by reads and fork test. Ink (0x2fc99fd16D8D3F6F66d164aA84E244c567E58A3d),
+  Unichain (0xD5D0e176be44E61eaB3Cf1FA8153758dF603376f) and Soneium (0x190B6ecEE5A2ddF39669288B9B8daEa4641ae8b1) have a
+  second-generation registry bound to the same code generation (addresses from ImplementationSet history); their
+  predicates were not read.
 Source contracts + functions: AnchorStateRegistry 2.2.2 (proxy 0x1c68ECfbf9C8B1E6C0677965b3B9Ecf9A104305b,
   impl 0x7b465370…): isGameRegistered, isGameRetired, isGameBlacklisted, isGameProper, isGameFinalized,
   isGameClaimValid, setAnchorState, getAnchorRoot, anchors; OptimismPortal2 6.1.0 getters respectedGameType,
@@ -56,11 +58,13 @@ Current production evidence (cast, fork of L1 block 26433900):
 Reason it may be benign: no implementation bound to an old registry is registered today (gameImpls only for types
   5 and 9, both carrying the current registry in gameArgs); nothing in the withdrawal path reads an old registry;
   the bond effect is bond-only (carved out of Critical/High).
-Exact falsification experiment: (1) fork test: prank an arbitrary EOA, call oldRegistry.setAnchorState(game 20094),
-  assert `anchorGame` changed (state-changing confirmation of the eth_call); (2) list pre-U16 games with non-zero
-  WETH credit, run closeGame + claimCredit and record REFUND vs NORMAL payouts; (3) grep every historical
-  ImplementationSet for an implementation whose anchorStateRegistry() is 0x1c68ECfb… set after block 22,990,599
-  (evidence/W0/dgf-implementation-set-logs-*.json).
+Exact falsification experiment:
+  (1) DONE — `test/W0/W0Lineage.t.sol::test_W0_02_oldRegistryAnchorMovableWithCurrentGame`: an arbitrary EOA calls
+      oldRegistry.setAnchorState(game 20094); `anchorGame` moves from 0x9C9ac0A3… (L2 block 138585637) to the current
+      game (L2 block 157333888); the current registry is untouched (evidence/W0/W0Lineage-forge-output.txt).
+  (2) OPEN — list pre-U16 games with non-zero WETH credit, run closeGame + claimCredit and record REFUND vs NORMAL.
+  (3) DONE — no implementation bound to 0x1c68ECfb… (or to a superseded registry on Ink / Unichain / Soneium) was
+      set or left active after the U16 switch (evidence/W0/dgf-implementation-registry-binding.json).
 Confidence: high for the facts (direct reads); impact none found.
 Audit coverage:
 Nearest known finding:
