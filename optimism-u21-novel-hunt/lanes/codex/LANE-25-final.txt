@@ -1,0 +1,28 @@
+Completed lane 25. No bounty-grade candidate survived; best rejected idea scored 0.
+
+Files: [full report](/home/user/Tracking_Body/optimism-u21-novel-hunt/lanes/LANE-25-report.md), [14-test fork harness](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-25/test/ProofLifecycle.t.sol), [chain reads](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-25/artifacts/CHAIN_READS.md), [source matrix](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-25/artifacts/SOURCE_MATRIX.md), test transcript, six primitives, and `REJ-2501`–`REJ-2510`.
+
+Primitives:
+
+- PRIM-2501 — deletion requires permanent challenger-wins or blacklist invalidation.
+- PRIM-2502 — deletion leaves stale submitter-array entries; re-proving appends duplicates.
+- PRIM-2503 — per-submitter mapping and explicit finalization selection isolate malicious proofs.
+- PRIM-2504 — portal storage continuity preserves v8 proofs across U21.
+- PRIM-2505 — planned migration invalidates proofs through fresh DGF registration plus retirement.
+- PRIM-2506 — a hypothetical no-code/reverting stored game blocks cleanup even when blacklisted, but is unreachable permissionlessly.
+
+Strongest negatives:
+
+- All 14 fork tests pass.
+- No deletable-now game state can later become valid.
+- A real v8 proof, `0x6d7c…74af4`, remained unfinalized at N and finalized successfully under v9 at block 26432294.
+- Bad proofs cannot overwrite, delay, or reset an honest submitter’s proof.
+- Deleting an already-finalized proof leaves replay protection intact.
+- Retirement/migration leaves stale metadata but does not block re-proof.
+- Types 0/1 being unset and Soneium’s bondless type 5 create no deletion path.
+
+Follow-ups worth attention:
+
+1. Audit relayers/SDKs for naïve “first array entry” selection.
+2. Scan sibling-chain proof history for anomalous game implementations whose `status()` can revert.
+3. Validate indexer behavior during migration’s mass re-proof and stale-entry transition.

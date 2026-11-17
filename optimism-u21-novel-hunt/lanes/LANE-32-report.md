@@ -39,6 +39,7 @@ The table includes every added/removed/changed `error`, `event`, and `function` 
 | `L1/opcm/IOPContractsManagerMigrator` | errors `ChainAlreadyMigrated`, `SuperchainConfigNeedsUpgrade`, `InvalidInitBond`, `InvalidAbsolutePrestate`, `InvalidZKDisputeGameConfig`, `InvalidGameType`, `DisputeGameNotEnabled`, `InvalidStartingAnchorRoot`, `SemverComp_InvalidSemverParts` | errors `InteropNotEnabled`, `NotSharedInteropSet`, `RespectedGameTypeNotRegistered`; function `setInteropDisputeGames(MigrateInput)` |
 | `L1/opcm/IOPContractsManagerUtils` | `isPermittedUpgradeSequence(ISystemConfig,address)`, `isPermittedMigrateSequence(ISystemConfig,address)` | `systemConfigFor(ISystemConfig,address)` |
 | `L1/opcm/IOPContractsManagerV2` | `isPermittedMigrateSequence(ISystemConfig)`; `upgradeSuperchain` data location memory→calldata (ABI-equivalent ~) | `setInteropDisputeGames(MigrateInput)` |
+| `L1/opcm/IOPContractsManagerMigrationValidator` | no added declaration in these categories; migration input/config structs expanded | no removed declaration in these categories |
 | `dispute/IAnchorStateRegistry` | `ethLockbox()` | `systemConfig()` |
 | `dispute/IDelayedWETH` | `ethLockbox()`; `initialize(IETHLockbox)` (~) | `systemConfig()`; `initialize(ISystemConfig)` (~) |
 | `vendor/ISP1Verifier` | `VERIFIER_HASH()` | none |
@@ -97,16 +98,20 @@ Each row explicitly covers the requested negative-space questions. “Sibling/al
 |---|---|---|---|---|
 | R20 | Removed `OPTIMISM_PORTAL_INTEROP` dev-feature gate from `migrate` (`v8:L1/opcm/OPContractsManagerMigrator.sol:113-119`) because v9 makes production migration an explicit release operation. | Standard `upgrade` cannot set INTEROP/shared contracts; the meaningful entry is `OPContractsManagerV2.migrate`, which is delegatecall-only. | Old check was first; replacement sequence/config checks all precede mutation. | Current dev bitmap no longer blocks migration. Authority remains the ProxyAdmin/OPCM execution context; not permissionless. |
 | R21 | Removed the separate `setInteropDisputeGames` dev-feature check and whole function (`v8:OPContractsManagerMigrator.sol:283-292`, `v8:OPContractsManagerV2.sol:303-311`). | v9 has no sibling for re-pointing an already-migrated set; only one-shot `migrate` remains. | Old check preceded mutation. | An upgrade is now required to re-point shared games. This narrows, rather than opens, a bypass. |
+| R21a | Removed `setInteropDisputeGames` nonempty-chain check (`v8:OPContractsManagerMigrator.sol:284-287`) with the function. | One-shot `migrate` retains its own `NoChains` check (`v9:130-133`). | Old check was first and guarded the chain-0 dereference. | There is no v9 existing-set re-point operation to call with an empty list. |
+| R21b | Removed `setInteropDisputeGames` ZK dev-feature gate (`v8:…:292-295`) with the function. | One-shot migration applies the ZK gate per supplied config (`v9:389-395`). | Old check preceded ASR/DGF mutation and applied to the whole ZK-transition operation. | Re-pointing now requires replacement code; no unchecked sibling remains. |
+| R21c | Removed `setInteropDisputeGames` generic super-type check (`v8:…:297-300`) with the function. | One-shot migration uses the narrower allowed starting types plus per-config super-game check (`v9:135-142,369-373`). | New checks are before deployment and validate exact ASR/config values. | Existing-set swaps are upgrade-only. |
+| R21d | Removed that function's call to the common owner/SC/chain-ID validator (`v8:…:302-305`) with the function. | One-shot `migrate` retains the same call (`v9:152-155`) and adds the already-migrated rejection. | Before all mutations in both versions; exact supplied chain list. | No v9 path performs the removed existing-set operation. |
 | R22 | Removed `setInteropDisputeGames` “all chains already share this DGF” check (`v8:OPContractsManagerMigrator.sol:310-320`) with that function. | One-shot v9 migration derives/deploys the shared DGF and validates all members instead. | Old check inspected each exact current factory before writes. | No replacement path for an existing set; upgrade-only. |
 | R23 | Removed post-swap “respected game registered” check (`v8:OPContractsManagerMigrator.sol:344-353`) with `setInteropDisputeGames`. | v9 `migrate` validates the starting type is present before deployment (`v9:339-357`) and registers every validated config. | New check is before mutations, stronger than the old post-write check for the supported path. | No existing-set sibling. Privileged upgrade needed for later game swaps. |
 | R24 | Added nonzero starting anchor root and `sequence < uint64.max` (`v9:OPContractsManagerMigrator.sol:144-150`) so the shared ASR is usable and can advance. | OPCMv2 deploy/upgrade has the analogous initial-deploy check; portal proof cannot repair a bad anchor. | Before proxy deployment; exact proposal passed to ASR initializer. | Calldata is snapshotted, not derived from current legacy anchors. A privileged caller can choose a stale but nonzero anchor; see composition C3, no permissionless exploit found. |
 | R25 | Added SuperchainConfig minimum-version check (`v9:OPContractsManagerMigrator.sol:157-162`). | `OPContractsManagerV2._apply` performs the same check on standard upgrade (`v9:817-820`). | Before deployment/mutation; all member chains were already required to name the same exact SC. | Reads current version; implementation can later upgrade. Prevents migration against older semantics. |
-| R26 | Added/commonized ProxyAdmin **owner** equality across member chains (`v9:OPContractsManagerMigrator.sol:291-298`). | Individual ProxyAdmins may differ; portal/lockbox admin checks use each actual chain admin. No separate member-add path. | Before deployment; compares every exact supplied SystemConfig's PA owner. | Current owners, not snapshotted. Governance could change ownership before execution, causing revert, not bypass. |
-| R27 | Added exact shared SuperchainConfig equality (`v9:OPContractsManagerMigrator.sol:300-303`). | Lockbox authorization independently checks a portal's SystemConfig→SC. | Before deployment and authorization; same object initializes shared lockbox. | Current pointers. A later privileged rebind could diverge; validator detects it. |
+| R26 | Existing ProxyAdmin **owner** equality is retained (`v8:364-366`; `v9:OPContractsManagerMigrator.sol:291-298`) and now feeds the production migration after the dev gate was removed. | Individual ProxyAdmins may differ; portal/lockbox admin checks use each actual chain admin. No separate member-add path. | Before deployment; compares every exact supplied SystemConfig's PA owner. | Current owners, not snapshotted. Governance could change ownership before execution, causing revert, not bypass. |
+| R27 | Existing exact shared SuperchainConfig equality is retained (`v8:368-371`; `v9:300-303`) while the shared lockbox's initializer now stores that SC directly. | Lockbox authorization independently checks a portal's SystemConfig→SC. | Before deployment and authorization; same object initializes shared lockbox. | Current pointers. A later privileged rebind could diverge; validator detects it. |
 | R28 | Added `INTEROP`-already-enabled rejection (`v9:OPContractsManagerMigrator.sol:305-311`) to prevent draining/re-clearing an existing shared set. | No `setInteropDisputeGames` sibling in v9; SystemConfig cannot clear INTEROP (R10). | Before all mutation; exact feature on every supplied chain. | Durable current marker. Direct portal migration also requires INTEROP but remains PA-owner-only; no re-migrate bypass. |
-| R29 | Added zero L2 chain-ID rejection (`v9:OPContractsManagerMigrator.sol:313-320`) because super-root proofs key per chain. | Standard upgrade preserves each SystemConfig's configured ID; no portal override. | Before deployment; exact IDs later encoded into games/portal proof selection. | Current values. Privileged SystemConfig upgrade is only bypass. |
-| R30 | Added duplicate L2 chain-ID rejection (`v9:OPContractsManagerMigrator.sol:321-322`). | No member alias/add path. | Before mutation; adjacent comparison is complete because R31 enforces sorting. | Current list and current IDs; reordered duplicates still fail. |
-| R31 | Added ascending-order rejection (`v9:OPContractsManagerMigrator.sol:323-325`) to make the adjacent duplicate test complete/deterministic. | No sibling unsorted ingestion. | Before mutation; validates exact calldata order used by the loop. | Calldata-only, unaffected by later config changes in the atomic tx. |
+| R29 | Existing zero L2 chain-ID rejection is retained (`v8:373-380`; `v9:313-320`) because super-root proofs key per chain. | Standard upgrade preserves each SystemConfig's configured ID; no portal override. | Before deployment; exact IDs later encoded into games/portal proof selection. | Current values. Privileged SystemConfig upgrade is only bypass. |
+| R30 | Existing duplicate L2 chain-ID rejection is retained (`v8:381-382`; `v9:321-322`). | No member alias/add path. | Before mutation; adjacent comparison is complete because R31 enforces sorting. | Current list and current IDs; reordered duplicates still fail. |
+| R31 | Existing ascending-order rejection is retained (`v8:383-384`; `v9:323-325`) to make the adjacent duplicate test complete/deterministic. | No sibling unsorted ingestion. | Before mutation; validates exact calldata order used by the loop. | Calldata-only, unaffected by later config changes in the atomic tx. |
 | R32 | Added starting respected type must appear in supplied configs (`v9:OPContractsManagerMigrator.sol:346-357`). | ASR cannot synthesize an implementation; DGF register loop is the only sibling. | Before proxy deployment; matches raw type later written to ASR and registered. | Calldata consistency, not current state. Upgrade cannot bypass without replacing code. |
 | R33 | Added “migration config must be a super game” (`v9:OPContractsManagerMigrator.sol:367-373`) because migration uses l2ChainId 0/shared roots. | OPCMv2 standard config still supports L1 output-root game types on non-migrated chains. | Before deployment; same exact config is later encoded. | Calldata-only. No alternative registration in `migrate`. |
 | R34 | Added “every supplied migration config enabled” (`v9:OPContractsManagerMigrator.sol:375-378`) because every entry is registered. | Standard OPCM accepts disabled fixed-list entries; migration's variable list intentionally does not. | Before deployment/registration; exact entry. | Calldata-only; no later bypass in the atomic call. |
@@ -221,6 +226,69 @@ The v9 diff substantially rewired/expanded this validator. The following is one 
 | Unichain | true / false | exact / exact | exact / exact | 9 / `0x19AF…` / 0.08 ETH | false |
 
 All four lockboxes name the shared SuperchainConfig; all four portals are authorized; portal/lockbox/ASR ProxyAdmin-owner relationships tested equal. The only handful of validator conditions a permissionless actor can later falsify are the two raw-balance assertions. Current anchor games can advance permissionlessly, but the validator compares the stored **starting** anchor proposal, so ordinary advancement does not falsify M42/M43.
+
+## Suspicious-row fork tests
+
+Harness: `/home/user/u21-work/codex-32/h`; copied artifacts: `mirror/lane-32/test/NegativeSpace.t.sol` and `StateDiff.t.sol`. The first suite passed 8/8; the boundary suite passed 1/1. Full names/results are in `mirror/lane-32/TEST_RESULTS.md`.
+
+| Test | Rows / bypass attempted | Real deployed outcome |
+|---|---|---|
+| `test_allFourChains_bindPauseAndGamesToExactLiveLockbox` | R01-R07, R16, V01-V10, V22-V25 | All four chains have exact SC/portal/lockbox/ASR/WETH/admin bindings; enabled respected type registered; permissionless type bond nonzero; not paused. |
+| `test_configurationValidatorsCannotBeViolatedPermissionlessly` | R08/R10, V08/V10/V20, M02-M29 | Unprivileged `setFeature`, `setRespectedGameType`, and `setInitBond` each revert with the expected access-control error. |
+| `test_deleteProvenWithdrawal_rejectsLiveNonInvalidatedHistoricalObject` | R14-R15, PRIM-3203 | Real nonzero proof, IN_PROGRESS game, no blacklist; permissionless deletion reverts `OptimismPortal_DisputeGameNotInvalidated`. |
+| `test_liveL1AndL2MessengerGasBudgetsExposeAsymmetricUpgrade` | R18-R19, PRIM-3202 | L1 v9 ABI exposes remote 40k/5k while source local relay uses 135k/15k; live L2 remains old 40k/5k/version. No failed-finalization persistence demonstrated. |
+| `test_lockboxAdministrativeSiblingsRemainProxyAdminOwnerOnly` | R05, R11, R48; lock/unlock/authorize siblings | `authorizePortal`, `authorizeLockbox`, `unlockETH`, and portal `migrateLiquidity` all revert from attacker context. |
+| `test_migrateToSharedDisputeGame_featureGateRunsBeforeAuthorization` | R28/R43/R45; direct portal alternate | With live INTEROP=false, direct portal migration reverts `OptimismPortal_NotUsingInterop` before state mutation. |
+| `test_siblingValuePaths_unauthorizedLockAndReceiveRevert_butDonateSucceeds` | R01/R11; `lockETH` vs `receiveLiquidity` vs `donateETH` | Unauthorized lock and receive revert; attacker-funded portal donation succeeds without changing lockbox. PRIM-3201 only. |
+| `test_validatorZeroBalanceCanBeInvalidatedAfterValidationByForceSend` | M30-M31 | Constructor `SELFDESTRUCT` raises portal balance without invoking it, proving validator raw-balance instability. No claim/custody state changes. |
+| `test_exactNMinus1ToNLinearStorageDiff` | Upgrade/initializer bypass R16/R48/R49 | 33 receipt-touched proxies compared; expected implementation/binding slots changed, admin slots did not, no unexplained selected-layout delta. |
+
+## External-call result handling audit
+
+- Portal target call: return value is intentionally retained for arbitrary withdrawals; failed value is returned to the exact current lockbox (`OptimismPortal2.sol:627-665`). For L2-messenger withdrawals v9 now reverts, and EVM atomicity restores all prior writes/calls (REJ-3201).
+- Messenger relay: `SafeCall.call` result gates `successfulMessages`; failure records `failedMessages` and remains replayable under existing relay rules (`universal/CrossDomainMessenger.sol:285-303`). No ignored success bit was added.
+- DelayedWETH recovery: raw call success is required (`dispute/DelayedWETH.sol:114-117`).
+- Lockbox transfers use `SafeCall.send`, and failure reverts before completion (`L1/ETHLockbox.sol:168-173,209-212`).
+- The removed `systemConfigFor` try/catch was the only changed path that swallowed a failed typed call; v9 removes the fallback and fails loud (R49).
+
+## Primitives
+
+### PRIM-3201 — validator zero balances are permissionlessly unstable
+
+MigrationValidator checks portal/retired-lockbox balances after migration, but `donateETH` and forced ETH can make those balances nonzero after a successful validation. Unauthorized custody functions still revert. This is deterministic against deployed bytecode but attacker-funded, produces no claim, and no operation trusts a persistent validator attestation.
+
+### PRIM-3202 — mixed-version gas-budget asymmetry
+
+L1 v9 distinguishes local 135k/15k reserve/buffer from remote 40k/5k public/baseGas values, while live L2 remains on the older constants. The asymmetry is real; current behavior is conservative/retryable. Amsterdam state-gas behavior is future-only and was not represented as fork-reproduced.
+
+### PRIM-3203 — historical proof/current registry coupling
+
+A proof snapshots a dispute game and timestamp, not its registry. Finalization and proof deletion consult the portal's current ASR. Authorized migration therefore changes the policy judging historical objects. The planned first migration's proof invalidation/re-proof is explicit design; a live valid proof could not be deleted.
+
+## Killed hypotheses
+
+| Rejection | Exact killing fact |
+|---|---|
+| REJ-3201 | New post-call messenger revert atomically rolls back `finalizedWithdrawals`, lockbox unlock, `l2Sender`, and target state. |
+| REJ-3202 | Live non-invalidated proof deletion reverts; status/blacklist condition precedes delete. |
+| REJ-3203 | `lockETH`, `receiveLiquidity`, `unlockETH`, and authorization/admin siblings all enforce exact deployed authorization. Donation is self-funded only. |
+| REJ-3204 | Config/type/bond/shared-owner validator invariants are role-controlled; attacker mutation calls revert. Only raw balances are permissionlessly unstable. |
+| REJ-3205 | Re-migration is blocked by irreversible INTEROP, sequence check, same-owner/SC checks, and zero/duplicate/sorted chain IDs before mutation. |
+| REJ-3206 | New SafeCall account gas is over-reservation under the active fork; messenger failure leaves withdrawal retryable. Amsterdam is not locally reproducible. |
+| REJ-3207 | ZK respected-child check uses the exact DGF parent before funds/deadline initialization; type 10 is absent on all four factories. |
+| REJ-3208 | Portal migration lacks a literal ASR `code.length` test, but typed pre-use plus INTEROP and ProxyAdmin-owner authority prevents an EOA from completing it; malicious interface contract is privileged misconfiguration. |
+
+No candidate file was created. Each possible composition loses the candidate score on direct eligible impact and/or privileged-only state transition; none survives its rejection file's killing fact.
+
+## Compositions deserving another lane
+
+1. **Planned OP+Unichain migration × temporal proof policy × legacy pause routing.** Track one real pre-migration proof/game across shared-ASR installation, old ASR/WETH rebinding, proof deletion, re-proof, and a local pause. PRIM-3203 supplies the temporal edge; the risk would require a divergence beyond intended one-time invalidation.
+2. **Future Amsterdam state gas × mixed L1/L2 budgets × portal retry.** Model EIP-8037 accurately when tooling supports it, especially value-bearing calls to a zero-code target created/destroyed within the transaction. A finding requires showing retry cannot recover, not merely estimation mismatch.
+3. **Governance-calldata freeze × permissionless anchor advance × migration starting anchor.** Migrator only checks supplied anchor nonzero/room, not monotonicity against every legacy chain's current anchor. Determine whether a valid but stale shared starting proposal can cause more than extra computation/re-proof when the planned two-chain migration executes.
+
+## Final assessment
+
+The v9 security direction is consistently toward mandatory lockbox binding, exact shared-object identity, irreversible migration markers, pre-mutation config validation, and retryable messenger failures. The meaningful negative spaces are temporal (current registry/pause judging historical games), validator-only (raw balances), and future-fork gas accounting. None currently yields permissionless theft, insolvency, consensus corruption, or permanent withdrawal blocking on the deployed four-chain configuration.
 
 
 

@@ -143,7 +143,11 @@ contract NegativeSpaceTest is Test {
 
             uint32 respected = registry.respectedGameType();
             assertTrue(factory.gameImpls(respected) != address(0));
-            if (respected != 5) assertGt(factory.initBonds(respected), 0);
+            if (respected == 5) {
+                assertEq(factory.initBonds(respected), 0);
+            } else {
+                assertGt(factory.initBonds(respected), 0);
+            }
         }
     }
 

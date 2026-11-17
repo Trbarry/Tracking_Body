@@ -28,6 +28,14 @@ All chain operations were passive reads. All state changes were in-process Forge
 
 Primary harness: `mirror/lane-25/test/ProofLifecycle.t.sol`. Result: 14/14 tests pass; transcript in `mirror/lane-25/artifacts/forge-proof-lifecycle.txt`.
 
+## v8 → v9 semantic delta for this lane
+
+- Portal: the deletion event/error/function are new (`v9 OptimismPortal2.sol:173-178,252-255,707-728`). The proof write, per-submitter key, unconditional array append, selected-submitter finalization, and `checkWithdrawal` validity path are semantically unchanged from v8. Other portal changes (lockbox pause resolution and messenger-failure retry) do not enter the delete predicate.
+- ASR: pause/guardian resolution moves from SystemConfig to ETHLockbox, stored in new packed bytes of slot 6 (`AnchorStateRegistry.sol:58-59,135-143`). Registration, properness, retirement, respect, finality, claim validity, and one-way blacklist logic are otherwise unchanged for this analysis.
+- DGF: the v8/v9 source diff is formatting only; deployed implementation is unchanged v1.6.1.
+- FaultDisputeGame: formatting-only diff in `challengeRootL2Block`; resolution/status/close semantics are unchanged. PermissionedDisputeGame and SuperFaultDisputeGame have no semantic diff. SuperPermissioned's diff is formatting only.
+- ZKDisputeGame: v9 records the creation-time respect bit before parent validation and requires a respected child to build on a respected parent (`zk/ZKDisputeGame.sol:342-365`); its one-shot terminal resolution is unchanged.
+
 ## Proof state machine
 
 For a withdrawal hash `H` and submitter `S`, the authoritative portal cell is:
@@ -90,6 +98,8 @@ Notably absent: `finalizedWithdrawals`, registered/proper/respected/retired/fina
 
 No terminal-to-terminal transition or reset exists.
 
+“Respected” is not re-evaluated against the ASR's current `respectedGameType`. Both proving and finalization call `isGameRespected`, which returns the game's stored `wasRespectedGameTypeWhenCreated` bit (`AnchorStateRegistry.sol:239-247`). Consequently, changing or unsetting a type later does not by itself invalidate an accepted proof, and an accepted proof cannot naturally transition to “not respected.” The planned migration invalidates via fresh-factory registration plus retirement, not via the respect bit.
+
 ### Permanence of blacklist
 
 `blacklistDisputeGame` is Guardian-only and writes `true`; there is no unblacklist function (`AnchorStateRegistry.sol:177-186`). A proxy upgrade could rewrite this fact, but that is privileged protocol replacement, not a permissionless production path.
@@ -119,6 +129,8 @@ The dangerous hypothetical is an address whose `status()` lies, changes later, r
 Both v8 and v9 fetch the address from `DisputeGameFactory.gameAtIndex` and require ASR properness and creation-time respect before storage (v8 portal `:396-412`; v9 portal `:411-427`). Properness starts with `isGameRegistered` (`AnchorStateRegistry.sol:286-300`), which reconstructs the game key and compares the factory's recorded address (`:227-236`). Factory creation clones a configured implementation, successfully initializes it, then records it in both mapping and array (`DisputeGameFactory.sol:142-225`). v7 has the same factory/properness provenance (`v7 OptimismPortal2.sol:390-397`).
 
 The configured game sources contain no selfdestruct or upgrade hook; existing clones retain their implementation even when the factory pointer for a type is later unset. A malicious implementation registration would require the factory owner and is operator/governance misconfiguration. A view-interface status call is static, so it cannot mutate portal state through reentrancy.
+
+Pre-fault-proof “legacy entries” do not weaken this provenance. Portal slot 52 is deliberately retained only as `spacer_52_0_32` for the old single-proof mapping (`OptimismPortal2.sol:64-67`). U21 deletion and current finalization read the newer nested mapping at slot 57 (`:94-95`). Thus raw legacy slot-52 data cannot be interpreted as a current `ProvenWithdrawal` or supply a non-factory game address to deletion. The v7 and v8 implementations already populated slot 57 only through the registered-factory path.
 
 Synthetic fork injection confirms the edge behavior: an unregistered in-progress entry is not deletable; if its fake status is challenger-wins it is deletable because provenance is not rechecked. A no-code entry reverts before a true blacklist is read. Neither state is reachable from an accepted historical proof.
 

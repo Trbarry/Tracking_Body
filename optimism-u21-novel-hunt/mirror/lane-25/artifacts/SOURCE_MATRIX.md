@@ -30,6 +30,8 @@ There is no finalized, registration, properness, retirement, respect, finality, 
 | already finalized + later blacklist | yes | fork test | `finalizedWithdrawals` remains true |
 | no-code stored address | call reverts | fork test, even when blacklisted | unreachable from honest history |
 
+At both proof and finalize time, “respected” means the game's creation-time bit: `AnchorStateRegistry.isGameRespected` simply returns `wasRespectedGameTypeWhenCreated` (`AnchorStateRegistry.sol:239-247`). It does not compare against the current respected type. This makes the value stable for every accepted proof.
+
 ## Why the permanent predicates are permanent
 
 - `GameStatus` is `{IN_PROGRESS, CHALLENGER_WINS, DEFENDER_WINS}` (`src/dispute/lib/Types.sol:20-27`).
@@ -44,6 +46,8 @@ There is no finalized, registration, properness, retirement, respect, finality, 
 Both v8 and v9 proof paths obtain the game from `DisputeGameFactory.gameAtIndex`, require `isGameProper`, and require `isGameRespected` before storing it (v8 `OptimismPortal2.sol:375-412,465-472`; v9 `:390-427,480-487`). `isGameProper` begins with factory registration (`AnchorStateRegistry.sol:286-300`). Factory games are deterministic immutable-implementation clones and are recorded only after successful initialization (`DisputeGameFactory.sol:142-225`). The relevant game implementations contain no `selfdestruct` or upgrade hook.
 
 Therefore a no-code, reverting-status, or arbitrary unregistered game can be injected in a test to map the boundary, but no permissionless path was found to create such a historical proof entry. A no-code entry would impede cleanup rather than delete a valid proof.
+
+The older pre-fault-proof mapping cannot inject a legacy address into this path: v9 keeps its former slot 52 only as `spacer_52_0_32` (`OptimismPortal2.sol:64-67`), while current proof reads/deletes use the nested mapping at slot 57 (`:94-95,711-725`). v7 and v8 already wrote slot 57 only after the factory/properness checks.
 
 ## Two proof structures
 

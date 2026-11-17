@@ -15,24 +15,13 @@ while IFS=$'\t' read -r chain name proxy proxy_admin slots_json; do
   response="$tmp_dir/response-$index.json"
   object="$tmp_dir/object-$index.json"
 
-  # jq has no integer-to-hex formatter, so create the batch input as decimal/hex TSV.
+  # Fetch a proof for all declared slots in one upstream request. This avoids making the
+  # archive fork resolve each empty slot as a separate upstream eth_getStorageAt call.
   jq -r '.[]' <<< "$slots_json" | while read -r slot; do
-    printf '%s\t0x%x\n' "$slot" "$slot"
-  done | jq -Rn --arg proxy "$proxy" '[inputs | split("\t") | {
-      jsonrpc: "2.0", id: (.[0] | tonumber), method: "eth_getStorageAt",
-      params: [$proxy, .[1], "latest"]
-    }]' > "$request"
-  curl -sS --retry 3 --retry-all-errors -H 'content-type: application/json' \
-    --data-binary @"$request" "$rpc" > "$response"
-  while read -r failed_slot; do
-    [[ -z "$failed_slot" ]] && continue
-    value=$(timeout 15 cast storage "$proxy" "$failed_slot" --rpc-url "$rpc")
-    jq --argjson id "$failed_slot" --arg value "$value" '
-      map(if .id == $id then {jsonrpc:"2.0", id:$id, result:$value} else . end)
-    ' "$response" > "$response.retry"
-    mv "$response.retry" "$response"
-  done < <(jq -r '.[] | select(.result == null) | .id' "$response")
-  jq -e 'all(.[]; .result != null)' "$response" >/dev/null
+    printf '"0x%064x"\n' "$slot"
+  done | jq -s . > "$request"
+  timeout 30 cast rpc --rpc-url "$rpc" eth_getProof "$proxy" "$(<"$request")" latest > "$response"
+  jq -e '.storageProof != null' "$response" >/dev/null
 
   if [[ "$name" == L1CrossDomainMessenger ]]; then
     implementation=$(cast call "$proxy_admin" 'getProxyImplementation(address)(address)' "$proxy" --rpc-url "$rpc")
@@ -46,9 +35,14 @@ while IFS=$'\t' read -r chain name proxy proxy_admin slots_json; do
   jq -n \
     --arg chain "$chain" --arg name "$name" --arg implementation "$implementation" \
     --arg version "$version" --arg balance "$balance" \
+    --argjson requestedSlots "$slots_json" \
     --slurpfile later "$response" --slurpfile postState "$post" '
       ($postState[0].chains[$chain].contracts[$name]) as $old |
-      ($later[0] | map({key:(.id|tostring), value:.result}) | from_entries) as $newSlots |
+      ($later[0].storageProof | to_entries | map({
+        key:($requestedSlots[.key]|tostring),
+        value:("0x" + (("0000000000000000000000000000000000000000000000000000000000000000"
+          + (.value.value|ltrimstr("0x")))[-64:]))
+      }) | from_entries) as $newSlots |
       {
         chain:$chain,
         contract:$name,

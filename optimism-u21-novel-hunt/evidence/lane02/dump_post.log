@@ -1,7 +1,3 @@
-Traceback (most recent call last):
-  File "/home/user/Tracking_Body/optimism-u21-novel-hunt/evidence/lane02/dump_state.py", line 166, in <module>
-    r = batch(calls)
-  File "/home/user/Tracking_Body/optimism-u21-novel-hunt/evidence/lane02/dump_state.py", line 37, in batch
-    if isinstance(v, dict): raise RuntimeError("rpc failed for %r: %r" % (calls[i], v))
-                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-RuntimeError: rpc failed for ('eth_getStorageAt', ['0x229047fed2591dbec1eF1118d64F7aF3dB9EB290', '0x657c3582c29b3176614e3a33ddd1ec48352696a04e92b3c0566d72010fa8863c', 'latest']): {'error': {'code': -32603, 'message': 'failed to get storage for 0x229047fed2591dbec1eF1118d64F7aF3dB9EB290 at 45903056060786298880382366609119962859969088019371103285682342985340239251004: Max retries exceeded HTTP error 429 with body: {"id":0,"jsonrpc":"2.0","error":{"code":429,"message":"Too many requests"}}'}}
+op-mainnet-10 SystemConfig ok 13
+op-mainnet-10 OptimismPortal2 ok 17
+op-mainnet-10 ETHLockbox ok 4

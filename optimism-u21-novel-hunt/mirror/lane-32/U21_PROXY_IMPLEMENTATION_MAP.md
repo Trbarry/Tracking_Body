@@ -12,9 +12,9 @@ Boundary: Ethereum blocks 26430858 (N-1) and 26430859 (N). Evidence is the suppl
 | ETHLockbox | `0xb3a24db07038b51962026329b62e7a965d56a6ad` | `0xdf75e6b07e98873e36ba5c05508f80c1454e0afe` | changed on all four chains |
 | DelayedWETH | `0xe440cc08a71694c8229323803f59024e3144630e` | `0xf024e96317907c3b8d8cb346b9fd9034c8640e15` | changed on all four chains |
 | AnchorStateRegistry | `0x8f40cc98d694ab986f026c5383a181fcc9b6b281` | `0x2b27299c577d4720100e2735b652444dcea652d0` | changed on all four chains |
-| L1ERC721Bridge | `0x9f164f1d...` | same | StorageSetter hop only |
-| OptimismMintableERC20Factory | `0xaabea75d...` | same | StorageSetter hop only |
-| DisputeGameFactory | `0x72b971...` | same | StorageSetter hop only |
+| L1ERC721Bridge | `0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e` | same | StorageSetter hop only |
+| OptimismMintableERC20Factory | `0xaabea75da509fa518fd8a91eae4be5813b829b12` | same | StorageSetter hop only |
+| DisputeGameFactory | `0x72b971717e088b59f26d4236be222adb6acd393b` | same | StorageSetter hop only |
 
 The receipt shows an intermediate StorageSetter implementation (`0x2476c911...`) and restoration/final implementation for each of the 33 proxies. A receipt `Upgraded` event is therefore not by itself a final implementation change.
 
