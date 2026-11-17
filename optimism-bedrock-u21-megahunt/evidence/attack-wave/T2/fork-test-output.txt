@@ -1,0 +1,41 @@
+No files changed, compilation skipped
+
+Ran 9 tests for test/ATKT2.t.sol:ATKT2Test
+[PASS] test_T2a_ovm1_relayed_v0_600ETH_blocked() (gas: 835328)
+Logs:
+  ovm1_relayed_600ETH revert data: 0x979d93bf
+  ovm1_relayed_600ETH value that stays in the lockbox (wei): 599998901608032000000
+
+[PASS] test_T2a_ovm1_unrelayed_v0_deliveredOnce() (gas: 1054055)
+Logs:
+  ovm1_unrelayed_25ETH finalized, value delivered once, hash: 0x6e15a53cc43c01ee647e6015b6f64b06e6845fea913508aafec565614b09cb19
+
+[PASS] test_T2a_ovm2_relayed_v0_35555ETH_blocked() (gas: 835746)
+Logs:
+  ovm2_relayed_35555ETH revert data: 0x979d93bf
+  ovm2_relayed_35555ETH value that stays in the lockbox (wei): 35555800000000000000000
+
+[PASS] test_T2a_ovm2_unrelayed_v0_deliveredOnce() (gas: 1054116)
+Logs:
+  ovm2_unrelayed finalized, value delivered once, hash: 0x6df692c7d394085a9c4427615687120966f9e7630636f449ffbd62b217bed15f
+
+[PASS] test_T2b_bedrock_regolith_messenger_deliveredOnce() (gas: 1045745)
+Logs:
+  bedrock_regolith_messenger finalized, value delivered once, hash: 0xafbabc05c9a66929457ea97120469f6bb7e2afe7b795b63314ff77df1db5a526
+
+[PASS] test_T2b_ecotone_direct_eoa_deliveredOnce() (gas: 602137)
+Logs:
+  ecotone_direct_eoa finalized, value delivered once, hash: 0xa0a06f614cbab329889e7ffd3582335cec98c92a29555eef05181d9af776f1e6
+
+[PASS] test_T2b_isthmus_direct_feevault_deliveredOnce() (gas: 635042)
+Logs:
+  isthmus_direct_feevault finalized, value delivered once, hash: 0xa903f2ec0354c8b37e74b7405222f5f3503c0f60a1d48243407945e418e2dcf9
+
+[PASS] test_T2c_legacyEscrowPair_reclassifiedMintable_frozen() (gas: 198034)
+Logs:
+  EDU escrow unreachable (wei): 90170000000000000000000
+
+[PASS] test_T2c_negativeControl_nonMintableLegacyPair_releases() (gas: 143642)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 1.05s (29.84ms CPU time)
+
+Ran 1 test suite in 1.06s (1.05s CPU time): 9 tests passed, 0 failed, 0 skipped (9 total tests)

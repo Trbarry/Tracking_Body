@@ -6,7 +6,7 @@ import rpc
 from keccak import keccak
 from legacy_census_lib import migrate, dec_word, L2CDM, L1CDM
 E = "/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/evidence/attack-wave/T2"
-OUTD = "/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/test/poc/attack-wave/T2/fixtures"
+OUTD = "/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/test/poc/attack-wave/T2/test/fixtures"
 os.makedirs(OUTD, exist_ok=True)
 L2BLOCK = 159653251
 want_ovm1 = {668: "ovm1_unrelayed_25ETH", 16753: "ovm1_relayed_600ETH"}
