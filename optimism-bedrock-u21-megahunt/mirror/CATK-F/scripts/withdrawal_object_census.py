@@ -72,7 +72,11 @@ def inventory():
                 ROOT / f"chains/{chain}/STATE-U21.json",
             ]
         )
-    curated_sources.extend(Path(p) for p in glob.glob(str(ROOT / "evidence/F2-impl-history-*.json")))
+    curated_sources.extend(
+        Path(p)
+        for p in glob.glob(str(ROOT / "evidence/F2-impl-history-*.json"))
+        if "L2-predeploys" not in p
+    )
     curated = set()
     broad = set()
     origins = defaultdict(list)
