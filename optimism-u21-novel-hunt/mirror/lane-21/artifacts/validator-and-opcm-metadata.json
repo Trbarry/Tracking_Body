@@ -1,0 +1,91 @@
+{
+  "opcm": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+  "standardValidator": "0x9E1D01E25f411c5da20C33d1EaDe0F83256d41B2",
+  "standardValidatorDevFeatureBitmap": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "chains": [
+    {
+      "chain": "OP Mainnet",
+      "systemConfig": "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290",
+      "proposer": "0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0",
+      "cannonKonaPrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9",
+      "metadata": {
+        "pre": {
+          "lastUsedOPCM": "0x1951828Ce913DC4383a8A1695695D537a11D896a",
+          "lastUsedOPCMVersion": "\"8.0.1\""
+        },
+        "post": {
+          "lastUsedOPCM": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+          "lastUsedOPCMVersion": "\"9.0.3\""
+        },
+        "later": {
+          "lastUsedOPCM": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+          "lastUsedOPCMVersion": "\"9.0.3\""
+        }
+      },
+      "standardValidatorAllowFailureResult": "\"\""
+    },
+    {
+      "chain": "Ink",
+      "systemConfig": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+      "proposer": "0x3832bfbef03173e4c49a00ec0dd178817a02d177",
+      "cannonKonaPrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9",
+      "metadata": {
+        "pre": {
+          "lastUsedOPCM": "0x1951828Ce913DC4383a8A1695695D537a11D896a",
+          "lastUsedOPCMVersion": "\"8.0.1\""
+        },
+        "post": {
+          "lastUsedOPCM": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+          "lastUsedOPCMVersion": "\"9.0.3\""
+        },
+        "later": {
+          "lastUsedOPCM": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+          "lastUsedOPCMVersion": "\"9.0.3\""
+        }
+      },
+      "standardValidatorAllowFailureResult": "\"\""
+    },
+    {
+      "chain": "Soneium",
+      "systemConfig": "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+      "proposer": "0x400c164c4a8ca84385b70eed6eb03ea847c8e1b8",
+      "cannonKonaPrestate": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "metadata": {
+        "pre": {
+          "lastUsedOPCM": "0x1951828Ce913DC4383a8A1695695D537a11D896a",
+          "lastUsedOPCMVersion": "\"8.0.1\""
+        },
+        "post": {
+          "lastUsedOPCM": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+          "lastUsedOPCMVersion": "\"9.0.3\""
+        },
+        "later": {
+          "lastUsedOPCM": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+          "lastUsedOPCMVersion": "\"9.0.3\""
+        }
+      },
+      "standardValidatorAllowFailureResult": "\"SCKDG-SHAPE,SCKDG-10\""
+    },
+    {
+      "chain": "Unichain",
+      "systemConfig": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+      "proposer": "0x86b392ca30ad7453c8d88b56eb5a04fd0e2175b7",
+      "cannonKonaPrestate": "0x03e5a54835d39c1d83b198314473e1f111c3539c04f65c3e8a9b8ccebe3737c9",
+      "metadata": {
+        "pre": {
+          "lastUsedOPCM": "0x1951828Ce913DC4383a8A1695695D537a11D896a",
+          "lastUsedOPCMVersion": "\"8.0.1\""
+        },
+        "post": {
+          "lastUsedOPCM": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+          "lastUsedOPCMVersion": "\"9.0.3\""
+        },
+        "later": {
+          "lastUsedOPCM": "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f",
+          "lastUsedOPCMVersion": "\"9.0.3\""
+        }
+      },
+      "standardValidatorAllowFailureResult": "\"\""
+    }
+  ]
+}
