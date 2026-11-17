@@ -1,0 +1,1660 @@
+{
+  "rpc": "http://127.0.0.1:7545",
+  "block": 26433900,
+  "method": "Historical implementation addresses from independently reconstructed proxy transitions; direct implementation storage reads.",
+  "records": [
+    {
+      "address": "0x0b09ba359a106c9ea3b181cbc5f394570c7d2a7a",
+      "families": [
+        "L1StandardBridge"
+      ],
+      "code_bytes": 11539,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.3.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x1005217ad392dc64cef501fa1777a27d42166748",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 22494,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "5.8.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x16393737d09d2722ad13dca3ca8c3db957699f1d",
+      "families": [
+        "L1CrossDomainMessenger"
+      ],
+      "code_bytes": 13072,
+      "balance_wei": 0,
+      "slot_0": "0x000000000000000000000001de1fcfb0851916ca5101820a69b13a4e276bd81f",
+      "initializer_bytes": {
+        "20": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null,
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x1b5cc028a4276597c607907f24e1ac05d3852cfc",
+      "families": [
+        "AnchorStateRegistry.gen0"
+      ],
+      "code_bytes": 4212,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.0.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x2150bc3c64cbfddbac9815ef615d6ab8671bfe43",
+      "families": [
+        "L1CrossDomainMessenger"
+      ],
+      "code_bytes": 8219,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000010000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "20": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.4.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x22d12e0faebd62d429514a65ebae32dd316c12d6",
+      "families": [
+        "L1CrossDomainMessenger"
+      ],
+      "code_bytes": 10232,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000ff0000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "20": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.10.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x2476c911e6d4d9411e677d8faf15a64ac1fdeee8",
+      "families": [
+        "AnchorStateRegistry.current",
+        "DelayedWETH.current",
+        "DisputeGameFactory",
+        "ETHLockbox",
+        "L1ERC721Bridge",
+        "OptimismMintableERC20Factory",
+        "OptimismPortal",
+        "SuperchainConfig",
+        "SystemConfig"
+      ],
+      "code_bytes": 1130,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "0": 0
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.2.2",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x25d6cedeb277ad7ebee71226ed7877768e0b7a2f",
+      "families": [
+        "L1ERC721Bridge"
+      ],
+      "code_bytes": 6684,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.7.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000002"
+    },
+    {
+      "address": "0x276d3730f219f7ec22274f7263180b8452b46d47",
+      "families": [
+        "L1ERC721Bridge"
+      ],
+      "code_bytes": 5104,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.3.1",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x28a55488fef40005309e2da0040dbe9d300a64ab",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 22383,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.6.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x2b27299c577d4720100e2735b652444dcea652d0",
+      "families": [
+        "AnchorStateRegistry.current"
+      ],
+      "code_bytes": 7311,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "4.0.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0x2bfe4a5bd5a41e9d848d843ebcdfa15954e9a557",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 11858,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "3.7.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x2d778797049fe9259d947d1ed8e5442226dfb589",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 21485,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.5.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x2d7e764a0d9919e16983a46595cfa81fc34fa7cd",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 20779,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "3.13.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x2fa28989fc559836e9d66dff3010c7f7f41c65ed",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 12085,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "3.11.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x3268ed09f76e619331528270b6267d4d2c5ab5c2",
+      "families": [
+        "L1ERC721Bridge"
+      ],
+      "code_bytes": 4859,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "0": 0
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.0.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x33a032ec93ec0c492ec4bf0b30d5f51986e5a314",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 5374,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.11.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x33d1e8571a85a538ed3d5a4d88f46c112383439d",
+      "families": [
+        "DisputeGameFactory"
+      ],
+      "code_bytes": 6539,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.2.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0x340f923e5c7cbb2171146f64169ec9d5a9ffe647",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 9226,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.5.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x36398155cd17cfe804f69b233edda800dd4d5aa5",
+      "families": [
+        "AnchorStateRegistry.current"
+      ],
+      "code_bytes": 7297,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "3.7.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0x37e15e4d6dffa9e5e320ee1ec036922e563cb76c",
+      "families": [
+        "ProtocolVersions"
+      ],
+      "code_bytes": 2563,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.1.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x381e729ff983fa4bced820e7b922d79bf653b999",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 20580,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "5.0.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x3ea6084748ed1b2a9b5d4426181f1ad8c93f6231",
+      "families": [
+        "L1CrossDomainMessenger"
+      ],
+      "code_bytes": 8054,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000ff0000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "20": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.5.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x40e0c049f4671846e9cff93aaed88f2b48e527bb",
+      "families": [
+        "L1StandardBridge"
+      ],
+      "code_bytes": 6558,
+      "balance_wei": 1010000000000000,
+      "slot_0": "0x00000000000000000000000025ace71c97b33cc4729cf772ae268934f7ab5fa1",
+      "initializer_bytes": {
+        "0": 161
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null,
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x42ad0173051225ac784100e9acd43349707f4db9",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 13120,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "3.14.2",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x42f0bd8313ad456a38061308857b2383fe2c72a0",
+      "families": [
+        "ProtocolVersions"
+      ],
+      "code_bytes": 2493,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000003",
+      "initializer_bytes": {
+        "0": 3
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.0.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x44afb7722af276a601d524f429016a18b6923df0",
+      "families": [
+        "L1StandardBridge"
+      ],
+      "code_bytes": 13115,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.6.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000002"
+    },
+    {
+      "address": "0x4bba758f006ef09402ef31724203f316ab74e4a0",
+      "families": [
+        "DisputeGameFactory"
+      ],
+      "code_bytes": 5531,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.0.1",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x4da82a327773965b8d4d85fa3db8249b387458e7",
+      "families": [
+        "SuperchainConfig"
+      ],
+      "code_bytes": 2379,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.2.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x53c165169401764778f780a69701385eb0ff19b7",
+      "families": [
+        "SuperchainConfig"
+      ],
+      "code_bytes": 2411,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.1.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x5493f4677a186f64805fe7317d6993ba4863988f",
+      "families": [
+        "OptimismMintableERC20Factory"
+      ],
+      "code_bytes": 10880,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.10.1",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x5570b1f2b97b1e35b5c6f9ee76f6cf02c9917504",
+      "families": [
+        "SuperchainConfig"
+      ],
+      "code_bytes": 3132,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.4.3",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000002"
+    },
+    {
+      "address": "0x566511a1a09561e2896f8c0fd77e8544e59bfdb0",
+      "families": [
+        "L1StandardBridge"
+      ],
+      "code_bytes": 11388,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.0.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x59d497530b00062f40950ba8eab88868bf7f86f0",
+      "families": [
+        "L1CrossDomainMessenger"
+      ],
+      "code_bytes": 9614,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000ff0000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "20": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.11.1",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x5d5a095665886119693f0b41d8dfee78da033e8b",
+      "families": [
+        "L1CrossDomainMessenger"
+      ],
+      "code_bytes": 8518,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000ff0000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "20": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.6.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
+      "families": [
+        "DelayedWETH.gen1"
+      ],
+      "code_bytes": 5678,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.3.0",
+      "initVersion_raw": "0x"
+    },
+    {
+      "address": "0x5efa852e92800d1c982711761e45c3fe39a2b6d8",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 6185,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.3.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x61525eaacddb97d9184afc205827e6a4fd0bf62a",
+      "families": [
+        "L1StandardBridge"
+      ],
+      "code_bytes": 12620,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.8.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x64b5a5ed26dcb17370ff4d33a8d503f0fbd06cff",
+      "families": [
+        "L1StandardBridge"
+      ],
+      "code_bytes": 11341,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.1.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x670b850a235a6fa98cd7a195eb139d0277e471fa",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 12680,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "4.0.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x6b7da1647aa9684f54b2beeb699f91f31cd35fb9",
+      "families": [
+        "AnchorStateRegistry.gen0"
+      ],
+      "code_bytes": 3275,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.0.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x6d971b07cea5febaea8aefb827032f6a0538c9bb",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 2076,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "0": 0
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null,
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x71e966ae981d1ce531a7b6d23dc0f27b38409087",
+      "families": [
+        "DelayedWETH.gen1"
+      ],
+      "code_bytes": 5627,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.1.0",
+      "initVersion_raw": "0x"
+    },
+    {
+      "address": "0x72b971717e088b59f26d4236be222adb6acd393b",
+      "families": [
+        "DisputeGameFactory"
+      ],
+      "code_bytes": 8032,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.6.1",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0x74e273220fa1cb62fd756fe6cbda8bbb89404ded",
+      "families": [
+        "OptimismMintableERC20Factory"
+      ],
+      "code_bytes": 7872,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "0": 0
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.8.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x74f1ac50eb0be98853805d381c884f5f9abdecf9",
+      "families": [
+        "L1ERC721Bridge"
+      ],
+      "code_bytes": 6186,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.9.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x74fac1d45b98bae058f8f566201c9a81b85c7d50",
+      "families": [
+        "DisputeGameFactory"
+      ],
+      "code_bytes": 7847,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.3.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0x760c48c62a85045a6b69f07f4a9f22868659cbcc",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 8836,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.4.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x784d2f03593a42a6e4676a012762f18775ecbbe6",
+      "families": [
+        "ETHLockbox"
+      ],
+      "code_bytes": 4919,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.2.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0x78972e88ab8bbb517a36caea23b931bab58ad3c6",
+      "families": [
+        "L1StandardBridge"
+      ],
+      "code_bytes": 11524,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.2.2",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x7ae1d3bd877a4c5ca257404ce26be93a02c98013",
+      "families": [
+        "L1ERC721Bridge"
+      ],
+      "code_bytes": 5119,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.4.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x7b465370bb7a333f99edd19599eb7fb1c2d3f8d2",
+      "families": [
+        "AnchorStateRegistry.gen1"
+      ],
+      "code_bytes": 5289,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.2.2",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x7cf803296662e8c72a6c1d6450572209acf7f202",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 20145,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "5.1.1",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x7d4ec7fb1a1b9e6d61c04d5e21e3d68cff639448",
+      "families": [
+        "L1CrossDomainMessenger"
+      ],
+      "code_bytes": 9454,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000ff0000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "20": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.13.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x7f1d12fb2911eb095278085f721e644c1f675696",
+      "families": [
+        "L1ERC721Bridge"
+      ],
+      "code_bytes": 6684,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.8.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x8ee6fb13c6c9a7e401531168e196fbf8b05ceabb",
+      "families": [
+        "OptimismMintableERC20Factory"
+      ],
+      "code_bytes": 10880,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.10.2",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x8f40cc98d694ab986f026c5383a181fcc9b6b281",
+      "families": [
+        "AnchorStateRegistry.current"
+      ],
+      "code_bytes": 7312,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "3.9.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0x9091dda480b232133a7d2e4cb23336b4f0293196",
+      "families": [
+        "L1StandardBridge"
+      ],
+      "code_bytes": 5525,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000001111111111111111111111111111111111111111",
+      "initializer_bytes": {
+        "0": 17
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null,
+      "initVersion_raw": null
+    },
+    {
+      "address": "0x97988d5624f1ba266e1da305117bcf20713bee08",
+      "families": [
+        "DelayedWETH.gen0"
+      ],
+      "code_bytes": 5494,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.0.0",
+      "initVersion_raw": "0x"
+    },
+    {
+      "address": "0x97cebbf8959e2a5476fbe9b98a21806ec234609b",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 20490,
+      "balance_wei": 1000000000000000,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "5.2.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0x9f164f1d02a81e06d639e55f65a87f0070e3cb2e",
+      "families": [
+        "L1ERC721Bridge"
+      ],
+      "code_bytes": 6186,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.9.1",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0xa303a644cfbc0c34f6a9dbeafdeba4c967ea01e7",
+      "families": [
+        "SuperchainConfig"
+      ],
+      "code_bytes": 3195,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.5.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000002"
+    },
+    {
+      "address": "0xa95b24af19f8907390ed15f8348a1a5e6ccbc5c6",
+      "families": [
+        "L1CrossDomainMessenger"
+      ],
+      "code_bytes": 8072,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000010000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "20": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.2.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xaabea75da509fa518fd8a91eae4be5813b829b12",
+      "families": [
+        "OptimismMintableERC20Factory"
+      ],
+      "code_bytes": 11905,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.11.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xab9d6cb7a427c0765163a7f45bb91cafe5f2d375",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 10827,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.3.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xababe63514ddd6277356f8cc3d6518aa8bdeb4de",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 21529,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.4.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xade27248542c0f3e89b49e4eb76155e267f14377",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 12482,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "4.3.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0xae2af01232a6c4a4d3012c5ec5b1b35059caf10d",
+      "families": [
+        "L1ERC721Bridge"
+      ],
+      "code_bytes": 5097,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.1.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xae849efa4bcfc419593420e14707996936e365e2",
+      "families": [
+        "OptimismMintableERC20Factory"
+      ],
+      "code_bytes": 9079,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "0": 0
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.1.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xb08cc720f511062537ca78bdb0ae691f04f5a957",
+      "families": [
+        "SuperchainConfig"
+      ],
+      "code_bytes": 3132,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.4.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000002"
+    },
+    {
+      "address": "0xb20b23af6071405c37ddda0c0640e8ebb7899645",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 23173,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "6.1.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0xb37a11aadf167b2f0b8dd85372de4bc66cd4a891",
+      "families": [
+        "L1StandardBridge"
+      ],
+      "code_bytes": 12620,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.8.2",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0xb3a24db07038b51962026329b62e7a965d56a6ad",
+      "families": [
+        "ETHLockbox"
+      ],
+      "code_bytes": 4919,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.3.1",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0xb443da3e07052204a02d630a8933dac05a0d6fb4",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 20794,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "3.14.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xb686f13aff1e427a1f993f29ab0f2e7383729fe0",
+      "families": [
+        "L1CrossDomainMessenger"
+      ],
+      "code_bytes": 9614,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000ff0000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "20": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.11.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0xba2492e52f45651b60b8b38d4ea5e2390c64ffb1",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 7291,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.12.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xbfb731cd36d26c2a7287716de857e4380c73a64a",
+      "families": [
+        "L1StandardBridge"
+      ],
+      "code_bytes": 11078,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "0": 0
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.1.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xbfba066b5ca610fe70adce45fcb622f945891bb0",
+      "families": [
+        "L1CrossDomainMessenger"
+      ],
+      "code_bytes": 13266,
+      "balance_wei": 0,
+      "slot_0": "0x000000000000000000000001de1fcfb0851916ca5101820a69b13a4e276bd81f",
+      "initializer_bytes": {
+        "20": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null,
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xc040f392e52cb6970ca8e110c280fe24e07c5e2c",
+      "families": [
+        "DisputeGameFactory"
+      ],
+      "code_bytes": 8057,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.4.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0xc599fa757c2bcaa5ae3753ab129237f38c10da0b",
+      "families": [
+        "L1ERC721Bridge"
+      ],
+      "code_bytes": 4962,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.0.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xc641a33cab81c559f2bd4b21ea34c290e2440c2b",
+      "families": [
+        "DisputeGameFactory"
+      ],
+      "code_bytes": 5559,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.0.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xce28685eb204186b557133766eca00334eb441e4",
+      "families": [
+        "SuperchainConfig"
+      ],
+      "code_bytes": 3644,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.3.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000002"
+    },
+    {
+      "address": "0xd26bb3aaaa4cb5638a8581a4c4b1d937d8e05c54",
+      "families": [
+        "L1CrossDomainMessenger"
+      ],
+      "code_bytes": 10232,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000ff0000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "20": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.9.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000002"
+    },
+    {
+      "address": "0xd2e67b6a032f0a9b1f569e63ad6c38f7342c2e00",
+      "families": [
+        "L2OutputOracle"
+      ],
+      "code_bytes": 5819,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.3.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xd3494713a5cfad3f5359379dfa074e2ac8c6fd65",
+      "families": [
+        "L1CrossDomainMessenger"
+      ],
+      "code_bytes": 8084,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000010000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "20": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.3.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xd392c27b84b1ca776528f2704bc67b82a62132d2",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 12507,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "3.13.1",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0xd81f43edbcacb4c29a9ba38a13ee5d79278270cc",
+      "families": [
+        "AnchorStateRegistry.gen0",
+        "L1ERC721Bridge",
+        "L2OutputOracle",
+        "OptimismMintableERC20Factory",
+        "OptimismPortal",
+        "SuperchainConfig",
+        "SystemConfig"
+      ],
+      "code_bytes": 990,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "initializer_bytes": {
+        "0": 0
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.1.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xd9166833ff12a5f900ccfbf2c8b62a90f1ca1fd5",
+      "families": [
+        "L1CrossDomainMessenger"
+      ],
+      "code_bytes": 15444,
+      "balance_wei": 0,
+      "slot_0": "0x000000000000000000000001de1fcfb0851916ca5101820a69b13a4e276bd81f",
+      "initializer_bytes": {
+        "20": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": null,
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xdb5d932af15d00f879cabebf008cadaaaa691e06",
+      "families": [
+        "L2OutputOracle"
+      ],
+      "code_bytes": 5450,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.7.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xdf75e6b07e98873e36ba5c05508f80c1454e0afe",
+      "families": [
+        "ETHLockbox"
+      ],
+      "code_bytes": 5006,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.0.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0xe01efbeb1089d1d1db9c6c8b135c934c0734c846",
+      "families": [
+        "OptimismMintableERC20Factory"
+      ],
+      "code_bytes": 8421,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.9.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xe2f826324b2faf99e513d16d266c3f80ae87832b",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 21078,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "3.10.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xe32b192fb1dca88fcb1c56b3acb429e32238adcb",
+      "families": [
+        "L1StandardBridge"
+      ],
+      "code_bytes": 13115,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.7.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0xe440cc08a71694c8229323803f59024e3144630e",
+      "families": [
+        "DelayedWETH.current"
+      ],
+      "code_bytes": 5921,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.5.1",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0xe4f9779ab53070a55db24dfaeff9af147c6ed550",
+      "families": [
+        "SuperchainConfig"
+      ],
+      "code_bytes": 3132,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.4.2",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000002"
+    },
+    {
+      "address": "0xe89f13c5ee4033b2d3cd76c9d6958efbfe26d3c2",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 22210,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "5.6.1",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000003"
+    },
+    {
+      "address": "0xeb69cc681e8d4a557b30dffbad85affd47a2cf2e",
+      "families": [
+        "AnchorStateRegistry.current"
+      ],
+      "code_bytes": 7153,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "3.5.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0xefed7f38bb9be74bba583a1a5b7d0fe7c9d5787a",
+      "families": [
+        "OptimismPortal"
+      ],
+      "code_bytes": 22636,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "4.6.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000002"
+    },
+    {
+      "address": "0xf024e96317907c3b8d8cb346b9fd9034c8640e15",
+      "families": [
+        "DelayedWETH.current"
+      ],
+      "code_bytes": 5922,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.0.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "address": "0xf243bed163251380e78068d317ae10f26042b292",
+      "families": [
+        "L2OutputOracle"
+      ],
+      "code_bytes": 5589,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "1.8.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xf56d96b2535b932656d3c04ebf51babff241d886",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 7349,
+      "balance_wei": 0,
+      "slot_0": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "initializer_bytes": {
+        "0": 1
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": false,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "2.2.0",
+      "initVersion_raw": null
+    },
+    {
+      "address": "0xfaa660bf783cbaa55e1b7f3475c20db74a53b9fa",
+      "families": [
+        "SystemConfig"
+      ],
+      "code_bytes": 11410,
+      "balance_wei": 0,
+      "slot_0": "0x00000000000000000000000000000000000000000000000000000000000000ff",
+      "initializer_bytes": {
+        "0": 255
+      },
+      "all_relevant_legacy_initializer_bytes_locked_255": true,
+      "oz_v5_initializable_slot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "version": "3.4.0",
+      "initVersion_raw": "0x0000000000000000000000000000000000000000000000000000000000000002"
+    }
+  ],
+  "summary": {
+    "unique_implementations": 102,
+    "locked_legacy_byte_255": 64,
+    "not_locked_by_relevant_legacy_byte": 38,
+    "nonzero_oz_v5_slot": 0,
+    "nonzero_balance": 2
+  }
+}
