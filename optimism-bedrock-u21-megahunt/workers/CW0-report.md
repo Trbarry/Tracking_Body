@@ -32,9 +32,9 @@ The 115-file PASS A corpus contains 112 in-scope primitives after the required e
 
 ## Strongest negatives
 
-- Hash-global finalization and messenger mappings block ordinary double execution (`v9.0.0:src/L1/OptimismPortal2.sol:624-666`; `src/universal/CrossDomainMessenger.sol:256-302`).
+- Hash-global finalization and messenger mappings block ordinary double execution (`v9.0.0:src/L1/OptimismPortal2.sol:577-666`; `src/universal/CrossDomainMessenger.sol:256-302`).
 - Delete cannot remove a still-valid proof; it only clears one cell after challenger-win or current-registry blacklist (`v9.0.0:src/L1/OptimismPortal2.sol:711-728`).
-- Direct-call failure relocks exact value; transaction rollback kills pre-metering lock/call effects (`v9.0.0:src/L1/OptimismPortal2.sol:624-666,741-795`).
+- Direct-call failure relocks exact value; transaction rollback kills pre-metering lock/call effects (`v9.0.0:src/L1/OptimismPortal2.sol:577-666,741-795`).
 - Fresh DGF+ASR migration makes old proofs unregistered/retired, rather than silently carrying their authority forward (`v9.0.0:src/dispute/AnchorStateRegistry.sol:94-132,227-352`).
 
 ## Limits and next wave
