@@ -1,0 +1,20 @@
+Résultat CATK-T3 : **19 expériences, 0 candidat (score N/A), 7 hypothèses tuées**.
+
+- 11/11 fork-tests passent contre les bytecodes déployés.
+- Les faux tokens L2, y compris legacy/new/dual-interface, restent isolés par `deposits[l1][exactL2]`.
+- La factory produit des identités distinctes et immuables, sans rebinding.
+- Les 11 paires OP les plus actives ont une comptabilité événementielle exactement égale au stockage; aucune offre L2 ne dépasse l’escrow.
+- ERC721 reste protégé par `(local, remote, tokenId)`, effacement avant callback et destinataire engagé.
+- Les implémentations bridge/factory sont inchangées à U21. L1CDM 2.13.0 ne modifie que les budgets de gas.
+- Deux retraits réels — ERC721 et ERC20 OVM legacy — donnent exactement le même résultat avant et après U21, une seule fois.
+
+Livrables :
+
+- [Rapport complet](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CATK-T3-report.md)
+- [PoC Foundry](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-T3/poc/test/CATK_T3.t.sol)
+- [Différentiel U21](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-T3/evidence/u21-differential.md)
+- [Census des paires](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-T3/evidence/top-pair-census.md)
+
+Prochaine expérience la plus utile : répéter le census et un replay avec preuve réelle sur Ink, Soneium et Unichain dès que des proxies L2 locaux autorisés sont disponibles.
+
+Lignes arrêtées : logique propre aux tokens/bridges tiers, hors autorisation; census L2 des trois chaînes sœurs, faute de proxies locaux. Aucun arrêt imposé par un système de sécurité.

@@ -1,0 +1,21 @@
+15 expériences exécutées sur le fork L1 local au bloc 26 433 900 : **15 réussies, 0 échec, 0 candidat**. Toutes les hypothèses restent sous le seuil de 7 ; aucun score candidat n’est donc applicable.
+
+Principales barrières :
+
+- Re-prove après finalisation bloqué par `finalizedWithdrawals[hash]`, global à tous les submitters.
+- Chemins de gaz v0/v1 : résultat messenger enregistré ou revert atomique, jamais de finalisation sans état rejouable.
+- Aucun jeu post-retraite lié à un ASR étranger sur les quatre chaînes.
+- L’ancre très future ne fonctionne qu’en laissant volontairement gagner une assertion invalide, cause déjà connue.
+- Écritures d’initialisation, de configuration, de type et de pause toutes privilégiées.
+- Les anciens DelayedWETH ne libèrent que le wei déposé par l’attaquant.
+
+Livrables :
+
+- [Rapport CATK-T1](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CATK-T1-report.md)
+- [Carte des 15 conditions](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-T1/FIX-CONDITION-MAP.md)
+- [Suite de tests](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-T1/test/FixRegressionCATKT1.t.sol)
+- [Sortie Forge](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-T1/evidence/forge-output.txt)
+
+Expérience suivante prioritaire : différentiel déterministe entre le programme Kona du jeu OP 21 377 (`0x031ac6f1…e1df`) et son premier successeur corrigé, avec le même transcript oracle et un dépôt permissionless, afin de rechercher un cas concret « ancien accepte / nouveau rejette ».
+
+Arrêts explicites : comportements privilégiés, causes déjà reconnues, scénarios sans impact éligible et toute dépendance envers une cible tierce. Aucune transaction publique n’a été signée ou diffusée.

@@ -1,0 +1,30 @@
+Command:
+  cd /home/user/u21-work/codex-CATK-T1/h
+  forge test -j 1 --match-path test/FixRegressionCATKT1.t.sol -vv
+
+Fork:
+  l1 = http://127.0.0.1:8545
+  pinned block = 26433900
+
+No files changed, compilation skipped
+
+Ran 15 tests for test/FixRegressionCATKT1.t.sol:FixRegressionCATKT1
+[PASS] test_T01_registryBinding_postUpgradeCreateCannotNameSiblingRegistry() (gas: 1908075)
+[PASS] test_T02_anchorInvalidationTransitionsAreGuardianOnly() (gas: 360228)
+[PASS] test_T03_reproveAfterFinalizationCannotExecuteTwice() (gas: 648735)
+[PASS] test_T04_versionZeroFirstRelayHasNoFinalizedUnknownOutcome() (gas: 1332815)
+[PASS] test_T05_pausePointerCannotBeMutatedByAttacker() (gas: 245933)
+[PASS] test_T06_farFutureSuperAnchorRequiresInvalidGameToWin() (gas: 2194360)
+[PASS] test_T07_closeGameGasStarvationCannotSkipAnchorUpdate() (gas: 4422467)
+[PASS] test_T08_safeCallReserveSamplesAreAtomicOrReplayable() (gas: 1703534)
+[PASS] test_T09_legacyPortalSpacersAreDeadOnPermissionlessDeposit() (gas: 473461)
+[PASS] test_T10_initializerIdempotenceCannotBeReachedPermissionlessly() (gas: 176959)
+[PASS] test_T11_type5TxOriginGateRejectsDirectAndWrappedAttacker() (gas: 1175797)
+[PASS] test_T12_deleteProofPredicateSeparatesValidAndInvalidGames() (gas: 177424)
+[PASS] test_T13_validatorBindingsCannotBeChangedByAttacker() (gas: 149229)
+[PASS] test_T14_oldPrestateWrappedAttackOnlyCreatesAChallenge() (gas: 346678)
+[PASS] test_T15_legacyDelayedWETHCannotReleaseSomeoneElsesBond() (gas: 388654)
+Suite result: ok. 15 passed; 0 failed; 0 skipped; finished in 137.57ms (114.03ms CPU time)
+
+Ran 1 test suite in 139.07ms (137.57ms CPU time): 15 tests passed, 0 failed, 0 skipped (15 total tests)
+
