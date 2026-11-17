@@ -18,12 +18,9 @@ def si(t, iid): return ("eth_call", [{"to": t, "data": "0x01ffc9a7" + iid + "0"*
 reqs = []
 for t in toks: reqs += [si(t, "1d1d8b63"), si(t, "ec4fc8e3")]
 out = []
-for i in range(0, len(reqs), 50):
-    try: out += rpc.batch(rpc.L1, reqs[i:i+50])
-    except Exception:
-        for q in reqs[i:i+50]:
-            try: out.append(rpc.call(rpc.L1, q[0], q[1], retries=2))
-            except Exception: out.append("0x")
+for q in reqs:
+    try: out.append(rpc.call(rpc.L1, q[0], q[1], retries=1))
+    except Exception: out.append("0x")  # revert / no ERC165 -> not detected
 cls = {}
 for j, t in enumerate(toks):
     a, b = out[2*j], out[2*j+1]
