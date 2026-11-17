@@ -21,6 +21,16 @@ contract DifferentialWithdrawalTest is RealWithdrawalBase {
         uint256 lockboxBalanceAfter;
     }
 
+    struct ReproveOutcome {
+        bool firstProveSucceeded;
+        bool secondProveSucceeded;
+        address game;
+        uint64 firstTimestamp;
+        uint64 resetTimestamp;
+        uint256 submitterCountDelta;
+        bool originalProofUnchanged;
+    }
+
     function callFinalize(Fixture memory fixture, uint256 suppliedGas)
         internal
         returns (Outcome memory outcome)
@@ -183,6 +193,61 @@ contract DifferentialWithdrawalTest is RealWithdrawalBase {
         assertEq(abi.decode(v9VersionData, (string)), "6.1.0");
         assertEq(v8Superchain, v9Superchain, "superchainConfig wiring changed value");
         assertEq(v8Guardian, v9Guardian, "guardian wiring changed value");
+    }
+
+    function test_exactNMinus1ToN_reproveBehaviorSame() public {
+        ReproveOutcome memory pre = _runReprove("l1pre");
+        ReproveOutcome memory n = _runReprove("l1n");
+
+        assertTrue(pre.firstProveSucceeded && pre.secondProveSucceeded);
+        assertTrue(n.firstProveSucceeded && n.secondProveSucceeded);
+        assertEq(pre.game, n.game, "reprove selected a different game at N");
+        assertGt(pre.resetTimestamp, pre.firstTimestamp);
+        assertGt(n.resetTimestamp, n.firstTimestamp);
+        assertEq(pre.submitterCountDelta, 2);
+        assertEq(n.submitterCountDelta, 2);
+        assertTrue(pre.originalProofUnchanged && n.originalProofUnchanged);
+    }
+
+    function _runReprove(string memory forkAlias)
+        internal
+        returns (ReproveOutcome memory outcome)
+    {
+        vm.createSelectFork(forkAlias);
+        Fixture memory fixture = loadFixture("pre-messenger-zero.json");
+        string memory json = vm.readFile(string.concat(FIXTURE_ROOT, "pre-messenger-zero.json"));
+        bytes memory proveCalldata = vm.parseJsonBytes(json, ".provenance.rawCalldata");
+        address secondSubmitter = address(0x31310031);
+        (address originalGame, uint64 originalTimestamp) =
+            portal.provenWithdrawals(fixture.withdrawalHash, fixture.proofSubmitter);
+        uint256 countBefore = _numProofSubmitters(fixture.withdrawalHash);
+
+        vm.prank(secondSubmitter);
+        (outcome.firstProveSucceeded,) = PORTAL.call(proveCalldata);
+        (outcome.game, outcome.firstTimestamp) =
+            portal.provenWithdrawals(fixture.withdrawalHash, secondSubmitter);
+
+        vm.warp(block.timestamp + 1);
+        vm.prank(secondSubmitter);
+        (outcome.secondProveSucceeded,) = PORTAL.call(proveCalldata);
+        (, outcome.resetTimestamp) =
+            portal.provenWithdrawals(fixture.withdrawalHash, secondSubmitter);
+        outcome.submitterCountDelta =
+            _numProofSubmitters(fixture.withdrawalHash) - countBefore;
+        (address originalGameAfter, uint64 originalTimestampAfter) =
+            portal.provenWithdrawals(fixture.withdrawalHash, fixture.proofSubmitter);
+        outcome.originalProofUnchanged =
+            originalGameAfter == originalGame && originalTimestampAfter == originalTimestamp;
+    }
+
+    function _numProofSubmitters(bytes32 withdrawalHash) internal view returns (uint256) {
+        return abi.decode(
+            _staticcall(
+                PORTAL,
+                abi.encodeWithSignature("numProofSubmitters(bytes32)", withdrawalHash)
+            ),
+            (uint256)
+        );
     }
 
     function _staticcall(address target, bytes memory data) internal view returns (bytes memory result) {

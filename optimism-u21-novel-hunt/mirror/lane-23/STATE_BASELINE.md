@@ -69,5 +69,6 @@ post-upgrade activity.
 - `checkWithdrawal` at the later fork: success; finalized mapping: false
 
 The unmodified deployed-code fork finalization succeeds. This is evidence for the
-live value path; the separate target-substitution tests are explicitly modeled-only.
+live value path and for successful v9 finalization of a proof object created before
+the U21 block; the separate target-substitution tests are explicitly modeled-only.
 

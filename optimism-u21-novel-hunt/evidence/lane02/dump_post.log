@@ -23,3 +23,4 @@ ink-57073 OptimismMintableERC20Factory ok 4
 ink-57073 ProxyAdmin ok 4
 soneium-1868 SystemConfig ok 13
 soneium-1868 OptimismPortal2 ok 17
+soneium-1868 ETHLockbox ok 4

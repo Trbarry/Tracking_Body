@@ -125,7 +125,8 @@ unfinalized state, plus a mocked-pause-oracle check of the lockbox's own pause
 guard. Neither is a claim that the corresponding condition is live.
 
 A real mature unfinalized withdrawal was found and finalized against unmodified
-deployed bytecode at block 26433900:
+deployed bytecode at block 26433900. Its proof block 26382676 predates U21, so it
+also demonstrates preservation and post-upgrade use of a pre-U21 proof object:
 
 - hash `0xb16e5fc2aab1c33e0426b1ad64aa82484b4fe2a637027d2854ad00677f7ed612`
 - proof tx `0x424a6ad7ef4500fb905359f319796f5b9396e1465e8ddffc8ff8152e4da3bae6`

@@ -19,7 +19,8 @@ The harness was cloned from `/home/user/u21-work/template`; its `foundry.toml` a
 - `test_donationAndForcedETHStayInPortalUntilAdminMigration`: donation and forced
   value stay in portal; production owner path sweeps the entire balance once.
 - `test_realMatureWithdrawalFinalizesAndConservesValue`: real proof, real target,
-  and deployed bytecode at block 26433900. Trace emits
+  and deployed bytecode at block 26433900. The proof was submitted at block
+  26382676, before U21. Trace emits
   `ETHUnlocked(638177259920741319864)`, calls L1 messenger `relayMessage` with the
   same value, emits `RelayedMessage` and `WithdrawalFinalized(..., true)`, reduces
   lockbox by exactly that value, leaves portal zero, restores `l2Sender`, and rejects
