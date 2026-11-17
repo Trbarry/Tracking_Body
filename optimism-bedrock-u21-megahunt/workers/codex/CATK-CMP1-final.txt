@@ -1,0 +1,8 @@
+Completed 13 compositions: 9 fork tests plus 4 exact state/source barriers. All 10 Foundry tests passed with `forge -j 1`. No public transaction was broadcast.
+
+- Candidates: none. Highest rejected scores were old-prestate divergence 4.5/10, delayed application replay 4.0/10, and third-party gas control 3.0/10.
+- Top kills: replay parameters are immutable and pay only the committed recipient; local/global pauses reach L1CDM; proof deletion cannot affect post-finalization replay; maximum observed relay gas was 8M, below the cap; sticky lockbox authorization remains exact-address gated.
+- Highest-value next experiment: differential kona v1.7.0/v1.9.0 execution over attacker-controlled inputs, minimizing any divergence into a Cannon witness for a still-live old-prestate game.
+
+Full report: [CATK-CMP1-report.md](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/workers/CATK-CMP1-report.md)  
+Composition ledger: [COMPOSITIONS.md](/home/user/Tracking_Body/optimism-bedrock-u21-megahunt/mirror/CATK-CMP1/COMPOSITIONS.md)

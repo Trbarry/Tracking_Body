@@ -1,0 +1,23 @@
+Command: forge test -j 1 -vv
+Harness: /home/user/u21-work/codex-CATK-CMP1/h
+Pins: Ethereum block 26433900; OP block 159654093
+
+No files changed, compilation skipped
+
+Ran 9 tests for test/CATK_CMP1.t.sol:CATKCMP1Test
+[PASS] test_C01_realApplicationReplayHasNoAgeDeadline() (gas: 38300507)
+[PASS] test_C02_applicationPauseIsPrivilegedAndTemporary() (gas: 38375411)
+[PASS] test_C03_lockboxLocalPausePropagatesToMessengerThenUnpauseRestoresReplay() (gas: 38324608)
+[PASS] test_C04_globalPauseStopsReplayThenUnpauseRestoresIt() (gas: 38322776)
+[PASS] test_C05_blacklistedDeletedProofCannotStopPostFinalizationReplay() (gas: 38337265)
+[PASS] test_C06_realApplicationReplayFitsBelowEIP7825TransactionCap() (gas: 38300157)
+[PASS] test_C07_hopOneShotReplayIsAlreadyEconomicallyApplied() (gas: 142145)
+[PASS] test_C08_synthetixWrongTargetIdentityStaysUnrelayable() (gas: 235660)
+[PASS] test_C09_forcedETHAndSiblingPortalCannotUseStickyLockboxAuthorization() (gas: 117434)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 340.35ms (314.68ms CPU time)
+
+Ran 1 test for test/Sanity.t.sol:SanityTest
+[PASS] test_sanity() (gas: 18328)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 26.08ms (734.18us CPU time)
+
+Ran 2 test suites in 383.89ms (366.44ms CPU time): 10 tests passed, 0 failed, 0 skipped (10 total tests)
