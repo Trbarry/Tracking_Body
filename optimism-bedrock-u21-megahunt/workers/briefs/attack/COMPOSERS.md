@@ -1,5 +1,9 @@
 # COMPOSERS — after the six attack lanes (all killed, 0 candidates, 73 kill files)
 
+**Status 2026-11-17 (resume):** COMPOSER-1 and COMPOSER-2 (Opus) were stopped by a safety classifier; per
+`CADRE-LEGAL.md` section 5 they are NOT re-run or re-phrased. R1 targets third-party contracts and is OUT OF
+AUTHORIZATION under `CADRE-LEGAL.md` section 4 (programme rule: no testing with third-party smart contracts).
+
 Read `ATTACK_CONTEXT.md` (rules, infra, deliverables, candidate template/score), then `ATTACK-MATRIX.md`
 (every kill with its barrier — do NOT re-run a killed hypothesis unless your composition changes its
 precondition), `LIVE-OBJECTS.md` (real production objects), `PRIMITIVE-COMPATIBILITY-MATRIX.csv`,

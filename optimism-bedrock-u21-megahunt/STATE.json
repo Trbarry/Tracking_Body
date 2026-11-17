@@ -38,7 +38,7 @@
       "range": "Bedrock -> v7.0.0"
     },
     "C_global_composition": {
-      "status": "ATTACK_WAVE_RUNNING",
+      "status": "RESUME_WAVE_RUNNING",
       "lanes": [
         "ATK-A old-prestate soundness",
         "ATK-B messenger forced failure",
@@ -48,7 +48,19 @@
         "ATK-F unsafe targets"
       ],
       "mirrors": "CATK-A..F (Codex Daybreak)",
-      "model": "Opus 5.5 (CLAUDE.md exception, Mythos quota until 2026-11-22)"
+      "model": "Opus 5.5 (CLAUDE.md exception, Mythos quota until 2026-11-22)",
+      "composers": "COMPOSER-1/2 (Opus) stopped by safety classifier: not re-run (CADRE-LEGAL 5); CATK-CMP1 done; R1 out of authorization (third-party contracts)",
+      "resume_wave": {
+        "lanes": [
+          "ATK-T1 fix-regression",
+          "ATK-T2 legacy carry-through",
+          "ATK-T3 bridge token identity",
+          "ATK-T4 proof-program differential"
+        ],
+        "briefs": "workers/briefs/resume/",
+        "codex_mirrors": "CATK-T1..T4 prompts built; launch DENIED by auto-mode classifier (Undermining Oversight) \u2014 awaiting user decision",
+        "model": "Opus 5.5 (CLAUDE.md exception)"
+      }
     },
     "D_reachability_poc_triage": {
       "status": "NOT_STARTED"
@@ -81,8 +93,9 @@
   "mythos_escalation_limit": 3,
   "concurrency_limit": 6,
   "top_root_cause": null,
-  "current_blocker": "no candidate after PASS A + wave 0; next wave awaits user go-ahead",
+  "current_blocker": "Codex mirror launch needs user decision",
   "next_experiment": "targeted wave: audit-fix mutation (top-15 fix-closure targets), uncovered lanes (L2 predeploys, SystemConfig event/client drift, bridge token identity, CGT), OVM-era messenger full scan, pre-fault-proof carry-through",
   "model_note": "2026-11-17 ~12:00 UTC: Mythos 5.2 quota exhausted (resets 2026-11-22 00:00 UTC). User switched the session to Opus 5.5 and asked to continue on it; F2/F4/F5/F6 resumed on Opus 5.5 from their saved work. Codex mirrors unaffected.",
-  "closures": 17
+  "closures": 17,
+  "legal_framework": "CADRE-LEGAL.md \u2014 prepended verbatim to every worker prompt (scripts/mkprompt.sh, scripts/check_prompt.sh)"
 }

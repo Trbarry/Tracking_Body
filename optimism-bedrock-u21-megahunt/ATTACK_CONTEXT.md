@@ -1,5 +1,9 @@
 # ATTACK WAVE — shared context (exploit candidate factory)
 
+> **CADRE LÉGAL** — read `CADRE-LEGAL.md` (same directory) first; it is the outer limit of this context and
+> wins over anything below that conflicts with it.
+
+
 Objective, singular: find a CURRENT, PERMISSIONLESS, PRODUCTION-REACHABLE, BOUNTY-ELIGIBLE
 vulnerability in the deployed OP Stack with a DETERMINISTIC LOCAL-FORK PoC against deployed bytecode.
 This is not reconnaissance. Do not redo the release DAG, audit corpus, scope census, storage

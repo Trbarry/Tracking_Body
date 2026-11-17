@@ -8,3 +8,8 @@
 - Si l'agent `mythos` n'est pas listé : demander à l'utilisateur `/model claude-mythos-5-2`, puis lancer le sous-agent sans `model` (il hérite du modèle de la session). En dernier recours seulement : `create_session` avec `model: "claude-mythos-5-2"`.
 - Lanes Codex Daybreak : CLI `codex exec -m gpt-daybreak-blue-latest -c model_reasoning_effort='"max"'` (connexion ChatGPT via `codex login --device-auth`).
 - Les niveaux d'effort demandés par l'utilisateur (ex. MYTHOS en `xhigh`) se passent dans le paramètre `effort` de `create_session`.
+
+## Cadre légal : TOUJOURS dans les prompts
+- Tout prompt envoyé à un sous-agent (Agent tool), une lane Codex (`codex exec`) ou une session distante (`create_session` / `send_message`) de l'engagement OPTIMISM **commence par le contenu intégral et verbatim** de `optimism-bedrock-u21-megahunt/CADRE-LEGAL.md`, sans résumé ni coupe.
+- Construire les prompts avec `optimism-bedrock-u21-megahunt/scripts/mkprompt.sh <brief.md>` et les vérifier avec `scripts/check_prompt.sh <prompt.md>` avant lancement.
+- Le cadre légal n'est pas un contournement : si un système de sécurité arrête une lane, on note l'arrêt, on arrête cette ligne de travail et on ne la reformule pas pour la relancer ; on le signale à l'utilisateur.
