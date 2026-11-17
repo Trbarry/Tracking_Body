@@ -74,6 +74,7 @@ contract PortalHandlerLane31 is Test {
     function actionDeposit(uint96 rawValue, uint16 rawLength, address target) external {
         uint256 value = bound(uint256(rawValue), 0, 1 ether);
         uint256 length = bound(uint256(rawLength), 0, 1024);
+        target = address(uint160(0xD000 + (uint160(target) % 64)));
         bytes memory data = new bytes(length);
         vm.deal(address(this), value);
         actions.depositTransaction{ value: value }(
@@ -90,7 +91,8 @@ contract PortalHandlerLane31 is Test {
     }
 
     function actionProveAsAnotherSubmitter(uint160 rawActor) external {
-        address actor = address(uint160(bound(uint256(rawActor), 0x1000, type(uint160).max)));
+        address actor = address(uint160(0x31310000 + (rawActor % 16)));
+        vm.deal(actor, 0);
         vm.prank(actor);
         PORTAL.call(rawProveCalldata);
     }
@@ -168,6 +170,10 @@ contract PortalHandlerInvariantTest is RealWithdrawalBase {
             fixture.proofSubmitter,
             rawProveCalldata
         );
+        address invariantCaller = address(0x3131F00D);
+        vm.deal(invariantCaller, 100 ether);
+        targetSender(invariantCaller);
+        targetContract(address(handler));
     }
 
     function assertEthCustodyConservation() internal view {
@@ -221,5 +227,21 @@ contract PortalHandlerInvariantTest is RealWithdrawalBase {
             }
             assertAllInvariants();
         }
+    }
+
+    function invariant_ethCustodyConservation() public view {
+        assertEthCustodyConservation();
+    }
+
+    function invariant_portalHoldsOnlyExplicitDonations() public view {
+        assertPortalHoldsOnlyExplicitDonations();
+    }
+
+    function invariant_finalizedMessengerHasRecordedOutcome() public view {
+        assertFinalizedMessengerHasRecordedOutcome();
+    }
+
+    function invariant_l2SenderAlwaysRestored() public view {
+        assertL2SenderAlwaysRestored();
     }
 }

@@ -1,0 +1,24 @@
+No vulnerability candidate survived; candidate score: N/A. The 15-test fork suite passed, including finalizing a real pre-U21 proof worth 638.177259920741319864 ETH against deployed v9 bytecode.
+
+Files: [full report](/home/user/Tracking_Body/optimism-u21-novel-hunt/lanes/LANE-23-report.md), [trust/value flow](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-23/U21_TRUST_AND_VALUE_FLOW.md), [state baseline](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-23/STATE_BASELINE.md), [proxy map](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-23/U21_PROXY_IMPLEMENTATION_MAP.md), [fork tests](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-23/test/PortalETHLockboxConservation.t.sol), plus PRIM-2301–2308 and REJ-2301–2309.
+
+Primitives:
+
+- PRIM-2301 — exact deposit lock and split mint/call-value encoding.
+- PRIM-2302 — atomic unlock/call/relock-or-rollback finalization.
+- PRIM-2303 — pooled lockbox authorization without per-portal quotas.
+- PRIM-2304 — portal surplus side pocket and privileged sweep.
+- PRIM-2305 — atomic shared-lockbox migration with persistent old authorization.
+- PRIM-2306 — messenger replay escrow versus outer-call rollback.
+- PRIM-2307 — pause permits locking while blocking exits.
+- PRIM-2308 — CGT and zero-value conservation boundaries.
+
+Strongest negatives: reentrancy cannot double-unlock; failed calls never expose transient portal ETH; U21 moved no custody; insufficient pooled balance rolls finalization back; pause and CGT create no unbacked ETH; proof deletion cannot reopen finalization.
+
+Follow-ups:
+
+1. Shared lockbox blast radius from any independent super-root/chain-domain bug.
+2. Former-lockbox authorization after planned interop migration.
+3. Messenger replay escrow at future Amsterdam gas boundaries.
+
+Independence caveat: after all technical artifacts were complete, a final validation grep accidentally printed lines from other lanes. No conclusion was derived from that output; the report records the chronology and disclosure.

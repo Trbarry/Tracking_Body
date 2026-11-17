@@ -123,8 +123,8 @@ contract DifferentialWithdrawalTest is RealWithdrawalBase {
         vm.etch(L1_CDM, hex"60006000fd"); // PUSH0 PUSH0 REVERT
         Outcome memory pre = callFinalize(preFixture, 2_000_000);
 
-        vm.createSelectFork("l1");
-        Fixture memory postFixture = loadFixture("post-messenger-zero-1.json");
+        vm.createSelectFork("l1n");
+        Fixture memory postFixture = loadFixture("pre-messenger-zero.json");
         matureAndResolve(postFixture);
         vm.etch(L1_CDM, hex"60006000fd");
         Outcome memory post = callFinalize(postFixture, 2_000_000);
@@ -148,12 +148,12 @@ contract DifferentialWithdrawalTest is RealWithdrawalBase {
         Outcome memory v8AtMin = classifyAndRestore(preFixture, v8Min);
         Outcome memory v8Below = classifyAndRestore(preFixture, v8Min - 1);
 
-        vm.createSelectFork("l1");
-        Fixture memory postFixture = loadFixture("post-messenger-zero-1.json");
-        matureAndResolve(postFixture);
-        uint256 v9Min = binarySearchMinSuccess(postFixture);
-        Outcome memory v9AtMin = classifyAndRestore(postFixture, v9Min);
-        Outcome memory v9Below = classifyAndRestore(postFixture, v9Min - 1);
+        vm.createSelectFork("l1n");
+        Fixture memory nFixture = loadFixture("pre-messenger-zero.json");
+        matureAndResolve(nFixture);
+        uint256 v9Min = binarySearchMinSuccess(nFixture);
+        Outcome memory v9AtMin = classifyAndRestore(nFixture, v9Min);
+        Outcome memory v9Below = classifyAndRestore(nFixture, v9Min - 1);
 
         assertFalse(v8Below.callSucceeded);
         assertTrue(v8AtMin.callSucceeded && v8AtMin.finalized);

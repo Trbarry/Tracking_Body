@@ -1,0 +1,13 @@
+No files changed, compilation skipped
+
+Ran 6 tests for test/U21ExecutionGuards.t.sol:U21ExecutionGuardsTest
+[PASS] test_directCallsToStateMutatingOPCMEntryPointsRevert() (gas: 11800)
+[PASS] test_directMigratorCallCannotUseRealProxyAdminAuthority() (gas: 1670761)
+[PASS] test_directProxyAdminAndUtilsCallsCannotUpgradeRealProxy() (gas: 98789)
+[PASS] test_directStorageSetterCallWritesOnlySingletonStorage() (gas: 29230)
+[PASS] test_proxyAndImplementationInitializersAreNotReRunnable() (gas: 16843)
+[PASS] test_utilsCanPermissionlesslyOccupyPredictedNormalProxySalt() (gas: 1040446193)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 9.78ms (5.80ms CPU time)
+
+Ran 1 test suite in 14.23ms (9.78ms CPU time): 6 tests passed, 0 failed, 0 skipped (6 total tests)
+
