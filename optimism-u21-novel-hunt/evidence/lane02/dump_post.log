@@ -38,3 +38,7 @@ unichain-130 ETHLockbox ok 4
 unichain-130 AnchorStateRegistry ok 7
 unichain-130 DisputeGameFactory ok 9
 unichain-130 DelayedWETH ok 6
+unichain-130 L1CrossDomainMessenger ok 20
+unichain-130 L1StandardBridge ok 9
+unichain-130 L1ERC721Bridge ok 7
+unichain-130 OptimismMintableERC20Factory ok 4
