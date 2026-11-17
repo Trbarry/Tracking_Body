@@ -25,9 +25,9 @@ def batch(calls):
     for i in range(len(calls)):
         v = res[i]
         tries = 0
-        while isinstance(v, dict) and tries < 6:
+        while isinstance(v, dict) and tries < 20:
             tries += 1
-            import time; time.sleep(1.5 * tries)
+            import time; time.sleep(min(25, 3 * tries))
             body = json.dumps({"jsonrpc": "2.0", "id": 1, "method": calls[i][0], "params": calls[i][1]}).encode()
             try:
                 x = json.loads(urllib.request.urlopen(urllib.request.Request(rpc, data=body, headers={"Content-Type": "application/json"}), timeout=180).read())

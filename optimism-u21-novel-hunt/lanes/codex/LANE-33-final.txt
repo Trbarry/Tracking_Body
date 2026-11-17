@@ -1,0 +1,26 @@
+Completed the independent lane-33 scope snapshot.
+
+Files:
+
+- [Scope snapshot](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-33/SCOPE_SNAPSHOT.md)
+- [Lane report](/home/user/Tracking_Body/optimism-u21-novel-hunt/lanes/LANE-33-report.md)
+- [Retrieval manifest](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-33/retrieval-manifest.json)
+- [Implementation map](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-33/chain-implementation-map.json)
+- `PRIM-3301`–`3303`; `REJ-3301`–`3303`
+- Harness configured with `l1n`; no state-changing calls made.
+
+Live retrieval succeeded for [Immunefi scope](https://immunefi.com/bug-bounty/optimism/scope/), programme information, and both Discourse JSON endpoints. The [vote page](https://vote.optimism.io/proposals/18704058920168992233750266034048958164367667396985967653465644941701644737084) was visible through the web renderer/search index, but direct HTTP returned 403; recorded as partial.
+
+Headline facts: 36 assets, 30 impacts, $2,000,042 maximum, mandatory PoC, Primacy of Impact for Smart Contract/Blockchain impacts, explicit coverage of implementations behind listed proxies, and an independent scope route for official protocol-upgrade code/calldata. [U21 proposal 10948](https://gov.optimism.io/t/upgrade-21-interop-readiness/10948) and task `eth/084` cover OP, Ink, Soneium and Unichain.
+
+Primitives:
+
+- `PRIM-3301`: listed-proxy implementation coverage.
+- `PRIM-3302`: named-chain Primacy-of-Impact route.
+- `PRIM-3303`: official upgrade-proposal coverage.
+
+No candidate was created.
+
+Strongest negatives: current ASR and DelayedWETH addresses differ from the explicitly listed assets; sibling proxies are not explicit rows.
+
+Follow-up compositions: shared-v9 multi-chain impact; direct-impact bugs in current ASR/ETHLockbox; permissionless pre-positioning before documented interop migration.

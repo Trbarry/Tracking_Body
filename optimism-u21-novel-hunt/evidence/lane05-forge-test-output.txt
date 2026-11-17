@@ -1,0 +1,321 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/Sanity.t.sol:SanityTest
+[PASS] test_sanity() (gas: 18328)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 13.40ms (1.20ms CPU time)
+
+Ran 1 test for test/Lifecycle.t.sol:DeletePredicateTest
+[PASS] test_predicate_matrix() (gas: 1315243)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 32.39ms (21.26ms CPU time)
+
+Ran 1 test for test/Trojan.t.sol:TrojanGameTest
+[PASS] test_trojan_game_accepts_honest_proof_then_dies() (gas: 5034003)
+Logs:
+  challenger normalModeCredit (wei) 167594000000000000
+  required bond for position 2 (wei) 87594000000000000
+  root counteredBy/claimant/bond 0x9591B1C38D7ae6c50aA134A72bcF85fBf690fe51 0x9dF0C6b0066D5317aA5b38B36850548DaCCa6B4e 80000000000000000
+  credit(challenger) 167594000000000000 0x9591B1C38D7ae6c50aA134A72bcF85fBf690fe51
+  refundModeCredit(challenger) 87594000000000000
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 63.95ms (51.39ms CPU time)
+
+Ran 1 test for test/Migration.t.sol:MigrationSurvivalTest
+[PASS] test_proofs_do_not_survive_registry_swap() (gas: 2749865)
+Logs:
+  twin of honest game 0x40D4b10eFE088d1514A4BDe12C9A08e2112D2749
+  twin of attacker game 0x6847bdFf21AcDe4c87034AF49FFE0fC13BBc4c40
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 93.56ms (72.39ms CPU time)
+
+Ran 4 tests for test/CrossVersion.t.sol:CrossVersionTest
+[PASS] test_contract_submitter_real() (gas: 171335)
+Logs:
+  contract submitter code size 23 0xf0bAb059D64D0FD981cB3936E4B0999c4937EC95 1794824183
+
+[PASS] test_reprove_overwrites_and_duplicates() (gas: 11412681)
+Logs:
+  re-prove gas 263125
+  finalize gas with 43 submitters 205097
+
+[PASS] test_shadow_proof_does_not_affect_victim() (gas: 2478824)
+[PASS] test_v8_proof_finalizes_under_v9() (gas: 1588325)
+Logs:
+  game/ts 0xdABd4b65aE61b75BFB63DDFe6531a54FD9597e70 1794806891
+  target/value 0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1 119592959152653799482
+  sender 0x4200000000000000000000000000000000000007
+  lockbox delta 119592959152653799482
+
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 183.88ms (226.30ms CPU time)
+
+Ran 1 test for test/Survey.t.sol:SurveyTest
+[PASS] test_survey() (gas: 2684893)
+Logs:
+  now: 1794908075
+  --- 0 26425493
+  0x38479d42d553750f0bc9be7bbc16dbabad0c5e59bee9b92ce17f9826339a9218
+   submitter/game 0xb9B397fb65c9a336A6F117598361cE1efe05F35B 0xdABd4b65aE61b75BFB63DDFe6531a54FD9597e70
+   ts/nSub/finalized 1794806891 1 false
+   type/status/created 9 0 1794806627
+   proper/respected/valid true true false
+  --- 1 26425746
+  0x47b736f9bb45451aa7a7f9c334a97783616320467d52812cf80c3d237669b89a
+   submitter/game 0x67E10B7764A99165665557B3E6cF24555bfC88c3 0xdABd4b65aE61b75BFB63DDFe6531a54FD9597e70
+   ts/nSub/finalized 1794809939 1 false
+   type/status/created 9 0 1794806627
+   proper/respected/valid true true false
+  --- 2 26426156
+  0xd0cd30c60cd363e9ae343c799ea5c7fca0ee06430831f9b7cfa17e4b327e1171
+   submitter/game 0x975B547E4D2cd8001a2469ffdbF5B5e04328cE04 0x41166652Da61cCFD611c2689d3b1C3b42Bc58913
+   ts/nSub/finalized 1794814859 1 false
+   type/status/created 9 0 1794813863
+   proper/respected/valid true true false
+  --- 3 26426157
+  0x2d9921e3d10bedd23b855ab54c95b169919538627aa2456b0259a7f40ef969a8
+   submitter/game 0x29De230b13Ba319AD6726120757a9B251CB79eeB 0x41166652Da61cCFD611c2689d3b1C3b42Bc58913
+   ts/nSub/finalized 1794814871 1 false
+   type/status/created 9 0 1794813863
+   proper/respected/valid true true false
+  --- 4 26426933
+  0x41847f260787149609268f325413ac087b1f715896b5d2e5ff76c0da6bd1b6af
+   submitter/game 0xD445F50df30ECfcE51811789f170E06D5212d347 0xf0bAb059D64D0FD981cB3936E4B0999c4937EC95
+   ts/nSub/finalized 1794824183 1 false
+   type/status/created 9 0 1794821099
+   proper/respected/valid true true false
+  --- 5 26426994
+  0xd2b6bc38955dd93bde0176ed643112420b571ba06eeb7975664c01566d4684e5
+   submitter/game 0xE459ED7C6F668d2fCbFaB6FE6B596E5a68a5220B 0x4527a4Ee6cdb3fc84F5E0d8164de476a5B6D700f
+   ts/nSub/finalized 1794824915 1 false
+   type/status/created 9 0 1794824723
+   proper/respected/valid true true false
+  --- 6 26426996
+  0x307eae6acac788e8200b8a00d257dfa59f9c5cc561f8eb83cb425ed1550411c7
+   submitter/game 0xE459ED7C6F668d2fCbFaB6FE6B596E5a68a5220B 0x4527a4Ee6cdb3fc84F5E0d8164de476a5B6D700f
+   ts/nSub/finalized 1794824939 1 false
+   type/status/created 9 0 1794824723
+   proper/respected/valid true true false
+  --- 7 26427156
+  0x47fb7565a857ff3ffcebd0e59e251a2bb0859b2ed42768fff92fb137ae2dbc55
+   submitter/game 0x29De230b13Ba319AD6726120757a9B251CB79eeB 0x4527a4Ee6cdb3fc84F5E0d8164de476a5B6D700f
+   ts/nSub/finalized 1794826871 1 false
+   type/status/created 9 0 1794824723
+   proper/respected/valid true true false
+  --- 8 26427304
+  0x39a27ebf931043d055970ff48cee3a8fefd41b954c162c683ec53e38afc38e9d
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794828647 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 9 26427377
+  0xd56b9f97b8f6b3a048708121649b539a945ea229a603bdcb31f7e09d040ae33b
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829523 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 10 26427377
+  0x8b435d29927b4e5cce8ff9e8f4ba5333c988995b69190516433dea64bcd7a6a0
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829523 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 11 26427377
+  0xafcf74d7431276857f6130307134964da2729d43ee0ffd483b4817343fe6c50c
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829523 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 12 26427377
+  0xc7b858d718c53adb149fd3e34e43513c0a3ae6e7adef81f553ed3f832b06eeb1
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829523 4 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 13 26427380
+  0x31b347b87bcc6cb90794b4d5ac5c269ff4e74bb963f1dc2f4e268a69bbf74506
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829559 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 14 26427384
+  0x63619459dbd5bc1019d910322bd7447d4804e805ab95d60cbb529e8add34eab3
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829607 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 15 26427386
+  0x9638b5279611410958599d5d5fda7c7bf1090a07de33a4c93657a09221306e2c
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829631 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 16 26427386
+  0xda7a180526c8fd86e875720a2101a683cf2522b52a6e2b5d8588db5b1b13e5b1
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829631 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 17 26427386
+  0x6b095f9a11436a72ea5ac42eb3bf70ed9cf0afa696ada30c744bb6485c053f03
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829631 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 18 26427387
+  0x71d22b99d500de1148f0c076f47cecbab72479460fdc8e14605c1cdca354a815
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829643 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 19 26427387
+  0x7244b67ad57566deecb220b96ca98ee9c7027507db39a1c764bb4e3274970c96
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829643 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 20 26427387
+  0x064d165d9ff4afd28e35ff40605275874ca0f54f4533bd2ad14a766af5940095
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829643 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 21 26427387
+  0x0431acb3a4aab4db432b4db268431fc1bc78310acc458a59b4b5caa0853afbc7
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829643 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 22 26427387
+  0x1eeb2471c2edc4bf2bdc783bd9feb656ac1a9969d65ff067e1c50049d7eadaa0
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829643 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 23 26427390
+  0x5d9c92b778da005a3eeb6dbb95b8709e0392ebec9200640f92d7b78609b3f333
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829679 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 24 26427390
+  0xa8fac627372ac7a14fa252bf1751f9067ebf020ea06b64be5d73724946d57381
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829679 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 25 26427390
+  0x106df37c8a960b6149427d994c643bfca0bd63809c8a2f597a9c69ca5d22173d
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829679 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 26 26427390
+  0xe1dc48367cde7f4e04f4e3c7d760c50e7f8c11254e043b3deed33aa67a6cf76c
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829679 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 27 26427395
+  0x83ae6352507a4fe66fe92f4faeee152e7c53378564274859382ecbdfc313f06b
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829739 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 28 26427396
+  0x40282f3b7b110c7c9b5c6609fcf2b2cedba0195da57940da22881a1ff234aaf8
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829751 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 29 26427396
+  0xd40e35e1f8ab074de3e98bd56f5f0a8b45de264945f2dbe279dbb9ffbabb09dd
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829751 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 30 26427397
+  0x4a885811299f58d0d90b96c5cb10073b4c45dda9fde6237cc9f365df6127aa13
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829763 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 31 26427397
+  0x353106ba1c0962c9835e2de4bdbbf369173515596de348811733c0394c10cabf
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829763 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 32 26427399
+  0xe1ab5026830314b88213e17aa5fb54122da4c660d7d9f5daf16f7818cefff1d8
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829787 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 33 26427399
+  0xafbcea90ebcde779141a9eb08a3ad17b540e8ea376c57fa1d1a0459b83afba49
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829787 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 34 26427400
+  0xc2743fd79738acc106e5212217df4cee4465057ca1b060fc71c9e50011bc992d
+   submitter/game 0xa7fAd3a7AeF03e496B03709163137858F08f4ddA 0xC6dF2be56c7F7134526733918D1a7A3c8fBbf3a0
+   ts/nSub/finalized 1794829799 1 false
+   type/status/created 9 2 1792045811
+   proper/respected/valid true true true
+  --- 35 26428146
+  0xdf080c7d7b0de5eed6ea11a203638de9fb77d08e704b433f63b1129a3c5e2f6c
+   submitter/game 0xD574f4Be8ecf7163a68bAD0F7d07581a96DE8F48 0x16A332e6ddf7a0B883134FAC1A2d45dFDcaD87a8
+   ts/nSub/finalized 1794838775 1 false
+   type/status/created 9 0 1794835583
+   proper/respected/valid true true false
+  --- 36 26428732
+  0x0a705c246efb851e64bbeba145f0bcb38f8a7973bc6854c8dc5684a53c0d99b7
+   submitter/game 0x55e55C649895940826a852820d9e1A076Ec47b09 0x0FA76e448011B0F317D3a5921705b47CdC109902
+   ts/nSub/finalized 1794845867 1 false
+   type/status/created 9 0 1794665483
+   proper/respected/valid true true false
+  --- 37 26429408
+  0x8df3d52a499b3881a91e2a38a6eb46d136d7b47d5abb52685965acc39b1df241
+   submitter/game 0x6A9C2449c32779F89d0CcAfd746152e237c1BDf2 0xbEc6373FA5B74517350D9CB358a5e7D9F3DaB356
+   ts/nSub/finalized 1794853991 1 false
+   type/status/created 9 0 1794853667
+   proper/respected/valid true true false
+  --- 38 26429987
+  0x46661012d8656b178f8441c1fa97f2d54fde99cd13b260161c5f2333c0fc4079
+   submitter/game 0x2Ce910fBba65B454bBAf6A18c952A70f3bcd8299 0xeD801ca7a455D356aA18Eb129C3fb1Bcf138cF54
+   ts/nSub/finalized 1794860963 1 false
+   type/status/created 9 0 1794860915
+   proper/respected/valid true true false
+  --- 39 26429991
+  0xe3c033b651db7e4f5be6cf0ed9d3d8dc7d7c7da0ddd314e33d133e91c0c4cee3
+   submitter/game 0x2Ce910fBba65B454bBAf6A18c952A70f3bcd8299 0xeD801ca7a455D356aA18Eb129C3fb1Bcf138cF54
+   ts/nSub/finalized 1794861011 1 false
+   type/status/created 9 0 1794860915
+   proper/respected/valid true true false
+  --- 40 26429992
+  0xcb4d1cae41ae4f41058343d205d1e295eb5e4a55a380f45694e2b88991a1651d
+   submitter/game 0x47728c875b7F52a40227d662f83a3C3d0f7E6FBB 0x86512332B510F40Bb9361dE685cA1e4815dEe5fe
+   ts/nSub/finalized 1794861023 1 false
+   type/status/created 9 0 1794857291
+   proper/respected/valid true true false
+  --- 41 26432559
+  0x76313a38c7aca313f8a180125773dff4981c9f4f9bf81e134a894444412e6b59
+   submitter/game 0x5f7f3E256AB61566dB3A8047B4405A52aa3517b2 0xF56587A839DFdD3b1bC312f78Dcd9D94Fa492cCC
+   ts/nSub/finalized 1794891923 1 false
+   type/status/created 9 0 1794891875
+   proper/respected/valid true true false
+  --- 42 26432798
+  0x691e4f540a8c8a8e845214c465f6ae92bd517ca6b62f7f21178e80caf3959758
+   submitter/game 0x01f92206cC403Bef9B9ac9ed8F2201a8e094faD6 0xF56587A839DFdD3b1bC312f78Dcd9D94Fa492cCC
+   ts/nSub/finalized 1794894803 1 false
+   type/status/created 9 0 1794891875
+   proper/respected/valid true true false
+  --- 43 26433490
+  0x9f76960485de586e1110cb8bd53ef9e587a548328f7811ede3e4391b45478627
+   submitter/game 0x975B547E4D2cd8001a2469ffdbF5B5e04328cE04 0x0C3953c5173c923670DbFd295C8C76b795955444
+   ts/nSub/finalized 1794903131 1 false
+   type/status/created 9 0 1794902735
+   proper/respected/valid true true false
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 191.75ms (191.59ms CPU time)
+
+Ran 6 test suites in 203.09ms (578.94ms CPU time): 9 tests passed, 0 failed, 0 skipped (9 total tests)

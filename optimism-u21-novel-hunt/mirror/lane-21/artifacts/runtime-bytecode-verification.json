@@ -1,0 +1,122 @@
+[
+  {
+    "contract": "SuperchainConfig",
+    "address": "0xA303a644cfbC0c34f6a9dBEaFdebA4C967EA01e7",
+    "artifact": "/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/forge-artifacts/SuperchainConfig.sol/SuperchainConfig.json",
+    "built_length": 3195,
+    "deployed_length": 3195,
+    "immutable_ranges": 2,
+    "match_ignoring_immutables": true,
+    "first_mismatch_byte": null
+  },
+  {
+    "contract": "SystemConfig",
+    "address": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+    "artifact": "/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/forge-artifacts/SystemConfig.sol/SystemConfig.json",
+    "built_length": 12482,
+    "deployed_length": 12482,
+    "immutable_ranges": 2,
+    "match_ignoring_immutables": true,
+    "first_mismatch_byte": null
+  },
+  {
+    "contract": "OptimismPortal2",
+    "address": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+    "artifact": "/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/forge-artifacts/OptimismPortal2.sol/OptimismPortal2.json",
+    "built_length": 23173,
+    "deployed_length": 23173,
+    "immutable_ranges": 4,
+    "match_ignoring_immutables": true,
+    "first_mismatch_byte": null
+  },
+  {
+    "contract": "ETHLockbox",
+    "address": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+    "artifact": "/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/forge-artifacts/ETHLockbox.sol/ETHLockbox.json",
+    "built_length": 5006,
+    "deployed_length": 5006,
+    "immutable_ranges": 2,
+    "match_ignoring_immutables": true,
+    "first_mismatch_byte": null
+  },
+  {
+    "contract": "L1CrossDomainMessenger",
+    "address": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+    "artifact": "/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/forge-artifacts/L1CrossDomainMessenger.sol/L1CrossDomainMessenger.json",
+    "built_length": 9454,
+    "deployed_length": 9454,
+    "immutable_ranges": 2,
+    "match_ignoring_immutables": true,
+    "first_mismatch_byte": null
+  },
+  {
+    "contract": "L1StandardBridge",
+    "address": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+    "artifact": "/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/forge-artifacts/L1StandardBridge.sol/L1StandardBridge.json",
+    "built_length": 12620,
+    "deployed_length": 12620,
+    "immutable_ranges": 2,
+    "match_ignoring_immutables": true,
+    "first_mismatch_byte": null
+  },
+  {
+    "contract": "L1ERC721Bridge",
+    "address": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+    "artifact": "/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/forge-artifacts/L1ERC721Bridge.sol/L1ERC721Bridge.json",
+    "built_length": 6186,
+    "deployed_length": 6186,
+    "immutable_ranges": 2,
+    "match_ignoring_immutables": true,
+    "first_mismatch_byte": null
+  },
+  {
+    "contract": "OptimismMintableERC20Factory",
+    "address": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+    "artifact": "/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/forge-artifacts/OptimismMintableERC20Factory.sol/OptimismMintableERC20Factory.json",
+    "built_length": 11905,
+    "deployed_length": 11905,
+    "immutable_ranges": 0,
+    "match_ignoring_immutables": true,
+    "first_mismatch_byte": null
+  },
+  {
+    "contract": "DisputeGameFactory",
+    "address": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+    "artifact": "/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/forge-artifacts/DisputeGameFactory.sol/DisputeGameFactory.json",
+    "built_length": 8032,
+    "deployed_length": 8032,
+    "immutable_ranges": 2,
+    "match_ignoring_immutables": true,
+    "first_mismatch_byte": null
+  },
+  {
+    "contract": "DelayedWETH",
+    "address": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+    "artifact": "/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/forge-artifacts/DelayedWETH.sol/DelayedWETH.json",
+    "built_length": 5922,
+    "deployed_length": 5922,
+    "immutable_ranges": 4,
+    "match_ignoring_immutables": true,
+    "first_mismatch_byte": null
+  },
+  {
+    "contract": "AnchorStateRegistry",
+    "address": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+    "artifact": "/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/forge-artifacts/AnchorStateRegistry.sol/AnchorStateRegistry.json",
+    "built_length": 7311,
+    "deployed_length": 7311,
+    "immutable_ranges": 4,
+    "match_ignoring_immutables": true,
+    "first_mismatch_byte": null
+  },
+  {
+    "contract": "StorageSetter",
+    "address": "0x2476c911e6d4d9411e677d8faf15a64ac1fdeee8",
+    "artifact": "/home/user/ethereum-optimism/op-v9.0.0/packages/contracts-bedrock/forge-artifacts/StorageSetter.sol/StorageSetter.json",
+    "built_length": 1130,
+    "deployed_length": 1130,
+    "immutable_ranges": 0,
+    "match_ignoring_immutables": true,
+    "first_mismatch_byte": null
+  }
+]

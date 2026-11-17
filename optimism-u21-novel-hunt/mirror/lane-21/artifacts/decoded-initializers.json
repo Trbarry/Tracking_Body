@@ -1,0 +1,728 @@
+[
+  {
+    "sequence": 0,
+    "chain": "Superchain",
+    "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+    "contract": "SuperchainConfig",
+    "target": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+    "implementation": "0xA303a644cfbC0c34f6a9dBEaFdebA4C967EA01e7",
+    "initializer_selector": "0xc4d66de8",
+    "initializer_signature": "initialize(address)",
+    "initializer_args": [
+      "0x09f7150D8c019BeF34450d6920f6B3608ceFdAf2"
+    ],
+    "initializer_calldata": "0xc4d66de800000000000000000000000009f7150d8c019bef34450d6920f6b3608cefdaf2"
+  },
+  {
+    "sequence": 1,
+    "chain": "OP Mainnet",
+    "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+    "contract": "SystemConfig",
+    "target": "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290",
+    "implementation": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+    "initializer_selector": "0x4843108d",
+    "initializer_signature": "initialize(address,uint32,uint32,bytes32,uint64,address,(uint32,uint8,uint8,uint32,uint32,uint128),(address,address,address,address,address,address,address),uint256,address)",
+    "initializer_args": [
+      "0x847B5c174615B1B7fDF770882256e2D3E95b9D92",
+      5227,
+      1014213,
+      "0x0000000000000000000000006887246668a3b87f54deb3b94ba47a6f63f32985",
+      40000000,
+      "0xAAAA45d9549EDA09E70937013520214382Ffc4A2",
+      [
+        20000000,
+        10,
+        8,
+        1000000000,
+        1000000,
+        "340282366920938463463374607431768211455"
+      ],
+      [
+        "0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1",
+        "0x5a7749f83b81B301cAb5f48EB8516B986DAef23D",
+        "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
+        "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+        "0x75505a97BD334E7BD3C476893285569C4136Fa0F",
+        "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+        "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f"
+      ],
+      10,
+      "0x95703e0982140D16f8ebA6d158FccEde42f04a4C"
+    ],
+    "initializer_calldata": "0x4843108d000000000000000000000000847b5c174615b1b7fdf770882256e2d3e95b9d92000000000000000000000000000000000000000000000000000000000000146b00000000000000000000000000000000000000000000000000000000000f79c50000000000000000000000006887246668a3b87f54deb3b94ba47a6f63f329850000000000000000000000000000000000000000000000000000000002625a00000000000000000000000000aaaa45d9549eda09e70937013520214382ffc4a20000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff00000000000000000000000025ace71c97b33cc4729cf772ae268934f7ab5fa10000000000000000000000005a7749f83b81b301cab5f48eb8516b986daef23d00000000000000000000000099c9fc46f92e8a1c0dec1b1747d010903e884be1000000000000000000000000beb5fc579115071764c7423a4f12edde41f106ed00000000000000000000000075505a97bd334e7bd3c476893285569c4136fa0f0000000000000000000000001b6dbf05eaf22d4e70dc993e8a19dd9f3dcb31620000000000000000000000002d91e6f2bcf6cd1df90e1faf9714e18705ea331f000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c"
+  },
+  {
+    "sequence": 2,
+    "chain": "OP Mainnet",
+    "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+    "contract": "OptimismPortal2",
+    "target": "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+    "implementation": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+    "initializer_selector": "0xc0c53b8b",
+    "initializer_signature": "initialize(address,address,address)",
+    "initializer_args": [
+      "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290",
+      "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+      "0x322b47Ff1FA8D5611F761e3E275C45B71b294D43"
+    ],
+    "initializer_calldata": "0xc0c53b8b000000000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb29000000000000000000000000023b2c62946350f4246f9f9d027e071f0264fd113000000000000000000000000322b47ff1fa8d5611f761e3e275c45b71b294d43"
+  },
+  {
+    "sequence": 3,
+    "chain": "OP Mainnet",
+    "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+    "contract": "ETHLockbox",
+    "target": "0x322b47Ff1FA8D5611F761e3E275C45B71b294D43",
+    "implementation": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+    "initializer_selector": "0x946d9204",
+    "initializer_signature": "initialize(address,address[])",
+    "initializer_args": [
+      "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+      [
+        "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed"
+      ]
+    ],
+    "initializer_calldata": "0x946d920400000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000001000000000000000000000000beb5fc579115071764c7423a4f12edde41f106ed"
+  },
+  {
+    "sequence": 4,
+    "chain": "OP Mainnet",
+    "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+    "contract": "L1CrossDomainMessenger",
+    "target": "0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1",
+    "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+    "initializer_selector": "0x485cc955",
+    "initializer_signature": "initialize(address,address)",
+    "initializer_args": [
+      "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290",
+      "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed"
+    ],
+    "initializer_calldata": "0x485cc955000000000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb290000000000000000000000000beb5fc579115071764c7423a4f12edde41f106ed"
+  },
+  {
+    "sequence": 5,
+    "chain": "OP Mainnet",
+    "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+    "contract": "L1StandardBridge",
+    "target": "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
+    "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+    "initializer_selector": "0x485cc955",
+    "initializer_signature": "initialize(address,address)",
+    "initializer_args": [
+      "0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1",
+      "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290"
+    ],
+    "initializer_calldata": "0x485cc95500000000000000000000000025ace71c97b33cc4729cf772ae268934f7ab5fa1000000000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb290"
+  },
+  {
+    "sequence": 6,
+    "chain": "OP Mainnet",
+    "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+    "contract": "L1ERC721Bridge",
+    "target": "0x5a7749f83b81B301cAb5f48EB8516B986DAef23D",
+    "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+    "initializer_selector": "0x485cc955",
+    "initializer_signature": "initialize(address,address)",
+    "initializer_args": [
+      "0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1",
+      "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290"
+    ],
+    "initializer_calldata": "0x485cc95500000000000000000000000025ace71c97b33cc4729cf772ae268934f7ab5fa1000000000000000000000000229047fed2591dbec1ef1118d64f7af3db9eb290"
+  },
+  {
+    "sequence": 7,
+    "chain": "OP Mainnet",
+    "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+    "contract": "OptimismMintableERC20Factory",
+    "target": "0x75505a97BD334E7BD3C476893285569C4136Fa0F",
+    "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+    "initializer_selector": "0xc4d66de8",
+    "initializer_signature": "initialize(address)",
+    "initializer_args": [
+      "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1"
+    ],
+    "initializer_calldata": "0xc4d66de800000000000000000000000099c9fc46f92e8a1c0dec1b1747d010903e884be1"
+  },
+  {
+    "sequence": 8,
+    "chain": "OP Mainnet",
+    "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+    "contract": "DisputeGameFactory",
+    "target": "0xe5965Ab5962eDc7477C8520243A95517CD252fA9",
+    "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+    "initializer_selector": "0xc4d66de8",
+    "initializer_signature": "initialize(address)",
+    "initializer_args": [
+      "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A"
+    ],
+    "initializer_calldata": "0xc4d66de80000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a"
+  },
+  {
+    "sequence": 9,
+    "chain": "OP Mainnet",
+    "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+    "contract": "DelayedWETH",
+    "target": "0x1B6DBF05EaF22d4E70dC993e8a19dd9F3dcb3162",
+    "implementation": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+    "initializer_selector": "0xc4d66de8",
+    "initializer_signature": "initialize(address)",
+    "initializer_args": [
+      "0x322b47Ff1FA8D5611F761e3E275C45B71b294D43"
+    ],
+    "initializer_calldata": "0xc4d66de8000000000000000000000000322b47ff1fa8d5611f761e3e275c45b71b294d43"
+  },
+  {
+    "sequence": 10,
+    "chain": "OP Mainnet",
+    "proxy_admin": "0x543ba4aadbab8f9025686bd03993043599c6fb04",
+    "contract": "AnchorStateRegistry",
+    "target": "0x23B2C62946350F4246f9f9D027e071f0264FD113",
+    "implementation": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+    "initializer_selector": "0x47a222c5",
+    "initializer_signature": "initialize(address,address,(bytes32,uint256),uint32)",
+    "initializer_args": [
+      "0x322b47Ff1FA8D5611F761e3E275C45B71b294D43",
+      "0xe5965Ab5962eDc7477C8520243A95517CD252fA9",
+      [
+        "0xbd4aeba96e33ef5582e14257fb776b3223ad45934ccd368c2f3084c8b75c1d68",
+        1788842855
+      ],
+      9
+    ],
+    "initializer_calldata": "0x47a222c5000000000000000000000000322b47ff1fa8d5611f761e3e275c45b71b294d43000000000000000000000000e5965ab5962edc7477c8520243a95517cd252fa9bd4aeba96e33ef5582e14257fb776b3223ad45934ccd368c2f3084c8b75c1d68000000000000000000000000000000000000000000000000000000006a9f93670000000000000000000000000000000000000000000000000000000000000009"
+  },
+  {
+    "sequence": 11,
+    "chain": "Ink",
+    "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "contract": "SystemConfig",
+    "target": "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+    "implementation": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+    "initializer_selector": "0x4843108d",
+    "initializer_signature": "initialize(address,uint32,uint32,bytes32,uint64,address,(uint32,uint8,uint8,uint32,uint32,uint128),(address,address,address,address,address,address,address),uint256,address)",
+    "initializer_args": [
+      "0x847B5c174615B1B7fDF770882256e2D3E95b9D92",
+      4424,
+      810831,
+      "0x0000000000000000000000006db6161fc5662450e801398bad62dd9921216b98",
+      30000000,
+      "0x7b322282DF45E537E5de76D60E1432Db3cF3F8E1",
+      [
+        20000000,
+        10,
+        8,
+        1000000000,
+        1000000,
+        "340282366920938463463374607431768211455"
+      ],
+      [
+        "0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f",
+        "0x661235a238B11191211fa95D4Dd9E423d521E0Be",
+        "0x88FF1e5b602916615391F55854588EFcBB7663f0",
+        "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+        "0xA8B389A82e088b164cD03230e900980CcED34d29",
+        "0x57b4C29DAee99a28E6E86778b499361294c134eA",
+        "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f"
+      ],
+      57073,
+      "0x95703e0982140D16f8ebA6d158FccEde42f04a4C"
+    ],
+    "initializer_calldata": "0x4843108d000000000000000000000000847b5c174615b1b7fdf770882256e2d3e95b9d92000000000000000000000000000000000000000000000000000000000000114800000000000000000000000000000000000000000000000000000000000c5f4f0000000000000000000000006db6161fc5662450e801398bad62dd9921216b980000000000000000000000000000000000000000000000000000000001c9c3800000000000000000000000007b322282df45e537e5de76d60e1432db3cf3f8e10000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff00000000000000000000000069d3cf86b2bf1a9e99875b7e2d9b6a84426c171f000000000000000000000000661235a238b11191211fa95d4dd9e423d521e0be00000000000000000000000088ff1e5b602916615391f55854588efcbb7663f00000000000000000000000005d66c1782664115999c47c9fa5cd031f495d3e4f000000000000000000000000a8b389a82e088b164cd03230e900980cced34d2900000000000000000000000057b4c29daee99a28e6e86778b499361294c134ea0000000000000000000000002d91e6f2bcf6cd1df90e1faf9714e18705ea331f000000000000000000000000000000000000000000000000000000000000def100000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c"
+  },
+  {
+    "sequence": 12,
+    "chain": "Ink",
+    "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "contract": "OptimismPortal2",
+    "target": "0x5d66C1782664115999C47c9fA5cd031f495D3e4F",
+    "implementation": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+    "initializer_selector": "0xc0c53b8b",
+    "initializer_signature": "initialize(address,address,address)",
+    "initializer_args": [
+      "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+      "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+      "0xbd4AbB321138e8Eddc399cE64E66451294325a14"
+    ],
+    "initializer_calldata": "0xc0c53b8b00000000000000000000000062c0a111929fa32cec2f76adba54c16afb6e8364000000000000000000000000ee018baf058227872540ac60efbd38b023d9dae2000000000000000000000000bd4abb321138e8eddc399ce64e66451294325a14"
+  },
+  {
+    "sequence": 13,
+    "chain": "Ink",
+    "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "contract": "ETHLockbox",
+    "target": "0xbd4AbB321138e8Eddc399cE64E66451294325a14",
+    "implementation": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+    "initializer_selector": "0x946d9204",
+    "initializer_signature": "initialize(address,address[])",
+    "initializer_args": [
+      "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+      [
+        "0x5d66C1782664115999C47c9fA5cd031f495D3e4F"
+      ]
+    ],
+    "initializer_calldata": "0x946d920400000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000010000000000000000000000005d66c1782664115999c47c9fa5cd031f495d3e4f"
+  },
+  {
+    "sequence": 14,
+    "chain": "Ink",
+    "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "contract": "L1CrossDomainMessenger",
+    "target": "0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f",
+    "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+    "initializer_selector": "0x485cc955",
+    "initializer_signature": "initialize(address,address)",
+    "initializer_args": [
+      "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364",
+      "0x5d66C1782664115999C47c9fA5cd031f495D3e4F"
+    ],
+    "initializer_calldata": "0x485cc95500000000000000000000000062c0a111929fa32cec2f76adba54c16afb6e83640000000000000000000000005d66c1782664115999c47c9fa5cd031f495d3e4f"
+  },
+  {
+    "sequence": 15,
+    "chain": "Ink",
+    "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "contract": "L1StandardBridge",
+    "target": "0x88FF1e5b602916615391F55854588EFcBB7663f0",
+    "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+    "initializer_selector": "0x485cc955",
+    "initializer_signature": "initialize(address,address)",
+    "initializer_args": [
+      "0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f",
+      "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364"
+    ],
+    "initializer_calldata": "0x485cc95500000000000000000000000069d3cf86b2bf1a9e99875b7e2d9b6a84426c171f00000000000000000000000062c0a111929fa32cec2f76adba54c16afb6e8364"
+  },
+  {
+    "sequence": 16,
+    "chain": "Ink",
+    "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "contract": "L1ERC721Bridge",
+    "target": "0x661235a238B11191211fa95D4Dd9E423d521E0Be",
+    "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+    "initializer_selector": "0x485cc955",
+    "initializer_signature": "initialize(address,address)",
+    "initializer_args": [
+      "0x69d3Cf86B2Bf1a9e99875B7e2D9B6a84426c171f",
+      "0x62C0a111929fA32ceC2F76aDba54C16aFb6E8364"
+    ],
+    "initializer_calldata": "0x485cc95500000000000000000000000069d3cf86b2bf1a9e99875b7e2d9b6a84426c171f00000000000000000000000062c0a111929fa32cec2f76adba54c16afb6e8364"
+  },
+  {
+    "sequence": 17,
+    "chain": "Ink",
+    "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "contract": "OptimismMintableERC20Factory",
+    "target": "0xA8B389A82e088b164cD03230e900980CcED34d29",
+    "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+    "initializer_selector": "0xc4d66de8",
+    "initializer_signature": "initialize(address)",
+    "initializer_args": [
+      "0x88FF1e5b602916615391F55854588EFcBB7663f0"
+    ],
+    "initializer_calldata": "0xc4d66de800000000000000000000000088ff1e5b602916615391f55854588efcbb7663f0"
+  },
+  {
+    "sequence": 18,
+    "chain": "Ink",
+    "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "contract": "DisputeGameFactory",
+    "target": "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+    "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+    "initializer_selector": "0xc4d66de8",
+    "initializer_signature": "initialize(address)",
+    "initializer_args": [
+      "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A"
+    ],
+    "initializer_calldata": "0xc4d66de80000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a"
+  },
+  {
+    "sequence": 19,
+    "chain": "Ink",
+    "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "contract": "DelayedWETH",
+    "target": "0x57b4C29DAee99a28E6E86778b499361294c134eA",
+    "implementation": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+    "initializer_selector": "0xc4d66de8",
+    "initializer_signature": "initialize(address)",
+    "initializer_args": [
+      "0xbd4AbB321138e8Eddc399cE64E66451294325a14"
+    ],
+    "initializer_calldata": "0xc4d66de8000000000000000000000000bd4abb321138e8eddc399ce64e66451294325a14"
+  },
+  {
+    "sequence": 20,
+    "chain": "Ink",
+    "proxy_admin": "0xd56045e68956fce2576e680c95a4750cf8241f79",
+    "contract": "AnchorStateRegistry",
+    "target": "0xEe018bAf058227872540AC60eFbd38b023d9dAe2",
+    "implementation": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+    "initializer_selector": "0x47a222c5",
+    "initializer_signature": "initialize(address,address,(bytes32,uint256),uint32)",
+    "initializer_args": [
+      "0xbd4AbB321138e8Eddc399cE64E66451294325a14",
+      "0x10d7B35078d3baabB96Dd45a9143B94be65b12CD",
+      [
+        "0x25b22a0c711fa1d01b3cdb95fb98c0e7ff003b00909bfe8fade3507a6e62d44e",
+        1788848282
+      ],
+      9
+    ],
+    "initializer_calldata": "0x47a222c5000000000000000000000000bd4abb321138e8eddc399ce64e66451294325a1400000000000000000000000010d7b35078d3baabb96dd45a9143b94be65b12cd25b22a0c711fa1d01b3cdb95fb98c0e7ff003b00909bfe8fade3507a6e62d44e000000000000000000000000000000000000000000000000000000006a9fa89a0000000000000000000000000000000000000000000000000000000000000009"
+  },
+  {
+    "sequence": 21,
+    "chain": "Soneium",
+    "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "contract": "SystemConfig",
+    "target": "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+    "implementation": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+    "initializer_selector": "0x4843108d",
+    "initializer_signature": "initialize(address,uint32,uint32,bytes32,uint64,address,(uint32,uint8,uint8,uint32,uint32,uint128),(address,address,address,address,address,address,address),uint256,address)",
+    "initializer_args": [
+      "0x509182eC226b3B71D36A3255A80EF0b1A9D43033",
+      9736,
+      1540079,
+      "0x0000000000000000000000006776be80dbada6a02b5f2095cf13734ac303b8d1",
+      40000000,
+      "0x7c2Bd59ee2a2C7391c9A240132f26071e9546262",
+      [
+        20000000,
+        10,
+        8,
+        1000000000,
+        1000000,
+        "340282366920938463463374607431768211455"
+      ],
+      [
+        "0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f",
+        "0x5933e323bE8896DfaCd1cD671442F27dAA10a053",
+        "0xeb9bf100225c214Efc3E7C651ebbaDcF85177607",
+        "0x88e529A6ccd302c948689Cd5156C83D4614FAE92",
+        "0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F",
+        "0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47",
+        "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f"
+      ],
+      1868,
+      "0x95703e0982140D16f8ebA6d158FccEde42f04a4C"
+    ],
+    "initializer_calldata": "0x4843108d000000000000000000000000509182ec226b3b71d36a3255a80ef0b1a9d4303300000000000000000000000000000000000000000000000000000000000026080000000000000000000000000000000000000000000000000000000000177fef0000000000000000000000006776be80dbada6a02b5f2095cf13734ac303b8d10000000000000000000000000000000000000000000000000000000002625a000000000000000000000000007c2bd59ee2a2c7391c9a240132f26071e95462620000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff0000000000000000000000009cf951e3f74b644e621b36ca9cea147a78d4c39f0000000000000000000000005933e323be8896dfacd1cd671442f27daa10a053000000000000000000000000eb9bf100225c214efc3e7c651ebbadcf8517760700000000000000000000000088e529a6ccd302c948689cd5156c83d4614fae92000000000000000000000000c1047e30efc9e172cfe7aa0219895b6a43fc415f00000000000000000000000018fbb58c366e21f395ddec7cba0510a2d9116b470000000000000000000000002d91e6f2bcf6cd1df90e1faf9714e18705ea331f000000000000000000000000000000000000000000000000000000000000074c00000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c"
+  },
+  {
+    "sequence": 22,
+    "chain": "Soneium",
+    "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "contract": "OptimismPortal2",
+    "target": "0x88e529A6ccd302c948689Cd5156C83D4614FAE92",
+    "implementation": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+    "initializer_selector": "0xc0c53b8b",
+    "initializer_signature": "initialize(address,address,address)",
+    "initializer_args": [
+      "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+      "0x4890928941e62e273dA359374b105F803329F473",
+      "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31"
+    ],
+    "initializer_calldata": "0xc0c53b8b0000000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c30000000000000000000000004890928941e62e273da359374b105f803329f47300000000000000000000000067b4de6ffa66ef201ea6099a89ca397d56622e31"
+  },
+  {
+    "sequence": 23,
+    "chain": "Soneium",
+    "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "contract": "ETHLockbox",
+    "target": "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31",
+    "implementation": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+    "initializer_selector": "0x946d9204",
+    "initializer_signature": "initialize(address,address[])",
+    "initializer_args": [
+      "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+      [
+        "0x88e529A6ccd302c948689Cd5156C83D4614FAE92"
+      ]
+    ],
+    "initializer_calldata": "0x946d920400000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000100000000000000000000000088e529a6ccd302c948689cd5156c83d4614fae92"
+  },
+  {
+    "sequence": 24,
+    "chain": "Soneium",
+    "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "contract": "L1CrossDomainMessenger",
+    "target": "0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f",
+    "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+    "initializer_selector": "0x485cc955",
+    "initializer_signature": "initialize(address,address)",
+    "initializer_args": [
+      "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3",
+      "0x88e529A6ccd302c948689Cd5156C83D4614FAE92"
+    ],
+    "initializer_calldata": "0x485cc9550000000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c300000000000000000000000088e529a6ccd302c948689cd5156c83d4614fae92"
+  },
+  {
+    "sequence": 25,
+    "chain": "Soneium",
+    "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "contract": "L1StandardBridge",
+    "target": "0xeb9bf100225c214Efc3E7C651ebbaDcF85177607",
+    "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+    "initializer_selector": "0x485cc955",
+    "initializer_signature": "initialize(address,address)",
+    "initializer_args": [
+      "0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f",
+      "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3"
+    ],
+    "initializer_calldata": "0x485cc9550000000000000000000000009cf951e3f74b644e621b36ca9cea147a78d4c39f0000000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c3"
+  },
+  {
+    "sequence": 26,
+    "chain": "Soneium",
+    "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "contract": "L1ERC721Bridge",
+    "target": "0x5933e323bE8896DfaCd1cD671442F27dAA10a053",
+    "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+    "initializer_selector": "0x485cc955",
+    "initializer_signature": "initialize(address,address)",
+    "initializer_args": [
+      "0x9CF951E3F74B644e621b36Ca9cea147a78D4c39f",
+      "0x7A8Ed66B319911A0F3E7288BDdAB30d9c0C875c3"
+    ],
+    "initializer_calldata": "0x485cc9550000000000000000000000009cf951e3f74b644e621b36ca9cea147a78d4c39f0000000000000000000000007a8ed66b319911a0f3e7288bddab30d9c0c875c3"
+  },
+  {
+    "sequence": 27,
+    "chain": "Soneium",
+    "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "contract": "OptimismMintableERC20Factory",
+    "target": "0xc1047e30EFC9E172cFe7aa0219895B6a43fC415F",
+    "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+    "initializer_selector": "0xc4d66de8",
+    "initializer_signature": "initialize(address)",
+    "initializer_args": [
+      "0xeb9bf100225c214Efc3E7C651ebbaDcF85177607"
+    ],
+    "initializer_calldata": "0xc4d66de8000000000000000000000000eb9bf100225c214efc3e7c651ebbadcf85177607"
+  },
+  {
+    "sequence": 28,
+    "chain": "Soneium",
+    "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "contract": "DisputeGameFactory",
+    "target": "0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0",
+    "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+    "initializer_selector": "0xc4d66de8",
+    "initializer_signature": "initialize(address)",
+    "initializer_args": [
+      "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A"
+    ],
+    "initializer_calldata": "0xc4d66de80000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a"
+  },
+  {
+    "sequence": 29,
+    "chain": "Soneium",
+    "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "contract": "DelayedWETH",
+    "target": "0x18fBb58C366e21F395DdEc7cBa0510a2D9116B47",
+    "implementation": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+    "initializer_selector": "0xc4d66de8",
+    "initializer_signature": "initialize(address)",
+    "initializer_args": [
+      "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31"
+    ],
+    "initializer_calldata": "0xc4d66de800000000000000000000000067b4de6ffa66ef201ea6099a89ca397d56622e31"
+  },
+  {
+    "sequence": 30,
+    "chain": "Soneium",
+    "proxy_admin": "0x89889b569c3a505f3640ee1bd0ac1d557f436d2a",
+    "contract": "AnchorStateRegistry",
+    "target": "0x4890928941e62e273dA359374b105F803329F473",
+    "implementation": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+    "initializer_selector": "0x47a222c5",
+    "initializer_signature": "initialize(address,address,(bytes32,uint256),uint32)",
+    "initializer_args": [
+      "0x67B4de6FfA66EF201Ea6099A89cA397D56622E31",
+      "0x512A3d2c7a43BD9261d2B8E8C9c70D4bd4D503C0",
+      [
+        "0x08a53686fd0b1671ff7b89c3a994582503f15f7be00f0f2e7c9f0d3b187ab124",
+        1788848425
+      ],
+      5
+    ],
+    "initializer_calldata": "0x47a222c500000000000000000000000067b4de6ffa66ef201ea6099a89ca397d56622e31000000000000000000000000512a3d2c7a43bd9261d2b8e8c9c70d4bd4d503c008a53686fd0b1671ff7b89c3a994582503f15f7be00f0f2e7c9f0d3b187ab124000000000000000000000000000000000000000000000000000000006a9fa9290000000000000000000000000000000000000000000000000000000000000005"
+  },
+  {
+    "sequence": 31,
+    "chain": "Unichain",
+    "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "contract": "SystemConfig",
+    "target": "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+    "implementation": "0xADe27248542c0F3E89b49e4eB76155e267F14377",
+    "initializer_selector": "0x4843108d",
+    "initializer_signature": "initialize(address,uint32,uint32,bytes32,uint64,address,(uint32,uint8,uint8,uint32,uint32,uint128),(address,address,address,address,address,address,address),uint256,address)",
+    "initializer_args": [
+      "0x847B5c174615B1B7fDF770882256e2D3E95b9D92",
+      2000,
+      900000,
+      "0x0000000000000000000000009ef649e8746cc47a17708a5e86b2d66c7f6c00d1",
+      60000000,
+      "0xFaACA0A10e4a23C5E01485DE07767547d4D8056D",
+      [
+        20000000,
+        10,
+        8,
+        1000000000,
+        1000000,
+        "340282366920938463463374607431768211455"
+      ],
+      [
+        "0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6",
+        "0xD04D0D87E0bd4D2E50286760a3EF323FeA6849Cf",
+        "0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA",
+        "0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2",
+        "0xA2B597EaeAcb6F627e088cbEaD319e934ED5edad",
+        "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+        "0x2d91e6F2bcF6CD1df90E1FAF9714E18705EA331f"
+      ],
+      130,
+      "0x95703e0982140D16f8ebA6d158FccEde42f04a4C"
+    ],
+    "initializer_calldata": "0x4843108d000000000000000000000000847b5c174615b1b7fdf770882256e2d3e95b9d9200000000000000000000000000000000000000000000000000000000000007d000000000000000000000000000000000000000000000000000000000000dbba00000000000000000000000009ef649e8746cc47a17708a5e86b2d66c7f6c00d10000000000000000000000000000000000000000000000000000000003938700000000000000000000000000faaca0a10e4a23c5e01485de07767547d4d8056d0000000000000000000000000000000000000000000000000000000001312d00000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000ffffffffffffffffffffffffffffffff0000000000000000000000009a3d64e386c18cb1d6d5179a9596a4b5736e98a6000000000000000000000000d04d0d87e0bd4d2e50286760a3ef323fea6849cf00000000000000000000000081014f44b0a345033bb2b3b21c7a1a308b35feea0000000000000000000000000bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2000000000000000000000000a2b597eaeacb6f627e088cbead319e934ed5edad00000000000000000000000074ad145ac900f1dd5551f0c9e143314dc4022fcf0000000000000000000000002d91e6f2bcf6cd1df90e1faf9714e18705ea331f000000000000000000000000000000000000000000000000000000000000008200000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c"
+  },
+  {
+    "sequence": 32,
+    "chain": "Unichain",
+    "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "contract": "OptimismPortal2",
+    "target": "0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2",
+    "implementation": "0xb20B23af6071405C37dDDA0C0640e8eBb7899645",
+    "initializer_selector": "0xc0c53b8b",
+    "initializer_signature": "initialize(address,address,address)",
+    "initializer_args": [
+      "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+      "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+      "0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5"
+    ],
+    "initializer_calldata": "0xc0c53b8b000000000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda600000000000000000000000027cf508e4e3aa8d30b3226ac3b5ea0e8bcacaff900000000000000000000000008ba0023ed60c7bd040716dd13c45fa0062df5c5"
+  },
+  {
+    "sequence": 33,
+    "chain": "Unichain",
+    "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "contract": "ETHLockbox",
+    "target": "0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5",
+    "implementation": "0xDF75E6b07E98873E36BA5c05508F80c1454e0aFe",
+    "initializer_selector": "0x946d9204",
+    "initializer_signature": "initialize(address,address[])",
+    "initializer_args": [
+      "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+      [
+        "0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2"
+      ]
+    ],
+    "initializer_calldata": "0x946d920400000000000000000000000095703e0982140d16f8eba6d158fccede42f04a4c000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+  },
+  {
+    "sequence": 34,
+    "chain": "Unichain",
+    "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "contract": "L1CrossDomainMessenger",
+    "target": "0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6",
+    "implementation": "0x7d4Ec7fB1A1b9e6D61c04d5e21E3d68cfF639448",
+    "initializer_selector": "0x485cc955",
+    "initializer_signature": "initialize(address,address)",
+    "initializer_args": [
+      "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6",
+      "0x0bd48f6B86a26D3a217d0Fa6FfE2B491B956A7a2"
+    ],
+    "initializer_calldata": "0x485cc955000000000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda60000000000000000000000000bd48f6b86a26d3a217d0fa6ffe2b491b956a7a2"
+  },
+  {
+    "sequence": 35,
+    "chain": "Unichain",
+    "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "contract": "L1StandardBridge",
+    "target": "0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA",
+    "implementation": "0xB37a11AadF167B2F0b8dD85372De4bC66CD4A891",
+    "initializer_selector": "0x485cc955",
+    "initializer_signature": "initialize(address,address)",
+    "initializer_args": [
+      "0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6",
+      "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6"
+    ],
+    "initializer_calldata": "0x485cc9550000000000000000000000009a3d64e386c18cb1d6d5179a9596a4b5736e98a6000000000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda6"
+  },
+  {
+    "sequence": 36,
+    "chain": "Unichain",
+    "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "contract": "L1ERC721Bridge",
+    "target": "0xD04D0D87E0bd4D2E50286760a3EF323FeA6849Cf",
+    "implementation": "0x9F164f1d02A81e06D639E55F65a87f0070E3Cb2e",
+    "initializer_selector": "0x485cc955",
+    "initializer_signature": "initialize(address,address)",
+    "initializer_args": [
+      "0x9A3D64E386C18Cb1d6d5179a9596A4B5736e98A6",
+      "0xc407398d063f942feBbcC6F80a156b47F3f1BDA6"
+    ],
+    "initializer_calldata": "0x485cc9550000000000000000000000009a3d64e386c18cb1d6d5179a9596a4b5736e98a6000000000000000000000000c407398d063f942febbcc6f80a156b47f3f1bda6"
+  },
+  {
+    "sequence": 37,
+    "chain": "Unichain",
+    "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "contract": "OptimismMintableERC20Factory",
+    "target": "0xA2B597EaeAcb6F627e088cbEaD319e934ED5edad",
+    "implementation": "0xaAbEA75Da509fA518Fd8a91Eae4BE5813B829b12",
+    "initializer_selector": "0xc4d66de8",
+    "initializer_signature": "initialize(address)",
+    "initializer_args": [
+      "0x81014F44b0a345033bB2b3B21C7a1A308B35fEeA"
+    ],
+    "initializer_calldata": "0xc4d66de800000000000000000000000081014f44b0a345033bb2b3b21c7a1a308b35feea"
+  },
+  {
+    "sequence": 38,
+    "chain": "Unichain",
+    "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "contract": "DisputeGameFactory",
+    "target": "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+    "implementation": "0x72B971717E088B59F26d4236BE222ADB6ACD393b",
+    "initializer_selector": "0xc4d66de8",
+    "initializer_signature": "initialize(address)",
+    "initializer_args": [
+      "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A"
+    ],
+    "initializer_calldata": "0xc4d66de80000000000000000000000005a0aae59d09fccbddb6c6cceb07b7279367c3d2a"
+  },
+  {
+    "sequence": 39,
+    "chain": "Unichain",
+    "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "contract": "DelayedWETH",
+    "target": "0x74ad145aC900F1DD5551F0C9E143314DC4022FCf",
+    "implementation": "0xF024e96317907C3b8d8CB346B9FD9034c8640e15",
+    "initializer_selector": "0xc4d66de8",
+    "initializer_signature": "initialize(address)",
+    "initializer_args": [
+      "0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5"
+    ],
+    "initializer_calldata": "0xc4d66de800000000000000000000000008ba0023ed60c7bd040716dd13c45fa0062df5c5"
+  },
+  {
+    "sequence": 40,
+    "chain": "Unichain",
+    "proxy_admin": "0x3b73fa8d82f511a3cae17b5a26e4e1a2d5e2f2a4",
+    "contract": "AnchorStateRegistry",
+    "target": "0x27Cf508E4E3Aa8d30b3226aC3b5Ea0e8bcaCAFF9",
+    "implementation": "0x2b27299C577d4720100e2735b652444DcEa652D0",
+    "initializer_selector": "0x47a222c5",
+    "initializer_signature": "initialize(address,address,(bytes32,uint256),uint32)",
+    "initializer_args": [
+      "0x08bA0023eD60C7Bd040716dD13C45fA0062df5C5",
+      "0x2F12d621a16e2d3285929C9996f478508951dFe4",
+      [
+        "0xaf64a866304eb17696278d26290bb172aa941eac3370d9bc8bd313d492beb7d3",
+        1788848651
+      ],
+      9
+    ],
+    "initializer_calldata": "0x47a222c500000000000000000000000008ba0023ed60c7bd040716dd13c45fa0062df5c50000000000000000000000002f12d621a16e2d3285929c9996f478508951dfe4af64a866304eb17696278d26290bb172aa941eac3370d9bc8bd313d492beb7d3000000000000000000000000000000000000000000000000000000006a9faa0b0000000000000000000000000000000000000000000000000000000000000009"
+  }
+]

@@ -31,7 +31,12 @@ for ch, p in portals.items():
     for l in logs[ch]["finalized"]: hashes.setdefault(l["topics"][1], {"provenBlocks": [], "finalizedBlock": None})["finalizedBlock"] = int(l["blockNumber"], 16)
     ext = {}
     for l in logs[ch]["ext"]: ext.setdefault(l["topics"][1], []).append("0x" + l["topics"][2][26:])
-    for h, info in hashes.items():
+    # sample: all entries finalized at/after N (proven >= 7 days earlier under v8) + the first proven-before-N entries, max 12 per chain
+    def prio(kv):
+        h, info = kv
+        return (0 if (info["finalizedBlock"] or 0) >= N else 1, -(min(info["provenBlocks"]) if info["provenBlocks"] else 0))
+    items = [kv for kv in sorted(hashes.items(), key=prio) if (kv[1]["finalizedBlock"] or 0) >= N or any(b < N for b in kv[1]["provenBlocks"])][:12]
+    for h, info in items:
         # only entries that existed before the upgrade (proven before N, or finalized after N => proven >=7d earlier under v8)
         proven_pre = any(b < N for b in info["provenBlocks"]); fin = info["finalizedBlock"]
         if not (proven_pre or (fin is not None)): continue
