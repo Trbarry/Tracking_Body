@@ -77,12 +77,14 @@ contract InFlightObjectsTest is InFlightObjects {
         (bool existed,,) = _proofOf(p.hash, p.proofSubmitter);
         (bool ok, bytes memory ret) = _proveReal(p);
         (bool exists, address game, uint64 ts) = _proofOf(p.hash, p.proofSubmitter);
-        same = ok && !existed && exists && ts == p.storedTimestamp && game == p.storedGame;
+        // `existed`: the same submitter had already proven this hash on mainnet (a re-prove that
+        // replaces the older proof, e.g. U13_V2/p0); the replay must still reproduce the stored value.
+        same = ok && exists && ts == p.storedTimestamp && game == p.storedGame;
         row = string.concat(
             "| ", era, " | p0 ", vm.toString(p.hash), " | ", vm.toString(p.proveBlock), " | ", _version(OP_PORTAL), " | ",
             p.faultProofModel ? "disputeGame" : "l2OutputOracle"
         );
-        row = string.concat(row, " | ", _outcome(ok, ret), " | ", same ? "yes" : "NO", " | ", _freshSubmitterCell(p), " |\n");
+        row = string.concat(row, " | ", _outcome(ok, ret), existed ? " (re-prove: replaced an older proof)" : "", " | ", same ? "yes" : "NO", " | ", _freshSubmitterCell(p), " |\n");
     }
 
     /// @dev A second, synthetic object: the same calldata from a submitter that never proved on mainnet.

@@ -53,5 +53,8 @@
  "changed": [
   "SystemConfig",
   "L1CrossDomainMessenger"
- ]
+ ],
+ "preTransact": [],
+ "postTxCount": 0,
+ "postTxs": []
 }

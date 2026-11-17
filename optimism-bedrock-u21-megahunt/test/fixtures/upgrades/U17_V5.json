@@ -59,5 +59,8 @@
   "L1ERC721Bridge",
   "OptimismMintableERC20Factory",
   "SuperchainConfig"
- ]
+ ],
+ "preTransact": [],
+ "postTxCount": 0,
+ "postTxs": []
 }

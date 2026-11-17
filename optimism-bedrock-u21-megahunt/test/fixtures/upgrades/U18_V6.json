@@ -55,5 +55,8 @@
   "SystemConfig",
   "DisputeGameFactory",
   "AnchorStateRegistry"
- ]
+ ],
+ "preTransact": [],
+ "postTxCount": 0,
+ "postTxs": []
 }

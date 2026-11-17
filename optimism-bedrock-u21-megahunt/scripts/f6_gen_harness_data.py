@@ -57,6 +57,22 @@ def impl_at(name, blk):
 def changed_at(name, blk):
     return any(ch["block"] == blk for ch in blocks["contracts"][name]["changes"])
 
+# Same-block context that a fork of block-1 lacks: transactions of the SAME block, by the same sender,
+# executed with vm.transact before / after the recorded upgrade transaction(s). Verified with
+# `cast block <n> --full` (tx index, nonce) and `cast compute-address` / receipts.
+SAME_BLOCK = {
+    # SuperchainConfig: tx 21 (nonce 10) CREATEs the proxy 0x95703e09..., tx 22 deploys the implementation
+    # 0x53c16516... through the CREATE2 deployer, tx 23 = recorded upgradeToAndCall, tx 24 = changeAdmin(ProxyAdmin).
+    19064589: {"preTransact": ["0x3c23aae4b875fa496c45d76db1e54159ff90bed14a33e67f5dceb0f088fe833d",
+                               "0xb760144b7dbf46be4a78a7abe36439f2fc69c44fedc26a25441331bcd0ebeebf"],
+               # tx 24 (nonce 13). Replayed like the upgrade tx (prank or vm.transact): a vm.transact AFTER a
+               # pranked write to the same account would drop that write (fork-DB commit), so it is a full record.
+               "postTxs": [{"hash": "0xcde51cae42a9c77352064104cf01604c78fa771d64bce3f756bedc3c196a2c3a",
+                            "from": "0x25bdf215ca623a02622843abe38363ffdb3e79a9", "to": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+                            "value": "0x0", "gas": 39114, "txIndex": 24,
+                            "input": "0x8f283970000000000000000000000000543ba4aadbab8f9025686bd03993043599c6fb04"}]},
+}
+
 points = sorted(txs["blocks"], key=lambda b: b["block"])
 assert [p["block"] for p in points] == sorted(LABELS), (set(LABELS) ^ set(p["block"] for p in points))
 
@@ -70,7 +86,10 @@ for i, p in enumerate(points):
                    "txIndex": t["txIndex"], "input": t["input"]} for t in p["txs"]],
           "implBefore": {n: impl_at(n, p["block"] - 1) for n in CONTRACTS},
           "implAfter": {n: impl_at(n, p["block"]) for n in CONTRACTS},
-          "changed": [n for n in CONTRACTS if changed_at(n, p["block"])]}
+          "changed": [n for n in CONTRACTS if changed_at(n, p["block"])],
+          "preTransact": SAME_BLOCK.get(p["block"], {}).get("preTransact", []),
+          "postTxCount": len(SAME_BLOCK.get(p["block"], {}).get("postTxs", [])),
+          "postTxs": SAME_BLOCK.get(p["block"], {}).get("postTxs", [])}
     json.dump(fx, open(os.path.join(ROOT, "test", "fixtures", "upgrades", label + ".json"), "w"), indent=1)
     summary.append({k: fx[k] for k in ("index", "label", "tag", "block", "timestamp", "changed")} | {"txs": [t["hash"] for t in fx["txs"]]})
 json.dump({"points": summary, "contracts": {n: blocks["contracts"][n]["proxy"] for n in CONTRACTS}},

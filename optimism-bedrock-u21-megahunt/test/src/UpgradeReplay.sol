@@ -35,6 +35,8 @@ struct Upgrade {
     uint256 blockNumber;
     uint64 timestamp;
     UpgradeTx[] txs;
+    bytes32[] preTransact; // same-block txs executed (vm.transact) before `txs`, e.g. a proxy CREATE
+    UpgradeTx[] postTxs; // same-block txs replayed after `txs`, in the same mode as `txs`
 }
 
 struct SlotWrite {
@@ -70,15 +72,24 @@ abstract contract UpgradeReplay is HistoricalFork {
         uint256 n = vm.parseJsonUint(j, ".txCount");
         u.txs = new UpgradeTx[](n);
         for (uint256 k; k < n; k++) {
-            string memory p = string.concat(".txs[", vm.toString(k), "]");
-            u.txs[k].hash = vm.parseJsonBytes32(j, string.concat(p, ".hash"));
-            u.txs[k].from = vm.parseJsonAddress(j, string.concat(p, ".from"));
-            u.txs[k].to = vm.parseJsonAddress(j, string.concat(p, ".to"));
-            u.txs[k].value = vm.parseJsonUint(j, string.concat(p, ".value"));
-            u.txs[k].gas = vm.parseJsonUint(j, string.concat(p, ".gas"));
-            u.txs[k].input = vm.parseJsonBytes(j, string.concat(p, ".input"));
+            u.txs[k] = _parseTx(j, string.concat(".txs[", vm.toString(k), "]"));
             require(u.txs[k].hash == HFData.txHash(i, k), "UpgradeReplay: fixture/table tx mismatch");
         }
+        if (vm.keyExistsJson(j, ".preTransact")) u.preTransact = vm.parseJsonBytes32Array(j, ".preTransact");
+        uint256 m = vm.keyExistsJson(j, ".postTxCount") ? vm.parseJsonUint(j, ".postTxCount") : 0;
+        u.postTxs = new UpgradeTx[](m);
+        for (uint256 k; k < m; k++) {
+            u.postTxs[k] = _parseTx(j, string.concat(".postTxs[", vm.toString(k), "]"));
+        }
+    }
+
+    function _parseTx(string memory j, string memory p) internal pure returns (UpgradeTx memory t) {
+        t.hash = vm.parseJsonBytes32(j, string.concat(p, ".hash"));
+        t.from = vm.parseJsonAddress(j, string.concat(p, ".from"));
+        t.to = vm.parseJsonAddress(j, string.concat(p, ".to"));
+        t.value = vm.parseJsonUint(j, string.concat(p, ".value"));
+        t.gas = vm.parseJsonUint(j, string.concat(p, ".gas"));
+        t.input = vm.parseJsonBytes(j, string.concat(p, ".input"));
     }
 
     // ------------------------------------------------------------------------------------------
@@ -123,20 +134,26 @@ abstract contract UpgradeReplay is HistoricalFork {
     ///         Reverts if any transaction fails. Leaves block.number/timestamp at the upgrade block.
     function _replayUpgrade(uint256 i, ReplayMode mode) internal {
         Upgrade memory u = _loadUpgrade(i);
-        for (uint256 k; k < u.txs.length; k++) {
-            if (mode == ReplayMode.Transact) {
-                vm.transact(u.txs[k].hash);
-            } else {
-                _setBlockEnv(i);
-                (bool ok, bytes memory ret) = _replayTxPrank(u.txs[k]);
-                if (!ok) {
-                    emit log_named_bytes("upgrade replay revert data", ret);
-                    revert(string.concat("UpgradeReplay: replay of ", u.label, " reverted"));
-                }
-            }
-        }
+        // Same-block context (only SUPERCHAIN_CONFIG_INIT so far: the proxy and its implementation are
+        // created earlier in the upgrade block). Creation txs cannot be pranked, so they always use vm.transact.
+        for (uint256 k; k < u.preTransact.length; k++) vm.transact(u.preTransact[k]);
+        for (uint256 k; k < u.txs.length; k++) _replayOne(i, u.txs[k], mode, u.label);
+        for (uint256 k; k < u.postTxs.length; k++) _replayOne(i, u.postTxs[k], mode, u.label);
         _setBlockEnv(i);
         emit UpgradeReplayed(u.label, u.blockNumber, u.txs.length, mode == ReplayMode.Transact);
+    }
+
+    function _replayOne(uint256 i, UpgradeTx memory t, ReplayMode mode, string memory label_) internal {
+        if (mode == ReplayMode.Transact) {
+            vm.transact(t.hash);
+            return;
+        }
+        _setBlockEnv(i);
+        (bool ok, bytes memory ret) = _replayTxPrank(t);
+        if (!ok) {
+            emit log_named_bytes("upgrade replay revert data", ret);
+            revert(string.concat("UpgradeReplay: replay of ", label_, " reverted"));
+        }
     }
 
     /// @notice Fresh fork of the block before point `i`, then the official upgrade replayed on it.

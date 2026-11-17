@@ -62,5 +62,8 @@
   "OptimismMintableERC20Factory",
   "SuperchainConfig",
   "DelayedWETH_0x1b6d"
- ]
+ ],
+ "preTransact": [],
+ "postTxCount": 0,
+ "postTxs": []
 }

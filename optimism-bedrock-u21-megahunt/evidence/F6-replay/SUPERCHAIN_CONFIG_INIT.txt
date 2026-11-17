@@ -1,0 +1,1 @@
+label=SUPERCHAIN_CONFIG_INIT block=19064589 mode=prank txs=1 rawWrites=11 distinctSlots=6 accounts=2 mismatchesVsRealEndOfBlock=0

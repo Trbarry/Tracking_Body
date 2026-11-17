@@ -52,5 +52,21 @@
  },
  "changed": [
   "SuperchainConfig"
+ ],
+ "preTransact": [
+  "0x3c23aae4b875fa496c45d76db1e54159ff90bed14a33e67f5dceb0f088fe833d",
+  "0xb760144b7dbf46be4a78a7abe36439f2fc69c44fedc26a25441331bcd0ebeebf"
+ ],
+ "postTxCount": 1,
+ "postTxs": [
+  {
+   "hash": "0xcde51cae42a9c77352064104cf01604c78fa771d64bce3f756bedc3c196a2c3a",
+   "from": "0x25bdf215ca623a02622843abe38363ffdb3e79a9",
+   "to": "0x95703e0982140d16f8eba6d158fccede42f04a4c",
+   "value": "0x0",
+   "gas": 39114,
+   "txIndex": 24,
+   "input": "0x8f283970000000000000000000000000543ba4aadbab8f9025686bd03993043599c6fb04"
+  }
  ]
 }

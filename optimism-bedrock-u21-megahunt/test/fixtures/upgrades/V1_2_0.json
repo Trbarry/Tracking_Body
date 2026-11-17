@@ -58,5 +58,8 @@
   "L1ERC721Bridge",
   "OptimismMintableERC20Factory",
   "L2OutputOracle"
- ]
+ ],
+ "preTransact": [],
+ "postTxCount": 0,
+ "postTxs": []
 }

@@ -34,7 +34,7 @@
       "novelty_phase": "NOT_STARTED"
     },
     "B_historical_backtrace": {
-      "status": "WAVE_0_STARTING",
+      "status": "WAVE_0_DONE",
       "range": "Bedrock -> v7.0.0"
     },
     "C_global_composition": {
@@ -55,15 +55,14 @@
     }
   },
   "wave_0": {
-    "F1_scope_and_deployment": "DONE_IN_PASS_A (SCOPE.md, U21_PROXY_IMPLEMENTATION_MAP.md, PRE/POST_U21_STATE.json)",
-    "F2_release_dag": "RESUMED_ON_OPUS",
-    "F3_audit_corpus_miner": "DONE (Mythos) + CF3 Codex mirror DONE",
-    "F4_storage_initializer_historian": "RESUMED_ON_OPUS",
-    "F5_chain_history_differential": "RESUMED_ON_OPUS",
-    "F6_historical_harness": "RESUMED_ON_OPUS",
-    "F7_duplicate_researcher": "QUEUED (after blind registry freeze)",
-    "W0_ingest_primitives": "DONE (deliverables written; final message lost to rate limit)",
-    "codex_mirrors": "RUNNING (CF2, CF3, CF4, CF5, CF6, CW0 \u2014 user request)"
+    "F1_scope_and_deployment": "DONE_IN_PASS_A",
+    "F2_release_dag": "DONE (Opus) + CF2 DONE",
+    "F3_audit_corpus_miner": "DONE (Mythos) + CF3 DONE",
+    "F4_storage_initializer_historian": "DONE (Opus) + CF4 DONE",
+    "F5_chain_history_differential": "DONE (Opus) + CF5 DONE",
+    "F6_historical_harness": "DONE (Opus, 59/59 tests) + CF6 DONE (14/14)",
+    "W0_ingest_primitives": "DONE (Mythos) + CW0 DONE",
+    "F7_duplicate_researcher": "QUEUED (after blind registry freeze)"
   },
   "facts_locked": 12,
   "candidates_open": 0,
@@ -72,7 +71,8 @@
   "mythos_escalation_limit": 3,
   "concurrency_limit": 6,
   "top_root_cause": null,
-  "current_blocker": "no candidate; historical lineage not yet reconstructed",
-  "next_experiment": "Wave 0: release DAG, storage/initializer history, chain-history differential, audit corpus (isolated)",
-  "model_note": "2026-11-17 ~12:00 UTC: Mythos 5.2 quota exhausted (resets 2026-11-22 00:00 UTC). User switched the session to Opus 5.5 and asked to continue on it; F2/F4/F5/F6 resumed on Opus 5.5 from their saved work. Codex mirrors unaffected."
+  "current_blocker": "no candidate after PASS A + wave 0; next wave awaits user go-ahead",
+  "next_experiment": "targeted wave: audit-fix mutation (top-15 fix-closure targets), uncovered lanes (L2 predeploys, SystemConfig event/client drift, bridge token identity, CGT), OVM-era messenger full scan, pre-fault-proof carry-through",
+  "model_note": "2026-11-17 ~12:00 UTC: Mythos 5.2 quota exhausted (resets 2026-11-22 00:00 UTC). User switched the session to Opus 5.5 and asked to continue on it; F2/F4/F5/F6 resumed on Opus 5.5 from their saved work. Codex mirrors unaffected.",
+  "closures": 17
 }

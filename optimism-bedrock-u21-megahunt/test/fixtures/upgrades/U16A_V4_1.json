@@ -56,5 +56,8 @@
   "L1CrossDomainMessenger",
   "L1StandardBridge",
   "L1ERC721Bridge"
- ]
+ ],
+ "preTransact": [],
+ "postTxCount": 0,
+ "postTxs": []
 }

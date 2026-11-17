@@ -54,5 +54,8 @@
   "OptimismPortal",
   "SystemConfig",
   "SuperchainConfig"
- ]
+ ],
+ "preTransact": [],
+ "postTxCount": 0,
+ "postTxs": []
 }

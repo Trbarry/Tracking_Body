@@ -52,5 +52,8 @@
  },
  "changed": [
   "AnchorStateRegistryLegacy"
- ]
+ ],
+ "preTransact": [],
+ "postTxCount": 0,
+ "postTxs": []
 }

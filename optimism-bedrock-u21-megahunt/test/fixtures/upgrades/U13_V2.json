@@ -60,5 +60,8 @@
   "OptimismMintableERC20Factory",
   "SuperchainConfig",
   "ProtocolVersions"
- ]
+ ],
+ "preTransact": [],
+ "postTxCount": 0,
+ "postTxs": []
 }

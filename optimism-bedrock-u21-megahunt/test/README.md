@@ -25,6 +25,11 @@ U20_V8 26048619, U21_V9 26430859.
 
 ## Commands (always single-threaded)
 
+Full suite: `forge test -j 1` runs 59 tests in about 3 minutes once forge's RPC cache
+(`~/.foundry/cache/rpc/mainnet/<block>`) is warm. A cold run takes about an hour, because every
+upgrade replay fetches state over RPC (U19/U20/U21 take 5-7 minutes each). `vm.transact` and
+the archive proxy sometimes return "could not get transaction". Rerun that test.
+
 ```bash
 cd /home/user/Tracking_Body/optimism-bedrock-u21-megahunt/test
 forge build

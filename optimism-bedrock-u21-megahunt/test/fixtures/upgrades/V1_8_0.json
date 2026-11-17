@@ -52,5 +52,8 @@
  },
  "changed": [
   "SystemConfig"
- ]
+ ],
+ "preTransact": [],
+ "postTxCount": 0,
+ "postTxs": []
 }
