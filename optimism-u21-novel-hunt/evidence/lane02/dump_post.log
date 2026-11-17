@@ -9,3 +9,4 @@ op-mainnet-10 L1StandardBridge ok 9
 op-mainnet-10 L1ERC721Bridge ok 7
 op-mainnet-10 OptimismMintableERC20Factory ok 4
 op-mainnet-10 ProxyAdmin ok 4
+op-mainnet-10 SuperchainConfig ok 2

@@ -118,7 +118,10 @@ The harness is `mirror/lane-23/test/PortalETHLockboxConservation.t.sol`. Command
 
     forge test --match-path test/PortalETHLockboxConservation.t.sol -vvv
 
-Result: 13 passed, 0 failed, 0 skipped.
+Result: 14 passed, 0 failed, 0 skipped. This includes a modeled-balance test that
+sets the lockbox to one wei below the real withdrawal value, observes
+`ETHLockbox_InsufficientBalance`, and confirms atomic preservation of the
+unfinalized state. It is not a claim that the live lockbox is underfunded.
 
 A real mature unfinalized withdrawal was found and finalized against unmodified
 deployed bytecode at block 26433900:

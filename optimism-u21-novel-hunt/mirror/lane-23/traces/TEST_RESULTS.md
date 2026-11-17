@@ -4,7 +4,7 @@ Command:
 
     forge test --match-path test/PortalETHLockboxConservation.t.sol -vvv
 
-Result: 13 passed, 0 failed, 0 skipped on 2026-11-17. Test source is
+Result: 14 passed, 0 failed, 0 skipped on 2026-11-17. Test source is
 `mirror/lane-23/test/PortalETHLockboxConservation.t.sol`.
 
 The harness was cloned from `/home/user/u21-work/template`; its `foundry.toml` adds:
@@ -32,6 +32,10 @@ The harness was cloned from `/home/user/u21-work/template`; its `foundry.toml` a
 - `test_realProofEtchedMessengerFailureRevertsUnlockAndFinalization`: uses the real
   proof but `vm.etch` replaces its fixed L1 messenger target with reverting code.
   It demonstrates transactional rollback semantics only.
+- `test_realProofModeledInsufficientLockboxBalanceRevertsAtomically`: uses the real
+  proof and deployed contracts but `vm.deal` reduces the lockbox to one wei below
+  the withdrawal. It isolates `ETHLockbox_InsufficientBalance` and confirms the
+  finalized bit/unlock remain unchanged; it does not claim live underfunding.
 - `test_realProofEtchedReentrantFinalizeCannotDoubleUnlock` and
   `test_realProofEtchedReentrantDepositRelocksExactlyNestedValue`: use `vm.etch` to
   make the fixed real target adversarial. They demonstrate deployed portal/lockbox
