@@ -57,7 +57,7 @@ while IFS=$'\t' read -r chain name proxy proxy_admin; do
         version:{atN:$old.version,later:$version},
         # Slot 0 is included in changedSlots. Retain the decoded N value here; equality of
         # the complete raw word proves the packed initializer byte did not change, including
-        # the messenger's legacy offset-20 placement.
+        # the messenger legacy offset-20 placement.
         initializedVersion:{atN:$old.initializedVersion,later:$old.initializedVersion},
         ethBalance:{atN:$old.ethBalance,later:$balance},
         changedSlots:[

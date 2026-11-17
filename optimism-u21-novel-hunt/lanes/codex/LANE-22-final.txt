@@ -1,0 +1,35 @@
+Completed lane 22 independently. No candidate survived; no `CAND-22xx` file was created.
+
+Files:
+
+- [Full lane report](/home/user/Tracking_Body/optimism-u21-novel-hunt/lanes/LANE-22-report.md)
+- [Storage-layout diff](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-22/U21_STORAGE_LAYOUT_DIFF.md)
+- [Proxy/implementation map](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-22/U21_PROXY_IMPLEMENTATION_MAP.md)
+- [Pre-upgrade state](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-22/PRE_UPGRADE_STATE.json) and [post-upgrade state](/home/user/Tracking_Body/optimism-u21-novel-hunt/mirror/lane-22/POST_UPGRADE_STATE.json)
+- Exact N-1→N and N→later diffs, DGF arguments, pause/authorization mappings, withdrawal samples, test harness/output
+- `PRIM-2201`–`PRIM-2205` and `REJ-2201`–`REJ-2205`
+
+Primitives:
+
+- PRIM-2201 — Privileged same-version initializer reset-and-replay.
+- PRIM-2202 — ASR’s packed slot-6 dependency extension.
+- PRIM-2203 — Pause authority follows the mutable ETHLockbox dependency.
+- PRIM-2204 — Dynamic DGF arguments can change behind an unchanged mapping head.
+- PRIM-2205 — Messenger initializer byte is offset 20, unlike standard proxies.
+
+Strongest negatives:
+
+- Only ETHLockbox, ASR, and DelayedWETH layouts changed; displaced nonzero SystemConfig bytes remain exact spacers.
+- Every new dependency occupied bytes proven zero at N-1 and held the correct address at N.
+- All initializer versions closed correctly; all 11 implementations are locked.
+- Three proven and three finalized withdrawal samples remained bit-identical through N and block 26433900.
+- Soneium retained type 5; DGF implementation/bond/schema remained coherent.
+- Fork suite: 5 passed, 0 failed.
+
+No candidate score applies.
+
+Follow-up attention:
+
+1. Future shared-lockbox migration pause routing across legacy ASR/WETH.
+2. Mutation testing OPCM initializer slot/offset metadata across proxy variants.
+3. Semantic DGF argument validation in upgrade tooling.

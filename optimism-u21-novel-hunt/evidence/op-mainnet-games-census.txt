@@ -1,0 +1,38 @@
+(type, creator, status, claimValid, blacklisted, retired) -> count
+(0, '0x473300df21d047806a082244b417f96b32f13a33', 2, True, False, False) 8029
+(8, '0x473300df21d047806a082244b417f96b32f13a33', 2, True, False, False) 2167
+(9, '0x473300df21d047806a082244b417f96b32f13a33', 2, True, False, False) 1115
+(9, '0x473300df21d047806a082244b417f96b32f13a33', 2, False, False, False) 84
+(9, '0x473300df21d047806a082244b417f96b32f13a33', 0, False, False, False) 74
+(0, '0x473300df21d047806a082244b417f96b32f13a33', 2, False, False, True) 67
+(0, '0xaa08d45476da6831e03b707dbd4d473e1a0f9288', 1, False, False, False) 48
+(8, '0xaa08d45476da6831e03b707dbd4d473e1a0f9288', 1, False, False, False) 13
+(9, '0xc27ba3e0fc01567a5e57ae0c391aa98cecba5be0', 0, False, False, False) 11
+(9, '0xaa08d45476da6831e03b707dbd4d473e1a0f9288', 1, False, False, False) 6
+(8, '0x4cea68bfa2fac3e11eb05680894d9f13ab99ecd0', 1, False, False, False) 2
+(0, '0xaa08d45476da6831e03b707dbd4d473e1a0f9288', 1, False, False, True) 1
+(8, '0x9a2e021ddbe7c7223f481163da9fb03dbbdc200f', 1, False, False, False) 1
+(8, '0x34e0f440335e9aaed33bd1b7e1e1b254c4d3722e', 1, False, False, False) 1
+(8, '0x34e0f440335e9aaed33bd1b7e1e1b254c4d3722e', 2, True, False, False) 1
+(8, '0x86205ad7fb5d817bb581d8df28294b9fd1f0cc97', 1, False, False, False) 1
+(8, '0x1f618a6c69383c837c51f755dc5fa4c7454d5a96', 1, False, False, False) 1
+(8, '0x1bf71293bc683e5a6b2dff6fa80eb111be9efb3f', 1, False, False, False) 1
+(8, '0xfeede1e90742a80a4f74af742a1ed079752c9ba8', 1, False, False, False) 1
+(8, '0x76adf26d920204868ba9a4ea1944ea4ff9d0d255', 1, False, False, False) 1
+(9, '0x6842ec29e31d5c4269a4c3bda056c42ed86057f8', 1, False, False, False) 1
+(9, '0x0bce8d03b884fdf021f7935e5b1929f5d3aa6309', 1, False, False, False) 1
+(9, '0x1d0519eed308bcd49e4ebc149284f83ebc275284', 1, False, False, False) 1
+(9, '0x7813cc252d34c1f5275a930df0c308f4cd0b312d', 1, False, False, False) 1
+
+Orchestrator verification of the only third-party DEFENDER_WINS / claim-valid game (index 19206,
+type 8, game 0x4ffb1a59a7d81876377a74b59869670d8192abff, creator 0x34e0f440335e9aaed33bd1b7e1e1b254c4d3722e,
+l2BlockNumber 155450031, unchallenged, wasRespectedGameTypeWhenCreated = true):
+  output root recomputed from the OP Mainnet block header (post-Isthmus: header.withdrawalsRoot is the
+  L2ToL1MessagePasser storage root) = keccak(0x00..00 ++ stateRoot ++ withdrawalsRoot ++ blockHash)
+  stateRoot       0x89bae1ad551f128995eb9a6eb0b4608105aa0b81ef3f6dbbf8052094ab60d67d
+  withdrawalsRoot 0x70677ffca04da5e41d6f12482cf724d92c91c1a97b2bddbcbaf1d389499caf69
+  blockHash       0x01c1d53d8204d1d5a61a5aa36688543f928d8f63590ffa05e3649e3cf5a1c3b3
+  computed        0x51396457e477e2df197ae9f82473425b296b469e22e6849d217949067b3b971c  == rootClaim  (MATCH)
+Control: the same creator's losing game (index 19173, l2BlockNumber 155392165) claims
+  0xc25cfa20…50c5 while the header-derived root is 0x869fb42f…a801 (MISMATCH, correctly CHALLENGER_WINS).
+Not done: header-based recomputation for the ~10,196 claim-valid type-0/8 games of the official proposer.
