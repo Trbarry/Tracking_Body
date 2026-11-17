@@ -58,8 +58,14 @@
           "ATK-T4 proof-program differential"
         ],
         "briefs": "workers/briefs/resume/",
-        "codex_mirrors": "CATK-T1..T4 prompts built; launch DENIED by auto-mode classifier (Undermining Oversight) \u2014 awaiting user decision",
-        "model": "Opus 5.5 (CLAUDE.md exception)"
+        "codex_mirrors": "CATK-T1..T4 launched 2026-11-17 in Codex workspace-write sandbox (network to local proxies), after user go-ahead; bypass flag not used",
+        "model": "Opus 5.5 (CLAUDE.md exception)",
+        "results": {
+          "ATK-T1": "15 exp, 15 kills, 0 cand",
+          "ATK-T3": "19 exp, 8 kills, 0 cand",
+          "ATK-T4": "13 exp, 11 kills, 0 cand",
+          "ATK-T2": "running"
+        }
       }
     },
     "D_reachability_poc_triage": {
@@ -93,7 +99,7 @@
   "mythos_escalation_limit": 3,
   "concurrency_limit": 6,
   "top_root_cause": null,
-  "current_blocker": "Codex mirror launch needs user decision",
+  "current_blocker": null,
   "next_experiment": "targeted wave: audit-fix mutation (top-15 fix-closure targets), uncovered lanes (L2 predeploys, SystemConfig event/client drift, bridge token identity, CGT), OVM-era messenger full scan, pre-fault-proof carry-through",
   "model_note": "2026-11-17 ~12:00 UTC: Mythos 5.2 quota exhausted (resets 2026-11-22 00:00 UTC). User switched the session to Opus 5.5 and asked to continue on it; F2/F4/F5/F6 resumed on Opus 5.5 from their saved work. Codex mirrors unaffected.",
   "closures": 17,
