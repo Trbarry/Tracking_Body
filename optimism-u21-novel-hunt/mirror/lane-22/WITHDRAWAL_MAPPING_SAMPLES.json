@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "portal": "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+  "eventSource": {
+    "rpc": "https://ethereum-rpc.publicnode.com",
+    "fromBlock": 26428856,
+    "toBlock": 26430858,
+    "windowSize": 2003,
+    "withdrawalProvenTopic": "0x67a6208cfcc0801d50f6cbe764733f4fddf66ac0b04442061a8a8c0cb6b63f62",
+    "withdrawalProvenExtension1Topic": "0x798f9f13695f8f045aa5f80ed8efebb695f3c7fe65da381969f2f28bf3c60b97",
+    "withdrawalFinalizedTopic": "0xdb5c7652857aa163daadd670e116628fb42e869d8ac4251ef8971d9e5727df1b"
+  },
+  "storageCheckpoints": {
+    "NMinus1": { "block": 26430858, "rpc": "http://127.0.0.1:8546" },
+    "N": { "block": 26430859, "rpc": "http://127.0.0.1:8547" },
+    "later": { "block": 26433900, "rpc": "http://127.0.0.1:8545" }
+  },
+  "layout": {
+    "finalizedWithdrawalsBaseSlot": 51,
+    "provenWithdrawalsBaseSlot": 57,
+    "proofSubmittersBaseSlot": 60,
+    "provenValuePacking": "address disputeGameProxy at offset 0; uint64 timestamp at offset 20",
+    "observation": "All raw values and public getters below were identical at N-1, N, and later."
+  },
+  "provenSamples": [
+    {
+      "withdrawalHash": "0x46661012d8656b178f8441c1fa97f2d54fde99cd13b260161c5f2333c0fc4079",
+      "event": {
+        "block": 26429987,
+        "transactionHash": "0x07755cf668c6d5a2c7720c6cda119035dce7dd4698b8623080631d51104e6e89",
+        "transactionIndex": 2,
+        "withdrawalProvenLogIndex": 14,
+        "extensionLogIndex": 15
+      },
+      "proofSubmitter": "0x2Ce910fBba65B454bBAf6A18c952A70f3bcd8299",
+      "disputeGameProxy": "0xeD801ca7a455D356aA18Eb129C3fb1Bcf138cF54",
+      "timestamp": 1794860963,
+      "slots": {
+        "outerMappingSlot": "0x9543573680cb561dcef6ecc501655affe25768031848aac60d7f91ead0949039",
+        "provenWithdrawalSlot": "0xe17815609a2a1064d4e483866c6552d8784f461011e0fb2410b3a41b53ae1ea1",
+        "proofSubmittersLengthSlot": "0x5c408d7f4e55891d9a7d243a213e533391e5b426874bd9f702eee748e7b7e862",
+        "proofSubmittersElement0Slot": "0xc062c8cdf29e74899653a5fe664aa124f133b8745b0909b68023e03012784156"
+      },
+      "raw": {
+        "provenWithdrawal": "0x00000000000000006afb67a3ed801ca7a455d356aa18eb129c3fb1bcf138cf54",
+        "proofSubmittersLength": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "proofSubmittersElement0": "0x0000000000000000000000002ce910fbba65b454bbaf6a18c952a70f3bcd8299"
+      },
+      "finalized": false
+    },
+    {
+      "withdrawalHash": "0xe3c033b651db7e4f5be6cf0ed9d3d8dc7d7c7da0ddd314e33d133e91c0c4cee3",
+      "event": {
+        "block": 26429991,
+        "transactionHash": "0xbbd3789f0ca8868118d5ba70b729aff94caa9fa0bad72b28d18da5732117ab20",
+        "transactionIndex": 245,
+        "withdrawalProvenLogIndex": 513,
+        "extensionLogIndex": 514
+      },
+      "proofSubmitter": "0x2Ce910fBba65B454bBAf6A18c952A70f3bcd8299",
+      "disputeGameProxy": "0xeD801ca7a455D356aA18Eb129C3fb1Bcf138cF54",
+      "timestamp": 1794861011,
+      "slots": {
+        "outerMappingSlot": "0xf1cee1be61f2adc993e3bc8c7dd77851479c6716f258b20b4346821d204479d9",
+        "provenWithdrawalSlot": "0x926633c6b737dfca43e95aa4aedfa1f98bac1ffd46bd9ace7c96fe041449461c",
+        "proofSubmittersLengthSlot": "0x32dabe7cf948a205b03e378ddc84fcc0381a914a7fd8100ce8146b273814ca49",
+        "proofSubmittersElement0Slot": "0xa61123fdc85f098cf14a477f62e67390c33470f4fedeee1a180753984e206fef"
+      },
+      "raw": {
+        "provenWithdrawal": "0x00000000000000006afb67d3ed801ca7a455d356aa18eb129c3fb1bcf138cf54",
+        "proofSubmittersLength": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "proofSubmittersElement0": "0x0000000000000000000000002ce910fbba65b454bbaf6a18c952a70f3bcd8299"
+      },
+      "finalized": false
+    },
+    {
+      "withdrawalHash": "0xcb4d1cae41ae4f41058343d205d1e295eb5e4a55a380f45694e2b88991a1651d",
+      "event": {
+        "block": 26429992,
+        "transactionHash": "0xe7d32d524f4bb828a405871e8dd0e583c6a88838489534757cb31462b3e7c089",
+        "transactionIndex": 269,
+        "withdrawalProvenLogIndex": 699,
+        "extensionLogIndex": 700
+      },
+      "proofSubmitter": "0x47728c875b7F52a40227d662f83a3C3d0f7E6FBB",
+      "disputeGameProxy": "0x86512332B510F40Bb9361dE685cA1e4815dEe5fe",
+      "timestamp": 1794861023,
+      "slots": {
+        "outerMappingSlot": "0xe8a32e342214e83b7f32bef58ce9946644c8b228a50b55d55ac4e0cf07db8678",
+        "provenWithdrawalSlot": "0x408719746607245e882918eea1b608ecccf376e0dec7a9150448ed6ba96e84f5",
+        "proofSubmittersLengthSlot": "0x1919f1d3ff660e47a0bd114163a7776886d5428b6094f22531c60c31a871a7b4",
+        "proofSubmittersElement0Slot": "0xe1ba961b5910fd56d45868d34b4b2d14cf02484706b582e35637afe7176ed91e"
+      },
+      "raw": {
+        "provenWithdrawal": "0x00000000000000006afb67df86512332b510f40bb9361de685ca1e4815dee5fe",
+        "proofSubmittersLength": "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "proofSubmittersElement0": "0x00000000000000000000000047728c875b7f52a40227d662f83a3c3d0f7e6fbb"
+      },
+      "finalized": false
+    }
+  ],
+  "finalizedSamples": [
+    {
+      "withdrawalHash": "0x9f49843f57159419dc9eeb462ff76309444d998af1199e5bca62e7e19b066061",
+      "eventBlock": 26428947,
+      "transactionHash": "0xe7feb389c671392f6f62efcbb3f6450575cb902bf182ca954598259537f10cfb",
+      "logIndex": 12,
+      "slot": "0x5acece6cfd1cc5c19efba12346c9db75f259ac350e6e49e5217db9b2ec4799f2",
+      "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "getter": true
+    },
+    {
+      "withdrawalHash": "0xebbeb69635087cefd097cbb38781ce12ba5301ca933159ce09ebf72b39725055",
+      "eventBlock": 26429011,
+      "transactionHash": "0x18efcae4e3fd29879ebf50b357505065b2dd664891c2081de7cf09ee6913e11e",
+      "logIndex": 384,
+      "slot": "0xfa3005c6032bdbe1ae3a7c7e510e76be10bb59baee3539d4aa58129631c1dd53",
+      "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "getter": true
+    },
+    {
+      "withdrawalHash": "0xdcac84acf860ff230e1364b3bb4172b50692aad001fe3d933518c72627128c34",
+      "eventBlock": 26429371,
+      "transactionHash": "0x0000a41c85a00d071fdc3ace51362a14af7ddd8fb248e61e9ceeb363e52306f2",
+      "logIndex": 1545,
+      "slot": "0x891b379d1b84ad5e4a85d8e043454146b0ca5ab8220fa46bc8ec8ce97efdaa3a",
+      "raw": "0x0000000000000000000000000000000000000000000000000000000000000001",
+      "getter": true
+    }
+  ]
+}

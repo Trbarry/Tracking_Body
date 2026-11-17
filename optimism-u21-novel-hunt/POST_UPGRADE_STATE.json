@@ -3,7 +3,27 @@
   "rpc": "http://127.0.0.1:8547",
   "which": "n",
   "layoutTag": "op-v9.0.0",
-  "block": 26430859
+  "block": 26430859,
+  "pinnedBlock": 26430859,
+  "labels": "op-contracts/v9.0.0 labels (state at END of the upgrade block N)",
+  "lane": "02",
+  "generator": "evidence/lane02/dump_state.py (read-only eth_getStorageAt / eth_call / eth_getBalance / eth_getCode)",
+  "schema": "chain -> contract -> {proxy, implementation, implementationInfo{slot0,codeSize,codeHash,ethBalance}, version, initializedVersion{_initialized,_initializing}, proxyCodeSize, slots{slot:{label,type,raw,decoded}} (every labelled slot + every non-zero unlabelled slot in the scanned range), namedSlots{name:{slot,raw}} (EIP-1967, hashed SystemConfig slots, mapping entries), getters{signature [args]: value | 'REVERT: ..'}, ethBalance (wei, string), ethBalanceEther}",
+  "scannedSlotRanges": {
+   "SystemConfig": "0..111",
+   "OptimismPortal2": "0..71",
+   "ETHLockbox": "0..69",
+   "AnchorStateRegistry": "0..69",
+   "DisputeGameFactory": "0..107",
+   "DelayedWETH": "0..69",
+   "L1CrossDomainMessenger": "0..257",
+   "L1StandardBridge": "0..69",
+   "L1ERC721Bridge": "0..69",
+   "OptimismMintableERC20Factory": "0..69",
+   "ProxyAdmin": "0..69",
+   "SuperchainConfig": "0..69"
+  },
+  "note": "SuperchainConfig is shared by the four chains and listed under op-mainnet-10. L1CrossDomainMessenger implementation is resolved through ProxyAdmin/AddressManager (ResolvedDelegateProxy has no EIP-1967 slot)."
  },
  "op-mainnet-10": {
   "SystemConfig": {
