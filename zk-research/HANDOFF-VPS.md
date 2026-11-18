@@ -75,7 +75,7 @@ Les résultats arrivent dans `zk-research/` ; récupère-les avec un `git pull`.
 | Impact : variante m = −1 (annuler une vraie délégation), chemin vers une fausse preuve récursive / regrinding Fiat-Shamir, usage en production (zksync-os / zksync-os-server), doublons | `airbender-v2-padding-delegation/impact-notes.md` |
 | Variantes padding dans tous les circuits (contributions non masquées par execute) | `airbender-v2-padding-variants.md` |
 | Fond : liaisons mémoire entre circuits / inits-teardowns / état / délégations | **TERMINÉ, rien de trouvé** (voir §4) |
-| Fond : argument de lookup / débordement des multiplicités / optimiseur de contraintes | rapport dans la session cloud |
+| Fond : argument de lookup / débordement des multiplicités / optimiseur de contraintes | **TERMINÉ, rien de trouvé** (voir partie F des comptes rendus) |
 | Fond : vérifieur / agrégation / Fiat-Shamir / liaison du programme | **TERMINÉ, rien de trouvé** (voir §4) |
 
 ## 6. À faire sur le VPS (dans l'ordre)
