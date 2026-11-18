@@ -2,7 +2,9 @@
 
 - **Source** : fil X de @ZeroCool_AI, posté le 2026-11-17 ; lien partagé : https://x.com/ZeroCool_AI/status/2049149819940176058
 - **Capture** : [sources/2026-11-17-zerocool-airbender-memcopy.jpg](sources/2026-11-17-zerocool-airbender-memcopy.jpg)
-- **Cible** : circuits ZKsync Airbender
+- **Cible** : le prouveur ZKsync Airbender, et non ZKsync OS lui-même. Plus précisément le circuit de délégation
+  `bigint_with_control` (`cs/src/delegation/bigint_with_control/mod.rs`, `MEMCOPY_BIT_IDX = 7`), que ZKsync OS
+  appelle pour l'arithmétique EVM sur 256 bits.
 - **Sévérité** : High, payée 20 000 $ via Immunefi
 - **Statut** : corrigé (d'après le fil)
 - **Fiabilité** : résumé d'un tweet ; ni le rapport ni le commit du correctif n'ont été lus.
@@ -37,6 +39,6 @@ représentation non canonique, que le prouveur peut choisir à sa guise. C'est u
 
 ## À faire
 
-- [ ] Retrouver le rapport Immunefi ou le commit du correctif dans le dépôt Airbender (matter-labs) pour la
-      localisation exacte.
+- [ ] Retrouver le commit du correctif. Le commit `ca91999` (2025-10-08, « bigint fix ») corrige un autre bug :
+      le signe de la retenue dans `sub_negate`. Dernière version lue : `0decdcd` (Airbender V2, 2026-11-04).
 - [ ] Appliquer l'heuristique n° 1 aux autres zkVM qui utilisent des limbes de 16 bits.
