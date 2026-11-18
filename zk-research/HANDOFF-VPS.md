@@ -54,6 +54,15 @@ Détails : `airbender-v2-hunt.md`. Brouillon Immunefi : `airbender-v2-padding-de
   - `end_params` lie le programme à la preuve.
   - FRI et DEEP sont corrects.
   - 3 points informatifs, tous écartés : les feuilles FRI finales sont lues avec `read_word` et non réduites (`verifier/src/concrete/skeleton_instance.rs:365-370`) ; les timestamps finaux ne sont pas réduits (`prover/src/definitions/mod.rs:678`) ; un commentaire trompeur dans `unrolled_proof_statement.rs:440`.
+- **Liaisons entre circuits** (terminé) :
+  - Rien d'exploitable.
+  - Tuple mémoire, read-before-write sur 19+19 bits, timestamps d'écriture range-checkés.
+  - inits/teardowns : le padding ne peut être qu'un préfixe ; pas de double init.
+  - Chaîne d'état (pc, ts) correcte.
+  - Le décodeur lie chaque PC à une seule famille via la table de setup.
+  - Délégations : l'agent a contrôlé les garde-fous dans `shift_binary_csr` seulement. **C'est cohérent avec notre trouvaille : la même garde manque dans le circuit unifié.**
+  - Rien de non masqué dans les familles executor : les arguments mémoire et état sont masqués par `execute` (`grand_product_accumulators.rs` ~l.640). **La demande de délégation, elle, n'est pas dans ce bloc de masquage.**
+  - Non couvert : la range des next-PC par famille (défense en profondeur), le patch `is_register` dans load/store du circuit unifié (`ops/load.rs`, `ops/store.rs`), et l'égalité quotient généré = générateur pour toutes les familles.
 - **Toutes les familles unrolled** : les écritures dans rd, les STORE (SB/SH compris) et x0 sont range-checkés ou viennent de tables. Le PC est sain (`diffs.rs`).
 
 ## 5. Ce qui tournait au moment de la passation
@@ -65,7 +74,7 @@ Les résultats arrivent dans `zk-research/` ; récupère-les avec un `git pull`.
 | PoC paliers 1 et 2 sur le conteneur cloud, témoin négatif avec le correctif | `airbender-v2-padding-delegation/poc.md` et `poc/` |
 | Impact : variante m = −1 (annuler une vraie délégation), chemin vers une fausse preuve récursive / regrinding Fiat-Shamir, usage en production (zksync-os / zksync-os-server), doublons | `airbender-v2-padding-delegation/impact-notes.md` |
 | Variantes padding dans tous les circuits (contributions non masquées par execute) | `airbender-v2-padding-variants.md` |
-| Fond : liaisons mémoire entre circuits / inits-teardowns / état / délégations | rapport dans la session cloud |
+| Fond : liaisons mémoire entre circuits / inits-teardowns / état / délégations | **TERMINÉ, rien de trouvé** (voir §4) |
 | Fond : argument de lookup / débordement des multiplicités / optimiseur de contraintes | rapport dans la session cloud |
 | Fond : vérifieur / agrégation / Fiat-Shamir / liaison du programme | **TERMINÉ, rien de trouvé** (voir §4) |
 
